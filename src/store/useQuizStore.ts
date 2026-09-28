@@ -48,6 +48,8 @@ interface QuizState {
   lastSyncedAt: number | null;
   syncStatus: 'idle' | 'syncing' | 'synced' | 'error';
   syncMethod: 'idle' | 'supabase' | 'cloud_kv' | 'error';
+  supabaseMissingTable: boolean;
+  setSupabaseMissingTable: (missing: boolean) => void;
 
   // Session summary
   sessionCorrect: number;
@@ -136,6 +138,8 @@ export const useQuizStore = create<QuizState>()(
       lastSyncedAt: null,
       syncStatus: 'idle',
       syncMethod: 'idle',
+      supabaseMissingTable: false,
+      setSupabaseMissingTable: (missing) => set({ supabaseMissingTable: missing }),
 
       sessionCorrect: 0,
       sessionWrong: 0,
@@ -745,10 +749,14 @@ export const useQuizStore = create<QuizState>()(
             syncStatus: 'synced',
             syncMethod: res.method as any,
             lastSyncedAt: Date.now(),
+            supabaseMissingTable: false,
           });
           return true;
         } else {
-          set({ syncStatus: 'error' });
+          set({
+            syncStatus: 'error',
+            supabaseMissingTable: res.needsTableSetup === true,
+          });
           return false;
         }
       },
@@ -760,48 +768,70 @@ export const useQuizStore = create<QuizState>()(
 
         set({ syncStatus: 'syncing' });
         const res = await SyncService.loadFromCloud(passkey);
-        if (res.success && res.data) {
-          const localPayload: UserSyncPayload = {
-            passkey,
-            version: 2,
-            lastUpdated: state.lastSyncedAt || 0,
-            activeTab: state.activeTab,
-            sourceFilter: state.sourceFilter,
-            categoryFilter: state.categoryFilter,
-            mode: state.mode,
-            currentIndex: state.currentIndex,
-            listeningCurrentIndex: state.listeningCurrentIndex,
-            listeningSelectedPart: state.listeningSelectedPart,
-            answeredMap: state.answeredMap,
-            listeningAnswersMap: state.listeningAnswersMap,
-            savedMistakeIds: state.savedMistakeIds,
-            questionProgress: state.questionProgress,
-            dailyLogs: state.dailyLogs,
-            bestStreak: state.bestStreak,
-          };
-          const merged = SyncService.smartMerge(localPayload, res.data);
-          set({
-            activeTab: merged.activeTab || state.activeTab,
-            sourceFilter: merged.sourceFilter || state.sourceFilter,
-            categoryFilter: merged.categoryFilter || state.categoryFilter,
-            mode: merged.mode || state.mode,
-            currentIndex: merged.currentIndex !== undefined ? merged.currentIndex : state.currentIndex,
-            listeningCurrentIndex: merged.listeningCurrentIndex !== undefined ? merged.listeningCurrentIndex : state.listeningCurrentIndex,
-            listeningSelectedPart: merged.listeningSelectedPart !== undefined ? merged.listeningSelectedPart : state.listeningSelectedPart,
-            answeredMap: merged.answeredMap,
-            listeningAnswersMap: merged.listeningAnswersMap,
-            savedMistakeIds: merged.savedMistakeIds,
-            questionProgress: merged.questionProgress,
-            dailyLogs: merged.dailyLogs,
-            bestStreak: merged.bestStreak,
-            syncStatus: 'synced',
-            syncMethod: res.method as any,
-            lastSyncedAt: Date.now(),
-          });
-          get().initSession(merged.mode, merged.sourceFilter, merged.categoryFilter, true);
-          return true;
+        if (res.success) {
+          if (res.data) {
+            const localPayload: UserSyncPayload = {
+              passkey,
+              version: 2,
+              lastUpdated: state.lastSyncedAt || 0,
+              activeTab: state.activeTab,
+              sourceFilter: state.sourceFilter,
+              categoryFilter: state.categoryFilter,
+              mode: state.mode,
+              currentIndex: state.currentIndex,
+              listeningCurrentIndex: state.listeningCurrentIndex,
+              listeningSelectedPart: state.listeningSelectedPart,
+              answeredMap: state.answeredMap,
+              listeningAnswersMap: state.listeningAnswersMap,
+              savedMistakeIds: state.savedMistakeIds,
+              questionProgress: state.questionProgress,
+              dailyLogs: state.dailyLogs,
+              bestStreak: state.bestStreak,
+            };
+            const merged = SyncService.smartMerge(localPayload, res.data);
+            set({
+              activeTab: merged.activeTab || state.activeTab,
+              sourceFilter: merged.sourceFilter || state.sourceFilter,
+              categoryFilter: merged.categoryFilter || state.categoryFilter,
+              mode: merged.mode || state.mode,
+              currentIndex: merged.currentIndex !== undefined ? merged.currentIndex : state.currentIndex,
+              listeningCurrentIndex: merged.listeningCurrentIndex !== undefined ? merged.listeningCurrentIndex : state.listeningCurrentIndex,
+              listeningSelectedPart: merged.listeningSelectedPart !== undefined ? merged.listeningSelectedPart : state.listeningSelectedPart,
+              answeredMap: merged.answeredMap,
+              listeningAnswersMap: merged.listeningAnswersMap,
+              savedMistakeIds: merged.savedMistakeIds,
+              questionProgress: merged.questionProgress,
+              dailyLogs: merged.dailyLogs,
+              bestStreak: merged.bestStreak,
+              syncStatus: 'synced',
+              syncMethod: res.method as any,
+              lastSyncedAt: Date.now(),
+              supabaseMissingTable: false,
+            });
+            get().initSession(merged.mode, merged.sourceFilter, merged.categoryFilter, true);
+            return true;
+          } else {
+            // Database is ready and connected, but has no record yet for this passkey
+            const hasLocalAnswers =
+              Object.keys(state.answeredMap).length > 0 ||
+              Object.keys(state.listeningAnswersMap).length > 0;
+            if (hasLocalAnswers) {
+              await get().syncToCloud();
+            } else {
+              set({
+                syncStatus: 'synced',
+                syncMethod: res.method as any,
+                lastSyncedAt: Date.now(),
+                supabaseMissingTable: false,
+              });
+            }
+            return true;
+          }
         } else {
-          set({ syncStatus: 'error' });
+          set({
+            syncStatus: 'error',
+            supabaseMissingTable: res.needsTableSetup === true,
+          });
           return false;
         }
       },

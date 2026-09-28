@@ -118,11 +118,16 @@ export class SyncService {
   /**
    * Save user progress and study curriculum to the cloud (Supabase or Cloud KV)
    */
-  public static async saveToCloud(payload: UserSyncPayload): Promise<{ success: boolean; method: string; error?: string }> {
+  public static async saveToCloud(payload: UserSyncPayload): Promise<{
+    success: boolean;
+    method: string;
+    error?: string;
+    needsTableSetup?: boolean;
+  }> {
     const supabase = getSupabaseClient();
     const passkey = payload.passkey || DEFAULT_PASSKEY;
 
-    // 1. Try Supabase first if configured
+    // 1. If Supabase is configured, use it directly as primary database
     if (supabase) {
       try {
         const { error } = await supabase
@@ -139,13 +144,24 @@ export class SyncService {
         if (!error) {
           return { success: true, method: 'supabase' };
         }
-        console.warn('Supabase save error (falling back to cloud sync):', error);
+
+        const isTableMissing = error.code === '42P01' || error.message?.includes('does not exist');
+        console.warn('Supabase save error:', error);
+        return {
+          success: false,
+          method: 'supabase',
+          error: isTableMissing
+            ? 'Chưa tạo bảng "toeic_sync" trên Supabase. Hãy chạy mã SQL trong SQL Editor.'
+            : `Lỗi Supabase: ${error.message}`,
+          needsTableSetup: isTableMissing,
+        };
       } catch (err: any) {
-        console.warn('Supabase exception (falling back to cloud sync):', err);
+        console.warn('Supabase exception:', err);
+        return { success: false, method: 'supabase', error: err.message || 'Lỗi lưu Supabase' };
       }
     }
 
-    // 2. Fallback to Cloud Object Store (Restful-API Cloud KV)
+    // 2. Fallback to Cloud Object Store (Restful-API Cloud KV) ONLY when Supabase is NOT configured
     try {
       const objectId = await this.getCloudObjectId(passkey);
       if (!objectId) {
@@ -173,29 +189,51 @@ export class SyncService {
   /**
    * Load user progress and curriculum from the cloud
    */
-  public static async loadFromCloud(passkey: string): Promise<{ success: boolean; data?: UserSyncPayload; method: string; error?: string }> {
+  public static async loadFromCloud(passkey: string): Promise<{
+    success: boolean;
+    data?: UserSyncPayload;
+    method: string;
+    error?: string;
+    needsTableSetup?: boolean;
+    isNewPasskey?: boolean;
+  }> {
     const key = passkey || DEFAULT_PASSKEY;
     const supabase = getSupabaseClient();
 
-    // 1. Try Supabase first
+    // 1. If Supabase is configured, query directly with maybeSingle
     if (supabase) {
       try {
         const { data, error } = await supabase
           .from('toeic_sync')
           .select('data, updated_at')
           .eq('passkey', key)
-          .single();
+          .maybeSingle();
 
-        if (!error && data && data.data) {
-          return { success: true, data: data.data as UserSyncPayload, method: 'supabase' };
+        if (!error) {
+          if (data && data.data) {
+            return { success: true, data: data.data as UserSyncPayload, method: 'supabase' };
+          }
+          // Supabase is working and table exists, but no row yet for this passkey
+          return { success: true, data: undefined, method: 'supabase', isNewPasskey: true };
         }
-        console.warn('Supabase load notice (falling back to cloud sync):', error?.message);
-      } catch (err) {
+
+        const isTableMissing = error.code === '42P01' || error.message?.includes('does not exist');
+        console.warn('Supabase load error:', error);
+        return {
+          success: false,
+          method: 'supabase',
+          error: isTableMissing
+            ? 'Chưa tạo bảng "toeic_sync" trên Supabase. Hãy chạy mã SQL trong SQL Editor.'
+            : `Lỗi Supabase: ${error.message}`,
+          needsTableSetup: isTableMissing,
+        };
+      } catch (err: any) {
         console.warn('Supabase fetch exception:', err);
+        return { success: false, method: 'supabase', error: err.message || 'Lỗi kết nối Supabase' };
       }
     }
 
-    // 2. Fallback to Cloud Object Store
+    // 2. Fallback to Cloud Object Store ONLY when Supabase is NOT configured
     try {
       const objectId = await this.getCloudObjectId(key);
       if (!objectId) {

@@ -20,6 +20,7 @@ export const App: React.FC = () => {
     loginWithPasskey,
     activeTab,
     setActiveTab,
+    supabaseMissingTable,
   } = useQuizStore();
   const [isSyncModalOpen, setIsSyncModalOpen] = useState<boolean>(false);
 
@@ -68,6 +69,21 @@ export const App: React.FC = () => {
         onSwitchToPracticeAll={handleGoToPracticeAll}
         onOpenSyncModal={() => setIsSyncModalOpen(true)}
       />
+
+      {/* SUPABASE MISSING TABLE BANNER */}
+      {supabaseMissingTable && (
+        <div className="bg-amber-600 text-white px-3.5 py-1.5 text-xs font-semibold flex items-center justify-between shadow-xs shrink-0 animate-in fade-in duration-200">
+          <div className="flex items-center gap-1.5 truncate">
+            <span>⚠️ Supabase đã nhận Key nhưng chưa có bảng <strong>toeic_sync</strong>!</span>
+          </div>
+          <button
+            onClick={() => setIsSyncModalOpen(true)}
+            className="px-2.5 py-0.5 rounded bg-black/25 hover:bg-black/35 font-bold text-[11px] cursor-pointer whitespace-nowrap transition"
+          >
+            Tạo bảng ngay (10s)
+          </button>
+        </div>
+      )}
 
       {/* CLOUD SYNC & AUTH MODAL */}
       <LoginSyncModal

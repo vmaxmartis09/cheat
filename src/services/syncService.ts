@@ -1,5 +1,5 @@
 import { getSupabaseClient } from './supabaseClient';
-import { DailyLog, QuestionProgress } from '../types';
+import { DailyLog, QuestionProgress, StudyMode } from '../types';
 import { QuestionAnswerRecord } from '../store/useQuizStore';
 
 export const DEFAULT_PASSKEY = 'vmax0109';
@@ -12,6 +12,15 @@ export interface UserSyncPayload {
   passkey: string;
   version: number;
   lastUpdated: number;
+  // Study curriculum & current location
+  activeTab?: 'practice' | 'listening' | 'results';
+  sourceFilter?: string;
+  categoryFilter?: string;
+  mode?: StudyMode;
+  currentIndex?: number;
+  listeningCurrentIndex?: number;
+  listeningSelectedPart?: number | 'all';
+  // Questions progress
   answeredMap: Record<string, QuestionAnswerRecord>;
   listeningAnswersMap: Record<string, { choice: string; isCorrect: boolean }>;
   savedMistakeIds: string[];
@@ -53,7 +62,7 @@ export class SyncService {
   }
 
   /**
-   * Save user progress to the cloud (Supabase or Cloud KV)
+   * Save user progress and study curriculum to the cloud (Supabase or Cloud KV)
    */
   public static async saveToCloud(payload: UserSyncPayload): Promise<{ success: boolean; method: string; error?: string }> {
     const supabase = getSupabaseClient();
@@ -108,7 +117,7 @@ export class SyncService {
   }
 
   /**
-   * Load user progress from the cloud
+   * Load user progress and curriculum from the cloud
    */
   public static async loadFromCloud(passkey: string): Promise<{ success: boolean; data?: UserSyncPayload; method: string; error?: string }> {
     const key = passkey || DEFAULT_PASSKEY;
@@ -142,7 +151,7 @@ export class SyncService {
       const res = await fetch(`${CLOUD_SYNC_ENDPOINT}/${objectId}`);
       if (res.ok) {
         const json = await res.json();
-        if (json && json.data && json.data.answeredMap) {
+        if (json && json.data && (json.data.answeredMap || json.data.listeningAnswersMap || json.data.currentIndex !== undefined)) {
           return { success: true, data: json.data as UserSyncPayload, method: 'cloud_kv' };
         }
       }
@@ -153,7 +162,7 @@ export class SyncService {
   }
 
   /**
-   * Smart merge local and remote progress to avoid losing data
+   * Smart merge local and remote progress and resume curriculum position
    */
   public static smartMerge(local: UserSyncPayload, remote: UserSyncPayload): UserSyncPayload {
     // Merge Reading answeredMap
@@ -217,10 +226,27 @@ export class SyncService {
       }
     }
 
+    // Pick curriculum location from the most recently updated side
+    const remoteIsNewer = (remote.lastUpdated || 0) >= (local.lastUpdated || 0);
+    const chosenActiveTab = remoteIsNewer && remote.activeTab ? remote.activeTab : local.activeTab || 'practice';
+    const chosenSourceFilter = remoteIsNewer && remote.sourceFilter ? remote.sourceFilter : local.sourceFilter || 'stage_1';
+    const chosenCategoryFilter = remoteIsNewer && remote.categoryFilter ? remote.categoryFilter : local.categoryFilter || 'all';
+    const chosenMode = remoteIsNewer && remote.mode ? remote.mode : local.mode || 'sequential';
+    const chosenCurrentIndex = remoteIsNewer && remote.currentIndex !== undefined ? remote.currentIndex : (local.currentIndex ?? 0);
+    const chosenListeningIndex = remoteIsNewer && remote.listeningCurrentIndex !== undefined ? remote.listeningCurrentIndex : (local.listeningCurrentIndex ?? 0);
+    const chosenListeningPart = remoteIsNewer && remote.listeningSelectedPart !== undefined ? remote.listeningSelectedPart : (local.listeningSelectedPart ?? 'all');
+
     return {
       passkey: local.passkey || remote.passkey || DEFAULT_PASSKEY,
-      version: 1,
-      lastUpdated: Date.now(),
+      version: 2,
+      lastUpdated: Math.max(local.lastUpdated || 0, remote.lastUpdated || 0, Date.now()),
+      activeTab: chosenActiveTab,
+      sourceFilter: chosenSourceFilter,
+      categoryFilter: chosenCategoryFilter,
+      mode: chosenMode,
+      currentIndex: chosenCurrentIndex,
+      listeningCurrentIndex: chosenListeningIndex,
+      listeningSelectedPart: chosenListeningPart,
       answeredMap: mergedAnsweredMap,
       listeningAnswersMap: mergedListeningAnswersMap,
       savedMistakeIds: Array.from(mistakeSet),

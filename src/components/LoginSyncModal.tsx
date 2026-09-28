@@ -356,6 +356,38 @@ create policy "Allow all public" on toeic_sync
                 </button>
               </div>
 
+              {/* Mobile Seamless Link & Resume */}
+              <div className="p-3 rounded-xl bg-amber-500/10 border border-amber-300/80 space-y-2">
+                <div className="flex items-center justify-between">
+                  <div className="font-extrabold text-amber-950 text-xs flex items-center gap-1.5">
+                    <Smartphone className="w-4 h-4 text-amber-700" />
+                    <span>Học tiếp trên Điện thoại hoặc Máy khác</span>
+                  </div>
+                  <span className="text-[10px] text-amber-800 font-semibold">Tự nhận diện passkey</span>
+                </div>
+                <div className="flex items-center gap-1.5 bg-white p-1.5 rounded-lg border border-amber-200">
+                  <input
+                    type="text"
+                    readOnly
+                    value={`${typeof window !== 'undefined' ? window.location.origin : 'http://192.168.1.24:5173'}/?passkey=${passkeyInput || DEFAULT_PASSKEY}`}
+                    className="flex-1 text-[11px] font-mono text-[#5A5248] bg-transparent outline-none truncate"
+                  />
+                  <button
+                    onClick={() => {
+                      const url = `${window.location.origin}/?passkey=${passkeyInput || DEFAULT_PASSKEY}`;
+                      navigator.clipboard.writeText(url);
+                      showMsg('Đã sao chép link học trên điện thoại vào clipboard!', 'success');
+                    }}
+                    className="px-2.5 py-1 rounded bg-amber-600 hover:bg-amber-700 text-white font-bold text-[10px] cursor-pointer whitespace-nowrap"
+                  >
+                    Sao chép Link
+                  </button>
+                </div>
+                <p className="text-[10px] text-[#7A7268] leading-tight">
+                  Mở link này trên Safari/Chrome của điện thoại, máy sẽ tự động tải câu bạn đang làm dở và đồng bộ liên tục!
+                </p>
+              </div>
+
               {lastSyncedAt && (
                 <div className="text-center text-[11px] text-[#7A7268]">
                   Lần đồng bộ gần nhất: {new Date(lastSyncedAt).toLocaleString('vi-VN')}

@@ -29,11 +29,16 @@ import confetti from 'canvas-confetti';
 
 export const ListeningTab: React.FC = () => {
   // Store integration
-  const { listeningAnswersMap, selectListeningAnswer } = useQuizStore();
+  const {
+    listeningAnswersMap,
+    selectListeningAnswer,
+    listeningCurrentIndex: currentIdx,
+    setListeningCurrentIndex: setCurrentIdx,
+    listeningSelectedPart: selectedPart,
+    setListeningSelectedPart: setSelectedPart,
+  } = useQuizStore();
 
   // Component state
-  const [selectedPart, setSelectedPart] = useState<number | 'all'>('all');
-  const [currentIdx, setCurrentIdx] = useState<number>(0);
   const [showTranscript, setShowTranscript] = useState<boolean>(false);
   const [autoShowLiveScript, setAutoShowLiveScript] = useState<boolean>(true);
   const [currentStreak, setCurrentStreak] = useState<number>(0);
@@ -52,7 +57,8 @@ export const ListeningTab: React.FC = () => {
     return getListeningQuestionsByPart(selectedPart);
   }, [selectedPart]);
 
-  const currentQ: ListeningQuestion | undefined = filteredQuestions[currentIdx];
+  const safeIdx = Math.min(Math.max(0, currentIdx), Math.max(0, filteredQuestions.length - 1));
+  const currentQ: ListeningQuestion | undefined = filteredQuestions[safeIdx];
 
   // Map audio URL according to question's part
   const currentAudioUrl = React.useMemo(() => {
@@ -142,15 +148,15 @@ export const ListeningTab: React.FC = () => {
 
   // Navigation
   const handleNext = () => {
-    if (currentIdx + 1 < filteredQuestions.length) {
-      setCurrentIdx((prev) => prev + 1);
+    if (safeIdx + 1 < filteredQuestions.length) {
+      setCurrentIdx(safeIdx + 1);
       setShowTranscript(false);
     }
   };
 
   const handlePrev = () => {
-    if (currentIdx > 0) {
-      setCurrentIdx((prev) => prev - 1);
+    if (safeIdx > 0) {
+      setCurrentIdx(safeIdx - 1);
       setShowTranscript(false);
     }
   };
@@ -401,7 +407,7 @@ export const ListeningTab: React.FC = () => {
                   </span>
                 </div>
                 <div className="text-xs font-mono text-[#8A8278]">
-                  {currentIdx + 1} / {filteredQuestions.length}
+                  {safeIdx + 1} / {filteredQuestions.length}
                 </div>
               </div>
 
@@ -575,7 +581,7 @@ export const ListeningTab: React.FC = () => {
           <div className="flex items-center justify-between gap-3 pt-1 pb-4">
             <button
               onClick={handlePrev}
-              disabled={currentIdx === 0}
+              disabled={safeIdx === 0}
               className="flex items-center gap-1 px-4 py-2 rounded-xl bg-white border border-[#EAE3D8] hover:bg-gray-50 text-xs font-bold text-[#5A5248] disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer shadow-2xs"
             >
               <ChevronLeft className="w-4 h-4" />
@@ -584,12 +590,12 @@ export const ListeningTab: React.FC = () => {
 
             {/* Quick jump input / selector */}
             <div className="text-xs font-semibold text-[#7A7268]">
-              Câu {currentIdx + 1} / {filteredQuestions.length}
+              Câu {safeIdx + 1} / {filteredQuestions.length}
             </div>
 
             <button
               onClick={handleNext}
-              disabled={currentIdx + 1 >= filteredQuestions.length}
+              disabled={safeIdx + 1 >= filteredQuestions.length}
               className="flex items-center gap-1 px-4 py-2 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer shadow-2xs"
             >
               <span>Câu Tiếp</span>

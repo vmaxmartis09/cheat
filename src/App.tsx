@@ -9,20 +9,36 @@ import { LoginSyncModal } from './components/LoginSyncModal';
 import { BookOpen, Headphones, BarChart3 } from 'lucide-react';
 
 export const App: React.FC = () => {
-  const { isFinished, savedMistakeIds, initSession, questions, currentIndex, isLoggedIn, pullFromCloud } = useQuizStore();
-  const [activeTab, setActiveTab] = useState<'practice' | 'listening' | 'results'>('practice');
+  const {
+    isFinished,
+    initSession,
+    questions,
+    currentIndex,
+    savedMistakeIds,
+    isLoggedIn,
+    pullFromCloud,
+    loginWithPasskey,
+    activeTab,
+    setActiveTab,
+  } = useQuizStore();
   const [isSyncModalOpen, setIsSyncModalOpen] = useState<boolean>(false);
 
   const currentQ = questions[currentIndex];
   const isPassageView = activeTab === 'practice' && !isFinished && Boolean(currentQ?.isPassageQuestion && currentQ?.passageInfo);
 
   useEffect(() => {
-    initSession();
-    // Auto-fetch latest cloud progress on app load if logged in
-    if (isLoggedIn) {
-      pullFromCloud();
+    // Check URL parameter ?passkey=... for instant seamless mobile login
+    const params = new URLSearchParams(window.location.search);
+    const urlPasskey = params.get('passkey');
+    if (urlPasskey) {
+      loginWithPasskey(urlPasskey);
+    } else {
+      initSession();
+      if (isLoggedIn) {
+        pullFromCloud();
+      }
     }
-  }, [initSession]);
+  }, []);
 
   const handleGoToPracticeMistakes = () => {
     initSession('wrong_only');

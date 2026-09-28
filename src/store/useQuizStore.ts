@@ -2,6 +2,7 @@ import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import { Question, AnswerChoice, StudyMode, DailyLog, MistakeRecord, QuestionProgress } from '../types';
 import { allQuestions, getQuestionsBySource, shuffleQuestions } from '../data/questions';
+import { getListeningQuestionsByPart } from '../data/listeningQuestions';
 import { generateSimilarQuestion } from '../data/similarQuestions';
 import { SyncService, DEFAULT_PASSKEY, UserSyncPayload } from '../services/syncService';
 
@@ -58,9 +59,17 @@ interface QuizState {
   dailyLogs: Record<string, DailyLog>;
   savedMistakeIds: string[]; // pool of all wrong questions across time
   questionProgress: Record<string, QuestionProgress>; // historical mistake and correct count per question
+  // Active Navigation & Curriculum state
+  activeTab: 'practice' | 'listening' | 'results';
+  setActiveTab: (tab: 'practice' | 'listening' | 'results') => void;
+  listeningCurrentIndex: number;
+  setListeningCurrentIndex: (idx: number) => void;
+  listeningSelectedPart: number | 'all';
+  setListeningSelectedPart: (part: number | 'all') => void;
+  resumeLastStudy: () => { tab: 'practice' | 'listening'; questionNum: number; sectionName: string };
 
   // Actions
-  initSession: (mode?: StudyMode, source?: string, category?: string) => void;
+  initSession: (overrideMode?: StudyMode, overrideSource?: string, overrideCategory?: string, preserveIndex?: boolean) => void;
   selectAnswer: (choice: AnswerChoice) => void;
   selectAnswerForQuestion: (questionId: string, choice: AnswerChoice) => void;
   selectListeningAnswer: (questionId: string, choice: string, isCorrect: boolean) => void;
@@ -103,8 +112,13 @@ export const useQuizStore = create<QuizState>()(
       questions: allQuestions,
       currentIndex: 0,
       mode: 'sequential',
-      sourceFilter: 'all',
+      sourceFilter: 'stage_1',
       categoryFilter: 'all',
+
+      // Navigation & Curriculum state
+      activeTab: 'practice',
+      listeningCurrentIndex: 0,
+      listeningSelectedPart: 'all',
 
       selectedAnswer: null,
       isAnswered: false,
@@ -131,7 +145,68 @@ export const useQuizStore = create<QuizState>()(
       savedMistakeIds: [],
       questionProgress: {},
 
-      initSession: (overrideMode, overrideSource, overrideCategory) => {
+      setActiveTab: (tab) => {
+        set({ activeTab: tab });
+        scheduleAutoSync(get);
+      },
+
+      setListeningCurrentIndex: (idx) => {
+        set({ listeningCurrentIndex: idx });
+        scheduleAutoSync(get);
+      },
+
+      setListeningSelectedPart: (part) => {
+        set({ listeningSelectedPart: part });
+        scheduleAutoSync(get);
+      },
+
+      resumeLastStudy: () => {
+        const state = get();
+        if (state.activeTab === 'listening') {
+          const questions = getListeningQuestionsByPart(state.listeningSelectedPart);
+          let targetIdx = state.listeningCurrentIndex;
+          if (state.listeningAnswersMap[questions[targetIdx]?.id]) {
+            const nextUnanswered = questions.findIndex((q) => !state.listeningAnswersMap[q.id]);
+            if (nextUnanswered !== -1) targetIdx = nextUnanswered;
+          }
+          const q = questions[targetIdx] || questions[0];
+          set({
+            activeTab: 'listening',
+            listeningCurrentIndex: Math.max(0, targetIdx),
+          });
+          return {
+            tab: 'listening' as const,
+            questionNum: q?.num || 1,
+            sectionName: `Listening Part ${q?.part || 1}`,
+          };
+        } else {
+          const filtered = getQuestionsBySource(state.sourceFilter);
+          let targetIdx = state.currentIndex;
+          if (state.answeredMap[filtered[targetIdx]?.id]) {
+            const nextUnanswered = filtered.findIndex((q) => !state.answeredMap[q.id]);
+            if (nextUnanswered !== -1) targetIdx = nextUnanswered;
+          }
+          const q = filtered[targetIdx] || filtered[0];
+          const isPassage = q?.isPassageQuestion === true;
+          const ans = q ? state.answeredMap[q.id] : undefined;
+          set({
+            activeTab: 'practice',
+            currentIndex: Math.max(0, targetIdx),
+            selectedAnswer: ans?.selectedAnswer ?? null,
+            isAnswered: Boolean(ans),
+            isCorrect: ans?.isCorrect ?? false,
+            timeLeft: isPassage ? 0 : TIMER_SECONDS,
+            timerActive: !isPassage && !ans,
+          });
+          return {
+            tab: 'practice' as const,
+            questionNum: q?.num || 1,
+            sectionName: q?.badge || q?.source || 'Reading',
+          };
+        }
+      },
+
+      initSession: (overrideMode, overrideSource, overrideCategory, preserveIndex = false) => {
         const state = get();
         const mode = overrideMode ?? state.mode;
         const source = overrideSource ?? state.sourceFilter;
@@ -147,57 +222,69 @@ export const useQuizStore = create<QuizState>()(
           const mistakeSet = new Set(state.savedMistakeIds);
           filtered = filtered.filter((q) => mistakeSet.has(q.id));
           if (filtered.length === 0) {
-            // fallback if no mistakes
             filtered = getQuestionsBySource(source);
           }
         } else if (mode === 'repeat_difficult') {
           const progress = state.questionProgress;
           filtered = filtered.filter((q) => (progress[q.id]?.wrongCount ?? 0) >= 2);
           if (filtered.length === 0) {
-            // fallback if no repeated mistakes yet
             filtered = getQuestionsBySource(source);
           }
         } else if (mode === 'random') {
           filtered = shuffleQuestions(filtered);
         } else {
-          // sequential: ALWAYS includes all questions in the set, never skips previously answered questions!
           filtered = [...filtered].sort((a, b) => a.num - b.num);
         }
 
-        const firstQ = filtered[0];
-        const isPassage = firstQ?.isPassageQuestion === true;
+        let targetIdx = 0;
+        if (preserveIndex && state.currentIndex >= 0 && state.currentIndex < filtered.length) {
+          targetIdx = state.currentIndex;
+        } else if (overrideSource === undefined && overrideMode === undefined) {
+          // On normal load/restore: resume at last active index or find first unanswered question
+          const lastIdx = state.currentIndex;
+          if (lastIdx >= 0 && lastIdx < filtered.length && !state.answeredMap[filtered[lastIdx]?.id]) {
+            targetIdx = lastIdx;
+          } else {
+            const firstUnanswered = filtered.findIndex((q) => !state.answeredMap[q.id]);
+            targetIdx = firstUnanswered !== -1 ? firstUnanswered : Math.min(Math.max(0, lastIdx), filtered.length - 1);
+          }
+        }
+
+        const currentTargetQ = filtered[targetIdx] || filtered[0];
+        const isPassage = currentTargetQ?.isPassageQuestion === true;
+        const ans = currentTargetQ ? state.answeredMap[currentTargetQ.id] : undefined;
 
         set({
           questions: filtered,
-          currentIndex: 0,
+          currentIndex: Math.max(0, targetIdx),
           mode,
           sourceFilter: source,
           categoryFilter: category,
-          selectedAnswer: null,
-          isAnswered: false,
-          isCorrect: false,
+          selectedAnswer: ans?.selectedAnswer ?? null,
+          isAnswered: Boolean(ans),
+          isCorrect: ans?.isCorrect ?? false,
           isTimeout: false,
           timeLeft: isPassage ? 0 : TIMER_SECONDS,
-          timerActive: !isPassage,
+          timerActive: !isPassage && !ans,
           reviewTimeLeft: 0,
-          answeredMap: {},
-          sessionCorrect: 0,
-          sessionWrong: 0,
-          currentStreak: 0,
+          // DO NOT WIPE answeredMap! Keep all existing answers intact!
           isFinished: false,
         });
       },
 
       setMode: (mode) => {
         get().initSession(mode);
+        scheduleAutoSync(get);
       },
 
       setSourceFilter: (source) => {
         get().initSession(undefined, source);
+        scheduleAutoSync(get);
       },
 
       setCategoryFilter: (category) => {
         get().initSession(undefined, undefined, category);
+        scheduleAutoSync(get);
       },
 
       tickTimer: () => {
@@ -630,8 +717,15 @@ export const useQuizStore = create<QuizState>()(
         set({ syncStatus: 'syncing' });
         const payload: UserSyncPayload = {
           passkey,
-          version: 1,
+          version: 2,
           lastUpdated: Date.now(),
+          activeTab: state.activeTab,
+          sourceFilter: state.sourceFilter,
+          categoryFilter: state.categoryFilter,
+          mode: state.mode,
+          currentIndex: state.currentIndex,
+          listeningCurrentIndex: state.listeningCurrentIndex,
+          listeningSelectedPart: state.listeningSelectedPart,
           answeredMap: state.answeredMap,
           listeningAnswersMap: state.listeningAnswersMap,
           savedMistakeIds: state.savedMistakeIds,
@@ -660,8 +754,15 @@ export const useQuizStore = create<QuizState>()(
         if (res.success && res.data) {
           const localPayload: UserSyncPayload = {
             passkey,
-            version: 1,
+            version: 2,
             lastUpdated: state.lastSyncedAt || 0,
+            activeTab: state.activeTab,
+            sourceFilter: state.sourceFilter,
+            categoryFilter: state.categoryFilter,
+            mode: state.mode,
+            currentIndex: state.currentIndex,
+            listeningCurrentIndex: state.listeningCurrentIndex,
+            listeningSelectedPart: state.listeningSelectedPart,
             answeredMap: state.answeredMap,
             listeningAnswersMap: state.listeningAnswersMap,
             savedMistakeIds: state.savedMistakeIds,
@@ -671,6 +772,13 @@ export const useQuizStore = create<QuizState>()(
           };
           const merged = SyncService.smartMerge(localPayload, res.data);
           set({
+            activeTab: merged.activeTab || state.activeTab,
+            sourceFilter: merged.sourceFilter || state.sourceFilter,
+            categoryFilter: merged.categoryFilter || state.categoryFilter,
+            mode: merged.mode || state.mode,
+            currentIndex: merged.currentIndex !== undefined ? merged.currentIndex : state.currentIndex,
+            listeningCurrentIndex: merged.listeningCurrentIndex !== undefined ? merged.listeningCurrentIndex : state.listeningCurrentIndex,
+            listeningSelectedPart: merged.listeningSelectedPart !== undefined ? merged.listeningSelectedPart : state.listeningSelectedPart,
             answeredMap: merged.answeredMap,
             listeningAnswersMap: merged.listeningAnswersMap,
             savedMistakeIds: merged.savedMistakeIds,
@@ -680,6 +788,7 @@ export const useQuizStore = create<QuizState>()(
             syncStatus: 'synced',
             lastSyncedAt: Date.now(),
           });
+          get().initSession(merged.mode, merged.sourceFilter, merged.categoryFilter, true);
           return true;
         } else {
           set({ syncStatus: 'error' });
@@ -692,8 +801,15 @@ export const useQuizStore = create<QuizState>()(
         const state = get();
         const localPayload: UserSyncPayload = {
           passkey: state.userPasskey || DEFAULT_PASSKEY,
-          version: 1,
+          version: 2,
           lastUpdated: state.lastSyncedAt || 0,
+          activeTab: state.activeTab,
+          sourceFilter: state.sourceFilter,
+          categoryFilter: state.categoryFilter,
+          mode: state.mode,
+          currentIndex: state.currentIndex,
+          listeningCurrentIndex: state.listeningCurrentIndex,
+          listeningSelectedPart: state.listeningSelectedPart,
           answeredMap: state.answeredMap,
           listeningAnswersMap: state.listeningAnswersMap,
           savedMistakeIds: state.savedMistakeIds,
@@ -703,6 +819,13 @@ export const useQuizStore = create<QuizState>()(
         };
         const merged = SyncService.smartMerge(localPayload, payload);
         set({
+          activeTab: merged.activeTab || state.activeTab,
+          sourceFilter: merged.sourceFilter || state.sourceFilter,
+          categoryFilter: merged.categoryFilter || state.categoryFilter,
+          mode: merged.mode || state.mode,
+          currentIndex: merged.currentIndex !== undefined ? merged.currentIndex : state.currentIndex,
+          listeningCurrentIndex: merged.listeningCurrentIndex !== undefined ? merged.listeningCurrentIndex : state.listeningCurrentIndex,
+          listeningSelectedPart: merged.listeningSelectedPart !== undefined ? merged.listeningSelectedPart : state.listeningSelectedPart,
           answeredMap: merged.answeredMap,
           listeningAnswersMap: merged.listeningAnswersMap,
           savedMistakeIds: merged.savedMistakeIds,
@@ -714,6 +837,7 @@ export const useQuizStore = create<QuizState>()(
           lastSyncedAt: Date.now(),
           syncStatus: 'synced',
         });
+        get().initSession(merged.mode, merged.sourceFilter, merged.categoryFilter, true);
         get().syncToCloud();
         return true;
       },
@@ -730,6 +854,11 @@ export const useQuizStore = create<QuizState>()(
         bestStreak: state.bestStreak,
         mode: state.mode,
         sourceFilter: state.sourceFilter,
+        categoryFilter: state.categoryFilter,
+        currentIndex: state.currentIndex,
+        activeTab: state.activeTab,
+        listeningCurrentIndex: state.listeningCurrentIndex,
+        listeningSelectedPart: state.listeningSelectedPart,
         userPasskey: state.userPasskey,
         isLoggedIn: state.isLoggedIn,
         lastSyncedAt: state.lastSyncedAt,

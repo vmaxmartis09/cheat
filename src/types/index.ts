@@ -51,6 +51,17 @@ export interface Question {
   keywords?: string[];
   vietnameseMeaning?: string;
 
+  // Stage & Mandatory learning badge & tags
+  stage?: 1 | 2;
+  isMustLearn?: boolean;
+  learningTag?: string; // e.g. "Bắt buộc học thuộc"
+  badge?: string; // e.g. "⭐ Bắt buộc học thuộc"
+
+  // Similar practice question fields
+  isSimilarClone?: boolean;
+  similarToQuestionNum?: number;
+  similarReason?: string;
+
   // Passage specific fields
   isPassageQuestion?: boolean;
   passageId?: string;
@@ -88,4 +99,21 @@ export interface DailyLog {
   mistakes: MistakeRecord[];
   notes: string;
   lastUpdated: number;
+}
+
+export interface ListeningQuestion {
+  id: string;
+  num: number;
+  part: 1 | 2 | 3 | 4;
+  category: string;
+  question: string;
+  options: Record<string, string>;
+  correctAnswer: AnswerChoice;
+  accent?: string;
+  transcript?: string;
+  audioUrl?: string;
+  explanation: string;
+  tip: string;
+  stage: number;
+  badge: string;
 }

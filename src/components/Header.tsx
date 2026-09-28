@@ -6,14 +6,21 @@ import {
   BookOpen,
   Shuffle,
   AlertCircle,
+  Headphones,
+  Cloud,
 } from 'lucide-react';
 
 interface HeaderProps {
-  activeTab: 'practice' | 'results';
+  activeTab: 'practice' | 'listening' | 'results';
   onSwitchToPracticeAll: () => void;
+  onOpenSyncModal: () => void;
 }
 
-export const Header: React.FC<HeaderProps> = ({ activeTab, onSwitchToPracticeAll }) => {
+export const Header: React.FC<HeaderProps> = ({
+  activeTab,
+  onSwitchToPracticeAll,
+  onOpenSyncModal,
+}) => {
   const {
     mode,
     setMode,
@@ -21,11 +28,22 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, onSwitchToPracticeAll
     setSourceFilter,
     currentStreak,
     savedMistakeIds,
+    questions,
+    currentIndex,
+    isFinished,
+    userPasskey,
+    isLoggedIn,
+    syncStatus,
   } = useQuizStore();
+
+  const currentQ = questions[currentIndex];
+  const isPassageView = activeTab === 'practice' && !isFinished && Boolean(currentQ?.isPassageQuestion && currentQ?.passageInfo);
 
   return (
     <header className="px-3.5 py-2 border-b border-[#EFE8DE] bg-[#FAF7F2]/95 backdrop-blur-md shrink-0">
-      <div className="flex items-center justify-between gap-1.5 max-w-md mx-auto">
+      <div className={`flex items-center justify-between gap-1.5 mx-auto transition-all duration-200 ${
+        isPassageView ? 'max-w-7xl' : 'max-w-2xl'
+      }`}>
         {/* Brand & Source Selector */}
         <div className="flex items-center gap-1.5">
           <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center text-white font-black text-xs shadow-2xs">
@@ -37,17 +55,36 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, onSwitchToPracticeAll
                 value={sourceFilter}
                 aria-label="Chọn bộ đề"
                 onChange={(e) => setSourceFilter(e.target.value)}
-                className="appearance-none bg-white border border-[#E8DFD3] text-[#262320] text-xs font-semibold rounded-lg pl-2 pr-5 py-1 focus:outline-none focus:border-amber-500 cursor-pointer shadow-2xs"
+                className="appearance-none bg-white border border-[#E8DFD3] text-[#262320] text-xs font-semibold rounded-lg pl-2 pr-6 py-1 focus:outline-none focus:border-amber-500 cursor-pointer shadow-2xs max-w-[270px] truncate"
               >
-                <option value="all">Tất cả đề (113 câu)</option>
-                <option value="ToIce 2">ToIce 2 Part 5 (40 câu)</option>
-                <option value="Test 2 Part 5">Test 2 Part 5 (40 câu)</option>
-                <option value="Part 6 Đọc Điền">Part 6 Điền từ (15 câu)</option>
-                <option value="Part 7 Đoạn Văn">Part 7 Bài đọc (18 câu)</option>
-                <option value="passages">Chỉ bài đọc đoạn văn (33 câu)</option>
+                <optgroup label="⭐ GIAI ĐOẠN 1: DOCS 1 (BẮT BUỘC HỌC THUỘC)">
+                  <option value="stage_1">⭐ Trọn bộ Docs 1 (151 câu Bắt Buộc)</option>
+                  <option value="ToIce 2">Docs 1: ToIce 2 (#101-165)</option>
+                  <option value="Test 2 Full">Docs 1: Test 2 Full 100 câu (#101-200)</option>
+                  <option value="Test 2 Part 5">Docs 1: Test 2 Part 5 (#101-140)</option>
+                  <option value="Part 6 Đọc Điền">Docs 1: Part 6 Đọc Điền (15 câu)</option>
+                  <option value="Part 7 Đoạn Văn">Docs 1: Part 7 Đọc Hiểu (56 câu)</option>
+                </optgroup>
+                <optgroup label="🚀 GIAI ĐOẠN 2: DOCS 2 (TRỌN BỘ 234 CÂU READING)">
+                  <option value="stage_2">🚀 Trọn bộ Docs 2 (Tất cả 234 câu Reading)</option>
+                  <option value="Docs 2 - Đề 1 Full">Docs 2: Trọn bộ Đề 1 (Trial Test - 100 câu)</option>
+                  <option value="Docs 2 - Đề 2 YBM Full">Docs 2: Trọn bộ Đề 2 (YBM Test 1 - 100 câu)</option>
+                  <option value="Docs 2 - Chuyên đề Tips">Docs 2: Chuyên đề & Rèn Tips (34 câu)</option>
+                  <option value="Docs 2 - Part 5 All">Docs 2: Toàn bộ Part 5 (66 câu)</option>
+                  <option value="Docs 2 - Part 6 All">Docs 2: Toàn bộ Part 6 (44 câu)</option>
+                  <option value="Docs 2 - Part 7 All">Docs 2: Toàn bộ Part 7 (124 câu)</option>
+                </optgroup>
+                <optgroup label="📚 TOÀN BỘ KHO ĐỀ">
+                  <option value="all_both_stages">Tất cả đề Docs 1 & Docs 2 (385 câu)</option>
+                </optgroup>
               </select>
               <Layers className="w-2.5 h-2.5 text-[#8C8276] absolute right-1.5 top-1/2 -translate-y-1/2 pointer-events-none" />
             </div>
+          ) : activeTab === 'listening' ? (
+            <span className="font-bold text-xs text-[#262320] flex items-center gap-1.5">
+              <Headphones className="w-3.5 h-3.5 text-amber-600" />
+              Luyện Nghe TOEIC (100 câu LC)
+            </span>
           ) : (
             <span className="font-bold text-xs text-[#262320]">
               Kết Quả & Ôn Lỗi Sai
@@ -119,6 +156,37 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, onSwitchToPracticeAll
             )}
           </div>
         )}
+
+        {/* Global Cloud Sync Button */}
+        <button
+          onClick={onOpenSyncModal}
+          className="flex items-center gap-1.5 px-2 py-1 rounded-lg bg-white border border-[#E8DFD3] hover:border-amber-400 text-xs font-bold text-[#4A4238] shadow-2xs transition cursor-pointer"
+          title="Đồng bộ tiến trình đa thiết bị (Passkey: vmax0109)"
+        >
+          <Cloud
+            className={`w-3.5 h-3.5 ${
+              syncStatus === 'syncing'
+                ? 'text-amber-600 animate-spin'
+                : syncStatus === 'synced'
+                ? 'text-emerald-600'
+                : syncStatus === 'error'
+                ? 'text-rose-600'
+                : 'text-amber-700'
+            }`}
+          />
+          <span className="hidden sm:inline font-mono text-[11px] text-[#262320]">
+            {isLoggedIn ? userPasskey || 'vmax0109' : 'Đồng bộ'}
+          </span>
+          <span
+            className={`w-1.5 h-1.5 rounded-full ${
+              syncStatus === 'syncing'
+                ? 'bg-amber-500 animate-pulse'
+                : syncStatus === 'error'
+                ? 'bg-rose-500'
+                : 'bg-emerald-500'
+            }`}
+          />
+        </button>
       </div>
     </header>
   );

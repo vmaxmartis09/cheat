@@ -1,6 +1,7 @@
 import { Question } from '../types';
+import { docs2Questions } from './docs2Questions';
 
-export const allQuestions: Question[] = [
+const rawQuestions: Question[] = [
   {
     "id": "toice2_101",
     "num": 101,
@@ -3157,6 +3158,2718 @@ export const allQuestions: Question[] = [
 }
 ,
 {
+  "id": "test2_153",
+  "num": 153,
+  "source": "Test 2",
+  "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+  "question": "By when should authorization be received from contributors?",
+  "options": {
+    "A": "November 1",
+    "B": "November 15",
+    "C": "December 1",
+    "D": "December 23"
+  },
+  "correctAnswer": "B",
+  "explanation": "Dòng 'November 15: Contact poets for permission to include work'. Xin phép các nhà thơ (poets) chính là nhận sự cho phép từ người đóng góp (authorization from contributors).",
+  "tip": "⚡ MẸO: 'authorization from contributors' = 'permission' từ các nhà thơ (poets) -> Chọn ngày 15/11.",
+  "keywords": [
+    "November 15",
+    "permission",
+    "authorization"
+  ],
+  "vietnameseMeaning": "Trước thời điểm nào thì cần nhận được sự cho phép từ những người đóng góp?",
+  "isPassageQuestion": true,
+  "passageId": "test2_p7_poems",
+  "passageInfo": {
+    "id": "test2_p7_poems",
+    "title": "Lịch Trình Dự Án Tuyển Tập Thơ 2007 - Johnson Literary Publishers",
+    "content": "Johnson Literary Publishers\n\nProject Title: 50 Best Poems of 2007\nProject Head: Elizabeth Rosinski\nWorking Deadline: January 1, 2008\n\nPhase Deadlines:\nNovember 1: Complete search for poems to be included\nNovember 15: Contact poets for permission to include work\nNovember 23: Finalize book layout\nDecember 1: Arrange cover design and promotion plan with marketing team\nDecember 23: Submit final version to vice president for approval\nJanuary 1: Send proof with instructions to printers",
+    "vietnameseTranslation": "Nhà xuất bản Văn học Johnson\n\nTên dự án: 50 Bài thơ hay nhất năm 2007\nTrưởng dự án: Elizabeth Rosinski\nHạn chót công việc: 1 tháng 1, 2008\n\nThời hạn từng giai đoạn:\n1 tháng 11: Hoàn thành tìm kiếm các bài thơ sẽ đưa vào sách\n15 tháng 11: Liên hệ các nhà thơ để xin phép sử dụng tác phẩm\n23 tháng 11: Hoàn thiện bố cục sách\n1 tháng 12: Sắp xếp thiết kế bìa và kế hoạch quảng bá với đội ngũ marketing\n23 tháng 12: Nộp bản cuối cho phó chủ tịch phê duyệt\n1 tháng 1: Gửi bản in thử kèm hướng dẫn cho nhà in",
+    "questionIds": [
+      "test2_153",
+      "test2_154"
+    ],
+    "clues": [
+      {
+        "questionNum": 153,
+        "correctAnswer": "B",
+        "clueLocation": "Dòng 5",
+        "clueQuote": "November 15: Contact poets for permission to include work",
+        "scanningTip": "Tìm từ 'permission' tương đương với 'authorization'."
+      },
+      {
+        "questionNum": 154,
+        "correctAnswer": "B",
+        "clueLocation": "Dòng 8",
+        "clueQuote": "December 23: Submit final version to vice president for approval",
+        "scanningTip": "Sau mốc 1/12 (promotion plan) là ngày 23/12 nộp cho phó chủ tịch (an executive)."
+      }
+    ]
+  },
+  "clue": {
+    "questionNum": 153,
+    "correctAnswer": "B",
+    "clueLocation": "Dòng 5",
+    "clueQuote": "November 15: Contact poets for permission to include work",
+    "scanningTip": "Tìm từ 'permission' tương đương với 'authorization'."
+  }
+},
+{
+  "id": "test2_154",
+  "num": 154,
+  "source": "Test 2",
+  "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+  "question": "What will be done after the advertising plan is created?",
+  "options": {
+    "A": "The layout of the book will be decided.",
+    "B": "An executive will review the project.",
+    "C": "The printed books will be sent to stores.",
+    "D": "A list of poems will be compiled."
+  },
+  "correctAnswer": "B",
+  "explanation": "Sau khi lập kế hoạch quảng cáo (promotion plan - 1/12), bước tiếp theo vào ngày 23/12 là nộp bản cuối cho Phó chủ tịch (vice president = an executive) phê duyệt (approval = review).",
+  "tip": "⚡ MẸO: Sau 1/12 là ngày 23/12 'Submit final version to vice president for approval' -> 'vice president' là 'an executive' (lãnh đạo).",
+  "keywords": [
+    "December 23",
+    "vice president",
+    "executive",
+    "approval"
+  ],
+  "vietnameseMeaning": "Điều gì sẽ được thực hiện sau khi kế hoạch quảng cáo được tạo ra?",
+  "isPassageQuestion": true,
+  "passageId": "test2_p7_poems",
+  "passageInfo": {
+    "id": "test2_p7_poems",
+    "title": "Lịch Trình Dự Án Tuyển Tập Thơ 2007 - Johnson Literary Publishers",
+    "content": "Johnson Literary Publishers\n\nProject Title: 50 Best Poems of 2007\nProject Head: Elizabeth Rosinski\nWorking Deadline: January 1, 2008\n\nPhase Deadlines:\nNovember 1: Complete search for poems to be included\nNovember 15: Contact poets for permission to include work\nNovember 23: Finalize book layout\nDecember 1: Arrange cover design and promotion plan with marketing team\nDecember 23: Submit final version to vice president for approval\nJanuary 1: Send proof with instructions to printers",
+    "vietnameseTranslation": "Nhà xuất bản Văn học Johnson\n\nTên dự án: 50 Bài thơ hay nhất năm 2007\nTrưởng dự án: Elizabeth Rosinski\nHạn chót công việc: 1 tháng 1, 2008\n\nThời hạn từng giai đoạn:\n1 tháng 11: Hoàn thành tìm kiếm các bài thơ sẽ đưa vào sách\n15 tháng 11: Liên hệ các nhà thơ để xin phép sử dụng tác phẩm\n23 tháng 11: Hoàn thiện bố cục sách\n1 tháng 12: Sắp xếp thiết kế bìa và kế hoạch quảng bá với đội ngũ marketing\n23 tháng 12: Nộp bản cuối cho phó chủ tịch phê duyệt\n1 tháng 1: Gửi bản in thử kèm hướng dẫn cho nhà in",
+    "questionIds": [
+      "test2_153",
+      "test2_154"
+    ],
+    "clues": [
+      {
+        "questionNum": 153,
+        "correctAnswer": "B",
+        "clueLocation": "Dòng 5",
+        "clueQuote": "November 15: Contact poets for permission to include work",
+        "scanningTip": "Tìm từ 'permission' tương đương với 'authorization'."
+      },
+      {
+        "questionNum": 154,
+        "correctAnswer": "B",
+        "clueLocation": "Dòng 8",
+        "clueQuote": "December 23: Submit final version to vice president for approval",
+        "scanningTip": "Sau mốc 1/12 (promotion plan) là ngày 23/12 nộp cho phó chủ tịch (an executive)."
+      }
+    ]
+  },
+  "clue": {
+    "questionNum": 154,
+    "correctAnswer": "B",
+    "clueLocation": "Dòng 8",
+    "clueQuote": "December 23: Submit final version to vice president for approval",
+    "scanningTip": "Sau mốc 1/12 (promotion plan) là ngày 23/12 nộp cho phó chủ tịch (an executive)."
+  }
+},
+{
+  "id": "test2_155",
+  "num": 155,
+  "source": "Test 2",
+  "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+  "question": "Why was this letter written?",
+  "options": {
+    "A": "To inquire about an event facility",
+    "B": "To offer a job to a qualified candidate",
+    "C": "To thank an event organizer for his help",
+    "D": "To cancel the participation in the job fair"
+  },
+  "correctAnswer": "C",
+  "explanation": "Đoạn 1: 'express our gratitude for the work you did to organize last month's job fair' (cảm ơn người tổ chức hội chợ việc làm).",
+  "tip": "⚡ MẸO: Thấy 'express our gratitude' = cảm ơn (thank an event organizer).",
+  "keywords": [
+    "express our gratitude",
+    "organize",
+    "thank"
+  ],
+  "vietnameseMeaning": "Tại sao bức thư này được viết?",
+  "isPassageQuestion": true,
+  "passageId": "test2_p7_bby_fair",
+  "passageInfo": {
+    "id": "test2_p7_bby_fair",
+    "title": "Thư Cảm Ơn Ban Tổ Chức Hội Chợ Việc Làm - BBY Technologies",
+    "content": "Tammy Komo\nDavidson Conference Hall\n3005 Congress St.\nDavidson, AL\n\nDear Mr. Komo,\n\nOn behalf of my company, BBY Technologies, I would like to express our gratitude for the work you did to organize last month's job fair. We have participated in such events at the Davidson Conference Hall in past years, but this one was by far our most successful.\n\nOrdinarily, it is difficult for our firm to find qualified technicians to fill our positions. However, the advertising you did attracted many desirable candidates to the event. We have already filled over 80% of our open positions with recruits from the job fair.\n\nDue to the tremendous success of this year's event, I can assure you that BBY Technologies will participate again next year. Our projected growth for the coming year makes me believe that we will again be in need of more highly skilled technicians. I am sure you will also help us find them.\n\nRavi Miller\nHuman Resources\nBBY Technologies",
+    "vietnameseTranslation": "Tammy Komo\nTrung tâm Hội nghị Davidson\n3005 Đường Congress\nDavidson, AL\n\nKính gửi ông Komo,\n\nThay mặt công ty tôi, BBY Technologies, tôi xin bày tỏ lòng biết ơn sâu sắc đối với công tác tổ chức hội chợ việc làm tháng trước của ông. Chúng tôi đã từng tham gia các sự kiện như vậy tại Trung tâm Hội nghị Davidson những năm trước, nhưng lần này là thành công nhất từ trước đến nay.\n\nThông thường, công ty chúng tôi rất khó tìm được các kỹ thuật viên đủ tiêu chuẩn để đảm nhận các vị trí. Tuy nhiên, hoạt động quảng cáo của ông đã thu hút rất nhiều ứng viên sáng giá. Chúng tôi đã tuyển dụng được hơn 80% số vị trí còn trống từ các ứng viên tại hội chợ việc làm.\n\nNhờ thành công vang dội của sự kiện năm nay, tôi khẳng định BBY Technologies sẽ tiếp tục tham gia vào năm tới. Dự báo tăng trưởng của chúng tôi trong năm tới khiến tôi tin rằng chúng tôi sẽ tiếp tục cần thêm nhiều kỹ thuật viên tay nghề cao. Tôi tin chắc ông cũng sẽ giúp chúng tôi tìm kiếm họ.\n\nRavi Miller\nPhòng Nhân sự\nBBY Technologies",
+    "questionIds": [
+      "test2_155",
+      "test2_156",
+      "test2_157"
+    ],
+    "clues": [
+      {
+        "questionNum": 155,
+        "correctAnswer": "C",
+        "clueLocation": "Đoạn 1, dòng 2-3",
+        "clueQuote": "express our gratitude for the work you did to organize last month's job fair",
+        "scanningTip": "Tìm từ khóa 'express gratitude' ở đoạn đầu thư."
+      },
+      {
+        "questionNum": 156,
+        "correctAnswer": "D",
+        "clueLocation": "Đoạn 2, dòng 3-4",
+        "clueQuote": "We have already filled over 80% of our open positions with recruits from the job fair.",
+        "scanningTip": "Tìm số liệu 80% và cụm 'filled open positions'."
+      },
+      {
+        "questionNum": 157,
+        "correctAnswer": "D",
+        "clueLocation": "Đoạn 3, dòng 2-3",
+        "clueQuote": "Our projected growth for the coming year makes me believe that we will again be in need of more highly skilled technicians.",
+        "scanningTip": "Tìm cụm 'projected growth' = expects to expand."
+      }
+    ]
+  },
+  "clue": {
+    "questionNum": 155,
+    "correctAnswer": "C",
+    "clueLocation": "Đoạn 1, dòng 2-3",
+    "clueQuote": "express our gratitude for the work you did to organize last month's job fair",
+    "scanningTip": "Tìm từ khóa 'express gratitude' ở đoạn đầu thư."
+  }
+},
+{
+  "id": "test2_156",
+  "num": 156,
+  "source": "Test 2",
+  "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+  "question": "What happened after the job fair?",
+  "options": {
+    "A": "Mr. Komo received a promotion.",
+    "B": "Mr. Miller dismissed some technicians.",
+    "C": "The Davidson Conference Hall was closed.",
+    "D": "BBY Technologies hired many workers."
+  },
+  "correctAnswer": "D",
+  "explanation": "Đoạn 2: 'filled over 80% of our open positions with recruits from the job fair' (tuyển được hơn 80% vị trí trống = BBY Technologies hired many workers).",
+  "tip": "⚡ MẸO: 'filled over 80% of open positions' = 'hired many workers'.",
+  "keywords": [
+    "filled over 80%",
+    "recruits",
+    "hired many workers"
+  ],
+  "vietnameseMeaning": "Điều gì đã diễn ra sau hội chợ việc làm?",
+  "isPassageQuestion": true,
+  "passageId": "test2_p7_bby_fair",
+  "passageInfo": {
+    "id": "test2_p7_bby_fair",
+    "title": "Thư Cảm Ơn Ban Tổ Chức Hội Chợ Việc Làm - BBY Technologies",
+    "content": "Tammy Komo\nDavidson Conference Hall\n3005 Congress St.\nDavidson, AL\n\nDear Mr. Komo,\n\nOn behalf of my company, BBY Technologies, I would like to express our gratitude for the work you did to organize last month's job fair. We have participated in such events at the Davidson Conference Hall in past years, but this one was by far our most successful.\n\nOrdinarily, it is difficult for our firm to find qualified technicians to fill our positions. However, the advertising you did attracted many desirable candidates to the event. We have already filled over 80% of our open positions with recruits from the job fair.\n\nDue to the tremendous success of this year's event, I can assure you that BBY Technologies will participate again next year. Our projected growth for the coming year makes me believe that we will again be in need of more highly skilled technicians. I am sure you will also help us find them.\n\nRavi Miller\nHuman Resources\nBBY Technologies",
+    "vietnameseTranslation": "Tammy Komo\nTrung tâm Hội nghị Davidson\n3005 Đường Congress\nDavidson, AL\n\nKính gửi ông Komo,\n\nThay mặt công ty tôi, BBY Technologies, tôi xin bày tỏ lòng biết ơn sâu sắc đối với công tác tổ chức hội chợ việc làm tháng trước của ông. Chúng tôi đã từng tham gia các sự kiện như vậy tại Trung tâm Hội nghị Davidson những năm trước, nhưng lần này là thành công nhất từ trước đến nay.\n\nThông thường, công ty chúng tôi rất khó tìm được các kỹ thuật viên đủ tiêu chuẩn để đảm nhận các vị trí. Tuy nhiên, hoạt động quảng cáo của ông đã thu hút rất nhiều ứng viên sáng giá. Chúng tôi đã tuyển dụng được hơn 80% số vị trí còn trống từ các ứng viên tại hội chợ việc làm.\n\nNhờ thành công vang dội của sự kiện năm nay, tôi khẳng định BBY Technologies sẽ tiếp tục tham gia vào năm tới. Dự báo tăng trưởng của chúng tôi trong năm tới khiến tôi tin rằng chúng tôi sẽ tiếp tục cần thêm nhiều kỹ thuật viên tay nghề cao. Tôi tin chắc ông cũng sẽ giúp chúng tôi tìm kiếm họ.\n\nRavi Miller\nPhòng Nhân sự\nBBY Technologies",
+    "questionIds": [
+      "test2_155",
+      "test2_156",
+      "test2_157"
+    ],
+    "clues": [
+      {
+        "questionNum": 155,
+        "correctAnswer": "C",
+        "clueLocation": "Đoạn 1, dòng 2-3",
+        "clueQuote": "express our gratitude for the work you did to organize last month's job fair",
+        "scanningTip": "Tìm từ khóa 'express gratitude' ở đoạn đầu thư."
+      },
+      {
+        "questionNum": 156,
+        "correctAnswer": "D",
+        "clueLocation": "Đoạn 2, dòng 3-4",
+        "clueQuote": "We have already filled over 80% of our open positions with recruits from the job fair.",
+        "scanningTip": "Tìm số liệu 80% và cụm 'filled open positions'."
+      },
+      {
+        "questionNum": 157,
+        "correctAnswer": "D",
+        "clueLocation": "Đoạn 3, dòng 2-3",
+        "clueQuote": "Our projected growth for the coming year makes me believe that we will again be in need of more highly skilled technicians.",
+        "scanningTip": "Tìm cụm 'projected growth' = expects to expand."
+      }
+    ]
+  },
+  "clue": {
+    "questionNum": 156,
+    "correctAnswer": "D",
+    "clueLocation": "Đoạn 2, dòng 3-4",
+    "clueQuote": "We have already filled over 80% of our open positions with recruits from the job fair.",
+    "scanningTip": "Tìm số liệu 80% và cụm 'filled open positions'."
+  }
+},
+{
+  "id": "test2_157",
+  "num": 157,
+  "source": "Test 2",
+  "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+  "question": "What does Mr. Miller say about his company?",
+  "options": {
+    "A": "It will advertise more widely next year.",
+    "B": "It will not attend the job fair in the future.",
+    "C": "It provides intensive training to fair employees.",
+    "D": "It expects to expand over the next year."
+  },
+  "correctAnswer": "D",
+  "explanation": "Đoạn 3: 'Our projected growth for the coming year makes me believe that we will again be in need of more highly skilled technicians' (tăng trưởng dự báo = kỳ vọng mở rộng trong năm tới).",
+  "tip": "⚡ MẸO: 'projected growth' (tăng trưởng dự kiến) = 'expects to expand' (mở rộng).",
+  "keywords": [
+    "projected growth",
+    "coming year",
+    "expand"
+  ],
+  "vietnameseMeaning": "Ông Miller nói gì về công ty của mình?",
+  "isPassageQuestion": true,
+  "passageId": "test2_p7_bby_fair",
+  "passageInfo": {
+    "id": "test2_p7_bby_fair",
+    "title": "Thư Cảm Ơn Ban Tổ Chức Hội Chợ Việc Làm - BBY Technologies",
+    "content": "Tammy Komo\nDavidson Conference Hall\n3005 Congress St.\nDavidson, AL\n\nDear Mr. Komo,\n\nOn behalf of my company, BBY Technologies, I would like to express our gratitude for the work you did to organize last month's job fair. We have participated in such events at the Davidson Conference Hall in past years, but this one was by far our most successful.\n\nOrdinarily, it is difficult for our firm to find qualified technicians to fill our positions. However, the advertising you did attracted many desirable candidates to the event. We have already filled over 80% of our open positions with recruits from the job fair.\n\nDue to the tremendous success of this year's event, I can assure you that BBY Technologies will participate again next year. Our projected growth for the coming year makes me believe that we will again be in need of more highly skilled technicians. I am sure you will also help us find them.\n\nRavi Miller\nHuman Resources\nBBY Technologies",
+    "vietnameseTranslation": "Tammy Komo\nTrung tâm Hội nghị Davidson\n3005 Đường Congress\nDavidson, AL\n\nKính gửi ông Komo,\n\nThay mặt công ty tôi, BBY Technologies, tôi xin bày tỏ lòng biết ơn sâu sắc đối với công tác tổ chức hội chợ việc làm tháng trước của ông. Chúng tôi đã từng tham gia các sự kiện như vậy tại Trung tâm Hội nghị Davidson những năm trước, nhưng lần này là thành công nhất từ trước đến nay.\n\nThông thường, công ty chúng tôi rất khó tìm được các kỹ thuật viên đủ tiêu chuẩn để đảm nhận các vị trí. Tuy nhiên, hoạt động quảng cáo của ông đã thu hút rất nhiều ứng viên sáng giá. Chúng tôi đã tuyển dụng được hơn 80% số vị trí còn trống từ các ứng viên tại hội chợ việc làm.\n\nNhờ thành công vang dội của sự kiện năm nay, tôi khẳng định BBY Technologies sẽ tiếp tục tham gia vào năm tới. Dự báo tăng trưởng của chúng tôi trong năm tới khiến tôi tin rằng chúng tôi sẽ tiếp tục cần thêm nhiều kỹ thuật viên tay nghề cao. Tôi tin chắc ông cũng sẽ giúp chúng tôi tìm kiếm họ.\n\nRavi Miller\nPhòng Nhân sự\nBBY Technologies",
+    "questionIds": [
+      "test2_155",
+      "test2_156",
+      "test2_157"
+    ],
+    "clues": [
+      {
+        "questionNum": 155,
+        "correctAnswer": "C",
+        "clueLocation": "Đoạn 1, dòng 2-3",
+        "clueQuote": "express our gratitude for the work you did to organize last month's job fair",
+        "scanningTip": "Tìm từ khóa 'express gratitude' ở đoạn đầu thư."
+      },
+      {
+        "questionNum": 156,
+        "correctAnswer": "D",
+        "clueLocation": "Đoạn 2, dòng 3-4",
+        "clueQuote": "We have already filled over 80% of our open positions with recruits from the job fair.",
+        "scanningTip": "Tìm số liệu 80% và cụm 'filled open positions'."
+      },
+      {
+        "questionNum": 157,
+        "correctAnswer": "D",
+        "clueLocation": "Đoạn 3, dòng 2-3",
+        "clueQuote": "Our projected growth for the coming year makes me believe that we will again be in need of more highly skilled technicians.",
+        "scanningTip": "Tìm cụm 'projected growth' = expects to expand."
+      }
+    ]
+  },
+  "clue": {
+    "questionNum": 157,
+    "correctAnswer": "D",
+    "clueLocation": "Đoạn 3, dòng 2-3",
+    "clueQuote": "Our projected growth for the coming year makes me believe that we will again be in need of more highly skilled technicians.",
+    "scanningTip": "Tìm cụm 'projected growth' = expects to expand."
+  }
+},
+{
+  "id": "test2_158",
+  "num": 158,
+  "source": "Test 2",
+  "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+  "question": "Why is the store owner changing the hours of operation?",
+  "options": {
+    "A": "To fit in with the quiet season",
+    "B": "To reduce staff expenses",
+    "C": "To prepare for their peak period",
+    "D": "To meet customer demand"
+  },
+  "correctAnswer": "A",
+  "explanation": "Đoạn 2: 'decided it's time to slow down and relax a little in the off-season' (mùa thấp điểm/mùa vắng khách = quiet season).",
+  "tip": "⚡ MẸO: 'off-season' (mùa vắng khách) đồng nghĩa với 'quiet season'.",
+  "keywords": [
+    "off-season",
+    "quiet season"
+  ],
+  "vietnameseMeaning": "Tại sao chủ cửa hàng lại thay đổi giờ hoạt động?",
+  "isPassageQuestion": true,
+  "passageId": "test2_p7_summer_shack",
+  "passageInfo": {
+    "id": "test2_p7_summer_shack",
+    "title": "Thông Báo Giờ Mở Cửa - Quán Kem & Sữa Lắc Summer Shack",
+    "content": "Dear Summer Shack Customers,\n\nFor the first time ever, the Summer Shack is opening for limited hours on May 1: 11:00 am - 6:30 pm Monday through Friday, and 10:00 am - 7:00 pm on weekends.\n\nWe've been providing local people with delicious milkshakes, ice cream, and frozen yogurt cones for over 25 years. After so many years of honest service, we've decided it's time to slow down and relax a little in the off-season.\n\nBut don't worry, we'll be back to business as usual in time for our busy summer period. On June 1, we'll resume our ordinary hours of business: 10:00 am - 8:30 pm Monday through Friday, and 9:00 am - 10:30 pm on weekends.\n\nWe look forward to seeing all of our customers in store soon. If you've never tried a Summer Shack product, you don't know what you're missing in summer. Summer Shack is the taste of summer!\n\nSummer Shack Owner",
+    "vietnameseTranslation": "Kính gửi Quý khách hàng của Summer Shack,\n\nLần đầu tiên trong lịch sử, Summer Shack sẽ mở cửa với khung giờ giới hạn từ ngày 1 tháng 5: 11:00 sáng - 6:30 chiều từ Thứ Hai đến Thứ Sáu, và 10:00 sáng - 7:00 tối vào cuối tuần.\n\nChúng tôi đã phục vụ người dân địa phương những món sữa lắc thơm ngon, kem và kem ốc quế sữa chua đông lạnh suốt hơn 25 năm qua. Sau nhiều năm phục vụ tận tâm, chúng tôi quyết định đã đến lúc sống chậm lại và nghỉ ngơi một chút trong mùa thấp điểm (off-season).\n\nNhưng đừng lo, chúng tôi sẽ trở lại hoạt động bình thường đúng vào mùa hè bận rộn. Từ ngày 1 tháng 6, chúng tôi sẽ khôi phục giờ mở cửa bình thường: 10:00 sáng - 8:30 tối từ Thứ Hai đến Thứ Sáu, và 9:00 sáng - 10:30 tối vào cuối tuần.\n\nRất mong được sớm gặp lại quý khách tại cửa hàng.\n\nChủ quán Summer Shack",
+    "questionIds": [
+      "test2_158",
+      "test2_159"
+    ],
+    "clues": [
+      {
+        "questionNum": 158,
+        "correctAnswer": "A",
+        "clueLocation": "Đoạn 2, dòng 2-3",
+        "clueQuote": "we've decided it's time to slow down and relax a little in the off-season.",
+        "scanningTip": "Tìm từ 'off-season' (mùa vắng khách) tương đương 'quiet season'."
+      },
+      {
+        "questionNum": 159,
+        "correctAnswer": "B",
+        "clueLocation": "Đoạn 3, dòng 2-3",
+        "clueQuote": "10:00 am - 8:30 pm Monday through Friday",
+        "scanningTip": "Nhìn mốc ngày 'June 1' và đối chiếu giờ đóng cửa ngày trong tuần (Monday through Friday)."
+      }
+    ]
+  },
+  "clue": {
+    "questionNum": 158,
+    "correctAnswer": "A",
+    "clueLocation": "Đoạn 2, dòng 2-3",
+    "clueQuote": "we've decided it's time to slow down and relax a little in the off-season.",
+    "scanningTip": "Tìm từ 'off-season' (mùa vắng khách) tương đương 'quiet season'."
+  }
+},
+{
+  "id": "test2_159",
+  "num": 159,
+  "source": "Test 2",
+  "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+  "question": "When will the Summer Shack close during the week starting June 1?",
+  "options": {
+    "A": "6:30",
+    "B": "8:30",
+    "C": "9:00",
+    "D": "10:30"
+  },
+  "correctAnswer": "B",
+  "explanation": "Đoạn 3: 'On June 1, we'll resume our ordinary hours of business: 10:00 am - 8:30 pm Monday through Friday' -> ngày trong tuần (during the week) đóng cửa lúc 8:30 tối.",
+  "tip": "⚡ MẸO: 'during the week' là các ngày trong tuần (Mon-Fri) -> nhìn vào mốc đóng cửa 8:30 pm.",
+  "keywords": [
+    "June 1",
+    "Monday through Friday",
+    "8:30 pm"
+  ],
+  "vietnameseMeaning": "Summer Shack sẽ đóng cửa lúc mấy giờ trong các ngày trong tuần kể từ ngày 1 tháng 6?",
+  "isPassageQuestion": true,
+  "passageId": "test2_p7_summer_shack",
+  "passageInfo": {
+    "id": "test2_p7_summer_shack",
+    "title": "Thông Báo Giờ Mở Cửa - Quán Kem & Sữa Lắc Summer Shack",
+    "content": "Dear Summer Shack Customers,\n\nFor the first time ever, the Summer Shack is opening for limited hours on May 1: 11:00 am - 6:30 pm Monday through Friday, and 10:00 am - 7:00 pm on weekends.\n\nWe've been providing local people with delicious milkshakes, ice cream, and frozen yogurt cones for over 25 years. After so many years of honest service, we've decided it's time to slow down and relax a little in the off-season.\n\nBut don't worry, we'll be back to business as usual in time for our busy summer period. On June 1, we'll resume our ordinary hours of business: 10:00 am - 8:30 pm Monday through Friday, and 9:00 am - 10:30 pm on weekends.\n\nWe look forward to seeing all of our customers in store soon. If you've never tried a Summer Shack product, you don't know what you're missing in summer. Summer Shack is the taste of summer!\n\nSummer Shack Owner",
+    "vietnameseTranslation": "Kính gửi Quý khách hàng của Summer Shack,\n\nLần đầu tiên trong lịch sử, Summer Shack sẽ mở cửa với khung giờ giới hạn từ ngày 1 tháng 5: 11:00 sáng - 6:30 chiều từ Thứ Hai đến Thứ Sáu, và 10:00 sáng - 7:00 tối vào cuối tuần.\n\nChúng tôi đã phục vụ người dân địa phương những món sữa lắc thơm ngon, kem và kem ốc quế sữa chua đông lạnh suốt hơn 25 năm qua. Sau nhiều năm phục vụ tận tâm, chúng tôi quyết định đã đến lúc sống chậm lại và nghỉ ngơi một chút trong mùa thấp điểm (off-season).\n\nNhưng đừng lo, chúng tôi sẽ trở lại hoạt động bình thường đúng vào mùa hè bận rộn. Từ ngày 1 tháng 6, chúng tôi sẽ khôi phục giờ mở cửa bình thường: 10:00 sáng - 8:30 tối từ Thứ Hai đến Thứ Sáu, và 9:00 sáng - 10:30 tối vào cuối tuần.\n\nRất mong được sớm gặp lại quý khách tại cửa hàng.\n\nChủ quán Summer Shack",
+    "questionIds": [
+      "test2_158",
+      "test2_159"
+    ],
+    "clues": [
+      {
+        "questionNum": 158,
+        "correctAnswer": "A",
+        "clueLocation": "Đoạn 2, dòng 2-3",
+        "clueQuote": "we've decided it's time to slow down and relax a little in the off-season.",
+        "scanningTip": "Tìm từ 'off-season' (mùa vắng khách) tương đương 'quiet season'."
+      },
+      {
+        "questionNum": 159,
+        "correctAnswer": "B",
+        "clueLocation": "Đoạn 3, dòng 2-3",
+        "clueQuote": "10:00 am - 8:30 pm Monday through Friday",
+        "scanningTip": "Nhìn mốc ngày 'June 1' và đối chiếu giờ đóng cửa ngày trong tuần (Monday through Friday)."
+      }
+    ]
+  },
+  "clue": {
+    "questionNum": 159,
+    "correctAnswer": "B",
+    "clueLocation": "Đoạn 3, dòng 2-3",
+    "clueQuote": "10:00 am - 8:30 pm Monday through Friday",
+    "scanningTip": "Nhìn mốc ngày 'June 1' và đối chiếu giờ đóng cửa ngày trong tuần (Monday through Friday)."
+  }
+},
+{
+  "id": "test2_160",
+  "num": 160,
+  "source": "Test 2",
+  "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+  "question": "Who has been replaced as chairperson of the board?",
+  "options": {
+    "A": "Mr. Blundell",
+    "B": "Ms. Hernandez",
+    "C": "Mr. MacDonald",
+    "D": "Mr. Taiere"
+  },
+  "correctAnswer": "B",
+  "explanation": "Đoạn 2: 'Like his predecessor, Gloria Hernandez, Mr. Blundell...' -> Gloria Hernandez là người tiền nhiệm (predecessor) đã bị thay thế.",
+  "tip": "⚡ MẸO: 'replaced' = người bị thay thế, chính là người tiền nhiệm ('predecessor' Gloria Hernandez).",
+  "keywords": [
+    "predecessor",
+    "Gloria Hernandez",
+    "replaced"
+  ],
+  "vietnameseMeaning": "Ai là người đã bị thay thế ở vị trí chủ tịch hội đồng quản trị?",
+  "isPassageQuestion": true,
+  "passageId": "test2_p7_farrell",
+  "passageInfo": {
+    "id": "test2_p7_farrell",
+    "title": "Chủ Tịch Mới Của Tập Đoàn Ngân Hàng Đầu Tư - Farrell Group",
+    "content": "New Chairman for Investment Banking Group\n\nThe board members of the Farrell Group, the investment banking giant, voted unanimously to elect Henry Blundell as chairman.\n\nLike his predecessor, Gloria Hernandez, Mr. Blundell is a well-known supporter of Farrell Group CEO Jacob MacDonald. Experts agree that this should ensure a smooth management transition for the company.\n\nSome analysts believe that the appointment is unwise because the relationship between the two men is too close. The Farrell Group has recorded declining profits for the last two years. Accordingly, they regarded Mr. Blundell's fellow board member Shanikwa Taiere as a better choice. Mr. Taiere, who has a reputation for shaking things up, could have provided the company with a much-needed change of direction. With Mr. Blundell as chairman, however, radical changes are unlikely in the near future.",
+    "vietnameseTranslation": "Chủ tịch mới của Tập đoàn Ngân hàng Đầu tư\n\nCác thành viên hội đồng quản trị của Farrell Group, tập đoàn ngân hàng đầu tư khổng lồ, đã bỏ phiếu nhất trí bầu ông Henry Blundell làm chủ tịch.\n\nGiống như người tiền nhiệm của mình, bà Gloria Hernandez, ông Blundell là người ủng hộ nổi tiếng của Giám đốc điều hành Farrell Group, ông Jacob MacDonald. Các chuyên gia đồng tình rằng điều này sẽ đảm bảo quá trình chuyển giao quản lý diễn ra suôn sẻ.\n\nMột số nhà phân tích cho rằng quyết định bổ nhiệm này là thiếu khôn ngoan vì mối quan hệ giữa hai người quá thân thiết. Farrell Group đã ghi nhận lợi nhuận sụt giảm trong hai năm qua. Theo đó, họ xem thành viên hội đồng quản trị Shanikwa Taiere là lựa chọn tốt hơn. Ông Taiere, người nổi tiếng với việc tạo ra đột phá, có thể mang lại sự đổi mới hướng đi cần thiết. Tuy nhiên, với việc ông Blundell làm chủ tịch, những thay đổi mang tính triệt để khó có thể xảy ra trong tương lai gần.",
+    "questionIds": [
+      "test2_160",
+      "test2_161"
+    ],
+    "clues": [
+      {
+        "questionNum": 160,
+        "correctAnswer": "B",
+        "clueLocation": "Đoạn 2, dòng 1",
+        "clueQuote": "Like his predecessor, Gloria Hernandez, Mr. Blundell is a well-known supporter...",
+        "scanningTip": "Tìm từ 'predecessor' (người tiền nhiệm bị thay thế) ở đầu đoạn 2."
+      },
+      {
+        "questionNum": 161,
+        "correctAnswer": "A",
+        "clueLocation": "Đoạn 3, dòng 1",
+        "clueQuote": "Some analysts believe that the appointment is unwise because the relationship between the two men is too close.",
+        "scanningTip": "Quét cụm 'Some analysts believe' và từ 'unwise' (sai lầm)."
+      }
+    ]
+  },
+  "clue": {
+    "questionNum": 160,
+    "correctAnswer": "B",
+    "clueLocation": "Đoạn 2, dòng 1",
+    "clueQuote": "Like his predecessor, Gloria Hernandez, Mr. Blundell is a well-known supporter...",
+    "scanningTip": "Tìm từ 'predecessor' (người tiền nhiệm bị thay thế) ở đầu đoạn 2."
+  }
+},
+{
+  "id": "test2_161",
+  "num": 161,
+  "source": "Test 2",
+  "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+  "question": "According to the article, what do some analysts believe?",
+  "options": {
+    "A": "The wrong appointment was made.",
+    "B": "The company will stage a recovery.",
+    "C": "The CEO is unhappy with the result.",
+    "D": "Radical changes will be introduced."
+  },
+  "correctAnswer": "A",
+  "explanation": "Đoạn 3: 'Some analysts believe that the appointment is unwise...' -> unwise (không khôn ngoan / sai lầm) tương đương với 'The wrong appointment was made'.",
+  "tip": "⚡ MẸO: 'unwise' (sai lầm, thiếu sáng suốt) = 'wrong appointment'.",
+  "keywords": [
+    "appointment is unwise",
+    "wrong appointment"
+  ],
+  "vietnameseMeaning": "Theo bài báo, một số nhà phân tích tin vào điều gì?",
+  "isPassageQuestion": true,
+  "passageId": "test2_p7_farrell",
+  "passageInfo": {
+    "id": "test2_p7_farrell",
+    "title": "Chủ Tịch Mới Của Tập Đoàn Ngân Hàng Đầu Tư - Farrell Group",
+    "content": "New Chairman for Investment Banking Group\n\nThe board members of the Farrell Group, the investment banking giant, voted unanimously to elect Henry Blundell as chairman.\n\nLike his predecessor, Gloria Hernandez, Mr. Blundell is a well-known supporter of Farrell Group CEO Jacob MacDonald. Experts agree that this should ensure a smooth management transition for the company.\n\nSome analysts believe that the appointment is unwise because the relationship between the two men is too close. The Farrell Group has recorded declining profits for the last two years. Accordingly, they regarded Mr. Blundell's fellow board member Shanikwa Taiere as a better choice. Mr. Taiere, who has a reputation for shaking things up, could have provided the company with a much-needed change of direction. With Mr. Blundell as chairman, however, radical changes are unlikely in the near future.",
+    "vietnameseTranslation": "Chủ tịch mới của Tập đoàn Ngân hàng Đầu tư\n\nCác thành viên hội đồng quản trị của Farrell Group, tập đoàn ngân hàng đầu tư khổng lồ, đã bỏ phiếu nhất trí bầu ông Henry Blundell làm chủ tịch.\n\nGiống như người tiền nhiệm của mình, bà Gloria Hernandez, ông Blundell là người ủng hộ nổi tiếng của Giám đốc điều hành Farrell Group, ông Jacob MacDonald. Các chuyên gia đồng tình rằng điều này sẽ đảm bảo quá trình chuyển giao quản lý diễn ra suôn sẻ.\n\nMột số nhà phân tích cho rằng quyết định bổ nhiệm này là thiếu khôn ngoan vì mối quan hệ giữa hai người quá thân thiết. Farrell Group đã ghi nhận lợi nhuận sụt giảm trong hai năm qua. Theo đó, họ xem thành viên hội đồng quản trị Shanikwa Taiere là lựa chọn tốt hơn. Ông Taiere, người nổi tiếng với việc tạo ra đột phá, có thể mang lại sự đổi mới hướng đi cần thiết. Tuy nhiên, với việc ông Blundell làm chủ tịch, những thay đổi mang tính triệt để khó có thể xảy ra trong tương lai gần.",
+    "questionIds": [
+      "test2_160",
+      "test2_161"
+    ],
+    "clues": [
+      {
+        "questionNum": 160,
+        "correctAnswer": "B",
+        "clueLocation": "Đoạn 2, dòng 1",
+        "clueQuote": "Like his predecessor, Gloria Hernandez, Mr. Blundell is a well-known supporter...",
+        "scanningTip": "Tìm từ 'predecessor' (người tiền nhiệm bị thay thế) ở đầu đoạn 2."
+      },
+      {
+        "questionNum": 161,
+        "correctAnswer": "A",
+        "clueLocation": "Đoạn 3, dòng 1",
+        "clueQuote": "Some analysts believe that the appointment is unwise because the relationship between the two men is too close.",
+        "scanningTip": "Quét cụm 'Some analysts believe' và từ 'unwise' (sai lầm)."
+      }
+    ]
+  },
+  "clue": {
+    "questionNum": 161,
+    "correctAnswer": "A",
+    "clueLocation": "Đoạn 3, dòng 1",
+    "clueQuote": "Some analysts believe that the appointment is unwise because the relationship between the two men is too close.",
+    "scanningTip": "Quét cụm 'Some analysts believe' và từ 'unwise' (sai lầm)."
+  }
+},
+{
+  "id": "test2_162",
+  "num": 162,
+  "source": "Test 2",
+  "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+  "question": "What is the purpose of this form?",
+  "options": {
+    "A": "To purchase a new car model",
+    "B": "To compare different car dealerships",
+    "C": "To determine the best car for a customer",
+    "D": "To provide feedback to a car seller"
+  },
+  "correctAnswer": "D",
+  "explanation": "Tiêu đề 'Take a Second to Tell Us What You Think!' và các câu hỏi đánh giá xếp hạng -> cung cấp phản hồi cho người bán xe (provide feedback to a car seller).",
+  "tip": "⚡ MẸO: Phiếu đánh giá rate poor/average/excellent = 'provide feedback'.",
+  "keywords": [
+    "Tell Us What You Think",
+    "feedback"
+  ],
+  "vietnameseMeaning": "Mục đích của mẫu đơn này là gì?",
+  "isPassageQuestion": true,
+  "passageId": "test2_p7_highway81",
+  "passageInfo": {
+    "id": "test2_p7_highway81",
+    "title": "Phiếu Khảo Sát Đánh Giá Khách Hàng - Đại Lý Xe Hơi Highway 81 Motors",
+    "content": "Highway 81 Motors\nTake a Second to Tell Us What You Think!\n\nDealership Facilities\nHow would you rate our facilities?\npoor _____ below average _____ average [X] above average _____ excellent _____\n\nHow would you rate the convenience of our location?\npoor _____ below average _____ average _____ above average [X] excellent _____\n\nPrices\nHow would you rate the appropriateness of the prices?\npoor _____ below average [X] average _____ above average _____ excellent _____\n\nSalesperson\nWho assisted you? Bruce Becker\nHow would you rate the helpfulness of your salesperson?\npoor [X] below average _____ average _____ above average _____ excellent _____\n\nWould you recommend Highway 81 Motors to your friends?\nyes _____ no [X]\n\nComments:\nI was very disappointed with the salesperson I dealt with. First of all, he did not listen to the features I was looking for in a car. Instead, he only wanted to show me the most expensive models. Also, he was very aggressive and tried to convince me to buy something I did not want. Because of my experience with Mr. Becker, I cannot recommend Highway 81 Motors to anyone.",
+    "vietnameseTranslation": "Highway 81 Motors\nHãy dành vài giây cho chúng tôi biết suy nghĩ của bạn!\n\nCơ sở vật chất đại lý:\nBạn đánh giá thế nào về cơ sở vật chất của chúng tôi? Trung bình [X]\nBạn đánh giá thế nào về sự thuận tiện của vị trí? Trên trung bình [X]\n\nGiá cả:\nBạn đánh giá thế nào về mức độ hợp lý của giá cả? Dưới trung bình [X]\n\nNhân viên bán hàng:\nAi đã hỗ trợ bạn? Bruce Becker\nBạn đánh giá thế nào về sự hữu ích của nhân viên bán hàng? Kém [X]\n\nBạn có giới thiệu Highway 81 Motors cho bạn bè không? Không [X]\n\nÝ kiến đóng góp:\nTôi rất thất vọng về nhân viên bán hàng mà mình làm việc cùng. Trước hết, anh ta không thèm lắng nghe những tính năng tôi cần ở một chiếc xe. Thay vào đó, anh ta chỉ muốn dẫn tôi xem những mẫu xe đắt tiền nhất. Ngoài ra, anh ta rất hung hăng và cố thuyết phục tôi mua thứ tôi không muốn. Do trải nghiệm này với ông Becker, tôi không thể giới thiệu Highway 81 Motors cho bất kỳ ai.",
+    "questionIds": [
+      "test2_162",
+      "test2_163",
+      "test2_164"
+    ],
+    "clues": [
+      {
+        "questionNum": 162,
+        "correctAnswer": "D",
+        "clueLocation": "Tiêu đề mẫu đơn",
+        "clueQuote": "Take a Second to Tell Us What You Think!",
+        "scanningTip": "Nhìn tiêu đề của mẫu phiếu khảo sát ý kiến khách hàng."
+      },
+      {
+        "questionNum": 163,
+        "correctAnswer": "C",
+        "clueLocation": "Phần Dealership Facilities, câu 2",
+        "clueQuote": "convenience of our location: above average [X]",
+        "scanningTip": "Đối chiếu mức đánh giá tick chọn cao nhất trong biểu mẫu (above average)."
+      },
+      {
+        "questionNum": 164,
+        "correctAnswer": "C",
+        "clueLocation": "Phần Comments, dòng 3-4",
+        "clueQuote": "he was very aggressive and tried to convince me to buy something I did not want.",
+        "scanningTip": "Đọc phần nhận xét 'Comments' về ông Becker."
+      }
+    ]
+  },
+  "clue": {
+    "questionNum": 162,
+    "correctAnswer": "D",
+    "clueLocation": "Tiêu đề mẫu đơn",
+    "clueQuote": "Take a Second to Tell Us What You Think!",
+    "scanningTip": "Nhìn tiêu đề của mẫu phiếu khảo sát ý kiến khách hàng."
+  }
+},
+{
+  "id": "test2_163",
+  "num": 163,
+  "source": "Test 2",
+  "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+  "question": "Which aspect was the customer most satisfied with?",
+  "options": {
+    "A": "The dealership's facilities",
+    "B": "The salesperson's attitude",
+    "C": "The dealership's location",
+    "D": "The prices of the new models"
+  },
+  "correctAnswer": "C",
+  "explanation": "Đối chiếu các mức đánh giá: Facilities (average), Prices (below average), Salesperson (poor), Location (above average - mức cao nhất trong tất cả các mục).",
+  "tip": "⚡ MẸO: Mục nào có tick cao nhất? Location được 'above average' -> chọn 'dealership's location'.",
+  "keywords": [
+    "above average",
+    "convenience of our location"
+  ],
+  "vietnameseMeaning": "Khách hàng hài lòng nhất với khía cạnh nào?",
+  "isPassageQuestion": true,
+  "passageId": "test2_p7_highway81",
+  "passageInfo": {
+    "id": "test2_p7_highway81",
+    "title": "Phiếu Khảo Sát Đánh Giá Khách Hàng - Đại Lý Xe Hơi Highway 81 Motors",
+    "content": "Highway 81 Motors\nTake a Second to Tell Us What You Think!\n\nDealership Facilities\nHow would you rate our facilities?\npoor _____ below average _____ average [X] above average _____ excellent _____\n\nHow would you rate the convenience of our location?\npoor _____ below average _____ average _____ above average [X] excellent _____\n\nPrices\nHow would you rate the appropriateness of the prices?\npoor _____ below average [X] average _____ above average _____ excellent _____\n\nSalesperson\nWho assisted you? Bruce Becker\nHow would you rate the helpfulness of your salesperson?\npoor [X] below average _____ average _____ above average _____ excellent _____\n\nWould you recommend Highway 81 Motors to your friends?\nyes _____ no [X]\n\nComments:\nI was very disappointed with the salesperson I dealt with. First of all, he did not listen to the features I was looking for in a car. Instead, he only wanted to show me the most expensive models. Also, he was very aggressive and tried to convince me to buy something I did not want. Because of my experience with Mr. Becker, I cannot recommend Highway 81 Motors to anyone.",
+    "vietnameseTranslation": "Highway 81 Motors\nHãy dành vài giây cho chúng tôi biết suy nghĩ của bạn!\n\nCơ sở vật chất đại lý:\nBạn đánh giá thế nào về cơ sở vật chất của chúng tôi? Trung bình [X]\nBạn đánh giá thế nào về sự thuận tiện của vị trí? Trên trung bình [X]\n\nGiá cả:\nBạn đánh giá thế nào về mức độ hợp lý của giá cả? Dưới trung bình [X]\n\nNhân viên bán hàng:\nAi đã hỗ trợ bạn? Bruce Becker\nBạn đánh giá thế nào về sự hữu ích của nhân viên bán hàng? Kém [X]\n\nBạn có giới thiệu Highway 81 Motors cho bạn bè không? Không [X]\n\nÝ kiến đóng góp:\nTôi rất thất vọng về nhân viên bán hàng mà mình làm việc cùng. Trước hết, anh ta không thèm lắng nghe những tính năng tôi cần ở một chiếc xe. Thay vào đó, anh ta chỉ muốn dẫn tôi xem những mẫu xe đắt tiền nhất. Ngoài ra, anh ta rất hung hăng và cố thuyết phục tôi mua thứ tôi không muốn. Do trải nghiệm này với ông Becker, tôi không thể giới thiệu Highway 81 Motors cho bất kỳ ai.",
+    "questionIds": [
+      "test2_162",
+      "test2_163",
+      "test2_164"
+    ],
+    "clues": [
+      {
+        "questionNum": 162,
+        "correctAnswer": "D",
+        "clueLocation": "Tiêu đề mẫu đơn",
+        "clueQuote": "Take a Second to Tell Us What You Think!",
+        "scanningTip": "Nhìn tiêu đề của mẫu phiếu khảo sát ý kiến khách hàng."
+      },
+      {
+        "questionNum": 163,
+        "correctAnswer": "C",
+        "clueLocation": "Phần Dealership Facilities, câu 2",
+        "clueQuote": "convenience of our location: above average [X]",
+        "scanningTip": "Đối chiếu mức đánh giá tick chọn cao nhất trong biểu mẫu (above average)."
+      },
+      {
+        "questionNum": 164,
+        "correctAnswer": "C",
+        "clueLocation": "Phần Comments, dòng 3-4",
+        "clueQuote": "he was very aggressive and tried to convince me to buy something I did not want.",
+        "scanningTip": "Đọc phần nhận xét 'Comments' về ông Becker."
+      }
+    ]
+  },
+  "clue": {
+    "questionNum": 163,
+    "correctAnswer": "C",
+    "clueLocation": "Phần Dealership Facilities, câu 2",
+    "clueQuote": "convenience of our location: above average [X]",
+    "scanningTip": "Đối chiếu mức đánh giá tick chọn cao nhất trong biểu mẫu (above average)."
+  }
+},
+{
+  "id": "test2_164",
+  "num": 164,
+  "source": "Test 2",
+  "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+  "question": "What is said about Mr. Becker?",
+  "options": {
+    "A": "He drives an expensive vehicle.",
+    "B": "He recommended Highway 81 Motors to his friends.",
+    "C": "He pressured the customer.",
+    "D": "He was disappointed with his colleague."
+  },
+  "correctAnswer": "C",
+  "explanation": "Phần Comments: 'he was very aggressive and tried to convince me to buy something I did not want' -> hung hăng, ép khách mua = pressured the customer.",
+  "tip": "⚡ MẸO: 'aggressive and tried to convince me to buy something I did not want' = 'pressured the customer' (gây áp lực ép mua).",
+  "keywords": [
+    "aggressive",
+    "tried to convince me",
+    "pressured"
+  ],
+  "vietnameseMeaning": "Điều gì được nói về ông Becker?",
+  "isPassageQuestion": true,
+  "passageId": "test2_p7_highway81",
+  "passageInfo": {
+    "id": "test2_p7_highway81",
+    "title": "Phiếu Khảo Sát Đánh Giá Khách Hàng - Đại Lý Xe Hơi Highway 81 Motors",
+    "content": "Highway 81 Motors\nTake a Second to Tell Us What You Think!\n\nDealership Facilities\nHow would you rate our facilities?\npoor _____ below average _____ average [X] above average _____ excellent _____\n\nHow would you rate the convenience of our location?\npoor _____ below average _____ average _____ above average [X] excellent _____\n\nPrices\nHow would you rate the appropriateness of the prices?\npoor _____ below average [X] average _____ above average _____ excellent _____\n\nSalesperson\nWho assisted you? Bruce Becker\nHow would you rate the helpfulness of your salesperson?\npoor [X] below average _____ average _____ above average _____ excellent _____\n\nWould you recommend Highway 81 Motors to your friends?\nyes _____ no [X]\n\nComments:\nI was very disappointed with the salesperson I dealt with. First of all, he did not listen to the features I was looking for in a car. Instead, he only wanted to show me the most expensive models. Also, he was very aggressive and tried to convince me to buy something I did not want. Because of my experience with Mr. Becker, I cannot recommend Highway 81 Motors to anyone.",
+    "vietnameseTranslation": "Highway 81 Motors\nHãy dành vài giây cho chúng tôi biết suy nghĩ của bạn!\n\nCơ sở vật chất đại lý:\nBạn đánh giá thế nào về cơ sở vật chất của chúng tôi? Trung bình [X]\nBạn đánh giá thế nào về sự thuận tiện của vị trí? Trên trung bình [X]\n\nGiá cả:\nBạn đánh giá thế nào về mức độ hợp lý của giá cả? Dưới trung bình [X]\n\nNhân viên bán hàng:\nAi đã hỗ trợ bạn? Bruce Becker\nBạn đánh giá thế nào về sự hữu ích của nhân viên bán hàng? Kém [X]\n\nBạn có giới thiệu Highway 81 Motors cho bạn bè không? Không [X]\n\nÝ kiến đóng góp:\nTôi rất thất vọng về nhân viên bán hàng mà mình làm việc cùng. Trước hết, anh ta không thèm lắng nghe những tính năng tôi cần ở một chiếc xe. Thay vào đó, anh ta chỉ muốn dẫn tôi xem những mẫu xe đắt tiền nhất. Ngoài ra, anh ta rất hung hăng và cố thuyết phục tôi mua thứ tôi không muốn. Do trải nghiệm này với ông Becker, tôi không thể giới thiệu Highway 81 Motors cho bất kỳ ai.",
+    "questionIds": [
+      "test2_162",
+      "test2_163",
+      "test2_164"
+    ],
+    "clues": [
+      {
+        "questionNum": 162,
+        "correctAnswer": "D",
+        "clueLocation": "Tiêu đề mẫu đơn",
+        "clueQuote": "Take a Second to Tell Us What You Think!",
+        "scanningTip": "Nhìn tiêu đề của mẫu phiếu khảo sát ý kiến khách hàng."
+      },
+      {
+        "questionNum": 163,
+        "correctAnswer": "C",
+        "clueLocation": "Phần Dealership Facilities, câu 2",
+        "clueQuote": "convenience of our location: above average [X]",
+        "scanningTip": "Đối chiếu mức đánh giá tick chọn cao nhất trong biểu mẫu (above average)."
+      },
+      {
+        "questionNum": 164,
+        "correctAnswer": "C",
+        "clueLocation": "Phần Comments, dòng 3-4",
+        "clueQuote": "he was very aggressive and tried to convince me to buy something I did not want.",
+        "scanningTip": "Đọc phần nhận xét 'Comments' về ông Becker."
+      }
+    ]
+  },
+  "clue": {
+    "questionNum": 164,
+    "correctAnswer": "C",
+    "clueLocation": "Phần Comments, dòng 3-4",
+    "clueQuote": "he was very aggressive and tried to convince me to buy something I did not want.",
+    "scanningTip": "Đọc phần nhận xét 'Comments' về ông Becker."
+  }
+},
+{
+  "id": "test2_165",
+  "num": 165,
+  "source": "Test 2",
+  "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+  "question": "What does the memo discuss?",
+  "options": {
+    "A": "A talk being given by a company's CEO",
+    "B": "The construction of a new auditorium",
+    "C": "A workshop on developing lecturing skills",
+    "D": "The introduction of an employee education program"
+  },
+  "correctAnswer": "D",
+  "explanation": "Tiêu đề 'Corporate Training Lecture Series' và đoạn 1: 'launch next year of a monthly lecture series that will be open to all workers' -> giới thiệu chương trình đào tạo/giáo dục nhân viên.",
+  "tip": "⚡ MẸO: 'Corporate Training Lecture Series' = 'employee education program'.",
+  "keywords": [
+    "Corporate Training",
+    "employee education"
+  ],
+  "vietnameseMeaning": "Bản ghi nhớ thảo luận về điều gì?",
+  "isPassageQuestion": true,
+  "passageId": "test2_p7_watson_memo",
+  "passageInfo": {
+    "id": "test2_p7_watson_memo",
+    "title": "Thông Báo Chuỗi Bài Giảng Đào Tạo Doanh Nghiệp - Watson & Sons, Inc.",
+    "content": "From: Juan Carlos Ruiz, Personnel Officer\nTo: All employees\nSubject: Corporate Training Lecture Series\nDate: December 2, 2008\n\nWatson & Sons, Inc. is committed to improving the lives of its employees. In this spirit, I am happy to announce the launch next year of a monthly lecture series that will be open to all Watson & Sons workers.\n\nOn the second Friday of each month, a guest lecturer will speak in auditorium B. Topics covered will be very diverse, from the latest industry innovations to tips for managing your work schedule effectively.\n\nThe first lecture has already been scheduled for January 10. Our speaker for the event will be Loretta Kumar, executive vice president of the Helmsman's Fund. She plans to discuss how recent trends in the corporate world have increased the quality of life of the average employee. In addition, we are currently talking with renowned author Bill Mead and hope to schedule his appearance sometime in spring.\n\nIf anyone has any questions about the program, please contact me in the personnel office at extension 5182.",
+    "vietnameseTranslation": "Từ: Juan Carlos Ruiz, Cán bộ Nhân sự\nĐến: Toàn thể nhân viên\nChủ đề: Chuỗi bài giảng đào tạo doanh nghiệp\nNgày: 2 tháng 12, 2008\n\nWatson & Sons, Inc. luôn cam kết nâng cao chất lượng cuộc sống của nhân viên. Trên tinh thần này, tôi rất vui mừng thông báo về việc triển khai chuỗi bài giảng hàng tháng vào năm tới dành cho toàn thể nhân viên Watson & Sons.\n\nVào ngày Thứ Sáu thứ hai của mỗi tháng, một giảng viên khách mời sẽ thuyết trình tại khán phòng B. Các chủ đề sẽ rất đa dạng, từ những đổi mới mới nhất trong ngành cho đến các mẹo quản lý lịch trình làm việc hiệu quả.\n\nBài giảng đầu tiên đã được lên lịch vào ngày 10 tháng 1. Diễn giả là bà Loretta Kumar, phó chủ tịch điều hành của Helmsman's Fund...",
+    "questionIds": [
+      "test2_165",
+      "test2_166",
+      "test2_167"
+    ],
+    "clues": [
+      {
+        "questionNum": 165,
+        "correctAnswer": "D",
+        "clueLocation": "Đoạn 1, dòng 2-3",
+        "clueQuote": "launch next year of a monthly lecture series that will be open to all Watson & Sons workers.",
+        "scanningTip": "Nhìn tiêu đề Subject và đoạn mở đầu."
+      },
+      {
+        "questionNum": 166,
+        "correctAnswer": "C",
+        "clueLocation": "Đoạn 1, dòng 2 & Đoạn 2, dòng 1",
+        "clueQuote": "monthly lecture series... On the second Friday of each month",
+        "scanningTip": "Tìm từ chỉ tần suất 'monthly' hoặc 'each month'."
+      },
+      {
+        "questionNum": 167,
+        "correctAnswer": "D",
+        "clueLocation": "Đoạn 2 & 3",
+        "clueQuote": "from the latest industry innovations to tips for managing your work schedule effectively... quality of life of the average employee",
+        "scanningTip": "Đối chiếu 4 phương án với các chủ đề được liệt kê."
+      }
+    ]
+  },
+  "clue": {
+    "questionNum": 165,
+    "correctAnswer": "D",
+    "clueLocation": "Đoạn 1, dòng 2-3",
+    "clueQuote": "launch next year of a monthly lecture series that will be open to all Watson & Sons workers.",
+    "scanningTip": "Nhìn tiêu đề Subject và đoạn mở đầu."
+  }
+},
+{
+  "id": "test2_166",
+  "num": 166,
+  "source": "Test 2",
+  "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+  "question": "How often will lectures be given?",
+  "options": {
+    "A": "Once a week",
+    "B": "Every other week",
+    "C": "Once a month",
+    "D": "Every other month"
+  },
+  "correctAnswer": "C",
+  "explanation": "Đoạn 1 ghi 'monthly lecture series' và đoạn 2 ghi 'On the second Friday of each month' -> mỗi tháng một lần (Once a month).",
+  "tip": "⚡ MẸO: 'monthly' = 'Once a month' (mỗi tháng một lần).",
+  "keywords": [
+    "monthly",
+    "each month",
+    "Once a month"
+  ],
+  "vietnameseMeaning": "Các bài giảng sẽ được tổ chức với tần suất như thế nào?",
+  "isPassageQuestion": true,
+  "passageId": "test2_p7_watson_memo",
+  "passageInfo": {
+    "id": "test2_p7_watson_memo",
+    "title": "Thông Báo Chuỗi Bài Giảng Đào Tạo Doanh Nghiệp - Watson & Sons, Inc.",
+    "content": "From: Juan Carlos Ruiz, Personnel Officer\nTo: All employees\nSubject: Corporate Training Lecture Series\nDate: December 2, 2008\n\nWatson & Sons, Inc. is committed to improving the lives of its employees. In this spirit, I am happy to announce the launch next year of a monthly lecture series that will be open to all Watson & Sons workers.\n\nOn the second Friday of each month, a guest lecturer will speak in auditorium B. Topics covered will be very diverse, from the latest industry innovations to tips for managing your work schedule effectively.\n\nThe first lecture has already been scheduled for January 10. Our speaker for the event will be Loretta Kumar, executive vice president of the Helmsman's Fund. She plans to discuss how recent trends in the corporate world have increased the quality of life of the average employee. In addition, we are currently talking with renowned author Bill Mead and hope to schedule his appearance sometime in spring.\n\nIf anyone has any questions about the program, please contact me in the personnel office at extension 5182.",
+    "vietnameseTranslation": "Từ: Juan Carlos Ruiz, Cán bộ Nhân sự\nĐến: Toàn thể nhân viên\nChủ đề: Chuỗi bài giảng đào tạo doanh nghiệp\nNgày: 2 tháng 12, 2008\n\nWatson & Sons, Inc. luôn cam kết nâng cao chất lượng cuộc sống của nhân viên. Trên tinh thần này, tôi rất vui mừng thông báo về việc triển khai chuỗi bài giảng hàng tháng vào năm tới dành cho toàn thể nhân viên Watson & Sons.\n\nVào ngày Thứ Sáu thứ hai của mỗi tháng, một giảng viên khách mời sẽ thuyết trình tại khán phòng B. Các chủ đề sẽ rất đa dạng, từ những đổi mới mới nhất trong ngành cho đến các mẹo quản lý lịch trình làm việc hiệu quả.\n\nBài giảng đầu tiên đã được lên lịch vào ngày 10 tháng 1. Diễn giả là bà Loretta Kumar, phó chủ tịch điều hành của Helmsman's Fund...",
+    "questionIds": [
+      "test2_165",
+      "test2_166",
+      "test2_167"
+    ],
+    "clues": [
+      {
+        "questionNum": 165,
+        "correctAnswer": "D",
+        "clueLocation": "Đoạn 1, dòng 2-3",
+        "clueQuote": "launch next year of a monthly lecture series that will be open to all Watson & Sons workers.",
+        "scanningTip": "Nhìn tiêu đề Subject và đoạn mở đầu."
+      },
+      {
+        "questionNum": 166,
+        "correctAnswer": "C",
+        "clueLocation": "Đoạn 1, dòng 2 & Đoạn 2, dòng 1",
+        "clueQuote": "monthly lecture series... On the second Friday of each month",
+        "scanningTip": "Tìm từ chỉ tần suất 'monthly' hoặc 'each month'."
+      },
+      {
+        "questionNum": 167,
+        "correctAnswer": "D",
+        "clueLocation": "Đoạn 2 & 3",
+        "clueQuote": "from the latest industry innovations to tips for managing your work schedule effectively... quality of life of the average employee",
+        "scanningTip": "Đối chiếu 4 phương án với các chủ đề được liệt kê."
+      }
+    ]
+  },
+  "clue": {
+    "questionNum": 166,
+    "correctAnswer": "C",
+    "clueLocation": "Đoạn 1, dòng 2 & Đoạn 2, dòng 1",
+    "clueQuote": "monthly lecture series... On the second Friday of each month",
+    "scanningTip": "Tìm từ chỉ tần suất 'monthly' hoặc 'each month'."
+  }
+},
+{
+  "id": "test2_167",
+  "num": 167,
+  "source": "Test 2",
+  "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+  "question": "According to the memo, what will NOT be covered?",
+  "options": {
+    "A": "Advice on efficient time management",
+    "B": "Improvements in the lives of corporate workers",
+    "C": "Recent advances in the industry",
+    "D": "The history of Watson & Sons, Inc."
+  },
+  "correctAnswer": "D",
+  "explanation": "Trong bài liệt kê: 'latest industry innovations' (C), 'tips for managing your work schedule effectively' (A), 'increased the quality of life of the average employee' (B). Không hề đề cập đến lịch sử công ty Watson & Sons (D).",
+  "tip": "⚡ MẸO: Câu hỏi NOT covered -> quét danh sách các chủ đề ở đoạn 2 và 3, loại trừ A, B, C.",
+  "keywords": [
+    "NOT covered",
+    "history of Watson & Sons"
+  ],
+  "vietnameseMeaning": "Theo bản ghi nhớ, điều gì sẽ KHÔNG được đề cập đến?",
+  "isPassageQuestion": true,
+  "passageId": "test2_p7_watson_memo",
+  "passageInfo": {
+    "id": "test2_p7_watson_memo",
+    "title": "Thông Báo Chuỗi Bài Giảng Đào Tạo Doanh Nghiệp - Watson & Sons, Inc.",
+    "content": "From: Juan Carlos Ruiz, Personnel Officer\nTo: All employees\nSubject: Corporate Training Lecture Series\nDate: December 2, 2008\n\nWatson & Sons, Inc. is committed to improving the lives of its employees. In this spirit, I am happy to announce the launch next year of a monthly lecture series that will be open to all Watson & Sons workers.\n\nOn the second Friday of each month, a guest lecturer will speak in auditorium B. Topics covered will be very diverse, from the latest industry innovations to tips for managing your work schedule effectively.\n\nThe first lecture has already been scheduled for January 10. Our speaker for the event will be Loretta Kumar, executive vice president of the Helmsman's Fund. She plans to discuss how recent trends in the corporate world have increased the quality of life of the average employee. In addition, we are currently talking with renowned author Bill Mead and hope to schedule his appearance sometime in spring.\n\nIf anyone has any questions about the program, please contact me in the personnel office at extension 5182.",
+    "vietnameseTranslation": "Từ: Juan Carlos Ruiz, Cán bộ Nhân sự\nĐến: Toàn thể nhân viên\nChủ đề: Chuỗi bài giảng đào tạo doanh nghiệp\nNgày: 2 tháng 12, 2008\n\nWatson & Sons, Inc. luôn cam kết nâng cao chất lượng cuộc sống của nhân viên. Trên tinh thần này, tôi rất vui mừng thông báo về việc triển khai chuỗi bài giảng hàng tháng vào năm tới dành cho toàn thể nhân viên Watson & Sons.\n\nVào ngày Thứ Sáu thứ hai của mỗi tháng, một giảng viên khách mời sẽ thuyết trình tại khán phòng B. Các chủ đề sẽ rất đa dạng, từ những đổi mới mới nhất trong ngành cho đến các mẹo quản lý lịch trình làm việc hiệu quả.\n\nBài giảng đầu tiên đã được lên lịch vào ngày 10 tháng 1. Diễn giả là bà Loretta Kumar, phó chủ tịch điều hành của Helmsman's Fund...",
+    "questionIds": [
+      "test2_165",
+      "test2_166",
+      "test2_167"
+    ],
+    "clues": [
+      {
+        "questionNum": 165,
+        "correctAnswer": "D",
+        "clueLocation": "Đoạn 1, dòng 2-3",
+        "clueQuote": "launch next year of a monthly lecture series that will be open to all Watson & Sons workers.",
+        "scanningTip": "Nhìn tiêu đề Subject và đoạn mở đầu."
+      },
+      {
+        "questionNum": 166,
+        "correctAnswer": "C",
+        "clueLocation": "Đoạn 1, dòng 2 & Đoạn 2, dòng 1",
+        "clueQuote": "monthly lecture series... On the second Friday of each month",
+        "scanningTip": "Tìm từ chỉ tần suất 'monthly' hoặc 'each month'."
+      },
+      {
+        "questionNum": 167,
+        "correctAnswer": "D",
+        "clueLocation": "Đoạn 2 & 3",
+        "clueQuote": "from the latest industry innovations to tips for managing your work schedule effectively... quality of life of the average employee",
+        "scanningTip": "Đối chiếu 4 phương án với các chủ đề được liệt kê."
+      }
+    ]
+  },
+  "clue": {
+    "questionNum": 167,
+    "correctAnswer": "D",
+    "clueLocation": "Đoạn 2 & 3",
+    "clueQuote": "from the latest industry innovations to tips for managing your work schedule effectively... quality of life of the average employee",
+    "scanningTip": "Đối chiếu 4 phương án với các chủ đề được liệt kê."
+  }
+},
+{
+  "id": "test2_168",
+  "num": 168,
+  "source": "Test 2",
+  "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+  "question": "For whom is this notice intended?",
+  "options": {
+    "A": "The state commissioner",
+    "B": "Tenants of an office building",
+    "C": "Workers at a construction site",
+    "D": "A building's maintenance crew"
+  },
+  "correctAnswer": "B",
+  "explanation": "Thông báo gửi đến những người làm việc/thuê văn phòng trong tòa nhà Gordon ('all offices on a floor must be vacated', 'concerned occupants' = tenants of an office building).",
+  "tip": "⚡ MẸO: 'Gordon Building', 'offices', 'occupants' -> người thuê văn phòng trong tòa nhà (tenants).",
+  "keywords": [
+    "Gordon Building",
+    "occupants",
+    "tenants"
+  ],
+  "vietnameseMeaning": "Thông báo này dành cho đối tượng nào?",
+  "isPassageQuestion": true,
+  "passageId": "test2_p7_gordon_safety",
+  "passageInfo": {
+    "id": "test2_p7_gordon_safety",
+    "title": "Thông Báo Lịch Thanh Tra An Toàn Tòa Nhà Gordon",
+    "content": "Notice: Building Safety Inspection Schedule\n\nAs ordered by the state commissioner, the Gordon Building is to be inspected for safety violations. The entire process will last from August 18 to 20.\n\nInspections will be conducted on a floor-by-floor basis. Unfortunately, it is necessary to vacate each floor as it is inspected for about two hours. Below is the tentative schedule that has been provided by the commissioner's office:\n\nAugust 18: Floors 7-10\nAugust 19: Floors 3-6\nAugust 20: Floors 1-2 and parking lots\n\nAgain, all offices on a floor must be vacated while that floor is inspected. If you are unable to leave the premises on the dates recorded in the schedule, please contact the building management in room 101. The schedule will not be finalized until August 10, so the management is willing to listen to petitions from concerned occupants. Rearranging the dates will be a tricky administrative task so please only request a change if there is a valid reason for doing so.",
+    "vietnameseTranslation": "Thông báo: Lịch kiểm tra an toàn tòa nhà\n\nTheo lệnh của ủy viên tiểu bang, Tòa nhà Gordon sẽ được kiểm tra các vi phạm về an toàn. Toàn bộ quá trình sẽ diễn ra từ ngày 18 đến ngày 20 tháng 8.\n\nViệc kiểm tra sẽ được tiến hành theo từng tầng. Đáng tiếc là mỗi tầng cần phải được sơ tán trong khoảng hai giờ khi được kiểm tra. Dưới đây là lịch trình dự kiến:\n18 tháng 8: Tầng 7-10\n19 tháng 8: Tầng 3-6\n20 tháng 8: Tầng 1-2 và bãi đỗ xe\n\nMột lần nữa, tất cả các văn phòng trên một tầng phải được sơ tán trong thời gian tầng đó được kiểm tra. Nếu bạn không thể rời khỏi địa điểm vào các ngày đã ghi trong lịch, vui lòng liên hệ ban quản lý tòa nhà tại phòng 101. Lịch trình sẽ chưa được hoàn thiện cho đến ngày 10 tháng 8, vì vậy ban quản lý sẵn sàng lắng nghe đơn kiến nghị từ những người thuê có liên quan...",
+    "questionIds": [
+      "test2_168",
+      "test2_169",
+      "test2_170",
+      "test2_171"
+    ],
+    "clues": [
+      {
+        "questionNum": 168,
+        "correctAnswer": "B",
+        "clueLocation": "Đoạn 1 & Đoạn 3",
+        "clueQuote": "the Gordon Building is to be inspected... petitions from concerned occupants",
+        "scanningTip": "Tìm các từ 'Gordon Building', 'offices', 'occupants' = tenants."
+      },
+      {
+        "questionNum": 169,
+        "correctAnswer": "B",
+        "clueLocation": "Đoạn 1, dòng 1-2",
+        "clueQuote": "the Gordon Building is to be inspected for safety violations.",
+        "scanningTip": "Tìm cụm 'inspected for' ở ngay câu đầu."
+      },
+      {
+        "questionNum": 170,
+        "correctAnswer": "D",
+        "clueLocation": "Đoạn 2 & Đoạn 3",
+        "clueQuote": "August 20: Floors 1-2 and parking lots ... building management in room 101",
+        "scanningTip": "Phòng 101 thuộc Tầng 1 -> ngày 20/8."
+      },
+      {
+        "questionNum": 171,
+        "correctAnswer": "B",
+        "clueLocation": "Đoạn 3, dòng 4-6",
+        "clueQuote": "management is willing to listen to petitions... please only request a change if there is a valid reason",
+        "scanningTip": "Tìm các từ 'request a change' hoặc 'rearranging the dates'."
+      }
+    ]
+  },
+  "clue": {
+    "questionNum": 168,
+    "correctAnswer": "B",
+    "clueLocation": "Đoạn 1 & Đoạn 3",
+    "clueQuote": "the Gordon Building is to be inspected... petitions from concerned occupants",
+    "scanningTip": "Tìm các từ 'Gordon Building', 'offices', 'occupants' = tenants."
+  }
+},
+{
+  "id": "test2_169",
+  "num": 169,
+  "source": "Test 2",
+  "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+  "question": "Why are inspections being conducted?",
+  "options": {
+    "A": "To determine the cause of a fire",
+    "B": "To ensure compliance with safety regulations",
+    "C": "To renovate the interior of a building",
+    "D": "To measure the available space on each floor"
+  },
+  "correctAnswer": "B",
+  "explanation": "Đoạn 1: 'inspected for safety violations' -> kiểm tra vi phạm an toàn = đảm bảo tuân thủ quy định an toàn (compliance with safety regulations).",
+  "tip": "⚡ MẸO: 'inspected for safety violations' = 'ensure compliance with safety regulations'.",
+  "keywords": [
+    "inspected for safety violations",
+    "compliance"
+  ],
+  "vietnameseMeaning": "Tại sao việc kiểm tra lại được tiến hành?",
+  "isPassageQuestion": true,
+  "passageId": "test2_p7_gordon_safety",
+  "passageInfo": {
+    "id": "test2_p7_gordon_safety",
+    "title": "Thông Báo Lịch Thanh Tra An Toàn Tòa Nhà Gordon",
+    "content": "Notice: Building Safety Inspection Schedule\n\nAs ordered by the state commissioner, the Gordon Building is to be inspected for safety violations. The entire process will last from August 18 to 20.\n\nInspections will be conducted on a floor-by-floor basis. Unfortunately, it is necessary to vacate each floor as it is inspected for about two hours. Below is the tentative schedule that has been provided by the commissioner's office:\n\nAugust 18: Floors 7-10\nAugust 19: Floors 3-6\nAugust 20: Floors 1-2 and parking lots\n\nAgain, all offices on a floor must be vacated while that floor is inspected. If you are unable to leave the premises on the dates recorded in the schedule, please contact the building management in room 101. The schedule will not be finalized until August 10, so the management is willing to listen to petitions from concerned occupants. Rearranging the dates will be a tricky administrative task so please only request a change if there is a valid reason for doing so.",
+    "vietnameseTranslation": "Thông báo: Lịch kiểm tra an toàn tòa nhà\n\nTheo lệnh của ủy viên tiểu bang, Tòa nhà Gordon sẽ được kiểm tra các vi phạm về an toàn. Toàn bộ quá trình sẽ diễn ra từ ngày 18 đến ngày 20 tháng 8.\n\nViệc kiểm tra sẽ được tiến hành theo từng tầng. Đáng tiếc là mỗi tầng cần phải được sơ tán trong khoảng hai giờ khi được kiểm tra. Dưới đây là lịch trình dự kiến:\n18 tháng 8: Tầng 7-10\n19 tháng 8: Tầng 3-6\n20 tháng 8: Tầng 1-2 và bãi đỗ xe\n\nMột lần nữa, tất cả các văn phòng trên một tầng phải được sơ tán trong thời gian tầng đó được kiểm tra. Nếu bạn không thể rời khỏi địa điểm vào các ngày đã ghi trong lịch, vui lòng liên hệ ban quản lý tòa nhà tại phòng 101. Lịch trình sẽ chưa được hoàn thiện cho đến ngày 10 tháng 8, vì vậy ban quản lý sẵn sàng lắng nghe đơn kiến nghị từ những người thuê có liên quan...",
+    "questionIds": [
+      "test2_168",
+      "test2_169",
+      "test2_170",
+      "test2_171"
+    ],
+    "clues": [
+      {
+        "questionNum": 168,
+        "correctAnswer": "B",
+        "clueLocation": "Đoạn 1 & Đoạn 3",
+        "clueQuote": "the Gordon Building is to be inspected... petitions from concerned occupants",
+        "scanningTip": "Tìm các từ 'Gordon Building', 'offices', 'occupants' = tenants."
+      },
+      {
+        "questionNum": 169,
+        "correctAnswer": "B",
+        "clueLocation": "Đoạn 1, dòng 1-2",
+        "clueQuote": "the Gordon Building is to be inspected for safety violations.",
+        "scanningTip": "Tìm cụm 'inspected for' ở ngay câu đầu."
+      },
+      {
+        "questionNum": 170,
+        "correctAnswer": "D",
+        "clueLocation": "Đoạn 2 & Đoạn 3",
+        "clueQuote": "August 20: Floors 1-2 and parking lots ... building management in room 101",
+        "scanningTip": "Phòng 101 thuộc Tầng 1 -> ngày 20/8."
+      },
+      {
+        "questionNum": 171,
+        "correctAnswer": "B",
+        "clueLocation": "Đoạn 3, dòng 4-6",
+        "clueQuote": "management is willing to listen to petitions... please only request a change if there is a valid reason",
+        "scanningTip": "Tìm các từ 'request a change' hoặc 'rearranging the dates'."
+      }
+    ]
+  },
+  "clue": {
+    "questionNum": 169,
+    "correctAnswer": "B",
+    "clueLocation": "Đoạn 1, dòng 1-2",
+    "clueQuote": "the Gordon Building is to be inspected for safety violations.",
+    "scanningTip": "Tìm cụm 'inspected for' ở ngay câu đầu."
+  }
+},
+{
+  "id": "test2_170",
+  "num": 170,
+  "source": "Test 2",
+  "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+  "question": "When will the building management office be inspected?",
+  "options": {
+    "A": "August 10",
+    "B": "August 18",
+    "C": "August 19",
+    "D": "August 20"
+  },
+  "correctAnswer": "D",
+  "explanation": "Đoạn 3 cho biết văn phòng ban quản lý ở 'room 101' (Phòng 101 nằm ở Tầng 1). Theo lịch ở Đoạn 2: 'August 20: Floors 1-2 and parking lots' -> Ngày 20 tháng 8!",
+  "tip": "⚡ MẸO: 'room 101' = Tầng 1 (Floor 1). Lịch kiểm tra Tầng 1 là August 20.",
+  "keywords": [
+    "room 101",
+    "Floors 1-2",
+    "August 20"
+  ],
+  "vietnameseMeaning": "Văn phòng ban quản lý tòa nhà sẽ được kiểm tra vào ngày nào?",
+  "isPassageQuestion": true,
+  "passageId": "test2_p7_gordon_safety",
+  "passageInfo": {
+    "id": "test2_p7_gordon_safety",
+    "title": "Thông Báo Lịch Thanh Tra An Toàn Tòa Nhà Gordon",
+    "content": "Notice: Building Safety Inspection Schedule\n\nAs ordered by the state commissioner, the Gordon Building is to be inspected for safety violations. The entire process will last from August 18 to 20.\n\nInspections will be conducted on a floor-by-floor basis. Unfortunately, it is necessary to vacate each floor as it is inspected for about two hours. Below is the tentative schedule that has been provided by the commissioner's office:\n\nAugust 18: Floors 7-10\nAugust 19: Floors 3-6\nAugust 20: Floors 1-2 and parking lots\n\nAgain, all offices on a floor must be vacated while that floor is inspected. If you are unable to leave the premises on the dates recorded in the schedule, please contact the building management in room 101. The schedule will not be finalized until August 10, so the management is willing to listen to petitions from concerned occupants. Rearranging the dates will be a tricky administrative task so please only request a change if there is a valid reason for doing so.",
+    "vietnameseTranslation": "Thông báo: Lịch kiểm tra an toàn tòa nhà\n\nTheo lệnh của ủy viên tiểu bang, Tòa nhà Gordon sẽ được kiểm tra các vi phạm về an toàn. Toàn bộ quá trình sẽ diễn ra từ ngày 18 đến ngày 20 tháng 8.\n\nViệc kiểm tra sẽ được tiến hành theo từng tầng. Đáng tiếc là mỗi tầng cần phải được sơ tán trong khoảng hai giờ khi được kiểm tra. Dưới đây là lịch trình dự kiến:\n18 tháng 8: Tầng 7-10\n19 tháng 8: Tầng 3-6\n20 tháng 8: Tầng 1-2 và bãi đỗ xe\n\nMột lần nữa, tất cả các văn phòng trên một tầng phải được sơ tán trong thời gian tầng đó được kiểm tra. Nếu bạn không thể rời khỏi địa điểm vào các ngày đã ghi trong lịch, vui lòng liên hệ ban quản lý tòa nhà tại phòng 101. Lịch trình sẽ chưa được hoàn thiện cho đến ngày 10 tháng 8, vì vậy ban quản lý sẵn sàng lắng nghe đơn kiến nghị từ những người thuê có liên quan...",
+    "questionIds": [
+      "test2_168",
+      "test2_169",
+      "test2_170",
+      "test2_171"
+    ],
+    "clues": [
+      {
+        "questionNum": 168,
+        "correctAnswer": "B",
+        "clueLocation": "Đoạn 1 & Đoạn 3",
+        "clueQuote": "the Gordon Building is to be inspected... petitions from concerned occupants",
+        "scanningTip": "Tìm các từ 'Gordon Building', 'offices', 'occupants' = tenants."
+      },
+      {
+        "questionNum": 169,
+        "correctAnswer": "B",
+        "clueLocation": "Đoạn 1, dòng 1-2",
+        "clueQuote": "the Gordon Building is to be inspected for safety violations.",
+        "scanningTip": "Tìm cụm 'inspected for' ở ngay câu đầu."
+      },
+      {
+        "questionNum": 170,
+        "correctAnswer": "D",
+        "clueLocation": "Đoạn 2 & Đoạn 3",
+        "clueQuote": "August 20: Floors 1-2 and parking lots ... building management in room 101",
+        "scanningTip": "Phòng 101 thuộc Tầng 1 -> ngày 20/8."
+      },
+      {
+        "questionNum": 171,
+        "correctAnswer": "B",
+        "clueLocation": "Đoạn 3, dòng 4-6",
+        "clueQuote": "management is willing to listen to petitions... please only request a change if there is a valid reason",
+        "scanningTip": "Tìm các từ 'request a change' hoặc 'rearranging the dates'."
+      }
+    ]
+  },
+  "clue": {
+    "questionNum": 170,
+    "correctAnswer": "D",
+    "clueLocation": "Đoạn 2 & Đoạn 3",
+    "clueQuote": "August 20: Floors 1-2 and parking lots ... building management in room 101",
+    "scanningTip": "Phòng 101 thuộc Tầng 1 -> ngày 20/8."
+  }
+},
+{
+  "id": "test2_171",
+  "num": 171,
+  "source": "Test 2",
+  "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+  "question": "What are affected readers entitled to do?",
+  "options": {
+    "A": "Request an exemption from the check",
+    "B": "Ask for a change of assessment dates",
+    "C": "Contact the state commissioner",
+    "D": "Make their own inspection arrangements"
+  },
+  "correctAnswer": "B",
+  "explanation": "Đoạn 3: 'management is willing to listen to petitions from concerned occupants... request a change...' -> được phép yêu cầu đổi ngày kiểm tra (Ask for a change of assessment dates).",
+  "tip": "⚡ MẸO: 'petitions', 'request a change' = 'Ask for a change of assessment dates'.",
+  "keywords": [
+    "petitions",
+    "request a change",
+    "assessment dates"
+  ],
+  "vietnameseMeaning": "Những người đọc bị ảnh hưởng có quyền làm gì?",
+  "isPassageQuestion": true,
+  "passageId": "test2_p7_gordon_safety",
+  "passageInfo": {
+    "id": "test2_p7_gordon_safety",
+    "title": "Thông Báo Lịch Thanh Tra An Toàn Tòa Nhà Gordon",
+    "content": "Notice: Building Safety Inspection Schedule\n\nAs ordered by the state commissioner, the Gordon Building is to be inspected for safety violations. The entire process will last from August 18 to 20.\n\nInspections will be conducted on a floor-by-floor basis. Unfortunately, it is necessary to vacate each floor as it is inspected for about two hours. Below is the tentative schedule that has been provided by the commissioner's office:\n\nAugust 18: Floors 7-10\nAugust 19: Floors 3-6\nAugust 20: Floors 1-2 and parking lots\n\nAgain, all offices on a floor must be vacated while that floor is inspected. If you are unable to leave the premises on the dates recorded in the schedule, please contact the building management in room 101. The schedule will not be finalized until August 10, so the management is willing to listen to petitions from concerned occupants. Rearranging the dates will be a tricky administrative task so please only request a change if there is a valid reason for doing so.",
+    "vietnameseTranslation": "Thông báo: Lịch kiểm tra an toàn tòa nhà\n\nTheo lệnh của ủy viên tiểu bang, Tòa nhà Gordon sẽ được kiểm tra các vi phạm về an toàn. Toàn bộ quá trình sẽ diễn ra từ ngày 18 đến ngày 20 tháng 8.\n\nViệc kiểm tra sẽ được tiến hành theo từng tầng. Đáng tiếc là mỗi tầng cần phải được sơ tán trong khoảng hai giờ khi được kiểm tra. Dưới đây là lịch trình dự kiến:\n18 tháng 8: Tầng 7-10\n19 tháng 8: Tầng 3-6\n20 tháng 8: Tầng 1-2 và bãi đỗ xe\n\nMột lần nữa, tất cả các văn phòng trên một tầng phải được sơ tán trong thời gian tầng đó được kiểm tra. Nếu bạn không thể rời khỏi địa điểm vào các ngày đã ghi trong lịch, vui lòng liên hệ ban quản lý tòa nhà tại phòng 101. Lịch trình sẽ chưa được hoàn thiện cho đến ngày 10 tháng 8, vì vậy ban quản lý sẵn sàng lắng nghe đơn kiến nghị từ những người thuê có liên quan...",
+    "questionIds": [
+      "test2_168",
+      "test2_169",
+      "test2_170",
+      "test2_171"
+    ],
+    "clues": [
+      {
+        "questionNum": 168,
+        "correctAnswer": "B",
+        "clueLocation": "Đoạn 1 & Đoạn 3",
+        "clueQuote": "the Gordon Building is to be inspected... petitions from concerned occupants",
+        "scanningTip": "Tìm các từ 'Gordon Building', 'offices', 'occupants' = tenants."
+      },
+      {
+        "questionNum": 169,
+        "correctAnswer": "B",
+        "clueLocation": "Đoạn 1, dòng 1-2",
+        "clueQuote": "the Gordon Building is to be inspected for safety violations.",
+        "scanningTip": "Tìm cụm 'inspected for' ở ngay câu đầu."
+      },
+      {
+        "questionNum": 170,
+        "correctAnswer": "D",
+        "clueLocation": "Đoạn 2 & Đoạn 3",
+        "clueQuote": "August 20: Floors 1-2 and parking lots ... building management in room 101",
+        "scanningTip": "Phòng 101 thuộc Tầng 1 -> ngày 20/8."
+      },
+      {
+        "questionNum": 171,
+        "correctAnswer": "B",
+        "clueLocation": "Đoạn 3, dòng 4-6",
+        "clueQuote": "management is willing to listen to petitions... please only request a change if there is a valid reason",
+        "scanningTip": "Tìm các từ 'request a change' hoặc 'rearranging the dates'."
+      }
+    ]
+  },
+  "clue": {
+    "questionNum": 171,
+    "correctAnswer": "B",
+    "clueLocation": "Đoạn 3, dòng 4-6",
+    "clueQuote": "management is willing to listen to petitions... please only request a change if there is a valid reason",
+    "scanningTip": "Tìm các từ 'request a change' hoặc 'rearranging the dates'."
+  }
+},
+{
+  "id": "test2_172",
+  "num": 172,
+  "source": "Test 2",
+  "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+  "question": "What is the main purpose of this email?",
+  "options": {
+    "A": "To schedule a stereo repair service",
+    "B": "To demand a refund for a broken device",
+    "C": "To solicit advice on how to fix a product",
+    "D": "To order a replacement car stereo"
+  },
+  "correctAnswer": "C",
+  "explanation": "Đoạn 5: 'Do you have any idea how to make the stereo work again? ... any help you can offer would be greatly appreciated' -> xin lời khuyên/hướng dẫn cách sửa (solicit advice on how to fix a product).",
+  "tip": "⚡ MẸO: 'Do you have any idea how to make the stereo work again?' = 'solicit advice on how to fix'.",
+  "keywords": [
+    "Do you have any idea",
+    "make the stereo work",
+    "advice"
+  ],
+  "vietnameseMeaning": "Mục đích chính của email này là gì?",
+  "isPassageQuestion": true,
+  "passageId": "test2_p7_ace4_stereo",
+  "passageInfo": {
+    "id": "test2_p7_ace4_stereo",
+    "title": "Thư Hỏi Hướng Dẫn Kỹ Thuật Loa Xe Hơi - Ace 4 Electronics",
+    "content": "To: Technical Services, Ace 4 Electronics\nFrom: Ken Huang\nSubject: Torre 211 car stereo\n\nDear service technician:\n\nI am writing about a problem I have encountered with one of your products. It is the Torre 211 car stereo, which I purchased from a local electronics store last week.\n\nI used the manual that came with the stereo and installed it myself in my 2002 Fremont automobile. In my initial test of the product, everything worked perfectly. Sound was transmitted through every speaker, the LCD display was lit up, and both the radio and CD player functions were operating.\n\nHowever, the next day when I began my morning commute, the stereo would not turn on. After I pressed the power button, the display showed the word \"STANDBY\" and would not respond to any commands. Since then, I have checked and rechecked all of the electrical connections, but I cannot find the problem.\n\nI tried to contact the retail store for help, but they refused to provide assistance because I had installed it myself. Apparently, under the terms of the warranty, the stereo should be installed by a certified professional.\n\nDo you have any idea how to make the stereo work again? I hope to have it functioning by next week for an out-of-state business trip I am taking. I realize that I made a mistake in not complying with the warranty terms, and that your company is not required to help me. However, any help you can offer would be greatly appreciated.",
+    "vietnameseTranslation": "Đến: Bộ phận Kỹ thuật, Ace 4 Electronics\nTừ: Ken Huang\nChủ đề: Dàn âm thanh xe hơi Torre 211\n\nKính gửi kỹ thuật viên dịch vụ:\n\nTôi viết thư này về sự cố tôi gặp phải với một sản phẩm của quý công ty. Đó là dàn âm thanh xe hơi Torre 211 mà tôi đã mua từ một cửa hàng điện tử địa phương tuần trước.\n\nTôi đã sử dụng sách hướng dẫn đi kèm và tự mình lắp đặt nó vào chiếc xe hơi Fremont 2002 của mình. Trong lần kiểm tra ban đầu, mọi thứ hoạt động hoàn hảo: âm thanh phát qua mọi loa, màn hình LCD sáng và cả hai chức năng radio và đầu đĩa CD đều chạy tốt.\n\nTuy nhiên, ngày hôm sau khi tôi bắt đầu đi làm buổi sáng, dàn âm thanh không bật lên được. Sau khi tôi bấm nút nguồn, màn hình chỉ hiện chữ \"STANDBY\" và không phản hồi bất kỳ lệnh nào... Cửa hàng bán lẻ từ chối hỗ trợ vì theo điều khoản bảo hành, thiết bị phải được lắp đặt bởi chuyên gia có chứng chỉ. Quý công ty có cách nào giúp thiết bị hoạt động lại không?...",
+    "questionIds": [
+      "test2_172",
+      "test2_173",
+      "test2_174",
+      "test2_175"
+    ],
+    "clues": [
+      {
+        "questionNum": 172,
+        "correctAnswer": "C",
+        "clueLocation": "Đoạn 5, dòng 1",
+        "clueQuote": "Do you have any idea how to make the stereo work again?",
+        "scanningTip": "Đọc câu hỏi chính ở đoạn cuối thư."
+      },
+      {
+        "questionNum": 173,
+        "correctAnswer": "B",
+        "clueLocation": "Đoạn 2, dòng 2-4",
+        "clueQuote": "In my initial test of the product, everything worked perfectly. Sound was transmitted through every speaker, the LCD display was lit up, and both the radio and CD player functions were operating.",
+        "scanningTip": "Đối chiếu các chức năng được liệt kê trong câu 'In my initial test'."
+      },
+      {
+        "questionNum": 174,
+        "correctAnswer": "A",
+        "clueLocation": "Đoạn 4, dòng 1",
+        "clueQuote": "I tried to contact the retail store for help, but they refused to provide assistance...",
+        "scanningTip": "Tìm cụm 'tried to contact'."
+      },
+      {
+        "questionNum": 175,
+        "correctAnswer": "B",
+        "clueLocation": "Đoạn 4, dòng 2-3",
+        "clueQuote": "under the terms of the warranty, the stereo should be installed by a certified professional.",
+        "scanningTip": "Tìm từ 'warranty' ở đoạn 4."
+      }
+    ]
+  },
+  "clue": {
+    "questionNum": 172,
+    "correctAnswer": "C",
+    "clueLocation": "Đoạn 5, dòng 1",
+    "clueQuote": "Do you have any idea how to make the stereo work again?",
+    "scanningTip": "Đọc câu hỏi chính ở đoạn cuối thư."
+  }
+},
+{
+  "id": "test2_173",
+  "num": 173,
+  "source": "Test 2",
+  "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+  "question": "Which did Mr. Huang NOT test after he installed the stereo?",
+  "options": {
+    "A": "Radio and CD player",
+    "B": "The STANDBY mode",
+    "C": "Speaker operation",
+    "D": "The screen"
+  },
+  "correctAnswer": "B",
+  "explanation": "Đoạn 2: Trong lần kiểm tra đầu tiên (initial test), ông đã thử: loa ('every speaker' - C), màn hình ('LCD display' - D), radio và CD ('radio and CD player' - A). Chế độ 'STANDBY' là lỗi xuất hiện vào sáng hôm sau chứ không phải bài test ban đầu.",
+  "tip": "⚡ MẸO: Tìm từ khóa 'initial test' ở đoạn 2: có speaker, LCD display, radio/CD. Không có Standby.",
+  "keywords": [
+    "initial test",
+    "STANDBY",
+    "NOT test"
+  ],
+  "vietnameseMeaning": "Ông Huang đã KHÔNG kiểm tra phần nào sau khi lắp đặt dàn âm thanh?",
+  "isPassageQuestion": true,
+  "passageId": "test2_p7_ace4_stereo",
+  "passageInfo": {
+    "id": "test2_p7_ace4_stereo",
+    "title": "Thư Hỏi Hướng Dẫn Kỹ Thuật Loa Xe Hơi - Ace 4 Electronics",
+    "content": "To: Technical Services, Ace 4 Electronics\nFrom: Ken Huang\nSubject: Torre 211 car stereo\n\nDear service technician:\n\nI am writing about a problem I have encountered with one of your products. It is the Torre 211 car stereo, which I purchased from a local electronics store last week.\n\nI used the manual that came with the stereo and installed it myself in my 2002 Fremont automobile. In my initial test of the product, everything worked perfectly. Sound was transmitted through every speaker, the LCD display was lit up, and both the radio and CD player functions were operating.\n\nHowever, the next day when I began my morning commute, the stereo would not turn on. After I pressed the power button, the display showed the word \"STANDBY\" and would not respond to any commands. Since then, I have checked and rechecked all of the electrical connections, but I cannot find the problem.\n\nI tried to contact the retail store for help, but they refused to provide assistance because I had installed it myself. Apparently, under the terms of the warranty, the stereo should be installed by a certified professional.\n\nDo you have any idea how to make the stereo work again? I hope to have it functioning by next week for an out-of-state business trip I am taking. I realize that I made a mistake in not complying with the warranty terms, and that your company is not required to help me. However, any help you can offer would be greatly appreciated.",
+    "vietnameseTranslation": "Đến: Bộ phận Kỹ thuật, Ace 4 Electronics\nTừ: Ken Huang\nChủ đề: Dàn âm thanh xe hơi Torre 211\n\nKính gửi kỹ thuật viên dịch vụ:\n\nTôi viết thư này về sự cố tôi gặp phải với một sản phẩm của quý công ty. Đó là dàn âm thanh xe hơi Torre 211 mà tôi đã mua từ một cửa hàng điện tử địa phương tuần trước.\n\nTôi đã sử dụng sách hướng dẫn đi kèm và tự mình lắp đặt nó vào chiếc xe hơi Fremont 2002 của mình. Trong lần kiểm tra ban đầu, mọi thứ hoạt động hoàn hảo: âm thanh phát qua mọi loa, màn hình LCD sáng và cả hai chức năng radio và đầu đĩa CD đều chạy tốt.\n\nTuy nhiên, ngày hôm sau khi tôi bắt đầu đi làm buổi sáng, dàn âm thanh không bật lên được. Sau khi tôi bấm nút nguồn, màn hình chỉ hiện chữ \"STANDBY\" và không phản hồi bất kỳ lệnh nào... Cửa hàng bán lẻ từ chối hỗ trợ vì theo điều khoản bảo hành, thiết bị phải được lắp đặt bởi chuyên gia có chứng chỉ. Quý công ty có cách nào giúp thiết bị hoạt động lại không?...",
+    "questionIds": [
+      "test2_172",
+      "test2_173",
+      "test2_174",
+      "test2_175"
+    ],
+    "clues": [
+      {
+        "questionNum": 172,
+        "correctAnswer": "C",
+        "clueLocation": "Đoạn 5, dòng 1",
+        "clueQuote": "Do you have any idea how to make the stereo work again?",
+        "scanningTip": "Đọc câu hỏi chính ở đoạn cuối thư."
+      },
+      {
+        "questionNum": 173,
+        "correctAnswer": "B",
+        "clueLocation": "Đoạn 2, dòng 2-4",
+        "clueQuote": "In my initial test of the product, everything worked perfectly. Sound was transmitted through every speaker, the LCD display was lit up, and both the radio and CD player functions were operating.",
+        "scanningTip": "Đối chiếu các chức năng được liệt kê trong câu 'In my initial test'."
+      },
+      {
+        "questionNum": 174,
+        "correctAnswer": "A",
+        "clueLocation": "Đoạn 4, dòng 1",
+        "clueQuote": "I tried to contact the retail store for help, but they refused to provide assistance...",
+        "scanningTip": "Tìm cụm 'tried to contact'."
+      },
+      {
+        "questionNum": 175,
+        "correctAnswer": "B",
+        "clueLocation": "Đoạn 4, dòng 2-3",
+        "clueQuote": "under the terms of the warranty, the stereo should be installed by a certified professional.",
+        "scanningTip": "Tìm từ 'warranty' ở đoạn 4."
+      }
+    ]
+  },
+  "clue": {
+    "questionNum": 173,
+    "correctAnswer": "B",
+    "clueLocation": "Đoạn 2, dòng 2-4",
+    "clueQuote": "In my initial test of the product, everything worked perfectly. Sound was transmitted through every speaker, the LCD display was lit up, and both the radio and CD player functions were operating.",
+    "scanningTip": "Đối chiếu các chức năng được liệt kê trong câu 'In my initial test'."
+  }
+},
+{
+  "id": "test2_174",
+  "num": 174,
+  "source": "Test 2",
+  "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+  "question": "What has Mr. Huang already attempted to do?",
+  "options": {
+    "A": "Ask the electronics store for assistance",
+    "B": "Replace all of the electrical wires",
+    "C": "Send an email to a certified professional",
+    "D": "Install a replacement stereo by himself"
+  },
+  "correctAnswer": "A",
+  "explanation": "Đoạn 4: 'I tried to contact the retail store for help, but they refused...' -> đã từng cố liên hệ cửa hàng điện tử nhờ giúp đỡ (Ask the electronics store for assistance).",
+  "tip": "⚡ MẸO: 'tried to contact the retail store for help' = 'Ask the electronics store for assistance'.",
+  "keywords": [
+    "contact the retail store",
+    "electronics store"
+  ],
+  "vietnameseMeaning": "Ông Huang đã từng cố gắng làm điều gì trước đó?",
+  "isPassageQuestion": true,
+  "passageId": "test2_p7_ace4_stereo",
+  "passageInfo": {
+    "id": "test2_p7_ace4_stereo",
+    "title": "Thư Hỏi Hướng Dẫn Kỹ Thuật Loa Xe Hơi - Ace 4 Electronics",
+    "content": "To: Technical Services, Ace 4 Electronics\nFrom: Ken Huang\nSubject: Torre 211 car stereo\n\nDear service technician:\n\nI am writing about a problem I have encountered with one of your products. It is the Torre 211 car stereo, which I purchased from a local electronics store last week.\n\nI used the manual that came with the stereo and installed it myself in my 2002 Fremont automobile. In my initial test of the product, everything worked perfectly. Sound was transmitted through every speaker, the LCD display was lit up, and both the radio and CD player functions were operating.\n\nHowever, the next day when I began my morning commute, the stereo would not turn on. After I pressed the power button, the display showed the word \"STANDBY\" and would not respond to any commands. Since then, I have checked and rechecked all of the electrical connections, but I cannot find the problem.\n\nI tried to contact the retail store for help, but they refused to provide assistance because I had installed it myself. Apparently, under the terms of the warranty, the stereo should be installed by a certified professional.\n\nDo you have any idea how to make the stereo work again? I hope to have it functioning by next week for an out-of-state business trip I am taking. I realize that I made a mistake in not complying with the warranty terms, and that your company is not required to help me. However, any help you can offer would be greatly appreciated.",
+    "vietnameseTranslation": "Đến: Bộ phận Kỹ thuật, Ace 4 Electronics\nTừ: Ken Huang\nChủ đề: Dàn âm thanh xe hơi Torre 211\n\nKính gửi kỹ thuật viên dịch vụ:\n\nTôi viết thư này về sự cố tôi gặp phải với một sản phẩm của quý công ty. Đó là dàn âm thanh xe hơi Torre 211 mà tôi đã mua từ một cửa hàng điện tử địa phương tuần trước.\n\nTôi đã sử dụng sách hướng dẫn đi kèm và tự mình lắp đặt nó vào chiếc xe hơi Fremont 2002 của mình. Trong lần kiểm tra ban đầu, mọi thứ hoạt động hoàn hảo: âm thanh phát qua mọi loa, màn hình LCD sáng và cả hai chức năng radio và đầu đĩa CD đều chạy tốt.\n\nTuy nhiên, ngày hôm sau khi tôi bắt đầu đi làm buổi sáng, dàn âm thanh không bật lên được. Sau khi tôi bấm nút nguồn, màn hình chỉ hiện chữ \"STANDBY\" và không phản hồi bất kỳ lệnh nào... Cửa hàng bán lẻ từ chối hỗ trợ vì theo điều khoản bảo hành, thiết bị phải được lắp đặt bởi chuyên gia có chứng chỉ. Quý công ty có cách nào giúp thiết bị hoạt động lại không?...",
+    "questionIds": [
+      "test2_172",
+      "test2_173",
+      "test2_174",
+      "test2_175"
+    ],
+    "clues": [
+      {
+        "questionNum": 172,
+        "correctAnswer": "C",
+        "clueLocation": "Đoạn 5, dòng 1",
+        "clueQuote": "Do you have any idea how to make the stereo work again?",
+        "scanningTip": "Đọc câu hỏi chính ở đoạn cuối thư."
+      },
+      {
+        "questionNum": 173,
+        "correctAnswer": "B",
+        "clueLocation": "Đoạn 2, dòng 2-4",
+        "clueQuote": "In my initial test of the product, everything worked perfectly. Sound was transmitted through every speaker, the LCD display was lit up, and both the radio and CD player functions were operating.",
+        "scanningTip": "Đối chiếu các chức năng được liệt kê trong câu 'In my initial test'."
+      },
+      {
+        "questionNum": 174,
+        "correctAnswer": "A",
+        "clueLocation": "Đoạn 4, dòng 1",
+        "clueQuote": "I tried to contact the retail store for help, but they refused to provide assistance...",
+        "scanningTip": "Tìm cụm 'tried to contact'."
+      },
+      {
+        "questionNum": 175,
+        "correctAnswer": "B",
+        "clueLocation": "Đoạn 4, dòng 2-3",
+        "clueQuote": "under the terms of the warranty, the stereo should be installed by a certified professional.",
+        "scanningTip": "Tìm từ 'warranty' ở đoạn 4."
+      }
+    ]
+  },
+  "clue": {
+    "questionNum": 174,
+    "correctAnswer": "A",
+    "clueLocation": "Đoạn 4, dòng 1",
+    "clueQuote": "I tried to contact the retail store for help, but they refused to provide assistance...",
+    "scanningTip": "Tìm cụm 'tried to contact'."
+  }
+},
+{
+  "id": "test2_175",
+  "num": 175,
+  "source": "Test 2",
+  "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+  "question": "What is specified in the warranty?",
+  "options": {
+    "A": "Only certified professionals should make repairs.",
+    "B": "A recognized expert must handle installation.",
+    "C": "Products damaged by overuse will not be refunded.",
+    "D": "The warranty cannot be renewed for more than three years."
+  },
+  "correctAnswer": "B",
+  "explanation": "Đoạn 4: 'under the terms of the warranty, the stereo should be installed by a certified professional' (chuyên gia được cấp chứng chỉ = recognized expert must handle installation).",
+  "tip": "⚡ MẸO: 'installed by a certified professional' = 'recognized expert must handle installation'.",
+  "keywords": [
+    "warranty",
+    "certified professional",
+    "recognized expert"
+  ],
+  "vietnameseMeaning": "Điều gì được quy định cụ thể trong điều khoản bảo hành?",
+  "isPassageQuestion": true,
+  "passageId": "test2_p7_ace4_stereo",
+  "passageInfo": {
+    "id": "test2_p7_ace4_stereo",
+    "title": "Thư Hỏi Hướng Dẫn Kỹ Thuật Loa Xe Hơi - Ace 4 Electronics",
+    "content": "To: Technical Services, Ace 4 Electronics\nFrom: Ken Huang\nSubject: Torre 211 car stereo\n\nDear service technician:\n\nI am writing about a problem I have encountered with one of your products. It is the Torre 211 car stereo, which I purchased from a local electronics store last week.\n\nI used the manual that came with the stereo and installed it myself in my 2002 Fremont automobile. In my initial test of the product, everything worked perfectly. Sound was transmitted through every speaker, the LCD display was lit up, and both the radio and CD player functions were operating.\n\nHowever, the next day when I began my morning commute, the stereo would not turn on. After I pressed the power button, the display showed the word \"STANDBY\" and would not respond to any commands. Since then, I have checked and rechecked all of the electrical connections, but I cannot find the problem.\n\nI tried to contact the retail store for help, but they refused to provide assistance because I had installed it myself. Apparently, under the terms of the warranty, the stereo should be installed by a certified professional.\n\nDo you have any idea how to make the stereo work again? I hope to have it functioning by next week for an out-of-state business trip I am taking. I realize that I made a mistake in not complying with the warranty terms, and that your company is not required to help me. However, any help you can offer would be greatly appreciated.",
+    "vietnameseTranslation": "Đến: Bộ phận Kỹ thuật, Ace 4 Electronics\nTừ: Ken Huang\nChủ đề: Dàn âm thanh xe hơi Torre 211\n\nKính gửi kỹ thuật viên dịch vụ:\n\nTôi viết thư này về sự cố tôi gặp phải với một sản phẩm của quý công ty. Đó là dàn âm thanh xe hơi Torre 211 mà tôi đã mua từ một cửa hàng điện tử địa phương tuần trước.\n\nTôi đã sử dụng sách hướng dẫn đi kèm và tự mình lắp đặt nó vào chiếc xe hơi Fremont 2002 của mình. Trong lần kiểm tra ban đầu, mọi thứ hoạt động hoàn hảo: âm thanh phát qua mọi loa, màn hình LCD sáng và cả hai chức năng radio và đầu đĩa CD đều chạy tốt.\n\nTuy nhiên, ngày hôm sau khi tôi bắt đầu đi làm buổi sáng, dàn âm thanh không bật lên được. Sau khi tôi bấm nút nguồn, màn hình chỉ hiện chữ \"STANDBY\" và không phản hồi bất kỳ lệnh nào... Cửa hàng bán lẻ từ chối hỗ trợ vì theo điều khoản bảo hành, thiết bị phải được lắp đặt bởi chuyên gia có chứng chỉ. Quý công ty có cách nào giúp thiết bị hoạt động lại không?...",
+    "questionIds": [
+      "test2_172",
+      "test2_173",
+      "test2_174",
+      "test2_175"
+    ],
+    "clues": [
+      {
+        "questionNum": 172,
+        "correctAnswer": "C",
+        "clueLocation": "Đoạn 5, dòng 1",
+        "clueQuote": "Do you have any idea how to make the stereo work again?",
+        "scanningTip": "Đọc câu hỏi chính ở đoạn cuối thư."
+      },
+      {
+        "questionNum": 173,
+        "correctAnswer": "B",
+        "clueLocation": "Đoạn 2, dòng 2-4",
+        "clueQuote": "In my initial test of the product, everything worked perfectly. Sound was transmitted through every speaker, the LCD display was lit up, and both the radio and CD player functions were operating.",
+        "scanningTip": "Đối chiếu các chức năng được liệt kê trong câu 'In my initial test'."
+      },
+      {
+        "questionNum": 174,
+        "correctAnswer": "A",
+        "clueLocation": "Đoạn 4, dòng 1",
+        "clueQuote": "I tried to contact the retail store for help, but they refused to provide assistance...",
+        "scanningTip": "Tìm cụm 'tried to contact'."
+      },
+      {
+        "questionNum": 175,
+        "correctAnswer": "B",
+        "clueLocation": "Đoạn 4, dòng 2-3",
+        "clueQuote": "under the terms of the warranty, the stereo should be installed by a certified professional.",
+        "scanningTip": "Tìm từ 'warranty' ở đoạn 4."
+      }
+    ]
+  },
+  "clue": {
+    "questionNum": 175,
+    "correctAnswer": "B",
+    "clueLocation": "Đoạn 4, dòng 2-3",
+    "clueQuote": "under the terms of the warranty, the stereo should be installed by a certified professional.",
+    "scanningTip": "Tìm từ 'warranty' ở đoạn 4."
+  }
+},
+{
+  "id": "test2_176",
+  "num": 176,
+  "source": "Test 2",
+  "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+  "question": "Why did Ms. Ibach write this letter?",
+  "options": {
+    "A": "To share her opinion about a product",
+    "B": "To apologize for an error she made",
+    "C": "To inquire about a company's services",
+    "D": "To correct an earlier communication"
+  },
+  "correctAnswer": "D",
+  "explanation": "Đoạn 1: Trước đó bà viết thư hủy báo, nay xin đảo ngược yêu cầu ('reverse that request' = correct an earlier communication).",
+  "tip": "⚡ MẸO: Đổi ý so với thư trước đó ('reverse that request') = 'correct an earlier communication'.",
+  "keywords": [
+    "reverse that request",
+    "correct earlier communication"
+  ],
+  "vietnameseMeaning": "Tại sao cô Ibach viết bức thư này?",
+  "isPassageQuestion": true,
+  "passageId": "test2_p7_times_ibach",
+  "passageInfo": {
+    "id": "test2_p7_times_ibach",
+    "title": "Thư Xin Hủy Yêu Cầu Cắt Báo - Channel Region Times",
+    "content": "Subscriptions Department\nChannel Region Times\n3500 Broadway\nVancouver, BC\n\nDear Sir or Madam,\n\nI recently wrote and requested that you cancel my subscription to your newspaper. Due to an unexpected change in my living situation, I would like to ask you to reverse that request.\n\nUp until last Friday, I believed that my company was transferring me to Montreal. That was the reason for my cancellation request. However, it seems that my transfer has been postponed until next year, and I will stay here in Vancouver until then. As a long-time reader of the Channel Region Times, I would very much like to continue my subscription to the paper.\n\nYou have probably already processed the cancellation of my account. In this case, I assume I will have to open a new one. I have just looked at your website and I understand that there is a $25 sign-up fee for new subscribers. Although I realize that I was at fault for prematurely terminating our agreement, would you be willing to waive the standard start-up charge for my subscription? I hope you can make this exception for me considering my unique circumstances. Please bear in mind, also, that I have been a loyal customer of yours for several years.\n\nThank you for your help.\n\nSincerely,\nKern Ibach",
+    "vietnameseTranslation": "Phòng Đặt Báo Dài Hạn\nChannel Region Times\n3500 Broadway\nVancouver, BC\n\nKính gửi Quý tòa soạn,\n\nGần đây tôi đã viết thư yêu cầu quý báo hủy đăng ký báo dài hạn của mình. Do một thay đổi bất ngờ trong hoàn cảnh sống, tôi muốn đề nghị quý báo đảo ngược (hủy bỏ) yêu cầu đó.\n\nCho đến thứ Sáu tuần trước, tôi vẫn tin rằng công ty sẽ điều chuyển tôi đến Montreal. Đó là lý do tôi yêu cầu hủy báo. Tuy nhiên, việc điều chuyển đã bị hoãn lại sang năm sau, và tôi sẽ tiếp tục ở lại Vancouver cho đến lúc đó. Là một độc giả lâu năm của tờ Channel Region Times, tôi rất muốn tiếp tục nhận báo.\n\nCó thể quý báo đã xử lý việc hủy tài khoản của tôi. Trong trường hợp đó, tôi hiểu rằng mình sẽ phải mở một tài khoản mới và trên trang web có nêu phí đăng ký $25. Liệu quý báo có thể miễn khoản phí đăng ký tiêu chuẩn này cho tôi không? Rất mong quý báo châm chước vì tôi là khách hàng trung thành suốt nhiều năm qua...\n\nKern Ibach",
+    "questionIds": [
+      "test2_176",
+      "test2_177",
+      "test2_178",
+      "test2_179",
+      "test2_180"
+    ],
+    "clues": [
+      {
+        "questionNum": 176,
+        "correctAnswer": "D",
+        "clueLocation": "Đoạn 1, dòng 2-3",
+        "clueQuote": "Due to an unexpected change in my living situation, I would like to ask you to reverse that request.",
+        "scanningTip": "Đọc mục đích ở cuối đoạn 1."
+      },
+      {
+        "questionNum": 177,
+        "correctAnswer": "D",
+        "clueLocation": "Đoạn 2, dòng 3-4",
+        "clueQuote": "my transfer has been postponed until next year, and I will stay here in Vancouver until then.",
+        "scanningTip": "Tìm cụm 'stay here in Vancouver'."
+      },
+      {
+        "questionNum": 178,
+        "correctAnswer": "B",
+        "clueLocation": "Đoạn 1, dòng 2",
+        "clueQuote": "reverse that request",
+        "scanningTip": "Xét ngữ cảnh đảo ngược quyết định (overturn)."
+      },
+      {
+        "questionNum": 179,
+        "correctAnswer": "A",
+        "clueLocation": "Đoạn 3, dòng 4-5",
+        "clueQuote": "would you be willing to waive the standard start-up charge for my subscription?",
+        "scanningTip": "Tìm từ 'waive' và số tiền '$25'."
+      },
+      {
+        "questionNum": 180,
+        "correctAnswer": "B",
+        "clueLocation": "Đoạn 2, dòng 4-5",
+        "clueQuote": "As a long-time reader of the Channel Region Times, I would very much like to continue my subscription...",
+        "scanningTip": "Tìm cụm 'long-time reader'."
+      }
+    ]
+  },
+  "clue": {
+    "questionNum": 176,
+    "correctAnswer": "D",
+    "clueLocation": "Đoạn 1, dòng 2-3",
+    "clueQuote": "Due to an unexpected change in my living situation, I would like to ask you to reverse that request.",
+    "scanningTip": "Đọc mục đích ở cuối đoạn 1."
+  }
+},
+{
+  "id": "test2_177",
+  "num": 177,
+  "source": "Test 2",
+  "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+  "question": "What will Ms. Ibach do during the coming year?",
+  "options": {
+    "A": "Transfer to a different department",
+    "B": "Visit Montreal for her job",
+    "C": "Subscribe to a different newspaper",
+    "D": "Remain living in Vancouver"
+  },
+  "correctAnswer": "D",
+  "explanation": "Đoạn 2: 'my transfer has been postponed until next year, and I will stay here in Vancouver until then' (ở lại Vancouver = Remain living in Vancouver).",
+  "tip": "⚡ MẸO: 'stay here in Vancouver' = 'Remain living in Vancouver'.",
+  "keywords": [
+    "postponed",
+    "stay here in Vancouver"
+  ],
+  "vietnameseMeaning": "Cô Ibach sẽ làm gì trong năm tới?",
+  "isPassageQuestion": true,
+  "passageId": "test2_p7_times_ibach",
+  "passageInfo": {
+    "id": "test2_p7_times_ibach",
+    "title": "Thư Xin Hủy Yêu Cầu Cắt Báo - Channel Region Times",
+    "content": "Subscriptions Department\nChannel Region Times\n3500 Broadway\nVancouver, BC\n\nDear Sir or Madam,\n\nI recently wrote and requested that you cancel my subscription to your newspaper. Due to an unexpected change in my living situation, I would like to ask you to reverse that request.\n\nUp until last Friday, I believed that my company was transferring me to Montreal. That was the reason for my cancellation request. However, it seems that my transfer has been postponed until next year, and I will stay here in Vancouver until then. As a long-time reader of the Channel Region Times, I would very much like to continue my subscription to the paper.\n\nYou have probably already processed the cancellation of my account. In this case, I assume I will have to open a new one. I have just looked at your website and I understand that there is a $25 sign-up fee for new subscribers. Although I realize that I was at fault for prematurely terminating our agreement, would you be willing to waive the standard start-up charge for my subscription? I hope you can make this exception for me considering my unique circumstances. Please bear in mind, also, that I have been a loyal customer of yours for several years.\n\nThank you for your help.\n\nSincerely,\nKern Ibach",
+    "vietnameseTranslation": "Phòng Đặt Báo Dài Hạn\nChannel Region Times\n3500 Broadway\nVancouver, BC\n\nKính gửi Quý tòa soạn,\n\nGần đây tôi đã viết thư yêu cầu quý báo hủy đăng ký báo dài hạn của mình. Do một thay đổi bất ngờ trong hoàn cảnh sống, tôi muốn đề nghị quý báo đảo ngược (hủy bỏ) yêu cầu đó.\n\nCho đến thứ Sáu tuần trước, tôi vẫn tin rằng công ty sẽ điều chuyển tôi đến Montreal. Đó là lý do tôi yêu cầu hủy báo. Tuy nhiên, việc điều chuyển đã bị hoãn lại sang năm sau, và tôi sẽ tiếp tục ở lại Vancouver cho đến lúc đó. Là một độc giả lâu năm của tờ Channel Region Times, tôi rất muốn tiếp tục nhận báo.\n\nCó thể quý báo đã xử lý việc hủy tài khoản của tôi. Trong trường hợp đó, tôi hiểu rằng mình sẽ phải mở một tài khoản mới và trên trang web có nêu phí đăng ký $25. Liệu quý báo có thể miễn khoản phí đăng ký tiêu chuẩn này cho tôi không? Rất mong quý báo châm chước vì tôi là khách hàng trung thành suốt nhiều năm qua...\n\nKern Ibach",
+    "questionIds": [
+      "test2_176",
+      "test2_177",
+      "test2_178",
+      "test2_179",
+      "test2_180"
+    ],
+    "clues": [
+      {
+        "questionNum": 176,
+        "correctAnswer": "D",
+        "clueLocation": "Đoạn 1, dòng 2-3",
+        "clueQuote": "Due to an unexpected change in my living situation, I would like to ask you to reverse that request.",
+        "scanningTip": "Đọc mục đích ở cuối đoạn 1."
+      },
+      {
+        "questionNum": 177,
+        "correctAnswer": "D",
+        "clueLocation": "Đoạn 2, dòng 3-4",
+        "clueQuote": "my transfer has been postponed until next year, and I will stay here in Vancouver until then.",
+        "scanningTip": "Tìm cụm 'stay here in Vancouver'."
+      },
+      {
+        "questionNum": 178,
+        "correctAnswer": "B",
+        "clueLocation": "Đoạn 1, dòng 2",
+        "clueQuote": "reverse that request",
+        "scanningTip": "Xét ngữ cảnh đảo ngược quyết định (overturn)."
+      },
+      {
+        "questionNum": 179,
+        "correctAnswer": "A",
+        "clueLocation": "Đoạn 3, dòng 4-5",
+        "clueQuote": "would you be willing to waive the standard start-up charge for my subscription?",
+        "scanningTip": "Tìm từ 'waive' và số tiền '$25'."
+      },
+      {
+        "questionNum": 180,
+        "correctAnswer": "B",
+        "clueLocation": "Đoạn 2, dòng 4-5",
+        "clueQuote": "As a long-time reader of the Channel Region Times, I would very much like to continue my subscription...",
+        "scanningTip": "Tìm cụm 'long-time reader'."
+      }
+    ]
+  },
+  "clue": {
+    "questionNum": 177,
+    "correctAnswer": "D",
+    "clueLocation": "Đoạn 2, dòng 3-4",
+    "clueQuote": "my transfer has been postponed until next year, and I will stay here in Vancouver until then.",
+    "scanningTip": "Tìm cụm 'stay here in Vancouver'."
+  }
+},
+{
+  "id": "test2_178",
+  "num": 178,
+  "source": "Test 2",
+  "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+  "question": "The word \"reverse\" in paragraph 1, line 2 is closest in meaning to",
+  "options": {
+    "A": "return",
+    "B": "overturn",
+    "C": "oppose",
+    "D": "reserve"
+  },
+  "correctAnswer": "B",
+  "explanation": "'reverse a request' = đảo ngược / hủy bỏ quyết định trước đó, đồng nghĩa với 'overturn'.",
+  "tip": "⚡ MẸO: 'reverse' (đảo ngược quyết định) = 'overturn'.",
+  "keywords": [
+    "reverse",
+    "overturn"
+  ],
+  "vietnameseMeaning": "Từ \"reverse\" ở đoạn 1, dòng 2 gần nghĩa nhất với từ nào?",
+  "isPassageQuestion": true,
+  "passageId": "test2_p7_times_ibach",
+  "passageInfo": {
+    "id": "test2_p7_times_ibach",
+    "title": "Thư Xin Hủy Yêu Cầu Cắt Báo - Channel Region Times",
+    "content": "Subscriptions Department\nChannel Region Times\n3500 Broadway\nVancouver, BC\n\nDear Sir or Madam,\n\nI recently wrote and requested that you cancel my subscription to your newspaper. Due to an unexpected change in my living situation, I would like to ask you to reverse that request.\n\nUp until last Friday, I believed that my company was transferring me to Montreal. That was the reason for my cancellation request. However, it seems that my transfer has been postponed until next year, and I will stay here in Vancouver until then. As a long-time reader of the Channel Region Times, I would very much like to continue my subscription to the paper.\n\nYou have probably already processed the cancellation of my account. In this case, I assume I will have to open a new one. I have just looked at your website and I understand that there is a $25 sign-up fee for new subscribers. Although I realize that I was at fault for prematurely terminating our agreement, would you be willing to waive the standard start-up charge for my subscription? I hope you can make this exception for me considering my unique circumstances. Please bear in mind, also, that I have been a loyal customer of yours for several years.\n\nThank you for your help.\n\nSincerely,\nKern Ibach",
+    "vietnameseTranslation": "Phòng Đặt Báo Dài Hạn\nChannel Region Times\n3500 Broadway\nVancouver, BC\n\nKính gửi Quý tòa soạn,\n\nGần đây tôi đã viết thư yêu cầu quý báo hủy đăng ký báo dài hạn của mình. Do một thay đổi bất ngờ trong hoàn cảnh sống, tôi muốn đề nghị quý báo đảo ngược (hủy bỏ) yêu cầu đó.\n\nCho đến thứ Sáu tuần trước, tôi vẫn tin rằng công ty sẽ điều chuyển tôi đến Montreal. Đó là lý do tôi yêu cầu hủy báo. Tuy nhiên, việc điều chuyển đã bị hoãn lại sang năm sau, và tôi sẽ tiếp tục ở lại Vancouver cho đến lúc đó. Là một độc giả lâu năm của tờ Channel Region Times, tôi rất muốn tiếp tục nhận báo.\n\nCó thể quý báo đã xử lý việc hủy tài khoản của tôi. Trong trường hợp đó, tôi hiểu rằng mình sẽ phải mở một tài khoản mới và trên trang web có nêu phí đăng ký $25. Liệu quý báo có thể miễn khoản phí đăng ký tiêu chuẩn này cho tôi không? Rất mong quý báo châm chước vì tôi là khách hàng trung thành suốt nhiều năm qua...\n\nKern Ibach",
+    "questionIds": [
+      "test2_176",
+      "test2_177",
+      "test2_178",
+      "test2_179",
+      "test2_180"
+    ],
+    "clues": [
+      {
+        "questionNum": 176,
+        "correctAnswer": "D",
+        "clueLocation": "Đoạn 1, dòng 2-3",
+        "clueQuote": "Due to an unexpected change in my living situation, I would like to ask you to reverse that request.",
+        "scanningTip": "Đọc mục đích ở cuối đoạn 1."
+      },
+      {
+        "questionNum": 177,
+        "correctAnswer": "D",
+        "clueLocation": "Đoạn 2, dòng 3-4",
+        "clueQuote": "my transfer has been postponed until next year, and I will stay here in Vancouver until then.",
+        "scanningTip": "Tìm cụm 'stay here in Vancouver'."
+      },
+      {
+        "questionNum": 178,
+        "correctAnswer": "B",
+        "clueLocation": "Đoạn 1, dòng 2",
+        "clueQuote": "reverse that request",
+        "scanningTip": "Xét ngữ cảnh đảo ngược quyết định (overturn)."
+      },
+      {
+        "questionNum": 179,
+        "correctAnswer": "A",
+        "clueLocation": "Đoạn 3, dòng 4-5",
+        "clueQuote": "would you be willing to waive the standard start-up charge for my subscription?",
+        "scanningTip": "Tìm từ 'waive' và số tiền '$25'."
+      },
+      {
+        "questionNum": 180,
+        "correctAnswer": "B",
+        "clueLocation": "Đoạn 2, dòng 4-5",
+        "clueQuote": "As a long-time reader of the Channel Region Times, I would very much like to continue my subscription...",
+        "scanningTip": "Tìm cụm 'long-time reader'."
+      }
+    ]
+  },
+  "clue": {
+    "questionNum": 178,
+    "correctAnswer": "B",
+    "clueLocation": "Đoạn 1, dòng 2",
+    "clueQuote": "reverse that request",
+    "scanningTip": "Xét ngữ cảnh đảo ngược quyết định (overturn)."
+  }
+},
+{
+  "id": "test2_179",
+  "num": 179,
+  "source": "Test 2",
+  "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+  "question": "What does Ms. Ibach request?",
+  "options": {
+    "A": "Exemption from an extra charge",
+    "B": "A free one-month subscription",
+    "C": "A discount on the yearly rate",
+    "D": "A subscription application form"
+  },
+  "correctAnswer": "A",
+  "explanation": "Đoạn 3: 'would you be willing to waive the standard start-up charge for my subscription?' -> 'waive a charge' = miễn phí phụ thu (Exemption from an extra charge).",
+  "tip": "⚡ MẸO: 'waive the charge' (miễn khoản phí) = 'exemption from charge'.",
+  "keywords": [
+    "waive",
+    "standard start-up charge",
+    "exemption"
+  ],
+  "vietnameseMeaning": "Cô Ibach yêu cầu điều gì?",
+  "isPassageQuestion": true,
+  "passageId": "test2_p7_times_ibach",
+  "passageInfo": {
+    "id": "test2_p7_times_ibach",
+    "title": "Thư Xin Hủy Yêu Cầu Cắt Báo - Channel Region Times",
+    "content": "Subscriptions Department\nChannel Region Times\n3500 Broadway\nVancouver, BC\n\nDear Sir or Madam,\n\nI recently wrote and requested that you cancel my subscription to your newspaper. Due to an unexpected change in my living situation, I would like to ask you to reverse that request.\n\nUp until last Friday, I believed that my company was transferring me to Montreal. That was the reason for my cancellation request. However, it seems that my transfer has been postponed until next year, and I will stay here in Vancouver until then. As a long-time reader of the Channel Region Times, I would very much like to continue my subscription to the paper.\n\nYou have probably already processed the cancellation of my account. In this case, I assume I will have to open a new one. I have just looked at your website and I understand that there is a $25 sign-up fee for new subscribers. Although I realize that I was at fault for prematurely terminating our agreement, would you be willing to waive the standard start-up charge for my subscription? I hope you can make this exception for me considering my unique circumstances. Please bear in mind, also, that I have been a loyal customer of yours for several years.\n\nThank you for your help.\n\nSincerely,\nKern Ibach",
+    "vietnameseTranslation": "Phòng Đặt Báo Dài Hạn\nChannel Region Times\n3500 Broadway\nVancouver, BC\n\nKính gửi Quý tòa soạn,\n\nGần đây tôi đã viết thư yêu cầu quý báo hủy đăng ký báo dài hạn của mình. Do một thay đổi bất ngờ trong hoàn cảnh sống, tôi muốn đề nghị quý báo đảo ngược (hủy bỏ) yêu cầu đó.\n\nCho đến thứ Sáu tuần trước, tôi vẫn tin rằng công ty sẽ điều chuyển tôi đến Montreal. Đó là lý do tôi yêu cầu hủy báo. Tuy nhiên, việc điều chuyển đã bị hoãn lại sang năm sau, và tôi sẽ tiếp tục ở lại Vancouver cho đến lúc đó. Là một độc giả lâu năm của tờ Channel Region Times, tôi rất muốn tiếp tục nhận báo.\n\nCó thể quý báo đã xử lý việc hủy tài khoản của tôi. Trong trường hợp đó, tôi hiểu rằng mình sẽ phải mở một tài khoản mới và trên trang web có nêu phí đăng ký $25. Liệu quý báo có thể miễn khoản phí đăng ký tiêu chuẩn này cho tôi không? Rất mong quý báo châm chước vì tôi là khách hàng trung thành suốt nhiều năm qua...\n\nKern Ibach",
+    "questionIds": [
+      "test2_176",
+      "test2_177",
+      "test2_178",
+      "test2_179",
+      "test2_180"
+    ],
+    "clues": [
+      {
+        "questionNum": 176,
+        "correctAnswer": "D",
+        "clueLocation": "Đoạn 1, dòng 2-3",
+        "clueQuote": "Due to an unexpected change in my living situation, I would like to ask you to reverse that request.",
+        "scanningTip": "Đọc mục đích ở cuối đoạn 1."
+      },
+      {
+        "questionNum": 177,
+        "correctAnswer": "D",
+        "clueLocation": "Đoạn 2, dòng 3-4",
+        "clueQuote": "my transfer has been postponed until next year, and I will stay here in Vancouver until then.",
+        "scanningTip": "Tìm cụm 'stay here in Vancouver'."
+      },
+      {
+        "questionNum": 178,
+        "correctAnswer": "B",
+        "clueLocation": "Đoạn 1, dòng 2",
+        "clueQuote": "reverse that request",
+        "scanningTip": "Xét ngữ cảnh đảo ngược quyết định (overturn)."
+      },
+      {
+        "questionNum": 179,
+        "correctAnswer": "A",
+        "clueLocation": "Đoạn 3, dòng 4-5",
+        "clueQuote": "would you be willing to waive the standard start-up charge for my subscription?",
+        "scanningTip": "Tìm từ 'waive' và số tiền '$25'."
+      },
+      {
+        "questionNum": 180,
+        "correctAnswer": "B",
+        "clueLocation": "Đoạn 2, dòng 4-5",
+        "clueQuote": "As a long-time reader of the Channel Region Times, I would very much like to continue my subscription...",
+        "scanningTip": "Tìm cụm 'long-time reader'."
+      }
+    ]
+  },
+  "clue": {
+    "questionNum": 179,
+    "correctAnswer": "A",
+    "clueLocation": "Đoạn 3, dòng 4-5",
+    "clueQuote": "would you be willing to waive the standard start-up charge for my subscription?",
+    "scanningTip": "Tìm từ 'waive' và số tiền '$25'."
+  }
+},
+{
+  "id": "test2_180",
+  "num": 180,
+  "source": "Test 2",
+  "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+  "question": "What does Ms. Ibach say about the Channel Region Times?",
+  "options": {
+    "A": "It is the most popular paper in Vancouver.",
+    "B": "She has read it for a long time.",
+    "C": "It should move its offices to Montreal.",
+    "D": "The sign-up fee is too expensive."
+  },
+  "correctAnswer": "B",
+  "explanation": "Đoạn 2: 'As a long-time reader of the Channel Region Times...' (là độc giả lâu năm = She has read it for a long time).",
+  "tip": "⚡ MẸO: 'long-time reader' = 'read it for a long time'.",
+  "keywords": [
+    "long-time reader",
+    "read it for a long time"
+  ],
+  "vietnameseMeaning": "Cô Ibach nói gì về tờ báo Channel Region Times?",
+  "isPassageQuestion": true,
+  "passageId": "test2_p7_times_ibach",
+  "passageInfo": {
+    "id": "test2_p7_times_ibach",
+    "title": "Thư Xin Hủy Yêu Cầu Cắt Báo - Channel Region Times",
+    "content": "Subscriptions Department\nChannel Region Times\n3500 Broadway\nVancouver, BC\n\nDear Sir or Madam,\n\nI recently wrote and requested that you cancel my subscription to your newspaper. Due to an unexpected change in my living situation, I would like to ask you to reverse that request.\n\nUp until last Friday, I believed that my company was transferring me to Montreal. That was the reason for my cancellation request. However, it seems that my transfer has been postponed until next year, and I will stay here in Vancouver until then. As a long-time reader of the Channel Region Times, I would very much like to continue my subscription to the paper.\n\nYou have probably already processed the cancellation of my account. In this case, I assume I will have to open a new one. I have just looked at your website and I understand that there is a $25 sign-up fee for new subscribers. Although I realize that I was at fault for prematurely terminating our agreement, would you be willing to waive the standard start-up charge for my subscription? I hope you can make this exception for me considering my unique circumstances. Please bear in mind, also, that I have been a loyal customer of yours for several years.\n\nThank you for your help.\n\nSincerely,\nKern Ibach",
+    "vietnameseTranslation": "Phòng Đặt Báo Dài Hạn\nChannel Region Times\n3500 Broadway\nVancouver, BC\n\nKính gửi Quý tòa soạn,\n\nGần đây tôi đã viết thư yêu cầu quý báo hủy đăng ký báo dài hạn của mình. Do một thay đổi bất ngờ trong hoàn cảnh sống, tôi muốn đề nghị quý báo đảo ngược (hủy bỏ) yêu cầu đó.\n\nCho đến thứ Sáu tuần trước, tôi vẫn tin rằng công ty sẽ điều chuyển tôi đến Montreal. Đó là lý do tôi yêu cầu hủy báo. Tuy nhiên, việc điều chuyển đã bị hoãn lại sang năm sau, và tôi sẽ tiếp tục ở lại Vancouver cho đến lúc đó. Là một độc giả lâu năm của tờ Channel Region Times, tôi rất muốn tiếp tục nhận báo.\n\nCó thể quý báo đã xử lý việc hủy tài khoản của tôi. Trong trường hợp đó, tôi hiểu rằng mình sẽ phải mở một tài khoản mới và trên trang web có nêu phí đăng ký $25. Liệu quý báo có thể miễn khoản phí đăng ký tiêu chuẩn này cho tôi không? Rất mong quý báo châm chước vì tôi là khách hàng trung thành suốt nhiều năm qua...\n\nKern Ibach",
+    "questionIds": [
+      "test2_176",
+      "test2_177",
+      "test2_178",
+      "test2_179",
+      "test2_180"
+    ],
+    "clues": [
+      {
+        "questionNum": 176,
+        "correctAnswer": "D",
+        "clueLocation": "Đoạn 1, dòng 2-3",
+        "clueQuote": "Due to an unexpected change in my living situation, I would like to ask you to reverse that request.",
+        "scanningTip": "Đọc mục đích ở cuối đoạn 1."
+      },
+      {
+        "questionNum": 177,
+        "correctAnswer": "D",
+        "clueLocation": "Đoạn 2, dòng 3-4",
+        "clueQuote": "my transfer has been postponed until next year, and I will stay here in Vancouver until then.",
+        "scanningTip": "Tìm cụm 'stay here in Vancouver'."
+      },
+      {
+        "questionNum": 178,
+        "correctAnswer": "B",
+        "clueLocation": "Đoạn 1, dòng 2",
+        "clueQuote": "reverse that request",
+        "scanningTip": "Xét ngữ cảnh đảo ngược quyết định (overturn)."
+      },
+      {
+        "questionNum": 179,
+        "correctAnswer": "A",
+        "clueLocation": "Đoạn 3, dòng 4-5",
+        "clueQuote": "would you be willing to waive the standard start-up charge for my subscription?",
+        "scanningTip": "Tìm từ 'waive' và số tiền '$25'."
+      },
+      {
+        "questionNum": 180,
+        "correctAnswer": "B",
+        "clueLocation": "Đoạn 2, dòng 4-5",
+        "clueQuote": "As a long-time reader of the Channel Region Times, I would very much like to continue my subscription...",
+        "scanningTip": "Tìm cụm 'long-time reader'."
+      }
+    ]
+  },
+  "clue": {
+    "questionNum": 180,
+    "correctAnswer": "B",
+    "clueLocation": "Đoạn 2, dòng 4-5",
+    "clueQuote": "As a long-time reader of the Channel Region Times, I would very much like to continue my subscription...",
+    "scanningTip": "Tìm cụm 'long-time reader'."
+  }
+},
+{
+  "id": "test2_181",
+  "num": 181,
+  "source": "Test 2",
+  "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+  "question": "When was the invoice created?",
+  "options": {
+    "A": "March 1",
+    "B": "March 31",
+    "C": "April 16",
+    "D": "May 8"
+  },
+  "correctAnswer": "C",
+  "explanation": "Trên hóa đơn ghi rõ: 'Date: April 16, 2008'.",
+  "tip": "⚡ MẸO: Nhìn dòng 'Date' trên phần hóa đơn đầu tiên: April 16.",
+  "keywords": [
+    "Date",
+    "April 16",
+    "invoice"
+  ],
+  "vietnameseMeaning": "Hóa đơn được lập vào ngày nào?",
+  "isPassageQuestion": true,
+  "passageId": "test2_p7_woodbury",
+  "passageInfo": {
+    "id": "test2_p7_woodbury",
+    "title": "Đoạn Kép: Hóa Đơn & Thư Điều Chỉnh Tiền Điện - Woodbury Gas & Electric",
+    "content": "Woodbury Gas & Electric Company\nCustomer Invoice\n\nCustomer name: Carol Wyse\nCustomer ID: 3569-F9J3-5704\nCustomer address: 3590 Main St., Woodbury, VA\nDate: April 16, 2008\n\nBilling period: March 1 - March 31\nPrevious balance:  $0.00\nNew balance:        $84.79\nTotal amount due: $84.79\n\nDetails of charges in this billing period:\nGas Heat        $23.88\nCooking Gas  $14.07\nPower             $44.21\nTaxes              $2.63\nTotal               $84.79\n\n* Please contact the Woodbury Gas & Electric Company to raise any questions about your charge.\nInvoice prepared by: Charles Holmes, Accounting Assistant\n\n--------------------------------------------------\n\nCarol Wyse\n3590 Main St.\nWoodbury, VA\nMay 8, 2008\n\nDear Ms. Wyse,\n\nAn error in your invoice of April 16, 2008, has come to the attention of our accounting office. You were overcharged for the electricity you consumed in the month of March. The correct charge should have been $34.21. Please accept our apologies for this mistake.\n\nWe received your payment of $84.79 on May 2, 2008. The overcharge will be deducted from your bill and you will receive a credit. This surplus will be subtracted from your next bill. In addition, because we value you as a loyal Woodbury Gas & Electric customer, we will also apply a discount of $5.00 to your next bill.\n\nAgain, we apologize for any inconvenience this error may have caused you. Our goal at Woodbury Gas & Electric is to provide you with safe and reliable utility services at reasonable rates. If you have any questions about this matter, please contact the client relations officer Marc Baldwin at markbaldwin@woodbury.com. You can also learn more about any of our products and services by calling Barbara Cameron at the customer service department on 1-800-398-6334.\n\nThank you and have a great day,\n\nAndreas Hardin, Customer Service Director\nWoodbury Gas & Electric Company",
+    "vietnameseTranslation": "Công ty Điện & Gas Woodbury\nHóa đơn khách hàng\n\nTên khách hàng: Carol Wyse\nMã khách hàng: 3569-F9J3-5704\nĐịa chỉ khách hàng: 3590 Đường Main, Woodbury, VA\nNgày lập hóa đơn: 16 tháng 4, 2008\nKỳ thanh toán: 1 tháng 3 - 31 tháng 3\nTổng số tiền phải thanh toán: $84.79\n\nChi tiết tiền các dịch vụ:\nSưởi gas: $23.88\nGas nấu ăn: $14.07\nTiền điện (Power): $44.21\nThuế: $2.63\nTổng cộng: $84.79\n\n--------------------------------------------------\n\nCarol Wyse, 3590 Đường Main, Woodbury, VA\nNgày 8 tháng 5, 2008\n\nKính gửi cô Wyse,\n\nMột sai sót trong hóa đơn ngày 16 tháng 4 năm 2008 của cô đã được phòng kế toán phát hiện. Cô đã bị tính tiền vượt mức cho lượng điện tiêu thụ trong tháng 3. Mức phí chính xác đáng lẽ là $34.21. Xin chân thành cáo lỗi vì sự cố này.\n\nChúng tôi đã nhận được khoản thanh toán $84.79 của cô vào ngày 2 tháng 5 năm 2008. Số tiền bị tính thừa sẽ được trừ vào hóa đơn tiếp theo dưới dạng tiền hoàn lại (credit). Ngoài ra, chúng tôi cũng sẽ giảm thêm $5.00 cho hóa đơn kỳ tới của cô... Nếu có thắc mắc, vui lòng liên hệ nhân viên phụ trách quan hệ khách hàng Marc Baldwin...",
+    "questionIds": [
+      "test2_181",
+      "test2_182",
+      "test2_183",
+      "test2_184",
+      "test2_185"
+    ],
+    "clues": [
+      {
+        "questionNum": 181,
+        "correctAnswer": "C",
+        "clueLocation": "Hóa đơn, dòng 4",
+        "clueQuote": "Date: April 16, 2008",
+        "scanningTip": "Tìm chữ 'Date' trên phần hóa đơn."
+      },
+      {
+        "questionNum": 182,
+        "correctAnswer": "C",
+        "clueLocation": "Thư, đoạn 1, dòng 1-2",
+        "clueQuote": "An error in your invoice of April 16, 2008, has come to the attention of our accounting office.",
+        "scanningTip": "Đọc câu đầu tiên của lá thư thứ 2."
+      },
+      {
+        "questionNum": 183,
+        "correctAnswer": "C",
+        "clueLocation": "Hóa đơn & Thư đoạn 1",
+        "clueQuote": "Hóa đơn: 'Power $44.21' | Thư: 'overcharged for the electricity you consumed'",
+        "scanningTip": "Kết hợp từ khóa 'electricity' trong thư với dòng 'Power' trên hóa đơn."
+      },
+      {
+        "questionNum": 184,
+        "correctAnswer": "A",
+        "clueLocation": "Thư, đoạn 2, dòng 4-5",
+        "clueQuote": "we will also apply a discount of $5.00 to your next bill.",
+        "scanningTip": "Tìm từ 'discount' ở đoạn 2 của thư."
+      },
+      {
+        "questionNum": 185,
+        "correctAnswer": "A",
+        "clueLocation": "Thư, đoạn 3, dòng 2-4",
+        "clueQuote": "If you have any questions about this matter, please contact the client relations officer Marc Baldwin",
+        "scanningTip": "Tìm tên 'Marc Baldwin' ở đoạn cuối thư."
+      }
+    ]
+  },
+  "clue": {
+    "questionNum": 181,
+    "correctAnswer": "C",
+    "clueLocation": "Hóa đơn, dòng 4",
+    "clueQuote": "Date: April 16, 2008",
+    "scanningTip": "Tìm chữ 'Date' trên phần hóa đơn."
+  }
+},
+{
+  "id": "test2_182",
+  "num": 182,
+  "source": "Test 2",
+  "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+  "question": "What is the purpose of the letter?",
+  "options": {
+    "A": "To report a possible price increase",
+    "B": "To request an overdue payment",
+    "C": "To explain a recent billing mistake",
+    "D": "To ask a customer for information"
+  },
+  "correctAnswer": "C",
+  "explanation": "Thư mở đầu: 'An error in your invoice of April 16, 2008, has come to the attention... You were overcharged...' -> giải thích lỗi sai trên hóa đơn (explain a recent billing mistake).",
+  "tip": "⚡ MẸO: 'error in your invoice' = 'billing mistake'.",
+  "keywords": [
+    "error in your invoice",
+    "billing mistake"
+  ],
+  "vietnameseMeaning": "Mục đích của lá thư là gì?",
+  "isPassageQuestion": true,
+  "passageId": "test2_p7_woodbury",
+  "passageInfo": {
+    "id": "test2_p7_woodbury",
+    "title": "Đoạn Kép: Hóa Đơn & Thư Điều Chỉnh Tiền Điện - Woodbury Gas & Electric",
+    "content": "Woodbury Gas & Electric Company\nCustomer Invoice\n\nCustomer name: Carol Wyse\nCustomer ID: 3569-F9J3-5704\nCustomer address: 3590 Main St., Woodbury, VA\nDate: April 16, 2008\n\nBilling period: March 1 - March 31\nPrevious balance:  $0.00\nNew balance:        $84.79\nTotal amount due: $84.79\n\nDetails of charges in this billing period:\nGas Heat        $23.88\nCooking Gas  $14.07\nPower             $44.21\nTaxes              $2.63\nTotal               $84.79\n\n* Please contact the Woodbury Gas & Electric Company to raise any questions about your charge.\nInvoice prepared by: Charles Holmes, Accounting Assistant\n\n--------------------------------------------------\n\nCarol Wyse\n3590 Main St.\nWoodbury, VA\nMay 8, 2008\n\nDear Ms. Wyse,\n\nAn error in your invoice of April 16, 2008, has come to the attention of our accounting office. You were overcharged for the electricity you consumed in the month of March. The correct charge should have been $34.21. Please accept our apologies for this mistake.\n\nWe received your payment of $84.79 on May 2, 2008. The overcharge will be deducted from your bill and you will receive a credit. This surplus will be subtracted from your next bill. In addition, because we value you as a loyal Woodbury Gas & Electric customer, we will also apply a discount of $5.00 to your next bill.\n\nAgain, we apologize for any inconvenience this error may have caused you. Our goal at Woodbury Gas & Electric is to provide you with safe and reliable utility services at reasonable rates. If you have any questions about this matter, please contact the client relations officer Marc Baldwin at markbaldwin@woodbury.com. You can also learn more about any of our products and services by calling Barbara Cameron at the customer service department on 1-800-398-6334.\n\nThank you and have a great day,\n\nAndreas Hardin, Customer Service Director\nWoodbury Gas & Electric Company",
+    "vietnameseTranslation": "Công ty Điện & Gas Woodbury\nHóa đơn khách hàng\n\nTên khách hàng: Carol Wyse\nMã khách hàng: 3569-F9J3-5704\nĐịa chỉ khách hàng: 3590 Đường Main, Woodbury, VA\nNgày lập hóa đơn: 16 tháng 4, 2008\nKỳ thanh toán: 1 tháng 3 - 31 tháng 3\nTổng số tiền phải thanh toán: $84.79\n\nChi tiết tiền các dịch vụ:\nSưởi gas: $23.88\nGas nấu ăn: $14.07\nTiền điện (Power): $44.21\nThuế: $2.63\nTổng cộng: $84.79\n\n--------------------------------------------------\n\nCarol Wyse, 3590 Đường Main, Woodbury, VA\nNgày 8 tháng 5, 2008\n\nKính gửi cô Wyse,\n\nMột sai sót trong hóa đơn ngày 16 tháng 4 năm 2008 của cô đã được phòng kế toán phát hiện. Cô đã bị tính tiền vượt mức cho lượng điện tiêu thụ trong tháng 3. Mức phí chính xác đáng lẽ là $34.21. Xin chân thành cáo lỗi vì sự cố này.\n\nChúng tôi đã nhận được khoản thanh toán $84.79 của cô vào ngày 2 tháng 5 năm 2008. Số tiền bị tính thừa sẽ được trừ vào hóa đơn tiếp theo dưới dạng tiền hoàn lại (credit). Ngoài ra, chúng tôi cũng sẽ giảm thêm $5.00 cho hóa đơn kỳ tới của cô... Nếu có thắc mắc, vui lòng liên hệ nhân viên phụ trách quan hệ khách hàng Marc Baldwin...",
+    "questionIds": [
+      "test2_181",
+      "test2_182",
+      "test2_183",
+      "test2_184",
+      "test2_185"
+    ],
+    "clues": [
+      {
+        "questionNum": 181,
+        "correctAnswer": "C",
+        "clueLocation": "Hóa đơn, dòng 4",
+        "clueQuote": "Date: April 16, 2008",
+        "scanningTip": "Tìm chữ 'Date' trên phần hóa đơn."
+      },
+      {
+        "questionNum": 182,
+        "correctAnswer": "C",
+        "clueLocation": "Thư, đoạn 1, dòng 1-2",
+        "clueQuote": "An error in your invoice of April 16, 2008, has come to the attention of our accounting office.",
+        "scanningTip": "Đọc câu đầu tiên của lá thư thứ 2."
+      },
+      {
+        "questionNum": 183,
+        "correctAnswer": "C",
+        "clueLocation": "Hóa đơn & Thư đoạn 1",
+        "clueQuote": "Hóa đơn: 'Power $44.21' | Thư: 'overcharged for the electricity you consumed'",
+        "scanningTip": "Kết hợp từ khóa 'electricity' trong thư với dòng 'Power' trên hóa đơn."
+      },
+      {
+        "questionNum": 184,
+        "correctAnswer": "A",
+        "clueLocation": "Thư, đoạn 2, dòng 4-5",
+        "clueQuote": "we will also apply a discount of $5.00 to your next bill.",
+        "scanningTip": "Tìm từ 'discount' ở đoạn 2 của thư."
+      },
+      {
+        "questionNum": 185,
+        "correctAnswer": "A",
+        "clueLocation": "Thư, đoạn 3, dòng 2-4",
+        "clueQuote": "If you have any questions about this matter, please contact the client relations officer Marc Baldwin",
+        "scanningTip": "Tìm tên 'Marc Baldwin' ở đoạn cuối thư."
+      }
+    ]
+  },
+  "clue": {
+    "questionNum": 182,
+    "correctAnswer": "C",
+    "clueLocation": "Thư, đoạn 1, dòng 1-2",
+    "clueQuote": "An error in your invoice of April 16, 2008, has come to the attention of our accounting office.",
+    "scanningTip": "Đọc câu đầu tiên của lá thư thứ 2."
+  }
+},
+{
+  "id": "test2_183",
+  "num": 183,
+  "source": "Test 2",
+  "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+  "question": "How much was the fee for the overcharged utility?",
+  "options": {
+    "A": "$23.88",
+    "B": "$14.07",
+    "C": "$44.21",
+    "D": "$2.63"
+  },
+  "correctAnswer": "C",
+  "explanation": "Lá thư nói: 'You were overcharged for the electricity... The correct charge should have been $34.21'. Nhìn lại hóa đơn mục điện (Power): ghi $44.21.",
+  "tip": "⚡ MẸO: Hỏi khoản phí tiện ích bị tính thừa trên hóa đơn -> tiện ích bị tính thừa là điện ('Power'), trên hóa đơn là $44.21.",
+  "keywords": [
+    "overcharged",
+    "electricity",
+    "Power",
+    "$44.21"
+  ],
+  "vietnameseMeaning": "Khoản phí tiện ích bị tính thừa trên hóa đơn là bao nhiêu?",
+  "isPassageQuestion": true,
+  "passageId": "test2_p7_woodbury",
+  "passageInfo": {
+    "id": "test2_p7_woodbury",
+    "title": "Đoạn Kép: Hóa Đơn & Thư Điều Chỉnh Tiền Điện - Woodbury Gas & Electric",
+    "content": "Woodbury Gas & Electric Company\nCustomer Invoice\n\nCustomer name: Carol Wyse\nCustomer ID: 3569-F9J3-5704\nCustomer address: 3590 Main St., Woodbury, VA\nDate: April 16, 2008\n\nBilling period: March 1 - March 31\nPrevious balance:  $0.00\nNew balance:        $84.79\nTotal amount due: $84.79\n\nDetails of charges in this billing period:\nGas Heat        $23.88\nCooking Gas  $14.07\nPower             $44.21\nTaxes              $2.63\nTotal               $84.79\n\n* Please contact the Woodbury Gas & Electric Company to raise any questions about your charge.\nInvoice prepared by: Charles Holmes, Accounting Assistant\n\n--------------------------------------------------\n\nCarol Wyse\n3590 Main St.\nWoodbury, VA\nMay 8, 2008\n\nDear Ms. Wyse,\n\nAn error in your invoice of April 16, 2008, has come to the attention of our accounting office. You were overcharged for the electricity you consumed in the month of March. The correct charge should have been $34.21. Please accept our apologies for this mistake.\n\nWe received your payment of $84.79 on May 2, 2008. The overcharge will be deducted from your bill and you will receive a credit. This surplus will be subtracted from your next bill. In addition, because we value you as a loyal Woodbury Gas & Electric customer, we will also apply a discount of $5.00 to your next bill.\n\nAgain, we apologize for any inconvenience this error may have caused you. Our goal at Woodbury Gas & Electric is to provide you with safe and reliable utility services at reasonable rates. If you have any questions about this matter, please contact the client relations officer Marc Baldwin at markbaldwin@woodbury.com. You can also learn more about any of our products and services by calling Barbara Cameron at the customer service department on 1-800-398-6334.\n\nThank you and have a great day,\n\nAndreas Hardin, Customer Service Director\nWoodbury Gas & Electric Company",
+    "vietnameseTranslation": "Công ty Điện & Gas Woodbury\nHóa đơn khách hàng\n\nTên khách hàng: Carol Wyse\nMã khách hàng: 3569-F9J3-5704\nĐịa chỉ khách hàng: 3590 Đường Main, Woodbury, VA\nNgày lập hóa đơn: 16 tháng 4, 2008\nKỳ thanh toán: 1 tháng 3 - 31 tháng 3\nTổng số tiền phải thanh toán: $84.79\n\nChi tiết tiền các dịch vụ:\nSưởi gas: $23.88\nGas nấu ăn: $14.07\nTiền điện (Power): $44.21\nThuế: $2.63\nTổng cộng: $84.79\n\n--------------------------------------------------\n\nCarol Wyse, 3590 Đường Main, Woodbury, VA\nNgày 8 tháng 5, 2008\n\nKính gửi cô Wyse,\n\nMột sai sót trong hóa đơn ngày 16 tháng 4 năm 2008 của cô đã được phòng kế toán phát hiện. Cô đã bị tính tiền vượt mức cho lượng điện tiêu thụ trong tháng 3. Mức phí chính xác đáng lẽ là $34.21. Xin chân thành cáo lỗi vì sự cố này.\n\nChúng tôi đã nhận được khoản thanh toán $84.79 của cô vào ngày 2 tháng 5 năm 2008. Số tiền bị tính thừa sẽ được trừ vào hóa đơn tiếp theo dưới dạng tiền hoàn lại (credit). Ngoài ra, chúng tôi cũng sẽ giảm thêm $5.00 cho hóa đơn kỳ tới của cô... Nếu có thắc mắc, vui lòng liên hệ nhân viên phụ trách quan hệ khách hàng Marc Baldwin...",
+    "questionIds": [
+      "test2_181",
+      "test2_182",
+      "test2_183",
+      "test2_184",
+      "test2_185"
+    ],
+    "clues": [
+      {
+        "questionNum": 181,
+        "correctAnswer": "C",
+        "clueLocation": "Hóa đơn, dòng 4",
+        "clueQuote": "Date: April 16, 2008",
+        "scanningTip": "Tìm chữ 'Date' trên phần hóa đơn."
+      },
+      {
+        "questionNum": 182,
+        "correctAnswer": "C",
+        "clueLocation": "Thư, đoạn 1, dòng 1-2",
+        "clueQuote": "An error in your invoice of April 16, 2008, has come to the attention of our accounting office.",
+        "scanningTip": "Đọc câu đầu tiên của lá thư thứ 2."
+      },
+      {
+        "questionNum": 183,
+        "correctAnswer": "C",
+        "clueLocation": "Hóa đơn & Thư đoạn 1",
+        "clueQuote": "Hóa đơn: 'Power $44.21' | Thư: 'overcharged for the electricity you consumed'",
+        "scanningTip": "Kết hợp từ khóa 'electricity' trong thư với dòng 'Power' trên hóa đơn."
+      },
+      {
+        "questionNum": 184,
+        "correctAnswer": "A",
+        "clueLocation": "Thư, đoạn 2, dòng 4-5",
+        "clueQuote": "we will also apply a discount of $5.00 to your next bill.",
+        "scanningTip": "Tìm từ 'discount' ở đoạn 2 của thư."
+      },
+      {
+        "questionNum": 185,
+        "correctAnswer": "A",
+        "clueLocation": "Thư, đoạn 3, dòng 2-4",
+        "clueQuote": "If you have any questions about this matter, please contact the client relations officer Marc Baldwin",
+        "scanningTip": "Tìm tên 'Marc Baldwin' ở đoạn cuối thư."
+      }
+    ]
+  },
+  "clue": {
+    "questionNum": 183,
+    "correctAnswer": "C",
+    "clueLocation": "Hóa đơn & Thư đoạn 1",
+    "clueQuote": "Hóa đơn: 'Power $44.21' | Thư: 'overcharged for the electricity you consumed'",
+    "scanningTip": "Kết hợp từ khóa 'electricity' trong thư với dòng 'Power' trên hóa đơn."
+  }
+},
+{
+  "id": "test2_184",
+  "num": 184,
+  "source": "Test 2",
+  "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+  "question": "What will happen with Ms. Wyse's next bill?",
+  "options": {
+    "A": "It will be discounted.",
+    "B": "It will include a penalty payment.",
+    "C": "It will be completely waived.",
+    "D": "It will contain a surplus charge."
+  },
+  "correctAnswer": "A",
+  "explanation": "Thư đoạn 2: 'we will also apply a discount of $5.00 to your next bill' (được giảm giá $5 cho hóa đơn tới).",
+  "tip": "⚡ MẸO: 'apply a discount of $5.00 to your next bill' = 'It will be discounted'.",
+  "keywords": [
+    "apply a discount",
+    "next bill"
+  ],
+  "vietnameseMeaning": "Điều gì sẽ xảy ra với hóa đơn tiếp theo của cô Wyse?",
+  "isPassageQuestion": true,
+  "passageId": "test2_p7_woodbury",
+  "passageInfo": {
+    "id": "test2_p7_woodbury",
+    "title": "Đoạn Kép: Hóa Đơn & Thư Điều Chỉnh Tiền Điện - Woodbury Gas & Electric",
+    "content": "Woodbury Gas & Electric Company\nCustomer Invoice\n\nCustomer name: Carol Wyse\nCustomer ID: 3569-F9J3-5704\nCustomer address: 3590 Main St., Woodbury, VA\nDate: April 16, 2008\n\nBilling period: March 1 - March 31\nPrevious balance:  $0.00\nNew balance:        $84.79\nTotal amount due: $84.79\n\nDetails of charges in this billing period:\nGas Heat        $23.88\nCooking Gas  $14.07\nPower             $44.21\nTaxes              $2.63\nTotal               $84.79\n\n* Please contact the Woodbury Gas & Electric Company to raise any questions about your charge.\nInvoice prepared by: Charles Holmes, Accounting Assistant\n\n--------------------------------------------------\n\nCarol Wyse\n3590 Main St.\nWoodbury, VA\nMay 8, 2008\n\nDear Ms. Wyse,\n\nAn error in your invoice of April 16, 2008, has come to the attention of our accounting office. You were overcharged for the electricity you consumed in the month of March. The correct charge should have been $34.21. Please accept our apologies for this mistake.\n\nWe received your payment of $84.79 on May 2, 2008. The overcharge will be deducted from your bill and you will receive a credit. This surplus will be subtracted from your next bill. In addition, because we value you as a loyal Woodbury Gas & Electric customer, we will also apply a discount of $5.00 to your next bill.\n\nAgain, we apologize for any inconvenience this error may have caused you. Our goal at Woodbury Gas & Electric is to provide you with safe and reliable utility services at reasonable rates. If you have any questions about this matter, please contact the client relations officer Marc Baldwin at markbaldwin@woodbury.com. You can also learn more about any of our products and services by calling Barbara Cameron at the customer service department on 1-800-398-6334.\n\nThank you and have a great day,\n\nAndreas Hardin, Customer Service Director\nWoodbury Gas & Electric Company",
+    "vietnameseTranslation": "Công ty Điện & Gas Woodbury\nHóa đơn khách hàng\n\nTên khách hàng: Carol Wyse\nMã khách hàng: 3569-F9J3-5704\nĐịa chỉ khách hàng: 3590 Đường Main, Woodbury, VA\nNgày lập hóa đơn: 16 tháng 4, 2008\nKỳ thanh toán: 1 tháng 3 - 31 tháng 3\nTổng số tiền phải thanh toán: $84.79\n\nChi tiết tiền các dịch vụ:\nSưởi gas: $23.88\nGas nấu ăn: $14.07\nTiền điện (Power): $44.21\nThuế: $2.63\nTổng cộng: $84.79\n\n--------------------------------------------------\n\nCarol Wyse, 3590 Đường Main, Woodbury, VA\nNgày 8 tháng 5, 2008\n\nKính gửi cô Wyse,\n\nMột sai sót trong hóa đơn ngày 16 tháng 4 năm 2008 của cô đã được phòng kế toán phát hiện. Cô đã bị tính tiền vượt mức cho lượng điện tiêu thụ trong tháng 3. Mức phí chính xác đáng lẽ là $34.21. Xin chân thành cáo lỗi vì sự cố này.\n\nChúng tôi đã nhận được khoản thanh toán $84.79 của cô vào ngày 2 tháng 5 năm 2008. Số tiền bị tính thừa sẽ được trừ vào hóa đơn tiếp theo dưới dạng tiền hoàn lại (credit). Ngoài ra, chúng tôi cũng sẽ giảm thêm $5.00 cho hóa đơn kỳ tới của cô... Nếu có thắc mắc, vui lòng liên hệ nhân viên phụ trách quan hệ khách hàng Marc Baldwin...",
+    "questionIds": [
+      "test2_181",
+      "test2_182",
+      "test2_183",
+      "test2_184",
+      "test2_185"
+    ],
+    "clues": [
+      {
+        "questionNum": 181,
+        "correctAnswer": "C",
+        "clueLocation": "Hóa đơn, dòng 4",
+        "clueQuote": "Date: April 16, 2008",
+        "scanningTip": "Tìm chữ 'Date' trên phần hóa đơn."
+      },
+      {
+        "questionNum": 182,
+        "correctAnswer": "C",
+        "clueLocation": "Thư, đoạn 1, dòng 1-2",
+        "clueQuote": "An error in your invoice of April 16, 2008, has come to the attention of our accounting office.",
+        "scanningTip": "Đọc câu đầu tiên của lá thư thứ 2."
+      },
+      {
+        "questionNum": 183,
+        "correctAnswer": "C",
+        "clueLocation": "Hóa đơn & Thư đoạn 1",
+        "clueQuote": "Hóa đơn: 'Power $44.21' | Thư: 'overcharged for the electricity you consumed'",
+        "scanningTip": "Kết hợp từ khóa 'electricity' trong thư với dòng 'Power' trên hóa đơn."
+      },
+      {
+        "questionNum": 184,
+        "correctAnswer": "A",
+        "clueLocation": "Thư, đoạn 2, dòng 4-5",
+        "clueQuote": "we will also apply a discount of $5.00 to your next bill.",
+        "scanningTip": "Tìm từ 'discount' ở đoạn 2 của thư."
+      },
+      {
+        "questionNum": 185,
+        "correctAnswer": "A",
+        "clueLocation": "Thư, đoạn 3, dòng 2-4",
+        "clueQuote": "If you have any questions about this matter, please contact the client relations officer Marc Baldwin",
+        "scanningTip": "Tìm tên 'Marc Baldwin' ở đoạn cuối thư."
+      }
+    ]
+  },
+  "clue": {
+    "questionNum": 184,
+    "correctAnswer": "A",
+    "clueLocation": "Thư, đoạn 2, dòng 4-5",
+    "clueQuote": "we will also apply a discount of $5.00 to your next bill.",
+    "scanningTip": "Tìm từ 'discount' ở đoạn 2 của thư."
+  }
+},
+{
+  "id": "test2_185",
+  "num": 185,
+  "source": "Test 2",
+  "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+  "question": "What does Marc Baldwin do in the company?",
+  "options": {
+    "A": "He handles customer complaints.",
+    "B": "He introduces products and services to customers.",
+    "C": "He prepares invoices.",
+    "D": "He is the head of the customer service department."
+  },
+  "correctAnswer": "A",
+  "explanation": "Thư đoạn 3: 'If you have any questions about this matter [sai sót hóa đơn], please contact the client relations officer Marc Baldwin' -> cán bộ quan hệ khách hàng giải quyết thắc mắc khiếu nại (handles customer complaints).",
+  "tip": "⚡ MẸO: 'questions about this matter [error] -> contact client relations officer Marc Baldwin' = phụ trách khiếu nại khách hàng.",
+  "keywords": [
+    "client relations officer",
+    "Marc Baldwin",
+    "complaints"
+  ],
+  "vietnameseMeaning": "Marc Baldwin làm công việc gì trong công ty?",
+  "isPassageQuestion": true,
+  "passageId": "test2_p7_woodbury",
+  "passageInfo": {
+    "id": "test2_p7_woodbury",
+    "title": "Đoạn Kép: Hóa Đơn & Thư Điều Chỉnh Tiền Điện - Woodbury Gas & Electric",
+    "content": "Woodbury Gas & Electric Company\nCustomer Invoice\n\nCustomer name: Carol Wyse\nCustomer ID: 3569-F9J3-5704\nCustomer address: 3590 Main St., Woodbury, VA\nDate: April 16, 2008\n\nBilling period: March 1 - March 31\nPrevious balance:  $0.00\nNew balance:        $84.79\nTotal amount due: $84.79\n\nDetails of charges in this billing period:\nGas Heat        $23.88\nCooking Gas  $14.07\nPower             $44.21\nTaxes              $2.63\nTotal               $84.79\n\n* Please contact the Woodbury Gas & Electric Company to raise any questions about your charge.\nInvoice prepared by: Charles Holmes, Accounting Assistant\n\n--------------------------------------------------\n\nCarol Wyse\n3590 Main St.\nWoodbury, VA\nMay 8, 2008\n\nDear Ms. Wyse,\n\nAn error in your invoice of April 16, 2008, has come to the attention of our accounting office. You were overcharged for the electricity you consumed in the month of March. The correct charge should have been $34.21. Please accept our apologies for this mistake.\n\nWe received your payment of $84.79 on May 2, 2008. The overcharge will be deducted from your bill and you will receive a credit. This surplus will be subtracted from your next bill. In addition, because we value you as a loyal Woodbury Gas & Electric customer, we will also apply a discount of $5.00 to your next bill.\n\nAgain, we apologize for any inconvenience this error may have caused you. Our goal at Woodbury Gas & Electric is to provide you with safe and reliable utility services at reasonable rates. If you have any questions about this matter, please contact the client relations officer Marc Baldwin at markbaldwin@woodbury.com. You can also learn more about any of our products and services by calling Barbara Cameron at the customer service department on 1-800-398-6334.\n\nThank you and have a great day,\n\nAndreas Hardin, Customer Service Director\nWoodbury Gas & Electric Company",
+    "vietnameseTranslation": "Công ty Điện & Gas Woodbury\nHóa đơn khách hàng\n\nTên khách hàng: Carol Wyse\nMã khách hàng: 3569-F9J3-5704\nĐịa chỉ khách hàng: 3590 Đường Main, Woodbury, VA\nNgày lập hóa đơn: 16 tháng 4, 2008\nKỳ thanh toán: 1 tháng 3 - 31 tháng 3\nTổng số tiền phải thanh toán: $84.79\n\nChi tiết tiền các dịch vụ:\nSưởi gas: $23.88\nGas nấu ăn: $14.07\nTiền điện (Power): $44.21\nThuế: $2.63\nTổng cộng: $84.79\n\n--------------------------------------------------\n\nCarol Wyse, 3590 Đường Main, Woodbury, VA\nNgày 8 tháng 5, 2008\n\nKính gửi cô Wyse,\n\nMột sai sót trong hóa đơn ngày 16 tháng 4 năm 2008 của cô đã được phòng kế toán phát hiện. Cô đã bị tính tiền vượt mức cho lượng điện tiêu thụ trong tháng 3. Mức phí chính xác đáng lẽ là $34.21. Xin chân thành cáo lỗi vì sự cố này.\n\nChúng tôi đã nhận được khoản thanh toán $84.79 của cô vào ngày 2 tháng 5 năm 2008. Số tiền bị tính thừa sẽ được trừ vào hóa đơn tiếp theo dưới dạng tiền hoàn lại (credit). Ngoài ra, chúng tôi cũng sẽ giảm thêm $5.00 cho hóa đơn kỳ tới của cô... Nếu có thắc mắc, vui lòng liên hệ nhân viên phụ trách quan hệ khách hàng Marc Baldwin...",
+    "questionIds": [
+      "test2_181",
+      "test2_182",
+      "test2_183",
+      "test2_184",
+      "test2_185"
+    ],
+    "clues": [
+      {
+        "questionNum": 181,
+        "correctAnswer": "C",
+        "clueLocation": "Hóa đơn, dòng 4",
+        "clueQuote": "Date: April 16, 2008",
+        "scanningTip": "Tìm chữ 'Date' trên phần hóa đơn."
+      },
+      {
+        "questionNum": 182,
+        "correctAnswer": "C",
+        "clueLocation": "Thư, đoạn 1, dòng 1-2",
+        "clueQuote": "An error in your invoice of April 16, 2008, has come to the attention of our accounting office.",
+        "scanningTip": "Đọc câu đầu tiên của lá thư thứ 2."
+      },
+      {
+        "questionNum": 183,
+        "correctAnswer": "C",
+        "clueLocation": "Hóa đơn & Thư đoạn 1",
+        "clueQuote": "Hóa đơn: 'Power $44.21' | Thư: 'overcharged for the electricity you consumed'",
+        "scanningTip": "Kết hợp từ khóa 'electricity' trong thư với dòng 'Power' trên hóa đơn."
+      },
+      {
+        "questionNum": 184,
+        "correctAnswer": "A",
+        "clueLocation": "Thư, đoạn 2, dòng 4-5",
+        "clueQuote": "we will also apply a discount of $5.00 to your next bill.",
+        "scanningTip": "Tìm từ 'discount' ở đoạn 2 của thư."
+      },
+      {
+        "questionNum": 185,
+        "correctAnswer": "A",
+        "clueLocation": "Thư, đoạn 3, dòng 2-4",
+        "clueQuote": "If you have any questions about this matter, please contact the client relations officer Marc Baldwin",
+        "scanningTip": "Tìm tên 'Marc Baldwin' ở đoạn cuối thư."
+      }
+    ]
+  },
+  "clue": {
+    "questionNum": 185,
+    "correctAnswer": "A",
+    "clueLocation": "Thư, đoạn 3, dòng 2-4",
+    "clueQuote": "If you have any questions about this matter, please contact the client relations officer Marc Baldwin",
+    "scanningTip": "Tìm tên 'Marc Baldwin' ở đoạn cuối thư."
+  }
+},
+{
+  "id": "test2_186",
+  "num": 186,
+  "source": "Test 2",
+  "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+  "question": "For whom is Ms. Miller's email intended?",
+  "options": {
+    "A": "A delivery person",
+    "B": "A shipping company executive",
+    "C": "A coworker at her company",
+    "D": "Her department supervisor"
+  },
+  "correctAnswer": "C",
+  "explanation": "Email gửi cho Tomas Varela, một đồng nghiệp cùng công ty ('My supervisor suggested that I coordinate with you', Cc cho supervisor Glen Beamer -> đồng nghiệp tại công ty = A coworker at her company).",
+  "tip": "⚡ MẸO: Gửi nội bộ trong công ty, nhờ đồng nghiệp phối hợp = 'coworker at her company'.",
+  "keywords": [
+    "coordinate with you",
+    "coworker"
+  ],
+  "vietnameseMeaning": "Email của cô Miller nhằm gửi tới đối tượng nào?",
+  "isPassageQuestion": true,
+  "passageId": "test2_p7_shipping",
+  "passageInfo": {
+    "id": "test2_p7_shipping",
+    "title": "Đoạn Kép: Trao Đổi Tìm Đối Tác Vận Chuyển Mới - Katie Miller & Tomas Varela",
+    "content": "To: Tomas Varela\nFrom: Katie Miller\nCc: Glen Beamer\nSubject: New shipping firm needed\n\nMr. Varela,\n\nMy name is Katie Miller, and I work in the accounts payable department. My supervisor, Glen Beamer, has decided to end our contract with the shipping firm Hamilton Express due to their lack of reliability. He suggested that I coordinate with you to find a replacement because of your past experience in the shipping industry.\n\nSpecifically, we are looking for a company that can consistently handle our frequent next-day deliveries. These shipments are often sent to international destinations and must arrive within 48 hours of being mailed.\n\nPlease contact me with the names and details of any firms you think will be able to meet our needs. Your assistance in this matter is greatly appreciated.\n\n- Katie Miller\n\n--------------------------------------------------\n\nTo: Katie Miller\nFrom: Tomas Varela\nCc: Glen Beamer\nRE: New shipping firm needed\n\nHello Ms. Miller,\n\nI have already completed some research concerning shipping firm options. I am also sending this email to Glen Beamer so that he can review my findings.\n\nAs you know, ever since they were acquired a year ago by U.S. Parcels, they have been shifting their focus away from international shipments. As a result, they are now much less capable in this area.\n\nI have found two companies that I think can provide us with reliable shipping services:\n\nThe first is Worldwide Delivery, Inc. They have facilities in North America, Europe, and Asia, and international shipments make up most of their business.\n\nThe second option is FMH Airmail. Although they are not as widespread as Worldwide Delivery, they offer very competitive rates for corporate clients like us.\n\nIf your department decides to pursue a contract with one of these firms, I would be happy to participate in the negotiations. Just let me know if I can be of assistance.\n\n- Tomas Varela",
+    "vietnameseTranslation": "Đến: Tomas Varela\nTừ: Katie Miller\nĐồng kính gửi: Glen Beamer\nChủ đề: Cần tìm công ty vận chuyển mới\n\nChào ông Varela,\nTôi là Katie Miller, làm việc tại phòng kế toán công nợ phải trả. Người giám sát của tôi, ông Glen Beamer, đã quyết định chấm dứt hợp đồng với công ty vận chuyển Hamilton Express vì họ thiếu tin cậy. Ông ấy đề nghị tôi phối hợp với ông để tìm đối tác thay thế do ông có kinh nghiệm làm việc trong ngành vận chuyển...\n\n--------------------------------------------------\n\nĐến: Katie Miller\nTừ: Tomas Varela\nĐồng kính gửi: Glen Beamer\nVề việc: Cần tìm công ty vận chuyển mới\n\nChào cô Miller,\nTôi đã hoàn thành một số nghiên cứu về các lựa chọn đối tác vận chuyển... Tôi đã tìm thấy 2 công ty đáng tin cậy:\nThứ nhất là Worldwide Delivery, Inc. Họ có cơ sở tại Bắc Mỹ, Châu Âu, Châu Á và các chuyến hàng quốc tế chiếm phần lớn hoạt động kinh doanh của họ.\nLựa chọn thứ hai là FMH Airmail. Mặc dù mạng lưới không rộng bằng Worldwide Delivery, nhưng họ đưa ra mức giá rất cạnh tranh (rẻ) cho khách hàng doanh nghiệp như chúng ta.\nNếu phòng của cô quyết định xúc tiến hợp đồng, tôi rất sẵn lòng tham gia đàm phán...",
+    "questionIds": [
+      "test2_186",
+      "test2_187",
+      "test2_188",
+      "test2_189",
+      "test2_190"
+    ],
+    "clues": [
+      {
+        "questionNum": 186,
+        "correctAnswer": "C",
+        "clueLocation": "Email 1, đoạn 1, dòng 3-4",
+        "clueQuote": "He suggested that I coordinate with you to find a replacement because of your past experience...",
+        "scanningTip": "Đọc lời giới thiệu của Katie Miller ở email 1."
+      },
+      {
+        "questionNum": 187,
+        "correctAnswer": "A",
+        "clueLocation": "Email 1, đoạn 1 & 2",
+        "clueQuote": "end our contract with the shipping firm Hamilton Express due to their lack of reliability... sent to international destinations",
+        "scanningTip": "Kết hợp lý do hủy hợp đồng ở đoạn 1 và tính chất đơn hàng ở đoạn 2."
+      },
+      {
+        "questionNum": 188,
+        "correctAnswer": "A",
+        "clueLocation": "Email 2, đoạn 2, dòng 2-3",
+        "clueQuote": "they are now much less capable in this area.",
+        "scanningTip": "Đọc đánh giá của ông Varela về đơn vị hiện tại ở đoạn 2 của email 2."
+      },
+      {
+        "questionNum": 189,
+        "correctAnswer": "A",
+        "clueLocation": "Email 2, đoạn 4, dòng 2",
+        "clueQuote": "they offer very competitive rates for corporate clients like us.",
+        "scanningTip": "Tìm cụm 'competitive rates' trong email 2."
+      },
+      {
+        "questionNum": 190,
+        "correctAnswer": "A",
+        "clueLocation": "Email 2, đoạn cuối, dòng 1-2",
+        "clueQuote": "If your department decides to pursue a contract with one of these firms, I would be happy to participate in the negotiations.",
+        "scanningTip": "Đọc câu đề nghị giúp đỡ ở dòng cuối email 2."
+      }
+    ]
+  },
+  "clue": {
+    "questionNum": 186,
+    "correctAnswer": "C",
+    "clueLocation": "Email 1, đoạn 1, dòng 3-4",
+    "clueQuote": "He suggested that I coordinate with you to find a replacement because of your past experience...",
+    "scanningTip": "Đọc lời giới thiệu của Katie Miller ở email 1."
+  }
+},
+{
+  "id": "test2_187",
+  "num": 187,
+  "source": "Test 2",
+  "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+  "question": "Why does Mr. Beamer want to change shipping agents?",
+  "options": {
+    "A": "The current firm is unreliable for overseas deliveries.",
+    "B": "Mr. Varela told him about a provider with lower rates.",
+    "C": "His company needs to send urgent shipments.",
+    "D": "Hamilton Express is relocating its facilities overseas."
+  },
+  "correctAnswer": "A",
+  "explanation": "Email 1: 'end our contract with the shipping firm Hamilton Express due to their lack of reliability... These shipments are often sent to international destinations' -> không đáng tin cậy cho giao hàng quốc tế (unreliable for overseas deliveries).",
+  "tip": "⚡ MẸO: 'lack of reliability' + 'international destinations' = 'unreliable for overseas deliveries'.",
+  "keywords": [
+    "lack of reliability",
+    "international destinations",
+    "unreliable"
+  ],
+  "vietnameseMeaning": "Tại sao ông Beamer muốn đổi đơn vị vận chuyển?",
+  "isPassageQuestion": true,
+  "passageId": "test2_p7_shipping",
+  "passageInfo": {
+    "id": "test2_p7_shipping",
+    "title": "Đoạn Kép: Trao Đổi Tìm Đối Tác Vận Chuyển Mới - Katie Miller & Tomas Varela",
+    "content": "To: Tomas Varela\nFrom: Katie Miller\nCc: Glen Beamer\nSubject: New shipping firm needed\n\nMr. Varela,\n\nMy name is Katie Miller, and I work in the accounts payable department. My supervisor, Glen Beamer, has decided to end our contract with the shipping firm Hamilton Express due to their lack of reliability. He suggested that I coordinate with you to find a replacement because of your past experience in the shipping industry.\n\nSpecifically, we are looking for a company that can consistently handle our frequent next-day deliveries. These shipments are often sent to international destinations and must arrive within 48 hours of being mailed.\n\nPlease contact me with the names and details of any firms you think will be able to meet our needs. Your assistance in this matter is greatly appreciated.\n\n- Katie Miller\n\n--------------------------------------------------\n\nTo: Katie Miller\nFrom: Tomas Varela\nCc: Glen Beamer\nRE: New shipping firm needed\n\nHello Ms. Miller,\n\nI have already completed some research concerning shipping firm options. I am also sending this email to Glen Beamer so that he can review my findings.\n\nAs you know, ever since they were acquired a year ago by U.S. Parcels, they have been shifting their focus away from international shipments. As a result, they are now much less capable in this area.\n\nI have found two companies that I think can provide us with reliable shipping services:\n\nThe first is Worldwide Delivery, Inc. They have facilities in North America, Europe, and Asia, and international shipments make up most of their business.\n\nThe second option is FMH Airmail. Although they are not as widespread as Worldwide Delivery, they offer very competitive rates for corporate clients like us.\n\nIf your department decides to pursue a contract with one of these firms, I would be happy to participate in the negotiations. Just let me know if I can be of assistance.\n\n- Tomas Varela",
+    "vietnameseTranslation": "Đến: Tomas Varela\nTừ: Katie Miller\nĐồng kính gửi: Glen Beamer\nChủ đề: Cần tìm công ty vận chuyển mới\n\nChào ông Varela,\nTôi là Katie Miller, làm việc tại phòng kế toán công nợ phải trả. Người giám sát của tôi, ông Glen Beamer, đã quyết định chấm dứt hợp đồng với công ty vận chuyển Hamilton Express vì họ thiếu tin cậy. Ông ấy đề nghị tôi phối hợp với ông để tìm đối tác thay thế do ông có kinh nghiệm làm việc trong ngành vận chuyển...\n\n--------------------------------------------------\n\nĐến: Katie Miller\nTừ: Tomas Varela\nĐồng kính gửi: Glen Beamer\nVề việc: Cần tìm công ty vận chuyển mới\n\nChào cô Miller,\nTôi đã hoàn thành một số nghiên cứu về các lựa chọn đối tác vận chuyển... Tôi đã tìm thấy 2 công ty đáng tin cậy:\nThứ nhất là Worldwide Delivery, Inc. Họ có cơ sở tại Bắc Mỹ, Châu Âu, Châu Á và các chuyến hàng quốc tế chiếm phần lớn hoạt động kinh doanh của họ.\nLựa chọn thứ hai là FMH Airmail. Mặc dù mạng lưới không rộng bằng Worldwide Delivery, nhưng họ đưa ra mức giá rất cạnh tranh (rẻ) cho khách hàng doanh nghiệp như chúng ta.\nNếu phòng của cô quyết định xúc tiến hợp đồng, tôi rất sẵn lòng tham gia đàm phán...",
+    "questionIds": [
+      "test2_186",
+      "test2_187",
+      "test2_188",
+      "test2_189",
+      "test2_190"
+    ],
+    "clues": [
+      {
+        "questionNum": 186,
+        "correctAnswer": "C",
+        "clueLocation": "Email 1, đoạn 1, dòng 3-4",
+        "clueQuote": "He suggested that I coordinate with you to find a replacement because of your past experience...",
+        "scanningTip": "Đọc lời giới thiệu của Katie Miller ở email 1."
+      },
+      {
+        "questionNum": 187,
+        "correctAnswer": "A",
+        "clueLocation": "Email 1, đoạn 1 & 2",
+        "clueQuote": "end our contract with the shipping firm Hamilton Express due to their lack of reliability... sent to international destinations",
+        "scanningTip": "Kết hợp lý do hủy hợp đồng ở đoạn 1 và tính chất đơn hàng ở đoạn 2."
+      },
+      {
+        "questionNum": 188,
+        "correctAnswer": "A",
+        "clueLocation": "Email 2, đoạn 2, dòng 2-3",
+        "clueQuote": "they are now much less capable in this area.",
+        "scanningTip": "Đọc đánh giá của ông Varela về đơn vị hiện tại ở đoạn 2 của email 2."
+      },
+      {
+        "questionNum": 189,
+        "correctAnswer": "A",
+        "clueLocation": "Email 2, đoạn 4, dòng 2",
+        "clueQuote": "they offer very competitive rates for corporate clients like us.",
+        "scanningTip": "Tìm cụm 'competitive rates' trong email 2."
+      },
+      {
+        "questionNum": 190,
+        "correctAnswer": "A",
+        "clueLocation": "Email 2, đoạn cuối, dòng 1-2",
+        "clueQuote": "If your department decides to pursue a contract with one of these firms, I would be happy to participate in the negotiations.",
+        "scanningTip": "Đọc câu đề nghị giúp đỡ ở dòng cuối email 2."
+      }
+    ]
+  },
+  "clue": {
+    "questionNum": 187,
+    "correctAnswer": "A",
+    "clueLocation": "Email 1, đoạn 1 & 2",
+    "clueQuote": "end our contract with the shipping firm Hamilton Express due to their lack of reliability... sent to international destinations",
+    "scanningTip": "Kết hợp lý do hủy hợp đồng ở đoạn 1 và tính chất đơn hàng ở đoạn 2."
+  }
+},
+{
+  "id": "test2_188",
+  "num": 188,
+  "source": "Test 2",
+  "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+  "question": "What can be inferred from Mr. Varela's comments about the current shipping agent?",
+  "options": {
+    "A": "He concurs with Mr. Beamer's opinion.",
+    "B": "He thinks it is more capable than its rivals.",
+    "C": "He is unaware of recent industry developments.",
+    "D": "He disagrees that the company should change agents."
+  },
+  "correctAnswer": "A",
+  "explanation": "Email 2, đoạn 2: Ông Varela giải thích rằng từ khi bị mua lại, hãng vận chuyển hiện tại đã chuyển hướng khỏi mảng quốc tế và 'now much less capable in this area' -> đồng tình hoàn toàn với nhận định của ông Beamer (He concurs with Mr. Beamer's opinion).",
+  "tip": "⚡ MẸO: 'concurs with' = đồng ý (agrees with).",
+  "keywords": [
+    "concurs with",
+    "less capable"
+  ],
+  "vietnameseMeaning": "Có thể suy ra điều gì từ nhận xét của ông Varela về đơn vị vận chuyển hiện tại?",
+  "isPassageQuestion": true,
+  "passageId": "test2_p7_shipping",
+  "passageInfo": {
+    "id": "test2_p7_shipping",
+    "title": "Đoạn Kép: Trao Đổi Tìm Đối Tác Vận Chuyển Mới - Katie Miller & Tomas Varela",
+    "content": "To: Tomas Varela\nFrom: Katie Miller\nCc: Glen Beamer\nSubject: New shipping firm needed\n\nMr. Varela,\n\nMy name is Katie Miller, and I work in the accounts payable department. My supervisor, Glen Beamer, has decided to end our contract with the shipping firm Hamilton Express due to their lack of reliability. He suggested that I coordinate with you to find a replacement because of your past experience in the shipping industry.\n\nSpecifically, we are looking for a company that can consistently handle our frequent next-day deliveries. These shipments are often sent to international destinations and must arrive within 48 hours of being mailed.\n\nPlease contact me with the names and details of any firms you think will be able to meet our needs. Your assistance in this matter is greatly appreciated.\n\n- Katie Miller\n\n--------------------------------------------------\n\nTo: Katie Miller\nFrom: Tomas Varela\nCc: Glen Beamer\nRE: New shipping firm needed\n\nHello Ms. Miller,\n\nI have already completed some research concerning shipping firm options. I am also sending this email to Glen Beamer so that he can review my findings.\n\nAs you know, ever since they were acquired a year ago by U.S. Parcels, they have been shifting their focus away from international shipments. As a result, they are now much less capable in this area.\n\nI have found two companies that I think can provide us with reliable shipping services:\n\nThe first is Worldwide Delivery, Inc. They have facilities in North America, Europe, and Asia, and international shipments make up most of their business.\n\nThe second option is FMH Airmail. Although they are not as widespread as Worldwide Delivery, they offer very competitive rates for corporate clients like us.\n\nIf your department decides to pursue a contract with one of these firms, I would be happy to participate in the negotiations. Just let me know if I can be of assistance.\n\n- Tomas Varela",
+    "vietnameseTranslation": "Đến: Tomas Varela\nTừ: Katie Miller\nĐồng kính gửi: Glen Beamer\nChủ đề: Cần tìm công ty vận chuyển mới\n\nChào ông Varela,\nTôi là Katie Miller, làm việc tại phòng kế toán công nợ phải trả. Người giám sát của tôi, ông Glen Beamer, đã quyết định chấm dứt hợp đồng với công ty vận chuyển Hamilton Express vì họ thiếu tin cậy. Ông ấy đề nghị tôi phối hợp với ông để tìm đối tác thay thế do ông có kinh nghiệm làm việc trong ngành vận chuyển...\n\n--------------------------------------------------\n\nĐến: Katie Miller\nTừ: Tomas Varela\nĐồng kính gửi: Glen Beamer\nVề việc: Cần tìm công ty vận chuyển mới\n\nChào cô Miller,\nTôi đã hoàn thành một số nghiên cứu về các lựa chọn đối tác vận chuyển... Tôi đã tìm thấy 2 công ty đáng tin cậy:\nThứ nhất là Worldwide Delivery, Inc. Họ có cơ sở tại Bắc Mỹ, Châu Âu, Châu Á và các chuyến hàng quốc tế chiếm phần lớn hoạt động kinh doanh của họ.\nLựa chọn thứ hai là FMH Airmail. Mặc dù mạng lưới không rộng bằng Worldwide Delivery, nhưng họ đưa ra mức giá rất cạnh tranh (rẻ) cho khách hàng doanh nghiệp như chúng ta.\nNếu phòng của cô quyết định xúc tiến hợp đồng, tôi rất sẵn lòng tham gia đàm phán...",
+    "questionIds": [
+      "test2_186",
+      "test2_187",
+      "test2_188",
+      "test2_189",
+      "test2_190"
+    ],
+    "clues": [
+      {
+        "questionNum": 186,
+        "correctAnswer": "C",
+        "clueLocation": "Email 1, đoạn 1, dòng 3-4",
+        "clueQuote": "He suggested that I coordinate with you to find a replacement because of your past experience...",
+        "scanningTip": "Đọc lời giới thiệu của Katie Miller ở email 1."
+      },
+      {
+        "questionNum": 187,
+        "correctAnswer": "A",
+        "clueLocation": "Email 1, đoạn 1 & 2",
+        "clueQuote": "end our contract with the shipping firm Hamilton Express due to their lack of reliability... sent to international destinations",
+        "scanningTip": "Kết hợp lý do hủy hợp đồng ở đoạn 1 và tính chất đơn hàng ở đoạn 2."
+      },
+      {
+        "questionNum": 188,
+        "correctAnswer": "A",
+        "clueLocation": "Email 2, đoạn 2, dòng 2-3",
+        "clueQuote": "they are now much less capable in this area.",
+        "scanningTip": "Đọc đánh giá của ông Varela về đơn vị hiện tại ở đoạn 2 của email 2."
+      },
+      {
+        "questionNum": 189,
+        "correctAnswer": "A",
+        "clueLocation": "Email 2, đoạn 4, dòng 2",
+        "clueQuote": "they offer very competitive rates for corporate clients like us.",
+        "scanningTip": "Tìm cụm 'competitive rates' trong email 2."
+      },
+      {
+        "questionNum": 190,
+        "correctAnswer": "A",
+        "clueLocation": "Email 2, đoạn cuối, dòng 1-2",
+        "clueQuote": "If your department decides to pursue a contract with one of these firms, I would be happy to participate in the negotiations.",
+        "scanningTip": "Đọc câu đề nghị giúp đỡ ở dòng cuối email 2."
+      }
+    ]
+  },
+  "clue": {
+    "questionNum": 188,
+    "correctAnswer": "A",
+    "clueLocation": "Email 2, đoạn 2, dòng 2-3",
+    "clueQuote": "they are now much less capable in this area.",
+    "scanningTip": "Đọc đánh giá của ông Varela về đơn vị hiện tại ở đoạn 2 của email 2."
+  }
+},
+{
+  "id": "test2_189",
+  "num": 189,
+  "source": "Test 2",
+  "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+  "question": "Which company will probably have the lowest prices?",
+  "options": {
+    "A": "FMH Airmail",
+    "B": "U.S. Parcels",
+    "C": "Worldwide Delivery, Inc.",
+    "D": "Hamilton Express"
+  },
+  "correctAnswer": "A",
+  "explanation": "Email 2: 'The second option is FMH Airmail... they offer very competitive rates for corporate clients' -> mức giá cạnh tranh nhất (lowest prices) = FMH Airmail.",
+  "tip": "⚡ MẸO: 'very competitive rates' = giá cạnh tranh / rẻ nhất (lowest prices).",
+  "keywords": [
+    "competitive rates",
+    "lowest prices",
+    "FMH Airmail"
+  ],
+  "vietnameseMeaning": "Công ty nào có khả năng đưa ra mức giá thấp nhất?",
+  "isPassageQuestion": true,
+  "passageId": "test2_p7_shipping",
+  "passageInfo": {
+    "id": "test2_p7_shipping",
+    "title": "Đoạn Kép: Trao Đổi Tìm Đối Tác Vận Chuyển Mới - Katie Miller & Tomas Varela",
+    "content": "To: Tomas Varela\nFrom: Katie Miller\nCc: Glen Beamer\nSubject: New shipping firm needed\n\nMr. Varela,\n\nMy name is Katie Miller, and I work in the accounts payable department. My supervisor, Glen Beamer, has decided to end our contract with the shipping firm Hamilton Express due to their lack of reliability. He suggested that I coordinate with you to find a replacement because of your past experience in the shipping industry.\n\nSpecifically, we are looking for a company that can consistently handle our frequent next-day deliveries. These shipments are often sent to international destinations and must arrive within 48 hours of being mailed.\n\nPlease contact me with the names and details of any firms you think will be able to meet our needs. Your assistance in this matter is greatly appreciated.\n\n- Katie Miller\n\n--------------------------------------------------\n\nTo: Katie Miller\nFrom: Tomas Varela\nCc: Glen Beamer\nRE: New shipping firm needed\n\nHello Ms. Miller,\n\nI have already completed some research concerning shipping firm options. I am also sending this email to Glen Beamer so that he can review my findings.\n\nAs you know, ever since they were acquired a year ago by U.S. Parcels, they have been shifting their focus away from international shipments. As a result, they are now much less capable in this area.\n\nI have found two companies that I think can provide us with reliable shipping services:\n\nThe first is Worldwide Delivery, Inc. They have facilities in North America, Europe, and Asia, and international shipments make up most of their business.\n\nThe second option is FMH Airmail. Although they are not as widespread as Worldwide Delivery, they offer very competitive rates for corporate clients like us.\n\nIf your department decides to pursue a contract with one of these firms, I would be happy to participate in the negotiations. Just let me know if I can be of assistance.\n\n- Tomas Varela",
+    "vietnameseTranslation": "Đến: Tomas Varela\nTừ: Katie Miller\nĐồng kính gửi: Glen Beamer\nChủ đề: Cần tìm công ty vận chuyển mới\n\nChào ông Varela,\nTôi là Katie Miller, làm việc tại phòng kế toán công nợ phải trả. Người giám sát của tôi, ông Glen Beamer, đã quyết định chấm dứt hợp đồng với công ty vận chuyển Hamilton Express vì họ thiếu tin cậy. Ông ấy đề nghị tôi phối hợp với ông để tìm đối tác thay thế do ông có kinh nghiệm làm việc trong ngành vận chuyển...\n\n--------------------------------------------------\n\nĐến: Katie Miller\nTừ: Tomas Varela\nĐồng kính gửi: Glen Beamer\nVề việc: Cần tìm công ty vận chuyển mới\n\nChào cô Miller,\nTôi đã hoàn thành một số nghiên cứu về các lựa chọn đối tác vận chuyển... Tôi đã tìm thấy 2 công ty đáng tin cậy:\nThứ nhất là Worldwide Delivery, Inc. Họ có cơ sở tại Bắc Mỹ, Châu Âu, Châu Á và các chuyến hàng quốc tế chiếm phần lớn hoạt động kinh doanh của họ.\nLựa chọn thứ hai là FMH Airmail. Mặc dù mạng lưới không rộng bằng Worldwide Delivery, nhưng họ đưa ra mức giá rất cạnh tranh (rẻ) cho khách hàng doanh nghiệp như chúng ta.\nNếu phòng của cô quyết định xúc tiến hợp đồng, tôi rất sẵn lòng tham gia đàm phán...",
+    "questionIds": [
+      "test2_186",
+      "test2_187",
+      "test2_188",
+      "test2_189",
+      "test2_190"
+    ],
+    "clues": [
+      {
+        "questionNum": 186,
+        "correctAnswer": "C",
+        "clueLocation": "Email 1, đoạn 1, dòng 3-4",
+        "clueQuote": "He suggested that I coordinate with you to find a replacement because of your past experience...",
+        "scanningTip": "Đọc lời giới thiệu của Katie Miller ở email 1."
+      },
+      {
+        "questionNum": 187,
+        "correctAnswer": "A",
+        "clueLocation": "Email 1, đoạn 1 & 2",
+        "clueQuote": "end our contract with the shipping firm Hamilton Express due to their lack of reliability... sent to international destinations",
+        "scanningTip": "Kết hợp lý do hủy hợp đồng ở đoạn 1 và tính chất đơn hàng ở đoạn 2."
+      },
+      {
+        "questionNum": 188,
+        "correctAnswer": "A",
+        "clueLocation": "Email 2, đoạn 2, dòng 2-3",
+        "clueQuote": "they are now much less capable in this area.",
+        "scanningTip": "Đọc đánh giá của ông Varela về đơn vị hiện tại ở đoạn 2 của email 2."
+      },
+      {
+        "questionNum": 189,
+        "correctAnswer": "A",
+        "clueLocation": "Email 2, đoạn 4, dòng 2",
+        "clueQuote": "they offer very competitive rates for corporate clients like us.",
+        "scanningTip": "Tìm cụm 'competitive rates' trong email 2."
+      },
+      {
+        "questionNum": 190,
+        "correctAnswer": "A",
+        "clueLocation": "Email 2, đoạn cuối, dòng 1-2",
+        "clueQuote": "If your department decides to pursue a contract with one of these firms, I would be happy to participate in the negotiations.",
+        "scanningTip": "Đọc câu đề nghị giúp đỡ ở dòng cuối email 2."
+      }
+    ]
+  },
+  "clue": {
+    "questionNum": 189,
+    "correctAnswer": "A",
+    "clueLocation": "Email 2, đoạn 4, dòng 2",
+    "clueQuote": "they offer very competitive rates for corporate clients like us.",
+    "scanningTip": "Tìm cụm 'competitive rates' trong email 2."
+  }
+},
+{
+  "id": "test2_190",
+  "num": 190,
+  "source": "Test 2",
+  "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+  "question": "What does Mr. Varela offer to help with?",
+  "options": {
+    "A": "The creation of a new contract",
+    "B": "Emailing alternative shipping firms",
+    "C": "The reorganization of a department",
+    "D": "Hiring a new shipping manager"
+  },
+  "correctAnswer": "A",
+  "explanation": "Email 2 đoạn cuối: 'If your department decides to pursue a contract with one of these firms, I would be happy to participate in the negotiations' -> tham gia đàm phán hợp đồng mới = The creation of a new contract.",
+  "tip": "⚡ MẸO: 'pursue a contract... participate in negotiations' = 'The creation of a new contract'.",
+  "keywords": [
+    "pursue a contract",
+    "participate in negotiations",
+    "new contract"
+  ],
+  "vietnameseMeaning": "Ông Varela đề nghị giúp đỡ việc gì?",
+  "isPassageQuestion": true,
+  "passageId": "test2_p7_shipping",
+  "passageInfo": {
+    "id": "test2_p7_shipping",
+    "title": "Đoạn Kép: Trao Đổi Tìm Đối Tác Vận Chuyển Mới - Katie Miller & Tomas Varela",
+    "content": "To: Tomas Varela\nFrom: Katie Miller\nCc: Glen Beamer\nSubject: New shipping firm needed\n\nMr. Varela,\n\nMy name is Katie Miller, and I work in the accounts payable department. My supervisor, Glen Beamer, has decided to end our contract with the shipping firm Hamilton Express due to their lack of reliability. He suggested that I coordinate with you to find a replacement because of your past experience in the shipping industry.\n\nSpecifically, we are looking for a company that can consistently handle our frequent next-day deliveries. These shipments are often sent to international destinations and must arrive within 48 hours of being mailed.\n\nPlease contact me with the names and details of any firms you think will be able to meet our needs. Your assistance in this matter is greatly appreciated.\n\n- Katie Miller\n\n--------------------------------------------------\n\nTo: Katie Miller\nFrom: Tomas Varela\nCc: Glen Beamer\nRE: New shipping firm needed\n\nHello Ms. Miller,\n\nI have already completed some research concerning shipping firm options. I am also sending this email to Glen Beamer so that he can review my findings.\n\nAs you know, ever since they were acquired a year ago by U.S. Parcels, they have been shifting their focus away from international shipments. As a result, they are now much less capable in this area.\n\nI have found two companies that I think can provide us with reliable shipping services:\n\nThe first is Worldwide Delivery, Inc. They have facilities in North America, Europe, and Asia, and international shipments make up most of their business.\n\nThe second option is FMH Airmail. Although they are not as widespread as Worldwide Delivery, they offer very competitive rates for corporate clients like us.\n\nIf your department decides to pursue a contract with one of these firms, I would be happy to participate in the negotiations. Just let me know if I can be of assistance.\n\n- Tomas Varela",
+    "vietnameseTranslation": "Đến: Tomas Varela\nTừ: Katie Miller\nĐồng kính gửi: Glen Beamer\nChủ đề: Cần tìm công ty vận chuyển mới\n\nChào ông Varela,\nTôi là Katie Miller, làm việc tại phòng kế toán công nợ phải trả. Người giám sát của tôi, ông Glen Beamer, đã quyết định chấm dứt hợp đồng với công ty vận chuyển Hamilton Express vì họ thiếu tin cậy. Ông ấy đề nghị tôi phối hợp với ông để tìm đối tác thay thế do ông có kinh nghiệm làm việc trong ngành vận chuyển...\n\n--------------------------------------------------\n\nĐến: Katie Miller\nTừ: Tomas Varela\nĐồng kính gửi: Glen Beamer\nVề việc: Cần tìm công ty vận chuyển mới\n\nChào cô Miller,\nTôi đã hoàn thành một số nghiên cứu về các lựa chọn đối tác vận chuyển... Tôi đã tìm thấy 2 công ty đáng tin cậy:\nThứ nhất là Worldwide Delivery, Inc. Họ có cơ sở tại Bắc Mỹ, Châu Âu, Châu Á và các chuyến hàng quốc tế chiếm phần lớn hoạt động kinh doanh của họ.\nLựa chọn thứ hai là FMH Airmail. Mặc dù mạng lưới không rộng bằng Worldwide Delivery, nhưng họ đưa ra mức giá rất cạnh tranh (rẻ) cho khách hàng doanh nghiệp như chúng ta.\nNếu phòng của cô quyết định xúc tiến hợp đồng, tôi rất sẵn lòng tham gia đàm phán...",
+    "questionIds": [
+      "test2_186",
+      "test2_187",
+      "test2_188",
+      "test2_189",
+      "test2_190"
+    ],
+    "clues": [
+      {
+        "questionNum": 186,
+        "correctAnswer": "C",
+        "clueLocation": "Email 1, đoạn 1, dòng 3-4",
+        "clueQuote": "He suggested that I coordinate with you to find a replacement because of your past experience...",
+        "scanningTip": "Đọc lời giới thiệu của Katie Miller ở email 1."
+      },
+      {
+        "questionNum": 187,
+        "correctAnswer": "A",
+        "clueLocation": "Email 1, đoạn 1 & 2",
+        "clueQuote": "end our contract with the shipping firm Hamilton Express due to their lack of reliability... sent to international destinations",
+        "scanningTip": "Kết hợp lý do hủy hợp đồng ở đoạn 1 và tính chất đơn hàng ở đoạn 2."
+      },
+      {
+        "questionNum": 188,
+        "correctAnswer": "A",
+        "clueLocation": "Email 2, đoạn 2, dòng 2-3",
+        "clueQuote": "they are now much less capable in this area.",
+        "scanningTip": "Đọc đánh giá của ông Varela về đơn vị hiện tại ở đoạn 2 của email 2."
+      },
+      {
+        "questionNum": 189,
+        "correctAnswer": "A",
+        "clueLocation": "Email 2, đoạn 4, dòng 2",
+        "clueQuote": "they offer very competitive rates for corporate clients like us.",
+        "scanningTip": "Tìm cụm 'competitive rates' trong email 2."
+      },
+      {
+        "questionNum": 190,
+        "correctAnswer": "A",
+        "clueLocation": "Email 2, đoạn cuối, dòng 1-2",
+        "clueQuote": "If your department decides to pursue a contract with one of these firms, I would be happy to participate in the negotiations.",
+        "scanningTip": "Đọc câu đề nghị giúp đỡ ở dòng cuối email 2."
+      }
+    ]
+  },
+  "clue": {
+    "questionNum": 190,
+    "correctAnswer": "A",
+    "clueLocation": "Email 2, đoạn cuối, dòng 1-2",
+    "clueQuote": "If your department decides to pursue a contract with one of these firms, I would be happy to participate in the negotiations.",
+    "scanningTip": "Đọc câu đề nghị giúp đỡ ở dòng cuối email 2."
+  }
+},
+{
   "id": "test2_191",
   "num": 191,
   "source": "Test 2",
@@ -3599,13 +6312,45 @@ export const allQuestions: Question[] = [
 
 ];
 
+export const docs1Questions: Question[] = rawQuestions.map((q) => ({
+  ...q,
+  stage: 1,
+  isMustLearn: true,
+  learningTag: 'Bắt buộc học thuộc',
+  badge: '⭐ Giai đoạn 1: Bắt buộc học thuộc',
+}));
+
+// All questions combined: Docs 1 (151 questions) + Docs 2 (234 questions) = 385 questions
+export const allQuestions: Question[] = [
+  ...docs1Questions,
+  ...docs2Questions,
+];
+
 export const getQuestionsBySource = (source?: string): Question[] => {
-  if (!source || source === 'all') return allQuestions;
-  if (source === 'ToIce 2') return allQuestions.filter((q) => q.source === 'ToIce 2');
-  if (source === 'Test 2 Part 5') return allQuestions.filter((q) => q.source === 'Test 2' && !q.isPassageQuestion);
-  if (source === 'Part 6 Đọc Điền') return allQuestions.filter((q) => q.isPassageQuestion && q.num >= 141 && q.num <= 152);
-  if (source === 'Part 7 Đoạn Văn') return allQuestions.filter((q) => q.isPassageQuestion && q.num >= 153);
+  if (!source || source === 'all' || source === 'docs1_all' || source === 'must_learn' || source === 'stage_1') {
+    return docs1Questions;
+  }
+  if (source === 'all_both_stages') return allQuestions;
+  if (source === 'stage_2' || source === 'docs2_all') return docs2Questions;
+
+  // Docs 1 sub-sources:
+  if (source === 'ToIce 2') return docs1Questions.filter((q) => q.source.startsWith('ToIce 2'));
+  if (source === 'Test 2 Full') return docs1Questions.filter((q) => q.source.startsWith('Test 2'));
+  if (source === 'Test 2 Part 5') return docs1Questions.filter((q) => q.source.startsWith('Test 2') && !q.isPassageQuestion);
+  if (source === 'Part 6 Đọc Điền') return docs1Questions.filter((q) => q.isPassageQuestion && q.num >= 141 && q.num <= 152);
+  if (source === 'Part 7 Đoạn Văn') return docs1Questions.filter((q) => q.isPassageQuestion && q.num >= 153);
+  if (source === 'docs1_passages') return docs1Questions.filter((q) => q.isPassageQuestion);
+
+  // Docs 2 sub-sources:
+  if (source === 'Docs 2 - Đề 1 Full') return docs2Questions.filter((q) => q.id.startsWith('docs2_de1') || q.source.includes('Đề 1') || q.source === 'Docs 2 - Part 5 Luyện đề' || q.source === 'Docs 2 - Part 6 Đọc Điền');
+  if (source === 'Docs 2 - Đề 2 YBM Full') return docs2Questions.filter((q) => q.id.startsWith('docs2_de2') || q.source.includes('YBM'));
+  if (source === 'Docs 2 - Chuyên đề Tips') return docs2Questions.filter((q) => q.id.startsWith('docs2_drill') || q.source.includes('Chuyên đề'));
+  if (source === 'Docs 2 - Part 5 All' || source === 'Docs 2 - Part 5' || source === 'docs2_part5') return docs2Questions.filter((q) => !q.isPassageQuestion);
+  if (source === 'Docs 2 - Part 6 All' || source === 'Docs 2 - Part 6' || source === 'docs2_part6') return docs2Questions.filter((q) => q.isPassageQuestion && q.num >= 131 && q.num <= 146);
+  if (source === 'Docs 2 - Part 7 All' || source === 'Docs 2 - Part 7' || source === 'docs2_part7') return docs2Questions.filter((q) => q.isPassageQuestion && ((q.num >= 147 && q.num <= 200) || q.source.includes('Part 7')));
+  if (source === 'docs2_passages') return docs2Questions.filter((q) => q.isPassageQuestion);
   if (source === 'passages') return allQuestions.filter((q) => q.isPassageQuestion);
+
   return allQuestions.filter((q) => q.source === source);
 };
 

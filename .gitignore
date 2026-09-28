@@ -1,5 +1,25 @@
-# Dependencies
+# Dependencies & Build
 node_modules
 dist
 .DS_Store
 *.log
+.env
+.env.local
+__pycache__/
+*.pyc
+
+# Raw data & source documents
+docs/
+docs2/
+*.doc
+*.docx
+*.pdf
+*.zip
+*.rar
+*.7z
+
+# Audio files (heavy media data)
+public/audio/
+*.mp3
+*.m4a
+*.wav

@@ -18,12 +18,14 @@ interface ResultsViewProps {
   onGoToPracticeMistakes: () => void;
   onGoToPracticeDifficult: () => void;
   onGoToPracticeAll: () => void;
+  onGoToDocs2?: () => void;
 }
 
 export const ResultsView: React.FC<ResultsViewProps> = ({
   onGoToPracticeMistakes,
   onGoToPracticeDifficult,
   onGoToPracticeAll,
+  onGoToDocs2,
 }) => {
   const { dailyLogs, savedMistakeIds, questionProgress, updateTodayNotes } = useQuizStore();
 
@@ -147,6 +149,42 @@ export const ResultsView: React.FC<ResultsViewProps> = ({
             className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-500 hover:to-amber-600 text-white font-bold text-xs shadow-md shadow-amber-600/20 active:scale-[0.99] transition cursor-pointer"
           >
             <span>🌱 Ôn Lại {difficultList.length} Câu Hay Nhầm Này Ngay</span>
+          </button>
+        </div>
+      )}
+
+      {/* 1.2 TIẾN HÀNH GIAI ĐOẠN 2: DOCS 2 */}
+      {onGoToDocs2 && (
+        <div className="bg-gradient-to-r from-blue-50/90 via-indigo-50/90 to-purple-50/90 border-2 border-indigo-200/90 rounded-2xl p-4 shadow-sm space-y-2.5">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-700 text-base">
+                🚀
+              </div>
+              <div>
+                <h3 className="text-sm font-bold text-indigo-950">
+                  Giai Đoạn 2: Docs 2 (Nâng Cao & Luyện Đề)
+                </h3>
+                <p className="text-[11px] text-indigo-800/90">
+                  100 câu Reading Test (Part 5, 6, 7) — Đầy đủ mẹo & học theo dạng
+                </p>
+              </div>
+            </div>
+            <span className="px-2 py-0.5 rounded-full bg-indigo-200/80 border border-indigo-300 text-indigo-950 text-xs font-bold font-mono">
+              100 câu
+            </span>
+          </div>
+
+          <p className="text-xs text-[#4338CA] leading-snug">
+            Sau khi học thuộc các câu ở Docs 1, bạn hãy tiến hành làm <strong>Docs 2</strong>. Hệ thống tự động xếp liền kề các dạng câu giống nhau và tạo câu đồng dạng khi làm đúng!
+          </p>
+
+          <button
+            onClick={onGoToDocs2}
+            className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-500 hover:to-blue-500 text-white font-bold text-xs shadow-md shadow-indigo-600/20 active:scale-[0.99] transition cursor-pointer"
+          >
+            <BookOpen className="w-3.5 h-3.5" />
+            <span>🚀 Bấm Vào Đây Để Tiến Hành Docs 2 Ngay</span>
           </button>
         </div>
       )}
@@ -275,9 +313,14 @@ export const ResultsView: React.FC<ResultsViewProps> = ({
                 className="p-2.5 rounded-xl bg-[#FAF7F2] border border-[#EFE8DE] space-y-1 text-xs"
               >
                 <div className="flex items-center justify-between text-[11px]">
-                  <span className="font-bold text-[#262320]">
-                    Câu #{m.questionNum}
-                  </span>
+                  <div className="flex items-center gap-1.5">
+                    <span className="font-bold text-[#262320]">
+                      Câu #{m.questionNum}
+                    </span>
+                    <span className="px-1.5 py-0.2 rounded bg-amber-500 text-white font-bold text-[9px] shadow-2xs">
+                      ⭐ Bắt buộc học thuộc
+                    </span>
+                  </div>
                   <div className="flex items-center gap-1.5">
                     {m.userChoice === 'TIMEOUT' ? (
                       <span className="text-amber-800 font-semibold flex items-center gap-0.5 text-[10px]">

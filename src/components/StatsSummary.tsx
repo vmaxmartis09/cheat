@@ -15,6 +15,7 @@ export const StatsSummary: React.FC<StatsSummaryProps> = ({ onGoToResultsTab }) 
     restartSession,
     initSession,
     savedMistakeIds,
+    sourceFilter,
   } = useQuizStore();
 
   const total = questions.length;
@@ -77,6 +78,25 @@ export const StatsSummary: React.FC<StatsSummaryProps> = ({ onGoToResultsTab }) 
           <div className="text-[10px] text-[#8C8276] font-medium">Chuỗi đúng</div>
         </div>
       </div>
+
+      {/* Nâng bước sang Giai đoạn 2: Docs 2 */}
+      {(!sourceFilter?.startsWith('Docs 2') && sourceFilter !== 'stage_2' && sourceFilter !== 'docs2_all') && (
+        <div className="p-3 rounded-xl bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-indigo-200 text-left space-y-2 mt-2">
+          <div className="flex items-center gap-1.5 text-indigo-900 font-bold text-xs">
+            <span className="text-base">🚀</span>
+            <span>Tiến Hành Đến Giai Đoạn 2 (Docs 2)</span>
+          </div>
+          <p className="text-[11px] text-indigo-800 leading-snug">
+            Chúc mừng bạn đã hoàn thành câu hỏi ở Docs 1! Hãy tiến hành ngay đến <strong>Docs 2 (100 câu Reading Test Part 5, 6, 7)</strong> với mẹo giải chi tiết và học liền kề theo dạng.
+          </p>
+          <button
+            onClick={() => initSession('sequential', 'stage_2')}
+            className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-500 hover:to-blue-500 text-white text-xs font-bold transition shadow-md shadow-indigo-600/20 cursor-pointer"
+          >
+            <span>🚀 TIẾN HÀNH ĐẾN GIAI ĐOẠN 2 (DOCS 2) NGAY</span>
+          </button>
+        </div>
+      )}
 
       {/* Action Buttons */}
       <div className="flex flex-col gap-1.5 pt-1">

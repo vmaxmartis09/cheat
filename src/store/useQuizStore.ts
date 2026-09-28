@@ -2,6 +2,8 @@ import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import { Question, AnswerChoice, StudyMode, DailyLog, MistakeRecord, QuestionProgress } from '../types';
 import { allQuestions, getQuestionsBySource, shuffleQuestions } from '../data/questions';
+import { generateSimilarQuestion } from '../data/similarQuestions';
+import { SyncService, DEFAULT_PASSKEY, UserSyncPayload } from '../services/syncService';
 
 const TIMER_SECONDS = 30;
 
@@ -12,6 +14,12 @@ const getTodayString = (): string => {
   const day = String(now.getDate()).padStart(2, '0');
   return `${year}-${month}-${day}`;
 };
+
+export interface QuestionAnswerRecord {
+  selectedAnswer: AnswerChoice;
+  isCorrect: boolean;
+  timestamp: number;
+}
 
 interface QuizState {
   // Config & List
@@ -28,6 +36,16 @@ interface QuizState {
   isTimeout: boolean;
   timeLeft: number;
   timerActive: boolean;
+  answeredMap: Record<string, QuestionAnswerRecord>;
+
+  // Listening state
+  listeningAnswersMap: Record<string, { choice: string; isCorrect: boolean }>;
+
+  // Cloud Sync & Auth state
+  userPasskey: string;
+  isLoggedIn: boolean;
+  lastSyncedAt: number | null;
+  syncStatus: 'idle' | 'syncing' | 'synced' | 'error';
 
   // Session summary
   sessionCorrect: number;
@@ -44,17 +62,40 @@ interface QuizState {
   // Actions
   initSession: (mode?: StudyMode, source?: string, category?: string) => void;
   selectAnswer: (choice: AnswerChoice) => void;
+  selectAnswerForQuestion: (questionId: string, choice: AnswerChoice) => void;
+  selectListeningAnswer: (questionId: string, choice: string, isCorrect: boolean) => void;
   handleTimeout: () => void;
   nextQuestion: () => void;
+  nextPassage: () => void;
+  jumpToIndex: (index: number) => void;
   restartSession: () => void;
   setMode: (mode: StudyMode) => void;
   setSourceFilter: (source: string) => void;
   setCategoryFilter: (category: string) => void;
   tickTimer: () => void;
   setTimerActive: (active: boolean) => void;
+  reviewTimeLeft: number;
+  tickReviewTimer: () => void;
   updateTodayNotes: (notes: string) => void;
   removeMistake: (questionId: string) => void;
+
+  // Sync actions
+  loginWithPasskey: (passkey: string) => Promise<boolean>;
+  logoutPasskey: () => void;
+  syncToCloud: () => Promise<boolean>;
+  pullFromCloud: () => Promise<boolean>;
+  importFromJson: (payload: UserSyncPayload) => boolean;
 }
+
+let syncDebounceTimer: any = null;
+const scheduleAutoSync = (get: any) => {
+  const { isLoggedIn, userPasskey } = get();
+  if (!isLoggedIn || !userPasskey) return;
+  if (syncDebounceTimer) clearTimeout(syncDebounceTimer);
+  syncDebounceTimer = setTimeout(() => {
+    get().syncToCloud();
+  }, 2000);
+};
 
 export const useQuizStore = create<QuizState>()(
   persist(
@@ -71,6 +112,14 @@ export const useQuizStore = create<QuizState>()(
       isTimeout: false,
       timeLeft: TIMER_SECONDS,
       timerActive: true,
+      reviewTimeLeft: 0,
+      answeredMap: {},
+
+      listeningAnswersMap: {},
+      userPasskey: DEFAULT_PASSKEY,
+      isLoggedIn: true,
+      lastSyncedAt: null,
+      syncStatus: 'idle',
 
       sessionCorrect: 0,
       sessionWrong: 0,
@@ -130,6 +179,8 @@ export const useQuizStore = create<QuizState>()(
           isTimeout: false,
           timeLeft: isPassage ? 0 : TIMER_SECONDS,
           timerActive: !isPassage,
+          reviewTimeLeft: 0,
+          answeredMap: {},
           sessionCorrect: 0,
           sessionWrong: 0,
           currentStreak: 0,
@@ -161,13 +212,27 @@ export const useQuizStore = create<QuizState>()(
         }
       },
 
+      tickReviewTimer: () => {
+        const { reviewTimeLeft } = get();
+        if (reviewTimeLeft > 0) {
+          set({ reviewTimeLeft: reviewTimeLeft - 1 });
+        }
+      },
+
       setTimerActive: (active) => set({ timerActive: active }),
 
       selectAnswer: (choice) => {
+        const { questions, currentIndex } = get();
+        if (questions.length === 0) return;
+        const currentQ = questions[currentIndex];
+        if (!currentQ) return;
+        get().selectAnswerForQuestion(currentQ.id, choice);
+      },
+
+      selectAnswerForQuestion: (questionId, choice) => {
         const {
           questions,
           currentIndex,
-          isAnswered,
           currentStreak,
           bestStreak,
           sessionCorrect,
@@ -175,11 +240,16 @@ export const useQuizStore = create<QuizState>()(
           dailyLogs,
           savedMistakeIds,
           questionProgress,
+          answeredMap,
         } = get();
-        if (isAnswered || questions.length === 0) return;
 
-        const currentQ = questions[currentIndex];
-        const isRight = choice === currentQ.correctAnswer;
+        // If already answered, do nothing
+        if (answeredMap[questionId]) return;
+
+        const targetQ = questions.find((q) => q.id === questionId) || allQuestions.find((q) => q.id === questionId);
+        if (!targetQ) return;
+
+        const isRight = choice === targetQ.correctAnswer;
         const todayStr = getTodayString();
 
         const newStreak = isRight ? currentStreak + 1 : 0;
@@ -203,8 +273,8 @@ export const useQuizStore = create<QuizState>()(
         const newSavedMistakeIds = new Set(savedMistakeIds);
 
         // Historical question progress
-        const prevProg: QuestionProgress = questionProgress[currentQ.id] || {
-          questionId: currentQ.id,
+        const prevProg: QuestionProgress = questionProgress[targetQ.id] || {
+          questionId: targetQ.id,
           wrongCount: 0,
           correctCount: 0,
           lastAttemptDate: todayStr,
@@ -225,32 +295,45 @@ export const useQuizStore = create<QuizState>()(
 
         if (!isRight) {
           const mistakeRecord: MistakeRecord = {
-            questionId: currentQ.id,
+            questionId: targetQ.id,
             userChoice: choice,
             timestamp: Date.now(),
-            questionNum: currentQ.num,
-            questionText: currentQ.question,
-            correctAnswer: currentQ.correctAnswer,
-            tip: currentQ.tip,
+            questionNum: targetQ.num,
+            questionText: targetQ.question,
+            correctAnswer: targetQ.correctAnswer,
+            tip: targetQ.tip,
           };
           updatedMistakes.push(mistakeRecord);
-          newSavedMistakeIds.add(currentQ.id);
+          newSavedMistakeIds.add(targetQ.id);
 
-          // GENTLE RE-QUEUE: If answered wrong, re-queue this question gently a bit later in the session
-          // so the learner gets another chance to practice it!
-          const alreadyAhead = questions.slice(currentIndex + 1).some((q) => q.id === currentQ.id);
-          if (!alreadyAhead && questions.length > 1) {
-            const reInsertIdx = Math.min(currentIndex + 5, questions.length);
-            updatedQuestions = [
-              ...questions.slice(0, reInsertIdx),
-              currentQ,
-              ...questions.slice(reInsertIdx),
-            ];
+          // GENTLE RE-QUEUE for non-passage single questions
+          if (!targetQ.isPassageQuestion) {
+            const alreadyAhead = questions.slice(currentIndex + 1).some((q) => q.id === targetQ.id);
+            if (!alreadyAhead && questions.length > 1) {
+              const reInsertIdx = Math.min(currentIndex + 5, questions.length);
+              updatedQuestions = [
+                ...questions.slice(0, reInsertIdx),
+                targetQ,
+                ...questions.slice(reInsertIdx),
+              ];
+            }
           }
         } else {
-          // If answered right in wrong_only mode or practice, can remove from saved active pool
-          if (newSavedMistakeIds.has(currentQ.id)) {
-            newSavedMistakeIds.delete(currentQ.id);
+          if (newSavedMistakeIds.has(targetQ.id)) {
+            newSavedMistakeIds.delete(targetQ.id);
+          }
+
+          // CƠ CHẾ: NẾU LÀM ĐÚNG 1 CÂU -> TỰ ĐỘNG XUẤT HIỆN 1 CÂU TƯƠNG TỰ ĐỂ TIẾP TỤC LÀM
+          if (!targetQ.isSimilarClone) {
+            const similarQ = generateSimilarQuestion(targetQ);
+            const targetIdx = updatedQuestions.findIndex((q) => q.id === targetQ.id);
+            if (targetIdx !== -1) {
+              updatedQuestions = [
+                ...updatedQuestions.slice(0, targetIdx + 1),
+                similarQ,
+                ...updatedQuestions.slice(targetIdx + 1),
+              ];
+            }
           }
         }
 
@@ -263,13 +346,30 @@ export const useQuizStore = create<QuizState>()(
           lastUpdated: Date.now(),
         };
 
+        const newAnsweredMap = {
+          ...answeredMap,
+          [targetQ.id]: {
+            selectedAnswer: choice,
+            isCorrect: isRight,
+            timestamp: Date.now(),
+          },
+        };
+
+        const currentQ = questions[currentIndex];
+        const isCurrentQ = currentQ && currentQ.id === targetQ.id;
+
         set({
           questions: updatedQuestions,
-          selectedAnswer: choice,
-          isAnswered: true,
-          isCorrect: isRight,
-          isTimeout: false,
-          timerActive: false,
+          answeredMap: newAnsweredMap,
+          reviewTimeLeft: 9, // Minimum 9 seconds mandatory review cooldown
+          ...(isCurrentQ
+            ? {
+                selectedAnswer: choice,
+                isAnswered: true,
+                isCorrect: isRight,
+                timerActive: false,
+              }
+            : {}),
           currentStreak: newStreak,
           bestStreak: newBestStreak,
           sessionCorrect: newCorrect,
@@ -277,13 +377,15 @@ export const useQuizStore = create<QuizState>()(
           savedMistakeIds: Array.from(newSavedMistakeIds),
           questionProgress: {
             ...questionProgress,
-            [currentQ.id]: updatedProgress,
+            [targetQ.id]: updatedProgress,
           },
           dailyLogs: {
             ...dailyLogs,
             [todayStr]: updatedLog,
           },
         });
+
+        scheduleAutoSync(get);
       },
 
       handleTimeout: () => {
@@ -370,6 +472,7 @@ export const useQuizStore = create<QuizState>()(
           isTimeout: true,
           timeLeft: 0,
           timerActive: false,
+          reviewTimeLeft: 9, // Minimum 9 seconds mandatory review cooldown
           currentStreak: 0,
           sessionWrong: sessionWrong + 1,
           savedMistakeIds: Array.from(newSavedMistakeIds),
@@ -385,22 +488,80 @@ export const useQuizStore = create<QuizState>()(
       },
 
       nextQuestion: () => {
-        const { questions, currentIndex } = get();
+        const { questions, currentIndex, answeredMap, reviewTimeLeft } = get();
+        // Mandatory 9 seconds cooldown to read tip before moving to next question
+        if (reviewTimeLeft > 0) return;
+
         if (currentIndex + 1 >= questions.length) {
-          set({ isFinished: true, timerActive: false });
+          set({ isFinished: true, timerActive: false, reviewTimeLeft: 0 });
         } else {
           const nextQ = questions[currentIndex + 1];
           const isPassage = nextQ?.isPassageQuestion === true;
+          const ans = answeredMap[nextQ.id];
           set({
             currentIndex: currentIndex + 1,
-            selectedAnswer: null,
-            isAnswered: false,
-            isCorrect: false,
+            selectedAnswer: ans?.selectedAnswer ?? null,
+            isAnswered: Boolean(ans),
+            isCorrect: ans?.isCorrect ?? false,
             isTimeout: false,
             timeLeft: isPassage ? 0 : TIMER_SECONDS,
-            timerActive: !isPassage,
+            timerActive: !isPassage && !ans,
+            reviewTimeLeft: 0,
           });
         }
+      },
+
+      nextPassage: () => {
+        const { questions, currentIndex, answeredMap, reviewTimeLeft } = get();
+        if (reviewTimeLeft > 0) return;
+        const currentQ = questions[currentIndex];
+        if (!currentQ) return;
+        const currentPassageId = currentQ.passageId || currentQ.passageInfo?.id;
+
+        let nextIdx = currentIndex + 1;
+        while (
+          nextIdx < questions.length &&
+          ((questions[nextIdx].passageId && questions[nextIdx].passageId === currentPassageId) ||
+           (questions[nextIdx].passageInfo?.id === currentPassageId))
+        ) {
+          nextIdx++;
+        }
+
+        if (nextIdx >= questions.length) {
+          set({ isFinished: true, timerActive: false, reviewTimeLeft: 0 });
+        } else {
+          const nextQ = questions[nextIdx];
+          const isPassage = nextQ?.isPassageQuestion === true;
+          const ans = answeredMap[nextQ.id];
+          set({
+            currentIndex: nextIdx,
+            selectedAnswer: ans?.selectedAnswer ?? null,
+            isAnswered: Boolean(ans),
+            isCorrect: ans?.isCorrect ?? false,
+            isTimeout: false,
+            timeLeft: isPassage ? 0 : TIMER_SECONDS,
+            timerActive: !isPassage && !ans,
+            reviewTimeLeft: 0,
+          });
+        }
+      },
+
+      jumpToIndex: (index: number) => {
+        const { questions, answeredMap } = get();
+        if (index < 0 || index >= questions.length) return;
+        const targetQ = questions[index];
+        const isPassage = targetQ?.isPassageQuestion === true;
+        const ans = answeredMap[targetQ.id];
+        set({
+          currentIndex: index,
+          selectedAnswer: ans?.selectedAnswer ?? null,
+          isAnswered: Boolean(ans),
+          isCorrect: ans?.isCorrect ?? false,
+          isTimeout: false,
+          timeLeft: isPassage ? 0 : TIMER_SECONDS,
+          timerActive: !isPassage && !ans,
+          reviewTimeLeft: 0,
+        });
       },
 
       restartSession: () => {
@@ -439,6 +600,123 @@ export const useQuizStore = create<QuizState>()(
           savedMistakeIds: savedMistakeIds.filter((id) => id !== questionId),
         });
       },
+
+      selectListeningAnswer: (questionId: string, choice: string, isCorrect: boolean) => {
+        const { listeningAnswersMap } = get();
+        const updated = {
+          ...listeningAnswersMap,
+          [questionId]: { choice, isCorrect },
+        };
+        set({ listeningAnswersMap: updated });
+        scheduleAutoSync(get);
+      },
+
+      loginWithPasskey: async (passkey: string) => {
+        const clean = passkey.trim();
+        if (!clean) return false;
+        set({ userPasskey: clean, isLoggedIn: true });
+        return await get().pullFromCloud();
+      },
+
+      logoutPasskey: () => {
+        set({ isLoggedIn: false });
+      },
+
+      syncToCloud: async () => {
+        const state = get();
+        const passkey = state.userPasskey || DEFAULT_PASSKEY;
+        if (!passkey) return false;
+
+        set({ syncStatus: 'syncing' });
+        const payload: UserSyncPayload = {
+          passkey,
+          version: 1,
+          lastUpdated: Date.now(),
+          answeredMap: state.answeredMap,
+          listeningAnswersMap: state.listeningAnswersMap,
+          savedMistakeIds: state.savedMistakeIds,
+          questionProgress: state.questionProgress,
+          dailyLogs: state.dailyLogs,
+          bestStreak: state.bestStreak,
+        };
+
+        const res = await SyncService.saveToCloud(payload);
+        if (res.success) {
+          set({ syncStatus: 'synced', lastSyncedAt: Date.now() });
+          return true;
+        } else {
+          set({ syncStatus: 'error' });
+          return false;
+        }
+      },
+
+      pullFromCloud: async () => {
+        const state = get();
+        const passkey = state.userPasskey || DEFAULT_PASSKEY;
+        if (!passkey) return false;
+
+        set({ syncStatus: 'syncing' });
+        const res = await SyncService.loadFromCloud(passkey);
+        if (res.success && res.data) {
+          const localPayload: UserSyncPayload = {
+            passkey,
+            version: 1,
+            lastUpdated: state.lastSyncedAt || 0,
+            answeredMap: state.answeredMap,
+            listeningAnswersMap: state.listeningAnswersMap,
+            savedMistakeIds: state.savedMistakeIds,
+            questionProgress: state.questionProgress,
+            dailyLogs: state.dailyLogs,
+            bestStreak: state.bestStreak,
+          };
+          const merged = SyncService.smartMerge(localPayload, res.data);
+          set({
+            answeredMap: merged.answeredMap,
+            listeningAnswersMap: merged.listeningAnswersMap,
+            savedMistakeIds: merged.savedMistakeIds,
+            questionProgress: merged.questionProgress,
+            dailyLogs: merged.dailyLogs,
+            bestStreak: merged.bestStreak,
+            syncStatus: 'synced',
+            lastSyncedAt: Date.now(),
+          });
+          return true;
+        } else {
+          set({ syncStatus: 'error' });
+          return false;
+        }
+      },
+
+      importFromJson: (payload: UserSyncPayload) => {
+        if (!payload || typeof payload !== 'object') return false;
+        const state = get();
+        const localPayload: UserSyncPayload = {
+          passkey: state.userPasskey || DEFAULT_PASSKEY,
+          version: 1,
+          lastUpdated: state.lastSyncedAt || 0,
+          answeredMap: state.answeredMap,
+          listeningAnswersMap: state.listeningAnswersMap,
+          savedMistakeIds: state.savedMistakeIds,
+          questionProgress: state.questionProgress,
+          dailyLogs: state.dailyLogs,
+          bestStreak: state.bestStreak,
+        };
+        const merged = SyncService.smartMerge(localPayload, payload);
+        set({
+          answeredMap: merged.answeredMap,
+          listeningAnswersMap: merged.listeningAnswersMap,
+          savedMistakeIds: merged.savedMistakeIds,
+          questionProgress: merged.questionProgress,
+          dailyLogs: merged.dailyLogs,
+          bestStreak: merged.bestStreak,
+          userPasskey: merged.passkey || state.userPasskey,
+          isLoggedIn: true,
+          lastSyncedAt: Date.now(),
+          syncStatus: 'synced',
+        });
+        get().syncToCloud();
+        return true;
+      },
     }),
     {
       name: 'toeic-quiz-storage',
@@ -447,9 +725,14 @@ export const useQuizStore = create<QuizState>()(
         dailyLogs: state.dailyLogs,
         savedMistakeIds: state.savedMistakeIds,
         questionProgress: state.questionProgress,
+        answeredMap: state.answeredMap,
+        listeningAnswersMap: state.listeningAnswersMap,
         bestStreak: state.bestStreak,
         mode: state.mode,
         sourceFilter: state.sourceFilter,
+        userPasskey: state.userPasskey,
+        isLoggedIn: state.isLoggedIn,
+        lastSyncedAt: state.lastSyncedAt,
       }),
     }
   )

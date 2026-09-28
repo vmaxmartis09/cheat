@@ -1,4 +1,4 @@
-import { getSupabaseClient } from './supabaseClient';
+import { getSupabaseClient, createCustomSupabaseClient } from './supabaseClient';
 import { DailyLog, QuestionProgress, StudyMode } from '../types';
 import { QuestionAnswerRecord } from '../store/useQuizStore';
 
@@ -30,6 +30,60 @@ export interface UserSyncPayload {
 }
 
 export class SyncService {
+  /**
+   * Test connection to Supabase and check if toeic_sync table is ready
+   */
+  public static async testSupabaseConnection(url?: string, key?: string): Promise<{
+    success: boolean;
+    tableReady: boolean;
+    message: string;
+    details?: string;
+  }> {
+    let client = url && key ? createCustomSupabaseClient(url, key) : getSupabaseClient();
+    if (!client) {
+      return {
+        success: false,
+        tableReady: false,
+        message: 'Chưa có cấu hình Supabase URL và Public Anon Key hợp lệ.',
+      };
+    }
+
+    try {
+      const { error } = await client
+        .from('toeic_sync')
+        .select('passkey, updated_at')
+        .limit(1);
+
+      if (error) {
+        if (error.code === '42P01' || error.message?.includes('does not exist')) {
+          return {
+            success: true,
+            tableReady: false,
+            message: 'Đã kết nối được tới Supabase! Nhưng bạn cần chạy đoạn mã SQL bên dưới để tạo bảng "toeic_sync".',
+            details: error.message,
+          };
+        }
+        return {
+          success: false,
+          tableReady: false,
+          message: `Lỗi truy vấn Supabase: ${error.message}`,
+          details: error.details,
+        };
+      }
+
+      return {
+        success: true,
+        tableReady: true,
+        message: 'Kết nối Supabase thành công! Bảng "toeic_sync" đã sẵn sàng lưu kết quả học tập.',
+      };
+    } catch (err: any) {
+      return {
+        success: false,
+        tableReady: false,
+        message: err.message || 'Lỗi mạng khi kết nối tới Supabase.',
+      };
+    }
+  }
   /**
    * Get or register a cloud sync object ID for a given passkey
    */

@@ -28,6 +28,7 @@ export const LoginSyncModal: React.FC<LoginSyncModalProps> = ({ isOpen, onClose 
     userPasskey,
     isLoggedIn,
     syncStatus,
+    syncMethod,
     lastSyncedAt,
     loginWithPasskey,
     logoutPasskey,
@@ -45,6 +46,8 @@ export const LoginSyncModal: React.FC<LoginSyncModalProps> = ({ isOpen, onClose 
   const [activeTab, setActiveTab] = useState<'passkey' | 'supabase' | 'backup'>('passkey');
   const [passkeyInput, setPasskeyInput] = useState<string>(userPasskey || DEFAULT_PASSKEY);
   const [actionLoading, setActionLoading] = useState<boolean>(false);
+  const [testingSb, setTestingSb] = useState<boolean>(false);
+  const [sbStatus, setSbStatus] = useState<{ success: boolean; message: string; tableReady?: boolean; details?: string } | null>(null);
   const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
 
   // Supabase state
@@ -57,7 +60,7 @@ export const LoginSyncModal: React.FC<LoginSyncModalProps> = ({ isOpen, onClose 
 
   const showMsg = (text: string, type: 'success' | 'error' = 'success') => {
     setMessage({ type, text });
-    setTimeout(() => setMessage(null), 4000);
+    setTimeout(() => setMessage(null), 5000);
   };
 
   const handleLogin = async () => {
@@ -108,9 +111,45 @@ export const LoginSyncModal: React.FC<LoginSyncModalProps> = ({ isOpen, onClose 
     }
   };
 
-  const handleSaveSupabase = () => {
+  const handleTestSupabase = async () => {
+    if (!sbUrl.trim() || !sbKey.trim()) {
+      showMsg('Vui lòng nhập đầy đủ Supabase Project URL và Public Anon Key.', 'error');
+      return;
+    }
+    setTestingSb(true);
+    setSbStatus(null);
+    try {
+      const res = await SyncService.testSupabaseConnection(sbUrl.trim(), sbKey.trim());
+      setSbStatus(res);
+      if (res.success && res.tableReady) {
+        showMsg('Kết nối Supabase hoàn hảo! Đã tìm thấy bảng "toeic_sync".', 'success');
+      } else if (res.success && !res.tableReady) {
+        showMsg('Đã kết nối Supabase, hãy chạy mã SQL tạo bảng bên dưới.', 'error');
+      } else {
+        showMsg(res.message, 'error');
+      }
+    } finally {
+      setTestingSb(false);
+    }
+  };
+
+  const handleSaveSupabase = async () => {
+    if (!sbUrl.trim() || !sbKey.trim()) {
+      showMsg('Vui lòng nhập đầy đủ Supabase Project URL và Public Anon Key.', 'error');
+      return;
+    }
     saveSupabaseConfig(sbUrl, sbKey);
-    showMsg('Đã lưu cấu hình Supabase! Hệ thống sẽ ưu tiên lưu vào bảng "toeic_sync".', 'success');
+    setActionLoading(true);
+    try {
+      const ok = await syncToCloud();
+      if (ok) {
+        showMsg('Đã lưu cấu hình Supabase và đồng bộ toàn bộ tiến trình học tập lên Supabase thành công!', 'success');
+      } else {
+        showMsg('Đã lưu cấu hình Supabase. Vui lòng kiểm tra quyền ghi bảng toeic_sync.', 'error');
+      }
+    } finally {
+      setActionLoading(false);
+    }
   };
 
   const handleExport = () => {
@@ -160,6 +199,7 @@ create table if not exists toeic_sync (
 
 alter table toeic_sync enable row level security;
 
+drop policy if exists "Allow all public" on toeic_sync;
 create policy "Allow all public" on toeic_sync
   for all using (true) with check (true);`;
     navigator.clipboard.writeText(sql);
@@ -271,8 +311,12 @@ create policy "Allow all public" on toeic_sync
                     </div>
                   </div>
                 </div>
-                <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">
-                  {syncStatus === 'syncing' ? 'Đang đồng bộ...' : 'Sẵn sàng'}
+                <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold border ${
+                  syncMethod === 'supabase'
+                    ? 'bg-emerald-100 text-emerald-800 border-emerald-300'
+                    : 'bg-amber-100 text-amber-800 border-amber-300'
+                }`}>
+                  {syncStatus === 'syncing' ? 'Đang đồng bộ...' : syncMethod === 'supabase' ? '⚡ Supabase Cloud' : 'Cloud Sync'}
                 </span>
               </div>
 
@@ -399,8 +443,21 @@ create policy "Allow all public" on toeic_sync
           {/* TAB 2: SUPABASE */}
           {activeTab === 'supabase' && (
             <div className="space-y-4 text-xs">
-              <div className="bg-amber-50/60 p-3 rounded-xl border border-amber-200/80 text-[#3A3228] leading-relaxed">
-                Hệ thống tự động sử dụng Cloud Sync với Passkey <strong>vmax0109</strong>. Nếu bạn muốn lưu trực tiếp vào cơ sở dữ liệu Supabase riêng của bạn, hãy nhập thông tin bên dưới:
+              <div className={`p-3 rounded-xl border leading-relaxed ${
+                syncMethod === 'supabase'
+                  ? 'bg-emerald-50 border-emerald-200 text-emerald-950 font-medium'
+                  : 'bg-amber-50/60 border-amber-200/80 text-[#3A3228]'
+              }`}>
+                {syncMethod === 'supabase' ? (
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <span>Hệ thống đang kết nối trực tiếp và lưu dữ liệu vào cơ sở dữ liệu Supabase của bạn!</span>
+                  </div>
+                ) : (
+                  <span>
+                    Kết nối cơ sở dữ liệu Supabase để toàn bộ câu trả lời, đáp án và vị trí câu đang làm dở của bạn được lưu trữ vĩnh viễn trên Supabase Cloud và tự động tiếp tục học ở bất cứ đâu.
+                  </span>
+                )}
               </div>
 
               <div className="space-y-3">
@@ -430,12 +487,54 @@ create policy "Allow all public" on toeic_sync
                   />
                 </div>
 
-                <button
-                  onClick={handleSaveSupabase}
-                  className="w-full py-2 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs transition cursor-pointer shadow-2xs"
-                >
-                  Lưu Cấu Hình Supabase
-                </button>
+                {sbStatus && (
+                  <div className={`p-2.5 rounded-xl border text-[11px] leading-relaxed flex items-start gap-2 ${
+                    sbStatus.success && sbStatus.tableReady
+                      ? 'bg-emerald-50 text-emerald-900 border-emerald-200'
+                      : 'bg-amber-50 text-amber-900 border-amber-200'
+                  }`}>
+                    {sbStatus.success && sbStatus.tableReady ? (
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                    ) : (
+                      <AlertCircle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                    )}
+                    <div>
+                      <p className="font-bold">{sbStatus.message}</p>
+                      {sbStatus.details && <p className="text-[10px] opacity-80 mt-0.5">{sbStatus.details}</p>}
+                    </div>
+                  </div>
+                )}
+
+                <div className="flex gap-2">
+                  <button
+                    onClick={handleTestSupabase}
+                    disabled={testingSb || actionLoading}
+                    className="flex-1 py-2 rounded-xl bg-white border border-[#DCD3C7] hover:bg-gray-50 text-[#262320] font-bold text-xs transition cursor-pointer disabled:opacity-50 shadow-2xs"
+                  >
+                    {testingSb ? 'Đang kiểm tra...' : 'Kiểm tra kết nối'}
+                  </button>
+                  <button
+                    onClick={handleSaveSupabase}
+                    disabled={actionLoading}
+                    className="flex-1 py-2 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs transition cursor-pointer disabled:opacity-50 shadow-2xs"
+                  >
+                    {actionLoading ? 'Đang lưu...' : 'Lưu & Đồng bộ ngay'}
+                  </button>
+                </div>
+              </div>
+
+              {/* Vercel Environment Variables Guide */}
+              <div className="p-3 rounded-xl bg-sky-50 border border-sky-200 text-[#1A365D] space-y-1.5">
+                <div className="font-bold flex items-center gap-1.5 text-xs text-sky-900">
+                  <span>🚀 Khi Deploy lên Vercel:</span>
+                </div>
+                <p className="text-[11px] leading-relaxed">
+                  Để điện thoại và mọi máy tính khác khi mở Vercel <strong>tự động nhận diện Supabase mà không cần dán key</strong>, hãy thêm 2 biến này vào <strong>Vercel Settings → Environment Variables</strong>:
+                </p>
+                <div className="bg-white/90 p-2 rounded-lg font-mono text-[10px] space-y-1 border border-sky-200">
+                  <div><strong className="text-sky-900">VITE_SUPABASE_URL</strong> = <code>{sbUrl || 'https://your-project.supabase.co'}</code></div>
+                  <div><strong className="text-sky-900">VITE_SUPABASE_ANON_KEY</strong> = <code>{sbKey ? 'eyJ...' : 'your-anon-key'}</code></div>
+                </div>
               </div>
 
               {/* SQL Setup Instruction */}
@@ -459,6 +558,7 @@ create policy "Allow all public" on toeic_sync
 
 alter table toeic_sync enable row level security;
 
+drop policy if exists "Allow all public" on toeic_sync;
 create policy "Allow all public" on toeic_sync
   for all using (true) with check (true);`}
                 </pre>

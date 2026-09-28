@@ -32,6 +32,16 @@ export const saveSupabaseConfig = (url: string, key: string) => {
   }
 };
 
+export const createCustomSupabaseClient = (url: string, key: string): SupabaseClient | null => {
+  if (!url || !key) return null;
+  try {
+    return createClient(url.trim(), key.trim());
+  } catch (err) {
+    console.error('Failed to initialize custom Supabase client:', err);
+    return null;
+  }
+};
+
 let cachedClient: SupabaseClient | null = null;
 let lastUsedUrl = '';
 let lastUsedKey = '';

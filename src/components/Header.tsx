@@ -8,6 +8,7 @@ import {
   AlertCircle,
   Headphones,
   Cloud,
+  Database,
 } from 'lucide-react';
 
 interface HeaderProps {
@@ -34,6 +35,7 @@ export const Header: React.FC<HeaderProps> = ({
     userPasskey,
     isLoggedIn,
     syncStatus,
+    syncMethod,
   } = useQuizStore();
 
   const currentQ = questions[currentIndex];
@@ -161,21 +163,25 @@ export const Header: React.FC<HeaderProps> = ({
         <button
           onClick={onOpenSyncModal}
           className="flex items-center gap-1.5 px-2 py-1 rounded-lg bg-white border border-[#E8DFD3] hover:border-amber-400 text-xs font-bold text-[#4A4238] shadow-2xs transition cursor-pointer"
-          title="Đồng bộ tiến trình đa thiết bị (Passkey: vmax0109)"
+          title={syncMethod === 'supabase' ? 'Đang lưu trực tiếp vào Supabase' : 'Đồng bộ tiến trình đa thiết bị (Passkey: vmax0109)'}
         >
-          <Cloud
-            className={`w-3.5 h-3.5 ${
-              syncStatus === 'syncing'
-                ? 'text-amber-600 animate-spin'
-                : syncStatus === 'synced'
-                ? 'text-emerald-600'
-                : syncStatus === 'error'
-                ? 'text-rose-600'
-                : 'text-amber-700'
-            }`}
-          />
+          {syncMethod === 'supabase' ? (
+            <Database className="w-3.5 h-3.5 text-emerald-600" />
+          ) : (
+            <Cloud
+              className={`w-3.5 h-3.5 ${
+                syncStatus === 'syncing'
+                  ? 'text-amber-600 animate-spin'
+                  : syncStatus === 'synced'
+                  ? 'text-emerald-600'
+                  : syncStatus === 'error'
+                  ? 'text-rose-600'
+                  : 'text-amber-700'
+              }`}
+            />
+          )}
           <span className="hidden sm:inline font-mono text-[11px] text-[#262320]">
-            {isLoggedIn ? userPasskey || 'vmax0109' : 'Đồng bộ'}
+            {syncMethod === 'supabase' ? 'Supabase' : isLoggedIn ? userPasskey || 'vmax0109' : 'Đồng bộ'}
           </span>
           <span
             className={`w-1.5 h-1.5 rounded-full ${

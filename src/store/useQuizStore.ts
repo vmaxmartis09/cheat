@@ -47,6 +47,7 @@ interface QuizState {
   isLoggedIn: boolean;
   lastSyncedAt: number | null;
   syncStatus: 'idle' | 'syncing' | 'synced' | 'error';
+  syncMethod: 'idle' | 'supabase' | 'cloud_kv' | 'error';
 
   // Session summary
   sessionCorrect: number;
@@ -134,6 +135,7 @@ export const useQuizStore = create<QuizState>()(
       isLoggedIn: true,
       lastSyncedAt: null,
       syncStatus: 'idle',
+      syncMethod: 'idle',
 
       sessionCorrect: 0,
       sessionWrong: 0,
@@ -595,6 +597,7 @@ export const useQuizStore = create<QuizState>()(
             timerActive: !isPassage && !ans,
             reviewTimeLeft: 0,
           });
+          scheduleAutoSync(get);
         }
       },
 
@@ -630,6 +633,7 @@ export const useQuizStore = create<QuizState>()(
             timerActive: !isPassage && !ans,
             reviewTimeLeft: 0,
           });
+          scheduleAutoSync(get);
         }
       },
 
@@ -649,6 +653,7 @@ export const useQuizStore = create<QuizState>()(
           timerActive: !isPassage && !ans,
           reviewTimeLeft: 0,
         });
+        scheduleAutoSync(get);
       },
 
       restartSession: () => {
@@ -736,7 +741,11 @@ export const useQuizStore = create<QuizState>()(
 
         const res = await SyncService.saveToCloud(payload);
         if (res.success) {
-          set({ syncStatus: 'synced', lastSyncedAt: Date.now() });
+          set({
+            syncStatus: 'synced',
+            syncMethod: res.method as any,
+            lastSyncedAt: Date.now(),
+          });
           return true;
         } else {
           set({ syncStatus: 'error' });
@@ -786,6 +795,7 @@ export const useQuizStore = create<QuizState>()(
             dailyLogs: merged.dailyLogs,
             bestStreak: merged.bestStreak,
             syncStatus: 'synced',
+            syncMethod: res.method as any,
             lastSyncedAt: Date.now(),
           });
           get().initSession(merged.mode, merged.sourceFilter, merged.categoryFilter, true);

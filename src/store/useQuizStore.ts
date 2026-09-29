@@ -454,7 +454,7 @@ export const useQuizStore = create<QuizState>()(
         set({
           questions: updatedQuestions,
           answeredMap: newAnsweredMap,
-          reviewTimeLeft: 9, // Minimum 9 seconds mandatory review cooldown
+          reviewTimeLeft: 5, // Minimum 5 seconds mandatory review cooldown
           ...(isCurrentQ
             ? {
                 selectedAnswer: choice,
@@ -565,7 +565,7 @@ export const useQuizStore = create<QuizState>()(
           isTimeout: true,
           timeLeft: 0,
           timerActive: false,
-          reviewTimeLeft: 9, // Minimum 9 seconds mandatory review cooldown
+          reviewTimeLeft: 5, // Minimum 5 seconds mandatory review cooldown
           currentStreak: 0,
           sessionWrong: sessionWrong + 1,
           savedMistakeIds: Array.from(newSavedMistakeIds),

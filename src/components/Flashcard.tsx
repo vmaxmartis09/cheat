@@ -403,14 +403,14 @@ export const Flashcard: React.FC = () => {
                   <div className="w-full h-1.5 bg-amber-200/70 rounded-full overflow-hidden">
                     <div
                       className="h-full bg-amber-600 rounded-full transition-all duration-1000 ease-linear shadow-xs"
-                      style={{ width: `${((9 - reviewTimeLeft) / 9) * 100}%` }}
+                      style={{ width: `${((5 - reviewTimeLeft) / 5) * 100}%` }}
                     />
                   </div>
                 </div>
               ) : (
                 <div className="text-center text-xs font-semibold text-emerald-700 py-0.5 flex items-center justify-center gap-1 animate-pulse">
                   <Check className="w-3.5 h-3.5 stroke-[3]" />
-                  <span>Đã hết thời gian chờ 9s — Bạn đã sẵn sàng sang câu tiếp theo!</span>
+                  <span>Đã hết thời gian chờ 5s — Bạn đã sẵn sàng sang câu tiếp theo!</span>
                 </div>
               )}
 

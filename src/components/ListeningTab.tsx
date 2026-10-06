@@ -24,6 +24,7 @@ import {
   Flame,
   X,
   Maximize2,
+  RotateCcw,
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
@@ -32,6 +33,7 @@ export const ListeningTab: React.FC = () => {
   const {
     listeningAnswersMap,
     selectListeningAnswer,
+    resetListeningAnswer,
     listeningCurrentIndex: currentIdx,
     setListeningCurrentIndex: setCurrentIdx,
     listeningSelectedPart: selectedPart,
@@ -535,11 +537,21 @@ export const ListeningTab: React.FC = () => {
                   </button>
 
                   {currentAnswerRecord && (
-                    <span className={`text-xs font-bold flex items-center gap-1 ${
-                      currentAnswerRecord.isCorrect ? 'text-emerald-700' : 'text-rose-700'
-                    }`}>
-                      {currentAnswerRecord.isCorrect ? '✓ Chọn Chính Xác!' : '✗ Chưa Đúng!'}
-                    </span>
+                    <div className="flex items-center gap-2">
+                      <span className={`text-xs font-bold flex items-center gap-1 ${
+                        currentAnswerRecord.isCorrect ? 'text-emerald-700' : 'text-rose-700'
+                      }`}>
+                        {currentAnswerRecord.isCorrect ? '✓ Chọn Chính Xác!' : '✗ Chưa Đúng!'}
+                      </span>
+                      <button
+                        onClick={() => resetListeningAnswer(currentQ.id)}
+                        className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-white border border-[#DCD3C7] hover:bg-amber-50 text-[11px] font-bold text-[#4A4238] transition cursor-pointer shadow-2xs"
+                        title="Tải lại câu này để chọn lại đáp án"
+                      >
+                        <RotateCcw className="w-3 h-3 text-amber-700" />
+                        <span>Làm lại</span>
+                      </button>
+                    </div>
                   )}
                 </div>
 

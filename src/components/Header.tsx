@@ -12,7 +12,7 @@ import {
 } from 'lucide-react';
 
 interface HeaderProps {
-  activeTab: 'practice' | 'listening' | 'results';
+  activeTab: 'practice' | 'listening' | 'results' | 'search';
   onSwitchToPracticeAll: () => void;
   onOpenSyncModal: () => void;
 }
@@ -74,10 +74,24 @@ export const Header: React.FC<HeaderProps> = ({
                   <option value="Docs 2 - Chuyên đề Tips">Docs 2: Chuyên đề & Rèn Tips (34 câu)</option>
                   <option value="Docs 2 - Part 5 All">Docs 2: Toàn bộ Part 5 (66 câu)</option>
                   <option value="Docs 2 - Part 6 All">Docs 2: Toàn bộ Part 6 (44 câu)</option>
-                  <option value="Docs 2 - Part 7 All">Docs 2: Toàn bộ Part 7 (124 câu)</option>
+                </optgroup>
+                <optgroup label="🔥 GIAI ĐOẠN 3: DOCS 3 (ĐỀ THI TMA ONLINE & HACKERS)">
+                  <option value="stage_3">🔥 Trọn bộ Docs 3 (Tất cả 81 câu Reading)</option>
+                  <option value="Docs 3 - Đề TMA Online Full">Docs 3: Đề TMA Online Full (70 câu)</option>
+                  <option value="Docs 3 - Đề TMA Online Part 5">Docs 3: TMA Online Part 5 (28 câu)</option>
+                  <option value="Docs 3 - Đề TMA Online Part 6">Docs 3: TMA Online Part 6 (16 câu)</option>
+                  <option value="Docs 3 - Đề TMA Online Part 7">Docs 3: TMA Online Part 7 (26 câu)</option>
+                  <option value="Docs 3 - Hackers Reading">Docs 3: Hackers Reading (11 câu)</option>
+                </optgroup>
+                <optgroup label="💎 GIAI ĐOẠN 4: DOCS 4 (HACKER TOEIC 3 & 2)">
+                  <option value="stage_4">💎 Trọn bộ Docs 4 (Hacker 3 Test 1 - 100 câu)</option>
+                  <option value="Docs 4 - Hacker 3 Test 1 Full">Docs 4: Hacker 3 Test 1 Full (100 câu)</option>
+                  <option value="Docs 4 - Hacker 3 Test 1 Part 5">Docs 4: Hacker 3 Test 1 Part 5 (30 câu)</option>
+                  <option value="Docs 4 - Hacker 3 Test 1 Part 6">Docs 4: Hacker 3 Test 1 Part 6 (16 câu)</option>
+                  <option value="Docs 4 - Hacker 3 Test 1 Part 7">Docs 4: Hacker 3 Test 1 Part 7 (54 câu)</option>
                 </optgroup>
                 <optgroup label="📚 TOÀN BỘ KHO ĐỀ">
-                  <option value="all_both_stages">Tất cả đề Docs 1 & Docs 2 (385 câu)</option>
+                  <option value="all_both_stages">Tất cả đề Docs 1, Docs 2, Docs 3 & Docs 4 (566 câu)</option>
                 </optgroup>
               </select>
               <Layers className="w-2.5 h-2.5 text-[#8C8276] absolute right-1.5 top-1/2 -translate-y-1/2 pointer-events-none" />

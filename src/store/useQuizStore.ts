@@ -7,6 +7,7 @@ import { generateSimilarQuestion } from '../data/similarQuestions';
 import { SyncService, DEFAULT_PASSKEY, UserSyncPayload } from '../services/syncService';
 
 const TIMER_SECONDS = 30;
+const REVIEW_COOLDOWN_SECONDS = 2;
 
 const getTodayString = (): string => {
   const now = new Date();
@@ -63,8 +64,8 @@ interface QuizState {
   savedMistakeIds: string[]; // pool of all wrong questions across time
   questionProgress: Record<string, QuestionProgress>; // historical mistake and correct count per question
   // Active Navigation & Curriculum state
-  activeTab: 'practice' | 'listening' | 'results';
-  setActiveTab: (tab: 'practice' | 'listening' | 'results') => void;
+  activeTab: 'practice' | 'listening' | 'results' | 'search';
+  setActiveTab: (tab: 'practice' | 'listening' | 'results' | 'search') => void;
   listeningCurrentIndex: number;
   setListeningCurrentIndex: (idx: number) => void;
   listeningSelectedPart: number | 'all';
@@ -90,6 +91,8 @@ interface QuizState {
   tickReviewTimer: () => void;
   updateTodayNotes: (notes: string) => void;
   removeMistake: (questionId: string) => void;
+  retakeQuestion: (questionId?: string) => void;
+  resetListeningAnswer: (questionId: string) => void;
 
   // Sync actions
   loginWithPasskey: (passkey: string) => Promise<boolean>;
@@ -242,23 +245,30 @@ export const useQuizStore = create<QuizState>()(
           filtered = [...filtered].sort((a, b) => a.num - b.num);
         }
 
+        const freshAnsweredMap = { ...state.answeredMap };
+        if (mode === 'wrong_only' || mode === 'repeat_difficult') {
+          filtered.forEach((q) => {
+            delete freshAnsweredMap[q.id];
+          });
+        }
+
         let targetIdx = 0;
         if (preserveIndex && state.currentIndex >= 0 && state.currentIndex < filtered.length) {
           targetIdx = state.currentIndex;
         } else if (overrideSource === undefined && overrideMode === undefined) {
           // On normal load/restore: resume at last active index or find first unanswered question
           const lastIdx = state.currentIndex;
-          if (lastIdx >= 0 && lastIdx < filtered.length && !state.answeredMap[filtered[lastIdx]?.id]) {
+          if (lastIdx >= 0 && lastIdx < filtered.length && !freshAnsweredMap[filtered[lastIdx]?.id]) {
             targetIdx = lastIdx;
           } else {
-            const firstUnanswered = filtered.findIndex((q) => !state.answeredMap[q.id]);
+            const firstUnanswered = filtered.findIndex((q) => !freshAnsweredMap[q.id]);
             targetIdx = firstUnanswered !== -1 ? firstUnanswered : Math.min(Math.max(0, lastIdx), filtered.length - 1);
           }
         }
 
         const currentTargetQ = filtered[targetIdx] || filtered[0];
         const isPassage = currentTargetQ?.isPassageQuestion === true;
-        const ans = currentTargetQ ? state.answeredMap[currentTargetQ.id] : undefined;
+        const ans = currentTargetQ ? freshAnsweredMap[currentTargetQ.id] : undefined;
 
         set({
           questions: filtered,
@@ -266,6 +276,7 @@ export const useQuizStore = create<QuizState>()(
           mode,
           sourceFilter: source,
           categoryFilter: category,
+          answeredMap: freshAnsweredMap,
           selectedAnswer: ans?.selectedAnswer ?? null,
           isAnswered: Boolean(ans),
           isCorrect: ans?.isCorrect ?? false,
@@ -273,7 +284,6 @@ export const useQuizStore = create<QuizState>()(
           timeLeft: isPassage ? 0 : TIMER_SECONDS,
           timerActive: !isPassage && !ans,
           reviewTimeLeft: 0,
-          // DO NOT WIPE answeredMap! Keep all existing answers intact!
           isFinished: false,
         });
       },
@@ -454,7 +464,7 @@ export const useQuizStore = create<QuizState>()(
         set({
           questions: updatedQuestions,
           answeredMap: newAnsweredMap,
-          reviewTimeLeft: 5, // Minimum 5 seconds mandatory review cooldown
+          reviewTimeLeft: REVIEW_COOLDOWN_SECONDS,
           ...(isCurrentQ
             ? {
                 selectedAnswer: choice,
@@ -565,7 +575,7 @@ export const useQuizStore = create<QuizState>()(
           isTimeout: true,
           timeLeft: 0,
           timerActive: false,
-          reviewTimeLeft: 5, // Minimum 5 seconds mandatory review cooldown
+          reviewTimeLeft: REVIEW_COOLDOWN_SECONDS,
           currentStreak: 0,
           sessionWrong: sessionWrong + 1,
           savedMistakeIds: Array.from(newSavedMistakeIds),
@@ -582,7 +592,7 @@ export const useQuizStore = create<QuizState>()(
 
       nextQuestion: () => {
         const { questions, currentIndex, answeredMap, reviewTimeLeft } = get();
-        // Mandatory 9 seconds cooldown to read tip before moving to next question
+        // Mandatory cooldown to read tip before moving to next question
         if (reviewTimeLeft > 0) return;
 
         if (currentIndex + 1 >= questions.length) {
@@ -695,6 +705,43 @@ export const useQuizStore = create<QuizState>()(
         set({
           savedMistakeIds: savedMistakeIds.filter((id) => id !== questionId),
         });
+      },
+
+      retakeQuestion: (questionId?: string) => {
+        const state = get();
+        const targetQId = questionId || state.questions[state.currentIndex]?.id;
+        if (!targetQId) return;
+
+        const newAnsweredMap = { ...state.answeredMap };
+        delete newAnsweredMap[targetQId];
+
+        const isCurrentQ = state.questions[state.currentIndex]?.id === targetQId;
+        const currentQ = state.questions.find((q) => q.id === targetQId);
+        const isPassage = currentQ?.isPassageQuestion === true;
+
+        set({
+          answeredMap: newAnsweredMap,
+          ...(isCurrentQ
+            ? {
+                selectedAnswer: null,
+                isAnswered: false,
+                isCorrect: false,
+                isTimeout: false,
+                timeLeft: isPassage ? 0 : TIMER_SECONDS,
+                timerActive: !isPassage,
+                reviewTimeLeft: 0,
+              }
+            : {}),
+        });
+        scheduleAutoSync(get);
+      },
+
+      resetListeningAnswer: (questionId: string) => {
+        const { listeningAnswersMap } = get();
+        const updated = { ...listeningAnswersMap };
+        delete updated[questionId];
+        set({ listeningAnswersMap: updated });
+        scheduleAutoSync(get);
       },
 
       selectListeningAnswer: (questionId: string, choice: string, isCorrect: boolean) => {

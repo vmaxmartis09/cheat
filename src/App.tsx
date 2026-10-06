@@ -6,7 +6,8 @@ import { StatsSummary } from './components/StatsSummary';
 import { ResultsView } from './components/ResultsView';
 import { ListeningTab } from './components/ListeningTab';
 import { LoginSyncModal } from './components/LoginSyncModal';
-import { BookOpen, Headphones, BarChart3 } from 'lucide-react';
+import { BookOpen, Headphones, BarChart3, SearchCheck } from 'lucide-react';
+import { SearchTab } from './components/SearchTab';
 
 export const App: React.FC = () => {
   const {
@@ -91,9 +92,9 @@ export const App: React.FC = () => {
         onClose={() => setIsSyncModalOpen(false)}
       />
 
-      {/* MAIN VIEWPORT: TAB "ÔN ĐỌC", "LUYỆN NGHE", HOẶC "KẾT QUẢ" */}
+      {/* MAIN VIEWPORT: TAB "ÔN ĐỌC", "LUYỆN NGHE", "TRA ĐÁP ÁN", HOẶC "KẾT QUẢ" */}
       <main className={`flex-1 w-full mx-auto px-2 sm:px-4 md:px-6 py-2 flex flex-col min-h-0 overflow-hidden transition-all duration-200 ${
-        activeTab === 'listening' ? 'max-w-4xl' : isPassageView ? 'max-w-7xl' : 'max-w-2xl'
+        activeTab === 'listening' ? 'max-w-4xl' : activeTab === 'search' ? 'max-w-3xl' : isPassageView ? 'max-w-7xl' : 'max-w-2xl'
       }`}>
         {activeTab === 'practice' ? (
           <div className="flex-1 flex flex-col h-full min-h-0">
@@ -107,6 +108,10 @@ export const App: React.FC = () => {
           <div className="flex-1 flex flex-col h-full min-h-0">
             <ListeningTab />
           </div>
+        ) : activeTab === 'search' ? (
+          <div className="flex-1 flex flex-col h-full min-h-0">
+            <SearchTab />
+          </div>
         ) : (
           <div className="flex-1 overflow-y-auto min-h-0">
             <ResultsView
@@ -119,41 +124,54 @@ export const App: React.FC = () => {
         )}
       </main>
 
-      {/* COMPACT BOTTOM NAVIGATION BAR: 3 TABS */}
+      {/* COMPACT BOTTOM NAVIGATION BAR: 4 TABS */}
       <nav className="border-t border-[#EFE8DE] bg-[#FAF7F2]/95 backdrop-blur-md px-3 sm:px-6 py-1.5 flex items-center justify-around shrink-0 safe-bottom">
-        <div className={`flex items-center justify-around w-full mx-auto gap-2 sm:gap-4 ${
-          activeTab === 'listening' ? 'max-w-4xl' : isPassageView ? 'max-w-7xl' : 'max-w-2xl'
+        <div className={`flex items-center justify-around w-full mx-auto gap-1 sm:gap-3 ${
+          activeTab === 'listening' ? 'max-w-4xl' : activeTab === 'search' ? 'max-w-3xl' : isPassageView ? 'max-w-7xl' : 'max-w-2xl'
         }`}>
           {/* Tab 1: ÔN ĐỌC */}
           <button
             onClick={() => setActiveTab('practice')}
-            className={`flex-1 flex flex-col items-center gap-0.5 py-1 px-2 sm:px-4 rounded-xl transition cursor-pointer ${
+            className={`flex-1 flex flex-col items-center gap-0.5 py-1 px-1 sm:px-4 rounded-xl transition cursor-pointer ${
               activeTab === 'practice'
                 ? 'text-amber-800 font-bold bg-amber-100/60 shadow-2xs'
                 : 'text-[#8C8276] hover:text-[#262320]'
             }`}
           >
             <BookOpen className="w-4 h-4 sm:w-5 sm:h-5" />
-            <span className="text-[11px] sm:text-xs font-semibold">Ôn Đọc</span>
+            <span className="text-[10px] sm:text-xs font-semibold">Ôn Đọc</span>
           </button>
 
           {/* Tab 2: LUYỆN NGHE */}
           <button
             onClick={() => setActiveTab('listening')}
-            className={`flex-1 flex flex-col items-center gap-0.5 py-1 px-2 sm:px-4 rounded-xl transition cursor-pointer ${
+            className={`flex-1 flex flex-col items-center gap-0.5 py-1 px-1 sm:px-4 rounded-xl transition cursor-pointer ${
               activeTab === 'listening'
                 ? 'text-amber-800 font-bold bg-amber-100/60 shadow-2xs'
                 : 'text-[#8C8276] hover:text-[#262320]'
             }`}
           >
             <Headphones className="w-4 h-4 sm:w-5 sm:h-5" />
-            <span className="text-[11px] sm:text-xs font-semibold">Luyện Nghe (100c)</span>
+            <span className="text-[10px] sm:text-xs font-semibold">Luyện Nghe</span>
           </button>
 
-          {/* Tab 3: KẾT QUẢ */}
+          {/* Tab 3: TRA ĐÁP ÁN */}
+          <button
+            onClick={() => setActiveTab('search')}
+            className={`flex-1 flex flex-col items-center gap-0.5 py-1 px-1 sm:px-4 rounded-xl transition cursor-pointer ${
+              activeTab === 'search'
+                ? 'text-emerald-700 font-bold bg-emerald-100/60 shadow-2xs'
+                : 'text-[#8C8276] hover:text-[#262320]'
+            }`}
+          >
+            <SearchCheck className="w-4 h-4 sm:w-5 sm:h-5" />
+            <span className="text-[10px] sm:text-xs font-semibold">Tra Đáp Án</span>
+          </button>
+
+          {/* Tab 4: KẾT QUẢ */}
           <button
             onClick={() => setActiveTab('results')}
-            className={`flex-1 flex flex-col items-center gap-0.5 py-1 px-2 sm:px-4 rounded-xl transition relative cursor-pointer ${
+            className={`flex-1 flex flex-col items-center gap-0.5 py-1 px-1 sm:px-4 rounded-xl transition relative cursor-pointer ${
               activeTab === 'results'
                 ? 'text-amber-800 font-bold bg-amber-100/60 shadow-2xs'
                 : 'text-[#8C8276] hover:text-[#262320]'
@@ -167,7 +185,7 @@ export const App: React.FC = () => {
                 </span>
               )}
             </div>
-            <span className="text-[11px] sm:text-xs font-semibold">Kết Quả</span>
+            <span className="text-[10px] sm:text-xs font-semibold">Kết Quả</span>
           </button>
         </div>
       </nav>

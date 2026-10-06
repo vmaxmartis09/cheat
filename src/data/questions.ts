@@ -1,5 +1,7 @@
 import { Question } from '../types';
 import { docs2Questions } from './docs2Questions';
+import { docs3Questions } from './docs3Questions';
+import { docs4Questions } from './docs4Questions';
 
 const rawQuestions: Question[] = [
   {
@@ -6320,18 +6322,24 @@ export const docs1Questions: Question[] = rawQuestions.map((q) => ({
   badge: '⭐ Giai đoạn 1: Bắt buộc học thuộc',
 }));
 
-// All questions combined: Docs 1 (151 questions) + Docs 2 (234 questions) = 385 questions
+// All questions combined: Docs 1 (151) + Docs 2 (234) + Docs 3 (81) + Docs 4 (100) = 566 questions
 export const allQuestions: Question[] = [
   ...docs1Questions,
   ...docs2Questions,
+  ...docs3Questions,
+  ...docs4Questions,
 ];
+
+export { docs3Questions, docs4Questions };
 
 export const getQuestionsBySource = (source?: string): Question[] => {
   if (!source || source === 'all' || source === 'docs1_all' || source === 'must_learn' || source === 'stage_1') {
     return docs1Questions;
   }
-  if (source === 'all_both_stages') return allQuestions;
+  if (source === 'all_both_stages' || source === 'all_stages' || source === 'all_all_stages') return allQuestions;
   if (source === 'stage_2' || source === 'docs2_all') return docs2Questions;
+  if (source === 'stage_3' || source === 'docs3_all') return docs3Questions;
+  if (source === 'stage_4' || source === 'docs4_all') return docs4Questions;
 
   // Docs 1 sub-sources:
   if (source === 'ToIce 2') return docs1Questions.filter((q) => q.source.startsWith('ToIce 2'));
@@ -6349,6 +6357,28 @@ export const getQuestionsBySource = (source?: string): Question[] => {
   if (source === 'Docs 2 - Part 6 All' || source === 'Docs 2 - Part 6' || source === 'docs2_part6') return docs2Questions.filter((q) => q.isPassageQuestion && q.num >= 131 && q.num <= 146);
   if (source === 'Docs 2 - Part 7 All' || source === 'Docs 2 - Part 7' || source === 'docs2_part7') return docs2Questions.filter((q) => q.isPassageQuestion && ((q.num >= 147 && q.num <= 200) || q.source.includes('Part 7')));
   if (source === 'docs2_passages') return docs2Questions.filter((q) => q.isPassageQuestion);
+
+  // Docs 3 sub-sources:
+  if (source === 'Docs 3 - Đề TMA Online Full' || source === 'docs3_tma_full') return docs3Questions.filter((q) => q.source.includes('TMA'));
+  if (source === 'Docs 3 - Đề TMA Online Part 5') return docs3Questions.filter((q) => q.source === 'Docs 3 - Đề TMA Online Part 5');
+  if (source === 'Docs 3 - Đề TMA Online Part 6') return docs3Questions.filter((q) => q.source === 'Docs 3 - Đề TMA Online Part 6');
+  if (source === 'Docs 3 - Đề TMA Online Part 7') return docs3Questions.filter((q) => q.source === 'Docs 3 - Đề TMA Online Part 7');
+  if (source === 'Docs 3 - Hackers Reading' || source === 'docs3_hackers') return docs3Questions.filter((q) => q.source === 'Docs 3 - Hackers Reading');
+  if (source === 'Docs 3 - Part 5 All' || source === 'docs3_part5') return docs3Questions.filter((q) => !q.isPassageQuestion);
+  if (source === 'Docs 3 - Part 6 All' || source === 'docs3_part6') return docs3Questions.filter((q) => q.isPassageQuestion && q.num >= 131 && q.num <= 146);
+  if (source === 'Docs 3 - Part 7 All' || source === 'docs3_part7') return docs3Questions.filter((q) => q.isPassageQuestion && (q.num >= 147 || q.source.includes('Part 7')));
+  if (source === 'docs3_passages') return docs3Questions.filter((q) => q.isPassageQuestion);
+
+  // Docs 4 sub-sources (Hacker TOEIC 3):
+  if (source === 'Docs 4 - Hacker 3 Test 1 Full' || source === 'docs4_hacker3_t1_full') return docs4Questions.filter((q) => q.id.startsWith('docs4_hacker3_t1'));
+  if (source === 'Docs 4 - Hacker 3 Test 1 Part 5' || source === 'docs4_hacker3_t1_p5') return docs4Questions.filter((q) => q.source === 'Docs 4 - Hacker 3 Test 1 Part 5');
+  if (source === 'Docs 4 - Hacker 3 Test 1 Part 6' || source === 'docs4_hacker3_t1_p6') return docs4Questions.filter((q) => q.source === 'Docs 4 - Hacker 3 Test 1 Part 6');
+  if (source === 'Docs 4 - Hacker 3 Test 1 Part 7' || source === 'docs4_hacker3_t1_p7') return docs4Questions.filter((q) => q.source === 'Docs 4 - Hacker 3 Test 1 Part 7');
+  if (source === 'Docs 4 - Part 5 All' || source === 'docs4_part5') return docs4Questions.filter((q) => !q.isPassageQuestion);
+  if (source === 'Docs 4 - Part 6 All' || source === 'docs4_part6') return docs4Questions.filter((q) => q.isPassageQuestion && q.num >= 131 && q.num <= 146);
+  if (source === 'Docs 4 - Part 7 All' || source === 'docs4_part7') return docs4Questions.filter((q) => q.isPassageQuestion && q.num >= 147);
+  if (source === 'docs4_passages') return docs4Questions.filter((q) => q.isPassageQuestion);
+
   if (source === 'passages') return allQuestions.filter((q) => q.isPassageQuestion);
 
   return allQuestions.filter((q) => q.source === source);

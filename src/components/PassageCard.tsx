@@ -15,8 +15,8 @@ import {
   Minimize2,
   Sparkles,
   HelpCircle,
-  Clock,
   AlertTriangle,
+  RotateCcw,
 } from 'lucide-react';
 
 export const PassageCard: React.FC = () => {
@@ -26,6 +26,7 @@ export const PassageCard: React.FC = () => {
     answeredMap,
     selectAnswerForQuestion,
     nextPassage,
+    retakeQuestion,
     questionProgress,
     jumpToIndex,
     reviewTimeLeft,
@@ -561,6 +562,18 @@ export const PassageCard: React.FC = () => {
                           Dịch nghĩa câu hỏi: "{q.vietnameseMeaning}"
                         </div>
                       )}
+
+                      {/* Retake Button for Passage Question */}
+                      <div className="pt-1 flex justify-end">
+                        <button
+                          onClick={() => retakeQuestion(q.id)}
+                          className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white border border-[#DCD3C7] hover:bg-amber-50 text-[11px] font-bold text-[#4A4238] transition cursor-pointer shadow-2xs"
+                          title="Làm lại câu hỏi này"
+                        >
+                          <RotateCcw className="w-3 h-3 text-amber-700" />
+                          <span>Làm lại câu này</span>
+                        </button>
+                      </div>
                     </div>
                   )}
                 </div>
@@ -570,17 +583,6 @@ export const PassageCard: React.FC = () => {
 
           {/* BOTTOM ACTION BAR */}
           <div className="p-2.5 sm:p-3 border-t border-[#F0EAE1] bg-[#FCFBF9] shrink-0 space-y-2">
-            {reviewTimeLeft > 0 && (
-              <div className="p-2 rounded-xl bg-amber-50/90 border border-amber-300 text-amber-950 text-xs flex items-center justify-between font-semibold shadow-2xs">
-                <span className="flex items-center gap-1.5">
-                  <Clock className="w-3.5 h-3.5 text-amber-700 animate-spin" />
-                  <span>Dành thời gian đọc kỹ manh mối & mẹo:</span>
-                </span>
-                <span className="font-mono font-bold bg-amber-200/80 px-2 py-0.5 rounded text-amber-900">
-                  còn {reviewTimeLeft}s
-                </span>
-              </div>
-            )}
             <button
               onClick={nextPassage}
               disabled={reviewTimeLeft > 0}

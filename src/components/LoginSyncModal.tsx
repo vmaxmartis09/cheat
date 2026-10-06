@@ -60,7 +60,7 @@ export const LoginSyncModal: React.FC<LoginSyncModalProps> = ({ isOpen, onClose 
 
   const showMsg = (text: string, type: 'success' | 'error' = 'success') => {
     setMessage({ type, text });
-    setTimeout(() => setMessage(null), 5000);
+    setTimeout(() => setMessage(null), 2000);
   };
 
   const handleLogin = async () => {

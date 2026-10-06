@@ -13,7 +13,7 @@ import {
   Sparkles,
   BookOpen,
   AlertTriangle,
-  Clock,
+  RotateCcw,
 } from 'lucide-react';
 
 export const Flashcard: React.FC = () => {
@@ -25,6 +25,7 @@ export const Flashcard: React.FC = () => {
     isCorrect,
     selectAnswer,
     nextQuestion,
+    retakeQuestion,
     questionProgress,
     reviewTimeLeft,
     tickReviewTimer,
@@ -384,58 +385,36 @@ export const Flashcard: React.FC = () => {
             })}
           </div>
 
-          {/* 9S MANDATORY REVIEW COUNTDOWN BAR & NEXT BUTTON */}
+          {/* NEXT / RETAKE — cooldown shown on the Next button */}
           {isAnswered && (
             <div className="space-y-2 pt-1">
-              {/* Cooldown Timer Alert Bar */}
-              {reviewTimeLeft > 0 ? (
-                <div className="p-2 sm:p-2.5 rounded-xl bg-amber-50/90 border border-amber-300 text-amber-950 space-y-1.5 shadow-2xs">
-                  <div className="flex items-center justify-between text-xs font-semibold">
-                    <span className="flex items-center gap-1.5">
-                      <Clock className="w-3.5 h-3.5 text-amber-700 animate-spin" />
-                      <span>Dành thời gian đọc kỹ mẹo & ví dụ phân tích:</span>
-                    </span>
-                    <span className="font-mono font-bold text-amber-900 bg-amber-200/80 px-2 py-0.5 rounded-md text-xs">
-                      còn {reviewTimeLeft}s
-                    </span>
-                  </div>
+              <div className="flex gap-2">
+                <button
+                  onClick={() => retakeQuestion()}
+                  className="px-3 py-2.5 rounded-xl bg-white border border-[#DCD3C7] hover:bg-amber-50/60 text-[#4A4238] font-bold text-xs shadow-2xs transition cursor-pointer flex items-center justify-center gap-1.5 shrink-0 active:scale-[0.98]"
+                  title="Tải lại câu hỏi để chọn lại đáp án"
+                >
+                  <RotateCcw className="w-3.5 h-3.5 text-amber-700" />
+                  <span>Làm lại câu này</span>
+                </button>
 
-                  <div className="w-full h-1.5 bg-amber-200/70 rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-amber-600 rounded-full transition-all duration-1000 ease-linear shadow-xs"
-                      style={{ width: `${((5 - reviewTimeLeft) / 5) * 100}%` }}
-                    />
-                  </div>
-                </div>
-              ) : (
-                <div className="text-center text-xs font-semibold text-emerald-700 py-0.5 flex items-center justify-center gap-1 animate-pulse">
-                  <Check className="w-3.5 h-3.5 stroke-[3]" />
-                  <span>Đã hết thời gian chờ 5s — Bạn đã sẵn sàng sang câu tiếp theo!</span>
-                </div>
-              )}
-
-              {/* NEXT QUESTION BUTTON */}
-              <button
-                onClick={nextQuestion}
-                disabled={reviewTimeLeft > 0}
-                className={`w-full flex items-center justify-center gap-2 py-3 rounded-xl font-bold text-xs sm:text-sm shadow-md transition cursor-pointer ${
-                  reviewTimeLeft > 0
-                    ? 'bg-[#E5DDD2] text-[#8C8276] cursor-not-allowed opacity-80'
-                    : 'bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-500 hover:to-amber-600 text-white shadow-amber-600/25 active:scale-[0.99] ring-2 ring-amber-400/50'
-                }`}
-              >
-                <span>
-                  {reviewTimeLeft > 0
-                    ? `⏳ Đang đọc mẹo & giải thích (còn ${reviewTimeLeft}s...)`
-                    : '👉 Sẵn Sàng — Chuyển Sang Câu Mới'}
-                </span>
-                {reviewTimeLeft === 0 && <ArrowRight className="w-4 h-4" />}
-                {reviewTimeLeft === 0 && (
-                  <span className="hidden sm:inline font-mono text-[9px] bg-white/20 px-1 py-0.2 rounded ml-1">
-                    Space
+                <button
+                  onClick={nextQuestion}
+                  disabled={reviewTimeLeft > 0}
+                  className={`flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl font-bold text-xs sm:text-sm shadow-md transition cursor-pointer ${
+                    reviewTimeLeft > 0
+                      ? 'bg-[#E5DDD2] text-[#8C8276] cursor-not-allowed opacity-80'
+                      : 'bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-500 hover:to-amber-600 text-white shadow-amber-600/25 active:scale-[0.99] ring-2 ring-amber-400/50'
+                  }`}
+                >
+                  <span>
+                    {reviewTimeLeft > 0
+                      ? `⏳ Đang đọc mẹo (còn ${reviewTimeLeft}s...)`
+                      : '👉 Sẵn Sàng — Sang Câu Mới'}
                   </span>
-                )}
-              </button>
+                  {reviewTimeLeft === 0 && <ArrowRight className="w-4 h-4" />}
+                </button>
+              </div>
             </div>
           )}
         </div>

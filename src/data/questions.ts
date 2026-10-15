@@ -6323,7 +6323,7 @@ export const docs1Questions: Question[] = rawQuestions.map((q) => ({
   badge: '⭐ Giai đoạn 1: Bắt buộc học thuộc',
 }));
 
-// All questions combined: Docs 1 (151) + Docs 2 (234) + Docs 3 (81) + Docs 4 (100) + Docs 5 (200) = 766 questions
+// All questions combined: Docs 1 (151) + Docs 2 (234) + Docs 3 (81) + Docs 4 (100) + Docs 5 (2000) = 2,566 questions
 export const allQuestions: Question[] = [
   ...docs1Questions,
   ...docs2Questions,
@@ -6382,15 +6382,37 @@ export const getQuestionsBySource = (source?: string): Question[] => {
   if (source === 'Docs 4 - Part 7 All' || source === 'docs4_part7') return docs4Questions.filter((q) => q.isPassageQuestion && q.num >= 147);
   if (source === 'docs4_passages') return docs4Questions.filter((q) => q.isPassageQuestion);
 
-  // Docs 5 sub-sources (Hacker 2 & YBM 1000 Vol 1):
-  if (source === 'Docs 5 - Hacker 2 Test 1 Full' || source === 'docs5_hacker2_t1_full') return docs5Questions.filter((q) => q.id.startsWith('docs5_hacker2_t1'));
-  if (source === 'Docs 5 - Hacker 2 Test 1 Part 5' || source === 'docs5_hacker2_t1_p5') return docs5Questions.filter((q) => q.source === 'Docs 5 - Hacker 2 Test 1 Part 5');
-  if (source === 'Docs 5 - Hacker 2 Test 1 Part 6' || source === 'docs5_hacker2_t1_p6') return docs5Questions.filter((q) => q.source === 'Docs 5 - Hacker 2 Test 1 Part 6');
-  if (source === 'Docs 5 - Hacker 2 Test 1 Part 7' || source === 'docs5_hacker2_t1_p7') return docs5Questions.filter((q) => q.source === 'Docs 5 - Hacker 2 Test 1 Part 7');
-  if (source === 'Docs 5 - YBM 1000 Vol 1 Test 1 Full' || source === 'docs5_ybm1_t1_full') return docs5Questions.filter((q) => q.id.startsWith('docs5_ybm1_t1'));
-  if (source === 'Docs 5 - YBM 1000 Vol 1 Test 1 Part 5' || source === 'docs5_ybm1_t1_p5') return docs5Questions.filter((q) => q.source === 'Docs 5 - YBM 1000 Vol 1 Test 1 Part 5');
-  if (source === 'Docs 5 - YBM 1000 Vol 1 Test 1 Part 6' || source === 'docs5_ybm1_t1_p6') return docs5Questions.filter((q) => q.source === 'Docs 5 - YBM 1000 Vol 1 Test 1 Part 6');
-  if (source === 'Docs 5 - YBM 1000 Vol 1 Test 1 Part 7' || source === 'docs5_ybm1_t1_p7') return docs5Questions.filter((q) => q.source === 'Docs 5 - YBM 1000 Vol 1 Test 1 Part 7');
+  // Docs 5 sub-sources (Hacker 2 Tests 1-10 & YBM 1000 Vol 1 Tests 1-10):
+  for (let t = 1; t <= 10; t++) {
+    if (source === `Docs 5 - Hacker 2 Test ${t} Full` || source === `docs5_hacker2_t${t}_full`) {
+      return docs5Questions.filter((q) => q.id.startsWith(`docs5_hacker2_t${t}_`));
+    }
+    if (source === `Docs 5 - Hacker 2 Test ${t} Part 5` || source === `docs5_hacker2_t${t}_p5`) {
+      return docs5Questions.filter((q) => q.source === `Docs 5 - Hacker 2 Test ${t} Part 5`);
+    }
+    if (source === `Docs 5 - Hacker 2 Test ${t} Part 6` || source === `docs5_hacker2_t${t}_p6`) {
+      return docs5Questions.filter((q) => q.source === `Docs 5 - Hacker 2 Test ${t} Part 6`);
+    }
+    if (source === `Docs 5 - Hacker 2 Test ${t} Part 7` || source === `docs5_hacker2_t${t}_p7`) {
+      return docs5Questions.filter((q) => q.source === `Docs 5 - Hacker 2 Test ${t} Part 7`);
+    }
+
+    if (source === `Docs 5 - YBM 1000 Vol 1 Test ${t} Full` || source === `docs5_ybm1_t${t}_full`) {
+      return docs5Questions.filter((q) => q.id.startsWith(`docs5_ybm1_t${t}_`));
+    }
+    if (source === `Docs 5 - YBM 1000 Vol 1 Test ${t} Part 5` || source === `docs5_ybm1_t${t}_p5`) {
+      return docs5Questions.filter((q) => q.source === `Docs 5 - YBM 1000 Vol 1 Test ${t} Part 5`);
+    }
+    if (source === `Docs 5 - YBM 1000 Vol 1 Test ${t} Part 6` || source === `docs5_ybm1_t${t}_p6`) {
+      return docs5Questions.filter((q) => q.source === `Docs 5 - YBM 1000 Vol 1 Test ${t} Part 6`);
+    }
+    if (source === `Docs 5 - YBM 1000 Vol 1 Test ${t} Part 7` || source === `docs5_ybm1_t${t}_p7`) {
+      return docs5Questions.filter((q) => q.source === `Docs 5 - YBM 1000 Vol 1 Test ${t} Part 7`);
+    }
+  }
+
+  if (source === 'Docs 5 - Hacker 2 All' || source === 'docs5_hacker2_all') return docs5Questions.filter((q) => q.id.includes('hacker2'));
+  if (source === 'Docs 5 - YBM 1000 All' || source === 'docs5_ybm1_all') return docs5Questions.filter((q) => q.id.includes('ybm1'));
   if (source === 'Docs 5 - Part 5 All' || source === 'docs5_part5') return docs5Questions.filter((q) => !q.isPassageQuestion);
   if (source === 'Docs 5 - Part 6 All' || source === 'docs5_part6') return docs5Questions.filter((q) => q.isPassageQuestion && q.num >= 131 && q.num <= 146);
   if (source === 'Docs 5 - Part 7 All' || source === 'docs5_part7') return docs5Questions.filter((q) => q.isPassageQuestion && q.num >= 147);

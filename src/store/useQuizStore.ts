@@ -242,7 +242,14 @@ export const useQuizStore = create<QuizState>()(
         } else if (mode === 'random') {
           filtered = shuffleQuestions(filtered);
         } else {
-          filtered = [...filtered].sort((a, b) => a.num - b.num);
+          // If all questions belong to a single source/test, sort by question number.
+          // Otherwise preserve natural curated order so multiple tests are not interleaved.
+          const distinctSources = new Set(filtered.map((q) => q.source));
+          if (distinctSources.size <= 1) {
+            filtered = [...filtered].sort((a, b) => a.num - b.num);
+          } else {
+            filtered = [...filtered];
+          }
         }
 
         const freshAnsweredMap = { ...state.answeredMap };

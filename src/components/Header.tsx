@@ -90,19 +90,36 @@ export const Header: React.FC<HeaderProps> = ({
                   <option value="Docs 4 - Hacker 3 Test 1 Part 6">Docs 4: Hacker 3 Test 1 Part 6 (16 câu)</option>
                   <option value="Docs 4 - Hacker 3 Test 1 Part 7">Docs 4: Hacker 3 Test 1 Part 7 (54 câu)</option>
                 </optgroup>
-                <optgroup label="🌟 GIAI ĐOẠN 5: DOCS 5 (HACKER 2 & YBM 1000 VOL 1)">
-                  <option value="stage_5">🌟 Trọn bộ Docs 5 (Hacker 2 & YBM 1000 - 200 câu)</option>
-                  <option value="Docs 5 - Hacker 2 Test 1 Full">Docs 5: Hacker 2 Test 1 Full (100 câu)</option>
-                  <option value="Docs 5 - Hacker 2 Test 1 Part 5">Docs 5: Hacker 2 Test 1 Part 5 (30 câu)</option>
-                  <option value="Docs 5 - Hacker 2 Test 1 Part 6">Docs 5: Hacker 2 Test 1 Part 6 (16 câu)</option>
-                  <option value="Docs 5 - Hacker 2 Test 1 Part 7">Docs 5: Hacker 2 Test 1 Part 7 (54 câu)</option>
-                  <option value="Docs 5 - YBM 1000 Vol 1 Test 1 Full">Docs 5: YBM 1000 Vol 1 Test 1 Full (100 câu)</option>
-                  <option value="Docs 5 - YBM 1000 Vol 1 Test 1 Part 5">Docs 5: YBM 1000 Part 5 (30 câu)</option>
-                  <option value="Docs 5 - YBM 1000 Vol 1 Test 1 Part 6">Docs 5: YBM 1000 Part 6 (16 câu)</option>
-                  <option value="Docs 5 - YBM 1000 Vol 1 Test 1 Part 7">Docs 5: YBM 1000 Part 7 (54 câu)</option>
+                <optgroup label="🌟 GIAI ĐOẠN 5: TRỌN BỘ DOCS 5 (2,000 CÂU READING)">
+                  <option value="stage_5">🌟 Trọn bộ Docs 5 (Hacker 2 & YBM 1 - 2,000 câu)</option>
+                  <option value="Docs 5 - Hacker 2 All">📗 Hacker 2: Toàn bộ 10 Tests (1,000 câu)</option>
+                  <option value="Docs 5 - YBM 1000 All">📘 YBM 1000 Vol 1: Toàn bộ 10 Tests (1,000 câu)</option>
+                  <option value="Docs 5 - Part 5 All">Docs 5: Toàn bộ Part 5 (600 câu)</option>
+                  <option value="Docs 5 - Part 6 All">Docs 5: Toàn bộ Part 6 (320 câu)</option>
+                  <option value="Docs 5 - Part 7 All">Docs 5: Toàn bộ Part 7 (1,080 câu)</option>
+                  <option value="Docs 5 - Hacker 2 Test 1 Full">Hacker 2: Test 1 Full (100 câu)</option>
+                  <option value="Docs 5 - Hacker 2 Test 2 Full">Hacker 2: Test 2 Full (100 câu)</option>
+                  <option value="Docs 5 - Hacker 2 Test 3 Full">Hacker 2: Test 3 Full (100 câu)</option>
+                  <option value="Docs 5 - Hacker 2 Test 4 Full">Hacker 2: Test 4 Full (100 câu)</option>
+                  <option value="Docs 5 - Hacker 2 Test 5 Full">Hacker 2: Test 5 Full (100 câu)</option>
+                  <option value="Docs 5 - Hacker 2 Test 6 Full">Hacker 2: Test 6 Full (100 câu)</option>
+                  <option value="Docs 5 - Hacker 2 Test 7 Full">Hacker 2: Test 7 Full (100 câu)</option>
+                  <option value="Docs 5 - Hacker 2 Test 8 Full">Hacker 2: Test 8 Full (100 câu)</option>
+                  <option value="Docs 5 - Hacker 2 Test 9 Full">Hacker 2: Test 9 Full (100 câu)</option>
+                  <option value="Docs 5 - Hacker 2 Test 10 Full">Hacker 2: Test 10 Full (100 câu)</option>
+                  <option value="Docs 5 - YBM 1000 Vol 1 Test 1 Full">YBM 1000: Test 1 Full (100 câu)</option>
+                  <option value="Docs 5 - YBM 1000 Vol 1 Test 2 Full">YBM 1000: Test 2 Full (100 câu)</option>
+                  <option value="Docs 5 - YBM 1000 Vol 1 Test 3 Full">YBM 1000: Test 3 Full (100 câu)</option>
+                  <option value="Docs 5 - YBM 1000 Vol 1 Test 4 Full">YBM 1000: Test 4 Full (100 câu)</option>
+                  <option value="Docs 5 - YBM 1000 Vol 1 Test 5 Full">YBM 1000: Test 5 Full (100 câu)</option>
+                  <option value="Docs 5 - YBM 1000 Vol 1 Test 6 Full">YBM 1000: Test 6 Full (100 câu)</option>
+                  <option value="Docs 5 - YBM 1000 Vol 1 Test 7 Full">YBM 1000: Test 7 Full (100 câu)</option>
+                  <option value="Docs 5 - YBM 1000 Vol 1 Test 8 Full">YBM 1000: Test 8 Full (100 câu)</option>
+                  <option value="Docs 5 - YBM 1000 Vol 1 Test 9 Full">YBM 1000: Test 9 Full (100 câu)</option>
+                  <option value="Docs 5 - YBM 1000 Vol 1 Test 10 Full">YBM 1000: Test 10 Full (100 câu)</option>
                 </optgroup>
                 <optgroup label="📚 TOÀN BỘ KHO ĐỀ">
-                  <option value="all_both_stages">Tất cả đề Docs 1, 2, 3, 4 & 5 (766 câu Reading)</option>
+                  <option value="all_both_stages">Tất cả đề Docs 1, 2, 3, 4 & 5 (2,566 câu Reading)</option>
                 </optgroup>
               </select>
               <Layers className="w-2.5 h-2.5 text-[#8C8276] absolute right-1.5 top-1/2 -translate-y-1/2 pointer-events-none" />

@@ -90,8 +90,19 @@ export const Header: React.FC<HeaderProps> = ({
                   <option value="Docs 4 - Hacker 3 Test 1 Part 6">Docs 4: Hacker 3 Test 1 Part 6 (16 câu)</option>
                   <option value="Docs 4 - Hacker 3 Test 1 Part 7">Docs 4: Hacker 3 Test 1 Part 7 (54 câu)</option>
                 </optgroup>
+                <optgroup label="🌟 GIAI ĐOẠN 5: DOCS 5 (HACKER 2 & YBM 1000 VOL 1)">
+                  <option value="stage_5">🌟 Trọn bộ Docs 5 (Hacker 2 & YBM 1000 - 200 câu)</option>
+                  <option value="Docs 5 - Hacker 2 Test 1 Full">Docs 5: Hacker 2 Test 1 Full (100 câu)</option>
+                  <option value="Docs 5 - Hacker 2 Test 1 Part 5">Docs 5: Hacker 2 Test 1 Part 5 (30 câu)</option>
+                  <option value="Docs 5 - Hacker 2 Test 1 Part 6">Docs 5: Hacker 2 Test 1 Part 6 (16 câu)</option>
+                  <option value="Docs 5 - Hacker 2 Test 1 Part 7">Docs 5: Hacker 2 Test 1 Part 7 (54 câu)</option>
+                  <option value="Docs 5 - YBM 1000 Vol 1 Test 1 Full">Docs 5: YBM 1000 Vol 1 Test 1 Full (100 câu)</option>
+                  <option value="Docs 5 - YBM 1000 Vol 1 Test 1 Part 5">Docs 5: YBM 1000 Part 5 (30 câu)</option>
+                  <option value="Docs 5 - YBM 1000 Vol 1 Test 1 Part 6">Docs 5: YBM 1000 Part 6 (16 câu)</option>
+                  <option value="Docs 5 - YBM 1000 Vol 1 Test 1 Part 7">Docs 5: YBM 1000 Part 7 (54 câu)</option>
+                </optgroup>
                 <optgroup label="📚 TOÀN BỘ KHO ĐỀ">
-                  <option value="all_both_stages">Tất cả đề Docs 1, Docs 2, Docs 3 & Docs 4 (566 câu)</option>
+                  <option value="all_both_stages">Tất cả đề Docs 1, 2, 3, 4 & 5 (766 câu Reading)</option>
                 </optgroup>
               </select>
               <Layers className="w-2.5 h-2.5 text-[#8C8276] absolute right-1.5 top-1/2 -translate-y-1/2 pointer-events-none" />

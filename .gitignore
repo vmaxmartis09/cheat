@@ -9,8 +9,9 @@ __pycache__/
 *.pyc
 
 # Raw data & source documents
-docs/
-docs2/
+docs*/
+downloads/
+scripts/
 *.doc
 *.docx
 *.pdf

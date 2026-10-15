@@ -2,6 +2,7 @@ import { Question } from '../types';
 import { docs2Questions } from './docs2Questions';
 import { docs3Questions } from './docs3Questions';
 import { docs4Questions } from './docs4Questions';
+import { docs5Questions } from './docs5Questions';
 
 const rawQuestions: Question[] = [
   {
@@ -6322,15 +6323,16 @@ export const docs1Questions: Question[] = rawQuestions.map((q) => ({
   badge: '⭐ Giai đoạn 1: Bắt buộc học thuộc',
 }));
 
-// All questions combined: Docs 1 (151) + Docs 2 (234) + Docs 3 (81) + Docs 4 (100) = 566 questions
+// All questions combined: Docs 1 (151) + Docs 2 (234) + Docs 3 (81) + Docs 4 (100) + Docs 5 (200) = 766 questions
 export const allQuestions: Question[] = [
   ...docs1Questions,
   ...docs2Questions,
   ...docs3Questions,
   ...docs4Questions,
+  ...docs5Questions,
 ];
 
-export { docs3Questions, docs4Questions };
+export { docs3Questions, docs4Questions, docs5Questions };
 
 export const getQuestionsBySource = (source?: string): Question[] => {
   if (!source || source === 'all' || source === 'docs1_all' || source === 'must_learn' || source === 'stage_1') {
@@ -6340,6 +6342,7 @@ export const getQuestionsBySource = (source?: string): Question[] => {
   if (source === 'stage_2' || source === 'docs2_all') return docs2Questions;
   if (source === 'stage_3' || source === 'docs3_all') return docs3Questions;
   if (source === 'stage_4' || source === 'docs4_all') return docs4Questions;
+  if (source === 'stage_5' || source === 'docs5_all') return docs5Questions;
 
   // Docs 1 sub-sources:
   if (source === 'ToIce 2') return docs1Questions.filter((q) => q.source.startsWith('ToIce 2'));
@@ -6378,6 +6381,20 @@ export const getQuestionsBySource = (source?: string): Question[] => {
   if (source === 'Docs 4 - Part 6 All' || source === 'docs4_part6') return docs4Questions.filter((q) => q.isPassageQuestion && q.num >= 131 && q.num <= 146);
   if (source === 'Docs 4 - Part 7 All' || source === 'docs4_part7') return docs4Questions.filter((q) => q.isPassageQuestion && q.num >= 147);
   if (source === 'docs4_passages') return docs4Questions.filter((q) => q.isPassageQuestion);
+
+  // Docs 5 sub-sources (Hacker 2 & YBM 1000 Vol 1):
+  if (source === 'Docs 5 - Hacker 2 Test 1 Full' || source === 'docs5_hacker2_t1_full') return docs5Questions.filter((q) => q.id.startsWith('docs5_hacker2_t1'));
+  if (source === 'Docs 5 - Hacker 2 Test 1 Part 5' || source === 'docs5_hacker2_t1_p5') return docs5Questions.filter((q) => q.source === 'Docs 5 - Hacker 2 Test 1 Part 5');
+  if (source === 'Docs 5 - Hacker 2 Test 1 Part 6' || source === 'docs5_hacker2_t1_p6') return docs5Questions.filter((q) => q.source === 'Docs 5 - Hacker 2 Test 1 Part 6');
+  if (source === 'Docs 5 - Hacker 2 Test 1 Part 7' || source === 'docs5_hacker2_t1_p7') return docs5Questions.filter((q) => q.source === 'Docs 5 - Hacker 2 Test 1 Part 7');
+  if (source === 'Docs 5 - YBM 1000 Vol 1 Test 1 Full' || source === 'docs5_ybm1_t1_full') return docs5Questions.filter((q) => q.id.startsWith('docs5_ybm1_t1'));
+  if (source === 'Docs 5 - YBM 1000 Vol 1 Test 1 Part 5' || source === 'docs5_ybm1_t1_p5') return docs5Questions.filter((q) => q.source === 'Docs 5 - YBM 1000 Vol 1 Test 1 Part 5');
+  if (source === 'Docs 5 - YBM 1000 Vol 1 Test 1 Part 6' || source === 'docs5_ybm1_t1_p6') return docs5Questions.filter((q) => q.source === 'Docs 5 - YBM 1000 Vol 1 Test 1 Part 6');
+  if (source === 'Docs 5 - YBM 1000 Vol 1 Test 1 Part 7' || source === 'docs5_ybm1_t1_p7') return docs5Questions.filter((q) => q.source === 'Docs 5 - YBM 1000 Vol 1 Test 1 Part 7');
+  if (source === 'Docs 5 - Part 5 All' || source === 'docs5_part5') return docs5Questions.filter((q) => !q.isPassageQuestion);
+  if (source === 'Docs 5 - Part 6 All' || source === 'docs5_part6') return docs5Questions.filter((q) => q.isPassageQuestion && q.num >= 131 && q.num <= 146);
+  if (source === 'Docs 5 - Part 7 All' || source === 'docs5_part7') return docs5Questions.filter((q) => q.isPassageQuestion && q.num >= 147);
+  if (source === 'docs5_passages') return docs5Questions.filter((q) => q.isPassageQuestion);
 
   if (source === 'passages') return allQuestions.filter((q) => q.isPassageQuestion);
 

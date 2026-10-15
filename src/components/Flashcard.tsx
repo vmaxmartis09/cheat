@@ -178,6 +178,13 @@ export const Flashcard: React.FC = () => {
                 </span>
               )}
 
+              {/* 🏷️ STAGE BADGE */}
+              {!currentQ.isMustLearn && currentQ.badge && (
+                <span className="flex items-center gap-1 px-2 py-0.5 rounded-md bg-indigo-50 border border-indigo-200/80 text-indigo-900 font-bold text-[10px] tracking-wide shadow-2xs truncate max-w-[160px] sm:max-w-none">
+                  <span>{currentQ.badge}</span>
+                </span>
+              )}
+
               {/* 🎯 CÂU TƯƠNG TỰ BADGE */}
               {currentQ.isSimilarClone && (
                 <span className="flex items-center gap-1 px-2 py-0.5 rounded-md bg-emerald-600 text-white font-bold text-[10px] tracking-wide shadow-2xs">

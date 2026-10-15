@@ -416,6 +416,11 @@ export const PassageCard: React.FC = () => {
                           ⭐ Bắt buộc học thuộc
                         </span>
                       )}
+                      {!q.isMustLearn && q.badge && (
+                        <span className="px-1.5 py-0.2 rounded-md bg-indigo-50 border border-indigo-200 text-indigo-900 font-bold text-[9.5px] shadow-2xs">
+                          {q.badge}
+                        </span>
+                      )}
                       <span className="text-[#8C8276] text-[11px] font-medium">
                         {q.category}
                       </span>

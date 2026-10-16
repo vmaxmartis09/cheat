@@ -2069,22 +2069,17 @@ export const getListeningQuestionsByTestAndPart = (test: number | string, part: 
     return listeningQuestions.filter((q) => q.part === part);
   }
 
-  if (test === 'h3_1' || test === 31) {
-    const list = hackerExtraListeningQuestions.filter((q) => q.book === 'Hacker 3' && q.test === 1);
+  if (typeof test === 'string' && test.startsWith('h3_')) {
+    const tNum = parseInt(test.replace('h3_', ''), 10);
+    const list = hackerExtraListeningQuestions.filter((q) => q.book === 'Hacker 3' && q.test === tNum);
     if (part === 'all') return list;
     if (part === 'images') return list.filter((q) => Boolean(q.imageUrl));
     return list.filter((q) => q.part === part);
   }
 
-  if (test === 'h3_2' || test === 32) {
-    const list = hackerExtraListeningQuestions.filter((q) => q.book === 'Hacker 3' && q.test === 2);
-    if (part === 'all') return list;
-    if (part === 'images') return list.filter((q) => Boolean(q.imageUrl));
-    return list.filter((q) => q.part === part);
-  }
-
-  if (test === 'h1_1' || test === 11) {
-    const list = hackerExtraListeningQuestions.filter((q) => q.book === 'Hacker 1' && q.test === 1);
+  if (typeof test === 'string' && test.startsWith('h1_')) {
+    const tNum = parseInt(test.replace('h1_', ''), 10);
+    const list = hackerExtraListeningQuestions.filter((q) => q.book === 'Hacker 1' && q.test === tNum);
     if (part === 'all') return list;
     if (part === 'images') return list.filter((q) => Boolean(q.imageUrl));
     return list.filter((q) => q.part === part);

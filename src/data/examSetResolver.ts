@@ -148,7 +148,7 @@ export function resolveFullExamSetInfo(q: {
     };
   }
 
-  // 5. Hacker 3 (Tests 1-10: Tests 1 & 2 have full 200 questions, Tests 3-10 have 100 RC)
+  // 5. Hacker 3 (Tests 1-10: Full 200 questions each, 100 LC + 100 RC)
   if (
     src.includes('hacker 3') ||
     src.includes('hacker3') ||
@@ -159,7 +159,6 @@ export function resolveFullExamSetInfo(q: {
   ) {
     const tMatch = src.match(/test\s*(\d+)/i) || id.match(/h3_(?:t)?(\d+)/i) || id.match(/_t(\d+)_/i) || [null, String(q.test || 1)];
     const t = tMatch ? tMatch[1] : '1';
-    const hasLC = t === '1' || t === '2';
     return {
       examSetId: `hacker3_t${t}`,
       examSetName: `Hacker 3 · Test ${t}`,
@@ -167,15 +166,15 @@ export function resolveFullExamSetInfo(q: {
       book: 'Hacker 3 (RC 101-200)',
       test: t,
       questionNum: num,
-      hasListening: hasLC,
+      hasListening: true,
       hasReading: true,
-      totalQuestions: hasLC ? 200 : 100,
+      totalQuestions: 200,
       rcSource: `Hacker 3 Test ${t} Full`,
-      lcTest: t === '1' ? 'h3_1' : t === '2' ? 'h3_2' : undefined,
+      lcTest: `h3_${t}`,
     };
   }
 
-  // 6. Hacker 1 (Tests 1-10: Test 1 has full 200 questions, Tests 2-10 have 100 RC)
+  // 6. Hacker 1 (Tests 1-10: Full 200 questions each, 100 LC + 100 RC)
   if (
     src.includes('hacker 1') ||
     src.includes('hacker1') ||
@@ -186,7 +185,6 @@ export function resolveFullExamSetInfo(q: {
   ) {
     const tMatch = src.match(/test\s*(\d+)/i) || id.match(/h1_(?:t)?(\d+)/i) || id.match(/_t(\d+)_/i) || [null, String(q.test || 1)];
     const t = tMatch ? tMatch[1] : '1';
-    const hasLC = t === '1';
     return {
       examSetId: `hacker1_t${t}`,
       examSetName: `Hacker 1 · Test ${t}`,
@@ -194,11 +192,11 @@ export function resolveFullExamSetInfo(q: {
       book: 'Hacker 1 (RC 101-200)',
       test: t,
       questionNum: num,
-      hasListening: hasLC,
+      hasListening: true,
       hasReading: true,
-      totalQuestions: hasLC ? 200 : 100,
+      totalQuestions: 200,
       rcSource: `Hacker 1 Test ${t} Full`,
-      lcTest: t === '1' ? 'h1_1' : undefined,
+      lcTest: `h1_${t}`,
     };
   }
 
@@ -370,9 +368,7 @@ export function getFullExamSetQuestions(examSetId: string): {
     const t = parseInt(examSetId.replace('hacker3_t', ''), 10);
     const info = resolveFullExamSetInfo({ source: `Hacker 3 Test ${t}` });
     const rcQuestions = getQuestionsBySource(`Hacker 3 Test ${t} Full`).sort((a, b) => a.num - b.num);
-    let lcQuestions: ListeningQuestion[] = [];
-    if (t === 1) lcQuestions = getListeningQuestionsByTestAndPart('h3_1', 'all').sort((a, b) => a.num - b.num);
-    else if (t === 2) lcQuestions = getListeningQuestionsByTestAndPart('h3_2', 'all').sort((a, b) => a.num - b.num);
+    const lcQuestions = getListeningQuestionsByTestAndPart(`h3_${t}`, 'all').sort((a, b) => a.num - b.num);
     return {
       info,
       lcQuestions,
@@ -386,8 +382,7 @@ export function getFullExamSetQuestions(examSetId: string): {
     const t = parseInt(examSetId.replace('hacker1_t', ''), 10);
     const info = resolveFullExamSetInfo({ source: `Hacker 1 Test ${t}` });
     const rcQuestions = getQuestionsBySource(`Hacker 1 Test ${t} Full`).sort((a, b) => a.num - b.num);
-    let lcQuestions: ListeningQuestion[] = [];
-    if (t === 1) lcQuestions = getListeningQuestionsByTestAndPart('h1_1', 'all').sort((a, b) => a.num - b.num);
+    const lcQuestions = getListeningQuestionsByTestAndPart(`h1_${t}`, 'all').sort((a, b) => a.num - b.num);
     return {
       info,
       lcQuestions,

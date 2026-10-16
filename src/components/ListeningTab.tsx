@@ -90,16 +90,14 @@ export const ListeningTab: React.FC = () => {
       openFullAnswers({ book: 'Docs 2 (Listening Test 1)', test: 'Test 1', questionNum: currentQ?.num || 1 });
       return;
     }
-    if (selectedTest === 'h3_1') {
-      openFullAnswers({ book: 'Hacker 3 (RC 101-200)', test: '1', questionNum: currentQ?.num || 1 });
+    if (typeof selectedTest === 'string' && selectedTest.startsWith('h3_')) {
+      const t = selectedTest.replace('h3_', '');
+      openFullAnswers({ book: 'Hacker 3 (RC 101-200)', test: t, questionNum: currentQ?.num || 1 });
       return;
     }
-    if (selectedTest === 'h3_2') {
-      openFullAnswers({ book: 'Hacker 3 (RC 101-200)', test: '2', questionNum: currentQ?.num || 1 });
-      return;
-    }
-    if (selectedTest === 'h1_1') {
-      openFullAnswers({ book: 'Hacker 1 (RC 101-200)', test: '1', questionNum: currentQ?.num || 1 });
+    if (typeof selectedTest === 'string' && selectedTest.startsWith('h1_')) {
+      const t = selectedTest.replace('h1_', '');
+      openFullAnswers({ book: 'Hacker 1 (RC 101-200)', test: t, questionNum: currentQ?.num || 1 });
       return;
     }
     if (typeof selectedTest === 'number' && selectedTest >= 1 && selectedTest <= 10) {
@@ -271,16 +269,33 @@ export const ListeningTab: React.FC = () => {
                 <option value={9}>Hacker 2 - Test 9 (100 câu)</option>
                 <option value={10}>Hacker 2 - Test 10 (100 câu)</option>
               </optgroup>
-              <optgroup label="✨ HACKER TOEIC 3 (MỚI KHÔI PHỤC LC)">
+              <optgroup label="✨ HACKER TOEIC 3 (10 TESTS FULL LC - 1,000 CÂU)">
                 <option value="h3_1">Hacker 3 - Test 1 LC (100 câu)</option>
                 <option value="h3_2">Hacker 3 - Test 2 LC (100 câu)</option>
+                <option value="h3_3">Hacker 3 - Test 3 LC (100 câu)</option>
+                <option value="h3_4">Hacker 3 - Test 4 LC (100 câu)</option>
+                <option value="h3_5">Hacker 3 - Test 5 LC (100 câu)</option>
+                <option value="h3_6">Hacker 3 - Test 6 LC (100 câu)</option>
+                <option value="h3_7">Hacker 3 - Test 7 LC (100 câu)</option>
+                <option value="h3_8">Hacker 3 - Test 8 LC (100 câu)</option>
+                <option value="h3_9">Hacker 3 - Test 9 LC (100 câu)</option>
+                <option value="h3_10">Hacker 3 - Test 10 LC (100 câu)</option>
               </optgroup>
-              <optgroup label="✨ HACKER TOEIC 1 (MỚI KHÔI PHỤC LC)">
+              <optgroup label="✨ HACKER TOEIC 1 (10 TESTS FULL LC - 1,000 CÂU)">
                 <option value="h1_1">Hacker 1 - Test 1 LC (100 câu)</option>
+                <option value="h1_2">Hacker 1 - Test 2 LC (100 câu)</option>
+                <option value="h1_3">Hacker 1 - Test 3 LC (100 câu)</option>
+                <option value="h1_4">Hacker 1 - Test 4 LC (100 câu)</option>
+                <option value="h1_5">Hacker 1 - Test 5 LC (100 câu)</option>
+                <option value="h1_6">Hacker 1 - Test 6 LC (100 câu)</option>
+                <option value="h1_7">Hacker 1 - Test 7 LC (100 câu)</option>
+                <option value="h1_8">Hacker 1 - Test 8 LC (100 câu)</option>
+                <option value="h1_9">Hacker 1 - Test 9 LC (100 câu)</option>
+                <option value="h1_10">Hacker 1 - Test 10 LC (100 câu)</option>
               </optgroup>
               <optgroup label="⭐ ĐỀ LUYỆN KHÁC">
-                <option value={0}>Final Trial Test (Hacker 3 & 2 Part 1-4)</option>
-                <option value="all">Toàn bộ 1,400 câu Listening</option>
+                <option value={0}>Final Trial Test (Part 1-4)</option>
+                <option value="all">Toàn bộ 3,100 câu Listening</option>
               </optgroup>
             </select>
 

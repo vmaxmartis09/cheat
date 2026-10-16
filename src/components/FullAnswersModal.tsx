@@ -113,7 +113,7 @@ function resolveQuestionDetail(
       );
     } else if (book.includes('Hacker 1')) {
       lq = hackerExtraListeningQuestions.find(
-        (q) => q.book === 'Hacker 1' && q.num === num
+        (q) => q.book === 'Hacker 1' && (testNum ? q.test === testNum : true) && q.num === num
       );
     } else if (book.includes('Docs 2') || book.includes('Listening')) {
       lq = listeningQuestions.find((q) => q.num === num);

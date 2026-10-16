@@ -1319,30 +1319,12 @@ export const SearchTab: React.FC = () => {
   const [visibleLimit, setVisibleLimit] = useState<number>(60);
   const [showImageModal, setShowImageModal] = useState<boolean>(false);
   const [recentExams, setRecentExams] = useState<RecentExamItem[]>(() => getRecentExams());
-  const [showLiveDropdown, setShowLiveDropdown] = useState<boolean>(true);
-  const searchDropdownRef = useRef<HTMLDivElement>(null);
 
   // Sync recent exams when selectedBook / selectedTestNum changes
   useEffect(() => {
     const updated = saveRecentExam(selectedBook, selectedTestNum);
     setRecentExams(updated);
   }, [selectedBook, selectedTestNum]);
-
-  // Click outside listener to dismiss live suggestions
-  useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (
-        searchDropdownRef.current &&
-        !searchDropdownRef.current.contains(e.target as Node) &&
-        inputRef.current &&
-        !inputRef.current.contains(e.target as Node)
-      ) {
-        setShowLiveDropdown(false);
-      }
-    };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
 
   const availableMatrixTests = useMemo(() => {
     const bookData = MASTER_ANSWER_KEYS[selectedBook];
@@ -1575,7 +1557,8 @@ export const SearchTab: React.FC = () => {
   const rcCount = useMemo(() => results.filter((r) => r.kind === 'reading').length, [results]);
 
   // Live autocomplete suggestions for instant answer lookup
-  const liveSuggestions = useMemo(() => {
+  const _liveSuggestions = useMemo(() => {
+    void _liveSuggestions;
     const raw = query.trim();
     if (!raw) return [];
     const numMatch = raw.match(/^(?:câu|cau|#|q)?\s*(\d{1,3})$/i);
@@ -2197,14 +2180,9 @@ export const SearchTab: React.FC = () => {
               ref={inputRef}
               type="text"
               value={query}
-              onFocus={() => setShowLiveDropdown(true)}
-              onKeyDown={(e) => {
-                if (e.key === 'Escape') setShowLiveDropdown(false);
-              }}
               onChange={(e) => {
                 setQuery(e.target.value);
                 setExpandedId(null);
-                setShowLiveDropdown(true);
               }}
               placeholder="Tìm tất cả: câu hỏi, từ khóa, transcript, giải thích, số câu (vd: hacker 2 45, 101, once, as does)..."
               className="w-full pl-9 pr-10 py-2.5 rounded-2xl border-2 border-[#EFE8DE] bg-white text-[13.5px] text-[#262320] placeholder:text-[#B0A89E] focus:outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-100 transition-all shadow-xs"
@@ -2216,101 +2194,6 @@ export const SearchTab: React.FC = () => {
               >
                 <X className="w-4 h-4" />
               </button>
-            )}
-
-            {/* Live Autocomplete Dropdown with Instant Answer Badges */}
-            {showLiveDropdown && liveSuggestions.length > 0 && (
-              <div
-                ref={searchDropdownRef}
-                className="absolute left-0 right-0 top-full mt-1.5 z-50 bg-white/98 backdrop-blur-md rounded-2xl border-2 border-amber-400 shadow-2xl overflow-hidden animate-in fade-in duration-100"
-              >
-                {/* Floating header */}
-                <div className="px-3 py-1.5 bg-gradient-to-r from-amber-500 via-amber-600 to-emerald-600 text-white flex items-center justify-between text-xs font-black shadow-xs">
-                  <div className="flex items-center gap-1.5">
-                    <Zap className="w-3.5 h-3.5 fill-amber-200 text-amber-200" />
-                    <span>TRA NHANH ĐÁP ÁN TỨC THÌ (0.05s)</span>
-                  </div>
-                  <button
-                    onClick={() => setShowLiveDropdown(false)}
-                    className="text-white/80 hover:text-white px-1.5 py-0.5 rounded-md hover:bg-white/20 transition cursor-pointer text-[11px]"
-                  >
-                    ✕ Đóng
-                  </button>
-                </div>
-
-                {/* Suggestion list */}
-                <div className="p-1.5 space-y-1 max-h-[55vh] overflow-y-auto divide-y divide-[#F4EFEA]">
-                  {liveSuggestions.map((item, idx) => {
-                    const badgeColor =
-                      item.answer === 'A'
-                        ? 'bg-sky-500 text-white ring-2 ring-sky-200'
-                        : item.answer === 'B'
-                        ? 'bg-indigo-600 text-white ring-2 ring-indigo-200'
-                        : item.answer === 'C'
-                        ? 'bg-emerald-600 text-white ring-2 ring-emerald-200'
-                        : 'bg-amber-500 text-white ring-2 ring-amber-200';
-
-                    return (
-                      <div
-                        key={`${item.id || idx}_${item.num}`}
-                        onClick={() => {
-                          setShowLiveDropdown(false);
-                          useQuizStore.getState().openFullAnswers({
-                            book: item.book,
-                            test: item.test,
-                            questionNum: item.num,
-                          });
-                        }}
-                        className="pt-1.5 first:pt-0 flex items-center gap-2.5 p-2 rounded-xl hover:bg-amber-50/90 transition cursor-pointer group"
-                      >
-                        {/* Big Instant Answer Pill */}
-                        <div
-                          className={`w-9 h-9 rounded-xl flex items-center justify-center font-black text-base shrink-0 shadow-sm transition-transform group-hover:scale-110 ${badgeColor}`}
-                        >
-                          {item.answer}
-                        </div>
-
-                        {/* Content & Metadata */}
-                        <div className="min-w-0 flex-1">
-                          <div className="flex items-center gap-1.5 flex-wrap">
-                            <span className="font-mono font-black text-xs text-[#262320]">
-                              Câu #{item.num}
-                            </span>
-                            <span className="text-[10px] font-bold px-1.5 py-0.2 rounded-md bg-[#FAF7F2] border border-[#EAE3D9] text-[#7A7065]">
-                              {item.bookName} · Test {item.test}
-                            </span>
-                            <span className="text-[10px] font-bold px-1.5 py-0.2 rounded-md bg-amber-100 text-amber-900 border border-amber-200">
-                              Part {item.part}
-                            </span>
-                          </div>
-                          <p className="text-[11.5px] text-[#5C554E] line-clamp-1 mt-0.5 group-hover:text-[#262320]">
-                            {item.snippet}
-                          </p>
-                        </div>
-
-                        {/* Quick Action Button */}
-                        <div className="shrink-0 flex items-center gap-1 text-[11px] font-bold text-emerald-800 bg-emerald-50 border border-emerald-200 group-hover:bg-emerald-600 group-hover:text-white px-2 py-1 rounded-lg transition shadow-2xs">
-                          <span>Xem ngay</span>
-                          <ChevronRight className="w-3.5 h-3.5" />
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-
-                {/* Footer bar */}
-                <div className="px-3 py-1.5 bg-[#FAF8F5] border-t border-[#EFE8DE] flex items-center justify-between text-[11px]">
-                  <span className="text-[#8C8276] text-[10.5px]">
-                    💡 Nhấp vào câu bất kỳ để xem đề & lời giải chi tiết
-                  </span>
-                  <button
-                    onClick={() => setShowLiveDropdown(false)}
-                    className="font-bold text-amber-800 hover:text-amber-900 hover:underline cursor-pointer"
-                  >
-                    Xem toàn bộ danh sách ↵
-                  </button>
-                </div>
-              </div>
             )}
           </div>
 

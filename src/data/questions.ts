@@ -6389,24 +6389,24 @@ export const getQuestionsBySource = (source?: string): Question[] => {
   if (source === 'Hacker 1 - Part 7 All' || source === 'hacker1_part7') return hacker1Questions.filter((q) => q.num >= 147);
 
   // Docs 1 sub-sources:
-  if (source === 'ToIce 2') return docs1Questions.filter((q) => q.source.startsWith('ToIce 2'));
-  if (source === 'Test 2 Full') return docs1Questions.filter((q) => q.source.startsWith('Test 2'));
+  if (source === 'ToIce 2' || source === 'ToIce 2 Full' || source === 'docs1_toice2_full') return docs1Questions.filter((q) => q.id.startsWith('toice2_') || q.source.startsWith('ToIce 2'));
+  if (source === 'Test 2 Full' || source === 'docs1_test2_full') return docs1Questions.filter((q) => q.id.startsWith('test2_') || q.source.startsWith('Test 2'));
   if (source === 'Test 2 Part 5') return docs1Questions.filter((q) => q.source.startsWith('Test 2') && !q.isPassageQuestion);
   if (source === 'Part 6 Đọc Điền') return docs1Questions.filter((q) => q.isPassageQuestion && q.num >= 141 && q.num <= 152);
   if (source === 'Part 7 Đoạn Văn') return docs1Questions.filter((q) => q.isPassageQuestion && q.num >= 153);
   if (source === 'docs1_passages') return docs1Questions.filter((q) => q.isPassageQuestion);
 
   // Docs 2 sub-sources:
-  if (source === 'Docs 2 - Đề 1 Full') return docs2Questions.filter((q) => q.id.startsWith('docs2_de1') || q.source.includes('Đề 1') || q.source === 'Docs 2 - Part 5 Luyện đề' || q.source === 'Docs 2 - Part 6 Đọc Điền');
-  if (source === 'Docs 2 - Đề 2 YBM Full') return docs2Questions.filter((q) => q.id.startsWith('docs2_de2') || q.source.includes('YBM'));
-  if (source === 'Docs 2 - Chuyên đề Tips') return docs2Questions.filter((q) => q.id.startsWith('docs2_drill') || q.source.includes('Chuyên đề'));
+  if (source === 'Docs 2 - Đề 1 Full' || source === 'docs2_de1_full') return docs2Questions.filter((q) => q.id.startsWith('docs2_de1') || q.id.startsWith('docs2_p5') || q.id.startsWith('docs2_p6') || q.source.includes('Đề 1') || q.source === 'Docs 2 - Part 5 Luyện đề' || q.source === 'Docs 2 - Part 6 Đọc Điền');
+  if (source === 'Docs 2 - Đề 2 YBM Full' || source === 'docs2_de2_full') return docs2Questions.filter((q) => q.id.startsWith('docs2_de2') || q.source.includes('YBM'));
+  if (source === 'Docs 2 - Chuyên đề Tips' || source === 'docs2_tips') return docs2Questions.filter((q) => q.id.startsWith('docs2_drill') || q.source.includes('Chuyên đề'));
   if (source === 'Docs 2 - Part 5 All' || source === 'Docs 2 - Part 5' || source === 'docs2_part5') return docs2Questions.filter((q) => !q.isPassageQuestion);
   if (source === 'Docs 2 - Part 6 All' || source === 'Docs 2 - Part 6' || source === 'docs2_part6') return docs2Questions.filter((q) => q.isPassageQuestion && q.num >= 131 && q.num <= 146);
   if (source === 'Docs 2 - Part 7 All' || source === 'Docs 2 - Part 7' || source === 'docs2_part7') return docs2Questions.filter((q) => q.isPassageQuestion && ((q.num >= 147 && q.num <= 200) || q.source.includes('Part 7')));
   if (source === 'docs2_passages') return docs2Questions.filter((q) => q.isPassageQuestion);
 
   // Docs 3 sub-sources:
-  if (source === 'Docs 3 - Đề TMA Online Full' || source === 'docs3_tma_full') return docs3Questions.filter((q) => q.source.includes('TMA'));
+  if (source === 'Docs 3 - Đề TMA Online Full' || source === 'docs3_tma_full') return docs3Questions;
   if (source === 'Docs 3 - Đề TMA Online Part 5') return docs3Questions.filter((q) => q.source === 'Docs 3 - Đề TMA Online Part 5');
   if (source === 'Docs 3 - Đề TMA Online Part 6') return docs3Questions.filter((q) => q.source === 'Docs 3 - Đề TMA Online Part 6');
   if (source === 'Docs 3 - Đề TMA Online Part 7') return docs3Questions.filter((q) => q.source === 'Docs 3 - Đề TMA Online Part 7');

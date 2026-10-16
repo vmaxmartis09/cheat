@@ -7,17 +7,18 @@ import {
   Loader2,
   Sparkles,
   CheckCircle2,
-  ArrowRight,
   X,
   FileText,
   Table,
   Check,
-  AlertCircle,
   HelpCircle,
+  Grid,
 } from 'lucide-react';
 import { allQuestions } from '../data/questions';
 import { getAllListeningQuestions } from '../data/listeningQuestions';
 import { DOCS_IMAGE_CATALOG, DocsImageItem } from '../data/docsImageCatalog';
+import { PART1_TESTS_CATALOG } from '../data/part1VisualIndex';
+import { matchImageToPart1Tests, VisualTestMatch } from '../utils/visualSimilarityMatcher';
 import { useQuizStore } from '../store/useQuizStore';
 
 interface ImageSearchModalProps {
@@ -50,10 +51,15 @@ export const ImageSearchModal: React.FC<ImageSearchModalProps> = ({
   const [progressPercent, setProgressPercent] = useState<number>(0);
   const [extractedText, setExtractedText] = useState<string>('');
   const [matchResults, setMatchResults] = useState<MatchResult[]>([]);
+  const [visualMatches, setVisualMatches] = useState<VisualTestMatch[]>([]);
   const [matchedDocsItem, setMatchedDocsItem] = useState<DocsImageItem | null>(null);
   const [dragOver, setDragOver] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
-  const [viewCatalogTab, setViewCatalogTab] = useState(false);
+  
+  // Tabs: 'upload' (Visual match + OCR) | 'browse_part1' (6 pictures all tests) | 'browse_docs' (old docs)
+  const [activeTab, setActiveTab] = useState<'upload' | 'browse_part1' | 'browse_docs'>('upload');
+  const [selectedBookFilter, setSelectedBookFilter] = useState<string>('all');
+  const [previewZoomPhoto, setPreviewZoomPhoto] = useState<string | null>(null);
 
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -97,12 +103,13 @@ export const ImageSearchModal: React.FC<ImageSearchModalProps> = ({
     setProgressPercent(0);
     setExtractedText('');
     setMatchResults([]);
+    setVisualMatches([]);
     setMatchedDocsItem(null);
     setErrorMessage(null);
-    setViewCatalogTab(false);
+    setActiveTab('upload');
   };
 
-  const handleFileSelect = (file: File) => {
+  const handleFileSelect = async (file: File) => {
     if (!file.type.startsWith('image/')) {
       setErrorMessage('Vui lòng chọn một file hình ảnh hợp lệ (PNG, JPG, WebP, GIF)');
       return;
@@ -112,6 +119,17 @@ export const ImageSearchModal: React.FC<ImageSearchModalProps> = ({
     setImageFile(file);
     const url = URL.createObjectURL(file);
     setImagePreview(url);
+    setActiveTab('upload');
+
+    // 1. Run Instant Visual Image Matching on Part 1 photographs
+    try {
+      const vMatches = await matchImageToPart1Tests(file);
+      setVisualMatches(vMatches);
+    } catch (err) {
+      console.warn('Visual matching error:', err);
+    }
+
+    // 2. Run OCR Text Extraction
     processImage(file);
   };
 
@@ -119,7 +137,7 @@ export const ImageSearchModal: React.FC<ImageSearchModalProps> = ({
   const processImage = async (file: File | string) => {
     setIsProcessing(true);
     setProgressPercent(10);
-    setProgressStatus('Đang khởi tạo bộ giải mã OCR...');
+    setProgressStatus('Đang phân tích hình ảnh và nhận diện...');
     setErrorMessage(null);
     setMatchResults([]);
     setMatchedDocsItem(null);
@@ -128,13 +146,13 @@ export const ImageSearchModal: React.FC<ImageSearchModalProps> = ({
       const result = await Tesseract.recognize(file, 'eng', {
         logger: (m) => {
           if (m.status === 'recognizing text') {
-            setProgressStatus('Đang nhận diện chữ tiếng Anh trong ảnh...');
+            setProgressStatus('Đang đọc chữ trong ảnh...');
             setProgressPercent(Math.round((m.progress || 0) * 100));
           } else if (m.status === 'loading tesseract core') {
-            setProgressStatus('Đang tải thư viện OCR...');
+            setProgressStatus('Đang tải mô hình OCR...');
             setProgressPercent(30);
           } else if (m.status === 'loading language traineddata') {
-            setProgressStatus('Đang nạp mô hình từ điển tiếng Anh...');
+            setProgressStatus('Đang nạp từ điển tiếng Anh...');
             setProgressPercent(50);
           }
         },
@@ -144,20 +162,13 @@ export const ImageSearchModal: React.FC<ImageSearchModalProps> = ({
       const cleanText = rawText.replace(/\s+/g, ' ').trim();
       setExtractedText(cleanText);
 
-      if (!cleanText) {
-        setErrorMessage('Không nhận diện được ký tự chữ nào rõ ràng trong ảnh. Hãy thử ảnh chụp thẳng góc và rõ nét hơn!');
-        setIsProcessing(false);
-        return;
+      if (cleanText) {
+        setProgressStatus('Đang so khớp với câu hỏi trong đề...');
+        setProgressPercent(95);
+        findMatches(cleanText);
       }
-
-      setProgressStatus('Đang so khớp với 5.666 câu hỏi nội bộ...');
-      setProgressPercent(95);
-
-      // Perform matching across all database questions
-      findMatches(cleanText);
     } catch (err: any) {
       console.error('OCR Error:', err);
-      setErrorMessage('Lỗi xử lý OCR: ' + (err.message || 'Không thể đọc ảnh. Vui lòng thử lại.'));
     } finally {
       setIsProcessing(false);
       setProgressPercent(100);
@@ -165,7 +176,7 @@ export const ImageSearchModal: React.FC<ImageSearchModalProps> = ({
     }
   };
 
-  // Smart matcher
+  // Smart text matcher
   const findMatches = (text: string) => {
     const norm = (s: string) =>
       (s || '')
@@ -210,14 +221,12 @@ export const ImageSearchModal: React.FC<ImageSearchModalProps> = ({
       const qNorm = norm(q.question);
       const optNorm = norm(Object.values(q.options).join(' '));
 
-      // Direct sentence / phrase containment
       if (qNorm.length > 15 && normText.includes(qNorm.slice(0, 25))) {
         score += 150;
       } else if (normText.length > 15 && qNorm.includes(normText.slice(0, 25))) {
         score += 120;
       }
 
-      // Keyword token overlap
       let hitTokens = 0;
       for (const t of tokens) {
         if (qNorm.includes(t)) {
@@ -290,23 +299,27 @@ export const ImageSearchModal: React.FC<ImageSearchModalProps> = ({
       }
     }
 
-    // Sort descending by score
     matches.sort((a, b) => b.score - a.score);
     setMatchResults(matches.slice(0, 8));
   };
 
-  const handleSelectMatch = (m: MatchResult) => {
-    onSelectQuery(m.queryToSearch || `#${m.num}`);
+  const handleOpenAnswersForTest = (bookId: string, testNum: string) => {
+    useQuizStore.getState().openFullAnswers({
+      book: bookId,
+      test: String(testNum),
+    });
     onClose();
   };
 
   const handleOpenDocInAnswers = (doc: DocsImageItem) => {
     if (doc.test) {
       useQuizStore.getState().openFullAnswers({
-        book: doc.book.includes('YBM')
-          ? 'YBM 1000 Vol 1 (Docs 5)'
+        book: doc.book.includes('YBM 1000')
+          ? 'YBM 1000 Vol 1 (RC 101-200)'
+          : doc.book.includes('YBM')
+          ? 'YBM 2025 (RC 101-200)'
           : doc.book.includes('Hacker 3')
-          ? 'Hacker 3 (Full 200 câu)'
+          ? 'Hacker 3 (RC 101-200)'
           : 'Hacker 2 (Full 200 câu)',
         test: String(doc.test),
       });
@@ -317,23 +330,36 @@ export const ImageSearchModal: React.FC<ImageSearchModalProps> = ({
     }
   };
 
+  const filteredCatalog = PART1_TESTS_CATALOG.filter((item) => {
+    if (selectedBookFilter === 'all') return true;
+    if (selectedBookFilter === 'hacker2') return item.bookId.includes('Hacker 2');
+    if (selectedBookFilter === 'ybm_vol1') return item.bookId.includes('YBM 1000');
+    if (selectedBookFilter === 'ybm_2025') return item.bookId.includes('YBM 2025');
+    if (selectedBookFilter === 'hacker3') return item.bookId.includes('Hacker 3');
+    if (selectedBookFilter === 'docs2') return item.bookId.includes('Docs 2');
+    return true;
+  });
+
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/60 backdrop-blur-xs animate-in fade-in duration-150">
-      <div className="bg-[#FAF7F2] rounded-3xl border border-[#E8DFD3] shadow-2xl w-full max-w-2xl max-h-[92vh] flex flex-col overflow-hidden animate-in zoom-in-95 duration-150">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/60 backdrop-blur-xs animate-in fade-in duration-150">
+      <div className="bg-[#FAF7F2] rounded-3xl border border-[#E8DFD3] shadow-2xl w-full max-w-3xl max-h-[94vh] flex flex-col overflow-hidden animate-in zoom-in-95 duration-150">
         {/* Header */}
-        <div className="px-5 py-4 bg-white border-b border-[#EFE8DE] flex items-center justify-between shrink-0">
+        <div className="px-5 py-3.5 bg-white border-b border-[#EFE8DE] flex items-center justify-between shrink-0">
           <div className="flex items-center gap-2.5">
-            <div className="w-9 h-9 rounded-2xl bg-amber-500 text-white flex items-center justify-center shadow-xs">
+            <div className="w-9 h-9 rounded-2xl bg-gradient-to-tr from-amber-500 to-amber-600 text-white flex items-center justify-center shadow-xs">
               <Camera className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="text-base font-extrabold text-[#262320]">
-                Tìm Kiếm Bằng Hình Ảnh / Dán Ảnh (OCR)
+              <h3 className="text-base font-extrabold text-[#262320] flex items-center gap-2">
+                <span>Tìm Đề Bằng Hình Ảnh Tương Tự</span>
+                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-200">
+                  Visual Matcher + 6 Ảnh Part 1
+                </span>
               </h3>
               <p className="text-xs text-[#8C8276]">
-                Chụp ảnh đề, dán ảnh (Ctrl+V) hoặc chọn ảnh trong bộ Docs để tra câu tương tự
+                So khớp 6 ảnh Part 1 để nhận diện ngay bạn đang làm đề nào, hoặc đọc chữ đề thi
               </p>
             </div>
           </div>
@@ -348,35 +374,49 @@ export const ImageSearchModal: React.FC<ImageSearchModalProps> = ({
           </button>
         </div>
 
-        {/* Tab switch: Upload vs Browse Docs Catalog */}
-        <div className="px-5 pt-3 pb-2 flex gap-2 bg-[#FAF7F2] border-b border-[#EFE8DE] text-xs font-bold shrink-0">
+        {/* 3 Main Mode Tabs */}
+        <div className="px-5 pt-2.5 pb-2 flex items-center gap-2 bg-[#FAF7F2] border-b border-[#EFE8DE] text-xs font-bold shrink-0 overflow-x-auto">
           <button
-            onClick={() => setViewCatalogTab(false)}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl transition cursor-pointer ${
-              !viewCatalogTab
+            onClick={() => setActiveTab('upload')}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl transition cursor-pointer whitespace-nowrap ${
+              activeTab === 'upload'
                 ? 'bg-amber-500 text-white shadow-2xs'
                 : 'text-[#6B635B] hover:bg-white'
             }`}
           >
             <UploadCloud className="w-3.5 h-3.5" />
-            <span>Tải / Dán Ảnh Của Bạn (OCR)</span>
+            <span>Tải / Dán Ảnh Đề (So Khớp Tự Động)</span>
           </button>
           <button
-            onClick={() => setViewCatalogTab(true)}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl transition cursor-pointer ${
-              viewCatalogTab
+            onClick={() => setActiveTab('browse_part1')}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl transition cursor-pointer whitespace-nowrap ${
+              activeTab === 'browse_part1'
                 ? 'bg-sky-600 text-white shadow-2xs'
                 : 'text-[#6B635B] hover:bg-white'
             }`}
           >
+            <Grid className="w-3.5 h-3.5" />
+            <span>Kho 6 Ảnh Part 1 Tất Cả Các Đề (41 Đề)</span>
+          </button>
+          <button
+            onClick={() => setActiveTab('browse_docs')}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl transition cursor-pointer whitespace-nowrap ${
+              activeTab === 'browse_docs'
+                ? 'bg-emerald-600 text-white shadow-2xs'
+                : 'text-[#6B635B] hover:bg-white'
+            }`}
+          >
             <ImageIcon className="w-3.5 h-3.5" />
-            <span>Kho 194 Ảnh Đề & Đáp Án Docs Cũ</span>
+            <span>194 Ảnh Docs Cũ & Bảng Đáp Án</span>
           </button>
         </div>
 
         {/* Body content */}
-        <div className="flex-1 overflow-y-auto p-5 space-y-4 min-h-0">
-          {!viewCatalogTab ? (
+        <div className="flex-1 overflow-y-auto p-4 sm:p-5 space-y-4 min-h-0">
+          {/* ======================================================== */}
+          {/* TAB 1: UPLOAD / PASTE & AUTO VISUAL MATCHING              */}
+          {/* ======================================================== */}
+          {activeTab === 'upload' && (
             <>
               {/* Drop / Upload Zone */}
               <div
@@ -392,11 +432,11 @@ export const ImageSearchModal: React.FC<ImageSearchModalProps> = ({
                   if (file) handleFileSelect(file);
                 }}
                 onClick={() => fileInputRef.current?.click()}
-                className={`border-2 border-dashed rounded-2xl p-5 text-center cursor-pointer transition-all ${
+                className={`border-2 border-dashed rounded-2xl p-4 sm:p-5 text-center cursor-pointer transition-all ${
                   dragOver
                     ? 'border-amber-500 bg-amber-50/80 scale-[0.99]'
                     : imagePreview
-                    ? 'border-emerald-300 bg-emerald-50/30'
+                    ? 'border-emerald-300 bg-emerald-50/20'
                     : 'border-[#DCD3C7] bg-white hover:border-amber-400 hover:bg-amber-50/30'
                 }`}
               >
@@ -417,23 +457,23 @@ export const ImageSearchModal: React.FC<ImageSearchModalProps> = ({
                     <img
                       src={imagePreview}
                       alt="Xem trước ảnh chụp"
-                      className="max-h-44 max-w-full rounded-xl border border-[#DCD3C7] object-contain bg-white shadow-xs"
+                      className="max-h-40 max-w-full rounded-xl border border-[#DCD3C7] object-contain bg-white shadow-xs"
                     />
                     <div className="text-left space-y-1.5 flex-1">
                       <div className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-emerald-100 text-emerald-800 text-[11px] font-bold">
                         <Check className="w-3 h-3 text-emerald-600" />
-                        <span>Đã nạp ảnh thành công</span>
+                        <span>Đã tải ảnh lên thành công</span>
                       </div>
                       <p className="text-xs font-bold text-[#262320]">
-                        {imageFile?.name || 'Ảnh chụp đề TOEIC'}
+                        {imageFile?.name || 'Ảnh đề thi TOEIC'}
                       </p>
                       <p className="text-[11px] text-[#8C8276]">
-                        Bấm vào khung này nếu bạn muốn chọn ảnh khác, hoặc nhấn Ctrl+V để dán ảnh mới.
+                        Bấm vào khung để đổi ảnh, hoặc nhấn <kbd className="px-1 py-0.5 bg-gray-100 border rounded text-[9.5px]">Ctrl+V</kbd> để dán ảnh mới bất kỳ lúc nào.
                       </p>
                     </div>
                   </div>
                 ) : (
-                  <div className="space-y-2 py-3">
+                  <div className="space-y-2 py-2">
                     <div className="w-12 h-12 mx-auto rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center">
                       <UploadCloud className="w-6 h-6" />
                     </div>
@@ -441,15 +481,22 @@ export const ImageSearchModal: React.FC<ImageSearchModalProps> = ({
                       Kéo thả ảnh vào đây, hoặc <span className="text-amber-600 underline">bấm để chọn file / chụp camera</span>
                     </p>
                     <p className="text-xs text-[#8C8276]">
-                      Mẹo: Có thể chụp ảnh màn hình rồi nhấn <kbd className="px-1.5 py-0.5 bg-gray-100 border border-gray-300 rounded text-[10px] font-mono">Ctrl + V</kbd> (hoặc <kbd className="px-1.5 py-0.5 bg-gray-100 border border-gray-300 rounded text-[10px] font-mono">⌘ + V</kbd>) dán trực tiếp!
+                      Nhận diện được: <strong>1 bức ảnh tranh Part 1</strong>, hoặc <strong>ảnh chụp cả trang (2–6 tranh)</strong>, hoặc ảnh câu hỏi trắc nghiệm!
                     </p>
                   </div>
                 )}
               </div>
 
-              {/* Progress bar during OCR */}
+              {/* Error banner */}
+              {errorMessage && (
+                <div className="p-2.5 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-xs font-semibold">
+                  {errorMessage}
+                </div>
+              )}
+
+              {/* Processing bar */}
               {isProcessing && (
-                <div className="bg-white p-4 rounded-2xl border border-amber-200 shadow-xs space-y-2.5 animate-in fade-in">
+                <div className="bg-white p-3.5 rounded-2xl border border-amber-200 shadow-xs space-y-2 animate-in fade-in">
                   <div className="flex items-center justify-between text-xs font-bold text-[#5C5247]">
                     <div className="flex items-center gap-2">
                       <Loader2 className="w-4 h-4 text-amber-500 animate-spin" />
@@ -457,48 +504,111 @@ export const ImageSearchModal: React.FC<ImageSearchModalProps> = ({
                     </div>
                     <span className="font-mono text-amber-600">{progressPercent}%</span>
                   </div>
-                  <div className="w-full bg-gray-100 rounded-full h-2 overflow-hidden">
+                  <div className="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden">
                     <div
-                      className="bg-amber-500 h-2 rounded-full transition-all duration-300"
+                      className="bg-amber-500 h-1.5 rounded-full transition-all duration-200"
                       style={{ width: `${progressPercent}%` }}
                     />
                   </div>
                 </div>
               )}
 
-              {/* Error Alert */}
-              {errorMessage && (
-                <div className="p-3 bg-rose-50 border border-rose-200 rounded-xl text-xs text-rose-800 flex items-start gap-2">
-                  <AlertCircle className="w-4 h-4 text-rose-600 shrink-0 mt-0.5" />
-                  <span>{errorMessage}</span>
-                </div>
-              )}
-
-              {/* Recognized Text Snippet */}
-              {extractedText && (
-                <div className="bg-white p-3.5 rounded-2xl border border-[#EFE8DE] shadow-xs space-y-1.5">
+              {/* TOP RESULT: VISUAL PART 1 MATCHES */}
+              {visualMatches.length > 0 && (
+                <div className="space-y-3 pt-1">
                   <div className="flex items-center justify-between">
-                    <span className="text-[11px] font-extrabold text-[#5C5247] uppercase tracking-wider flex items-center gap-1.5">
-                      <FileText className="w-3.5 h-3.5 text-amber-500" />
-                      Văn bản trích xuất từ ảnh (OCR):
-                    </span>
-                    <button
-                      onClick={() => {
-                        onSelectQuery(extractedText.slice(0, 50));
-                        onClose();
-                      }}
-                      className="text-[11px] text-sky-600 font-bold hover:underline cursor-pointer"
-                    >
-                      Dùng tìm kiếm ↗
-                    </button>
+                    <h4 className="text-xs font-extrabold text-[#262320] uppercase tracking-wide flex items-center gap-1.5">
+                      <Sparkles className="w-4 h-4 text-emerald-600" />
+                      <span>🎯 Kết Quả So Khớp Hình Ảnh Part 1 ({visualMatches.length} bộ đề tương tự)</span>
+                    </h4>
+                    <span className="text-[10px] text-[#8C8276]">Độ tương đồng cao nhất</span>
                   </div>
-                  <p className="text-xs text-[#262320] bg-[#FAF8F5] p-2.5 rounded-xl border border-[#F2ECE3] font-mono leading-relaxed line-clamp-3">
-                    "{extractedText}"
-                  </p>
+
+                  {visualMatches.slice(0, 3).map((match, idx) => {
+                    const isTop1 = idx === 0;
+                    return (
+                      <div
+                        key={`${match.bookId}-${match.testNum}`}
+                        className={`rounded-2xl border p-3.5 transition shadow-xs space-y-3 ${
+                          isTop1
+                            ? 'bg-gradient-to-r from-emerald-50/80 via-white to-emerald-50/50 border-emerald-300 ring-2 ring-emerald-400/20'
+                            : 'bg-white border-[#E8DFD3]'
+                        }`}
+                      >
+                        {/* Match Header */}
+                        <div className="flex flex-wrap items-center justify-between gap-2">
+                          <div className="flex items-center gap-2">
+                            <span className={`w-6 h-6 rounded-lg text-white font-black text-xs flex items-center justify-center ${
+                              isTop1 ? 'bg-emerald-600 shadow-2xs' : 'bg-gray-400'
+                            }`}>
+                              #{idx + 1}
+                            </span>
+                            <div>
+                              <p className="text-sm font-extrabold text-[#262320]">
+                                {match.bookName} • {match.testLabel}
+                              </p>
+                              <p className="text-[11px] text-[#7A7065]">
+                                Khớp với ảnh <strong>Câu #{match.matchedQNum}</strong> ({match.sampleLabel || 'vùng nhận diện'})
+                              </p>
+                            </div>
+                          </div>
+
+                          <div className="flex items-center gap-2">
+                            <span className="px-2.5 py-1 rounded-lg bg-emerald-100 text-emerald-900 border border-emerald-300 text-xs font-extrabold">
+                              Khớp {match.confidence}%
+                            </span>
+                            <button
+                              onClick={() => handleOpenAnswersForTest(match.bookId, match.testNum)}
+                              className="flex items-center gap-1 px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs shadow-2xs transition cursor-pointer"
+                            >
+                              <Table className="w-3.5 h-3.5" />
+                              <span>Mở Full 200 Đáp Án</span>
+                            </button>
+                          </div>
+                        </div>
+
+                        {/* 6 Part 1 Pictures of this Matched Test */}
+                        <div className="pt-1 border-t border-gray-100">
+                          <p className="text-[10px] font-bold text-[#8C8276] uppercase tracking-wider mb-1.5">
+                            🖼️ 6 Hình Part 1 của bộ đề này để đối chiếu:
+                          </p>
+                          <div className="grid grid-cols-6 gap-1.5">
+                            {match.allPhotos.map((photo) => {
+                              const isTargetHit = photo.qNum === match.matchedQNum;
+                              return (
+                                <div
+                                  key={photo.qNum}
+                                  onClick={() => setPreviewZoomPhoto(photo.imageUrl)}
+                                  className={`relative rounded-lg p-0.5 border cursor-pointer group bg-gray-50 ${
+                                    isTargetHit
+                                      ? 'border-emerald-500 ring-2 ring-emerald-300'
+                                      : 'border-gray-200 hover:border-sky-400'
+                                  }`}
+                                  title={`Câu #${photo.qNum} - Bấm để phóng to`}
+                                >
+                                  <span className={`absolute top-1 left-1 z-10 px-1 py-0.2 rounded text-[8.5px] font-mono font-bold ${
+                                    isTargetHit ? 'bg-emerald-600 text-white' : 'bg-black/60 text-white'
+                                  }`}>
+                                    #{photo.qNum}
+                                  </span>
+                                  <img
+                                    src={photo.imageUrl}
+                                    alt={`Câu #${photo.qNum}`}
+                                    className="w-full h-14 sm:h-16 object-contain rounded group-hover:scale-105 transition"
+                                    loading="lazy"
+                                  />
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
               )}
 
-              {/* Recognized Docs Catalog Match if present */}
+              {/* Recognized Docs Catalog Match */}
               {matchedDocsItem && (
                 <div className="bg-sky-50 border-2 border-sky-300 p-3.5 rounded-2xl shadow-xs space-y-2">
                   <div className="flex items-center justify-between">
@@ -512,7 +622,6 @@ export const ImageSearchModal: React.FC<ImageSearchModalProps> = ({
                       {matchedDocsItem.folder}
                     </span>
                   </div>
-                  <p className="text-xs text-sky-800">{matchedDocsItem.type}</p>
                   <div className="flex gap-2 pt-1">
                     <button
                       onClick={() => handleOpenDocInAnswers(matchedDocsItem)}
@@ -521,75 +630,177 @@ export const ImageSearchModal: React.FC<ImageSearchModalProps> = ({
                       <Table className="w-3.5 h-3.5" />
                       <span>Xem Full 200 Đáp Án Bộ Đề Này</span>
                     </button>
-                    {matchedDocsItem.test && (
-                      <button
-                        onClick={() => {
-                          onSelectQuery(`${matchedDocsItem.book} Test ${matchedDocsItem.test}`);
-                          onClose();
-                        }}
-                        className="px-3 py-1.5 rounded-xl bg-white border border-sky-300 text-sky-800 text-xs font-bold hover:bg-sky-100 transition cursor-pointer"
-                      >
-                        Lọc câu hỏi trong đề
-                      </button>
-                    )}
                   </div>
                 </div>
               )}
 
-              {/* Matching Questions List */}
+              {/* Text Match Results if present */}
               {matchResults.length > 0 && (
-                <div className="space-y-2.5">
-                  <div className="flex items-center justify-between">
-                    <h4 className="text-xs font-extrabold text-[#262320] uppercase tracking-wide flex items-center gap-1.5">
-                      <Sparkles className="w-3.5 h-3.5 text-amber-500" />
-                      Các câu hỏi khớp / tương tự ({matchResults.length} câu)
-                    </h4>
-                    <span className="text-[10.5px] text-[#8C8276]">Bấm để nhảy tới câu</span>
-                  </div>
+                <div className="space-y-2 pt-2">
+                  <h4 className="text-xs font-extrabold text-[#262320] uppercase tracking-wide flex items-center gap-1.5">
+                    <FileText className="w-3.5 h-3.5 text-amber-500" />
+                    <span title={extractedText ? `Nội dung chữ OCR: ${extractedText.slice(0, 100)}` : undefined}>
+                      Câu Hỏi Khớp Theo Nội Dung Chữ ({matchResults.length} câu)
+                    </span>
+                  </h4>
 
                   <div className="space-y-2">
-                    {matchResults.map((m, idx) => (
+                    {matchResults.slice(0, 4).map((m, idx) => (
                       <div
                         key={idx}
-                        onClick={() => handleSelectMatch(m)}
-                        className="bg-white p-3.5 rounded-2xl border border-[#E8DFD3] hover:border-amber-400 hover:shadow-xs transition cursor-pointer space-y-1.5 group"
+                        onClick={() => {
+                          onSelectQuery(m.queryToSearch || `#${m.num}`);
+                          onClose();
+                        }}
+                        className="bg-white p-3 rounded-2xl border border-[#E8DFD3] hover:border-amber-400 hover:shadow-xs transition cursor-pointer space-y-1 group"
                       >
                         <div className="flex items-center justify-between">
                           <span className="text-xs font-bold text-[#262320] group-hover:text-amber-700 transition">
                             {m.title}
                           </span>
-                          <span className="text-[10.5px] font-bold px-2 py-0.5 rounded-md bg-amber-100 text-amber-900 border border-amber-200">
+                          <span className="text-[10px] font-bold px-2 py-0.5 rounded-md bg-amber-100 text-amber-900 border border-amber-200">
                             Khớp {Math.min(99, Math.round(m.score))}%
                           </span>
                         </div>
-
                         <div className="text-[11px] text-[#8C8276]">{m.subtitle}</div>
-
                         {m.correctAnswer && (
-                          <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11.5px] font-bold">
-                            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                          <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 text-[11px] font-bold">
+                            <CheckCircle2 className="w-3 h-3 text-emerald-600" />
                             <span>Đáp án chuẩn: {m.correctAnswer}</span>
                           </div>
                         )}
-
-                        {m.explanation && (
-                          <p className="text-[11px] text-[#5C554E] line-clamp-2 italic">
-                            💡 {m.explanation}
-                          </p>
-                        )}
-
-                        <div className="flex items-center justify-end text-[11px] text-amber-600 font-bold group-hover:translate-x-0.5 transition pt-0.5">
-                          <span>Xem câu hỏi này và đề thi</span>
-                          <ArrowRight className="w-3 h-3 ml-1" />
-                        </div>
                       </div>
                     ))}
                   </div>
                 </div>
               )}
             </>
-          ) : (
-            /* ---- BROWSE DOCS CATALOG TAB ---- */
+          )}
+
+          {/* ======================================================== */}
+          {/* TAB 2: BROWSE ALL 41 TEST SETS WITH 6 PART 1 PICTURES     */}
+          {/* ======================================================== */}
+          {activeTab === 'browse_part1' && (
+            <div className="space-y-3">
+              {/* Filter pills */}
+              <div className="flex flex-wrap items-center gap-1.5 pb-1">
+                <button
+                  onClick={() => setSelectedBookFilter('all')}
+                  className={`px-2.5 py-1 rounded-xl text-xs font-bold transition cursor-pointer ${
+                    selectedBookFilter === 'all'
+                      ? 'bg-sky-600 text-white shadow-2xs'
+                      : 'bg-white border text-gray-700 hover:bg-gray-50'
+                  }`}
+                >
+                  Tất cả ({PART1_TESTS_CATALOG.length} đề)
+                </button>
+                <button
+                  onClick={() => setSelectedBookFilter('hacker2')}
+                  className={`px-2.5 py-1 rounded-xl text-xs font-bold transition cursor-pointer ${
+                    selectedBookFilter === 'hacker2'
+                      ? 'bg-sky-600 text-white shadow-2xs'
+                      : 'bg-white border text-gray-700 hover:bg-gray-50'
+                  }`}
+                >
+                  Hacker 2 (10 đề)
+                </button>
+                <button
+                  onClick={() => setSelectedBookFilter('ybm_vol1')}
+                  className={`px-2.5 py-1 rounded-xl text-xs font-bold transition cursor-pointer ${
+                    selectedBookFilter === 'ybm_vol1'
+                      ? 'bg-sky-600 text-white shadow-2xs'
+                      : 'bg-white border text-gray-700 hover:bg-gray-50'
+                  }`}
+                >
+                  YBM 1000 Vol 1 (10 đề)
+                </button>
+                <button
+                  onClick={() => setSelectedBookFilter('ybm_2025')}
+                  className={`px-2.5 py-1 rounded-xl text-xs font-bold transition cursor-pointer ${
+                    selectedBookFilter === 'ybm_2025'
+                      ? 'bg-sky-600 text-white shadow-2xs'
+                      : 'bg-white border text-gray-700 hover:bg-gray-50'
+                  }`}
+                >
+                  YBM 2025 (10 đề)
+                </button>
+                <button
+                  onClick={() => setSelectedBookFilter('hacker3')}
+                  className={`px-2.5 py-1 rounded-xl text-xs font-bold transition cursor-pointer ${
+                    selectedBookFilter === 'hacker3'
+                      ? 'bg-sky-600 text-white shadow-2xs'
+                      : 'bg-white border text-gray-700 hover:bg-gray-50'
+                  }`}
+                >
+                  Hacker 3 (10 đề)
+                </button>
+                <button
+                  onClick={() => setSelectedBookFilter('docs2')}
+                  className={`px-2.5 py-1 rounded-xl text-xs font-bold transition cursor-pointer ${
+                    selectedBookFilter === 'docs2'
+                      ? 'bg-sky-600 text-white shadow-2xs'
+                      : 'bg-white border text-gray-700 hover:bg-gray-50'
+                  }`}
+                >
+                  Docs 2
+                </button>
+              </div>
+
+              {/* Test list */}
+              <div className="space-y-3">
+                {filteredCatalog.map((item) => (
+                  <div
+                    key={`${item.bookId}-${item.testNum}`}
+                    className="bg-white rounded-2xl border border-[#E8DFD3] p-3 shadow-2xs space-y-2 hover:border-sky-300 transition"
+                  >
+                    <div className="flex items-center justify-between pb-1 border-b border-gray-100">
+                      <div>
+                        <span className="text-xs font-extrabold text-[#262320]">
+                          {item.bookName} • {item.testLabel}
+                        </span>
+                        <span className="ml-2 text-[10px] font-mono text-[#8C8276]">
+                          {item.photos.length} hình Part 1
+                        </span>
+                      </div>
+                      <button
+                        onClick={() => handleOpenAnswersForTest(item.bookId, item.testNum)}
+                        className="flex items-center gap-1 px-2.5 py-1 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-[11px] font-bold shadow-2xs transition cursor-pointer"
+                      >
+                        <Table className="w-3 h-3" />
+                        <span>Xem Full 200 Đáp Án</span>
+                      </button>
+                    </div>
+
+                    {/* 6 Photos Grid */}
+                    <div className="grid grid-cols-6 gap-1.5">
+                      {item.photos.map((photo) => (
+                        <div
+                          key={photo.qNum}
+                          onClick={() => setPreviewZoomPhoto(photo.imageUrl)}
+                          className="relative rounded-lg p-0.5 border border-gray-200 hover:border-sky-500 bg-gray-50 cursor-pointer group"
+                        >
+                          <span className="absolute top-1 left-1 z-10 px-1 py-0.2 rounded text-[8.5px] font-mono font-bold bg-black/60 text-white">
+                            #{photo.qNum}
+                          </span>
+                          <img
+                            src={photo.imageUrl}
+                            alt={`Câu #${photo.qNum}`}
+                            className="w-full h-14 sm:h-18 object-contain rounded group-hover:scale-105 transition"
+                            loading="lazy"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* ======================================================== */}
+          {/* TAB 3: BROWSE OLD DOCS IMAGES (194 ITEMS)                 */}
+          {/* ======================================================== */}
+          {activeTab === 'browse_docs' && (
             <div className="space-y-3">
               <div className="p-3 bg-white rounded-2xl border border-[#EFE8DE] text-xs text-[#5C5247]">
                 <p className="font-bold text-[#262320] mb-1">
@@ -654,7 +865,7 @@ export const ImageSearchModal: React.FC<ImageSearchModalProps> = ({
         <div className="px-5 py-3 bg-white border-t border-[#EFE8DE] flex items-center justify-between shrink-0">
           <span className="text-[11px] text-[#8C8276] flex items-center gap-1">
             <HelpCircle className="w-3.5 h-3.5 text-amber-500" />
-            OCR chạy 100% trong trình duyệt máy bạn (Client-side), an toàn & bảo mật
+            Nhận diện hình ảnh thị giác (dHash + Canvas) 100% trong trình duyệt của bạn
           </span>
           <button
             onClick={() => {
@@ -667,6 +878,31 @@ export const ImageSearchModal: React.FC<ImageSearchModalProps> = ({
           </button>
         </div>
       </div>
+
+      {/* Lightbox Image Zoom */}
+      {previewZoomPhoto && (
+        <div
+          className="fixed inset-0 z-60 flex items-center justify-center p-4 bg-black/80 backdrop-blur-xs animate-in fade-in"
+          onClick={() => setPreviewZoomPhoto(null)}
+        >
+          <div
+            className="relative bg-white rounded-3xl p-3 max-w-lg w-full shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setPreviewZoomPhoto(null)}
+              className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black transition cursor-pointer"
+            >
+              <X className="w-4 h-4" />
+            </button>
+            <img
+              src={previewZoomPhoto}
+              alt="Ảnh phóng to"
+              className="w-full h-auto max-h-[75vh] object-contain rounded-2xl"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };

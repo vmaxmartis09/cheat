@@ -13,6 +13,7 @@ import {
   Clock,
   BookOpen,
 } from 'lucide-react';
+import { QuestionExamNavButtons } from './QuestionExamNavButtons';
 
 interface ResultsViewProps {
   onGoToPracticeMistakes: () => void;
@@ -344,6 +345,10 @@ export const ResultsView: React.FC<ResultsViewProps> = ({
                 <div className="p-1.5 rounded-md bg-amber-50 border border-amber-200 text-amber-900 text-[10.5px] flex items-start gap-1">
                   <Sparkles className="w-3 h-3 text-amber-600 shrink-0 mt-0.5" />
                   <span>{m.tip}</span>
+                </div>
+
+                <div className="pt-1 flex justify-end">
+                  <QuestionExamNavButtons question={{ id: m.questionId, num: m.questionNum }} variant="mini" />
                 </div>
               </div>
             ))}

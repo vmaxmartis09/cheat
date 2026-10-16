@@ -15,9 +15,8 @@ import {
   HelpCircle,
   AlertTriangle,
   RotateCcw,
-  CheckCircle2,
 } from 'lucide-react';
-import { resolveBookAndTestFromSource } from '../data/masterLookupKeys';
+import { QuestionExamNavButtons } from './QuestionExamNavButtons';
 
 export const PassageCard: React.FC = () => {
   const {
@@ -31,7 +30,6 @@ export const PassageCard: React.FC = () => {
     jumpToIndex,
     reviewTimeLeft,
     tickReviewTimer,
-    openFullAnswers,
   } = useQuizStore();
 
   const currentQ = questions[currentIndex];
@@ -338,18 +336,8 @@ export const PassageCard: React.FC = () => {
                 </button>
               </div>
 
-              {/* Full Answer Lookup */}
-              <button
-                onClick={() => {
-                  const resolved = resolveBookAndTestFromSource(currentQ.source, currentQ.id, currentQ.num);
-                  openFullAnswers(resolved || { questionNum: currentQ.num });
-                }}
-                className="flex items-center gap-1 text-xs px-2.5 py-1 rounded-lg font-bold bg-emerald-600 hover:bg-emerald-700 text-white transition cursor-pointer shadow-2xs"
-                title="Xem trọn bộ đáp án 200 câu của bộ đề này"
-              >
-                <CheckCircle2 className="w-3.5 h-3.5" />
-                <span>Full Đáp Án</span>
-              </button>
+              {/* Exam Set & Full Answer Navigation */}
+              <QuestionExamNavButtons question={currentQ} variant="mini" hidePractice />
 
               {/* Fullscreen Expand */}
               <button
@@ -489,7 +477,9 @@ export const PassageCard: React.FC = () => {
                       </span>
                     </div>
 
-                    {isAnswered && (
+                    <div className="flex items-center gap-1.5 shrink-0 flex-wrap">
+                      <QuestionExamNavButtons question={q} variant="mini" hidePractice />
+                      {isAnswered && (
                       <span
                         className={`px-2.5 py-0.5 rounded-full text-[11px] font-bold flex items-center gap-1 ${
                           isCorrect
@@ -510,6 +500,7 @@ export const PassageCard: React.FC = () => {
                         )}
                       </span>
                     )}
+                    </div>
                   </div>
 
                   {/* Challenging Gentle Reminder */}

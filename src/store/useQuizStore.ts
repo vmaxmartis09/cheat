@@ -2,7 +2,7 @@ import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import { Question, AnswerChoice, StudyMode, DailyLog, MistakeRecord, QuestionProgress } from '../types';
 import { allQuestions, getQuestionsBySource, shuffleQuestions } from '../data/questions';
-import { getListeningQuestionsByPart } from '../data/listeningQuestions';
+import { getListeningQuestionsByPart, getListeningQuestionsByTestAndPart } from '../data/listeningQuestions';
 import { generateSimilarQuestion } from '../data/similarQuestions';
 import { SyncService, DEFAULT_PASSKEY, UserSyncPayload } from '../services/syncService';
 
@@ -68,6 +68,10 @@ interface QuizState {
   setActiveTab: (tab: 'practice' | 'listening' | 'results' | 'search' | 'answers') => void;
   fullAnswerTarget: { book?: string; test?: string; questionNum?: number } | null;
   openFullAnswers: (target?: { book?: string; test?: string; questionNum?: number }) => void;
+  examSetTarget: { examSetId: string; examSetName: string; originId?: string; questionNum?: number } | null;
+  openFullExamSet: (target: { examSetId: string; examSetName: string; originId?: string; questionNum?: number }) => void;
+  startPracticeExamSet: (rcSource?: string, jumpToNum?: number) => void;
+  startListeningExamSet: (lcTest?: number | string, jumpToNum?: number) => void;
   listeningCurrentIndex: number;
   setListeningCurrentIndex: (idx: number) => void;
   listeningSelectedPart: number | 'all' | 'images';
@@ -134,6 +138,43 @@ export const useQuizStore = create<QuizState>()(
           fullAnswerTarget: target || null,
         });
         scheduleAutoSync(get);
+      },
+      examSetTarget: null,
+      openFullExamSet: (target) => {
+        set({
+          activeTab: 'search',
+          examSetTarget: target,
+        });
+        scheduleAutoSync(get);
+      },
+      startPracticeExamSet: (rcSource, jumpToNum) => {
+        const source = rcSource || 'Docs 5 - Hacker 2 Test 1 Full';
+        const store = get();
+        store.setSourceFilter(source);
+        store.initSession('sequential', source, 'all');
+        const qs = get().questions;
+        let targetIdx = 0;
+        if (jumpToNum !== undefined) {
+          const idx = qs.findIndex((q) => q.num === jumpToNum);
+          if (idx !== -1) targetIdx = idx;
+        }
+        get().jumpToIndex(targetIdx);
+        set({ activeTab: 'practice' });
+      },
+      startListeningExamSet: (lcTest, jumpToNum) => {
+        const test = lcTest ?? 1;
+        set({
+          listeningSelectedTest: test,
+          listeningSelectedPart: 'all',
+          activeTab: 'listening',
+        });
+        const list = getListeningQuestionsByTestAndPart(test, 'all');
+        let targetIdx = 0;
+        if (jumpToNum !== undefined) {
+          const idx = list.findIndex((q) => q.num === jumpToNum);
+          if (idx !== -1) targetIdx = idx;
+        }
+        set({ listeningCurrentIndex: targetIdx });
       },
       listeningCurrentIndex: 0,
       listeningSelectedPart: 'all',

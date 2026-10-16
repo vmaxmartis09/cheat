@@ -2,8 +2,26 @@ import React, { useState, useEffect, useMemo, useRef } from 'react';
 import {
   MASTER_ANSWER_KEYS,
   EXAM_BOOKS_META,
+  resolveBookAndTestFromSource,
 } from '../data/masterLookupKeys';
+import {
+  allQuestions,
+  docs1Questions,
+  docs5Questions,
+  hacker3Questions,
+  hacker1Questions,
+} from '../data/questions';
+import { docs2Questions } from '../data/docs2Questions';
+import {
+  getListeningQuestionsByTestAndPart,
+  getAllListeningQuestions,
+  listeningQuestions,
+} from '../data/listeningQuestions';
+import { hackerExtraListeningQuestions } from '../data/hackerExtraListening';
+import { Question } from '../types';
 import { useQuizStore } from '../store/useQuizStore';
+import { Part1VisualStrip } from './Part1VisualStrip';
+import { resolveFullExamSetInfo } from '../data/examSetResolver';
 import {
   CheckCircle2,
   Copy,
@@ -11,26 +29,226 @@ import {
   Search,
   Layers,
   ChevronRight,
+  ChevronLeft,
   LayoutGrid,
   List,
   Headphones,
   BookOpen,
   ArrowRight,
   Sparkles,
+  X,
+  FileText,
+  Volume2,
+  Lightbulb,
+  HelpCircle,
 } from 'lucide-react';
 
+interface ResolvedQuestionInfo {
+  num: number;
+  book: string;
+  test: string;
+  partName: string;
+  correctAnswer: string;
+  questionText?: string;
+  options?: Record<string, string>;
+  explanation?: string;
+  tip?: string;
+  vietnameseMeaning?: string;
+  passage?: {
+    title?: string;
+    content?: string;
+    vietnameseTranslation?: string;
+    clue?: {
+      location?: string;
+      quote?: string;
+      scanningTip?: string;
+    };
+  };
+  listening?: {
+    part: number;
+    accent?: string;
+    transcript?: string;
+    audioUrl?: string;
+    imageUrl?: string;
+  };
+  hasFullContent: boolean;
+}
+
+function resolveQuestionDetail(
+  book: string,
+  test: string,
+  num: number,
+  officialAns: string
+): ResolvedQuestionInfo {
+  const getPartName = (n: number) => {
+    if (n <= 6) return 'Part 1 • Mô tả tranh (Photographs)';
+    if (n <= 31) return 'Part 2 • Hỏi & Đáp (Question-Response)';
+    if (n <= 70) return 'Part 3 • Hội thoại (Conversations)';
+    if (n <= 100) return 'Part 4 • Bài nói ngắn (Short Talks)';
+    if (n <= 130) return 'Part 5 • Điền câu (Incomplete Sentences)';
+    if (n <= 146) return 'Part 6 • Điền đoạn (Text Completion)';
+    return 'Part 7 • Đọc hiểu đoạn văn (Reading Comprehension)';
+  };
+
+  // 1. Listening questions (1 - 100)
+  if (num <= 100) {
+    let lq: any = null;
+    const testNum = parseInt(test, 10);
+
+    if (book.includes('Hacker 2')) {
+      const list = getListeningQuestionsByTestAndPart(testNum || 1, 'all');
+      lq = list.find((q) => q.num === num);
+    } else if (book.includes('Hacker 3')) {
+      lq = hackerExtraListeningQuestions.find(
+        (q) => q.book === 'Hacker 3' && (testNum ? q.test === testNum : true) && q.num === num
+      );
+    } else if (book.includes('Hacker 1')) {
+      lq = hackerExtraListeningQuestions.find(
+        (q) => q.book === 'Hacker 1' && q.num === num
+      );
+    } else if (book.includes('Docs 2') || book.includes('Listening')) {
+      lq = listeningQuestions.find((q) => q.num === num);
+    }
+
+    if (!lq) {
+      lq = getAllListeningQuestions().find((q) => q.num === num);
+    }
+
+    if (lq) {
+      return {
+        num,
+        book,
+        test,
+        partName: `Listening Part ${lq.part} • ${lq.category || ''}`,
+        correctAnswer: lq.correctAnswer || officialAns,
+        questionText: lq.question,
+        options: lq.options as Record<string, string>,
+        explanation: lq.explanation,
+        tip: lq.tip,
+        vietnameseMeaning: (lq as any).vietnameseMeaning,
+        listening: {
+          part: lq.part,
+          accent: lq.accent,
+          transcript: lq.transcript,
+          audioUrl: lq.audioUrl,
+          imageUrl: lq.imageUrl,
+        },
+        hasFullContent: true,
+      };
+    }
+  }
+
+  // 2. Reading questions (101 - 200)
+  let rq: Question | undefined;
+  const testNum = parseInt(test, 10);
+
+  if (book.includes('Docs 1') || book.includes('Test 2')) {
+    rq = docs1Questions.find((q) => q.num === num);
+  } else if (book.includes('Hacker 2')) {
+    rq = docs5Questions.find(
+      (q) => q.id.startsWith(`docs5_hacker2_t${testNum || 1}_`) && q.num === num
+    );
+    if (!rq) {
+      rq = docs5Questions.find(
+        (q) => q.num === num && q.source.includes('Hacker 2') && q.source.includes(`Test ${testNum || 1}`)
+      );
+    }
+  } else if (book.includes('Hacker 3')) {
+    rq = hacker3Questions.find(
+      (q) => q.id.startsWith(`docs6_hacker3_t${testNum || 1}_`) && q.num === num
+    );
+  } else if (book.includes('Hacker 1')) {
+    rq = hacker1Questions.find(
+      (q) => q.id.startsWith(`docs7_hacker1_t${testNum || 1}_`) && q.num === num
+    );
+  } else if (book.includes('YBM 1000')) {
+    rq = docs5Questions.find(
+      (q) => q.id.startsWith(`docs5_ybm1_t${testNum || 1}_`) && q.num === num
+    );
+  } else if (book.includes('Docs 2')) {
+    if (test.includes('Đề 1')) {
+      rq = docs2Questions.find(
+        (q: Question) => (q.id.startsWith('docs2_de1') || q.source.includes('Đề 1')) && q.num === num
+      );
+    } else {
+      rq = docs2Questions.find(
+        (q: Question) => (q.id.startsWith('docs2_de2') || q.source.includes('YBM')) && q.num === num
+      );
+    }
+  }
+
+  // Fallback search across all questions
+  if (!rq) {
+    rq = allQuestions.find(
+      (q) => q.num === num && (q.source.includes(book) || (testNum ? q.source.includes(`Test ${testNum}`) : false))
+    );
+  }
+  if (!rq) {
+    rq = allQuestions.find((q) => q.num === num);
+  }
+
+  if (rq) {
+    return {
+      num,
+      book,
+      test,
+      partName: rq.category || getPartName(num),
+      correctAnswer: rq.correctAnswer || officialAns,
+      questionText: rq.question,
+      options: rq.options as unknown as Record<string, string>,
+      explanation: rq.explanation,
+      tip: rq.tip,
+      vietnameseMeaning: rq.vietnameseMeaning,
+      passage: rq.passageInfo
+        ? {
+            title: rq.passageInfo.title,
+            content: rq.passageInfo.content,
+            vietnameseTranslation: rq.passageInfo.vietnameseTranslation,
+            clue: rq.clue
+              ? {
+                  location: rq.clue.clueLocation,
+                  quote: rq.clue.clueQuote,
+                  scanningTip: rq.clue.scanningTip,
+                }
+              : undefined,
+          }
+        : undefined,
+      hasFullContent: true,
+    };
+  }
+
+  return {
+    num,
+    book,
+    test,
+    partName: getPartName(num),
+    correctAnswer: officialAns,
+    hasFullContent: false,
+  };
+}
+
+const DEFAULT_BOOK_ID = EXAM_BOOKS_META[0]?.id || 'Hacker 2 (Full 200 câu)';
+
+function resolveValidBookId(rawBook?: string): string {
+  if (!rawBook) return DEFAULT_BOOK_ID;
+  if (MASTER_ANSWER_KEYS[rawBook]) return rawBook;
+  const resolved = resolveBookAndTestFromSource(rawBook);
+  if (resolved && MASTER_ANSWER_KEYS[resolved.book]) return resolved.book;
+  return DEFAULT_BOOK_ID;
+}
+
 export const FullAnswersModal: React.FC = () => {
-  const { fullAnswerTarget, setActiveTab, setListeningCurrentIndex, jumpToIndex, questions } = useQuizStore();
+  const { fullAnswerTarget, setActiveTab, setListeningCurrentIndex, jumpToIndex, questions, openFullExamSet } = useQuizStore();
 
   // Selected Book and Test
-  const [selectedBook, setSelectedBook] = useState<string>(
-    fullAnswerTarget?.book || 'Hacker 2 (Full 200 câu)'
+  const [selectedBook, setSelectedBook] = useState<string>(() =>
+    resolveValidBookId(fullAnswerTarget?.book)
   );
   const [selectedTest, setSelectedTest] = useState<string>(
     fullAnswerTarget?.test || '1'
   );
   const [highlightNum, setHighlightNum] = useState<number | undefined>(
-    fullAnswerTarget?.questionNum
+    fullAnswerTarget?.questionNum ?? (fullAnswerTarget as any)?.num
   );
 
   // View Mode: 'matrix' (Single screen 1-màn-hình) vs 'cards' (Chi tiết)
@@ -44,20 +262,75 @@ export const FullAnswersModal: React.FC = () => {
   const [partFilter, setPartFilter] = useState<'all' | 'lc' | 'rc' | 'p1' | 'p2' | 'p3' | 'p4' | 'p5' | 'p6' | 'p7'>('all');
   const [copied, setCopied] = useState<boolean>(false);
 
+  // Bottom Sheet Detail State
+  const [detailNum, setDetailNum] = useState<number | null>(null);
+  const [showPassageTranslation, setShowPassageTranslation] = useState<boolean>(false);
+  const dialogRef = useRef<HTMLDialogElement>(null);
+
+  const handleOpenDetail = (num: number) => {
+    setHighlightNum(num);
+    setDetailNum(num);
+    setShowPassageTranslation(false);
+  };
+
+  const handleCloseDetail = () => {
+    setDetailNum(null);
+  };
+
+  // Synchronize native <dialog> with detailNum state
+  useEffect(() => {
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+
+    if (detailNum !== null) {
+      if (!dialog.open) {
+        dialog.showModal();
+      }
+    } else {
+      if (dialog.open) {
+        dialog.close();
+      }
+    }
+  }, [detailNum]);
+
+  // Fallback light-dismiss for browsers without closedby support
+  useEffect(() => {
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+
+    const handleBackdropClick = (event: MouseEvent) => {
+      if (event.target !== dialog) return;
+      const rect = dialog.getBoundingClientRect();
+      const isInside = (
+        rect.top <= event.clientY &&
+        event.clientY <= rect.top + rect.height &&
+        rect.left <= event.clientX &&
+        event.clientX <= rect.left + rect.width
+      );
+      if (!isInside) {
+        handleCloseDetail();
+      }
+    };
+
+    dialog.addEventListener('click', handleBackdropClick);
+    return () => dialog.removeEventListener('click', handleBackdropClick);
+  }, []);
+
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Update when fullAnswerTarget changes from another component
   useEffect(() => {
     if (fullAnswerTarget) {
-      if (fullAnswerTarget.book && MASTER_ANSWER_KEYS[fullAnswerTarget.book]) {
-        setSelectedBook(fullAnswerTarget.book);
-      }
+      const validBook = resolveValidBookId(fullAnswerTarget.book);
+      setSelectedBook(validBook);
+
       if (fullAnswerTarget.test) {
-        setSelectedTest(fullAnswerTarget.test);
+        setSelectedTest(String(fullAnswerTarget.test));
       }
-      if (fullAnswerTarget.questionNum) {
-        setHighlightNum(fullAnswerTarget.questionNum);
-        if (fullAnswerTarget.questionNum > 100) {
+      const qNum = fullAnswerTarget.questionNum ?? (fullAnswerTarget as any)?.num;
+      if (qNum) {
+        setHighlightNum(qNum);
+        if (qNum > 100) {
           setMobileSection('rc');
         } else {
           setMobileSection('lc');
@@ -66,9 +339,11 @@ export const FullAnswersModal: React.FC = () => {
     }
   }, [fullAnswerTarget]);
 
+  const effectiveBook = MASTER_ANSWER_KEYS[selectedBook] ? selectedBook : DEFAULT_BOOK_ID;
+
   // Available tests for current book
   const availableTests = useMemo(() => {
-    const bookData = MASTER_ANSWER_KEYS[selectedBook];
+    const bookData = MASTER_ANSWER_KEYS[effectiveBook];
     if (!bookData) return ['1'];
     return Object.keys(bookData).sort((a, b) => {
       const na = parseInt(a, 10);
@@ -76,7 +351,7 @@ export const FullAnswersModal: React.FC = () => {
       if (!isNaN(na) && !isNaN(nb)) return na - nb;
       return a.localeCompare(b);
     });
-  }, [selectedBook]);
+  }, [effectiveBook]);
 
   // Ensure selected test exists in current book
   useEffect(() => {
@@ -87,13 +362,14 @@ export const FullAnswersModal: React.FC = () => {
 
   // Current answers dictionary
   const answersObj: Record<string, string> = useMemo(() => {
-    return MASTER_ANSWER_KEYS[selectedBook]?.[selectedTest] || {};
-  }, [selectedBook, selectedTest]);
+    const bookData = MASTER_ANSWER_KEYS[effectiveBook] || {};
+    return bookData[selectedTest] || bookData[availableTests[0]] || {};
+  }, [effectiveBook, selectedTest, availableTests]);
 
   // Current meta
   const currentMeta = useMemo(() => {
-    return EXAM_BOOKS_META.find((m) => m.id === selectedBook);
-  }, [selectedBook]);
+    return EXAM_BOOKS_META.find((m) => m.id === effectiveBook);
+  }, [effectiveBook]);
 
   // Sorted list of all question numbers
   const allNums = useMemo(() => {
@@ -286,7 +562,8 @@ export const FullAnswersModal: React.FC = () => {
                           key={num}
                           id={`ans-matrix-${num}`}
                           onClick={() => setHighlightNum(num)}
-                          title={`Câu ${num}: Đáp án (${ans})`}
+                          onDoubleClick={() => handleOpenDetail(num)}
+                          title={`Câu ${num}: Đáp án (${ans}) - Nhấp đúp để xem chi tiết dạng Bottom Sheet`}
                           className={`group relative flex flex-col items-center justify-center py-1 rounded-lg transition-all cursor-pointer border select-none ${
                             isHighlighted
                               ? 'ring-3 ring-amber-400 bg-amber-100 border-amber-500 scale-105 z-10 shadow-sm font-black'
@@ -402,7 +679,7 @@ export const FullAnswersModal: React.FC = () => {
             <label className="text-xs font-bold text-[#6B635B] shrink-0">Bộ đề:</label>
             <div className="relative flex-1">
               <select
-                value={selectedBook}
+                value={effectiveBook}
                 onChange={(e) => setSelectedBook(e.target.value)}
                 className="w-full appearance-none bg-[#FAF7F2] border border-[#E8DFD3] focus:border-emerald-500 rounded-xl px-3 py-1.5 text-xs sm:text-sm font-bold text-[#262320] cursor-pointer shadow-2xs pr-8"
               >
@@ -421,13 +698,13 @@ export const FullAnswersModal: React.FC = () => {
             <label className="text-xs font-bold text-[#6B635B] shrink-0">Test:</label>
             <div className="relative flex-1">
               <select
-                value={selectedTest}
+                value={availableTests.includes(selectedTest) ? selectedTest : availableTests[0] || '1'}
                 onChange={(e) => setSelectedTest(e.target.value)}
                 className="w-full appearance-none bg-[#FAF7F2] border border-[#E8DFD3] focus:border-emerald-500 rounded-xl px-3 py-1.5 text-xs sm:text-sm font-bold text-[#262320] cursor-pointer shadow-2xs pr-8"
               >
                 {availableTests.map((t) => (
                   <option key={t} value={t}>
-                    Test {t}
+                    {/^(test|đề)\b/i.test(t) ? t : `Test ${t}`}
                   </option>
                 ))}
               </select>
@@ -435,6 +712,13 @@ export const FullAnswersModal: React.FC = () => {
             </div>
           </div>
         </div>
+
+        {/* Row 2.5: 6 Hình Nhận Diện Đề (Part 1) */}
+        <Part1VisualStrip
+          bookId={effectiveBook}
+          testNum={selectedTest}
+          onSelectQuestion={(qNum) => setHighlightNum(qNum)}
+        />
 
         {/* Row 3: Filter by Part + Search number */}
         <div className="flex flex-wrap items-center justify-between gap-1.5 pt-1 border-t border-[#F0EAE1]">
@@ -634,13 +918,20 @@ export const FullAnswersModal: React.FC = () => {
             {/* Selected Question Action Bar (Floating at bottom of matrix) */}
             {highlightNum && answersObj[highlightNum] && (
               <div className="shrink-0 bg-white border border-amber-300 rounded-xl p-2.5 shadow-sm flex flex-wrap items-center justify-between gap-2 animate-in fade-in slide-in-from-bottom-2 duration-150">
-                <div className="flex items-center gap-2">
-                  <span className="w-7 h-7 rounded-lg bg-amber-500 text-white font-mono font-black text-sm flex items-center justify-center shadow-2xs">
+                <div
+                  onClick={() => handleOpenDetail(highlightNum)}
+                  className="flex items-center gap-2 cursor-pointer group"
+                  title="Nhấp để xem nội dung chi tiết dạng Bottom Sheet (hoặc nhấp đúp ô câu hỏi)"
+                >
+                  <span className="w-7 h-7 rounded-lg bg-amber-500 text-white font-mono font-black text-sm flex items-center justify-center shadow-2xs group-hover:scale-105 transition-transform">
                     {answersObj[highlightNum]}
                   </span>
                   <div>
-                    <div className="text-xs font-bold text-[#262320] flex items-center gap-1">
+                    <div className="text-xs font-bold text-[#262320] flex items-center gap-1.5">
                       <span>Câu #{highlightNum}: Đáp án là ({answersObj[highlightNum]})</span>
+                      <span className="text-[10px] text-amber-700 bg-amber-100 font-semibold px-1.5 py-0.2 rounded border border-amber-300 group-hover:bg-amber-200 transition">
+                        Xem nội dung câu
+                      </span>
                     </div>
                     <div className="text-[11px] text-[#7A7065]">
                       {getQuestionPartName(highlightNum)}
@@ -648,13 +939,24 @@ export const FullAnswersModal: React.FC = () => {
                   </div>
                 </div>
 
-                <button
-                  onClick={() => handleJumpToPractice(highlightNum)}
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-2xs transition cursor-pointer"
-                >
-                  <span>Mở luyện câu này</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </button>
+                <div className="flex items-center gap-1.5">
+                  <button
+                    onClick={() => handleOpenDetail(highlightNum)}
+                    className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-300 font-bold text-xs shadow-2xs transition cursor-pointer"
+                    title="Xem nội dung chi tiết dạng Bottom Sheet"
+                  >
+                    <FileText className="w-3.5 h-3.5 text-amber-700" />
+                    <span>Xem đề bài</span>
+                  </button>
+
+                  <button
+                    onClick={() => handleJumpToPractice(highlightNum)}
+                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-2xs transition cursor-pointer"
+                  >
+                    <span>Mở luyện câu này</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </button>
+                </div>
               </div>
             )}
           </div>
@@ -714,6 +1016,8 @@ export const FullAnswersModal: React.FC = () => {
                                 key={num}
                                 id={`ans-item-${num}`}
                                 onClick={() => setHighlightNum(num)}
+                                onDoubleClick={() => handleOpenDetail(num)}
+                                title={`Câu ${num}: Đáp án (${ans}) - Nhấp đúp để xem chi tiết dạng Bottom Sheet`}
                                 className={`flex items-center justify-between px-2.5 py-1.5 rounded-xl border transition-all cursor-pointer select-none ${
                                   isHighlighted
                                     ? 'border-emerald-500 bg-emerald-50/90 shadow-2xs ring-2 ring-emerald-400 font-bold'
@@ -754,6 +1058,322 @@ export const FullAnswersModal: React.FC = () => {
           </div>
         )}
       </div>
+
+      {/* ======================================================== */}
+      {/* BOTTOM SHEET: QUESTION CONTENT & EXPLANATION CHECK       */}
+      {/* ======================================================== */}
+      <dialog
+        ref={dialogRef}
+        closedby="any"
+        aria-labelledby="question-detail-title"
+        className="bottom-sheet-dialog"
+        onCancel={(e) => {
+          e.preventDefault();
+          handleCloseDetail();
+        }}
+      >
+        {detailNum !== null && (() => {
+          const detailAns = answersObj[detailNum] || '-';
+          const detailResolved = resolveQuestionDetail(selectedBook, selectedTest, detailNum, detailAns);
+          const detailStyle = pillColors[detailAns] || {
+            bg: 'bg-amber-500',
+            text: 'text-white',
+            badge: 'bg-amber-500 text-white',
+          };
+          const currentIdxInAll = allNums.indexOf(detailNum);
+          const prevNum = currentIdxInAll > 0 ? allNums[currentIdxInAll - 1] : null;
+          const nextNum = currentIdxInAll >= 0 && currentIdxInAll < allNums.length - 1 ? allNums[currentIdxInAll + 1] : null;
+
+          return (
+            <div className="w-full max-w-3xl mx-auto bg-white rounded-t-3xl shadow-2xl border-t border-[#E8DFD3] flex flex-col max-h-[85vh] sm:max-h-[82vh] overflow-hidden animate-in slide-in-from-bottom duration-200">
+              {/* Drag Handle Bar */}
+              <div className="pt-2.5 pb-1 flex justify-center shrink-0 cursor-grab">
+                <div className="w-12 h-1.5 rounded-full bg-[#D5CCC1]" />
+              </div>
+
+              {/* Bottom Sheet Header */}
+              <div className="px-4 py-2.5 border-b border-[#F0EAE1] flex items-center justify-between shrink-0 bg-[#FAF7F2]/90">
+                <div className="flex items-center gap-2.5 min-w-0">
+                  <span
+                    className={`w-8 h-8 rounded-xl font-mono font-black text-sm flex items-center justify-center shrink-0 shadow-2xs ${detailStyle.badge}`}
+                  >
+                    {detailAns}
+                  </span>
+                  <div className="min-w-0">
+                    <h2 id="question-detail-title" className="text-sm sm:text-base font-black text-[#262320] flex items-center gap-1.5">
+                      <span>Câu #{detailNum}</span>
+                      <span className="text-[11px] font-bold text-emerald-800 bg-emerald-100 px-2 py-0.2 rounded-full border border-emerald-300">
+                        Đáp án: {detailAns}
+                      </span>
+                    </h2>
+                    <p className="text-[11px] text-[#7A7065] truncate">
+                      {selectedBook} • Test {selectedTest} • {detailResolved.partName}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-1 shrink-0 ml-2">
+                  <button
+                    onClick={() => prevNum && handleOpenDetail(prevNum)}
+                    disabled={!prevNum}
+                    className="p-1.5 rounded-lg border border-[#E8DFD3] bg-white hover:bg-[#FAF7F2] disabled:opacity-30 disabled:pointer-events-none text-[#5C5247] cursor-pointer transition shadow-2xs"
+                    title="Câu trước"
+                  >
+                    <ChevronLeft className="w-4 h-4" />
+                  </button>
+                  <button
+                    onClick={() => nextNum && handleOpenDetail(nextNum)}
+                    disabled={!nextNum}
+                    className="p-1.5 rounded-lg border border-[#E8DFD3] bg-white hover:bg-[#FAF7F2] disabled:opacity-30 disabled:pointer-events-none text-[#5C5247] cursor-pointer transition shadow-2xs"
+                    title="Câu tiếp theo"
+                  >
+                    <ChevronRight className="w-4 h-4" />
+                  </button>
+                  <button
+                    onClick={handleCloseDetail}
+                    className="p-1.5 rounded-lg border border-[#E8DFD3] bg-white hover:bg-rose-50 hover:text-rose-600 hover:border-rose-300 text-[#7A7065] cursor-pointer ml-1 transition shadow-2xs"
+                    title="Đóng (Esc)"
+                  >
+                    <X className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+
+              {/* Scrollable Content Body */}
+              <div className="flex-1 overflow-y-auto p-4 space-y-3.5 min-h-0 text-[#262320]">
+                {/* Listening Specific: Image / Audio / Transcript */}
+                {detailResolved.listening && (
+                  <div className="space-y-3">
+                    {detailResolved.listening.imageUrl && (
+                      <div className="rounded-xl overflow-hidden border border-[#E8DFD3] bg-[#FAF8F5] flex justify-center p-2">
+                        <img
+                          src={detailResolved.listening.imageUrl}
+                          alt={`Listening Question #${detailNum}`}
+                          className="max-h-56 object-contain rounded-lg"
+                          onError={(e) => {
+                            (e.currentTarget as HTMLElement).style.display = 'none';
+                          }}
+                        />
+                      </div>
+                    )}
+
+                    {detailResolved.listening.accent && (
+                      <div className="inline-flex items-center gap-1 text-[11px] font-semibold text-sky-800 bg-sky-50 px-2 py-0.5 rounded-md border border-sky-200">
+                        <Headphones className="w-3.5 h-3.5 text-sky-600" />
+                        <span>Giọng đọc: {detailResolved.listening.accent}</span>
+                      </div>
+                    )}
+
+                    {detailResolved.listening.audioUrl && (
+                      <div className="p-2.5 rounded-xl bg-sky-50/80 border border-sky-200 flex items-center gap-2">
+                        <Volume2 className="w-4 h-4 text-sky-700 shrink-0" />
+                        <audio
+                          controls
+                          src={detailResolved.listening.audioUrl}
+                          className="w-full h-8"
+                        />
+                      </div>
+                    )}
+
+                    {detailResolved.listening.transcript && (
+                      <div className="p-3 rounded-xl bg-sky-50/70 border border-sky-200 text-xs text-sky-950 leading-relaxed whitespace-pre-wrap">
+                        <div className="font-bold text-sky-800 mb-1 flex items-center gap-1">
+                          <FileText className="w-3.5 h-3.5" />
+                          <span>Audio Transcript:</span>
+                        </div>
+                        {detailResolved.listening.transcript}
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {/* Reading Specific: Passage */}
+                {detailResolved.passage && (
+                  <div className="rounded-2xl border border-sky-200 bg-sky-50/60 p-3.5 space-y-2">
+                    <div className="flex items-center justify-between border-b border-sky-200/80 pb-1.5">
+                      <span className="font-extrabold text-xs text-sky-900 flex items-center gap-1.5">
+                        <BookOpen className="w-4 h-4 text-sky-700" />
+                        <span>{detailResolved.passage.title || 'Đoạn văn đọc hiểu'}</span>
+                      </span>
+                      {detailResolved.passage.vietnameseTranslation && (
+                        <button
+                          onClick={() => setShowPassageTranslation((prev) => !prev)}
+                          className="text-[11px] font-bold text-sky-700 hover:text-sky-900 underline cursor-pointer"
+                        >
+                          {showPassageTranslation ? 'Ẩn bản dịch' : 'Xem bản dịch tiếng Việt'}
+                        </button>
+                      )}
+                    </div>
+
+                    <div className="text-[12.5px] leading-relaxed text-[#2C2723] whitespace-pre-wrap max-h-56 overflow-y-auto pr-1">
+                      {detailResolved.passage.content}
+                    </div>
+
+                    {showPassageTranslation && detailResolved.passage.vietnameseTranslation && (
+                      <div className="pt-2 border-t border-sky-200/80 text-[11.5px] text-sky-900 leading-relaxed italic bg-white/70 p-2.5 rounded-xl">
+                        <span className="font-bold not-italic text-sky-950">Dịch nghĩa đoạn văn: </span>
+                        {detailResolved.passage.vietnameseTranslation}
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {/* Question Text */}
+                {detailResolved.questionText && (
+                  <div className="p-3.5 rounded-2xl bg-[#FAF7F2] border border-[#E8DFD3] space-y-1">
+                    <span className="text-[11px] font-bold text-[#8C8276] uppercase tracking-wide">
+                      Nội dung câu hỏi:
+                    </span>
+                    <p className="text-sm sm:text-base font-bold text-[#262320] leading-snug">
+                      {detailResolved.questionText}
+                    </p>
+                  </div>
+                )}
+
+                {/* Options Grid */}
+                {detailResolved.options && (
+                  <div className="space-y-1.5">
+                    <span className="text-[11px] font-bold text-[#8C8276] uppercase tracking-wide">
+                      Các phương án lựa chọn:
+                    </span>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      {(['A', 'B', 'C', 'D'] as const).map((choice) => {
+                        const optText = detailResolved.options?.[choice] || '';
+                        if (!optText) return null;
+                        const isCorrect = choice === detailResolved.correctAnswer;
+                        return (
+                          <div
+                            key={choice}
+                            className={`flex items-start gap-2.5 p-2.5 rounded-xl border text-xs sm:text-[13px] transition-all ${
+                              isCorrect
+                                ? 'border-emerald-500 bg-emerald-50 text-emerald-950 font-bold ring-2 ring-emerald-400 shadow-2xs'
+                                : 'border-[#EFE8DE] bg-[#FAF8F5] text-[#4A4238]'
+                            }`}
+                          >
+                            <span
+                              className={`w-5 h-5 rounded-md font-mono font-black text-xs flex items-center justify-center shrink-0 mt-0.5 ${
+                                isCorrect
+                                  ? 'bg-emerald-600 text-white shadow-2xs'
+                                  : 'bg-white text-[#7A7065] border border-[#DCD3C7]'
+                              }`}
+                            >
+                              {choice}
+                            </span>
+                            <span className="flex-1 leading-snug">{optText}</span>
+                            {isCorrect && (
+                              <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                            )}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+
+                {/* Detailed Explanation */}
+                {detailResolved.explanation && (
+                  <div className="p-3 rounded-2xl bg-amber-50/80 border border-amber-200 text-xs sm:text-[12.5px] leading-relaxed text-amber-950 space-y-1">
+                    <div className="flex items-center gap-1.5 font-bold text-amber-900">
+                      <Lightbulb className="w-4 h-4 text-amber-600" />
+                      <span>Giải thích đáp án:</span>
+                    </div>
+                    <p>{detailResolved.explanation}</p>
+                  </div>
+                )}
+
+                {/* Vietnamese meaning */}
+                {detailResolved.vietnameseMeaning && (
+                  <div className="p-3 rounded-2xl bg-emerald-50/70 border border-emerald-200 text-xs sm:text-[12.5px] leading-relaxed text-emerald-950 space-y-1">
+                    <span className="font-bold text-emerald-900">🌐 Dịch nghĩa tiếng Việt: </span>
+                    <p>{detailResolved.vietnameseMeaning}</p>
+                  </div>
+                )}
+
+                {/* Tips / Clues */}
+                {(detailResolved.tip || detailResolved.passage?.clue) && (
+                  <div className="p-3 rounded-2xl bg-[#FFF9E6] border border-amber-300/80 text-xs leading-relaxed text-[#5C4500] space-y-1.5">
+                    {detailResolved.tip && (
+                      <div>
+                        <span className="font-bold text-amber-900 flex items-center gap-1 mb-0.5">
+                          <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+                          <span>Mẹo làm nhanh:</span>
+                        </span>
+                        <p>{detailResolved.tip}</p>
+                      </div>
+                    )}
+
+                    {detailResolved.passage?.clue && (
+                      <div className="pt-1.5 border-t border-amber-200/80 text-[11.5px] space-y-0.5">
+                        {detailResolved.passage.clue.location && (
+                          <p>
+                            <strong>Vị trí manh mối:</strong> {detailResolved.passage.clue.location}
+                          </p>
+                        )}
+                        {detailResolved.passage.clue.quote && (
+                          <p className="italic">
+                            <strong>Câu chứa đáp án:</strong> "{detailResolved.passage.clue.quote}"
+                          </p>
+                        )}
+                        {detailResolved.passage.clue.scanningTip && (
+                          <p>
+                            <strong>Mẹo quét từ khóa:</strong> {detailResolved.passage.clue.scanningTip}
+                          </p>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {/* Fallback info when full question text is not in database */}
+                {!detailResolved.hasFullContent && (
+                  <div className="p-4 rounded-2xl bg-amber-50/60 border border-amber-200 text-xs leading-relaxed text-[#5C4E3D] space-y-2">
+                    <div className="flex items-center gap-1.5 font-bold text-amber-900">
+                      <HelpCircle className="w-4 h-4 text-amber-600" />
+                      <span>Bảng đáp án chính thức từ đề thi</span>
+                    </div>
+                    <p>
+                      Bộ đề <strong>{selectedBook}</strong> - <strong>Test {selectedTest}</strong> được trích xuất và đối soát chuẩn xác từ bảng đáp án gốc.
+                    </p>
+                    <div className="p-2.5 rounded-xl bg-white border border-amber-200 text-center font-bold text-sm text-[#262320]">
+                      Đáp án chuẩn câu #{detailNum} là: <span className="text-emerald-700 text-base font-black">({detailAns})</span>
+                    </div>
+                    <p className="text-[11px] text-[#8C8276]">
+                      Bạn có thể so sánh trực tiếp với tài liệu hoặc đề thi PDF gốc tương ứng với Test {selectedTest}.
+                    </p>
+                  </div>
+                )}
+              </div>
+
+              {/* Bottom Sheet Footer */}
+              <div className="px-4 py-3 border-t border-[#F0EAE1] bg-[#FAF7F2] flex items-center justify-between gap-2 shrink-0 safe-bottom">
+                <div className="text-[11px] text-[#8C8276] hidden sm:block">
+                  Mẹo: Nhấn <kbd className="px-1.5 py-0.5 rounded bg-white border border-[#D5CCC1] font-mono text-[10px]">Esc</kbd> hoặc nhấp ra ngoài để đóng
+                </div>
+
+                <div className="flex items-center gap-2 ml-auto w-full sm:w-auto justify-end">
+                  <button
+                    onClick={handleCloseDetail}
+                    className="px-3 py-2 rounded-xl border border-[#DCD3C7] bg-white hover:bg-gray-50 text-xs font-bold text-[#5C5247] cursor-pointer transition shadow-2xs"
+                  >
+                    Đóng
+                  </button>
+
+                  <button
+                    onClick={() => {
+                      handleCloseDetail();
+                      handleJumpToPractice(detailNum);
+                    }}
+                    className="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-xs transition cursor-pointer"
+                  >
+                    <span>Mở làm câu này</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          );
+        })()}
+      </dialog>
     </div>
   );
 };

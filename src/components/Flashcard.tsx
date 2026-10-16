@@ -14,9 +14,8 @@ import {
   BookOpen,
   AlertTriangle,
   RotateCcw,
-  CheckCircle2,
 } from 'lucide-react';
-import { resolveBookAndTestFromSource } from '../data/masterLookupKeys';
+import { QuestionExamNavButtons } from './QuestionExamNavButtons';
 
 export const Flashcard: React.FC = () => {
   const {
@@ -31,7 +30,6 @@ export const Flashcard: React.FC = () => {
     questionProgress,
     reviewTimeLeft,
     tickReviewTimer,
-    openFullAnswers,
   } = useQuizStore();
 
   const currentQ = questions[currentIndex];
@@ -202,18 +200,8 @@ export const Flashcard: React.FC = () => {
               </span>
             </div>
 
-            <div className="flex items-center gap-1.5 shrink-0">
-              <button
-                onClick={() => {
-                  const resolved = resolveBookAndTestFromSource(currentQ.source, currentQ.id, currentQ.num);
-                  openFullAnswers(resolved || { questionNum: currentQ.num });
-                }}
-                className="flex items-center gap-1 px-2 py-0.5 rounded-lg bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 text-emerald-800 text-[10px] font-bold cursor-pointer transition shadow-2xs"
-                title="Xem toàn bộ 200 đáp án của bộ đề này"
-              >
-                <CheckCircle2 className="w-3 h-3 text-emerald-600" />
-                <span>Full Đáp Án</span>
-              </button>
+            <div className="flex items-center gap-1.5 shrink-0 flex-wrap">
+              <QuestionExamNavButtons question={currentQ} variant="mini" />
               <div className="font-mono text-[#8C8276] text-xs">
                 <strong className="text-[#262320]">{currentIndex + 1}</strong>/{questions.length}
               </div>

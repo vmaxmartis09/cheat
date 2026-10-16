@@ -2,14 +2,12 @@ import React, { useState, useRef, useEffect, useMemo, useCallback } from 'react'
 import { allQuestions } from '../data/questions';
 import {
   getAllListeningQuestions,
-  getListeningQuestionsByTestAndPart,
   ListeningQuestion,
 } from '../data/listeningQuestions';
 import { Question, AnswerChoice } from '../types';
 import {
   EXAM_BOOKS_META,
   MASTER_ANSWER_KEYS,
-  resolveBookAndTestFromSource,
 } from '../data/masterLookupKeys';
 import { useQuizStore } from '../store/useQuizStore';
 import {
@@ -21,7 +19,6 @@ import {
   Mic,
   BookOpen,
   ArrowLeft,
-  Layers,
   Copy,
   Check,
   ExternalLink,
@@ -38,6 +35,9 @@ import {
   Camera,
 } from 'lucide-react';
 import { ImageSearchModal } from './ImageSearchModal';
+import { Part1VisualStrip } from './Part1VisualStrip';
+import { QuestionExamNavButtons } from './QuestionExamNavButtons';
+import { getFullExamSetQuestions, resolveFullExamSetInfo } from '../data/examSetResolver';
 
 // ============================================================
 // Types & Match Indicators
@@ -68,11 +68,12 @@ export type SearchResult =
   | { kind: 'listening'; question: ListeningQuestion; matchedIn: MatchType; score: number };
 
 interface ExamSetFocus {
-  kind: 'reading' | 'listening';
-  /** For reading: source string. For listening: part number as string */
+  kind: 'reading' | 'listening' | 'full';
   setKey: string;
-  /** The question id that was originally clicked – will be scrolled into view */
   originId: string;
+  examSetId?: string;
+  examSetName?: string;
+  questionNum?: number;
 }
 
 // ============================================================
@@ -270,8 +271,8 @@ const ReadingQuestionCard: React.FC<{
   isExpanded,
   isHighlighted,
   onToggle,
-  onViewExamSet,
-  showViewExamSetBtn,
+  onViewExamSet: _onViewExamSet,
+  showViewExamSetBtn: _showViewExamSetBtn,
 }) => {
   const q = question;
   const cardRef = useRef<HTMLDivElement>(null);
@@ -339,11 +340,14 @@ const ReadingQuestionCard: React.FC<{
             {highlight(q.question, query)}
           </p>
 
-          <div className="mt-1.5 flex items-center gap-1.5">
-            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
-            <span className="text-[12px] font-bold text-emerald-700">
-              {q.correctAnswer}: {q.options[q.correctAnswer]}
-            </span>
+          <div className="mt-1.5 flex flex-wrap items-center justify-between gap-1.5">
+            <div className="flex items-center gap-1.5">
+              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
+              <span className="text-[12px] font-bold text-emerald-700">
+                {q.correctAnswer}: {q.options[q.correctAnswer]}
+              </span>
+            </div>
+            <QuestionExamNavButtons question={q} variant="mini" />
           </div>
         </div>
 
@@ -416,52 +420,9 @@ const ReadingQuestionCard: React.FC<{
             </div>
           )}
 
-          {/* Action buttons: Jump to practice, View Full Answers, View Exam Set */}
-          <div className="mt-3.5 flex flex-wrap items-center gap-2">
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                const store = useQuizStore.getState();
-                store.setSourceFilter(q.source);
-                store.initSession('sequential', q.source, 'all');
-                const qIdx = useQuizStore.getState().questions.findIndex((item) => item.id === q.id);
-                if (qIdx !== -1) {
-                  store.jumpToIndex(qIdx);
-                }
-                store.setActiveTab('practice');
-              }}
-              className="flex-1 min-w-[130px] flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-white text-[12px] font-bold cursor-pointer transition-all shadow-2xs"
-              title="Mở câu này trong chế độ luyện tập để làm bài"
-            >
-              <Zap className="w-3.5 h-3.5" />
-              <span>Làm Câu Này</span>
-            </button>
-
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                const resolved = resolveBookAndTestFromSource(q.source, q.id, q.num);
-                useQuizStore.getState().openFullAnswers(resolved || { questionNum: q.num });
-              }}
-              className="flex-1 min-w-[130px] flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-[12px] font-bold cursor-pointer transition-all shadow-2xs"
-              title="Xem bảng đáp án trọn bộ (Full 200 câu) của đề này"
-            >
-              <CheckCircle2 className="w-3.5 h-3.5" />
-              <span>Full Đáp Án (200 câu)</span>
-            </button>
-
-            {showViewExamSetBtn && onViewExamSet && (
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  onViewExamSet();
-                }}
-                className="w-full sm:w-auto flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-white hover:bg-amber-50 text-amber-800 border border-amber-300 text-[12px] font-bold cursor-pointer transition-all shadow-2xs"
-              >
-                <Layers className="w-3.5 h-3.5" />
-                <span>Xem cả đề "{q.source}"</span>
-              </button>
-            )}
+          {/* Action buttons: Universal Exam Set Navigation */}
+          <div className="mt-3.5">
+            <QuestionExamNavButtons question={q} variant="bar" />
           </div>
         </div>
       )}
@@ -488,8 +449,8 @@ const ListeningQuestionCard: React.FC<{
   isExpanded,
   isHighlighted,
   onToggle,
-  onViewExamSet,
-  showViewExamSetBtn,
+  onViewExamSet: _onViewExamSet,
+  showViewExamSetBtn: _showViewExamSetBtn,
 }) => {
   const q = question;
   const cardRef = useRef<HTMLDivElement>(null);
@@ -561,11 +522,14 @@ const ListeningQuestionCard: React.FC<{
             {highlight(q.question, query)}
           </p>
 
-          <div className="mt-1.5 flex items-center gap-1.5">
-            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
-            <span className="text-[12px] font-bold text-emerald-700">
-              {q.correctAnswer}: {q.options[q.correctAnswer]}
-            </span>
+          <div className="mt-1.5 flex flex-wrap items-center justify-between gap-1.5">
+            <div className="flex items-center gap-1.5">
+              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
+              <span className="text-[12px] font-bold text-emerald-700">
+                {q.correctAnswer}: {q.options[q.correctAnswer]}
+              </span>
+            </div>
+            <QuestionExamNavButtons question={q} variant="mini" />
           </div>
         </div>
 
@@ -652,66 +616,9 @@ const ListeningQuestionCard: React.FC<{
             </div>
           )}
 
-          {/* Action buttons */}
-          <div className="mt-3.5 flex flex-wrap items-center gap-2">
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                const store = useQuizStore.getState();
-                let targetTest: number | string = testNum || 1;
-                if (q.id.startsWith('h3_t1')) targetTest = 'h3_1';
-                else if (q.id.startsWith('h3_t2')) targetTest = 'h3_2';
-                else if (q.id.startsWith('h1_t1')) targetTest = 'h1_1';
-                else if (q.id.startsWith('lc_')) targetTest = 0;
-
-                store.setListeningSelectedTest(targetTest);
-                store.setListeningSelectedPart('all');
-                const list = getListeningQuestionsByTestAndPart(targetTest, 'all');
-                const qIdx = list.findIndex((item) => item.id === q.id);
-                if (qIdx !== -1) {
-                  store.setListeningCurrentIndex(qIdx);
-                }
-                store.setActiveTab('listening');
-              }}
-              className="flex-1 min-w-[130px] flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-sky-600 hover:bg-sky-700 text-white text-[12px] font-bold cursor-pointer transition-all shadow-2xs"
-              title="Mở câu này trong tab Luyện Nghe và bật audio"
-            >
-              <Headphones className="w-3.5 h-3.5" />
-              <span>Luyện Nghe Câu Này</span>
-            </button>
-
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                const resolved = resolveBookAndTestFromSource(testLabel, q.id, q.num);
-                const defaultBook = (q as any).book === 'Hacker 3' ? 'Hacker 3 (RC 101-200)' : (q as any).book === 'Hacker 1' ? 'Hacker 1 (RC 101-200)' : 'Hacker 2 (Full 200 câu)';
-                useQuizStore.getState().openFullAnswers(
-                  resolved || {
-                    book: defaultBook,
-                    test: String(testNum || '1'),
-                    questionNum: q.num,
-                  }
-                );
-              }}
-              className="flex-1 min-w-[130px] flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-[12px] font-bold cursor-pointer transition-all shadow-2xs"
-              title="Xem bảng đáp án trọn bộ (Full 200 câu) của đề này"
-            >
-              <CheckCircle2 className="w-3.5 h-3.5" />
-              <span>Full Đáp Án (200 câu)</span>
-            </button>
-
-            {showViewExamSetBtn && onViewExamSet && (
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  onViewExamSet();
-                }}
-                className="w-full sm:w-auto flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-white hover:bg-sky-50 text-sky-800 border border-sky-300 text-[12px] font-bold cursor-pointer transition-all shadow-2xs"
-              >
-                <Layers className="w-3.5 h-3.5" />
-                <span>Xem cả {testNum ? `Test ${testNum}` : `Part ${q.part}`}</span>
-              </button>
-            )}
+          {/* Action buttons: Universal Exam Set Navigation */}
+          <div className="mt-3.5">
+            <QuestionExamNavButtons question={q} variant="bar" />
           </div>
         </div>
       )}
@@ -722,145 +629,197 @@ const ListeningQuestionCard: React.FC<{
 // ============================================================
 // ExamSetView — full exam set browser
 // ============================================================
+// ============================================================
+// ExamSetView — full exam set browser (Full LC 1-100 + RC 101-200)
+// ============================================================
 const ExamSetView: React.FC<{
   focus: ExamSetFocus;
   searchQuery: string;
   onExit: () => void;
 }> = ({ focus, searchQuery, onExit }) => {
   const [expandedId, setExpandedId] = useState<string | null>(focus.originId);
+  const [sectionFilter, setSectionFilter] = useState<'all' | 'lc' | 'rc'>('all');
 
-  // Derive the questions for this set
-  const questions = useMemo(() => {
-    if (focus.kind === 'reading') {
-      return allQuestions
-        .filter((q) => q.source === focus.setKey)
-        .sort((a, b) => a.num - b.num);
-    } else {
-      if (focus.setKey.startsWith('hacker2_t')) {
-        const testNum = parseInt(focus.setKey.replace('hacker2_t', ''), 10);
-        return getAllListeningQuestions()
-          .filter((q) => (q as any).test === testNum)
-          .sort((a, b) => a.num - b.num);
-      }
-      const partNum = parseInt(focus.setKey, 10) as 1 | 2 | 3 | 4;
-      return getAllListeningQuestions()
-        .filter((q) => q.part === partNum)
-        .sort((a, b) => a.num - b.num);
-    }
+  const canonicalExamSetId = useMemo(() => {
+    if (focus.examSetId) return focus.examSetId;
+    const res = resolveFullExamSetInfo({
+      source: focus.setKey,
+      id: focus.originId,
+      num: focus.questionNum,
+    });
+    return res.examSetId;
   }, [focus]);
 
-  const setLabel =
-    focus.kind === 'reading'
-      ? focus.setKey
-      : focus.setKey.startsWith('hacker2_t')
-      ? `Hacker 2 · Test ${focus.setKey.replace('hacker2_t', '')} (Listening 100 câu)`
-      : `Listening Part ${focus.setKey}`;
+  const { info, lcQuestions, rcQuestions, allQuestionsCount } = useMemo(() => {
+    return getFullExamSetQuestions(canonicalExamSetId);
+  }, [canonicalExamSetId]);
+
+  const displayList = useMemo(() => {
+    if (sectionFilter === 'lc') {
+      return lcQuestions.map((q) => ({ kind: 'listening' as const, question: q }));
+    }
+    if (sectionFilter === 'rc') {
+      return rcQuestions.map((q) => ({ kind: 'reading' as const, question: q }));
+    }
+    return [
+      ...lcQuestions.map((q) => ({ kind: 'listening' as const, question: q })),
+      ...rcQuestions.map((q) => ({ kind: 'reading' as const, question: q })),
+    ].sort((a, b) => a.question.num - b.question.num);
+  }, [lcQuestions, rcQuestions, sectionFilter]);
 
   return (
     <div className="flex flex-col h-full min-h-0">
       {/* Sticky header */}
-      <div className="shrink-0 px-3 pt-3 pb-2">
-        <div
-          className={`flex items-center gap-3 px-4 py-3 rounded-2xl border ${
-            focus.kind === 'reading'
-              ? 'bg-amber-50 border-amber-300'
-              : 'bg-sky-50 border-sky-300'
-          }`}
-        >
-          {focus.kind === 'reading' ? (
-            <BookOpen className="w-5 h-5 text-amber-700 shrink-0" />
-          ) : (
-            <Mic className="w-5 h-5 text-sky-700 shrink-0" />
-          )}
-          <div className="flex-1 min-w-0">
-            <p
-              className={`text-[13px] font-bold truncate ${
-                focus.kind === 'reading' ? 'text-amber-900' : 'text-sky-900'
-              }`}
-            >
-              {setLabel}
-            </p>
-            <p className="text-[11px] text-[#8C8276]">
-              {questions.length} câu · Câu được highlight ← là câu đang tìm
-            </p>
+      <div className="shrink-0 px-3 pt-3 pb-2 bg-white border-b border-[#EFE8DE] shadow-xs">
+        <div className="flex flex-wrap items-center justify-between gap-3 p-3 sm:p-4 rounded-2xl bg-gradient-to-r from-sky-50 via-amber-50 to-emerald-50 border border-sky-200/90 shadow-2xs">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-sky-600 text-white flex items-center justify-center font-extrabold text-lg shadow-sm shrink-0">
+              📚
+            </div>
+            <div className="min-w-0">
+              <div className="flex items-center gap-2 flex-wrap">
+                <h2 className="text-base sm:text-lg font-extrabold text-[#262320]">
+                  {info.examSetName}
+                </h2>
+                <span className="text-[11px] font-bold px-2 py-0.5 rounded-full bg-sky-100 text-sky-900 border border-sky-300">
+                  Trọn bộ {allQuestionsCount} câu
+                </span>
+                {lcQuestions.length > 0 && (
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-indigo-100 text-indigo-900 border border-indigo-200">
+                    🎧 {lcQuestions.length} câu LC (1-100)
+                  </span>
+                )}
+                {rcQuestions.length > 0 && (
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-100 text-amber-900 border border-amber-200">
+                    📖 {rcQuestions.length} câu RC (101-200)
+                  </span>
+                )}
+              </div>
+              <p className="text-[11.5px] text-[#5C554E] mt-0.5">
+                Xem toàn bộ câu hỏi của đề này · Câu được highlight là câu bạn vừa bấm tới
+              </p>
+            </div>
           </div>
-          <div className="flex items-center gap-1.5 shrink-0">
+
+          <div className="flex items-center gap-2 flex-wrap">
+            {rcQuestions.length > 0 && (
+              <button
+                onClick={() => useQuizStore.getState().startPracticeExamSet(info.rcSource, focus.questionNum)}
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white text-xs font-bold transition cursor-pointer shadow-2xs"
+                title="Bắt đầu làm 100 câu đọc của đề này"
+              >
+                <Zap className="w-3.5 h-3.5" />
+                <span>Làm Cả Đề RC</span>
+              </button>
+            )}
+
+            {lcQuestions.length > 0 && (
+              <button
+                onClick={() => useQuizStore.getState().startListeningExamSet(info.lcTest, focus.questionNum)}
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-sky-600 hover:bg-sky-700 text-white text-xs font-bold transition cursor-pointer shadow-2xs"
+                title="Bắt đầu luyện nghe trọn bộ của đề này"
+              >
+                <Headphones className="w-3.5 h-3.5" />
+                <span>Nghe Cả Đề LC</span>
+              </button>
+            )}
+
             <button
-              onClick={() => {
-                if (focus.kind === 'reading') {
-                  const resolved = resolveBookAndTestFromSource(focus.setKey);
-                  useQuizStore.getState().openFullAnswers(resolved || {});
-                } else if (focus.setKey.startsWith('hacker2_t')) {
-                  const testNum = focus.setKey.replace('hacker2_t', '');
-                  useQuizStore.getState().openFullAnswers({
-                    book: 'Hacker 2 (Full 200 câu)',
-                    test: testNum,
-                  });
-                } else {
-                  useQuizStore.getState().openFullAnswers({
-                    book: 'Hacker 2 (Full 200 câu)',
-                    test: '1',
-                  });
-                }
-              }}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-[11.5px] font-bold cursor-pointer transition shadow-2xs"
-              title="Xem bảng đáp án trọn bộ 200 câu của bộ đề này"
+              onClick={() => useQuizStore.getState().openFullAnswers({ book: info.book, test: info.test, questionNum: focus.questionNum })}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition cursor-pointer shadow-2xs"
+              title="Mở bảng đáp án trọn bộ của đề này"
             >
               <CheckCircle2 className="w-3.5 h-3.5" />
-              <span>Full Đáp Án</span>
+              <span>Full Đáp Án ({info.totalQuestions} câu)</span>
             </button>
+
             <button
               onClick={onExit}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white border border-[#EFE8DE] text-[11.5px] font-semibold text-[#5C554E] hover:bg-gray-50 cursor-pointer transition"
+              className="flex items-center gap-1 px-3 py-1.5 rounded-xl bg-white border border-[#DCD3C7] text-xs font-bold text-[#5C554E] hover:bg-gray-100 transition cursor-pointer shadow-2xs"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
-              Thoát
+              <span>Thoát Đề</span>
             </button>
           </div>
         </div>
 
-        {/* Mini stats */}
-        <div className="mt-2 flex items-center gap-3 px-1">
-          <span className="text-[11px] text-[#8C8276]">
-            Câu <span className="font-bold text-amber-700">#{questions[0]?.num}</span>
-            {' '}→{' '}
-            <span className="font-bold text-amber-700">#{questions[questions.length - 1]?.num}</span>
-          </span>
-          <span className="flex-1 h-px bg-[#EFE8DE]" />
-          <button
-            onClick={onExit}
-            className="text-[10px] text-[#B0A89E] hover:text-rose-500 cursor-pointer transition"
-          >
-            ✕ Quay lại kết quả tìm kiếm
-          </button>
-        </div>
+        {/* Filter tabs if both LC and RC exist */}
+        {lcQuestions.length > 0 && rcQuestions.length > 0 && (
+          <div className="mt-2.5 flex items-center gap-2">
+            <span className="text-[11px] font-bold text-[#8C8276]">Hiển thị:</span>
+            <div className="flex items-center gap-1 bg-[#FAF7F2] p-0.5 rounded-xl border border-[#E5DDD2]">
+              <button
+                onClick={() => setSectionFilter('all')}
+                className={`px-3 py-1 rounded-lg text-xs font-bold transition cursor-pointer ${
+                  sectionFilter === 'all'
+                    ? 'bg-white text-sky-900 shadow-2xs'
+                    : 'text-[#6B635B] hover:text-[#262320]'
+                }`}
+              >
+                Tất cả ({allQuestionsCount})
+              </button>
+              <button
+                onClick={() => setSectionFilter('lc')}
+                className={`px-3 py-1 rounded-lg text-xs font-bold transition cursor-pointer flex items-center gap-1 ${
+                  sectionFilter === 'lc'
+                    ? 'bg-sky-600 text-white shadow-2xs'
+                    : 'text-[#6B635B] hover:text-[#262320]'
+                }`}
+              >
+                <Headphones className="w-3 h-3" />
+                <span>Nghe LC ({lcQuestions.length})</span>
+              </button>
+              <button
+                onClick={() => setSectionFilter('rc')}
+                className={`px-3 py-1 rounded-lg text-xs font-bold transition cursor-pointer flex items-center gap-1 ${
+                  sectionFilter === 'rc'
+                    ? 'bg-amber-600 text-white shadow-2xs'
+                    : 'text-[#6B635B] hover:text-[#262320]'
+                }`}
+              >
+                <BookOpen className="w-3 h-3" />
+                <span>Đọc RC ({rcQuestions.length})</span>
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* 6 Hình Nhận Diện Đề (Part 1) */}
+        {info.hasListening && (
+          <div className="mt-2.5">
+            <Part1VisualStrip
+              bookId={info.book}
+              testNum={info.test}
+            />
+          </div>
+        )}
       </div>
 
       {/* Scrollable questions list */}
-      <div className="flex-1 overflow-y-auto px-3 pb-4 min-h-0 space-y-2">
-        {focus.kind === 'reading'
-          ? (questions as Question[]).map((q) => (
-              <ReadingQuestionCard
-                key={q.id}
-                question={q}
-                query={searchQuery}
-                isExpanded={expandedId === q.id}
-                isHighlighted={q.id === focus.originId}
-                onToggle={() => setExpandedId((prev) => (prev === q.id ? null : q.id))}
-                showViewExamSetBtn={false}
-              />
-            ))
-          : (questions as ListeningQuestion[]).map((q) => (
-              <ListeningQuestionCard
-                key={q.id}
-                question={q}
-                query={searchQuery}
-                isExpanded={expandedId === q.id}
-                isHighlighted={q.id === focus.originId}
-                onToggle={() => setExpandedId((prev) => (prev === q.id ? null : q.id))}
-                showViewExamSetBtn={false}
-              />
-            ))}
+      <div className="flex-1 overflow-y-auto px-3 pb-4 min-h-0 space-y-2 pt-2">
+        {displayList.map(({ kind, question }) =>
+          kind === 'reading' ? (
+            <ReadingQuestionCard
+              key={question.id}
+              question={question as Question}
+              query={searchQuery}
+              isExpanded={expandedId === question.id}
+              isHighlighted={question.id === focus.originId}
+              onToggle={() => setExpandedId((prev) => (prev === question.id ? null : question.id))}
+              showViewExamSetBtn={false}
+            />
+          ) : (
+            <ListeningQuestionCard
+              key={question.id}
+              question={question as ListeningQuestion}
+              query={searchQuery}
+              isExpanded={expandedId === question.id}
+              isHighlighted={question.id === focus.originId}
+              onToggle={() => setExpandedId((prev) => (prev === question.id ? null : question.id))}
+              showViewExamSetBtn={false}
+            />
+          )
+        )}
       </div>
     </div>
   );
@@ -1352,6 +1311,17 @@ export const SearchTab: React.FC = () => {
   const [visibleLimit, setVisibleLimit] = useState<number>(60);
   const [showImageModal, setShowImageModal] = useState<boolean>(false);
 
+  const availableMatrixTests = useMemo(() => {
+    const bookData = MASTER_ANSWER_KEYS[selectedBook];
+    if (!bookData) return ['1'];
+    return Object.keys(bookData).sort((a, b) => {
+      const na = parseInt(a, 10);
+      const nb = parseInt(b, 10);
+      if (!isNaN(na) && !isNaN(nb)) return na - nb;
+      return a.localeCompare(b);
+    });
+  }, [selectedBook]);
+
   // Auto-focus input on mount
   useEffect(() => {
     inputRef.current?.focus();
@@ -1591,13 +1561,27 @@ export const SearchTab: React.FC = () => {
   const hasResults = results.length > 0;
   const showEmpty = query.trim().length > 0 && !hasResults;
 
-  // ── If user tapped "Xem toàn bộ đề", show exam-set browser ──
-  if (examSetFocus) {
+  const { examSetTarget } = useQuizStore();
+
+  // ── If user tapped "Xem toàn bộ đề" or came from examSetTarget ──
+  const activeExamSetFocus = examSetFocus || (examSetTarget ? {
+    kind: 'full' as const,
+    setKey: examSetTarget.examSetId,
+    originId: examSetTarget.originId || '',
+    examSetId: examSetTarget.examSetId,
+    examSetName: examSetTarget.examSetName,
+    questionNum: examSetTarget.questionNum,
+  } : null);
+
+  if (activeExamSetFocus) {
     return (
       <ExamSetView
-        focus={examSetFocus}
+        focus={activeExamSetFocus}
         searchQuery={query}
-        onExit={() => setExamSetFocus(null)}
+        onExit={() => {
+          setExamSetFocus(null);
+          useQuizStore.setState({ examSetTarget: null });
+        }}
       />
     );
   }
@@ -1647,8 +1631,10 @@ export const SearchTab: React.FC = () => {
               <select
                 value={selectedBook}
                 onChange={(e) => {
-                  setSelectedBook(e.target.value);
-                  setSelectedTestNum('1');
+                  const newBook = e.target.value;
+                  setSelectedBook(newBook);
+                  const tests = Object.keys(MASTER_ANSWER_KEYS[newBook] || {});
+                  setSelectedTestNum(tests[0] || '1');
                 }}
                 className="bg-[#FAF7F2] border border-[#DCD3C7] text-xs font-bold rounded-xl px-2.5 py-1.5 text-[#262320] focus:outline-none focus:border-emerald-500 cursor-pointer"
               >
@@ -1661,24 +1647,15 @@ export const SearchTab: React.FC = () => {
 
               <label className="text-xs font-bold text-[#5C5247] ml-1">Đề Thi:</label>
               <select
-                value={selectedTestNum}
+                value={availableMatrixTests.includes(selectedTestNum) ? selectedTestNum : availableMatrixTests[0] || '1'}
                 onChange={(e) => setSelectedTestNum(e.target.value)}
                 className="bg-[#FAF7F2] border border-[#DCD3C7] text-xs font-bold rounded-xl px-2.5 py-1.5 text-[#262320] focus:outline-none focus:border-emerald-500 cursor-pointer"
               >
-                {selectedBook === 'Docs 2 (Reading)' ? (
-                  <>
-                    <option value="Đề 1 (Trial Test)">Đề 1 (Trial Test - 134 câu)</option>
-                    <option value="Đề 2 (YBM Test 1)">Đề 2 (YBM Test 1 - 100 câu)</option>
-                  </>
-                ) : selectedBook === 'Docs 1 (Test 2)' ? (
-                  <option value="Test 2">Test 2 (100 câu)</option>
-                ) : (
-                  Array.from({ length: 10 }, (_, i) => i + 1).map((t) => (
-                    <option key={t} value={String(t)}>
-                      Test {t}
-                    </option>
-                  ))
-                )}
+                {availableMatrixTests.map((t) => (
+                  <option key={t} value={t}>
+                    {/^(test|đề)\b/i.test(t) ? t : `Test ${t}`}
+                  </option>
+                ))}
               </select>
             </div>
 
@@ -1696,6 +1673,12 @@ export const SearchTab: React.FC = () => {
               </div>
             </div>
           </div>
+
+          {/* 6 Hình Nhận Diện Đề (Part 1) */}
+          <Part1VisualStrip
+            bookId={selectedBook}
+            testNum={selectedTestNum}
+          />
 
           {/* Quick Stats & Jump */}
           {(() => {
@@ -2057,13 +2040,17 @@ export const SearchTab: React.FC = () => {
               isExpanded={expandedId === id}
               onToggle={() => handleToggle(id)}
               showViewExamSetBtn
-              onViewExamSet={() =>
+              onViewExamSet={() => {
+                const info = resolveFullExamSetInfo(r.question);
                 setExamSetFocus({
-                  kind: 'reading',
-                  setKey: r.question.source,
+                  kind: 'full',
+                  setKey: info.examSetId,
+                  examSetId: info.examSetId,
+                  examSetName: info.examSetName,
                   originId: id,
-                })
-              }
+                  questionNum: r.question.num,
+                });
+              }}
             />
           ) : (
             <ListeningQuestionCard
@@ -2075,11 +2062,14 @@ export const SearchTab: React.FC = () => {
               onToggle={() => handleToggle(id)}
               showViewExamSetBtn
               onViewExamSet={() => {
-                const testVal = (r.question as any).test;
+                const info = resolveFullExamSetInfo(r.question);
                 setExamSetFocus({
-                  kind: 'listening',
-                  setKey: testVal ? `hacker2_t${testVal}` : String(r.question.part),
+                  kind: 'full',
+                  setKey: info.examSetId,
+                  examSetId: info.examSetId,
+                  examSetName: info.examSetName,
                   originId: id,
+                  questionNum: r.question.num,
                 });
               }}
             />

@@ -5,6 +5,8 @@ import {
 } from '../data/listeningQuestions';
 import { AnswerChoice } from '../types';
 import { useQuizStore } from '../store/useQuizStore';
+import { resolveBookAndTestFromSource } from '../data/masterLookupKeys';
+import { QuestionExamNavButtons } from './QuestionExamNavButtons';
 import {
   Headphones,
   Play,
@@ -28,6 +30,7 @@ import {
   Image as ImageIcon,
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
+import { Part1VisualStrip } from './Part1VisualStrip';
 
 export const ListeningTab: React.FC = () => {
   // Store integration
@@ -82,6 +85,36 @@ export const ListeningTab: React.FC = () => {
   }, [currentQ, selectedTest]);
 
   // Reset audio when question part changes
+  const handleOpenAnswers = () => {
+    if (selectedTest === 0) {
+      openFullAnswers({ book: 'Docs 2 (Listening Test 1)', test: 'Test 1', questionNum: currentQ?.num || 1 });
+      return;
+    }
+    if (selectedTest === 'h3_1') {
+      openFullAnswers({ book: 'Hacker 3 (RC 101-200)', test: '1', questionNum: currentQ?.num || 1 });
+      return;
+    }
+    if (selectedTest === 'h3_2') {
+      openFullAnswers({ book: 'Hacker 3 (RC 101-200)', test: '2', questionNum: currentQ?.num || 1 });
+      return;
+    }
+    if (selectedTest === 'h1_1') {
+      openFullAnswers({ book: 'Hacker 1 (RC 101-200)', test: '1', questionNum: currentQ?.num || 1 });
+      return;
+    }
+    if (typeof selectedTest === 'number' && selectedTest >= 1 && selectedTest <= 10) {
+      openFullAnswers({ book: 'Hacker 2 (Full 200 câu)', test: String(selectedTest), questionNum: currentQ?.num || 1 });
+      return;
+    }
+    const resolved = resolveBookAndTestFromSource(currentQ?.badge, currentQ?.id, currentQ?.num);
+    openFullAnswers(
+      resolved || {
+        book: 'Hacker 2 (Full 200 câu)',
+        test: '1',
+        questionNum: currentQ?.num || 1,
+      }
+    );
+  };
   useEffect(() => {
     if (audioRef.current && currentAudioUrl) {
       const wasPlaying = isPlaying;
@@ -321,14 +354,7 @@ export const ListeningTab: React.FC = () => {
           {/* Quick Score, Streak & Fast Full Answer Lookup */}
           <div className="flex items-center gap-2 text-xs">
             <button
-              onClick={() => {
-                const testNum = selectedTest === 'all' || selectedTest === 0 ? '1' : String(selectedTest);
-                openFullAnswers({
-                  book: 'Hacker 2 (Full 200 câu)',
-                  test: testNum,
-                  questionNum: currentQ?.num || 1,
-                });
-              }}
+              onClick={handleOpenAnswers}
               className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs cursor-pointer shadow-2xs transition"
               title="Xem toàn bộ 200 đáp án của bộ đề này"
             >
@@ -476,6 +502,32 @@ export const ListeningTab: React.FC = () => {
       {/* 3. MAIN QUESTION DISPLAY AREA */}
       <div className="flex-1 overflow-y-auto px-3 py-3 min-h-0">
         <div className="max-w-3xl mx-auto flex flex-col gap-3">
+          {/* 6 Hình Nhận Diện Đề (Part 1) */}
+          <Part1VisualStrip
+            bookId={
+              typeof selectedTest === 'string' && selectedTest.startsWith('h3_')
+                ? 'Hacker 3 (RC 101-200)'
+                : typeof selectedTest === 'string' && selectedTest.startsWith('h1_')
+                ? 'Hacker 1 (RC 101-200)'
+                : selectedTest === 0
+                ? 'Docs 2 (Listening Test 1)'
+                : 'Hacker 2 (Full 200 câu)'
+            }
+            testNum={
+              typeof selectedTest === 'string' && selectedTest.startsWith('h3_')
+                ? selectedTest.replace('h3_', '')
+                : typeof selectedTest === 'string' && selectedTest.startsWith('h1_')
+                ? selectedTest.replace('h1_', '')
+                : selectedTest === 0
+                ? '1'
+                : String(selectedTest)
+            }
+            onSelectQuestion={(qNum) => {
+              setSelectedPart(1);
+              setCurrentIdx(qNum - 1);
+            }}
+          />
+
           {currentQ ? (
             <div className="bg-white rounded-2xl border border-[#EAE3D8] p-4 sm:p-5 shadow-2xs flex flex-col gap-4">
               {/* Question Header */}
@@ -489,22 +541,7 @@ export const ListeningTab: React.FC = () => {
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <button
-                    onClick={() => {
-                      const bookName = selectedTest === 0 ? 'Docs 2 (Listening Test 1)' : 'Hacker 2 (Full 200 câu)';
-                      const testVal = selectedTest === 0 ? 'Test 1' : String(selectedTest === 'all' ? 1 : selectedTest);
-                      openFullAnswers({
-                        book: bookName,
-                        test: testVal,
-                        questionNum: currentQ.num,
-                      });
-                    }}
-                    className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 text-emerald-800 text-xs font-bold transition cursor-pointer shadow-2xs"
-                    title="Tra cứu bảng đáp án 1 màn hình của bộ đề này"
-                  >
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-                    <span>Tra Đáp Án</span>
-                  </button>
+                  <QuestionExamNavButtons question={currentQ} variant="mini" hidePractice />
                   <div className="text-xs font-mono text-[#8A8278]">
                     {safeIdx + 1} / {filteredQuestions.length}
                   </div>

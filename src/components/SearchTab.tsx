@@ -39,6 +39,12 @@ import { ImageSearchModal } from './ImageSearchModal';
 import { Part1VisualStrip } from './Part1VisualStrip';
 import { QuestionExamNavButtons } from './QuestionExamNavButtons';
 import { getFullExamSetQuestions, resolveFullExamSetInfo } from '../data/examSetResolver';
+import {
+  getRecentExams,
+  saveRecentExam,
+  RecentExamItem,
+  TOEIC_PARTS_SHORTCUTS,
+} from '../data/recentExams';
 
 // ============================================================
 // Types & Match Indicators
@@ -1313,6 +1319,31 @@ export const SearchTab: React.FC = () => {
   const [searchPartFilter, setSearchPartFilter] = useState<'all' | number>('all');
   const [visibleLimit, setVisibleLimit] = useState<number>(60);
   const [showImageModal, setShowImageModal] = useState<boolean>(false);
+  const [recentExams, setRecentExams] = useState<RecentExamItem[]>(() => getRecentExams());
+  const [showLiveDropdown, setShowLiveDropdown] = useState<boolean>(true);
+  const searchDropdownRef = useRef<HTMLDivElement>(null);
+
+  // Sync recent exams when selectedBook / selectedTestNum changes
+  useEffect(() => {
+    const updated = saveRecentExam(selectedBook, selectedTestNum);
+    setRecentExams(updated);
+  }, [selectedBook, selectedTestNum]);
+
+  // Click outside listener to dismiss live suggestions
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (
+        searchDropdownRef.current &&
+        !searchDropdownRef.current.contains(e.target as Node) &&
+        inputRef.current &&
+        !inputRef.current.contains(e.target as Node)
+      ) {
+        setShowLiveDropdown(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   const availableMatrixTests = useMemo(() => {
     const bookData = MASTER_ANSWER_KEYS[selectedBook];
@@ -1544,6 +1575,143 @@ export const SearchTab: React.FC = () => {
   const lcCount = useMemo(() => results.filter((r) => r.kind === 'listening').length, [results]);
   const rcCount = useMemo(() => results.filter((r) => r.kind === 'reading').length, [results]);
 
+  // Live autocomplete suggestions for instant answer lookup
+  const liveSuggestions = useMemo(() => {
+    const raw = query.trim();
+    if (!raw) return [];
+    const numMatch = raw.match(/^(?:câu|cau|#|q)?\s*(\d{1,3})$/i);
+    const targetNum = numMatch ? parseInt(numMatch[1], 10) : null;
+
+    // 1. Number lookup (e.g. "145", "#45", "câu 101")
+    if (targetNum !== null && targetNum >= 1 && targetNum <= 200) {
+      const list: Array<{
+        id: string;
+        num: number;
+        answer: string;
+        book: string;
+        test: string;
+        bookName: string;
+        part: number;
+        snippet: string;
+      }> = [];
+
+      // A. Answer from current selected book and test
+      const curAns = MASTER_ANSWER_KEYS[selectedBook]?.[selectedTestNum]?.[targetNum];
+      const part =
+        targetNum <= 6 ? 1 : targetNum <= 31 ? 2 : targetNum <= 70 ? 3 : targetNum <= 100 ? 4 : targetNum <= 130 ? 5 : targetNum <= 146 ? 6 : 7;
+
+      let snippetText =
+        targetNum <= 100
+          ? 'Nghe audio & đối chiếu transcript'
+          : 'Đọc câu hỏi & chọn đáp án chính xác';
+
+      if (targetNum <= 100) {
+        const lq = getAllListeningQuestions().find((q) => q.num === targetNum);
+        if (lq) {
+          snippetText = lq.transcript ? lq.transcript.slice(0, 85) + '...' : lq.question;
+        }
+      } else {
+        const rq = allQuestions.find((q) => q.num === targetNum);
+        if (rq) snippetText = rq.question;
+      }
+
+      if (curAns) {
+        list.push({
+          id: `cur_${targetNum}`,
+          num: targetNum,
+          answer: curAns,
+          book: selectedBook,
+          test: selectedTestNum,
+          bookName: selectedBook.replace(/\s*\(.*?\)/g, ''),
+          part,
+          snippet: snippetText,
+        });
+      }
+
+      // B. Top popular books to compare same question number
+      const popularBooks = [
+        { book: 'Hacker 2 (Full 200 câu)', test: '1', name: 'Hacker 2' },
+        { book: 'Hacker 2 (Full 200 câu)', test: '2', name: 'Hacker 2' },
+        { book: 'Hacker 3 (RC 101-200)', test: '1', name: 'Hacker 3' },
+        { book: 'Hacker 1 (RC 101-200)', test: '1', name: 'Hacker 1' },
+        { book: 'Docs 3 (TMA Online)', test: 'Đề TMA Online', name: 'Docs 3 TMA' },
+      ];
+
+      for (const pb of popularBooks) {
+        if (pb.book === selectedBook && pb.test === selectedTestNum) continue;
+        const ans = MASTER_ANSWER_KEYS[pb.book]?.[pb.test]?.[targetNum];
+        if (ans && list.length < 5) {
+          list.push({
+            id: `${pb.book}_${pb.test}_${targetNum}`,
+            num: targetNum,
+            answer: ans,
+            book: pb.book,
+            test: pb.test,
+            bookName: pb.name,
+            part,
+            snippet: `Đề thi ${pb.test} · Đáp án chính thức: (${ans})`,
+          });
+        }
+      }
+
+      return list;
+    }
+
+    // 2. Keyword lookup: top 5 results
+    if (results.length > 0 && raw.length >= 2) {
+      const list: Array<{
+        id: string;
+        num: number;
+        answer: string;
+        book: string;
+        test: string;
+        bookName: string;
+        part: number;
+        snippet: string;
+      }> = [];
+
+      for (const r of results.slice(0, 5)) {
+        const q = r.question;
+        const qNum = q.num;
+        const part =
+          r.kind === 'listening'
+            ? (q as ListeningQuestion).part
+            : qNum <= 130
+            ? 5
+            : qNum <= 146
+            ? 6
+            : 7;
+
+        const examInfo = resolveFullExamSetInfo({
+          id: q.id,
+          source: (q as any).source,
+          num: qNum,
+          test: (q as any).test,
+        });
+
+        const snippet =
+          r.kind === 'listening'
+            ? (q as ListeningQuestion).transcript?.slice(0, 85) || q.question
+            : q.question;
+
+        list.push({
+          id: q.id,
+          num: qNum,
+          answer: q.correctAnswer,
+          book: examInfo.book,
+          test: examInfo.test,
+          bookName: examInfo.badgeText || examInfo.examSetName,
+          part,
+          snippet,
+        });
+      }
+
+      return list;
+    }
+
+    return [];
+  }, [query, selectedBook, selectedTestNum, results]);
+
   // Breakdown by parts for filter pills
   const partCounts = useMemo(() => {
     const counts: Record<number, number> = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0 };
@@ -1750,6 +1918,34 @@ export const SearchTab: React.FC = () => {
                 );
               })}
             </div>
+
+            {/* Recent Exams Dock (1-tap switch) */}
+            {recentExams.length > 0 && (
+              <div className="pt-1.5 border-t border-[#F4EFEA] flex items-center gap-1.5 overflow-x-auto pb-0.5 scrollbar-none">
+                <span className="text-[10px] font-extrabold text-amber-800 uppercase tracking-wider shrink-0 flex items-center gap-1">
+                  <Zap className="w-3 h-3 text-amber-500 fill-amber-500" /> Gần đây:
+                </span>
+                {recentExams.map((item) => {
+                  const isActive = selectedBook === item.book && selectedTestNum === item.test;
+                  return (
+                    <button
+                      key={`recent_matrix_${item.book}_${item.test}`}
+                      onClick={() => {
+                        setSelectedBook(item.book);
+                        setSelectedTestNum(item.test);
+                      }}
+                      className={`px-2.5 py-0.5 rounded-xl text-xs font-bold shrink-0 transition-all cursor-pointer border ${
+                        isActive
+                          ? 'bg-amber-500 text-white border-amber-600 shadow-2xs font-black'
+                          : 'bg-[#FAF7F2] hover:bg-white text-[#5C5247] border-[#E8DFD3]'
+                      }`}
+                    >
+                      {item.label}
+                    </button>
+                  );
+                })}
+              </div>
+            )}
           </div>
 
           {/* 6 Hình Nhận Diện Đề (Part 1) */}
@@ -1758,6 +1954,33 @@ export const SearchTab: React.FC = () => {
             testNum={selectedTestNum}
             initialExpanded={false}
           />
+
+          {/* Part Jump Quick Chips (1-tap jump to Part 1-7) */}
+          <div className="bg-white px-3 py-2 rounded-2xl border border-[#EFE8DE] shadow-2xs flex items-center gap-1.5 overflow-x-auto scrollbar-none">
+            <span className="text-[10px] font-black text-[#8C8276] uppercase tracking-wider shrink-0 mr-1 flex items-center gap-1">
+              <Sparkles className="w-3 h-3 text-amber-500" /> Nhảy nhanh:
+            </span>
+            {TOEIC_PARTS_SHORTCUTS.map((p) => (
+              <button
+                key={p.part}
+                onClick={() =>
+                  useQuizStore.getState().openFullAnswers({
+                    book: selectedBook,
+                    test: selectedTestNum,
+                    questionNum: p.num,
+                  })
+                }
+                className={`px-2.5 py-1 rounded-xl text-xs font-bold shrink-0 transition cursor-pointer border shadow-2xs ${
+                  p.type === 'lc'
+                    ? 'bg-sky-50 text-sky-800 border-sky-200 hover:bg-sky-100 hover:border-sky-400'
+                    : 'bg-amber-50 text-amber-900 border-amber-200 hover:bg-amber-100 hover:border-amber-400'
+                }`}
+                title={`Mở xem câu ${p.num} (${p.name})`}
+              >
+                {p.label}
+              </button>
+            ))}
+          </div>
 
           {/* Answer Matrix / Cards */}
           {(() => {
@@ -1975,9 +2198,14 @@ export const SearchTab: React.FC = () => {
               ref={inputRef}
               type="text"
               value={query}
+              onFocus={() => setShowLiveDropdown(true)}
+              onKeyDown={(e) => {
+                if (e.key === 'Escape') setShowLiveDropdown(false);
+              }}
               onChange={(e) => {
                 setQuery(e.target.value);
                 setExpandedId(null);
+                setShowLiveDropdown(true);
               }}
               placeholder="Tìm tất cả: câu hỏi, từ khóa, transcript, giải thích, số câu (vd: hacker 2 45, 101, once, as does)..."
               className="w-full pl-9 pr-10 py-2.5 rounded-2xl border-2 border-[#EFE8DE] bg-white text-[13.5px] text-[#262320] placeholder:text-[#B0A89E] focus:outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-100 transition-all shadow-xs"
@@ -1989,6 +2217,101 @@ export const SearchTab: React.FC = () => {
               >
                 <X className="w-4 h-4" />
               </button>
+            )}
+
+            {/* Live Autocomplete Dropdown with Instant Answer Badges */}
+            {showLiveDropdown && liveSuggestions.length > 0 && (
+              <div
+                ref={searchDropdownRef}
+                className="absolute left-0 right-0 top-full mt-1.5 z-50 bg-white/98 backdrop-blur-md rounded-2xl border-2 border-amber-400 shadow-2xl overflow-hidden animate-in fade-in duration-100"
+              >
+                {/* Floating header */}
+                <div className="px-3 py-1.5 bg-gradient-to-r from-amber-500 via-amber-600 to-emerald-600 text-white flex items-center justify-between text-xs font-black shadow-xs">
+                  <div className="flex items-center gap-1.5">
+                    <Zap className="w-3.5 h-3.5 fill-amber-200 text-amber-200" />
+                    <span>TRA NHANH ĐÁP ÁN TỨC THÌ (0.05s)</span>
+                  </div>
+                  <button
+                    onClick={() => setShowLiveDropdown(false)}
+                    className="text-white/80 hover:text-white px-1.5 py-0.5 rounded-md hover:bg-white/20 transition cursor-pointer text-[11px]"
+                  >
+                    ✕ Đóng
+                  </button>
+                </div>
+
+                {/* Suggestion list */}
+                <div className="p-1.5 space-y-1 max-h-[55vh] overflow-y-auto divide-y divide-[#F4EFEA]">
+                  {liveSuggestions.map((item, idx) => {
+                    const badgeColor =
+                      item.answer === 'A'
+                        ? 'bg-sky-500 text-white ring-2 ring-sky-200'
+                        : item.answer === 'B'
+                        ? 'bg-indigo-600 text-white ring-2 ring-indigo-200'
+                        : item.answer === 'C'
+                        ? 'bg-emerald-600 text-white ring-2 ring-emerald-200'
+                        : 'bg-amber-500 text-white ring-2 ring-amber-200';
+
+                    return (
+                      <div
+                        key={`${item.id || idx}_${item.num}`}
+                        onClick={() => {
+                          setShowLiveDropdown(false);
+                          useQuizStore.getState().openFullAnswers({
+                            book: item.book,
+                            test: item.test,
+                            questionNum: item.num,
+                          });
+                        }}
+                        className="pt-1.5 first:pt-0 flex items-center gap-2.5 p-2 rounded-xl hover:bg-amber-50/90 transition cursor-pointer group"
+                      >
+                        {/* Big Instant Answer Pill */}
+                        <div
+                          className={`w-9 h-9 rounded-xl flex items-center justify-center font-black text-base shrink-0 shadow-sm transition-transform group-hover:scale-110 ${badgeColor}`}
+                        >
+                          {item.answer}
+                        </div>
+
+                        {/* Content & Metadata */}
+                        <div className="min-w-0 flex-1">
+                          <div className="flex items-center gap-1.5 flex-wrap">
+                            <span className="font-mono font-black text-xs text-[#262320]">
+                              Câu #{item.num}
+                            </span>
+                            <span className="text-[10px] font-bold px-1.5 py-0.2 rounded-md bg-[#FAF7F2] border border-[#EAE3D9] text-[#7A7065]">
+                              {item.bookName} · Test {item.test}
+                            </span>
+                            <span className="text-[10px] font-bold px-1.5 py-0.2 rounded-md bg-amber-100 text-amber-900 border border-amber-200">
+                              Part {item.part}
+                            </span>
+                          </div>
+                          <p className="text-[11.5px] text-[#5C554E] line-clamp-1 mt-0.5 group-hover:text-[#262320]">
+                            {item.snippet}
+                          </p>
+                        </div>
+
+                        {/* Quick Action Button */}
+                        <div className="shrink-0 flex items-center gap-1 text-[11px] font-bold text-emerald-800 bg-emerald-50 border border-emerald-200 group-hover:bg-emerald-600 group-hover:text-white px-2 py-1 rounded-lg transition shadow-2xs">
+                          <span>Xem ngay</span>
+                          <ChevronRight className="w-3.5 h-3.5" />
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+
+                {/* Footer bar */}
+                <div className="px-3 py-1.5 bg-[#FAF8F5] border-t border-[#EFE8DE] flex items-center justify-between text-[11px]">
+                  <span className="text-[#8C8276] text-[10.5px]">
+                    💡 Nhấp vào câu bất kỳ để xem đề & lời giải chi tiết
+                  </span>
+                  <button
+                    onClick={() => setShowLiveDropdown(false)}
+                    className="font-bold text-amber-800 hover:text-amber-900 hover:underline cursor-pointer"
+                  >
+                    Xem toàn bộ danh sách ↵
+                  </button>
+                </div>
+              </div>
             )}
           </div>
 

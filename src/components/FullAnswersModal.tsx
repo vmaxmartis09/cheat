@@ -25,6 +25,12 @@ import { useQuizStore } from '../store/useQuizStore';
 import { Part1VisualStrip } from './Part1VisualStrip';
 import { resolveFullExamSetInfo, getFullExamSetQuestions } from '../data/examSetResolver';
 import {
+  getRecentExams,
+  saveRecentExam,
+  RecentExamItem,
+  TOEIC_PARTS_SHORTCUTS,
+} from '../data/recentExams';
+import {
   CheckCircle2,
   Copy,
   Check,
@@ -38,6 +44,7 @@ import {
   BookOpen,
   ArrowRight,
   Sparkles,
+  Zap,
   X,
   FileText,
   Volume2,
@@ -351,11 +358,21 @@ export const FullAnswersModal: React.FC = () => {
         } else {
           setMobileSection('lc');
         }
+        handleOpenDetail(qNum, 'full');
       }
     }
   }, [fullAnswerTarget]);
 
   const effectiveBook = MASTER_ANSWER_KEYS[selectedBook] ? selectedBook : DEFAULT_BOOK_ID;
+
+  // Recent exams state & sync
+  const [recentExams, setRecentExams] = useState<RecentExamItem[]>(() => getRecentExams());
+  useEffect(() => {
+    if (effectiveBook && selectedTest) {
+      const updated = saveRecentExam(effectiveBook, selectedTest);
+      setRecentExams(updated);
+    }
+  }, [effectiveBook, selectedTest]);
 
   // Available tests for current book
   const availableTests = useMemo(() => {
@@ -815,6 +832,34 @@ export const FullAnswersModal: React.FC = () => {
               </button>
             ))}
           </div>
+
+          {/* Recent Exams Dock (1-tap switch) */}
+          {recentExams.length > 0 && (
+            <div className="flex items-center gap-1.5 overflow-x-auto py-1 scrollbar-none max-w-full border-t border-[#F0EAE1]">
+              <span className="text-[10px] font-extrabold text-amber-800 uppercase tracking-wider shrink-0 flex items-center gap-1">
+                <Zap className="w-3 h-3 text-amber-500 fill-amber-500" /> Gần đây:
+              </span>
+              {recentExams.map((item) => {
+                const isActive = effectiveBook === item.book && selectedTest === item.test;
+                return (
+                  <button
+                    key={`recent_full_${item.book}_${item.test}`}
+                    onClick={() => {
+                      setSelectedBook(item.book);
+                      setSelectedTest(item.test);
+                    }}
+                    className={`px-2.5 py-0.5 rounded-xl text-xs font-bold shrink-0 transition-all cursor-pointer border ${
+                      isActive
+                        ? 'bg-amber-500 text-white border-amber-600 shadow-2xs font-black'
+                        : 'bg-[#FAF7F2] hover:bg-white text-[#5C5247] border-[#E8DFD3]'
+                    }`}
+                  >
+                    {item.label}
+                  </button>
+                );
+              })}
+            </div>
+          )}
         </div>
 
         {/* Row 2.5: 6 Hình Nhận Diện Đề (Part 1) - compact by default so matrix has full height */}
@@ -926,26 +971,95 @@ export const FullAnswersModal: React.FC = () => {
             </button>
           </div>
 
-          {/* Search box for quick number search */}
-          <div className="relative w-28 sm:w-36 shrink-0">
-            <Search className="w-3.5 h-3.5 text-[#8C8276] absolute left-2.5 top-1/2 -translate-y-1/2 pointer-events-none" />
-            <input
-              type="text"
-              inputMode="numeric"
-              placeholder="Tìm câu số..."
-              value={searchNum}
-              onChange={(e) => setSearchNum(e.target.value)}
-              className="w-full bg-[#FAF7F2] border border-[#E8DFD3] focus:border-emerald-500 rounded-lg pl-7 pr-2 py-1 text-xs text-[#262320] focus:outline-none font-bold"
-            />
-            {searchNum && (
-              <button
-                onClick={() => setSearchNum('')}
-                className="absolute right-2 top-1/2 -translate-y-1/2 text-xs text-[#8C8276] hover:text-[#262320]"
-              >
-                ✕
-              </button>
-            )}
+          {/* Search box for quick number search with instant answer badge */}
+          <div className="flex items-center gap-1.5 shrink-0">
+            <div className="relative w-28 sm:w-36">
+              <Search className="w-3.5 h-3.5 text-[#8C8276] absolute left-2.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+              <input
+                type="text"
+                inputMode="numeric"
+                placeholder="# Nhập câu..."
+                value={searchNum}
+                onChange={(e) => setSearchNum(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    const parsed = parseInt(searchNum.trim(), 10);
+                    if (!isNaN(parsed) && answersObj[parsed]) {
+                      handleOpenDetail(parsed, 'full');
+                    }
+                  }
+                }}
+                className="w-full bg-[#FAF7F2] border border-[#E8DFD3] focus:border-emerald-500 rounded-lg pl-7 pr-6 py-1 text-xs text-[#262320] focus:outline-none font-bold shadow-2xs"
+              />
+              {searchNum && (
+                <button
+                  onClick={() => setSearchNum('')}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 text-xs text-[#8C8276] hover:text-[#262320] cursor-pointer"
+                >
+                  ✕
+                </button>
+              )}
+            </div>
+
+            {/* Instant Answer Badge for searched question */}
+            {(() => {
+              const parsed = parseInt(searchNum.trim(), 10);
+              const targetAns = !isNaN(parsed) ? answersObj[parsed] : null;
+              if (!targetAns) return null;
+
+              const badgeColor =
+                targetAns === 'A'
+                  ? 'bg-sky-500'
+                  : targetAns === 'B'
+                  ? 'bg-indigo-600'
+                  : targetAns === 'C'
+                  ? 'bg-emerald-600'
+                  : 'bg-amber-500';
+
+              return (
+                <button
+                  onClick={() => handleOpenDetail(parsed, 'full')}
+                  className="flex items-center gap-1.5 px-2 py-1 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-black text-xs shadow-2xs cursor-pointer transition animate-in fade-in"
+                  title={`Mở câu ${parsed}: Đáp án (${targetAns})`}
+                >
+                  <span className="text-[11px]">#{parsed}:</span>
+                  <span className={`w-4 h-4 rounded text-[10px] font-black flex items-center justify-center text-white ${badgeColor}`}>
+                    {targetAns}
+                  </span>
+                  <span className="text-[10px] hidden sm:inline">Mở ⚡</span>
+                </button>
+              );
+            })()}
           </div>
+        </div>
+
+        {/* Part Jump Quick Chips (1-tap jump to Part 1-7) */}
+        <div className="flex items-center gap-1 overflow-x-auto py-1 scrollbar-none border-t border-[#F0EAE1]">
+          <span className="text-[10px] font-black text-[#8C8276] uppercase tracking-wider shrink-0 mr-1 flex items-center gap-1">
+            <Sparkles className="w-3 h-3 text-amber-500" /> Nhảy nhanh:
+          </span>
+          {TOEIC_PARTS_SHORTCUTS.map((p) => (
+            <button
+              key={p.part}
+              onClick={() => {
+                setHighlightNum(p.num);
+                if (p.num <= 100) {
+                  setMobileSection('lc');
+                } else {
+                  setMobileSection('rc');
+                }
+                handleOpenDetail(p.num, 'full');
+              }}
+              className={`px-2 py-0.5 rounded-lg text-xs font-bold shrink-0 transition cursor-pointer border shadow-2xs ${
+                p.type === 'lc'
+                  ? 'bg-sky-50 text-sky-800 border-sky-200 hover:bg-sky-100 hover:border-sky-400'
+                  : 'bg-amber-50 text-amber-900 border-amber-200 hover:bg-amber-100 hover:border-amber-400'
+              }`}
+              title={`Mở ngay câu ${p.num} (${p.name})`}
+            >
+              {p.label}
+            </button>
+          ))}
         </div>
 
         {/* Distribution quick bar */}

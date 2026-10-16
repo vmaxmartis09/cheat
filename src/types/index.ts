@@ -52,7 +52,7 @@ export interface Question {
   vietnameseMeaning?: string;
 
   // Stage & Mandatory learning badge & tags
-  stage?: 1 | 2 | 3 | 4 | 5;
+  stage?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | number;
   isMustLearn?: boolean;
   learningTag?: string; // e.g. "Bắt buộc học thuộc"
   badge?: string; // e.g. "⭐ Bắt buộc học thuộc"

@@ -17,7 +17,9 @@ import {
   HelpCircle,
   AlertTriangle,
   RotateCcw,
+  CheckCircle2,
 } from 'lucide-react';
+import { resolveBookAndTestFromSource } from '../data/masterLookupKeys';
 
 export const PassageCard: React.FC = () => {
   const {
@@ -31,6 +33,7 @@ export const PassageCard: React.FC = () => {
     jumpToIndex,
     reviewTimeLeft,
     tickReviewTimer,
+    openFullAnswers,
   } = useQuizStore();
 
   const currentQ = questions[currentIndex];
@@ -286,6 +289,19 @@ export const PassageCard: React.FC = () => {
               >
                 {showTranslation ? <EyeOff className="w-3 h-3" /> : <Eye className="w-3 h-3" />}
                 <span>{showTranslation ? 'Bản gốc' : 'Dịch Việt'}</span>
+              </button>
+
+              {/* Full Answer Lookup */}
+              <button
+                onClick={() => {
+                  const resolved = resolveBookAndTestFromSource(currentQ.source, currentQ.id, currentQ.num);
+                  openFullAnswers(resolved || { questionNum: currentQ.num });
+                }}
+                className="flex items-center gap-1 text-xs px-2.5 py-1 rounded-lg font-bold bg-emerald-600 hover:bg-emerald-700 text-white transition cursor-pointer shadow-2xs"
+                title="Xem trọn bộ đáp án 200 câu của bộ đề này"
+              >
+                <CheckCircle2 className="w-3.5 h-3.5" />
+                <span>Full Đáp Án</span>
               </button>
 
               {/* Fullscreen Expand */}

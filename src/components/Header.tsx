@@ -9,10 +9,11 @@ import {
   Headphones,
   Cloud,
   Database,
+  CheckCircle2,
 } from 'lucide-react';
 
 interface HeaderProps {
-  activeTab: 'practice' | 'listening' | 'results' | 'search';
+  activeTab: 'practice' | 'listening' | 'results' | 'search' | 'answers';
   onSwitchToPracticeAll: () => void;
   onOpenSyncModal: () => void;
 }
@@ -118,8 +119,40 @@ export const Header: React.FC<HeaderProps> = ({
                   <option value="Docs 5 - YBM 1000 Vol 1 Test 9 Full">YBM 1000: Test 9 Full (100 câu)</option>
                   <option value="Docs 5 - YBM 1000 Vol 1 Test 10 Full">YBM 1000: Test 10 Full (100 câu)</option>
                 </optgroup>
+                <optgroup label="🔥 GIAI ĐOẠN 6: TRỌN BỘ HACKER 3 (10 TESTS - 1,000 CÂU)">
+                  <option value="stage_6">🔥 Trọn bộ Hacker 3 (10 Tests - 1,000 câu Reading)</option>
+                  <option value="Hacker 3 - Part 5 All">Hacker 3: Toàn bộ Part 5 (300 câu)</option>
+                  <option value="Hacker 3 - Part 6 All">Hacker 3: Toàn bộ Part 6 (160 câu)</option>
+                  <option value="Hacker 3 - Part 7 All">Hacker 3: Toàn bộ Part 7 (540 câu)</option>
+                  <option value="Hacker 3 Test 1 Full">Hacker 3: Test 1 Full (100 câu)</option>
+                  <option value="Hacker 3 Test 2 Full">Hacker 3: Test 2 Full (100 câu)</option>
+                  <option value="Hacker 3 Test 3 Full">Hacker 3: Test 3 Full (100 câu)</option>
+                  <option value="Hacker 3 Test 4 Full">Hacker 3: Test 4 Full (100 câu)</option>
+                  <option value="Hacker 3 Test 5 Full">Hacker 3: Test 5 Full (100 câu)</option>
+                  <option value="Hacker 3 Test 6 Full">Hacker 3: Test 6 Full (100 câu)</option>
+                  <option value="Hacker 3 Test 7 Full">Hacker 3: Test 7 Full (100 câu)</option>
+                  <option value="Hacker 3 Test 8 Full">Hacker 3: Test 8 Full (100 câu)</option>
+                  <option value="Hacker 3 Test 9 Full">Hacker 3: Test 9 Full (100 câu)</option>
+                  <option value="Hacker 3 Test 10 Full">Hacker 3: Test 10 Full (100 câu)</option>
+                </optgroup>
+                <optgroup label="🚀 GIAI ĐOẠN 7: TRỌN BỘ HACKER 1 (10 TESTS - 1,000 CÂU)">
+                  <option value="stage_7">🚀 Trọn bộ Hacker 1 (10 Tests - 1,000 câu Reading)</option>
+                  <option value="Hacker 1 - Part 5 All">Hacker 1: Toàn bộ Part 5 (300 câu)</option>
+                  <option value="Hacker 1 - Part 6 All">Hacker 1: Toàn bộ Part 6 (160 câu)</option>
+                  <option value="Hacker 1 - Part 7 All">Hacker 1: Toàn bộ Part 7 (540 câu)</option>
+                  <option value="Hacker 1 Test 1 Full">Hacker 1: Test 1 Full (100 câu)</option>
+                  <option value="Hacker 1 Test 2 Full">Hacker 1: Test 2 Full (100 câu)</option>
+                  <option value="Hacker 1 Test 3 Full">Hacker 1: Test 3 Full (100 câu)</option>
+                  <option value="Hacker 1 Test 4 Full">Hacker 1: Test 4 Full (100 câu)</option>
+                  <option value="Hacker 1 Test 5 Full">Hacker 1: Test 5 Full (100 câu)</option>
+                  <option value="Hacker 1 Test 6 Full">Hacker 1: Test 6 Full (100 câu)</option>
+                  <option value="Hacker 1 Test 7 Full">Hacker 1: Test 7 Full (100 câu)</option>
+                  <option value="Hacker 1 Test 8 Full">Hacker 1: Test 8 Full (100 câu)</option>
+                  <option value="Hacker 1 Test 9 Full">Hacker 1: Test 9 Full (100 câu)</option>
+                  <option value="Hacker 1 Test 10 Full">Hacker 1: Test 10 Full (100 câu)</option>
+                </optgroup>
                 <optgroup label="📚 TOÀN BỘ KHO ĐỀ">
-                  <option value="all_both_stages">Tất cả đề Docs 1, 2, 3, 4 & 5 (2,566 câu Reading)</option>
+                  <option value="all_both_stages">Tất cả đề Hacker 1, 2, 3 & YBM (4,566 câu Reading)</option>
                 </optgroup>
               </select>
               <Layers className="w-2.5 h-2.5 text-[#8C8276] absolute right-1.5 top-1/2 -translate-y-1/2 pointer-events-none" />
@@ -128,6 +161,15 @@ export const Header: React.FC<HeaderProps> = ({
             <span className="font-bold text-xs text-[#262320] flex items-center gap-1.5">
               <Headphones className="w-3.5 h-3.5 text-amber-600" />
               Luyện Nghe TOEIC (100 câu LC)
+            </span>
+          ) : activeTab === 'answers' ? (
+            <span className="font-bold text-xs text-emerald-800 flex items-center gap-1.5">
+              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+              Bảng Full Đáp Án (200 Câu)
+            </span>
+          ) : activeTab === 'search' ? (
+            <span className="font-bold text-xs text-[#262320]">
+              Tra Cứu & Tìm Kiếm Câu Hỏi
             </span>
           ) : (
             <span className="font-bold text-xs text-[#262320]">

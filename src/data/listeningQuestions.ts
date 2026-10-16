@@ -2055,9 +2055,27 @@ export const listeningQuestions: ListeningQuestion[] = [
   }
 ];
 
-export const getListeningQuestionsByPart = (part: number | 'all'): ListeningQuestion[] => {
-  if (part === 'all') return listeningQuestions;
-  return listeningQuestions.filter((q) => q.part === part);
+import { hacker2AllQuestions } from './hacker2Questions';
+
+export const getListeningQuestionsByPart = (part: number | 'all', test: number | 'all' = 1): ListeningQuestion[] => {
+  return getListeningQuestionsByTestAndPart(test, part);
+};
+
+export const getListeningQuestionsByTestAndPart = (test: number | 'all', part: number | 'all'): ListeningQuestion[] => {
+  if (test === 0) {
+    if (part === 'all') return listeningQuestions;
+    return listeningQuestions.filter((q) => q.part === part);
+  }
+  
+  return hacker2AllQuestions.filter((q) => {
+    const matchTest = test === 'all' || q.test === test;
+    const matchPart = part === 'all' || q.part === part;
+    return matchTest && matchPart;
+  });
+};
+
+export const getAllListeningQuestions = (): ListeningQuestion[] => {
+  return [...listeningQuestions, ...hacker2AllQuestions];
 };
 
 export const getListeningStats = () => {
@@ -2066,7 +2084,8 @@ export const getListeningStats = () => {
     parts[q.part]++;
   });
   return {
-    total: listeningQuestions.length,
+    total: listeningQuestions.length + hacker2AllQuestions.length,
     parts,
   };
 };
+

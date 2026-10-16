@@ -3,6 +3,8 @@ import { docs2Questions } from './docs2Questions';
 import { docs3Questions } from './docs3Questions';
 import { docs4Questions } from './docs4Questions';
 import { docs5Questions } from './docs5Questions';
+import { hacker3Questions } from './hacker3Questions';
+import { hacker1Questions } from './hacker1Questions';
 
 const rawQuestions: Question[] = [
   {
@@ -6323,16 +6325,18 @@ export const docs1Questions: Question[] = rawQuestions.map((q) => ({
   badge: '⭐ Giai đoạn 1: Bắt buộc học thuộc',
 }));
 
-// All questions combined: Docs 1 (151) + Docs 2 (234) + Docs 3 (81) + Docs 4 (100) + Docs 5 (2000) = 2,566 questions
+// All questions combined: Docs 1 (151) + Docs 2 (234) + Docs 3 (81) + Docs 4 (100) + Docs 5 (2000) + Hacker 3 (1000) + Hacker 1 (1000) = 4,566 questions
 export const allQuestions: Question[] = [
   ...docs1Questions,
   ...docs2Questions,
   ...docs3Questions,
   ...docs4Questions,
   ...docs5Questions,
+  ...hacker3Questions,
+  ...hacker1Questions,
 ];
 
-export { docs3Questions, docs4Questions, docs5Questions };
+export { docs3Questions, docs4Questions, docs5Questions, hacker3Questions, hacker1Questions };
 
 export const getQuestionsBySource = (source?: string): Question[] => {
   if (!source || source === 'all' || source === 'docs1_all' || source === 'must_learn' || source === 'stage_1') {
@@ -6343,6 +6347,46 @@ export const getQuestionsBySource = (source?: string): Question[] => {
   if (source === 'stage_3' || source === 'docs3_all') return docs3Questions;
   if (source === 'stage_4' || source === 'docs4_all') return docs4Questions;
   if (source === 'stage_5' || source === 'docs5_all') return docs5Questions;
+  if (source === 'stage_6' || source === 'hacker3_all') return hacker3Questions;
+  if (source === 'stage_7' || source === 'hacker1_all') return hacker1Questions;
+
+  // Hacker 3 sub-sources:
+  for (let t = 1; t <= 10; t++) {
+    if (source === `Hacker 3 Test ${t} Full` || source === `hacker3_t${t}_full`) {
+      return hacker3Questions.filter((q) => q.id.startsWith(`docs6_hacker3_t${t}_`));
+    }
+    if (source === `Hacker 3 Test ${t} Part 5` || source === `hacker3_t${t}_p5`) {
+      return hacker3Questions.filter((q) => q.source === `Hacker 3 Test ${t} Part 5`);
+    }
+    if (source === `Hacker 3 Test ${t} Part 6` || source === `hacker3_t${t}_p6`) {
+      return hacker3Questions.filter((q) => q.source === `Hacker 3 Test ${t} Part 6`);
+    }
+    if (source === `Hacker 3 Test ${t} Part 7` || source === `hacker3_t${t}_p7`) {
+      return hacker3Questions.filter((q) => q.source === `Hacker 3 Test ${t} Part 7`);
+    }
+  }
+  if (source === 'Hacker 3 - Part 5 All' || source === 'hacker3_part5') return hacker3Questions.filter((q) => q.num <= 130);
+  if (source === 'Hacker 3 - Part 6 All' || source === 'hacker3_part6') return hacker3Questions.filter((q) => q.num >= 131 && q.num <= 146);
+  if (source === 'Hacker 3 - Part 7 All' || source === 'hacker3_part7') return hacker3Questions.filter((q) => q.num >= 147);
+
+  // Hacker 1 sub-sources:
+  for (let t = 1; t <= 10; t++) {
+    if (source === `Hacker 1 Test ${t} Full` || source === `hacker1_t${t}_full`) {
+      return hacker1Questions.filter((q) => q.id.startsWith(`docs7_hacker1_t${t}_`));
+    }
+    if (source === `Hacker 1 Test ${t} Part 5` || source === `hacker1_t${t}_p5`) {
+      return hacker1Questions.filter((q) => q.source === `Hacker 1 Test ${t} Part 5`);
+    }
+    if (source === `Hacker 1 Test ${t} Part 6` || source === `hacker1_t${t}_p6`) {
+      return hacker1Questions.filter((q) => q.source === `Hacker 1 Test ${t} Part 6`);
+    }
+    if (source === `Hacker 1 Test ${t} Part 7` || source === `hacker1_t${t}_p7`) {
+      return hacker1Questions.filter((q) => q.source === `Hacker 1 Test ${t} Part 7`);
+    }
+  }
+  if (source === 'Hacker 1 - Part 5 All' || source === 'hacker1_part5') return hacker1Questions.filter((q) => q.num <= 130);
+  if (source === 'Hacker 1 - Part 6 All' || source === 'hacker1_part6') return hacker1Questions.filter((q) => q.num >= 131 && q.num <= 146);
+  if (source === 'Hacker 1 - Part 7 All' || source === 'hacker1_part7') return hacker1Questions.filter((q) => q.num >= 147);
 
   // Docs 1 sub-sources:
   if (source === 'ToIce 2') return docs1Questions.filter((q) => q.source.startsWith('ToIce 2'));

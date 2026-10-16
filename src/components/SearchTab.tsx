@@ -1,8 +1,14 @@
 import React, { useState, useRef, useEffect, useMemo, useCallback } from 'react';
 import { allQuestions } from '../data/questions';
-import { listeningQuestions } from '../data/listeningQuestions';
+import { listeningQuestions, getAllListeningQuestions } from '../data/listeningQuestions';
 import { Question, AnswerChoice } from '../types';
 import { ListeningQuestion } from '../data/listeningQuestions';
+import {
+  EXAM_BOOKS_META,
+  MASTER_ANSWER_KEYS,
+  resolveBookAndTestFromSource,
+} from '../data/masterLookupKeys';
+import { useQuizStore } from '../store/useQuizStore';
 import {
   Search,
   X,
@@ -23,6 +29,7 @@ import {
   BookMarked,
   HelpCircle,
   Share2,
+  Table,
 } from 'lucide-react';
 
 // ============================================================
@@ -309,19 +316,34 @@ const ReadingQuestionCard: React.FC<{
             </div>
           )}
 
-          {/* "View exam set" button */}
-          {showViewExamSetBtn && onViewExamSet && (
+          {/* "View exam set" & "Full Đáp Án 200 câu" buttons */}
+          <div className="mt-3 flex flex-col sm:flex-row items-center gap-2">
             <button
               onClick={(e) => {
                 e.stopPropagation();
-                onViewExamSet();
+                const resolved = resolveBookAndTestFromSource(q.source, q.id, q.num);
+                useQuizStore.getState().openFullAnswers(resolved || { questionNum: q.num });
               }}
-              className="mt-3 w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white text-[12.5px] font-bold cursor-pointer transition-all shadow-sm"
+              className="w-full sm:w-auto flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-[12px] font-bold cursor-pointer transition-all shadow-sm"
+              title="Xem bảng đáp án trọn bộ (Full 200 câu) của đề này"
             >
-              <Layers className="w-4 h-4" />
-              Xem toàn bộ đề "{q.source}" (câu 1 → {allQuestions.filter(x => x.source === q.source).length})
+              <CheckCircle2 className="w-3.5 h-3.5" />
+              <span>Full Đáp Án (200 câu)</span>
             </button>
-          )}
+
+            {showViewExamSetBtn && onViewExamSet && (
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onViewExamSet();
+                }}
+                className="w-full sm:w-auto flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-white text-[12px] font-bold cursor-pointer transition-all shadow-sm"
+              >
+                <Layers className="w-3.5 h-3.5" />
+                <span>Xem cả đề "{q.source}"</span>
+              </button>
+            )}
+          </div>
         </div>
       )}
     </div>
@@ -451,18 +473,37 @@ const ListeningQuestionCard: React.FC<{
             </div>
           )}
 
-          {showViewExamSetBtn && onViewExamSet && (
+          {/* "View exam set" & "Full Đáp Án 200 câu" buttons */}
+          <div className="mt-3 flex flex-col sm:flex-row items-center gap-2">
             <button
               onClick={(e) => {
                 e.stopPropagation();
-                onViewExamSet();
+                useQuizStore.getState().openFullAnswers({
+                  book: 'Hacker 2 (Full 200 câu)',
+                  test: '1',
+                  questionNum: q.num,
+                });
               }}
-              className="mt-3 w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-sky-500 hover:bg-sky-600 text-white text-[12.5px] font-bold cursor-pointer transition-all shadow-sm"
+              className="w-full sm:w-auto flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-[12px] font-bold cursor-pointer transition-all shadow-sm"
+              title="Xem bảng đáp án trọn bộ (Full 200 câu) của đề này"
             >
-              <Layers className="w-4 h-4" />
-              Xem toàn bộ Listening Part {q.part} ({listeningQuestions.filter((x) => x.part === q.part).length} câu)
+              <CheckCircle2 className="w-3.5 h-3.5" />
+              <span>Full Đáp Án (200 câu)</span>
             </button>
-          )}
+
+            {showViewExamSetBtn && onViewExamSet && (
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onViewExamSet();
+                }}
+                className="w-full sm:w-auto flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-sky-500 hover:bg-sky-600 text-white text-[12px] font-bold cursor-pointer transition-all shadow-sm"
+              >
+                <Layers className="w-3.5 h-3.5" />
+                <span>Xem cả Part {q.part}</span>
+              </button>
+            )}
+          </div>
         </div>
       )}
     </div>
@@ -526,13 +567,33 @@ const ExamSetView: React.FC<{
               {questions.length} câu · Câu được highlight ← là câu đang tìm
             </p>
           </div>
-          <button
-            onClick={onExit}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white border border-[#EFE8DE] text-[11.5px] font-semibold text-[#5C554E] hover:bg-gray-50 cursor-pointer transition shrink-0"
-          >
-            <ArrowLeft className="w-3.5 h-3.5" />
-            Thoát
-          </button>
+          <div className="flex items-center gap-1.5 shrink-0">
+            <button
+              onClick={() => {
+                if (focus.kind === 'reading') {
+                  const resolved = resolveBookAndTestFromSource(focus.setKey);
+                  useQuizStore.getState().openFullAnswers(resolved || {});
+                } else {
+                  useQuizStore.getState().openFullAnswers({
+                    book: 'Hacker 2 (Full 200 câu)',
+                    test: '1',
+                  });
+                }
+              }}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-[11.5px] font-bold cursor-pointer transition shadow-2xs"
+              title="Xem bảng đáp án trọn bộ 200 câu của bộ đề này"
+            >
+              <CheckCircle2 className="w-3.5 h-3.5" />
+              <span>Full Đáp Án</span>
+            </button>
+            <button
+              onClick={onExit}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white border border-[#EFE8DE] text-[11.5px] font-semibold text-[#5C554E] hover:bg-gray-50 cursor-pointer transition"
+            >
+              <ArrowLeft className="w-3.5 h-3.5" />
+              Thoát
+            </button>
+          </div>
         </div>
 
         {/* Mini stats */}
@@ -1061,6 +1122,9 @@ export const SearchTab: React.FC = () => {
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const [focusedPassageId, setFocusedPassageId] = useState<string | null>(null);
   const [examSetFocus, setExamSetFocus] = useState<ExamSetFocus | null>(null);
+  const [searchMode, setSearchMode] = useState<'search' | 'matrix'>('search');
+  const [selectedBook, setSelectedBook] = useState<string>(EXAM_BOOKS_META[0]?.id || 'Hacker 2 (Full 200 câu)');
+  const [selectedTestNum, setSelectedTestNum] = useState<string>('1');
 
   // Auto-focus input on mount
   useEffect(() => {
@@ -1097,8 +1161,8 @@ export const SearchTab: React.FC = () => {
       }
     }
 
-    // Listening questions
-    for (const q of listeningQuestions) {
+    // Listening questions (All 1,100 questions from Hacker 2 & Final Trial)
+    for (const q of getAllListeningQuestions()) {
       if (isNumericSearch) {
         if (String(q.num).startsWith(raw)) {
           out.push({ kind: 'listening', question: q, matchedIn: 'num' });
@@ -1111,6 +1175,10 @@ export const SearchTab: React.FC = () => {
       }
       if (Object.values(q.options).some((opt) => normalize(opt).includes(normQ))) {
         out.push({ kind: 'listening', question: q, matchedIn: 'answer' });
+        continue;
+      }
+      if (q.transcript && normalize(q.transcript).includes(normQ)) {
+        out.push({ kind: 'listening', question: q, matchedIn: 'question' });
         continue;
       }
     }
@@ -1161,8 +1229,175 @@ export const SearchTab: React.FC = () => {
 
   return (
     <div className="flex flex-col h-full min-h-0">
+      {/* ---- Mode Switcher Pills ---- */}
+      <div className="shrink-0 px-3 pt-2.5 pb-1 flex items-center justify-between gap-2">
+        <div className="flex items-center gap-1 bg-[#EFE8DE]/60 p-0.5 rounded-xl border border-[#E5DDD2] text-xs font-bold">
+          <button
+            onClick={() => setSearchMode('search')}
+            className={`px-3 py-1 rounded-lg transition cursor-pointer flex items-center gap-1.5 ${
+              searchMode === 'search'
+                ? 'bg-white text-emerald-800 shadow-2xs font-extrabold'
+                : 'text-[#6B635B] hover:text-[#262320]'
+            }`}
+          >
+            <Search className="w-3.5 h-3.5" />
+            <span>Tìm Theo Từ Khóa</span>
+          </button>
+          <button
+            onClick={() => setSearchMode('matrix')}
+            className={`px-3 py-1 rounded-lg transition cursor-pointer flex items-center gap-1.5 ${
+              searchMode === 'matrix'
+                ? 'bg-emerald-600 text-white shadow-2xs font-extrabold'
+                : 'text-[#6B635B] hover:text-[#262320]'
+            }`}
+          >
+            <Table className="w-3.5 h-3.5" />
+            <span>Bảng Đáp Án Trọn Bộ (Full Test)</span>
+          </button>
+        </div>
+
+        {searchMode === 'matrix' && (
+          <span className="text-[10px] text-emerald-700 font-semibold hidden sm:inline">
+            Tra cứu toàn bộ 200 câu LC + RC
+          </span>
+        )}
+      </div>
+
+      {searchMode === 'matrix' ? (
+        <div className="flex-1 overflow-y-auto px-3 py-2 min-h-0 space-y-3">
+          {/* Book & Test Selection Bar */}
+          <div className="bg-white p-3 rounded-2xl border border-[#EFE8DE] shadow-xs flex flex-wrap items-center justify-between gap-2.5">
+            <div className="flex items-center gap-2 flex-wrap">
+              <label className="text-xs font-bold text-[#5C5247]">Bộ Đề:</label>
+              <select
+                value={selectedBook}
+                onChange={(e) => {
+                  setSelectedBook(e.target.value);
+                  setSelectedTestNum('1');
+                }}
+                className="bg-[#FAF7F2] border border-[#DCD3C7] text-xs font-bold rounded-xl px-2.5 py-1.5 text-[#262320] focus:outline-none focus:border-emerald-500 cursor-pointer"
+              >
+                {EXAM_BOOKS_META.map((bm) => (
+                  <option key={bm.id} value={bm.id}>
+                    {bm.name}
+                  </option>
+                ))}
+              </select>
+
+              <label className="text-xs font-bold text-[#5C5247] ml-1">Đề Thi:</label>
+              <select
+                value={selectedTestNum}
+                onChange={(e) => setSelectedTestNum(e.target.value)}
+                className="bg-[#FAF7F2] border border-[#DCD3C7] text-xs font-bold rounded-xl px-2.5 py-1.5 text-[#262320] focus:outline-none focus:border-emerald-500 cursor-pointer"
+              >
+                {selectedBook === 'Docs 2 (Reading)' ? (
+                  <>
+                    <option value="Đề 1 (Trial Test)">Đề 1 (Trial Test - 134 câu)</option>
+                    <option value="Đề 2 (YBM Test 1)">Đề 2 (YBM Test 1 - 100 câu)</option>
+                  </>
+                ) : selectedBook === 'Docs 1 (Test 2)' ? (
+                  <option value="Test 2">Test 2 (100 câu)</option>
+                ) : (
+                  Array.from({ length: 10 }, (_, i) => i + 1).map((t) => (
+                    <option key={t} value={String(t)}>
+                      Test {t}
+                    </option>
+                  ))
+                )}
+              </select>
+            </div>
+
+            <div className="text-[11px] font-mono text-[#8C8276]">
+              {selectedBook} • Đề #{selectedTestNum}
+            </div>
+          </div>
+
+          {/* Quick Stats & Jump */}
+          {(() => {
+            const currentKeys = MASTER_ANSWER_KEYS[selectedBook]?.[selectedTestNum] || {};
+            const qNums = Object.keys(currentKeys).map(Number).sort((a, b) => a - b);
+            const lcNums = qNums.filter((n) => n <= 100);
+            const rcNums = qNums.filter((n) => n > 100);
+
+            if (qNums.length === 0) {
+              return (
+                <div className="bg-white p-8 rounded-2xl border border-[#EFE8DE] text-center text-[#8C8276] text-xs">
+                  Không tìm thấy đáp án cho bộ đề này.
+                </div>
+              );
+            }
+
+            return (
+              <div className="space-y-4">
+                {/* Listening Keys (1-100) */}
+                {lcNums.length > 0 && (
+                  <div className="bg-white rounded-2xl border border-sky-200/80 p-3.5 shadow-2xs">
+                    <div className="flex items-center justify-between pb-2 mb-2.5 border-b border-sky-100">
+                      <span className="font-extrabold text-xs text-sky-900 flex items-center gap-1.5">
+                        <Mic className="w-3.5 h-3.5 text-sky-600" />
+                        🎧 LISTENING KEY (Câu 1 - 100)
+                      </span>
+                      <span className="text-[10px] text-sky-700 font-bold bg-sky-50 px-2 py-0.5 rounded-full border border-sky-200">
+                        {lcNums.length} câu
+                      </span>
+                    </div>
+
+                    <div className="grid grid-cols-5 sm:grid-cols-10 gap-1.5">
+                      {lcNums.map((num) => {
+                        const ans = currentKeys[num];
+                        return (
+                          <div
+                            key={num}
+                            className="flex flex-col items-center justify-center p-1 rounded-lg border border-sky-100 bg-sky-50/40 hover:bg-sky-100 transition cursor-pointer"
+                            title={`Câu ${num}: Đáp án ${ans}`}
+                          >
+                            <span className="text-[9px] font-mono text-[#7A7268]">#{num}</span>
+                            <span className="text-xs font-black text-sky-950 mt-0.5">{ans}</span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+
+                {/* Reading Keys (101-200) */}
+                {rcNums.length > 0 && (
+                  <div className="bg-white rounded-2xl border border-amber-200/80 p-3.5 shadow-2xs">
+                    <div className="flex items-center justify-between pb-2 mb-2.5 border-b border-amber-100">
+                      <span className="font-extrabold text-xs text-amber-900 flex items-center gap-1.5">
+                        <BookOpen className="w-3.5 h-3.5 text-amber-600" />
+                        📖 READING KEY (Câu 101 - 200)
+                      </span>
+                      <span className="text-[10px] text-amber-800 font-bold bg-amber-50 px-2 py-0.5 rounded-full border border-amber-200">
+                        {rcNums.length} câu
+                      </span>
+                    </div>
+
+                    <div className="grid grid-cols-5 sm:grid-cols-10 gap-1.5">
+                      {rcNums.map((num) => {
+                        const ans = currentKeys[num];
+                        return (
+                          <div
+                            key={num}
+                            className="flex flex-col items-center justify-center p-1 rounded-lg border border-amber-100 bg-amber-50/40 hover:bg-amber-100 transition cursor-pointer"
+                            title={`Câu ${num}: Đáp án ${ans}`}
+                          >
+                            <span className="text-[9px] font-mono text-[#7A7268]">#{num}</span>
+                            <span className="text-xs font-black text-amber-950 mt-0.5">{ans}</span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+              </div>
+            );
+          })()}
+        </div>
+      ) : (
+      <>
       {/* ---- Search bar ---- */}
-      <div className="shrink-0 px-3 pt-3 pb-2">
+      <div className="shrink-0 px-3 pt-1 pb-2">
         <div className="relative">
           <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-[#B0A89E] pointer-events-none" />
           <input
@@ -1174,7 +1409,7 @@ export const SearchTab: React.FC = () => {
               setExpandedId(null);
               setFocusedPassageId(null);
             }}
-            placeholder="Nhập câu hỏi, đáp án, đoạn văn hoặc số câu…"
+            placeholder="Nhập câu hỏi, từ khóa, đáp án, hoặc số câu (vd: 101, 32, once)..."
             className="w-full pl-9 pr-10 py-2.5 rounded-2xl border-2 border-[#EFE8DE] bg-white text-[13.5px] text-[#262320] placeholder:text-[#B0A89E] focus:outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-100 transition-all shadow-xs"
           />
           {query && (
@@ -1430,6 +1665,8 @@ export const SearchTab: React.FC = () => {
           );
         })}
       </div>
+      </>
+      )}
     </div>
   );
 };

@@ -13,7 +13,7 @@ export interface UserSyncPayload {
   version: number;
   lastUpdated: number;
   // Study curriculum & current location
-  activeTab?: 'practice' | 'listening' | 'results' | 'search';
+  activeTab?: 'practice' | 'listening' | 'results' | 'search' | 'answers';
   sourceFilter?: string;
   categoryFilter?: string;
   mode?: StudyMode;

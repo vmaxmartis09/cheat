@@ -64,12 +64,16 @@ interface QuizState {
   savedMistakeIds: string[]; // pool of all wrong questions across time
   questionProgress: Record<string, QuestionProgress>; // historical mistake and correct count per question
   // Active Navigation & Curriculum state
-  activeTab: 'practice' | 'listening' | 'results' | 'search';
-  setActiveTab: (tab: 'practice' | 'listening' | 'results' | 'search') => void;
+  activeTab: 'practice' | 'listening' | 'results' | 'search' | 'answers';
+  setActiveTab: (tab: 'practice' | 'listening' | 'results' | 'search' | 'answers') => void;
+  fullAnswerTarget: { book?: string; test?: string; questionNum?: number } | null;
+  openFullAnswers: (target?: { book?: string; test?: string; questionNum?: number }) => void;
   listeningCurrentIndex: number;
   setListeningCurrentIndex: (idx: number) => void;
   listeningSelectedPart: number | 'all';
   setListeningSelectedPart: (part: number | 'all') => void;
+  listeningSelectedTest: number | 'all';
+  setListeningSelectedTest: (test: number | 'all') => void;
   resumeLastStudy: () => { tab: 'practice' | 'listening'; questionNum: number; sectionName: string };
 
   // Actions
@@ -123,8 +127,17 @@ export const useQuizStore = create<QuizState>()(
 
       // Navigation & Curriculum state
       activeTab: 'practice',
+      fullAnswerTarget: null,
+      openFullAnswers: (target) => {
+        set({
+          activeTab: 'answers',
+          fullAnswerTarget: target || null,
+        });
+        scheduleAutoSync(get);
+      },
       listeningCurrentIndex: 0,
       listeningSelectedPart: 'all',
+      listeningSelectedTest: 1,
 
       selectedAnswer: null,
       isAnswered: false,
@@ -166,6 +179,11 @@ export const useQuizStore = create<QuizState>()(
 
       setListeningSelectedPart: (part) => {
         set({ listeningSelectedPart: part });
+        scheduleAutoSync(get);
+      },
+
+      setListeningSelectedTest: (test) => {
+        set({ listeningSelectedTest: test, listeningCurrentIndex: 0 });
         scheduleAutoSync(get);
       },
 
@@ -953,6 +971,7 @@ export const useQuizStore = create<QuizState>()(
         activeTab: state.activeTab,
         listeningCurrentIndex: state.listeningCurrentIndex,
         listeningSelectedPart: state.listeningSelectedPart,
+        listeningSelectedTest: state.listeningSelectedTest,
         userPasskey: state.userPasskey,
         isLoggedIn: state.isLoggedIn,
         lastSyncedAt: state.lastSyncedAt,

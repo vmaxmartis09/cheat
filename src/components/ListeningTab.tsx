@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import {
-  getListeningQuestionsByPart,
+  getListeningQuestionsByTestAndPart,
   ListeningQuestion,
 } from '../data/listeningQuestions';
 import { AnswerChoice } from '../types';
@@ -38,6 +38,9 @@ export const ListeningTab: React.FC = () => {
     setListeningCurrentIndex: setCurrentIdx,
     listeningSelectedPart: selectedPart,
     setListeningSelectedPart: setSelectedPart,
+    listeningSelectedTest: selectedTest,
+    setListeningSelectedTest: setSelectedTest,
+    openFullAnswers,
   } = useQuizStore();
 
   // Component state
@@ -56,17 +59,21 @@ export const ListeningTab: React.FC = () => {
 
   // Filtered question set
   const filteredQuestions: ListeningQuestion[] = React.useMemo(() => {
-    return getListeningQuestionsByPart(selectedPart);
-  }, [selectedPart]);
+    return getListeningQuestionsByTestAndPart(selectedTest, selectedPart);
+  }, [selectedTest, selectedPart]);
 
   const safeIdx = Math.min(Math.max(0, currentIdx), Math.max(0, filteredQuestions.length - 1));
   const currentQ: ListeningQuestion | undefined = filteredQuestions[safeIdx];
 
-  // Map audio URL according to question's part
+  // Map audio URL according to question's test and part
   const currentAudioUrl = React.useMemo(() => {
     if (!currentQ) return '/audio/part1.mp3';
+    // If YBM test audio is selected
+    if (selectedTest && typeof selectedTest === 'number' && selectedTest >= 1 && selectedTest <= 10) {
+      return `/audio/ybm/test${selectedTest}.mp3`;
+    }
     return `/audio/part${currentQ.part}.mp3`;
-  }, [currentQ]);
+  }, [currentQ, selectedTest]);
 
   // Reset audio when question part changes
   useEffect(() => {
@@ -199,69 +206,115 @@ export const ListeningTab: React.FC = () => {
       {/* 1. TOP SUB-HEADER: PART SELECTOR & STATS */}
       <div className="bg-white border-b border-[#EAE3D8] px-3 py-2 shrink-0">
         <div className="max-w-4xl mx-auto flex flex-wrap items-center justify-between gap-2">
-          {/* Part Filter Pills */}
-          <div className="flex items-center gap-1 overflow-x-auto py-0.5 text-xs font-bold scrollbar-none">
-            <button
-              onClick={() => { setSelectedPart('all'); setCurrentIdx(0); }}
-              className={`px-2.5 py-1 rounded-lg transition cursor-pointer whitespace-nowrap ${
-                selectedPart === 'all'
-                  ? 'bg-amber-600 text-white shadow-2xs'
-                  : 'bg-[#F4EFEA] text-[#6A625A] hover:bg-[#EAE3D8]'
-              }`}
+          {/* Test & Part Filters */}
+          <div className="flex items-center gap-1.5 overflow-x-auto py-0.5 text-xs font-bold scrollbar-none flex-wrap">
+            {/* Test Selector Dropdown */}
+            <select
+              value={selectedTest}
+              onChange={(e) => {
+                const val = e.target.value === 'all' ? 'all' : Number(e.target.value);
+                setSelectedTest(val);
+                setCurrentIdx(0);
+              }}
+              className="bg-[#FAF7F2] border border-[#E0D7CC] text-[#262320] text-xs font-bold rounded-lg px-2.5 py-1 focus:outline-none focus:border-amber-500 cursor-pointer shadow-2xs"
             >
-              Tất cả (100 câu)
-            </button>
-            <button
-              onClick={() => { setSelectedPart(1); setCurrentIdx(0); }}
-              className={`px-2.5 py-1 rounded-lg transition cursor-pointer whitespace-nowrap ${
-                selectedPart === 1
-                  ? 'bg-amber-600 text-white shadow-2xs'
-                  : 'bg-[#F4EFEA] text-[#6A625A] hover:bg-[#EAE3D8]'
-              }`}
-            >
-              Part 1 (Q1-6 Có Ảnh)
-            </button>
-            <button
-              onClick={() => { setSelectedPart(2); setCurrentIdx(0); }}
-              className={`px-2.5 py-1 rounded-lg transition cursor-pointer whitespace-nowrap ${
-                selectedPart === 2
-                  ? 'bg-amber-600 text-white shadow-2xs'
-                  : 'bg-[#F4EFEA] text-[#6A625A] hover:bg-[#EAE3D8]'
-              }`}
-            >
-              Part 2 (Q7-31 Hỏi Đáp)
-            </button>
-            <button
-              onClick={() => { setSelectedPart(3); setCurrentIdx(0); }}
-              className={`px-2.5 py-1 rounded-lg transition cursor-pointer whitespace-nowrap ${
-                selectedPart === 3
-                  ? 'bg-amber-600 text-white shadow-2xs'
-                  : 'bg-[#F4EFEA] text-[#6A625A] hover:bg-[#EAE3D8]'
-              }`}
-            >
-              Part 3 (Q32-70 Hội Thoại)
-            </button>
-            <button
-              onClick={() => { setSelectedPart(4); setCurrentIdx(0); }}
-              className={`px-2.5 py-1 rounded-lg transition cursor-pointer whitespace-nowrap ${
-                selectedPart === 4
-                  ? 'bg-amber-600 text-white shadow-2xs'
-                  : 'bg-[#F4EFEA] text-[#6A625A] hover:bg-[#EAE3D8]'
-              }`}
-            >
-              Part 4 (Q71-100 Độc Thoại)
-            </button>
+              <optgroup label="🎧 HACKER TOEIC 2 (10 TESTS)">
+                <option value={1}>Hacker 2 - Test 1 (100 câu)</option>
+                <option value={2}>Hacker 2 - Test 2 (100 câu)</option>
+                <option value={3}>Hacker 2 - Test 3 (100 câu)</option>
+                <option value={4}>Hacker 2 - Test 4 (100 câu)</option>
+                <option value={5}>Hacker 2 - Test 5 (100 câu)</option>
+                <option value={6}>Hacker 2 - Test 6 (100 câu)</option>
+                <option value={7}>Hacker 2 - Test 7 (100 câu)</option>
+                <option value={8}>Hacker 2 - Test 8 (100 câu)</option>
+                <option value={9}>Hacker 2 - Test 9 (100 câu)</option>
+                <option value={10}>Hacker 2 - Test 10 (100 câu)</option>
+              </optgroup>
+              <optgroup label="⭐ ĐỀ LUYỆN KHÁC">
+                <option value={0}>Final Trial Test (Hacker 3 & 2 Part 1-4)</option>
+                <option value="all">Toàn bộ 1,100 câu Listening</option>
+              </optgroup>
+            </select>
+
+            {/* Part Filter Pills */}
+            <div className="flex items-center gap-1">
+              <button
+                onClick={() => { setSelectedPart('all'); setCurrentIdx(0); }}
+                className={`px-2 py-1 rounded-lg transition cursor-pointer whitespace-nowrap ${
+                  selectedPart === 'all'
+                    ? 'bg-amber-600 text-white shadow-2xs'
+                    : 'bg-[#F4EFEA] text-[#6A625A] hover:bg-[#EAE3D8]'
+                }`}
+              >
+                All
+              </button>
+              <button
+                onClick={() => { setSelectedPart(1); setCurrentIdx(0); }}
+                className={`px-2 py-1 rounded-lg transition cursor-pointer whitespace-nowrap ${
+                  selectedPart === 1
+                    ? 'bg-amber-600 text-white shadow-2xs'
+                    : 'bg-[#F4EFEA] text-[#6A625A] hover:bg-[#EAE3D8]'
+                }`}
+              >
+                P1 (Ảnh)
+              </button>
+              <button
+                onClick={() => { setSelectedPart(2); setCurrentIdx(0); }}
+                className={`px-2 py-1 rounded-lg transition cursor-pointer whitespace-nowrap ${
+                  selectedPart === 2
+                    ? 'bg-amber-600 text-white shadow-2xs'
+                    : 'bg-[#F4EFEA] text-[#6A625A] hover:bg-[#EAE3D8]'
+                }`}
+              >
+                P2 (Hỏi Đáp)
+              </button>
+              <button
+                onClick={() => { setSelectedPart(3); setCurrentIdx(0); }}
+                className={`px-2 py-1 rounded-lg transition cursor-pointer whitespace-nowrap ${
+                  selectedPart === 3
+                    ? 'bg-amber-600 text-white shadow-2xs'
+                    : 'bg-[#F4EFEA] text-[#6A625A] hover:bg-[#EAE3D8]'
+                }`}
+              >
+                P3 (Hội Thoại)
+              </button>
+              <button
+                onClick={() => { setSelectedPart(4); setCurrentIdx(0); }}
+                className={`px-2 py-1 rounded-lg transition cursor-pointer whitespace-nowrap ${
+                  selectedPart === 4
+                    ? 'bg-amber-600 text-white shadow-2xs'
+                    : 'bg-[#F4EFEA] text-[#6A625A] hover:bg-[#EAE3D8]'
+                }`}
+              >
+                P4 (Độc Thoại)
+              </button>
+            </div>
           </div>
 
-          {/* Quick Score & Streak */}
+          {/* Quick Score, Streak & Fast Full Answer Lookup */}
           <div className="flex items-center gap-2 text-xs">
+            <button
+              onClick={() => {
+                const testNum = selectedTest === 'all' || selectedTest === 0 ? '1' : String(selectedTest);
+                openFullAnswers({
+                  book: 'Hacker 2 (Full 200 câu)',
+                  test: testNum,
+                  questionNum: currentQ?.num || 1,
+                });
+              }}
+              className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs cursor-pointer shadow-2xs transition"
+              title="Xem toàn bộ 200 đáp án của bộ đề này"
+            >
+              <CheckCircle2 className="w-3.5 h-3.5" />
+              <span>Full Đáp Án</span>
+            </button>
             {currentStreak > 1 && (
               <span className="flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 font-bold border border-amber-200">
                 <Flame className="w-3.5 h-3.5 fill-amber-500 text-amber-600" />
                 {currentStreak}
               </span>
             )}
-            <span className="text-[#7A7268] font-medium">
+            <span className="text-[#7A7268] font-medium hidden sm:inline">
               Đúng: <strong className="text-emerald-700 font-bold">{correctCount}</strong>/{totalAnswered}
             </span>
           </div>
@@ -278,11 +331,11 @@ export const ListeningTab: React.FC = () => {
             </div>
             <div className="min-w-0">
               <div className="text-xs font-bold text-[#262320] truncate">
-                Hackers LC Test 7 — Part {currentQ?.part || 1}
+                {currentQ?.badge || `TOEIC Listening Test ${selectedTest} — Part ${currentQ?.part || 1}`}
               </div>
               <div className="text-[10px] text-[#7A7268] flex items-center gap-1.5">
                 <Radio className="w-2.5 h-2.5 text-amber-600 animate-pulse" />
-                <span>Audio chất lượng cao</span>
+                <span>Audio trực tiếp TOEIC</span>
                 {currentQ?.accent && (
                   <span className="bg-amber-100/70 text-amber-900 px-1 rounded text-[9px] font-semibold truncate max-w-[150px]">
                     {currentQ.accent}

@@ -1,0 +1,23867 @@
+import { Question } from '../types';
+
+export const hacker3Questions: Question[] = [
+  {
+    "id": "docs6_hacker3_t1_101",
+    "num": 101,
+    "source": "Hacker 3 Test 1 Part 5",
+    "category": "Từ loại (Word Form)",
+    "question": "Delegates attending the international trade convention were provided with overnight ______ at Hotel Boswick.",
+    "options": {
+      "A": "accommodated",
+      "B": "accommodates",
+      "C": "accommodating",
+      "D": "accommodations"
+    },
+    "correctAnswer": "D",
+    "explanation": "Căn cứ vào ngữ pháp câu, vị trí cần điền đóng vai trò từ loại phù hợp trong mệnh đề. Chọn đáp án (D) 'accommodations' để hoàn chỉnh cấu trúc ngữ pháp.",
+    "tip": "⚡ MẸO TỪ LOẠI: Xác định vị trí chỗ trống đứng sau từ loại gì (danh từ, động từ, tính từ hay trạng từ) để chọn đuôi hậu tố chính xác. Đáp án đúng là (D).",
+    "keywords": [
+      "Delegates",
+      "attending",
+      "international"
+    ],
+    "vietnameseMeaning": "(D) 102 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t1_102",
+    "num": 102,
+    "source": "Hacker 3 Test 1 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Charles Wang submitted a resume that ______ his years of experience in advertising.",
+    "options": {
+      "A": "emphasized",
+      "B": "enclosed",
+      "C": "estimated",
+      "D": "employed"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'emphasized'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'emphasized'.",
+    "keywords": [
+      "Charles",
+      "Wang",
+      "submitted"
+    ],
+    "vietnameseMeaning": "(A) 103 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t1_103",
+    "num": 103,
+    "source": "Hacker 3 Test 1 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Beginning next week, Zumwalt, Inc.'s new smartphone will be available for purchase at ____ retailers across Korea and Japan.",
+    "options": {
+      "A": "authorizing",
+      "B": "authority",
+      "C": "authorization",
+      "D": "authorized"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'authorized'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'authorized'.",
+    "keywords": [
+      "Beginning",
+      "next",
+      "week"
+    ],
+    "vietnameseMeaning": "(D) 104 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t1_104",
+    "num": 104,
+    "source": "Hacker 3 Test 1 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Highway construction has been postponed indefinitely as Hampshire County residents have ____ to the plan.",
+    "options": {
+      "A": "preferences",
+      "B": "arrangements",
+      "C": "considerations",
+      "D": "objections"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'objections'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'objections'.",
+    "keywords": [
+      "Highway",
+      "construction",
+      "postponed"
+    ],
+    "vietnameseMeaning": "(D) 105 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t1_105",
+    "num": 105,
+    "source": "Hacker 3 Test 1 Part 5",
+    "category": "Ngữ pháp & Thì (Grammar & Tenses)",
+    "question": "The Trescott Chamber of Commerce _____ local businessman Brian Larue at a ceremony next week.",
+    "options": {
+      "A": "was honoring",
+      "B": "to honor",
+      "C": "will honor",
+      "D": "honor"
+    },
+    "correctAnswer": "C",
+    "explanation": "Xét về sự hòa hợp giữa chủ ngữ và thì của câu, động từ (C) 'will honor' chia đúng thì và dạng chủ động/bị động.",
+    "tip": "⚡ MẸO CHIA THÌ: Nhìn dấu hiệu thời gian và xét chủ ngữ số ít/số nhiều để loại trừ các dạng sai thì. Đáp án đúng là (C).",
+    "keywords": [
+      "Trescott",
+      "Chamber",
+      "Commerce"
+    ],
+    "vietnameseMeaning": "(C) 106 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t1_106",
+    "num": 106,
+    "source": "Hacker 3 Test 1 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Please review your contract, and feel free to ask us _____ questions you might have,",
+    "options": {
+      "A": "few",
+      "B": "either",
+      "C": "any",
+      "D": "much"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'any'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'any'.",
+    "keywords": [
+      "Please",
+      "review",
+      "your"
+    ],
+    "vietnameseMeaning": "(C) 107 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t1_107",
+    "num": 107,
+    "source": "Hacker 3 Test 1 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The manager announced that a few office supply _______ would be delayed because of weather conditions.",
+    "options": {
+      "A": "shipment",
+      "B": "shipments",
+      "C": "to ship",
+      "D": "shipping"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'shipments'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'shipments'.",
+    "keywords": [
+      "manager",
+      "announced",
+      "office"
+    ],
+    "vietnameseMeaning": "(B) 108 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t1_108",
+    "num": 108,
+    "source": "Hacker 3 Test 1 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "By adding extra flights between Dubai and Istanbul, Euroblue Airlines will increase its ____ for this route by more than 50 percent.",
+    "options": {
+      "A": "endurance",
+      "B": "motivation",
+      "C": "location",
+      "D": "capacity"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'capacity'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'capacity'.",
+    "keywords": [
+      "adding",
+      "extra",
+      "flights"
+    ],
+    "vietnameseMeaning": "(D) 109 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t1_109",
+    "num": 109,
+    "source": "Hacker 3 Test 1 Part 5",
+    "category": "Từ loại (Word Form)",
+    "question": "Halmilton Hospital’s purchase of a medical 115. A fee of $100 will be _____ to office rental scanning device will permit doctors to diagnose payments that are more than two weeks late. patients more ____ than ever before.",
+    "options": {
+      "A": "precise",
+      "B": "precisely",
+      "C": "precision",
+      "D": "preciseness"
+    },
+    "correctAnswer": "B",
+    "explanation": "Căn cứ vào ngữ pháp câu, vị trí cần điền đóng vai trò từ loại phù hợp trong mệnh đề. Chọn đáp án (B) 'precisely' để hoàn chỉnh cấu trúc ngữ pháp.",
+    "tip": "⚡ MẸO TỪ LOẠI: Xác định vị trí chỗ trống đứng sau từ loại gì (danh từ, động từ, tính từ hay trạng từ) để chọn đuôi hậu tố chính xác. Đáp án đúng là (B).",
+    "keywords": [
+      "Halmilton",
+      "Hospital",
+      "purchase"
+    ],
+    "vietnameseMeaning": "(B) 110 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t1_110",
+    "num": 110,
+    "source": "Hacker 3 Test 1 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "____ a bank has approved Flynn Co.'s business 116. Last month's issue of Wise Finance _________ loan, the company can begin its planned expansion. an exclusive interview with Chuck Granville, founder of",
+    "options": {
+      "A": "subscribed",
+      "B": "admitted",
+      "C": "Consequently",
+      "D": "Now that"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'Now that'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'Now that'.",
+    "keywords": [
+      "bank",
+      "approved",
+      "Flynn"
+    ],
+    "vietnameseMeaning": "(D) 111 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t1_111",
+    "num": 111,
+    "source": "Hacker 3 Test 1 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Online reviewers praise Alpha Fashion's ______ deliveries and its generous return policy.",
+    "options": {
+      "A": "tangible",
+      "B": "measured",
+      "C": "timely",
+      "D": "subsequent"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'timely'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'timely'.",
+    "keywords": [
+      "Online",
+      "reviewers",
+      "praise"
+    ],
+    "vietnameseMeaning": "(C) 112 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t1_112",
+    "num": 112,
+    "source": "Hacker 3 Test 1 Part 5",
+    "category": "Liên từ (Conjunctions)",
+    "question": "Though Bruce Guthrie's concert is planned _______ August 1, the organizers have said that this is subject to change.",
+    "options": {
+      "A": "at",
+      "B": "for",
+      "C": "since",
+      "D": "in"
+    },
+    "correctAnswer": "B",
+    "explanation": "Liên từ (B) 'for' dùng để liên kết hai mệnh đề biểu thị mối quan hệ logic chính xác.",
+    "tip": "⚡ MẸO LIÊN TỪ: Phân biệt rõ liên từ (theo sau là mệnh đề S + V) và giới từ (theo sau là N/V-ing). Chọn (B).",
+    "keywords": [
+      "Though",
+      "Bruce",
+      "Guthrie"
+    ],
+    "vietnameseMeaning": "(B) 113 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t1_113",
+    "num": 113,
+    "source": "Hacker 3 Test 1 Part 5",
+    "category": "Ngữ pháp & Thì (Grammar & Tenses)",
+    "question": "The public speaking course presents trainees with opportunities _____ themselves in front of a group.",
+    "options": {
+      "A": "will express",
+      "B": "to express",
+      "C": "are expressing",
+      "D": "expressed"
+    },
+    "correctAnswer": "B",
+    "explanation": "Xét về sự hòa hợp giữa chủ ngữ và thì của câu, động từ (B) 'to express' chia đúng thì và dạng chủ động/bị động.",
+    "tip": "⚡ MẸO CHIA THÌ: Nhìn dấu hiệu thời gian và xét chủ ngữ số ít/số nhiều để loại trừ các dạng sai thì. Đáp án đúng là (B).",
+    "keywords": [
+      "public",
+      "speaking",
+      "course"
+    ],
+    "vietnameseMeaning": "(B) 114 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t1_114",
+    "num": 114,
+    "source": "Hacker 3 Test 1 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The speaker at the Westicon Literature Seminar told an _____ story that had the entire audience laughing in enjoyment.",
+    "options": {
+      "A": "amusing",
+      "B": "amusement",
+      "C": "featured",
+      "D": "dedicated"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'amusing'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'amusing'.",
+    "keywords": [
+      "speaker",
+      "Westicon",
+      "Literature"
+    ],
+    "vietnameseMeaning": "(A) 115 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t1_115",
+    "num": 115,
+    "source": "Hacker 3 Test 1 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Question 115: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'Option A'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'Option A'.",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(A) 116 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t1_116",
+    "num": 116,
+    "source": "Hacker 3 Test 1 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Question 116: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) ' '.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) ' '.",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(C) 117 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t1_117",
+    "num": 117,
+    "source": "Hacker 3 Test 1 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Broadcasting the ________ latest news 24 hours a day, cable station CPP allows viewers to keep up-to-date on world events.",
+    "options": {
+      "A": "fewer",
+      "B": "very",
+      "C": "far",
+      "D": "more"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'very'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'very'.",
+    "keywords": [
+      "Broadcasting",
+      "latest",
+      "news"
+    ],
+    "vietnameseMeaning": "(B) 118 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t1_118",
+    "num": 118,
+    "source": "Hacker 3 Test 1 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The software _____ that New-Tech offers remove security risks and improve the performance of computers.",
+    "options": {
+      "A": "increments",
+      "B": "enhancements",
+      "C": "certificates",
+      "D": "exceptions"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'enhancements'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'enhancements'.",
+    "keywords": [
+      "software",
+      "Tech",
+      "offers"
+    ],
+    "vietnameseMeaning": "(B) 119 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t1_119",
+    "num": 119,
+    "source": "Hacker 3 Test 1 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Mr. Evans took a taxi to avoid being late, but the theater show had ____ begun by the time he arrived.",
+    "options": {
+      "A": "usually",
+      "B": "seldom",
+      "C": "hourly",
+      "D": "already"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'already'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'already'.",
+    "keywords": [
+      "Evans",
+      "took",
+      "taxi"
+    ],
+    "vietnameseMeaning": "(D) 120 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t1_120",
+    "num": 120,
+    "source": "Hacker 3 Test 1 Part 5",
+    "category": "Từ loại (Word Form)",
+    "question": "Notices _______ residents of possible power outages were mailed out a week before crews began work on the power lines.",
+    "options": {
+      "A": "inform",
+      "B": "information",
+      "C": "informed",
+      "D": "informing"
+    },
+    "correctAnswer": "D",
+    "explanation": "Căn cứ vào ngữ pháp câu, vị trí cần điền đóng vai trò từ loại phù hợp trong mệnh đề. Chọn đáp án (D) 'informing' để hoàn chỉnh cấu trúc ngữ pháp.",
+    "tip": "⚡ MẸO TỪ LOẠI: Xác định vị trí chỗ trống đứng sau từ loại gì (danh từ, động từ, tính từ hay trạng từ) để chọn đuôi hậu tố chính xác. Đáp án đúng là (D).",
+    "keywords": [
+      "Notices",
+      "residents",
+      "possible"
+    ],
+    "vietnameseMeaning": "(D) 121 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t1_121",
+    "num": 121,
+    "source": "Hacker 3 Test 1 Part 5",
+    "category": "Liên từ (Conjunctions)",
+    "question": "Mr. Clemon’s work was so impressive that he was 126. Local water quality is ____ to improve once the made a senior manager _____ only six months with the sewage treatment center is upgraded. company.",
+    "options": {
+      "A": "on",
+      "B": "after",
+      "C": "while",
+      "D": "owing to"
+    },
+    "correctAnswer": "B",
+    "explanation": "Liên từ (B) 'after' dùng để liên kết hai mệnh đề biểu thị mối quan hệ logic chính xác.",
+    "tip": "⚡ MẸO LIÊN TỪ: Phân biệt rõ liên từ (theo sau là mệnh đề S + V) và giới từ (theo sau là N/V-ing). Chọn (B).",
+    "keywords": [
+      "Clemon",
+      "work",
+      "impressive"
+    ],
+    "vietnameseMeaning": "(B) 122 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t1_122",
+    "num": 122,
+    "source": "Hacker 3 Test 1 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "In anticipation of an increase in visitors during the 127. Charles Kapoor was not considered a suitable summer holiday, the Shoreline Inn decided to ______ candidate for a financial analyst position ______ he hire additional housekeeping staff. possessed exceptional investment experience.",
+    "options": {
+      "A": "accordingly",
+      "B": "uncontrollably",
+      "C": "temporarily",
+      "D": "relatively"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'temporarily'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'temporarily'.",
+    "keywords": [
+      "anticipation",
+      "increase",
+      "visitors"
+    ],
+    "vietnameseMeaning": "(C) 123 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t1_123",
+    "num": 123,
+    "source": "Hacker 3 Test 1 Part 5",
+    "category": "Mệnh đề & Đại từ (Clauses & Pronouns)",
+    "question": "Although a graduate degree is a requirement for the position, none of _______ who responded to the job announcement have one.",
+    "options": {
+      "A": "they",
+      "B": "these",
+      "C": "themselves",
+      "D": "those"
+    },
+    "correctAnswer": "D",
+    "explanation": "Đáp án chính xác theo Official Key là (D) 'those'.",
+    "tip": "⚡ MẸO TOEIC: Đọc kỹ ngữ cảnh và loại trừ các đáp án sai ngữ pháp. Chọn (D).",
+    "keywords": [
+      "Although",
+      "graduate",
+      "degree"
+    ],
+    "vietnameseMeaning": "(D) 124 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t1_124",
+    "num": 124,
+    "source": "Hacker 3 Test 1 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Travel writer Arthur Chaplin will give a short presentation tomorrow _____ the trip the described in his new book, Walking in Peru.",
+    "options": {
+      "A": "along",
+      "B": "regarding",
+      "C": "in exchange for",
+      "D": "by means of"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'regarding'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'regarding'.",
+    "keywords": [
+      "Travel",
+      "writer",
+      "Arthur"
+    ],
+    "vietnameseMeaning": "(B) 125 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t1_125",
+    "num": 125,
+    "source": "Hacker 3 Test 1 Part 5",
+    "category": "Liên từ (Conjunctions)",
+    "question": "Having written multiple books on the effects of global warming, Ms. Black is widely regarded as a _______ expert on environmental issues.",
+    "options": {
+      "A": "naive",
+      "B": "in spite of",
+      "C": "as if",
+      "D": "even though"
+    },
+    "correctAnswer": "B",
+    "explanation": "Liên từ (B) 'in spite of' dùng để liên kết hai mệnh đề biểu thị mối quan hệ logic chính xác.",
+    "tip": "⚡ MẸO LIÊN TỪ: Phân biệt rõ liên từ (theo sau là mệnh đề S + V) và giới từ (theo sau là N/V-ing). Chọn (B).",
+    "keywords": [
+      "Having",
+      "written",
+      "multiple"
+    ],
+    "vietnameseMeaning": "(B) 126 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t1_126",
+    "num": 126,
+    "source": "Hacker 3 Test 1 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Question 126: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) ' '.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) ' '.",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(C) 127 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t1_127",
+    "num": 127,
+    "source": "Hacker 3 Test 1 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Question 127: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'Option D'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'Option D'.",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(D) 128 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t1_128",
+    "num": 128,
+    "source": "Hacker 3 Test 1 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The tour bus did not stop at Sheffield Stadium, so its passengers could only take pictures as they drove ______ it.",
+    "options": {
+      "A": "until",
+      "B": "past",
+      "C": "onto",
+      "D": "within"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'past'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'past'.",
+    "keywords": [
+      "tour",
+      "stop",
+      "Sheffield"
+    ],
+    "vietnameseMeaning": "(B) 129 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t1_129",
+    "num": 129,
+    "source": "Hacker 3 Test 1 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Mercer Incorporated carefully goes over _______ its customer surveys and market research before making important decisions.",
+    "options": {
+      "A": "as well as",
+      "B": "both",
+      "C": "between",
+      "D": "neither"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'both'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'both'.",
+    "keywords": [
+      "Mercer",
+      "Incorporated",
+      "carefully"
+    ],
+    "vietnameseMeaning": "(B) 130 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t1_130",
+    "num": 130,
+    "source": "Hacker 3 Test 1 Part 5",
+    "category": "Mệnh đề & Đại từ (Clauses & Pronouns)",
+    "question": "For the purpose of increasing sales, Mendelbaum Electronics is giving a prize to _____ is the 100th person to buy a refrigerator.",
+    "options": {
+      "A": "whichever",
+      "B": "another",
+      "C": "whoever",
+      "D": "someone"
+    },
+    "correctAnswer": "C",
+    "explanation": "Đáp án chính xác theo Official Key là (C) 'whoever'.",
+    "tip": "⚡ MẸO TOEIC: Đọc kỹ ngữ cảnh và loại trừ các đáp án sai ngữ pháp. Chọn (C).",
+    "keywords": [
+      "purpose",
+      "increasing",
+      "sales"
+    ],
+    "vietnameseMeaning": "(C) 131 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t1_131",
+    "num": 131,
+    "source": "Hacker 3 Test 1 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 131: Refer to the test material.",
+    "options": {
+      "A": "manufacture",
+      "B": "manufacturer",
+      "C": "manufacturing",
+      "D": "manufactured"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'manufacturer'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(B) 132 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t1_132",
+    "num": 132,
+    "source": "Hacker 3 Test 1 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 132: Refer to the test material.",
+    "options": {
+      "A": "nuisance",
+      "B": "attitude",
+      "C": "reputation",
+      "D": "condition"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'reputation'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(C) 133 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t1_133",
+    "num": 133,
+    "source": "Hacker 3 Test 1 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 133: Refer to the test material.",
+    "options": {
+      "A": "In this way",
+      "B": "In contrast",
+      "C": "In particular",
+      "D": "In reality"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'In particular'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(C) 134 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t1_134",
+    "num": 134,
+    "source": "Hacker 3 Test 1 Part 6",
+    "category": "Đọc hiểu Điền câu (Sentence Insertion)",
+    "question": "Question 134: Refer to the test material.",
+    "options": {
+      "A": "Perhaps we can discuss the issue further at the trade fair.",
+      "B": "If I like the results, I'd be willing to work with you on a regular basis.",
+      "C": "Once I make the design changes, I will send you the order.",
+      "D": "Your quoted prices are higher than I have budgeted for the items."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'If I like the results, I'd be willing to work with you on a regular basis.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(B) 135 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t1_135",
+    "num": 135,
+    "source": "Hacker 3 Test 1 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 135: Refer to the test material.",
+    "options": {
+      "A": "clever",
+      "B": "repetitive",
+      "C": "conservative",
+      "D": "extensive"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'extensive'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(D) 136 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t1_136",
+    "num": 136,
+    "source": "Hacker 3 Test 1 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 136: Refer to the test material.",
+    "options": {
+      "A": "will send",
+      "B": "has sent",
+      "C": "to be sent",
+      "D": "is sending"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'has sent'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(B) 137 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t1_137",
+    "num": 137,
+    "source": "Hacker 3 Test 1 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 137: Refer to the test material.",
+    "options": {
+      "A": "declined",
+      "B": "agreed",
+      "C": "encompassed",
+      "D": "attempted Questions 135-138 refer to the following notice, Notice to all Northrup Apartment residents: As you know, we have done some (135) _____ facility renovations for the first time. A children's playground in the compound has been added, and the old water pipes have been changed. Also, new walkways have been put in to replace the ones that had holes. Northrup Apartment management (136) _____ you a detailed report of the amount that was spent on materials and labor. You all should have had a chance to go over it carefully by now. Costs will be divided as we earlier (137) _____ during the management-resident meeting. The management will pay 60 percent of the costs and residents will pay the remainder. To offset the share you have claimed responsibility for, your monthly amenities and maintenance bills will increase by $25 beginning next month. _______ ."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'agreed'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(B) 138 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t1_138",
+    "num": 138,
+    "source": "Hacker 3 Test 1 Part 6",
+    "category": "Đọc hiểu Điền câu (Sentence Insertion)",
+    "question": "Question 138: Refer to the test material.",
+    "options": {
+      "A": "Those who haven't paid the charge yet will receive a fine.",
+      "B": "The additional fee will be charged until the expenses are all paid for.",
+      "C": "Please let us know when you will be using the new services.",
+      "D": "This will be imposed after the facility improvements have been approved."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'The additional fee will be charged until the expenses are all paid for.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(B) 139 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t1_139",
+    "num": 139,
+    "source": "Hacker 3 Test 1 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 139: Refer to the test material.",
+    "options": {
+      "A": "has offered",
+      "B": "was offering",
+      "C": "will have offered",
+      "D": "is offering"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'is offering'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(D) 140 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t1_140",
+    "num": 140,
+    "source": "Hacker 3 Test 1 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 140: Refer to the test material.",
+    "options": {
+      "A": "inside",
+      "B": "beside",
+      "C": "upon",
+      "D": "without"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'beside'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(B) 141 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t1_141",
+    "num": 141,
+    "source": "Hacker 3 Test 1 Part 6",
+    "category": "Đọc hiểu Điền câu (Sentence Insertion)",
+    "question": "Question 141: Refer to the test material.",
+    "options": {
+      "A": "You can save more if you buy ski lift tickets for five or more days.",
+      "B": "Each one must be used by the date and time stamped on it.",
+      "C": "Discounts are not applicable if coupons are past their expiration dates.",
+      "D": "The country's ski resorts are among the best the world has to offer."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Each one must be used by the date and time stamped on it.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(B) 142 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t1_142",
+    "num": 142,
+    "source": "Hacker 3 Test 1 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 142: Refer to the test material.",
+    "options": {
+      "A": "claim",
+      "B": "deliver",
+      "C": "redeem",
+      "D": "pursue Questions 139-142 refer to the following information, Win a free ski lift ticket from Schuler! Schuler Gas (139)_______ its customers a chance to win free ski lift tickets. They are worth $149 each and good for the entire day at any of the 15 resorts participating in this promotion. From now until December 26, simply buy over 38 liters of fuel at any Schuler gas station nationwide. Then leave the receipt, complete with your contact information on the back, in the box (140) _____ the exit. Please note that the tickets will be valid for a limited time. (141)________. Furthermore, they cannot be exchanged for cash. Our raffle on January 1 will determine the winners, who can (142) _______ the tickets at the station the day after we call them. Alternatively, winners can arrange to have them mailed."
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'claim'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(A) 143 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t1_143",
+    "num": 143,
+    "source": "Hacker 3 Test 1 Part 6",
+    "category": "Đọc hiểu Điền câu (Sentence Insertion)",
+    "question": "Question 143: Refer to the test material.",
+    "options": {
+      "A": "The profitability of the venture could affect its completion.",
+      "B": "It has so far proven quite popular with people of all ages.",
+      "C": "But there was some opposition to the project when it started.",
+      "D": "The city has become a model for other cities to follow."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'But there was some opposition to the project when it started.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(C) 144 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t1_144",
+    "num": 144,
+    "source": "Hacker 3 Test 1 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 144: Refer to the test material.",
+    "options": {
+      "A": "repaired",
+      "B": "repairing",
+      "C": "repairs",
+      "D": "repair"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'repair'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(D) 145 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t1_145",
+    "num": 145,
+    "source": "Hacker 3 Test 1 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 145: Refer to the test material.",
+    "options": {
+      "A": "commitment",
+      "B": "necessity",
+      "C": "responsibility",
+      "D": "coincidence"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'necessity'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(B) 146 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t1_146",
+    "num": 146,
+    "source": "Hacker 3 Test 1 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 146: Refer to the test material.",
+    "options": {
+      "A": "instead",
+      "B": "who",
+      "C": "later",
+      "D": "also Questions 143-146 refer to the following article, Abbotsburg, May 9 — After a year of construction, the Abbotsburg Community Center will be unveiled next Friday. (143) ______ . Costing nearly $5 million, the center is considered a luxury by some who contend that the money should have been used to (144) _____ local roads instead. Most residents, however, believe the center is a (145)_______ Karen Petrowski, (146) ______ has been appointed the center's director said, \"It will provide residents with the vital social, recreational, and educational opportunities they require.\" And she added, \"We believe that, in time, the entire community will consider it a worthwhile place.\""
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'who'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(B) 147 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t1_147",
+    "num": 147,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the advertisement mainly about?",
+    "options": {
+      "A": "A cooking class",
+      "B": "A television program",
+      "C": "A recipe book",
+      "D": "A school cafeteria"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'A recipe book'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "advertisement",
+      "mainly"
+    ],
+    "vietnameseMeaning": "(C) 148 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_148",
+    "num": 148,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is suggested about Alexandra Maldini?",
+    "options": {
+      "A": "She has released several books.",
+      "B": "She gives lectures at a university.",
+      "C": "She operates a chain of restaurants.",
+      "D": "She has retired from a television show."
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'She has released several books.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "suggested",
+      "Alexandra",
+      "Maldini"
+    ],
+    "vietnameseMeaning": "(A) 149 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_149",
+    "num": 149,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the e-mail mainly about?",
+    "options": {
+      "A": "Placing requests for leave",
+      "B": "Relocating to a new office",
+      "C": "Replenishing basic office necessities",
+      "D": "Ensuring deliveries are complete"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Replenishing basic office necessities'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "mail",
+      "mainly"
+    ],
+    "vietnameseMeaning": "(C) 150 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_150",
+    "num": 150,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about departmental supervisors?",
+    "options": {
+      "A": "They are authorized to buy materials on their own.",
+      "B": "They are responsible for approving employees' purchases.",
+      "C": "They may sign requisition forms on Ms. Jessop's behalf.",
+      "D": "They must work with a budget determined by Ms. Jessop. Questions 149-150 refer to the following e-mail, To: All staff <all@bendacorp.com> From; Marion Jessop <m.jessop@bendacorp.com> Subject: Quick reminder Date: February 1 Hello everyone, Please remember to follow the standard procedure when requesting new office supplies. It allows us to keep track of how much we consume on a regular basis. As a reminder to all employees, be sure to fill in a detailed requisition form before you make a request. Forms must list the items you wish to buy, including their quantities and prices. They must also be signed by a departmental supervisor and by me. Purchases made without an official form will not be reimbursed. Thank you,"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'They are responsible for approving employees' purchases.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "indicated",
+      "departmental",
+      "supervisors"
+    ],
+    "vietnameseMeaning": "(B) 151 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_151",
+    "num": 151,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What most likely is Ms. Candela's job?",
+    "options": {
+      "A": "A store manager",
+      "B": "A resarticlec critic",
+      "C": "A wedding planner",
+      "D": "An event caterer"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'An event caterer'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "most",
+      "likely",
+      "Candela"
+    ],
+    "vietnameseMeaning": "(D) 152 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_152",
+    "num": 152,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "At 11:08 a.m., what does Mr. Brosky most likely mean when he writes, \"I'm guessing\"?",
+    "options": {
+      "A": "He would like to confirm the details of a request.",
+      "B": "He believes someone already went to a store.",
+      "C": "He could not understand a request.",
+      "D": "He wants to check if he already has some materials. Questions 151-152 refer to the following chat messages, Nicky Candela 11:01 A.M. Jacob, there have been some changes. Could you stop for some supplies on your way to work? Jacob Brosky 11:04 A.M. Oh, sure thing. But I thought that we got everything yesterday. Nicky Candela 11:07 A.M. I just got a call from Ms. Arden's wedding planner. She wants to add 40 cupcakes to her order. I've already put them in the oven, but we're all out of decorative silver beads. Also, we need more yellow icing to mix the right colors. Jacob Brosky 11:08 A.M. OK, so we need at least two bags of silver beads and four tubes of yellow icing, I'm guessing. Nicky Candela 11:10 A.M. Exactly. We'll finish that this morning and then begin work on the food items for Mr. and Mrs. Morton's anniversary party."
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'He would like to confirm the details of a request.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "does",
+      "Brosky",
+      "most"
+    ],
+    "vietnameseMeaning": "(A) 153 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_153",
+    "num": 153,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "When does Seafoam Park close on Sundays?",
+    "options": {
+      "A": "At 7 p.m.",
+      "B": "At 8 p.m.",
+      "C": "At 9 p.m.",
+      "D": "At 10 p.m"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'At 8 p.m.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "does",
+      "Seafoam",
+      "Park"
+    ],
+    "vietnameseMeaning": "(B) 154 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_154",
+    "num": 154,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What information is NOT included on the ticket?",
+    "options": {
+      "A": "The price of the ticket",
+      "B": "The expiration date of a voucher",
+      "C": "The location of a parking lot",
+      "D": "The age range of ticket holders Questions 153-154 refer to the following ticket, Seafoam Park Admit one adult [age 18-65] PAID : $34.00 Our park opens at 7 a.m.; every day of the week. Guests may stay in the park until 9 p.m. on weekdays and 8 p.m. on weekends. Parking is free for visitors."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'The location of a parking lot'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "information",
+      "included",
+      "ticket"
+    ],
+    "vietnameseMeaning": "(C) 155 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_155",
+    "num": 155,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the purpose of the notice?",
+    "options": {
+      "A": "To announce the times of a community event",
+      "B": "To outline requirements for potential renters",
+      "C": "To tell about upcoming maintenance work",
+      "D": "To provide assignment details to construction workers"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'To tell about upcoming maintenance work'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "purpose",
+      "notice"
+    ],
+    "vietnameseMeaning": "(C) 156 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_156",
+    "num": 156,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is stated about the Residents' Association?",
+    "options": {
+      "A": "It has been demanding changes.",
+      "B": "It has meetings every month.",
+      "C": "It is planning further construction.",
+      "D": "It is recruiting volunteers for a project. Questions 155-157 refer to the following notice, Notice for Aston Towers Residents This apartment building is nearly 30 years old, and it has been quite some time since it underwent major improvements. Moreover, the Residents' Association has been asking management to upgrade the apartments for several months now, and we agree that the time has come to make these changes. However, this may lead to some disturbances for a short time. The renovations are planned to take place over three stages; • Stage One, April 18 to May 11: Renovating the exterior of the building • Stage Two, May 13 to June 24: Improving the interior corridors • Stage Three, June 30 to September 1: Necessary improvements to individual units The first two stages will generate a certain amount of construction noise during the day, between the hours of 10 a.m. and 4 p.m. For the repairs to individual units, we will be in touch with you shortly to determine the necessary work and arrange dates for repairpersons to visit your unit. Thank you for your understanding and cooperation. Aston Towers Management"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'It has been demanding changes.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "stated",
+      "Residents",
+      "Association"
+    ],
+    "vietnameseMeaning": "(A) 157 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_157",
+    "num": 157,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What will the Aston Towers Management do soon?",
+    "options": {
+      "A": "Add a garden to an apartment building",
+      "B": "Repair a road that passes a property",
+      "C": "Contact prospective tenants",
+      "D": "Schedule visiting times with residents"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Schedule visiting times with residents'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "Aston",
+      "Towers",
+      "Management"
+    ],
+    "vietnameseMeaning": "(D) 158 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_158",
+    "num": 158,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the article mainly about?",
+    "options": {
+      "A": "The start of a football season",
+      "B": "The foundation of an athletic association",
+      "C": "The building of a new suburb",
+      "D": "The relocation of a sports team"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'The relocation of a sports team'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "article",
+      "mainly"
+    ],
+    "vietnameseMeaning": "(D) 159 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_159",
+    "num": 159,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is mentioned about the Kansas City Bluecoats?",
+    "options": {
+      "A": "It previously won first place in a competition.",
+      "B": "It lost one of its corporate sponsors.",
+      "C": "Its coach was recruited locally.",
+      "D": "Its players are the highest paid in the league."
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'It previously won first place in a competition.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "mentioned",
+      "Kansas",
+      "City"
+    ],
+    "vietnameseMeaning": "(A) 160 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_160",
+    "num": 160,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is true about the new stadium?",
+    "options": {
+      "A": "It will formally open after two months.",
+      "B": "It has yet to be given a name.",
+      "C": "It will be the site of a championship game.",
+      "D": "It is located within Kansas City's downtown area."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'It has yet to be given a name.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "true",
+      "stadium"
+    ],
+    "vietnameseMeaning": "(B) 161 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_161",
+    "num": 161,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong? \"Fans and out-of-town supporters will be better served by these changes.\"",
+    "options": {
+      "A": "[1]",
+      "B": "[2]",
+      "C": "[3]",
+      "D": "[4] Questions 158-161 refer to the following article, Bluecoats Look to a Brighter Future Last night the management of the Kansas City Bluecoats finally made the long-expected announcement that the team will be moving into a new stadium in a suburb just within the city limits of Kansas City. — [1] —. The Bluecoats were one of the top teams in American football two decades ago, winning the national championship once and making it to the final game on another occasion. — [2] —. But recent years have been more difficult, with disappointing placements in the league and a dwindling fan base that has been attracted to other more successful sports teams in the region. Moving will allow for cheaper ticket prices, more parking spaces, and easier access from other areas. — [3] —. As for the team, it will get to train using state-of-the-art facilities. Work will begin on the currently unnamed new stadium this month and is expected to be finished within two years. Kansas City mayor Lester Hickman celebrated the team's move, saying, \"This is great news for the team, and we look forward to helping the Bluecoats rise back up to their previous levels of success.\" --[4] --."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) '[3]'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "positions",
+      "marked",
+      "does"
+    ],
+    "vietnameseMeaning": "(C) 162 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_162",
+    "num": 162,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is NOT mentioned as a way to handle the recall?",
+    "options": {
+      "A": "Broadcasting the news on television",
+      "B": "Answering calls from customers",
+      "C": "Announcing information in some publications",
+      "D": "Posting about the issue online"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Broadcasting the news on television'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "mentioned",
+      "handle",
+      "recall"
+    ],
+    "vietnameseMeaning": "(A) 163 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_163",
+    "num": 163,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is suggested about the company?",
+    "options": {
+      "A": "It sells products internationally.",
+      "B": "It plans to launch a new toaster model.",
+      "C": "It conducted a press conference.",
+      "D": "It runs advertisements in local papers."
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'It sells products internationally.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "suggested",
+      "company"
+    ],
+    "vietnameseMeaning": "(A) 164 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_164",
+    "num": 164,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What can be inferred about Mr. Lee?",
+    "options": {
+      "A": "He has contacts with members of the press.",
+      "B": "He will send an announcement to the public.",
+      "C": "He has previously worked on a product recall.",
+      "D": "He writes promotional material for the company."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'He has previously worked on a product recall.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "inferred"
+    ],
+    "vietnameseMeaning": "(C) 165 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_165",
+    "num": 165,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "At 10:25 a.m., what does Mr. Lee most likely mean when he writes, “I’ll get right on it”?",
+    "options": {
+      "A": "He will call the marketing department.",
+      "B": "He needs to hire more staff.",
+      "C": "He intends to consult a former employee.",
+      "D": "He will start instructing the employees."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'He will start instructing the employees.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "does",
+      "most",
+      "likely"
+    ],
+    "vietnameseMeaning": "(D) 166 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_166",
+    "num": 166,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the main purpose of the Web page?",
+    "options": {
+      "A": "To advertise travel packages",
+      "B": "To collect feedback from customers",
+      "C": "To provide contact information",
+      "D": "To recruit local tour guides"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'To advertise travel packages'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "main",
+      "purpose",
+      "page"
+    ],
+    "vietnameseMeaning": "(A) 167 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_167",
+    "num": 167,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is NOT stated as an activity visitors can do in Indonesia?",
+    "options": {
+      "A": "Scuba diving",
+      "B": "Visiting temples",
+      "C": "Surfing in the sea",
+      "D": "Camping in a jungle"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Surfing in the sea'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "stated",
+      "activity",
+      "visitors"
+    ],
+    "vietnameseMeaning": "(C) 168 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_168",
+    "num": 168,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong? \"Outside the city awaits a world of natural and historical wonders.\"",
+    "options": {
+      "A": "[1]",
+      "B": "[2]",
+      "C": "[3]",
+      "D": "[4]"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) '[3]'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "positions",
+      "marked",
+      "does"
+    ],
+    "vietnameseMeaning": "(C) 169 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_169",
+    "num": 169,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Why was the memo written?",
+    "options": {
+      "A": "To explain a new log-in system",
+      "B": "To inform workers about regulations",
+      "C": "To announce a penalty for absences",
+      "D": "To notify staff of scheduled maintenance"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'To inform workers about regulations'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "memo",
+      "written"
+    ],
+    "vietnameseMeaning": "(B) 170 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_170",
+    "num": 170,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about the daily report?",
+    "options": {
+      "A": "It must be signed by a supervisor.",
+      "B": "It should be drawn up as simply as possible.",
+      "C": "It needs to be submitted in person.",
+      "D": "It can be used to evaluate work efficiency. MEMORANDUM To: All maintenance staff From: Janice Lai, Supervisor Subject: Daily report submissions Date: December 16 I realize you all have demanding schedules, and we appreciate your hard work. But you must comply with the policies regarding the completion of your daily reports in a timely manner. Let me remind you that all report information must be fully entered by the end of each work day for the hours that you spent on maintenance tasks. In November, I received several time sheets more than two weeks late, and I still have some that have yet to be provided. Additionally, for those reports that were submitted on time, I noticed that many were missing important details. Remember that these reports are used not only to track the number of maintenance tasks, but also to determine how efficient we were at completing them. In order to address this issue, a new policy will go into effect next month. I will be checking your reports weekly to ensure they are complete and posted on time on the company Web site. If there are any problems, I will follow up on them with you in person. I appreciate all of your cooperation in this and hope that these issues cease to continue from now on."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'It can be used to evaluate work efficiency. MEMORANDUM To: All maintenance staff From: Janice Lai, Supervisor Subject: Daily report submissions Date: December 16 I realize you all have demanding schedules, and we appreciate your hard work. But you must comply with the policies regarding the completion of your daily reports in a timely manner. Let me remind you that all report information must be fully entered by the end of each work day for the hours that you spent on maintenance tasks. In November, I received several time sheets more than two weeks late, and I still have some that have yet to be provided. Additionally, for those reports that were submitted on time, I noticed that many were missing important details. Remember that these reports are used not only to track the number of maintenance tasks, but also to determine how efficient we were at completing them. In order to address this issue, a new policy will go into effect next month. I will be checking your reports weekly to ensure they are complete and posted on time on the company Web site. If there are any problems, I will follow up on them with you in person. I appreciate all of your cooperation in this and hope that these issues cease to continue from now on.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "indicated",
+      "daily",
+      "report"
+    ],
+    "vietnameseMeaning": "(D) 171 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_171",
+    "num": 171,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "From when will the new measure be implemented?",
+    "options": {
+      "A": "From November",
+      "B": "From December",
+      "C": "From January",
+      "D": "From February"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'From January'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "measure",
+      "implemented"
+    ],
+    "vietnameseMeaning": "(C) 172 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_172",
+    "num": 172,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the main topic of the article?",
+    "options": {
+      "A": "The profitability of innovative services",
+      "B": "Consumption patterns among online shoppers",
+      "C": "The adoption of new training programs",
+      "D": "Opposition to an economic trend"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Opposition to an economic trend'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "main",
+      "topic",
+      "article"
+    ],
+    "vietnameseMeaning": "(D) 173 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_173",
+    "num": 173,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does the article suggest about the sharing economy?",
+    "options": {
+      "A": "It allows workers to charge more for their services.",
+      "B": "It has encouraged charitable giving in a local community.",
+      "C": "It benefits individuals more than traditional companies.",
+      "D": "It can function without the Internet."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'It benefits individuals more than traditional companies.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "does",
+      "article",
+      "suggest"
+    ],
+    "vietnameseMeaning": "(C) 174 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_174",
+    "num": 174,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What happened last year in Ghorinburg?",
+    "options": {
+      "A": "A mobile application was introduced.",
+      "B": "A new mayor was elected to office.",
+      "C": "A business association held a protest",
+      "D": "A ban against the sharing economy was lifted."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'A new mayor was elected to office.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "happened",
+      "last",
+      "year"
+    ],
+    "vietnameseMeaning": "(B) 175 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_175",
+    "num": 175,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is mentioned about Browenville?",
+    "options": {
+      "A": "Its residents are largely unwilling to adopt new technologies.",
+      "B": "Local businesses are essential to its economic development.",
+      "C": "The local government encourages participation in the sharing economy.",
+      "D": "Its employment opportunities have been declining in recent years."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Local businesses are essential to its economic development.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "mentioned",
+      "Browenville"
+    ],
+    "vietnameseMeaning": "(B) 176 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_176",
+    "num": 176,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is stated about Bulk Land Supermarket?",
+    "options": {
+      "A": "It has a minimum order requirement.",
+      "B": "It introduces new deals every month.",
+      "C": "It will not deliver to some residences.",
+      "D": "It does not have any physical stores."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'It does not have any physical stores.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "stated",
+      "Bulk",
+      "Land"
+    ],
+    "vietnameseMeaning": "(D) 177 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_177",
+    "num": 177,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In the advertisement, the word \"comfort\" in paragraph 1, line 4, is closest in meaning to",
+    "options": {
+      "A": "alleviation",
+      "B": "service",
+      "C": "consolation",
+      "D": "ease"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'ease'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "advertisement",
+      "word",
+      "comfort"
+    ],
+    "vietnameseMeaning": "(D) 178 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_178",
+    "num": 178,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "According to the advertisement, what is a benefit of buying large amounts at Bulk Land Supermarket?",
+    "options": {
+      "A": "Wider product options",
+      "B": "Lower packaging costs",
+      "C": "Cheaper prices on products",
+      "D": "Better membership incentives"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Cheaper prices on products'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "According",
+      "advertisement",
+      "benefit"
+    ],
+    "vietnameseMeaning": "(C) 179 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_179",
+    "num": 179,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What can be inferred about Mr. Johnson?",
+    "options": {
+      "A": "He has placed orders with Bulk Land Supermarket before.",
+      "B": "He did not get his preferred delivery date.",
+      "C": "He will receive his order on Thursday night.",
+      "D": "He will call Bulk Land Supermarket to confirm his order."
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'He has placed orders with Bulk Land Supermarket before.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "inferred",
+      "Johnson"
+    ],
+    "vietnameseMeaning": "(A) 180 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_180",
+    "num": 180,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What special offer is Mr. Johnson eligible for?",
+    "options": {
+      "A": "A coupon for a future purchase",
+      "B": "A complimentary item of his choice",
+      "C": "A free delivery to his location",
+      "D": "An immediate discount on his order"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'A coupon for a future purchase'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "special",
+      "offer",
+      "Johnson"
+    ],
+    "vietnameseMeaning": "(A) 181 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_181",
+    "num": 181,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is mentioned about the Seacrest Convention Center?",
+    "options": {
+      "A": "It is fully booked for the upcoming trade event.",
+      "B": "It is located far from any accommodation facilities.",
+      "C": "It provides vendors with complimentary Internet access.",
+      "D": "It hosts the beauty product fair every year."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'It provides vendors with complimentary Internet access.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "mentioned",
+      "Seacrest",
+      "Convention"
+    ],
+    "vietnameseMeaning": "(C) 182 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_182",
+    "num": 182,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Where can Ms, Danbury find information on Tradevent Incorporated's prices?",
+    "options": {
+      "A": "On an application form",
+      "B": "In an advertising flyer",
+      "C": "On a corporate Web site",
+      "D": "In a trade Journal"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'On an application form'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "Danbury",
+      "find",
+      "information"
+    ],
+    "vietnameseMeaning": "(A) 183 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_183",
+    "num": 183,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is implied about Brittany Cosmetics?",
+    "options": {
+      "A": "It is ineligible for a rental price reduction.",
+      "B": "It is in the process of expanding its range of products.",
+      "C": "It had satisfactory results at an event in Denver.",
+      "D": "It registered for a trade fair online."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'It had satisfactory results at an event in Denver.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "implied",
+      "Brittany",
+      "Cosmetics"
+    ],
+    "vietnameseMeaning": "(C) 184 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_184",
+    "num": 184,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does Ms. Danbury inquire about?",
+    "options": {
+      "A": "Extra tickets",
+      "B": "Hotel amenities",
+      "C": "A detailed floor plan",
+      "D": "A reservation procedure"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'A reservation procedure'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "does",
+      "Danbury",
+      "inquire"
+    ],
+    "vietnameseMeaning": "(D) 185 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_185",
+    "num": 185,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In the e-mail, the phrase \"taking part in\" in paragraph 3, line 1, is closest in meaning to",
+    "options": {
+      "A": "supporting",
+      "B": "encouraging",
+      "C": "joining",
+      "D": "competing"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'joining'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "mail",
+      "phrase",
+      "taking"
+    ],
+    "vietnameseMeaning": "(C) 186 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_186",
+    "num": 186,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does Ms. Webb suggest about the cruise she took?",
+    "options": {
+      "A": "The onboard facilities seemed crowded.",
+      "B": "It had fewer staff than necessary.",
+      "C": "The deck party included very good food.",
+      "D": "It cost more than she had anticipated."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'The deck party included very good food.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "does",
+      "Webb",
+      "suggest"
+    ],
+    "vietnameseMeaning": "(C) 187 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_187",
+    "num": 187,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is mentioned about the H.M.S. Lady Blackbeard?",
+    "options": {
+      "A": "It recently underwent a restoration.",
+      "B": "It can be viewed in online pictures.",
+      "C": "It includes a variety of room types.",
+      "D": "It departs from Port Royal every Saturday."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'It can be viewed in online pictures.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "mentioned",
+      "Lady",
+      "Blackbeard"
+    ],
+    "vietnameseMeaning": "(B) 188 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_188",
+    "num": 188,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the purpose of the e-mail?",
+    "options": {
+      "A": "To request specific dates for a trip",
+      "B": "To inquire about the cost of a cruise ticket",
+      "C": "To discuss a possible staff activity",
+      "D": "To ask for a change to a booking date 1. How did you learn about Port Royal Cruises? It was recommended to me by a colleague. 2. Would you recommend a cruise with us to your friends? Yes, as well as companies hosting events. 3. What were the best aspects of your trip? Great onboard facilities, helpful staff, fun sites, excellent gourmet menu from Elijah Bolt, and comfortable lounge. 4. How could your trip have been better? The laundry service could have been better. Some of my clothes came back wrinkled. Also, the shuttle bus could have been less crowded. 5. Would you like to receive regular e-mail newsletters from Port Royal Cruises? YES □ NO ✓ NAME: Rayleen Webb DATE OF TOUR: June 26-27 E-MAIL: raweb@pealeint.com"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'To discuss a possible staff activity'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "purpose",
+      "mail"
+    ],
+    "vietnameseMeaning": "(C) 189 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_189",
+    "num": 189,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about the comment card?",
+    "options": {
+      "A": "It should be mailed to the cruise company.",
+      "B": "It can be submitted in person.",
+      "C": "It was found in the ship's main lounge.",
+      "D": "It will be sent to the traveler's address after the trip."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'It can be submitted in person.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "indicated",
+      "comment",
+      "card"
+    ],
+    "vietnameseMeaning": "(B) 190 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_190",
+    "num": 190,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What did Ms. Webb most likely have to do?",
+    "options": {
+      "A": "Prepare some audiovisual equipment",
+      "B": "Pay extra to have clothes washed",
+      "C": "Fill in a newsletter subscription card",
+      "D": "Postpone an excursion to another date"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Pay extra to have clothes washed'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Webb",
+      "most",
+      "likely"
+    ],
+    "vietnameseMeaning": "(B) 191 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_191",
+    "num": 191,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "According to the list, what is NOT true about Henry Spencer?",
+    "options": {
+      "A": "He participated in two movies by the same director.",
+      "B": "He has played roles that are different occupations.",
+      "C": "He performed in leading roles in all productions.",
+      "D": "He received multiple nominations for Therein Lies the Truth."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'He performed in leading roles in all productions.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "According",
+      "list",
+      "true"
+    ],
+    "vietnameseMeaning": "(C) 192 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_192",
+    "num": 192,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What can be inferred about Ms. Oakland?",
+    "options": {
+      "A": "She worked with Henry Spencer in her latest film.",
+      "B": "She received a Sci-Fi Award for one of her films.",
+      "C": "She collaborated with Jerry Bradbury on a past project.",
+      "D": "She plans to make a sequel to Bandits of Time II."
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'She worked with Henry Spencer in her latest film.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "inferred",
+      "Oakland"
+    ],
+    "vietnameseMeaning": "(A) 193 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_193",
+    "num": 193,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Who most likely is Korinna McKay?",
+    "options": {
+      "A": "A television producer",
+      "B": "A talk show host",
+      "C": "A broadcast network executive",
+      "D": "An interview guest As you may be aware, Screen Action records all programs and posts them on our site for the convenience of listeners. Regulations require us to seek the permission of anyone speaking on the program before we do this, so attached you will find a release form that we kindly ask you to sign and return to us. Once again, we are appreciative of loyal listeners like yourself. Regards, Marnie Hefner, producer Screen Action"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'A talk show host'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "most",
+      "likely",
+      "Korinna"
+    ],
+    "vietnameseMeaning": "(B) 194 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_194",
+    "num": 194,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is suggested about Mr. Voorhies?",
+    "options": {
+      "A": "He was contacted by Korinna McKay previously.",
+      "B": "He provided feedback about the June 7 show online.",
+      "C": "He had a query about Bandits of Time II during a show.",
+      "D": "He listened to a rerun of Screen Action."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'He had a query about Bandits of Time II during a show.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "suggested",
+      "Voorhies"
+    ],
+    "vietnameseMeaning": "(C) 195 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_195",
+    "num": 195,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Why has Ms. Hefner asked Mr. Voorhies to sign a document?",
+    "options": {
+      "A": "To signify his willingness to be interviewed",
+      "B": "To allow a program recording to be publicly released",
+      "C": "To give permission to post some written questions",
+      "D": "To agree to keep information confidential"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'To allow a program recording to be publicly released'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Hefner",
+      "asked",
+      "Voorhies"
+    ],
+    "vietnameseMeaning": "(B) 196 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_196",
+    "num": 196,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the article mainly about?",
+    "options": {
+      "A": "Some guidelines for ensuring a varied diet",
+      "B": "A disease that commonly affects the elderly",
+      "C": "Some advice regarding the consumption of supplements",
+      "D": "A medication proven to be effective for seniors"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Some advice regarding the consumption of supplements'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "article",
+      "mainly"
+    ],
+    "vietnameseMeaning": "(C) 197 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_197",
+    "num": 197,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does the e-mail suggest about Health Note?",
+    "options": {
+      "A": "It does not approve all petitions for reprints.",
+      "B": "It is published on a weekly basis.",
+      "C": "It has allowed Mr. Hopson to reprint excerpts before.",
+      "D": "It does not provide copies of previous issues."
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'It does not approve all petitions for reprints.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "does",
+      "mail",
+      "suggest"
+    ],
+    "vietnameseMeaning": "(A) 198 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_198",
+    "num": 198,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is true about Psychology Guide?",
+    "options": {
+      "A": "It is a new publication.",
+      "B": "It is inaccessible to members of the public.",
+      "C": "It has long supported Health Note.",
+      "D": "It is not available online. Name of Magazine: Psychology Guide (Please provide a link if your magazine is an online publication.) Link: Not operational Tittle of Article: \"The Truth About Supplements?\" Publication the article appeared in: Health Note Issue: March Which parts of the article do you wish to reprint in your magazine? I would like to print a portion of the article (200 words) found in the second paragraph of page 5. What is your purpose for reprinting the article? Psychology Guide will be devoting an entire upcoming issue to the mental health of seniors. Your article mentioned various supplements that help with alertness, and we would like to reprint that paragraph as a short article in the issue. If my application is approved, I will give appropriate credit to Health Note. ✓ I agree to the above."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'It is not available online. Name of Magazine: Psychology Guide (Please provide a link if your magazine is an online publication.) Link: Not operational Tittle of Article: \"The Truth About Supplements?\" Publication the article appeared in: Health Note Issue: March Which parts of the article do you wish to reprint in your magazine? I would like to print a portion of the article (200 words) found in the second paragraph of page 5. What is your purpose for reprinting the article? Psychology Guide will be devoting an entire upcoming issue to the mental health of seniors. Your article mentioned various supplements that help with alertness, and we would like to reprint that paragraph as a short article in the issue. If my application is approved, I will give appropriate credit to Health Note. ✓ I agree to the above.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "true",
+      "Psychology",
+      "Guide"
+    ],
+    "vietnameseMeaning": "(D) 199 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_199",
+    "num": 199,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about Mr. Hopson's request?",
+    "options": {
+      "A": "It will not incur a charge for printing.",
+      "B": "It requires that a research study be conducted.",
+      "C": "It has to be approved by the Research Institute for Aging.",
+      "D": "It is for a newly launched medical journal."
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'It will not incur a charge for printing.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "indicated",
+      "Hopson",
+      "request"
+    ],
+    "vietnameseMeaning": "(A) 200 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t1_200",
+    "num": 200,
+    "source": "Hacker 3 Test 1 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "When will Mr. Hopson receive a response?",
+    "options": {
+      "A": "At the end of March",
+      "B": "At the beginning of April",
+      "C": "At the end of April",
+      "D": "At the beginning of May"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'At the beginning of May'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "Hopson",
+      "receive",
+      "response"
+    ],
+    "vietnameseMeaning": "(D) PART 5",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 1 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_101",
+    "num": 101,
+    "source": "Hacker 3 Test 2 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "to Daily News, only damage to the area occurred during the tropical storm. moderate",
+    "options": {
+      "A": "Option A",
+      "B": "moderating",
+      "C": "moderately",
+      "D": "moderation"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'Option A'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'Option A'.",
+    "keywords": [
+      "Daily",
+      "News",
+      "only"
+    ],
+    "vietnameseMeaning": "(A) 102 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t2_102",
+    "num": 102,
+    "source": "Hacker 3 Test 2 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The employees at Barneveld Inc. are encouraged assisting to build teamwork by on various projects.",
+    "options": {
+      "A": "the other",
+      "B": "one another",
+      "C": "other",
+      "D": "another"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'one another'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'one another'.",
+    "keywords": [
+      "employees",
+      "Barneveld",
+      "encouraged"
+    ],
+    "vietnameseMeaning": "(B) 103 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t2_103",
+    "num": 103,
+    "source": "Hacker 3 Test 2 Part 5",
+    "category": "Liên từ (Conjunctions)",
+    "question": "Some marketing team members from Game-Tekno will be traveling to Tokyo the branch opening to finalize preparations.",
+    "options": {
+      "A": "although",
+      "B": "next to",
+      "C": "ahead of",
+      "D": "inside of"
+    },
+    "correctAnswer": "C",
+    "explanation": "Liên từ (C) 'ahead of' dùng để liên kết hai mệnh đề biểu thị mối quan hệ logic chính xác.",
+    "tip": "⚡ MẸO LIÊN TỪ: Phân biệt rõ liên từ (theo sau là mệnh đề S + V) và giới từ (theo sau là N/V-ing). Chọn (C).",
+    "keywords": [
+      "Some",
+      "marketing",
+      "team"
+    ],
+    "vietnameseMeaning": "(C) 104 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t2_104",
+    "num": 104,
+    "source": "Hacker 3 Test 2 Part 5",
+    "category": "Ngữ pháp & Thì (Grammar & Tenses)",
+    "question": "The seminar speaker offered some arguments in favor of natural medications and remedies.",
+    "options": {
+      "A": "convinced",
+      "B": "convince",
+      "C": "convincing convincingly",
+      "D": "54 Tjjg Hackers.co.kr Select the best answer and mark the sheet. The statue on Hastings Avenue that was"
+    },
+    "correctAnswer": "C",
+    "explanation": "Xét về sự hòa hợp giữa chủ ngữ và thì của câu, động từ (C) 'convincing convincingly' chia đúng thì và dạng chủ động/bị động.",
+    "tip": "⚡ MẸO CHIA THÌ: Nhìn dấu hiệu thời gian và xét chủ ngữ số ít/số nhiều để loại trừ các dạng sai thì. Đáp án đúng là (C).",
+    "keywords": [
+      "seminar",
+      "speaker",
+      "offered"
+    ],
+    "vietnameseMeaning": "(C) 105 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t2_105",
+    "num": 105,
+    "source": "Hacker 3 Test 2 Part 5",
+    "category": "Ngữ pháp & Thì (Grammar & Tenses)",
+    "question": "unveiled in a ceremony yesterday by an ancient Roman sculpture. inspired",
+    "options": {
+      "A": "Option A",
+      "B": "to be inspired",
+      "C": "was inspired",
+      "D": "is inspiring"
+    },
+    "correctAnswer": "C",
+    "explanation": "Xét về sự hòa hợp giữa chủ ngữ và thì của câu, động từ (C) 'was inspired' chia đúng thì và dạng chủ động/bị động.",
+    "tip": "⚡ MẸO CHIA THÌ: Nhìn dấu hiệu thời gian và xét chủ ngữ số ít/số nhiều để loại trừ các dạng sai thì. Đáp án đúng là (C).",
+    "keywords": [
+      "unveiled",
+      "ceremony",
+      "yesterday"
+    ],
+    "vietnameseMeaning": "(C) 106 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t2_106",
+    "num": 106,
+    "source": "Hacker 3 Test 2 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "An old building in the Brickford neighborhood be demolished and will a luxury apartment.",
+    "options": {
+      "A": "differed from",
+      "B": "imposed on",
+      "C": "replaced with",
+      "D": "attributed to"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'replaced with'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'replaced with'.",
+    "keywords": [
+      "building",
+      "Brickford",
+      "neighborhood"
+    ],
+    "vietnameseMeaning": "(C) 107 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t2_107",
+    "num": 107,
+    "source": "Hacker 3 Test 2 Part 5",
+    "category": "Từ loại (Word Form)",
+    "question": "After he was appointed sales manager, Bill Haskell achieved improved between the the sales and staff in marketing departments.",
+    "options": {
+      "A": "coordinator",
+      "B": "coordinative",
+      "C": "coordinated",
+      "D": "coordination"
+    },
+    "correctAnswer": "D",
+    "explanation": "Căn cứ vào ngữ pháp câu, vị trí cần điền đóng vai trò từ loại phù hợp trong mệnh đề. Chọn đáp án (D) 'coordination' để hoàn chỉnh cấu trúc ngữ pháp.",
+    "tip": "⚡ MẸO TỪ LOẠI: Xác định vị trí chỗ trống đứng sau từ loại gì (danh từ, động từ, tính từ hay trạng từ) để chọn đuôi hậu tố chính xác. Đáp án đúng là (D).",
+    "keywords": [
+      "After",
+      "appointed",
+      "sales"
+    ],
+    "vietnameseMeaning": "(D) 108 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t2_108",
+    "num": 108,
+    "source": "Hacker 3 Test 2 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "All potential clients are given brochures of containing brief GL Mutual's insurance policy packages.",
+    "options": {
+      "A": "distributions",
+      "B": "operations",
+      "C": "summaries",
+      "D": "subtractions"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'summaries'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'summaries'.",
+    "keywords": [
+      "potential",
+      "clients",
+      "given"
+    ],
+    "vietnameseMeaning": "(C) 109 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t2_109",
+    "num": 109,
+    "source": "Hacker 3 Test 2 Part 5",
+    "category": "Ngữ pháp & Thì (Grammar & Tenses)",
+    "question": "The Beckford Auditorium can be reached 115. Customers should carefully read the the each online by walking second floor corridor descriptions of item to to the end the hallway. avoid time-consuming product returns. of",
+    "options": {
+      "A": "was ordered",
+      "B": "ordering",
+      "C": "away",
+      "D": "orders"
+    },
+    "correctAnswer": "A",
+    "explanation": "Xét về sự hòa hợp giữa chủ ngữ và thì của câu, động từ (A) 'was ordered' chia đúng thì và dạng chủ động/bị động.",
+    "tip": "⚡ MẸO CHIA THÌ: Nhìn dấu hiệu thời gian và xét chủ ngữ số ít/số nhiều để loại trừ các dạng sai thì. Đáp án đúng là (A).",
+    "keywords": [
+      "Beckford",
+      "Auditorium",
+      "reached"
+    ],
+    "vietnameseMeaning": "(A) 110 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t2_110",
+    "num": 110,
+    "source": "Hacker 3 Test 2 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Codex Corporation showed a great deal of 116. The release date for HBS Tech's new a about Ms. Khan's recent medical product was mistake as its issues and gave her an extended leave. understand",
+    "options": {
+      "A": "Option A",
+      "B": "understandable",
+      "C": "understood understanding",
+      "D": "the"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'the'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'the'.",
+    "keywords": [
+      "Codex",
+      "Corporation",
+      "showed"
+    ],
+    "vietnameseMeaning": "(D) 111 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t2_111",
+    "num": 111,
+    "source": "Hacker 3 Test 2 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Mayor Terrence Miller volunteers for the self-sacrificing work they did to assist the community during the disaster.",
+    "options": {
+      "A": "contested commended",
+      "B": "Option B",
+      "C": "restricted",
+      "D": "promised"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'Option B'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'Option B'.",
+    "keywords": [
+      "Mayor",
+      "Terrence",
+      "Miller"
+    ],
+    "vietnameseMeaning": "(B) 112 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t2_112",
+    "num": 112,
+    "source": "Hacker 3 Test 2 Part 5",
+    "category": "Ngữ pháp & Thì (Grammar & Tenses)",
+    "question": "The Parker Fairground off Taylor Street is the perfect place for families and friends during the summer.",
+    "options": {
+      "A": "to visit",
+      "B": "will visit are",
+      "C": "visiting",
+      "D": "visits"
+    },
+    "correctAnswer": "A",
+    "explanation": "Xét về sự hòa hợp giữa chủ ngữ và thì của câu, động từ (A) 'to visit' chia đúng thì và dạng chủ động/bị động.",
+    "tip": "⚡ MẸO CHIA THÌ: Nhìn dấu hiệu thời gian và xét chủ ngữ số ít/số nhiều để loại trừ các dạng sai thì. Đáp án đúng là (A).",
+    "keywords": [
+      "Parker",
+      "Fairground",
+      "Taylor"
+    ],
+    "vietnameseMeaning": "(A) 113 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t2_113",
+    "num": 113,
+    "source": "Hacker 3 Test 2 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The carpenter noted that the old house's run-down roof was and would soon have to be repaired.",
+    "options": {
+      "A": "rather",
+      "B": "seldom",
+      "C": "never often",
+      "D": "editing"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'rather'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'rather'.",
+    "keywords": [
+      "carpenter",
+      "noted",
+      "house"
+    ],
+    "vietnameseMeaning": "(A) 114 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t2_114",
+    "num": 114,
+    "source": "Hacker 3 Test 2 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "and rewriting documents, Quill Editing offers translation services in a number of languages.",
+    "options": {
+      "A": "deliberately",
+      "B": "indeed mm",
+      "C": "instead B",
+      "D": "evenly o UJ"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'indeed mm'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'indeed mm'.",
+    "keywords": [
+      "rewriting",
+      "documents",
+      "Quill"
+    ],
+    "vietnameseMeaning": "(B) 115 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t2_115",
+    "num": 115,
+    "source": "Hacker 3 Test 2 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Question 115: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) ' '.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) ' '.",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(C) 116 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t2_116",
+    "num": 116,
+    "source": "Hacker 3 Test 2 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Question 116: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'Option B'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'Option B'.",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(B) 117 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t2_117",
+    "num": 117,
+    "source": "Hacker 3 Test 2 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "All directed to Holston Prudential's o 4> customer service support team are o handled in complete confidence. LTI",
+    "options": {
+      "A": "inquiring o CD",
+      "B": "inquired",
+      "C": "inquiries o inquire",
+      "D": "o CO —"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'inquiries o inquire'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'inquiries o inquire'.",
+    "keywords": [
+      "directed",
+      "Holston",
+      "Prudential"
+    ],
+    "vietnameseMeaning": "(C) 118 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t2_118",
+    "num": 118,
+    "source": "Hacker 3 Test 2 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Country-Link Limited utilizes special o wrapping paper to prevent items LD from breaking during delivery. ~T CD",
+    "options": {
+      "A": "subtle",
+      "B": "delicate or DH",
+      "C": "vigorous !>• Kn j°",
+      "D": "cautious nit ri! o o"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'delicate or DH'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'delicate or DH'.",
+    "keywords": [
+      "Country",
+      "Link",
+      "Limited"
+    ],
+    "vietnameseMeaning": "(B) 119 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t2_119",
+    "num": 119,
+    "source": "Hacker 3 Test 2 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The scheduled meetings for Augustus ja CD were spaced UJ Manufacturing's staff far XI enough to allow employees to DJ o. complete their usual tasks. da",
+    "options": {
+      "A": "alongside",
+      "B": "beyond",
+      "C": "apart",
+      "D": "besides GO ON TO THE NEXT PAGE, TEST 2 PARTS 55"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'apart'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'apart'.",
+    "keywords": [
+      "scheduled",
+      "meetings",
+      "Augustus"
+    ],
+    "vietnameseMeaning": "(C) 120 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t2_120",
+    "num": 120,
+    "source": "Hacker 3 Test 2 Part 5",
+    "category": "Liên từ (Conjunctions)",
+    "question": "Bug-Fix Software users of its antivirus 126. The captain of the cruise ship instructed program to download regular updates and the passengers to stay off the outdoor winds scan their computers on a weekly basis. decks become severe.",
+    "options": {
+      "A": "in the event that",
+      "B": "in keeping with",
+      "C": "unless",
+      "D": "of"
+    },
+    "correctAnswer": "A",
+    "explanation": "Liên từ (A) 'in the event that' dùng để liên kết hai mệnh đề biểu thị mối quan hệ logic chính xác.",
+    "tip": "⚡ MẸO LIÊN TỪ: Phân biệt rõ liên từ (theo sau là mệnh đề S + V) và giới từ (theo sau là N/V-ing). Chọn (A).",
+    "keywords": [
+      "Software",
+      "users",
+      "antivirus"
+    ],
+    "vietnameseMeaning": "(A) 121 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t2_121",
+    "num": 121,
+    "source": "Hacker 3 Test 2 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Passengers are asked to store any carry-on and Gas's annual sales are",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'Option A'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'Option A'.",
+    "keywords": [
+      "Passengers",
+      "asked",
+      "store"
+    ],
+    "vietnameseMeaning": "(A) 122 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t2_122",
+    "num": 122,
+    "source": "Hacker 3 Test 2 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Included in the lease is a strict tenants pay any damages requiring to for caused to the property,",
+    "options": {
+      "A": "prediction",
+      "B": "condition",
+      "C": "negotiation",
+      "D": "expense"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'condition'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'condition'.",
+    "keywords": [
+      "Included",
+      "lease",
+      "strict"
+    ],
+    "vietnameseMeaning": "(B) 123 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t2_123",
+    "num": 123,
+    "source": "Hacker 3 Test 2 Part 5",
+    "category": "Mệnh đề & Đại từ (Clauses & Pronouns)",
+    "question": "Manuel Torres, books have all been best-selling titles, has released his newest publication on the topic of the national election system.",
+    "options": {
+      "A": "whose",
+      "B": "who",
+      "C": "whom",
+      "D": "what take"
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án chính xác theo Official Key là (A) 'whose'.",
+    "tip": "⚡ MẸO TOEIC: Đọc kỹ ngữ cảnh và loại trừ các đáp án sai ngữ pháp. Chọn (A).",
+    "keywords": [
+      "Manuel",
+      "Torres",
+      "books"
+    ],
+    "vietnameseMeaning": "(A) 124 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t2_124",
+    "num": 124,
+    "source": "Hacker 3 Test 2 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Mr. Norris will Friday afternoons off if he has to travel a long distance during weekends.",
+    "options": {
+      "A": "accidentally",
+      "B": "once",
+      "C": "occasionally",
+      "D": "lately"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'occasionally'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'occasionally'.",
+    "keywords": [
+      "Norris",
+      "Friday",
+      "afternoons"
+    ],
+    "vietnameseMeaning": "(C) 125 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t2_125",
+    "num": 125,
+    "source": "Hacker 3 Test 2 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The assistant curator ensures that all artifacts according to museum guidelines to avoid deterioration. were being stored",
+    "options": {
+      "A": "denial",
+      "B": "consideration",
+      "C": "potential",
+      "D": "oversight"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'potential'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'potential'.",
+    "keywords": [
+      "assistant",
+      "curator",
+      "ensures"
+    ],
+    "vietnameseMeaning": "(C) 126 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t2_126",
+    "num": 126,
+    "source": "Hacker 3 Test 2 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Question 126: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'Option A'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'Option A'.",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(A) 127 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t2_127",
+    "num": 127,
+    "source": "Hacker 3 Test 2 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Clifton Oil luggage in the overhead bins and showing great compared to last year, fasten their seat belts prior to takeoff. securely",
+    "options": {
+      "A": "Option A",
+      "B": "secure",
+      "C": "security",
+      "D": "securing"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'security'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'security'.",
+    "keywords": [
+      "Clifton",
+      "luggage",
+      "overhead"
+    ],
+    "vietnameseMeaning": "(C) 128 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t2_128",
+    "num": 128,
+    "source": "Hacker 3 Test 2 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Most participants have found Bucksmith Capital's internship program because it provides them with relevant banking experience.",
+    "options": {
+      "A": "satisfaction",
+      "B": "satisfactory",
+      "C": "satisfyingly",
+      "D": "satisfied"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'satisfactory'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'satisfactory'.",
+    "keywords": [
+      "Most",
+      "participants",
+      "found"
+    ],
+    "vietnameseMeaning": "(B) 129 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t2_129",
+    "num": 129,
+    "source": "Hacker 3 Test 2 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Researchers conducting experiments in the laboratory are kindly asked to return equipment to it is stored.",
+    "options": {
+      "A": "where",
+      "B": "whether",
+      "C": "when",
+      "D": "elsewhere"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'where'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'where'.",
+    "keywords": [
+      "Researchers",
+      "conducting",
+      "experiments"
+    ],
+    "vietnameseMeaning": "(A) 130 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t2_130",
+    "num": 130,
+    "source": "Hacker 3 Test 2 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "For coverage of top stories from around the world, more viewers tune in to Global Syndicated than any other news channel.",
+    "options": {
+      "A": "renewable",
+      "B": "dependable reachable",
+      "C": "Option C",
+      "D": "adjustable"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'dependable reachable'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'dependable reachable'.",
+    "keywords": [
+      "coverage",
+      "stories",
+      "around"
+    ],
+    "vietnameseMeaning": "(B) 131 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t2_131",
+    "num": 131,
+    "source": "Hacker 3 Test 2 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "June 1. Although I look forward to enjoying my golden years, I will miss my work helping patients. As your doctor, I believe I should suggest an appropriate replacement. , I'd like to",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Option A'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "June",
+      "Although",
+      "look"
+    ],
+    "vietnameseMeaning": "(A) 132 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t2_132",
+    "num": 132,
+    "source": "Hacker 3 Test 2 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "recommend Dr. Jennifer Jana. She is an excellent physician whose clinic is to my",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Option A'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "recommend",
+      "Jennifer",
+      "Jana"
+    ],
+    "vietnameseMeaning": "(A) 133 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t2_133",
+    "num": 133,
+    "source": "Hacker 3 Test 2 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "current office. With your consent, your medical records will be transferred to her on June 2. , I wish you good health and a happy future. Best regards, Dr. Miles Hamilton Hamilton Medical Clinic",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Option D'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "current",
+      "office",
+      "your"
+    ],
+    "vietnameseMeaning": "(D) 134 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t2_134",
+    "num": 134,
+    "source": "Hacker 3 Test 2 Part 6",
+    "category": "Đọc hiểu Điền câu (Sentence Insertion)",
+    "question": "Question 134: Refer to the test material.",
+    "options": {
+      "A": "Your chart shows a marked milk improvement since her last visit.",
+      "B": "Of course, I am glad that you have decided to remain with me.",
+      "C": "Otherwise, you may retrieve them from my staff before that date.",
+      "D": "There are many forms of treatment for your condition."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Otherwise, you may retrieve them from my staff before that date.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(C) 135 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t2_135",
+    "num": 135,
+    "source": "Hacker 3 Test 2 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "University. In the coming weeks, we will be sending more information about how you should prepare for your first semester. you meet the enrollment deadline, you will be allowed",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Option D'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "University",
+      "coming",
+      "weeks"
+    ],
+    "vietnameseMeaning": "(D) 136 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t2_136",
+    "num": 136,
+    "source": "Hacker 3 Test 2 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "to sign up for a full course load and pay your tuition in the last week of July. We will also issue you a student ID card then. Should you wish to have a dormitory room at that point, we will assign you one a week prior to the start of classes. You will be authorized to move in shortly Once again, congratulations on your successful application, and we hope to see you this fall, Sincerely, Admissions and Financial Aid West Coast State University",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Option B'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "sign",
+      "full",
+      "course"
+    ],
+    "vietnameseMeaning": "(B) 137 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t2_137",
+    "num": 137,
+    "source": "Hacker 3 Test 2 Part 6",
+    "category": "Đọc hiểu Điền câu (Sentence Insertion)",
+    "question": "Question 137: Refer to the test material.",
+    "options": {
+      "A": "Now that you have sent the amount, f||| please wait for confirmation,",
+      "B": "We hope that you found your classes to be both fun and informative.",
+      "C": "Once you receive it, you may access all of the facilities on campus.",
+      "D": "The additional charge to your account is for the card you lost."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Once you receive it, you may access all of the facilities on campus.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(C) 138 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t2_138",
+    "num": 138,
+    "source": "Hacker 3 Test 2 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 138: Refer to the test material.",
+    "options": {
+      "A": "before",
+      "B": "soon",
+      "C": "thereafter",
+      "D": "now 58 Hackers,co.kr"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'thereafter'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(C) 139 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t2_139",
+    "num": 139,
+    "source": "Hacker 3 Test 2 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "zone of Copenhagen. This has encouraged developers to build more apartments there. Moreover, the creation of the nearby Albertslund Technology Park has added thousands of new jobs. These ------- opportunities have been the key to attracting more people to the district. Since development began, however, it the area's transit capacity to its limits,",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "zone",
+      "Copenhagen",
+      "encouraged"
+    ],
+    "vietnameseMeaning": "(C) 140 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t2_140",
+    "num": 140,
+    "source": "Hacker 3 Test 2 Part 6",
+    "category": "Đọc hiểu Điền câu (Sentence Insertion)",
+    "question": "Question 140: Refer to the test material.",
+    "options": {
+      "A": "Tourism to the area has grown in |||| recent years thanks to a popular campaign.",
+      "B": "The population in this area has been increasing because of low property costs.",
+      "C": "The district's transportation costs are increasing at an unprecedented rate.",
+      "D": "The closure of the Glostrup line was announced just two months earlier."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'The population in this area has been increasing because of low property costs.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(B) 141 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t2_141",
+    "num": 141,
+    "source": "Hacker 3 Test 2 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 141: Refer to the test material.",
+    "options": {
+      "A": "education",
+      "B": "employment",
+      "C": "volunteer",
+      "D": "sponsorship"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'employment'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(B) 142 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t2_142",
+    "num": 142,
+    "source": "Hacker 3 Test 2 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "causing local residents and businesses to campaign for a subway extension. A few council members opposed the proposal, pointing out the high expense of underground transit. Nevertheless, the building of the subway extension will proceed at an estimated cost of €650 million and should be operational within five years.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Option D'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "causing",
+      "local",
+      "residents"
+    ],
+    "vietnameseMeaning": "(D) 143 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t2_143",
+    "num": 143,
+    "source": "Hacker 3 Test 2 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 143: Refer to the test material.",
+    "options": {
+      "A": "whom",
+      "B": "them",
+      "C": "their",
+      "D": "which"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'them'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(B) 144 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t2_144",
+    "num": 144,
+    "source": "Hacker 3 Test 2 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "the event outside the hotel. We've also agreed that guests will be allowed complimentary use of the spa, gym, and business center. they should be billed if they order room service or make long-distance",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Option A'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "event",
+      "outside",
+      "hotel"
+    ],
+    "vietnameseMeaning": "(A) 145 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t2_145",
+    "num": 145,
+    "source": "Hacker 3 Test 2 Part 6",
+    "category": "Đọc hiểu Điền câu (Sentence Insertion)",
+    "question": "Question 145: Refer to the test material.",
+    "options": {
+      "A": "The guests were very pleased with the mm service we provided.",
+      "B": "Another group needs to use our small meeting room on the 28th.",
+      "C": "The contract states that their meals should be provided free of charge.",
+      "D": "Event participants will be entitled to a discount upon booking."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'The contract states that their meals should be provided free of charge.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(C) 146 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t2_146",
+    "num": 146,
+    "source": "Hacker 3 Test 2 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 146: Refer to the test material.",
+    "options": {
+      "A": "Specifically",
+      "B": "Sometimes",
+      "C": "Otherwise",
+      "D": "On the other hand 60 VeS2|?.ii!£a)H°Hy.hE!OB7|g^BO|^|MP3 Hackerslngang.com"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'On the other hand 60 VeS2|?.ii!£a)H°Hy.hE!OB7|g^BO|^|MP3 Hackerslngang.com'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(D) 147 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t2_147",
+    "num": 147,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What did Ms. Jenkins send to Mr. Bailey?",
+    "options": {
+      "A": "A revised contract",
+      "B": "A list of products",
+      "C": "A discount coupon",
+      "D": "A sales invoice"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'A list of products'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Jenkins",
+      "send",
+      "Bailey"
+    ],
+    "vietnameseMeaning": "(B) 148 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_148",
+    "num": 148,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is suggested about Tallahassee Bike Works?",
+    "options": {
+      "A": "It recently published a promotional product brochure.",
+      "B": "It sent Ms. Jenkins a complete purchase order form.",
+      "C": "It inquired about placing a bulk order of parts.",
+      "D": "It has done business with Shipson Bicycle Parts before. GO ON TO THE NEXT PAGE, TEST2 PART? 61"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'It has done business with Shipson Bicycle Parts before. GO ON TO THE NEXT PAGE, TEST2 PART? 61'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "suggested",
+      "Tallahassee",
+      "Bike"
+    ],
+    "vietnameseMeaning": "(D) 149 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_149",
+    "num": 149,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the purpose of the notice?",
+    "options": {
+      "A": "To explain the role of a public office",
+      "B": "To inform commuters of a station closure",
+      "C": "To state new transit regulations",
+      "D": "To announce a construction project"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'To announce a construction project'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "purpose",
+      "notice"
+    ],
+    "vietnameseMeaning": "(D) 150 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_150",
+    "num": 150,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about the Town of Shakersfield?",
+    "options": {
+      "A": "Its subway will be affected by construction work.",
+      "B": "It will post signs for detours during roadwork.",
+      "C": "It has a plaza that people can walk to.",
+      "D": "It is inaccessible to other towns by highway. 62 Hackers.co.kr"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'It has a plaza that people can walk to.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "indicated",
+      "Town",
+      "Shakersfield"
+    ],
+    "vietnameseMeaning": "(C) 151 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_151",
+    "num": 151,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Why did Mr. Grenier send the e-mail?",
+    "options": {
+      "A": "To provide a cost estimate for a custom-made gown",
+      "B": "To notify a client that a garment is ready for pickup",
+      "C": "To clarify errors in a shop's billing statement",
+      "D": "To inform a customer of some scheduling alterations | FROM: Pierre Grenier <gren@grenierfashions.com> TO: Elizabeth Monaco <lismon@faedommaii.com> SUBJECT: Custom order DATE: July 12 Dear Ms. Monaco, I just wanted to inform you that we have completed your gown. Specifically, the hemline has now been shortened by four centimeters, as you indicated you would not be wearing high heels. We are open until 6 p.m. on Fridays and closed on weekends, so please pick up your gown sometime this week. We also encourage you to try on the dress one last dme just to make sure everything is as it should be. I kindly request that you submit full payment when you next visit my shop. The details are as follows: 7 meters of red brocade silk $580 Custom gown design $200 Labor (sewing, fittings, alterations) $400 Subtotal $1,180 + 10 percent sales tax (Total Amount Due) $1,298 i so much again for your patronage, and I am sure you'll look great in the gown a firm's awards presentation this Saturday night. Sincerely, Pierre Grenier Grenier Custom Fashions"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'To notify a client that a garment is ready for pickup'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Grenier",
+      "send",
+      "mail"
+    ],
+    "vietnameseMeaning": "(B) 152 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_152",
+    "num": 152,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What will Ms. Monaco do on Saturday?",
+    "options": {
+      "A": "Attend an awards ceremony",
+      "B": "Try on an outfit at a shop",
+      "C": "Pay for tailoring services",
+      "D": "Pick up a completed gown GO ON TO THE NEXT PAGE, TEST 2 PART 7 63"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Attend an awards ceremony'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "Monaco",
+      "Saturday"
+    ],
+    "vietnameseMeaning": "(A) 153 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_153",
+    "num": 153,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "When will the technician come to complete a repair?",
+    "options": {
+      "A": "At 8:00 a.m.",
+      "B": "At 10:00 a.m.",
+      "C": "At 2:00 p.m.",
+      "D": "At 4:00 p.m."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'At 2:00 p.m.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "technician",
+      "come",
+      "complete"
+    ],
+    "vietnameseMeaning": "(C) 154 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_154",
+    "num": 154,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "At 11:03 a.m., what does Mr. Akkarat most |||| likely mean when he writes, \"That will take longer\"?",
+    "options": {
+      "A": "He wants to increase the length of a project.",
+      "B": "He may ask some staff members to work overtime.",
+      "C": "He feels that a repair job will take too long to finish.",
+      "D": "He thinks that the old servers are slower than the new ones. 64 gi\\o\\ sojiuf • y^ MP3 Hackerslngang.com"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'He thinks that the old servers are slower than the new ones. 64 gi\\o\\ sojiuf • y^ MP3 Hackerslngang.com'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "does",
+      "Akkarat",
+      "most"
+    ],
+    "vietnameseMeaning": "(D) 155 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_155",
+    "num": 155,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the main purpose of the information?",
+    "options": {
+      "A": "To announce the opening of an ice rink",
+      "B": "To describe revised operation policies to staff",
+      "C": "To notify visiting skaters of a facility's rules",
+      "D": "To promote classes on an ice rink"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'To notify visiting skaters of a facility's rules'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "main",
+      "purpose",
+      "information"
+    ],
+    "vietnameseMeaning": "(C) 156 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_156",
+    "num": 156,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is NOT indicated about Pendleton Ice Rink?",
+    "options": {
+      "A": "It has uniformed staff that are always available.",
+      "B": "It offers patrons the use of dressing rooms.",
+      "C": "It allows visitors to bring their own equipment.",
+      "D": "It is open to the public 24 hours a day."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'It is open to the public 24 hours a day.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "indicated",
+      "Pendleton",
+      "Rink"
+    ],
+    "vietnameseMeaning": "(D) 157 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_157",
+    "num": 157,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "How can visitors register for a class?",
+    "options": {
+      "A": "By calling the ice rink's main office",
+      "B": "By visiting an employee at a counter",
+      "C": "By finding an attendant on a rink",
+      "D": "By signing up directly with the coaches GO ON TO THE NEXT PAGE, TEST 2 PART 7 65"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'By visiting an employee at a counter'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "visitors",
+      "register",
+      "class"
+    ],
+    "vietnameseMeaning": "(B) 158 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_158",
+    "num": 158,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the advertisement about?",
+    "options": {
+      "A": "A refuse recycling center",
+      "B": "A used goods business",
+      "C": "An antiques auction house",
+      "D": "A trash removal service"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'A used goods business'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "advertisement"
+    ],
+    "vietnameseMeaning": "(B) 159 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_159",
+    "num": 159,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does the advertisement suggest about Bargain-Bin?",
+    "options": {
+      "A": "Its selection of products is constantly changing.",
+      "B": "It operates several outlets across the state.",
+      "C": "It is looking to hire additional employees.",
+      "D": "It rewards frequent shoppers with store credit."
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Its selection of products is constantly changing.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "does",
+      "advertisement",
+      "suggest"
+    ],
+    "vietnameseMeaning": "(A) 160 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_160",
+    "num": 160,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does the business do with a portion of its profits?",
+    "options": {
+      "A": "Invest it in independent local businesses",
+      "B": "Distribute it to Bargain-Bin investors",
+      "C": "Donate it to youth organizations",
+      "D": "Use it to build educational facilities 66 Hackers.co.kr"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Donate it to youth organizations'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "does",
+      "business",
+      "portion"
+    ],
+    "vietnameseMeaning": "(C) 161 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_161",
+    "num": 161,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "For whom was the notice most likely written?",
+    "options": {
+      "A": "Current members of a music club",
+      "B": "Registered participants in a competition",
+      "C": "Residents interested in performing",
+      "D": "Students enrolled in a singing class"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Residents interested in performing'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "whom",
+      "notice",
+      "most"
+    ],
+    "vietnameseMeaning": "(C) 162 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_162",
+    "num": 162,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is required of those wishing to try out for the chorus?",
+    "options": {
+      "A": "Prior participation in a chorus",
+      "B": "Previous foreign language study",
+      "C": "Possession of a music degree",
+      "D": "Willingness to be a volunteer"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Willingness to be a volunteer'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "required",
+      "those",
+      "wishing"
+    ],
+    "vietnameseMeaning": "(D) 163 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_163",
+    "num": 163,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In which of the positions marked [1], [2], Igfl [3], and [4] does the following sentence best belong? \"They are also responsible for purchasing their own uniforms, the details of which will be provided at a later time.\"",
+    "options": {
+      "A": "[1]",
+      "B": "[2]",
+      "C": "[3]",
+      "D": "[4] GO ONTqTHENEXrPACE.:_ TEST2 PART? 67"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) '[3]'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "positions",
+      "marked",
+      "Igfl"
+    ],
+    "vietnameseMeaning": "(C) 164 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_164",
+    "num": 164,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What caused a project to fall behind 166. schedule?",
+    "options": {
+      "A": "The cancellation of product testing",
+      "B": "The alteration of some deadlines",
+      "C": "The modification of a work policy",
+      "D": "The reassignment of some employees"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'The reassignment of some employees'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "caused",
+      "project",
+      "fall"
+    ],
+    "vietnameseMeaning": "(D) 165 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_165",
+    "num": 165,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Why most likely is changing the release date unacceptable?",
+    "options": {
+      "A": "It will increase production costs.",
+      "B": "It may be rejected by the board.",
+      "C": "It might violate a contract.",
+      "D": "It could affect sales of a product."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'It could affect sales of a product.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "most",
+      "likely",
+      "changing"
+    ],
+    "vietnameseMeaning": "(D) 166 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_166",
+    "num": 166,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Question 166: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(C) 167 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_167",
+    "num": 167,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is suggested about Mr. Brickyard's team?",
+    "options": {
+      "A": "She strongly disagrees with a proposal.",
+      "B": "She wants more details concerning a plan.",
+      "C": "She does not understand the purpose of a project.",
+      "D": "She prefers to discuss an idea at a later time. 68 ?ssat£!i!S9)H2|iy,f.EK>ia?IS^901Sf?IMP3 Hackerslngang.com"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'She wants more details concerning a plan.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "suggested",
+      "Brickyard",
+      "team"
+    ],
+    "vietnameseMeaning": "(B) 168 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_168",
+    "num": 168,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Why was the article written?",
+    "options": {
+      "A": "To publicize the opening of an art foundation",
+      "B": "To announce a tax increase for all local residents",
+      "C": "To provide details about an urban renewal project",
+      "D": "To report on plans for a transit expansion"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'To provide details about an urban renewal project'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "article",
+      "written"
+    ],
+    "vietnameseMeaning": "(C) 169 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_169",
+    "num": 169,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does the article NOT indicate about Chestnut District?",
+    "options": {
+      "A": "It will be the site of a public performance venue.",
+      "B": "It will have signs displaying maps of the entire city.",
+      "C": "It is currently in need of some roadwork.",
+      "D": "It has experienced a decline in business."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'It will have signs displaying maps of the entire city.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "does",
+      "article",
+      "indicate"
+    ],
+    "vietnameseMeaning": "(B) 170 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_170",
+    "num": 170,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "The word \"draw\" in paragraph 4, line 2, is closest in meaning to",
+    "options": {
+      "A": "outline",
+      "B": "attract",
+      "C": "fill",
+      "D": "represent"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'attract'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "word",
+      "draw",
+      "paragraph"
+    ],
+    "vietnameseMeaning": "(B) 171 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_171",
+    "num": 171,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What will most likely be used to pay for the renovation of some buildings?",
+    "options": {
+      "A": "City government fund",
+      "B": "Property taxes",
+      "C": "Raised donations",
+      "D": "Money from corporate sponsors GO ON TO THE NEXT PAGE TEST 2 PART 7 69"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'City government fund'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "most",
+      "likely",
+      "used"
+    ],
+    "vietnameseMeaning": "(A) 172 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_172",
+    "num": 172,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does the advertisement mention about EZ-R-Printing Services?",
+    "options": {
+      "A": "It provides the services of expert photographers.",
+      "B": "It offers free shipping for bulk orders.",
+      "C": "It allows clients to design their own documents.",
+      "D": "It supplies a wider selection of printing paper than competitors,"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'It allows clients to design their own documents.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "does",
+      "advertisement",
+      "mention"
+    ],
+    "vietnameseMeaning": "(C) 173 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_173",
+    "num": 173,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What will be given to those customers who spend a certain amount?",
+    "options": {
+      "A": "Gift certificates worth $75",
+      "B": "Consultations on layout and design",
+      "C": "Free delivery services",
+      "D": "Complimentary business cards"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Complimentary business cards'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "given",
+      "those",
+      "customers"
+    ],
+    "vietnameseMeaning": "(D) 174 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_174",
+    "num": 174,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What can visitors to EZ-R-Printing Services' Web site do?",
+    "options": {
+      "A": "Check out prices",
+      "B": "Settle invoices",
+      "C": "Print out documents",
+      "D": "Find branch listings"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Check out prices'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "visitors",
+      "Printing",
+      "Services"
+    ],
+    "vietnameseMeaning": "(A) 175 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_175",
+    "num": 175,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In which of the positions marked [1], [2], lUl [3], and [4] does the following sentence best belong? \"If you're uncertain about your layout and design skills, you don't have to do it at all.\" GO ON TO THE NEXT PAGE, TEST 2 PART? 71",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "positions",
+      "marked",
+      "does"
+    ],
+    "vietnameseMeaning": "(C) 176 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_176",
+    "num": 176,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What has Ms. Malkovich most likely been assigned to do?",
+    "options": {
+      "A": "Participate in events to recruit students",
+      "B": "Make travel arrangements for a group",
+      "C": "Make a list of the fair participants",
+      "D": "Find appropriate venues for some fairs"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Participate in events to recruit students'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "Malkovich",
+      "most",
+      "likely"
+    ],
+    "vietnameseMeaning": "(A) 177 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_177",
+    "num": 177,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is implied about Cofton College?",
+    "options": {
+      "A": "It is holding a recruitment fair on its campus.",
+      "B": "It offers subsidized tuition for some courses.",
+      "C": "Its course enrollment numbers are typically low.",
+      "D": "Its ratio of teachers to students is high."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Its ratio of teachers to students is high.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "implied",
+      "Cofton",
+      "College"
+    ],
+    "vietnameseMeaning": "(D) 178 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_178",
+    "num": 178,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is stated about the weekend event?",
+    "options": {
+      "A": "Teaching staff are not needed for it.",
+      "B": "Staff will be paid overtime for attending it.",
+      "C": "It will host the greatest number of attendees.",
+      "D": "It will have a modest admission fee."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Staff will be paid overtime for attending it.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "stated",
+      "weekend",
+      "event"
+    ],
+    "vietnameseMeaning": "(B) 179 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_179",
+    "num": 179,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about Professor Jansen's family?",
+    "options": {
+      "A": "They will travel with him to London.",
+      "B": "They are away on vacation in Brighton.",
+      "C": "They are residents of Leeds.",
+      "D": "They recently moved to Birmingham."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'They are residents of Leeds.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "indicated",
+      "Professor",
+      "Jansen"
+    ],
+    "vietnameseMeaning": "(C) 180 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_180",
+    "num": 180,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Why is Professor Jansen unable to attend the other events?",
+    "options": {
+      "A": "He will be busy with work during the week.",
+      "B": "He will be visiting family out of town.",
+      "C": "He will be attending a literary event.",
+      "D": "He will be traveling in another country. GO ON TO THE NEXT PAGE TEST 2 PART? 73"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'He will be busy with work during the week.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "Professor",
+      "Jansen",
+      "unable"
+    ],
+    "vietnameseMeaning": "(A) 181 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_181",
+    "num": 181,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Why did Ms. Norenski fill out the form?",
+    "options": {
+      "A": "To enroll her family af a fitness center",
+      "B": "To begin teaching classes at a gym",
+      "C": "To arrange a tour of a gym",
+      "D": "To sign up for weekly swimming lessons"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'To enroll her family af a fitness center'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "Norenski",
+      "fill",
+      "form"
+    ],
+    "vietnameseMeaning": "(A) 182 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_182",
+    "num": 182,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What has NOT been provided on the form?",
+    "options": {
+      "A": "Ms. Norenski's residential details",
+      "B": "The applicant's occupation",
+      "C": "Ms. Norenski's date of birth",
+      "D": "The applicant's familial relationships"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'The applicant's occupation'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "provided",
+      "form"
+    ],
+    "vietnameseMeaning": "(B) 183 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_183",
+    "num": 183,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is most likely true about Mr. Hanover?",
+    "options": {
+      "A": "He just started working as a manager at the gym.",
+      "B": "He recommended that Ms. Norenski try the gym.",
+      "C": "He is certified to provide personal training to members.",
+      "D": "He works a later shift now because of the new pool hours."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'He recommended that Ms. Norenski try the gym.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "most",
+      "likely",
+      "true"
+    ],
+    "vietnameseMeaning": "(B) 184 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_184",
+    "num": 184,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about Fit Prime Gym's pool?",
+    "options": {
+      "A": "It only allows lap swimming on weekdays.",
+      "B": "It temporarily shuts down for cleaning on Fridays.",
+      "C": "It is unavailable during the winter months.",
+      "D": "It closes at an earlier time on Sundays,"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'It closes at an earlier time on Sundays,'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "indicated",
+      "Prime",
+      "pool"
+    ],
+    "vietnameseMeaning": "(D) 185 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_185",
+    "num": 185,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is suggested about Ms. Norenski's membership?",
+    "options": {
+      "A": "She received an extra discount for renewing a previous membership.",
+      "B": "Her husband intends to take part in lap swimming.",
+      "C": "She plans to switch gym programs to a different one.",
+      "D": "Her older daughter is entitled to additional benefits. GO ON TO THE NEXT PAGE TESTS PART? 75"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Her older daughter is entitled to additional benefits. GO ON TO THE NEXT PAGE TESTS PART? 75'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "suggested",
+      "Norenski",
+      "membership"
+    ],
+    "vietnameseMeaning": "(D) 186 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_186",
+    "num": 186,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "According to the letter, what is NOT a benefit of owning a franchise?",
+    "options": {
+      "A": "Foreseeable costs",
+      "B": "Thorough instruction",
+      "C": "Financial support",
+      "D": "Established work procedures"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Financial support'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "According",
+      "letter",
+      "benefit"
+    ],
+    "vietnameseMeaning": "(C) 187 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_187",
+    "num": 187,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What can be inferred about Mr. Ainge?",
+    "options": {
+      "A": "Fie has decided to locate his business in Fort Myers.",
+      "B": "Fie budgeted $20,000 to invest in a company.",
+      "C": "Fie wants to attend an upcoming franchising event.",
+      "D": "Fie has a preference for a certain type of industry."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Fie budgeted $20,000 to invest in a company.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "inferred",
+      "Ainge"
+    ],
+    "vietnameseMeaning": "(B) 188 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_188",
+    "num": 188,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In the letter, the word \"model\" in paragraph 1, line 3, is closest in meaning to",
+    "options": {
+      "A": "version",
+      "B": "subject",
+      "C": "imitation",
+      "D": "system"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'system'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "letter",
+      "word",
+      "model"
+    ],
+    "vietnameseMeaning": "(D) 189 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_189",
+    "num": 189,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is suggested about the 24th Annual Franchise Expo?",
+    "options": {
+      "A": "It is held in a different city every year.",
+      "B": "It grouped industries together into sections.",
+      "C": "It is being sponsored by a charity organization.",
+      "D": "It featured fewer than 200 franchise owners."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'It grouped industries together into sections.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "suggested",
+      "Annual",
+      "Franchise"
+    ],
+    "vietnameseMeaning": "(B) 190 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_190",
+    "num": 190,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Which business might Ms. Allred recommend?",
+    "options": {
+      "A": "Barb's Chicken",
+      "B": "Missy's Ice",
+      "C": "Space Cycle",
+      "D": "Clean Sweep GO ON TO THE NEXT PAGE, TEST £ PART? 77"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Clean Sweep GO ON TO THE NEXT PAGE, TEST £ PART? 77'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "business",
+      "might",
+      "Allred"
+    ],
+    "vietnameseMeaning": "(D) 191 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_191",
+    "num": 191,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about Ms. Plummer?",
+    "options": {
+      "A": "She owns a retail establishment.",
+      "B": "She has never transacted with Majestic before.",
+      "C": "She did not have to pay a shipping charge.",
+      "D": "She will be unable to track the delivery of her order."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'She has never transacted with Majestic before.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "indicated",
+      "Plummer"
+    ],
+    "vietnameseMeaning": "(B) 192 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_192",
+    "num": 192,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In the first e-mail, what is stated about Majestic Porcelain?",
+    "options": {
+      "A": "It will not process a request without a receipt,",
+      "B": "It packs items individually for protection.",
+      "C": "It recently modified its return policies.",
+      "D": "It charges a flat fee to ship internationally."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'It packs items individually for protection.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "first",
+      "mail",
+      "stated"
+    ],
+    "vietnameseMeaning": "(B) 193 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_193",
+    "num": 193,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "How much is being offered to Ms. Plummer as a refund?",
+    "options": {
+      "A": "$35.00",
+      "B": "$42.99",
+      "C": "$62.98",
+      "D": "$355.97"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) '$42.99'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "much",
+      "being",
+      "offered"
+    ],
+    "vietnameseMeaning": "(B) 194 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_194",
+    "num": 194,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "According to the second e-mail, what advantage does Global Delivery have over other shipping providers?",
+    "options": {
+      "A": "Low-cost damage insurance",
+      "B": "State-of-the-art tracking technology",
+      "C": "A large number of branches",
+      "D": "Reduced pricing on large shipments"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Reduced pricing on large shipments'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "According",
+      "second",
+      "mail"
+    ],
+    "vietnameseMeaning": "(D) 195 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_195",
+    "num": 195,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Which shipping provider will Majestic Porcelain most likely choose?",
+    "options": {
+      "A": "Super Mail Carriers",
+      "B": "Corporate Parcel Service",
+      "C": "Global Delivery",
+      "D": "Overseas Transport Specialists GO ON TO THE NEXT PAGE. TEST 2 PART 7 79"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Super Mail Carriers'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "shipping",
+      "provider",
+      "Majestic"
+    ],
+    "vietnameseMeaning": "(A) 196 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_196",
+    "num": 196,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What type of company is Sav-Tech?",
+    "options": {
+      "A": "A marketing and promotions firm",
+      "B": "A seller of applications for mobile devices",
+      "C": "An online advertising service for businesses",
+      "D": "A recruitment agency for software programmers"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'A seller of applications for mobile devices'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "type",
+      "company",
+      "Tech"
+    ],
+    "vietnameseMeaning": "(B) 197 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_197",
+    "num": 197,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What did Mr. Bradley indicate about most of the applicants for the marketing jobs?",
+    "options": {
+      "A": "They have insufficient experience in marketing.",
+      "B": "They are not familiar with software development.",
+      "C": "They are unavailable for the positions immediately.",
+      "D": "They do not have degrees in marketing."
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'They have insufficient experience in marketing.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "Bradley",
+      "indicate",
+      "most"
+    ],
+    "vietnameseMeaning": "(A) 198 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_198",
+    "num": 198,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What did Mr. Kumar do on January 14?",
+    "options": {
+      "A": "Had a meeting with a colleague from Los Angeles",
+      "B": "Discussed some job vacancies with a coworker",
+      "C": "Met David Bradley for lunch",
+      "D": "Read through the terms of a contract"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Discussed some job vacancies with a coworker'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Kumar",
+      "January"
+    ],
+    "vietnameseMeaning": "(B) 199 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_199",
+    "num": 199,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is suggested about Mia Choi?",
+    "options": {
+      "A": "She will send a job application to Mr. Morrison.",
+      "B": "She contacted a marketing manager at Sav-Tech.",
+      "C": "She hopes to relocate to a larger company in Los Angeles.",
+      "D": "She was the head of a team at Headman Advertising Agency."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'She contacted a marketing manager at Sav-Tech.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "suggested",
+      "Choi"
+    ],
+    "vietnameseMeaning": "(B) 200 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t2_200",
+    "num": 200,
+    "source": "Hacker 3 Test 2 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Who is Richard Morrison?",
+    "options": {
+      "A": "A former client of Mr. Bradley",
+      "B": "A software marketing expert",
+      "C": "A proprietor of a software firm",
+      "D": "A current supervisor of Ms. Choi This is the end of the test. You may review Part 5, 6, and 7 if you finish the test early. sa-P.B24 / St® p.327 /Sim P.3B5 / Part 5&6 olM U|£M7| • Si|o|x|oj 2te Self *||a. m m »o| Eflst ggofl aAiia. TEST 2 PART 7 81"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'A current supervisor of Ms. Choi This is the end of the test. You may review Part 5, 6, and 7 if you finish the test early. sa-P.B24 / St® p.327 /Sim P.3B5 / Part 5&6 olM U|£M7| • Si|o|x|oj 2te Self *||a. m m »o| Eflst ggofl aAiia. TEST 2 PART 7 81'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "Richard",
+      "Morrison"
+    ],
+    "vietnameseMeaning": "(D) PART 5",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 2 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_101",
+    "num": 101,
+    "source": "Hacker 3 Test 3 Part 5",
+    "category": "Từ loại (Word Form)",
+    "question": "Hanson Inc.'s marketing team to finalize the television advertisement for the company's newest touch screen monitor.",
+    "options": {
+      "A": "assembling",
+      "B": "assembled",
+      "C": "to assemble",
+      "D": "assembly"
+    },
+    "correctAnswer": "B",
+    "explanation": "Căn cứ vào ngữ pháp câu, vị trí cần điền đóng vai trò từ loại phù hợp trong mệnh đề. Chọn đáp án (B) 'assembled' để hoàn chỉnh cấu trúc ngữ pháp.",
+    "tip": "⚡ MẸO TỪ LOẠI: Xác định vị trí chỗ trống đứng sau từ loại gì (danh từ, động từ, tính từ hay trạng từ) để chọn đuôi hậu tố chính xác. Đáp án đúng là (B).",
+    "keywords": [
+      "Hanson",
+      "marketing",
+      "team"
+    ],
+    "vietnameseMeaning": "(B) 102 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t3_102",
+    "num": 102,
+    "source": "Hacker 3 Test 3 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The construction of a new subway line was aimed at overcrowding during rush hour.",
+    "options": {
+      "A": "imposing",
+      "B": "preparing",
+      "C": "relieving",
+      "D": "benefiting"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'relieving'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'relieving'.",
+    "keywords": [
+      "construction",
+      "subway",
+      "line"
+    ],
+    "vietnameseMeaning": "(C) 103 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t3_103",
+    "num": 103,
+    "source": "Hacker 3 Test 3 Part 5",
+    "category": "Từ loại (Word Form)",
+    "question": "Ms. Bedford was chosen to represent Centraine because her considerable of in mergers and acquisitions.",
+    "options": {
+      "A": "experts",
+      "B": "expertly",
+      "C": "expert",
+      "D": "expertise"
+    },
+    "correctAnswer": "D",
+    "explanation": "Căn cứ vào ngữ pháp câu, vị trí cần điền đóng vai trò từ loại phù hợp trong mệnh đề. Chọn đáp án (D) 'expertise' để hoàn chỉnh cấu trúc ngữ pháp.",
+    "tip": "⚡ MẸO TỪ LOẠI: Xác định vị trí chỗ trống đứng sau từ loại gì (danh từ, động từ, tính từ hay trạng từ) để chọn đuôi hậu tố chính xác. Đáp án đúng là (D).",
+    "keywords": [
+      "Bedford",
+      "chosen",
+      "represent"
+    ],
+    "vietnameseMeaning": "(D) 104 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t3_104",
+    "num": 104,
+    "source": "Hacker 3 Test 3 Part 5",
+    "category": "Từ loại (Word Form)",
+    "question": "The wireless headset by Smartcom's representative at the Fentwood Technology the Trade Show will go on market next month.",
+    "options": {
+      "A": "demonstrate",
+      "B": "demonstrates",
+      "C": "demonstrated",
+      "D": "demonstrating 84 iisq 901°^ S°JiUh ni yojopi Mp3 Hackerslngang.com Select the best answer and mark the sheet."
+    },
+    "correctAnswer": "C",
+    "explanation": "Căn cứ vào ngữ pháp câu, vị trí cần điền đóng vai trò từ loại phù hợp trong mệnh đề. Chọn đáp án (C) 'demonstrated' để hoàn chỉnh cấu trúc ngữ pháp.",
+    "tip": "⚡ MẸO TỪ LOẠI: Xác định vị trí chỗ trống đứng sau từ loại gì (danh từ, động từ, tính từ hay trạng từ) để chọn đuôi hậu tố chính xác. Đáp án đúng là (C).",
+    "keywords": [
+      "wireless",
+      "headset",
+      "Smartcom"
+    ],
+    "vietnameseMeaning": "(C) 105 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t3_105",
+    "num": 105,
+    "source": "Hacker 3 Test 3 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Members who renew their newspaper subscription at least one month prior to its receive a percent discount. will 5",
+    "options": {
+      "A": "opening",
+      "B": "expiration",
+      "C": "obligation",
+      "D": "statement"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'expiration'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'expiration'.",
+    "keywords": [
+      "Members",
+      "renew",
+      "their"
+    ],
+    "vietnameseMeaning": "(B) 106 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t3_106",
+    "num": 106,
+    "source": "Hacker 3 Test 3 Part 5",
+    "category": "Mệnh đề & Đại từ (Clauses & Pronouns)",
+    "question": "Lorasoft's customer service agents are instructed to handle minor requests before forwarding calls directly to the technical support team.",
+    "options": {
+      "A": "their",
+      "B": "them",
+      "C": "they",
+      "D": "themselves The popularity the daily television show,"
+    },
+    "correctAnswer": "D",
+    "explanation": "Đáp án chính xác theo Official Key là (D) 'themselves The popularity the daily television show,'.",
+    "tip": "⚡ MẸO TOEIC: Đọc kỹ ngữ cảnh và loại trừ các đáp án sai ngữ pháp. Chọn (D).",
+    "keywords": [
+      "Lorasoft",
+      "customer",
+      "service"
+    ],
+    "vietnameseMeaning": "(D) 107 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t3_107",
+    "num": 107,
+    "source": "Hacker 3 Test 3 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "of Celebrity Update, has declined the years as entertainment news has become increasingly available online.",
+    "options": {
+      "A": "toward",
+      "B": "until",
+      "C": "as to",
+      "D": "over"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'over'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'over'.",
+    "keywords": [
+      "Celebrity",
+      "Update",
+      "declined"
+    ],
+    "vietnameseMeaning": "(D) 108 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t3_108",
+    "num": 108,
+    "source": "Hacker 3 Test 3 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Scientists employed by Fluent Pharmaceuticals spend most of their time medications to treat diabetes.",
+    "options": {
+      "A": "developing",
+      "B": "practicing",
+      "C": "depicting",
+      "D": "signaling"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'developing'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'developing'.",
+    "keywords": [
+      "Scientists",
+      "employed",
+      "Fluent"
+    ],
+    "vietnameseMeaning": "(A) 109 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t3_109",
+    "num": 109,
+    "source": "Hacker 3 Test 3 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "who needs to access information on 115. The latest version of the accounting the corporate Web site must first obtain software is not with the operating login credentials from the IT department. system installed on the office computers. Those",
+    "options": {
+      "A": "Option A",
+      "B": "challenged",
+      "C": "acquainted compatible",
+      "D": "Sergei Rostov's speech"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'challenged'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'challenged'.",
+    "keywords": [
+      "needs",
+      "access",
+      "information"
+    ],
+    "vietnameseMeaning": "(B) 110 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t3_110",
+    "num": 110,
+    "source": "Hacker 3 Test 3 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Flintrock Manufacturing employees are 116. Automat CEO on required a training program trends in the high-tech industry drew an in equipment safety in order to operate heavy machinery on the job. completing",
+    "options": {
+      "A": "Option A",
+      "B": "complete",
+      "C": "to complete",
+      "D": "completely"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'to complete'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'to complete'.",
+    "keywords": [
+      "Flintrock",
+      "Manufacturing",
+      "employees"
+    ],
+    "vietnameseMeaning": "(C) 111 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t3_111",
+    "num": 111,
+    "source": "Hacker 3 Test 3 Part 5",
+    "category": "Ngữ pháp & Thì (Grammar & Tenses)",
+    "question": "Had Mr. Shriver booked his vacation package further advance, he in a much lower price.",
+    "options": {
+      "A": "is being paid have",
+      "B": "would paid",
+      "C": "would have been paid",
+      "D": "has paid"
+    },
+    "correctAnswer": "B",
+    "explanation": "Xét về sự hòa hợp giữa chủ ngữ và thì của câu, động từ (B) 'would paid' chia đúng thì và dạng chủ động/bị động.",
+    "tip": "⚡ MẸO CHIA THÌ: Nhìn dấu hiệu thời gian và xét chủ ngữ số ít/số nhiều để loại trừ các dạng sai thì. Đáp án đúng là (B).",
+    "keywords": [
+      "Shriver",
+      "booked",
+      "vacation"
+    ],
+    "vietnameseMeaning": "(B) 112 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t3_112",
+    "num": 112,
+    "source": "Hacker 3 Test 3 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Most of the conference participants arrived an hour ago, but the keynote speaker is his way. on",
+    "options": {
+      "A": "still",
+      "B": "already",
+      "C": "before",
+      "D": "lately"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'still'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'still'.",
+    "keywords": [
+      "Most",
+      "conference",
+      "participants"
+    ],
+    "vietnameseMeaning": "(A) 113 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t3_113",
+    "num": 113,
+    "source": "Hacker 3 Test 3 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Research indicates that consumers are much more likely to purchase products for from companies that show the environment.",
+    "options": {
+      "A": "compliance",
+      "B": "designation",
+      "C": "concern",
+      "D": "diversity"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'concern'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'concern'.",
+    "keywords": [
+      "Research",
+      "indicates",
+      "consumers"
+    ],
+    "vietnameseMeaning": "(C) 114 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t3_114",
+    "num": 114,
+    "source": "Hacker 3 Test 3 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Reed made to rent a car, as he Mr. planned to meet with several clients during his trip. arranges",
+    "options": {
+      "A": "aspiring O",
+      "B": "aspired CD",
+      "C": "aspire r\\j aspiration",
+      "D": "5"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) '5'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) '5'.",
+    "keywords": [
+      "Reed",
+      "made",
+      "rent"
+    ],
+    "vietnameseMeaning": "(D) 115 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t3_115",
+    "num": 115,
+    "source": "Hacker 3 Test 3 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Question 115: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'Option D'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'Option D'.",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(D) 116 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t3_116",
+    "num": 116,
+    "source": "Hacker 3 Test 3 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Question 116: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'Option A'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'Option A'.",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(A) 117 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t3_117",
+    "num": 117,
+    "source": "Hacker 3 Test 3 Part 5",
+    "category": "Ngữ pháp & Thì (Grammar & Tenses)",
+    "question": "Since acquiring the land on Taylor Avenue CD 4> five years ago, the proprietor multiple offers from developers wishing to buy it. CD cn",
+    "options": {
+      "A": "had been receiving O",
+      "B": "will receive CD",
+      "C": "has received CD",
+      "D": "to receive CD CO"
+    },
+    "correctAnswer": "C",
+    "explanation": "Xét về sự hòa hợp giữa chủ ngữ và thì của câu, động từ (C) 'has received CD' chia đúng thì và dạng chủ động/bị động.",
+    "tip": "⚡ MẸO CHIA THÌ: Nhìn dấu hiệu thời gian và xét chủ ngữ số ít/số nhiều để loại trừ các dạng sai thì. Đáp án đúng là (C).",
+    "keywords": [
+      "Since",
+      "acquiring",
+      "land"
+    ],
+    "vietnameseMeaning": "(C) 118 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t3_118",
+    "num": 118,
+    "source": "Hacker 3 Test 3 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "BRE Manufacturing is unlikely to take chances names as brands CD on new UD are more appealing to its target market. O",
+    "options": {
+      "A": "familiar Of",
+      "B": "proficient 3!",
+      "C": "sufficient D- Kn j°",
+      "D": "aggressive nj>; r2d O o"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'familiar Of'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'familiar Of'.",
+    "keywords": [
+      "Manufacturing",
+      "unlikely",
+      "take"
+    ],
+    "vietnameseMeaning": "(A) 119 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t3_119",
+    "num": 119,
+    "source": "Hacker 3 Test 3 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The cast was interviewed by the press o X LU the first performance of the play X) OJ Father Simon. Q. OQ",
+    "options": {
+      "A": "rather",
+      "B": "as soon as",
+      "C": "following",
+      "D": "between GO ON TO THE NEXT PAGE., TEST 3 PARTS 85"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'following'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'following'.",
+    "keywords": [
+      "cast",
+      "interviewed",
+      "press"
+    ],
+    "vietnameseMeaning": "(C) 120 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t3_120",
+    "num": 120,
+    "source": "Hacker 3 Test 3 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Ms. Morgan's responsibility as the Trevors overcame the",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'Option B'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'Option B'.",
+    "keywords": [
+      "Morgan",
+      "responsibility",
+      "Trevors"
+    ],
+    "vietnameseMeaning": "(B) 121 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t3_121",
+    "num": 121,
+    "source": "Hacker 3 Test 3 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Home Choice is looking for suppliers who 126. Dong Suk Kim's promotion was approved can produce the various parts the sudden of company's - it after the needs for its new line of kitchen appliances.",
+    "options": {
+      "A": "afford affording",
+      "B": "Option B",
+      "C": "affordable",
+      "D": "affordably"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'affordably'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'affordably'.",
+    "keywords": [
+      "Home",
+      "Choice",
+      "looking"
+    ],
+    "vietnameseMeaning": "(D) 122 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t3_122",
+    "num": 122,
+    "source": "Hacker 3 Test 3 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Eastern Automotive is the largest producer only of vehicle parts, Dreier Limited terms of annual profits. in",
+    "options": {
+      "A": "within",
+      "B": "behind among",
+      "C": "Option C",
+      "D": "beyond"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'behind among'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'behind among'.",
+    "keywords": [
+      "Eastern",
+      "Automotive",
+      "largest"
+    ],
+    "vietnameseMeaning": "(B) 123 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t3_123",
+    "num": 123,
+    "source": "Hacker 3 Test 3 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The owner of White Pearl Restaurant has always found conducting regular surveys way to be a of obtaining customer feedback.",
+    "options": {
+      "A": "reliant",
+      "B": "reliability",
+      "C": "reliable",
+      "D": "relying"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'reliable'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'reliable'.",
+    "keywords": [
+      "owner",
+      "White",
+      "Pearl"
+    ],
+    "vietnameseMeaning": "(C) 124 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t3_124",
+    "num": 124,
+    "source": "Hacker 3 Test 3 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "students have requested on-campus housing, they must wait at least a month for an official response. Once",
+    "options": {
+      "A": "gratitude",
+      "B": "departure",
+      "C": "routine",
+      "D": "adjustment script"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'gratitude'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'gratitude'.",
+    "keywords": [
+      "students",
+      "requested",
+      "campus"
+    ],
+    "vietnameseMeaning": "(A) 125 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t3_125",
+    "num": 125,
+    "source": "Hacker 3 Test 3 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Mr. difficulty of company's head of operations is to ensure speaking French by improving his that every department is running smoothly. skills with regular practice. reputable",
+    "options": {
+      "A": "gradually",
+      "B": "respectively",
+      "C": "intimately",
+      "D": "haltingly"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'gradually'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'gradually'.",
+    "keywords": [
+      "difficulty",
+      "company",
+      "head"
+    ],
+    "vietnameseMeaning": "(A) 126 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t3_126",
+    "num": 126,
+    "source": "Hacker 3 Test 3 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Question 126: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'Option B'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'Option B'.",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(B) 127 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t3_127",
+    "num": 127,
+    "source": "Hacker 3 Test 3 Part 5",
+    "category": "Từ loại (Word Form)",
+    "question": "The for the novel of Winding Road will serve as a screenplay for the upcoming film.",
+    "options": {
+      "A": "adapt",
+      "B": "adapted",
+      "C": "adaptability",
+      "D": "adaptively"
+    },
+    "correctAnswer": "B",
+    "explanation": "Căn cứ vào ngữ pháp câu, vị trí cần điền đóng vai trò từ loại phù hợp trong mệnh đề. Chọn đáp án (B) 'adapted' để hoàn chỉnh cấu trúc ngữ pháp.",
+    "tip": "⚡ MẸO TỪ LOẠI: Xác định vị trí chỗ trống đứng sau từ loại gì (danh từ, động từ, tính từ hay trạng từ) để chọn đuôi hậu tố chính xác. Đáp án đúng là (B).",
+    "keywords": [
+      "novel",
+      "Winding",
+      "Road"
+    ],
+    "vietnameseMeaning": "(B) 128 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t3_128",
+    "num": 128,
+    "source": "Hacker 3 Test 3 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "the run-down parking the rest of lot, the building's facilities are in excellent condition. Regarding",
+    "options": {
+      "A": "Option A",
+      "B": "Namely",
+      "C": "Other than",
+      "D": "Or else"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'Other than'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'Other than'.",
+    "keywords": [
+      "down",
+      "parking",
+      "rest"
+    ],
+    "vietnameseMeaning": "(C) 129 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t3_129",
+    "num": 129,
+    "source": "Hacker 3 Test 3 Part 5",
+    "category": "Mệnh đề & Đại từ (Clauses & Pronouns)",
+    "question": "Although there are numerous household cleaners being sold, many shoppers simply purchase ones are being promoted. when",
+    "options": {
+      "A": "Option A",
+      "B": "what",
+      "C": "whichever",
+      "D": "which"
+    },
+    "correctAnswer": "C",
+    "explanation": "Đáp án chính xác theo Official Key là (C) 'whichever'.",
+    "tip": "⚡ MẸO TOEIC: Đọc kỹ ngữ cảnh và loại trừ các đáp án sai ngữ pháp. Chọn (C).",
+    "keywords": [
+      "Although",
+      "there",
+      "numerous"
+    ],
+    "vietnameseMeaning": "(C) 130 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t3_130",
+    "num": 130,
+    "source": "Hacker 3 Test 3 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Providing senior managers with incentive-based compensation a is solution to their declining productivity,",
+    "options": {
+      "A": "variable",
+      "B": "thriving",
+      "C": "discrete",
+      "D": "practical"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'practical'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'practical'.",
+    "keywords": [
+      "Providing",
+      "senior",
+      "managers"
+    ],
+    "vietnameseMeaning": "(D) 131 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t3_131",
+    "num": 131,
+    "source": "Hacker 3 Test 3 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 131: Refer to the test material.",
+    "options": {
+      "A": "totaled",
+      "B": "totally",
+      "C": "totaling",
+      "D": "totals"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'totaling'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(C) 132 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t3_132",
+    "num": 132,
+    "source": "Hacker 3 Test 3 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 132: Refer to the test material.",
+    "options": {
+      "A": "canceled",
+      "B": "settled",
+      "C": "insured",
+      "D": "forgotten"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'settled'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(B) 133 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t3_133",
+    "num": 133,
+    "source": "Hacker 3 Test 3 Part 6",
+    "category": "Đọc hiểu Điền câu (Sentence Insertion)",
+    "question": "Question 133: Refer to the test material.",
+    "options": {
+      "A": "This may affect when you start |||i| receiving high-speed service.",
+      "B": "The money you owe will be paid on the scheduled date through this means.",
+      "C": "We have sent a receipt confirming payment of the charges.",
+      "D": "Your service will be restored once you send the amount that is due."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'The money you owe will be paid on the scheduled date through this means.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(B) 134 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t3_134",
+    "num": 134,
+    "source": "Hacker 3 Test 3 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "your payment history. Virginia Payton Clarks Telecom",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "your",
+      "payment",
+      "history"
+    ],
+    "vietnameseMeaning": "(C) 135 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t3_135",
+    "num": 135,
+    "source": "Hacker 3 Test 3 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "you with interesting stories of its history. you like riding horses for relaxation or prefer a",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "interesting",
+      "stories",
+      "history"
+    ],
+    "vietnameseMeaning": "(C) 136 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t3_136",
+    "num": 136,
+    "source": "Hacker 3 Test 3 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "challenging ride in the open country, we have all the equipment you'll need to fulfill your requirements. In addition, should you choose to bring your own horses, we can",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Option D'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "challenging",
+      "ride",
+      "open"
+    ],
+    "vietnameseMeaning": "(D) 137 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t3_137",
+    "num": 137,
+    "source": "Hacker 3 Test 3 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "138. them during your stay with us. This is because our stables have ample space, where they will be well cared for. Simply let us know what your party needs when you call us at 555-7823 to book your spot.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Option B'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "them",
+      "during",
+      "your"
+    ],
+    "vietnameseMeaning": "(B) 138 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t3_138",
+    "num": 138,
+    "source": "Hacker 3 Test 3 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 138: Refer to the test material.",
+    "options": {
+      "A": "switch",
+      "B": "race",
+      "C": "house",
+      "D": "auction 88 VS££(?!i!Sa|fie)3Af.EK)i°plS9!E!0)^|MP3 Hackerslngang.com"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'house'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(C) 139 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t3_139",
+    "num": 139,
+    "source": "Hacker 3 Test 3 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 139: Refer to the test material.",
+    "options": {
+      "A": "regrettable",
+      "B": "regret",
+      "C": "regrettably",
+      "D": "regretful"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'regret'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(B) 140 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t3_140",
+    "num": 140,
+    "source": "Hacker 3 Test 3 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 140: Refer to the test material.",
+    "options": {
+      "A": "sponsor",
+      "B": "evaluate",
+      "C": "confirm",
+      "D": "postpone"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'postpone'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(D) 141 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t3_141",
+    "num": 141,
+    "source": "Hacker 3 Test 3 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "in addition to being fully refunded, everyone who purchased a ticket will receive a 20 percent discount when they make a future reservation. Hopefully, the discount makes up for the inconvenience. Please accept our sincerest apologies.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "addition",
+      "being",
+      "fully"
+    ],
+    "vietnameseMeaning": "(C) 142 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t3_142",
+    "num": 142,
+    "source": "Hacker 3 Test 3 Part 6",
+    "category": "Đọc hiểu Điền câu (Sentence Insertion)",
+    "question": "Question 142: Refer to the test material.",
+    "options": {
+      "A": "We can no longer offer group rates to lHll those without valid memberships.",
+      "B": "We cannot combine this price reduction with any other special promotion or discount.",
+      "C": "We are committed to starting each of our productions in a punctual manner.",
+      "D": "We have posted the dates and times for this performance on our Web site. GO ON TO THE NEXT PAGE, TESTS PART 6 89"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'We cannot combine this price reduction with any other special promotion or discount.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(B) 143 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t3_143",
+    "num": 143,
+    "source": "Hacker 3 Test 3 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 143: Refer to the test material.",
+    "options": {
+      "A": "imminent",
+      "B": "crowded",
+      "C": "widespread",
+      "D": "promising"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'promising'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(D) 144 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t3_144",
+    "num": 144,
+    "source": "Hacker 3 Test 3 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "are pleased that the diversity of the genre will be able to shine through this time. Our invited writers discard regular forms and rhyming patterns characteristic of conventional poetry. Focusing on such topics as our rapidly changing society and the impact of technology,",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Option A'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "pleased",
+      "diversity",
+      "genre"
+    ],
+    "vietnameseMeaning": "(A) 145 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t3_145",
+    "num": 145,
+    "source": "Hacker 3 Test 3 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "poems are sure to resonate with audience members.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "poems",
+      "sure",
+      "resonate"
+    ],
+    "vietnameseMeaning": "(C) 146 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t3_146",
+    "num": 146,
+    "source": "Hacker 3 Test 3 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "The recital will take place on October 10 at the Rocheport Arts Center. We hope to see you Sincerely, Abraham Schlitz Rocheport Arts Center",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Option D'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "recital",
+      "take",
+      "place"
+    ],
+    "vietnameseMeaning": "(D) 147 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t3_147",
+    "num": 147,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the advertisement mainly about?",
+    "options": {
+      "A": "A subscription to a health magazine",
+      "B": "A discounted yoga course",
+      "C": "An exercise equipment store",
+      "D": "A series of fitness videos"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'An exercise equipment store'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "advertisement",
+      "mainly"
+    ],
+    "vietnameseMeaning": "(C) 148 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_148",
+    "num": 148,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "According to the advertisement, how can FlexiWorld Yoga offer reasonable prices?",
+    "options": {
+      "A": "It retails its merchandise solely online.",
+      "B": "It buys its goods at a discount.",
+      "C": "It manufactures its own products.",
+      "D": "It has exclusive deals with suppliers. GO ON TO THE NEXT PAGE^ TESTB PART 7 91"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'It retails its merchandise solely online.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "According",
+      "advertisement",
+      "FlexiWorld"
+    ],
+    "vietnameseMeaning": "(A) 149 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_149",
+    "num": 149,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the purpose of the announcement?",
+    "options": {
+      "A": "To inform personnel of a change",
+      "B": "To recruit a new employee",
+      "C": "To announce a yearly event",
+      "D": "To promote a new program"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'To recruit a new employee'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "purpose",
+      "announcement"
+    ],
+    "vietnameseMeaning": "(B) 150 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_150",
+    "num": 150,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is mentioned about the center?",
+    "options": {
+      "A": "It has achieved its annual fundraising goal.",
+      "B": "It allows its staff to attend exhibits for free.",
+      "C": "It offers gift packages to visitors.",
+      "D": "It only hires staff with previous experience. 92 ^ £££! 22JI!^. e0O7|£ ^ yoiopl MP3 Hackerslngang.com"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'It allows its staff to attend exhibits for free.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "mentioned",
+      "center"
+    ],
+    "vietnameseMeaning": "(B) 151 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_151",
+    "num": 151,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Why is production delayed?",
+    "options": {
+      "A": "A device is still in the process of being tested.",
+      "B": "A factory was forced to shut down temporarily.",
+      "C": "A new feature was recommended by sales representatives.",
+      "D": "A store has decided to cancel its order of goods."
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'A device is still in the process of being tested.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "production",
+      "delayed"
+    ],
+    "vietnameseMeaning": "(A) 152 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_152",
+    "num": 152,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "At 2:31 p.m., what does Ms. Cohen mean ||||| when she writes, \"Not a chance\"?",
+    "options": {
+      "A": "She thinks that too few units of an item will be produced.",
+      "B": "She is doubtful that a recently released product will have high sales.",
+      "C": "She doesn't believe a department has sufficient staff to meet a deadline.",
+      "D": "She doesn't think computers will be shipped on a planned date. GO ON TO THE NEXT PAGE, TESTS PART? 93"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'She doesn't think computers will be shipped on a planned date. GO ON TO THE NEXT PAGE, TESTS PART? 93'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "does",
+      "Cohen",
+      "mean"
+    ],
+    "vietnameseMeaning": "(D) 153 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_153",
+    "num": 153,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about TechBase?",
+    "options": {
+      "A": "It has invited Ms. Goncalvez to speak before.",
+      "B": "It works in conjunction with two firms.",
+      "C": "It is a computer-related company.",
+      "D": "It hired a new full-time marketing specialist."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'It is a computer-related company.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "indicated",
+      "TechBase"
+    ],
+    "vietnameseMeaning": "(C) 154 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_154",
+    "num": 154,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What will NOT be discussed during the talk?",
+    "options": {
+      "A": "Comprehending customer needs",
+      "B": "Producing successful advertisements",
+      "C": "Forming effective sales teams",
+      "D": "Identifying product selling points"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Forming effective sales teams'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "discussed",
+      "during",
+      "talk"
+    ],
+    "vietnameseMeaning": "(C) 155 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_155",
+    "num": 155,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is true about the event?",
+    "options": {
+      "A": "It will take place at a rented venue.",
+      "B": "Attendees will be given a copy of a book.",
+      "C": "All staff members are obliged to attend it.",
+      "D": "Participants must read some material beforehand. 94 Hackers.co.kr"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Attendees will be given a copy of a book.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "true",
+      "event"
+    ],
+    "vietnameseMeaning": "(B) 156 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_156",
+    "num": 156,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the main purpose of the notice?",
+    "options": {
+      "A": "To warn people of upcoming road closures",
+      "B": "To express worries about pedestrian safety",
+      "C": "To invite participation in a public discussion",
+      "D": "To solicit suggestions for the use of a space Sheltonville Town Council NOTICE: Residents of Smith Street and Surrounding Areas Please be aware that a public forum will be held to talk about the ongoing work at the corner of Smith Street and Lincoln Avenue, where an apartment complex is in the process of being constructed. We have been informed that the project is about to enter its building phase, and this is expected to last until the end of September. During this period, it is likely that residents will be affected by road closures and increased levels of noise from the worksite. Additionally, the sidewalk will be closed oft to pedestrians in the interest of safety. Representatives from the construction firm of Blakely and Reid will be on hand to respond to questions from residents. The forum will be moderated by Joseph Coran, member of the city council representing District 1 1. The forum will begin at 6:00 p.m. on Tuesday, July 1 0. It will be held at the Evergreen Community Center, and everyone in the neighborhood is free to attend."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'To invite participation in a public discussion'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "main",
+      "purpose",
+      "notice"
+    ],
+    "vietnameseMeaning": "(C) 157 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_157",
+    "num": 157,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about Joseph Coran?",
+    "options": {
+      "A": "He has questions about a building project.",
+      "B": "He will facilitate a public forum.",
+      "C": "He is an employee of a construction firm.",
+      "D": "He is running for office in Sheltonville. GO ON TO THE NEXT PAGE TEST3 PART? 95"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'He will facilitate a public forum.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "indicated",
+      "Joseph",
+      "Coran"
+    ],
+    "vietnameseMeaning": "(B) 158 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_158",
+    "num": 158,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is stated about Belajar University?",
+    "options": {
+      "A": "It is trying to attract students from diverse areas of the nation.",
+      "B": "It is celebrating the 100th year since its establishment.",
+      "C": "It has recently opened a new students' union building.",
+      "D": "It has the highest entrance standards in the country."
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'It is trying to attract students from diverse areas of the nation.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "stated",
+      "Belajar",
+      "University"
+    ],
+    "vietnameseMeaning": "(A) 159 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_159",
+    "num": 159,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is being built by the Malaysian government?",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "being",
+      "built",
+      "Malaysian"
+    ],
+    "vietnameseMeaning": "(C) 160 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_160",
+    "num": 160,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does Qing Weihai anticipate will happen?",
+    "options": {
+      "A": "An employee training campus",
+      "B": "A wider road to the capital",
+      "C": "A fast railway connection",
+      "D": "A residence for students 96 a°|;au \u0003\u0003EtoigPIg 5! E!0®?l MP3 Hackerslngang.com"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'A residence for students 96 a°|;au \u0003\u0003EtoigPIg 5! E!0®?l MP3 Hackerslngang.com'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "does",
+      "Qing",
+      "Weihai"
+    ],
+    "vietnameseMeaning": "(D) 161 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_161",
+    "num": 161,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Why was the e-mail written?",
+    "options": {
+      "A": "To request an updated product list",
+      "B": "To give feedback on a purchase",
+      "C": "To inquire about a popular book",
+      "D": "To promote a publication's release"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'To promote a publication's release'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "mail",
+      "written"
+    ],
+    "vietnameseMeaning": "(D) 162 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_162",
+    "num": 162,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is implied about QRC Bookstore?",
+    "options": {
+      "A": "It is owned by a former professor.",
+      "B": "It sells all of its products online.",
+      "C": "Its customers include university students.",
+      "D": "Its products are discounted for teachers. GO ON TO THE NEXT PAGE. TEST 3 PART? 97"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Its customers include university students.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "implied",
+      "Bookstore"
+    ],
+    "vietnameseMeaning": "(C) 163 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_163",
+    "num": 163,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "How can Ms. Shah place a product order?",
+    "options": {
+      "A": "By submitting a form online",
+      "B": "By mailing a document",
+      "C": "By calling a phone number",
+      "D": "By responding to an e-mail"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'By mailing a document'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Shah",
+      "place",
+      "product"
+    ],
+    "vietnameseMeaning": "(B) 164 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_164",
+    "num": 164,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In which of the positions marked [1], [2], mSk [3], and [4] does the following sentence best belong? \"These may be used in the classroom along with the extensive lesson plans found in each chapter.\"",
+    "options": {
+      "A": "[1]",
+      "B": "[2]",
+      "C": "[3]",
+      "D": "[4]"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) '[2]'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "positions",
+      "marked",
+      "does"
+    ],
+    "vietnameseMeaning": "(B) 165 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_165",
+    "num": 165,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What kind of organization does Ms, Dalton most likely work for?",
+    "options": {
+      "A": "An art gallery",
+      "B": "A local university",
+      "C": "An advertising agency",
+      "D": "A printing company"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'An art gallery'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "kind",
+      "organization",
+      "does"
+    ],
+    "vietnameseMeaning": "(A) 166 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_166",
+    "num": 166,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "When will the event be formally announced?",
+    "options": {
+      "A": "On Monday",
+      "B": "On Tuesday",
+      "C": "On Thursday",
+      "D": "On Saturday"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'On Saturday'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "event",
+      "formally",
+      "announced"
+    ],
+    "vietnameseMeaning": "(D) 167 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_167",
+    "num": 167,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "At 2:20 p.m., what does Ms. Emerson mean when she writes, \"what about Randall University\"?",
+    "options": {
+      "A": "She thinks a school may be a good place to promote an event.",
+      "B": "She believes that she will be able to recruit student volunteers,",
+      "C": "She intends to have some posters printed out at a local college.",
+      "D": "She would like to try displaying art at Randall University."
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'She thinks a school may be a good place to promote an event.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "does",
+      "Emerson",
+      "mean"
+    ],
+    "vietnameseMeaning": "(A) 168 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_168",
+    "num": 168,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is NOT mentioned as a method of publicizing the opening?",
+    "options": {
+      "A": "Speaking at a university",
+      "B": "Contacting previous visitors",
+      "C": "Posting advertisements",
+      "D": "Updating a Web site Good afternoon, everyone. As I'm sure you all heard on Monday, the board of directors has scheduled the opening of the Erik Masterson art exhibit for next month. We need to start letting people know about it, and I'd like to get a sense of how everything's going. I finished designing the personalized invitations for everyone who attended our last exhibition, but the mailing list hasn't been compiled yet. George, do you think this might cause any problems? A delay of one day is fine. But the guests should receive their invitations before Saturday when we publish a press release about the opening. So, we need to get them to the courier by Thursday at the very latest. All right. I'll ask Steven to take care of it. Deborah, how about the posters? They're ready to be printed. Do you have any thoughts on where I should tell our volunteers to put them up? I've heard that Masterson's work is popular with college students. Oh, what about Randall University? The gallery is within walking distance of it. That sounds great. Maybe we should give a presentation on campus to promote the exhibit as well. Sure. I'll call the university to check on that. 98 ?aMews-flaga*||g Hackers.co.kr"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Updating a Web site Good afternoon, everyone. As I'm sure you all heard on Monday, the board of directors has scheduled the opening of the Erik Masterson art exhibit for next month. We need to start letting people know about it, and I'd like to get a sense of how everything's going. I finished designing the personalized invitations for everyone who attended our last exhibition, but the mailing list hasn't been compiled yet. George, do you think this might cause any problems? A delay of one day is fine. But the guests should receive their invitations before Saturday when we publish a press release about the opening. So, we need to get them to the courier by Thursday at the very latest. All right. I'll ask Steven to take care of it. Deborah, how about the posters? They're ready to be printed. Do you have any thoughts on where I should tell our volunteers to put them up? I've heard that Masterson's work is popular with college students. Oh, what about Randall University? The gallery is within walking distance of it. That sounds great. Maybe we should give a presentation on campus to promote the exhibit as well. Sure. I'll call the university to check on that. 98 ?aMews-flaga*||g Hackers.co.kr'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "mentioned",
+      "method",
+      "publicizing"
+    ],
+    "vietnameseMeaning": "(D) 169 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_169",
+    "num": 169,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the purpose of the letter?",
+    "options": {
+      "A": "To ask for details regarding an application",
+      "B": "To describe some beneficial developments",
+      "C": "To explain changes in bank regulations",
+      "D": "To suggest switching to a newer product"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'To describe some beneficial developments'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "purpose",
+      "letter"
+    ],
+    "vietnameseMeaning": "(B) 170 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_170",
+    "num": 170,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about the Graduate Spender Credit Card?",
+    "options": {
+      "A": "It can only be applied for in person.",
+      "B": "It has a lower annual fee than the Silver Spender.",
+      "C": "It involves a lengthy approval process.",
+      "D": "It offers interest-free installments for up to one year."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'It offers interest-free installments for up to one year.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "indicated",
+      "Graduate",
+      "Spender"
+    ],
+    "vietnameseMeaning": "(D) 171 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_171",
+    "num": 171,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In which of the positions marked [1], [2], ||p [3], and [4] does the following sentence best belong? \"Other terms and conditions associated with your account will remain the same.\"",
+    "options": {
+      "A": "[1]",
+      "B": "[2]",
+      "C": "[3]",
+      "D": "[4] GOONJOTHENEXTPAGE^ TEST 3 PART 7 99"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) '[2]'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "positions",
+      "marked",
+      "does"
+    ],
+    "vietnameseMeaning": "(B) 172 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_172",
+    "num": 172,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the main topic of the article?",
+    "options": {
+      "A": "approach",
+      "B": "sharpness",
+      "C": "advantage",
+      "D": "threshold"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'advantage'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "main",
+      "topic",
+      "article"
+    ],
+    "vietnameseMeaning": "(C) 173 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_173",
+    "num": 173,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is NOT mentioned about the RockRunner?",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "mentioned",
+      "RockRunner"
+    ],
+    "vietnameseMeaning": "(C) 174 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_174",
+    "num": 174,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "The word \"edge in paragraph 1, line 3, is closest in meaning to",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "word",
+      "edge",
+      "paragraph"
+    ],
+    "vietnameseMeaning": "(C) 175 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_175",
+    "num": 175,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about RockTech?",
+    "options": {
+      "A": "It makes use of recent technology.",
+      "B": "It corresponds with map data.",
+      "C": "It can be purchased in select locations",
+      "D": "It allows users to feel as if they were jogging. GO ON TO THE NEXT PAGE TEST 3 PART 7 101"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'It corresponds with map data.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "indicated",
+      "RockTech"
+    ],
+    "vietnameseMeaning": "(B) 176 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_176",
+    "num": 176,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is NOT true about the event?",
+    "options": {
+      "A": "It is cheaper for SRA members to attend.",
+      "B": "A live band will entertain guests.",
+      "C": "There is a deadline to reserve tickets.",
+      "D": "It will take place throughout the weekend."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'It will take place throughout the weekend.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "true",
+      "event"
+    ],
+    "vietnameseMeaning": "(D) 177 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_177",
+    "num": 177,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In the invitation, the word \"upscale\" in paragraph 1, line 2, is closest in meaning to",
+    "options": {
+      "A": "eligible",
+      "B": "exclusive",
+      "C": "economical",
+      "D": "excessive"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'exclusive'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "invitation",
+      "word",
+      "upscale"
+    ],
+    "vietnameseMeaning": "(B) 178 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_178",
+    "num": 178,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Why might guests visit the reception area?",
+    "options": {
+      "A": "To sample a salad with some red wine",
+      "B": "To enter to win a bottle of wine",
+      "C": "To pay for tickets to the fund-raiser",
+      "D": "To check out items available for auction"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'To enter to win a bottle of wine'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "might",
+      "guests",
+      "visit"
+    ],
+    "vietnameseMeaning": "(B) 179 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_179",
+    "num": 179,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is NOT indicated in the list?",
+    "options": {
+      "A": "Wines will be provided to diners at every station.",
+      "B": "Guests will be served meals at their tables by staff.",
+      "C": "Seafood dishes will be prepared in Station Three.",
+      "D": "Guests will be able to enjoy hot beverages at Dessert Station."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Guests will be served meals at their tables by staff.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "indicated",
+      "list"
+    ],
+    "vietnameseMeaning": "(B) 180 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_180",
+    "num": 180,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What can be inferred about the auction?",
+    "options": {
+      "A": "It will set the starting bids for available items,",
+      "B": "Items there have been donated by SRA members.",
+      "C": "Participants will receive a box of chocolate truffles.",
+      "D": "Sparkling wine will be available to bid on. GO ON TO THE NEXT PAGE TEST 3 PART? 103"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Sparkling wine will be available to bid on. GO ON TO THE NEXT PAGE TEST 3 PART? 103'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "inferred",
+      "auction"
+    ],
+    "vietnameseMeaning": "(D) 181 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_181",
+    "num": 181,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is suggested about the daily",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "suggested",
+      "daily"
+    ],
+    "vietnameseMeaning": "(C) 182 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_182",
+    "num": 182,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is mentioned about the winter menu?",
+    "options": {
+      "A": "It was designed by a well-known chef.",
+      "B": "It was created upon the suggestion of o r\\j visitors. i i n",
+      "C": "It will be available until December 4.",
+      "D": "It will not be served in some park restaurants. CD"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'It was designed by a well-known chef.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "mentioned",
+      "winter",
+      "menu"
+    ],
+    "vietnameseMeaning": "(A) 183 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_183",
+    "num": 183,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Why was the e-mail written? O cn",
+    "options": {
+      "A": "To suggest ways to improve service O CD",
+      "B": "To point out some safety concerns",
+      "C": "To make a complaint about a situation CD \\J",
+      "D": "To get details about a roller coaster O CO CD OD CD l> Hfi j2 n£ rid a a o Jd LU TO fD OJ a. GO ON TO THE NEXT PACE.. 3' OQ TEST 3 PART 7 105"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'To make a complaint about a situation CD \\J'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "mail",
+      "written"
+    ],
+    "vietnameseMeaning": "(C) 184 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_184",
+    "num": 184,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is implied about Ms. Higson? fireworks show?",
+    "options": {
+      "A": "It will temporarily be halted during",
+      "B": "It will take place in a new section of",
+      "C": "It is not usually held during the",
+      "D": "She lives in the same city as the park. the park."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'It will take place in a new section of'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "implied",
+      "Higson",
+      "fireworks"
+    ],
+    "vietnameseMeaning": "(B) 185 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_185",
+    "num": 185,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does Ms. Higson request? summer.",
+    "options": {
+      "A": "A replacement ticket",
+      "B": "A partial return of a payment H m",
+      "C": " ",
+      "D": "It costs visitors extra to watch."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'A partial return of a payment H m'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "does",
+      "Higson",
+      "request"
+    ],
+    "vietnameseMeaning": "(B) 186 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_186",
+    "num": 186,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is NOT indicated about Tea Tree Eco-Resorts?",
+    "options": {
+      "A": "Its new facility uses solar power as a source of energy.",
+      "B": "It has built several resorts around the globe.",
+      "C": "It posted details about a new branch on a Web site.",
+      "D": "Its Mexican resort is the company's largest yet."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Its Mexican resort is the company's largest yet.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "indicated",
+      "Tree",
+      "Resorts"
+    ],
+    "vietnameseMeaning": "(D) 187 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_187",
+    "num": 187,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In the notice, the word \"spotting\" in paragraph 2, line 2, is closest in meaning to",
+    "options": {
+      "A": "circling",
+      "B": "pointing",
+      "C": "observing",
+      "D": "marking"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'observing'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "notice",
+      "word",
+      "spotting"
+    ],
+    "vietnameseMeaning": "(C) 188 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_188",
+    "num": 188,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "During which activity were guests served a regional specialty?",
+    "options": {
+      "A": "Sailboat tour",
+      "B": "Visit to wildlife park",
+      "C": "Tour of ancient Mayan city",
+      "D": "Beach party"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Beach party'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "During",
+      "activity",
+      "were"
+    ],
+    "vietnameseMeaning": "(D) 189 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_189",
+    "num": 189,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does Mr. O'Neil mention about the Mayan Riviera hotel?",
+    "options": {
+      "A": "It cancelled several planned daily activities.",
+      "B": "It was fully booked during his recent stay.",
+      "C": "It offered satisfactory levels of cleanliness.",
+      "D": "It needed improvement in regard to meal service."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'It offered satisfactory levels of cleanliness.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "does",
+      "Neil",
+      "mention"
+    ],
+    "vietnameseMeaning": "(C) 190 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_190",
+    "num": 190,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What can be inferred about Mr. O'Neil?",
+    "options": {
+      "A": "He had an unpleasant experience on a boat trip.",
+      "B": "He and his wife saw some wild animals.",
+      "C": "He was unable to extend a hotel booking.",
+      "D": "He enjoyed touring an ancient Mayan city. GO ON TO THE NEXT PACE. TEST 3 PART? 107"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'He and his wife saw some wild animals.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "inferred",
+      "Neil"
+    ],
+    "vietnameseMeaning": "(B) 191 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_191",
+    "num": 191,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the main purpose of the letter?",
+    "options": {
+      "A": "To confirm an intention to resign from a position",
+      "B": "To turn down an offer for an executive job",
+      "C": "To notify an executive of a contract extension",
+      "D": "To request some time off for personal reasons"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'To confirm an intention to resign from a position'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "main",
+      "purpose",
+      "letter"
+    ],
+    "vietnameseMeaning": "(A) 192 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_192",
+    "num": 192,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "According to the e-mail, what will Ms. Ingram be offered?",
+    "options": {
+      "A": "A printed invitation for a party",
+      "B": "A monetary incentive",
+      "C": "A complimentary meal",
+      "D": "A copy of an agreement"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'A monetary incentive'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "According",
+      "mail",
+      "Ingram"
+    ],
+    "vietnameseMeaning": "(B) 193 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_193",
+    "num": 193,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What did Ms. Montessori ask Ms. Ingram to do?",
+    "options": {
+      "A": "Arrange a corporate awards ceremony",
+      "B": "Plan a retirement celebration",
+      "C": "Purchase a gift for an employee",
+      "D": "Recruit volunteers to decorate a venue"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Plan a retirement celebration'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Montessori",
+      "Ingram"
+    ],
+    "vietnameseMeaning": "(B) 194 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_194",
+    "num": 194,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What can be inferred about Ms. Ingram?",
+    "options": {
+      "A": "She reserved two rooms for the event.",
+      "B": "She invited fewer guests than expected.",
+      "C": "She needs to submit a deposit to the venue soon.",
+      "D": "She booked an event venue under budget."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'She booked an event venue under budget.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "inferred",
+      "Ingram"
+    ],
+    "vietnameseMeaning": "(D) 195 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_195",
+    "num": 195,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What has Ms. Ingram requested from the Grand-Mont Hotel?",
+    "options": {
+      "A": "An invoice for the total cost",
+      "B": "Some recommendations for menus",
+      "C": "Some audiovisual equipment",
+      "D": "A choice of two meal options GO ON TO THE NEXT PACE. TEST3 PART? 109"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Some audiovisual equipment'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Ingram",
+      "requested",
+      "Grand"
+    ],
+    "vietnameseMeaning": "(C) 196 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_196",
+    "num": 196,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is included in the advertised apartment's rental fee?",
+    "options": {
+      "A": "A security system",
+      "B": "A parking spot",
+      "C": "Maintenance costs",
+      "D": "Electricity charges"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'A parking spot'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "included",
+      "advertised",
+      "apartment"
+    ],
+    "vietnameseMeaning": "(B) 197 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_197",
+    "num": 197,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is implied about Mr. Kaplan?",
+    "options": {
+      "A": "FHe should pay the rent by bank transfer.",
+      "B": "He must renew a contract after one year.",
+      "C": "He will not be refunded a deposit,",
+      "D": "He can move into a unit from August 30."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'He can move into a unit from August 30.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "implied",
+      "Kaplan"
+    ],
+    "vietnameseMeaning": "(D) 198 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_198",
+    "num": 198,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Who is Miranda Chase?",
+    "options": {
+      "A": "The owner of a residential unit",
+      "B": "A representative of a real estate agency",
+      "C": "The administrator of Portsmouth Residential Towers",
+      "D": "A tenant of a Mapleton Street apartment"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'The owner of a residential unit'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "Miranda",
+      "Chase"
+    ],
+    "vietnameseMeaning": "(A) 199 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_199",
+    "num": 199,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What will Mr, Kaplan probably have to do on May 29?",
+    "options": {
+      "A": "Park his vehicle at the DownTown Parkade",
+      "B": "Move his belongings into an apartment",
+      "C": "Meet with a landlord to sign an agreement",
+      "D": "Purchase a pass at a ticketing office"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Park his vehicle at the DownTown Parkade'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "Kaplan",
+      "probably"
+    ],
+    "vietnameseMeaning": "(A) 200 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t3_200",
+    "num": 200,
+    "source": "Hacker 3 Test 3 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about Tanner Hill Condominiums?",
+    "options": {
+      "A": "It currently has no vacant units.",
+      "B": "It charges monthly fees for parking.",
+      "C": "It is situated nearby public transit.",
+      "D": "It closes its office on weekends. This is the end of the test. You may review Part 5, 6, and 7 if you finish the test early. S9p.324/g^Sftffip.327/Sl|-!t p.344 / Part 5&6 UfSfiZI »c® ii]|o|x|oi| Self ilia aiiSl rn S*i| i0| ehei MAfli TEST 3 PART 7 111"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'It closes its office on weekends. This is the end of the test. You may review Part 5, 6, and 7 if you finish the test early. S9p.324/g^Sftffip.327/Sl|-!t p.344 / Part 5&6 UfSfiZI »c® ii]|o|x|oi| Self ilia aiiSl rn S*i| i0| ehei MAfli TEST 3 PART 7 111'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "indicated",
+      "Tanner",
+      "Hill"
+    ],
+    "vietnameseMeaning": "(D) PART 5",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 3 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_101",
+    "num": 101,
+    "source": "Hacker 3 Test 4 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Meals at Moonlight Grill consist of various dishes for guests of ages. all",
+    "options": {
+      "A": "enjoys",
+      "B": "enjoy enjoyable",
+      "C": "Option C",
+      "D": "enjoying"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'Option C'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'Option C'.",
+    "keywords": [
+      "Meals",
+      "Moonlight",
+      "Grill"
+    ],
+    "vietnameseMeaning": "(C) 102 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t4_102",
+    "num": 102,
+    "source": "Hacker 3 Test 4 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Mayberry Research Institute offers staff which include dental coverage and a pension plan.",
+    "options": {
+      "A": "benefitted",
+      "B": "beneficially",
+      "C": "benefits beneficial",
+      "D": "see"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'benefits beneficial'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'benefits beneficial'.",
+    "keywords": [
+      "Mayberry",
+      "Research",
+      "Institute"
+    ],
+    "vietnameseMeaning": "(C) 103 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t4_103",
+    "num": 103,
+    "source": "Hacker 3 Test 4 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Arranging an appointment to Dr. Menard one month in advance is due to her busy schedule.",
+    "options": {
+      "A": "grateful",
+      "B": "conclusive",
+      "C": "precise",
+      "D": "necessary"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'necessary'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'necessary'.",
+    "keywords": [
+      "Arranging",
+      "appointment",
+      "Menard"
+    ],
+    "vietnameseMeaning": "(D) 104 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t4_104",
+    "num": 104,
+    "source": "Hacker 3 Test 4 Part 5",
+    "category": "Từ loại (Word Form)",
+    "question": "Patrons who had their vehicles parked waited by the Canton Theater entrance while retrieved their cars.",
+    "options": {
+      "A": "attending",
+      "B": "attends",
+      "C": "attendants",
+      "D": "attendance 114 Hackers.co.kr Select the best answer and mark the sheet. all"
+    },
+    "correctAnswer": "C",
+    "explanation": "Căn cứ vào ngữ pháp câu, vị trí cần điền đóng vai trò từ loại phù hợp trong mệnh đề. Chọn đáp án (C) 'attendants' để hoàn chỉnh cấu trúc ngữ pháp.",
+    "tip": "⚡ MẸO TỪ LOẠI: Xác định vị trí chỗ trống đứng sau từ loại gì (danh từ, động từ, tính từ hay trạng từ) để chọn đuôi hậu tố chính xác. Đáp án đúng là (C).",
+    "keywords": [
+      "Patrons",
+      "their",
+      "vehicles"
+    ],
+    "vietnameseMeaning": "(C) 105 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t4_105",
+    "num": 105,
+    "source": "Hacker 3 Test 4 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "the entrepreneurs in Florida are favor the government's in of plan to cut taxes, though a small minority is opposed.",
+    "options": {
+      "A": "Solely",
+      "B": "Certainly",
+      "C": "Unusually",
+      "D": "Nearly"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'Nearly'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'Nearly'.",
+    "keywords": [
+      "entrepreneurs",
+      "Florida",
+      "favor"
+    ],
+    "vietnameseMeaning": "(D) 106 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t4_106",
+    "num": 106,
+    "source": "Hacker 3 Test 4 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "AEG Co. is looking for sales associates who demonstrate excellent communication and a skills an ability to work in manner.",
+    "options": {
+      "A": "cooperative cooperation",
+      "B": "Option B",
+      "C": "cooperatively",
+      "D": "cooperate"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'cooperative cooperation'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'cooperative cooperation'.",
+    "keywords": [
+      "looking",
+      "sales",
+      "associates"
+    ],
+    "vietnameseMeaning": "(A) 107 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t4_107",
+    "num": 107,
+    "source": "Hacker 3 Test 4 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The unnecessary extra work on Sackler Department Store's new building could if have been the design plans had been followed precisely.",
+    "options": {
+      "A": "avoided",
+      "B": "proposed",
+      "C": "cautioned",
+      "D": "cultivated"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'avoided'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'avoided'.",
+    "keywords": [
+      "unnecessary",
+      "extra",
+      "work"
+    ],
+    "vietnameseMeaning": "(A) 108 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t4_108",
+    "num": 108,
+    "source": "Hacker 3 Test 4 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Ms. Herrera could not sit in an aisle seat during her international flight because available. there were",
+    "options": {
+      "A": "hardly",
+      "B": "any",
+      "C": "mainly",
+      "D": "none"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'none'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'none'.",
+    "keywords": [
+      "Herrera",
+      "could",
+      "aisle"
+    ],
+    "vietnameseMeaning": "(D) 109 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t4_109",
+    "num": 109,
+    "source": "Hacker 3 Test 4 Part 5",
+    "category": "Ngữ pháp & Thì (Grammar & Tenses)",
+    "question": "Mr. Holt's acceptance of the financial 115. Passengers fill in their arrival his forms during the flight for quicker executive position is satisfaction with the salary offer. processing at the immigration checkpoint.",
+    "options": {
+      "A": "remind have reminded",
+      "B": "Option B",
+      "C": "reminding",
+      "D": "are reminded"
+    },
+    "correctAnswer": "B",
+    "explanation": "Xét về sự hòa hợp giữa chủ ngữ và thì của câu, động từ (B) 'Option B' chia đúng thì và dạng chủ động/bị động.",
+    "tip": "⚡ MẸO CHIA THÌ: Nhìn dấu hiệu thời gian và xét chủ ngữ số ít/số nhiều để loại trừ các dạng sai thì. Đáp án đúng là (B).",
+    "keywords": [
+      "Holt",
+      "acceptance",
+      "financial"
+    ],
+    "vietnameseMeaning": "(B) 110 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t4_110",
+    "num": 110,
+    "source": "Hacker 3 Test 4 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Transport officials are still unsure of 116. Overdrive is a low-budget action film that to caused Train 580 to break down earlier has no actor Sam Horton's this morning.",
+    "options": {
+      "A": "each",
+      "B": "those",
+      "C": "what",
+      "D": "why The Project Green report argues that"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'what'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'what'.",
+    "keywords": [
+      "Transport",
+      "officials",
+      "still"
+    ],
+    "vietnameseMeaning": "(C) 111 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t4_111",
+    "num": 111,
+    "source": "Hacker 3 Test 4 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "the best way to save endangered species is by placing them in protected wildlife areas.",
+    "options": {
+      "A": "persuasive",
+      "B": "persuade",
+      "C": "persuasion",
+      "D": "persuasively The guide told visitors touring the"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'persuasively The guide told visitors touring the'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'persuasively The guide told visitors touring the'.",
+    "keywords": [
+      "best",
+      "save",
+      "endangered"
+    ],
+    "vietnameseMeaning": "(D) 112 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t4_112",
+    "num": 112,
+    "source": "Hacker 3 Test 4 Part 5",
+    "category": "Ngữ pháp & Thì (Grammar & Tenses)",
+    "question": "High Point Library that the facility by the renowned architect Albert Grand. designs",
+    "options": {
+      "A": "Option A",
+      "B": "was designed",
+      "C": "designing",
+      "D": "will be designed"
+    },
+    "correctAnswer": "B",
+    "explanation": "Xét về sự hòa hợp giữa chủ ngữ và thì của câu, động từ (B) 'was designed' chia đúng thì và dạng chủ động/bị động.",
+    "tip": "⚡ MẸO CHIA THÌ: Nhìn dấu hiệu thời gian và xét chủ ngữ số ít/số nhiều để loại trừ các dạng sai thì. Đáp án đúng là (B).",
+    "keywords": [
+      "High",
+      "Point",
+      "Library"
+    ],
+    "vietnameseMeaning": "(B) 113 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t4_113",
+    "num": 113,
+    "source": "Hacker 3 Test 4 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Sundersen Technologies 10 percent Garrison's since he was from Mr. bill eligible for a bulk purchase discount.",
+    "options": {
+      "A": "deducted",
+      "B": "substituted",
+      "C": "deposited",
+      "D": "submitted the"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'deducted'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'deducted'.",
+    "keywords": [
+      "Sundersen",
+      "Technologies",
+      "percent"
+    ],
+    "vietnameseMeaning": "(A) 114 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t4_114",
+    "num": 114,
+    "source": "Hacker 3 Test 4 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "recent economic upturn, unemployment is on the decline as more and more businesses are hiring full-time employees.",
+    "options": {
+      "A": "relates",
+      "B": "related relate",
+      "C": "Option C",
+      "D": "relation"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'related relate'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'related relate'.",
+    "keywords": [
+      "recent",
+      "economic",
+      "upturn"
+    ],
+    "vietnameseMeaning": "(B) 115 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t4_115",
+    "num": 115,
+    "source": "Hacker 3 Test 4 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Question 115: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'Option D'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'Option D'.",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(D) 116 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t4_116",
+    "num": 116,
+    "source": "Hacker 3 Test 4 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Question 116: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'Option D'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'Option D'.",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(D) 117 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t4_117",
+    "num": 117,
+    "source": "Hacker 3 Test 4 Part 5",
+    "category": "Ngữ pháp & Thì (Grammar & Tenses)",
+    "question": "Without exception, employees must undergo on-the-job training to enhance their skills.",
+    "options": {
+      "A": "every",
+      "B": "all",
+      "C": "a lot few",
+      "D": "was never"
+    },
+    "correctAnswer": "B",
+    "explanation": "Xét về sự hòa hợp giữa chủ ngữ và thì của câu, động từ (B) 'all' chia đúng thì và dạng chủ động/bị động.",
+    "tip": "⚡ MẸO CHIA THÌ: Nhìn dấu hiệu thời gian và xét chủ ngữ số ít/số nhiều để loại trừ các dạng sai thì. Đáp án đúng là (B).",
+    "keywords": [
+      "Without",
+      "exception",
+      "employees"
+    ],
+    "vietnameseMeaning": "(B) 118 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t4_118",
+    "num": 118,
+    "source": "Hacker 3 Test 4 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The client in his office many times Ms. Baxter tried to call him.",
+    "options": {
+      "A": "otherwise",
+      "B": "however",
+      "C": "hence",
+      "D": "somehow"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'however'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'however'.",
+    "keywords": [
+      "client",
+      "office",
+      "many"
+    ],
+    "vietnameseMeaning": "(B) 119 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t4_119",
+    "num": 119,
+    "source": "Hacker 3 Test 4 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "LocerTech's primary goal is to be as as possible to customer inquiries. shortened",
+    "options": {
+      "A": "Option A",
+      "B": "accelerated",
+      "C": "responsive",
+      "D": "intentional of"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'responsive'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'responsive'.",
+    "keywords": [
+      "LocerTech",
+      "primary",
+      "goal"
+    ],
+    "vietnameseMeaning": "(C) 120 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t4_120",
+    "num": 120,
+    "source": "Hacker 3 Test 4 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Rodgers Industrial celebrated the 50th anniversary hosting a banquet its by for clients from around the world.",
+    "options": {
+      "A": "impression",
+      "B": "integration",
+      "C": "occasion",
+      "D": "gratitude GO ON TO THE NEXT PAGE.. TEST A PARTS 115"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'occasion'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'occasion'.",
+    "keywords": [
+      "Rodgers",
+      "Industrial",
+      "celebrated"
+    ],
+    "vietnameseMeaning": "(C) 121 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t4_121",
+    "num": 121,
+    "source": "Hacker 3 Test 4 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Gilbot Grounds had to work get 126. Although Southmoore Records has been the landscaping project finished by the actively seeking a new CEO for three deadline. months, they have to find a suitable candidate.",
+    "options": {
+      "A": "yet",
+      "B": "Option B",
+      "C": "seldom",
+      "D": "seemed"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'Option B'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'Option B'.",
+    "keywords": [
+      "Gilbot",
+      "Grounds",
+      "work"
+    ],
+    "vietnameseMeaning": "(B) 122 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t4_122",
+    "num": 122,
+    "source": "Hacker 3 Test 4 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Under the finance minister's leadership, corporations recovered quickly from last 127. Many office workers frequent Stan's Bistro year's losses and then began making substantial",
+    "options": {
+      "A": "regulations",
+      "B": "earnings",
+      "C": "entrants",
+      "D": "estimations"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'earnings'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'earnings'.",
+    "keywords": [
+      "Under",
+      "finance",
+      "minister"
+    ],
+    "vietnameseMeaning": "(B) 123 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t4_123",
+    "num": 123,
+    "source": "Hacker 3 Test 4 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The provision of additional government grants for college tuition will make to education more people from around the country.",
+    "options": {
+      "A": "exclusive",
+      "B": "plentiful",
+      "C": "confidential",
+      "D": "accessible"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'accessible'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'accessible'.",
+    "keywords": [
+      "provision",
+      "additional",
+      "government"
+    ],
+    "vietnameseMeaning": "(D) 124 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t4_124",
+    "num": 124,
+    "source": "Hacker 3 Test 4 Part 5",
+    "category": "Ngữ pháp & Thì (Grammar & Tenses)",
+    "question": "The current edition of the employee handbook detailed guidelines for employee performance reviews.",
+    "options": {
+      "A": "contain",
+      "B": "was contained",
+      "C": "contains containing",
+      "D": "Shoppers"
+    },
+    "correctAnswer": "C",
+    "explanation": "Xét về sự hòa hợp giữa chủ ngữ và thì của câu, động từ (C) 'contains containing' chia đúng thì và dạng chủ động/bị động.",
+    "tip": "⚡ MẸO CHIA THÌ: Nhìn dấu hiệu thời gian và xét chủ ngữ số ít/số nhiều để loại trừ các dạng sai thì. Đáp án đúng là (C).",
+    "keywords": [
+      "current",
+      "edition",
+      "employee"
+    ],
+    "vietnameseMeaning": "(C) 125 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t4_125",
+    "num": 125,
+    "source": "Hacker 3 Test 4 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "looking for high-quality electronics at low prices will find a selection at the new NorvelTech store, greatest",
+    "options": {
+      "A": "proximity",
+      "B": "closure",
+      "C": "simplicity scheme",
+      "D": "temperature"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'temperature'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'temperature'.",
+    "keywords": [
+      "looking",
+      "high",
+      "quality"
+    ],
+    "vietnameseMeaning": "(D) 126 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t4_126",
+    "num": 126,
+    "source": "Hacker 3 Test 4 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Question 126: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'Option A'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'Option A'.",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(A) 127 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t4_127",
+    "num": 127,
+    "source": "Hacker 3 Test 4 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Question 127: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'Option A'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'Option A'.",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(A) 128 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t4_128",
+    "num": 128,
+    "source": "Hacker 3 Test 4 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The this morning is cool and pleasant, but it is expected to increase the steadily day.",
+    "options": {
+      "A": "between",
+      "B": "above",
+      "C": "next to",
+      "D": "throughout"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'throughout'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'throughout'.",
+    "keywords": [
+      "morning",
+      "cool",
+      "pleasant"
+    ],
+    "vietnameseMeaning": "(D) 129 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t4_129",
+    "num": 129,
+    "source": "Hacker 3 Test 4 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Now that the city has hired additional with workers, it can the construction of the new civic center.",
+    "options": {
+      "A": "enhance",
+      "B": "concern",
+      "C": "replace",
+      "D": "proceed"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'proceed'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'proceed'.",
+    "keywords": [
+      "city",
+      "hired",
+      "additional"
+    ],
+    "vietnameseMeaning": "(D) 130 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t4_130",
+    "num": 130,
+    "source": "Hacker 3 Test 4 Part 5",
+    "category": "Từ loại (Word Form)",
+    "question": "-- — to be the best in the city, the Melise Restaurant is booked for the next six months.",
+    "options": {
+      "A": "Reporting",
+      "B": "Report",
+      "C": "Reported",
+      "D": "Reportable"
+    },
+    "correctAnswer": "C",
+    "explanation": "Căn cứ vào ngữ pháp câu, vị trí cần điền đóng vai trò từ loại phù hợp trong mệnh đề. Chọn đáp án (C) 'Reported' để hoàn chỉnh cấu trúc ngữ pháp.",
+    "tip": "⚡ MẸO TỪ LOẠI: Xác định vị trí chỗ trống đứng sau từ loại gì (danh từ, động từ, tính từ hay trạng từ) để chọn đuôi hậu tố chính xác. Đáp án đúng là (C).",
+    "keywords": [
+      "best",
+      "city",
+      "Melise"
+    ],
+    "vietnameseMeaning": "(C) 131 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t4_131",
+    "num": 131,
+    "source": "Hacker 3 Test 4 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "and the server is now running, I am considering switching to a different system. ------- the server goes down again, it could create a serious problem. Because we want to prevent that from happening, I've spoken with Jason, the head of our IT team. He can install a new server that will be less to malfunctions. Thankfully, we will be able to transfer files from",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Option B'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "server",
+      "running",
+      "considering"
+    ],
+    "vietnameseMeaning": "(B) 132 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t4_132",
+    "num": 132,
+    "source": "Hacker 3 Test 4 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 132: Refer to the test material.",
+    "options": {
+      "A": "Before",
+      "B": "But",
+      "C": "If",
+      "D": "So"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'If'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(C) 133 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t4_133",
+    "num": 133,
+    "source": "Hacker 3 Test 4 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "134. the old server to the new one without any difficulty. I will continue to send you updates as I receive more information from Jason.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Option A'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "server",
+      "without",
+      "difficulty"
+    ],
+    "vietnameseMeaning": "(A) 134 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t4_134",
+    "num": 134,
+    "source": "Hacker 3 Test 4 Part 6",
+    "category": "Đọc hiểu Điền câu (Sentence Insertion)",
+    "question": "Question 134: Refer to the test material.",
+    "options": {
+      "A": "The breakdown is expected to be ||||| repaired over the next few days.",
+      "B": "In addition, it will have a greater memory capacity and better security.",
+      "C": "However, this solution is impractical as it is much too costly.",
+      "D": "Several companies in the affected area reported similar outages. GO ON TO THE NEXT PAGE. TEST 4 PART 6 117"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'In addition, it will have a greater memory capacity and better security.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(B) 135 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t4_135",
+    "num": 135,
+    "source": "Hacker 3 Test 4 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "have enclosed your membership card. By supporting us, you are helping to make food more affordable for the community. This is because we get our products from local businesses with lower shipping and manufacturing expenses. Flowever, we can only with the active assistance of all our members. That is why we",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Option B'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "enclosed",
+      "your",
+      "membership"
+    ],
+    "vietnameseMeaning": "(B) 136 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t4_136",
+    "num": 136,
+    "source": "Hacker 3 Test 4 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "ask each member to provide four hours of voluntary work at our store every month. Moreover, we encourage you to stop by and familiarize yourself with issues pertaining to the costs of food and to learn about other ways you can help. Best wishes, Edwin Krueger Membership coordinator, Georgetown Food Cooperative",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Option B'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "each",
+      "member",
+      "provide"
+    ],
+    "vietnameseMeaning": "(B) 137 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t4_137",
+    "num": 137,
+    "source": "Hacker 3 Test 4 Part 6",
+    "category": "Đọc hiểu Điền câu (Sentence Insertion)",
+    "question": "Question 137: Refer to the test material.",
+    "options": {
+      "A": "We are forced to increase membership |i|j| fees for this reason.",
+      "B": "We are delighted that you have contributed so much of your time.",
+      "C": "The cooperative is still accepting bids from local food suppliers.",
+      "D": "You can pay a monthly surcharge of $20 if you are unable to do so."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'You can pay a monthly surcharge of $20 if you are unable to do so.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(D) 138 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t4_138",
+    "num": 138,
+    "source": "Hacker 3 Test 4 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 138: Refer to the test material.",
+    "options": {
+      "A": "growingly",
+      "B": "grown",
+      "C": "growing",
+      "D": "grows 118 ?SS9)ifS-?|gsaJlB Hackers.co.kr"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'growing'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(C) 139 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t4_139",
+    "num": 139,
+    "source": "Hacker 3 Test 4 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "140- Aarhus Clothing launched its first German store two years ago, after which the company quickly moved into Belgium and the Netherlands. With the inauguration of a flagship store on London's Oxford Street next month, the company hopes to stand out in the ------ UK market. I. Designer Mads Jensen told reporters, \"Our products have been sought after in Europe for many years now because they are simple and As they are basic and long-lasting, we expect them to be just as popular in the UK.\"",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Option D'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "Aarhus",
+      "Clothing",
+      "launched"
+    ],
+    "vietnameseMeaning": "(D) 140 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t4_140",
+    "num": 140,
+    "source": "Hacker 3 Test 4 Part 6",
+    "category": "Đọc hiểu Điền câu (Sentence Insertion)",
+    "question": "Question 140: Refer to the test material.",
+    "options": {
+      "A": "Its popularity subsequently spread to ||||| neighboring nations.",
+      "B": "Therefore, the company has only one store left in the country.",
+      "C": "Nevertheless, the peak of its fame was reached in Britain last year.",
+      "D": "This had a negative effect on the brand in the years that followed."
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Its popularity subsequently spread to ||||| neighboring nations.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(A) 141 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t4_141",
+    "num": 141,
+    "source": "Hacker 3 Test 4 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 141: Refer to the test material.",
+    "options": {
+      "A": "multiple",
+      "B": "lucrative",
+      "C": "duplicate",
+      "D": "diligent"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'lucrative'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(B) 142 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t4_142",
+    "num": 142,
+    "source": "Hacker 3 Test 4 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 142: Refer to the test material.",
+    "options": {
+      "A": "disposable",
+      "B": "attentive",
+      "C": "collective",
+      "D": "durable GO ON TO THE NEXT PAGE. TEST 4 PART 6 119"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'durable GO ON TO THE NEXT PAGE. TEST 4 PART 6 119'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(D) 143 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t4_143",
+    "num": 143,
+    "source": "Hacker 3 Test 4 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "techniques for beginner students. As always, enrollees must have no existing medical conditions and be at least 13 years old. Those who cannot satisfy ----- of these requirements will be unable to sign up. All equipment will be provided, and training will be delivered in three sessions. Held on",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "techniques",
+      "beginner",
+      "students"
+    ],
+    "vietnameseMeaning": "(C) 144 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t4_144",
+    "num": 144,
+    "source": "Hacker 3 Test 4 Part 6",
+    "category": "Đọc hiểu Điền câu (Sentence Insertion)",
+    "question": "Question 144: Refer to the test material.",
+    "options": {
+      "A": "Certain criteria must be met before ||||| taking the course.",
+      "B": "Divers have stated that they agree with the new rule,",
+      "C": "Such challenges are not easily overcome.",
+      "D": "Diving instructor applicants will be contacted shortly."
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Certain criteria must be met before ||||| taking the course.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(A) 145 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t4_145",
+    "num": 145,
+    "source": "Hacker 3 Test 4 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 145: Refer to the test material.",
+    "options": {
+      "A": "either",
+      "B": "whatever",
+      "C": "extra",
+      "D": "couple"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'either'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(A) 146 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t4_146",
+    "num": 146,
+    "source": "Hacker 3 Test 4 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "the same day, each lesson will last an hour with short breaks in between. Enrollment opens on Monday, May 3.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Option D'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "same",
+      "each",
+      "lesson"
+    ],
+    "vietnameseMeaning": "(D) 147 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t4_147",
+    "num": 147,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What type of event is the invitation for?",
+    "options": {
+      "A": "A city's tourism promotion fair",
+      "B": "A conference on international languages",
+      "C": "An organization's student awards ceremony",
+      "D": "An exposition for overseas education"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'An exposition for overseas education'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "type",
+      "event",
+      "invitation"
+    ],
+    "vietnameseMeaning": "(D) 148 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_148",
+    "num": 148,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "How can the invitation's recipient attend the event?",
+    "options": {
+      "A": "By presenting the card near a hall entrance",
+      "B": "By making a donation to a scholastic institution",
+      "C": "By providing the committee with confirmation in advance",
+      "D": "By showing an identity card at the registration desk GO ON TO THE NEXT PAGE TESTA PART 7 121"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'By presenting the card near a hall entrance'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "invitation",
+      "recipient",
+      "attend"
+    ],
+    "vietnameseMeaning": "(A) 149 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_149",
+    "num": 149,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the notice mainly about? 150. What is stated about the museum?",
+    "options": {
+      "A": "Its interior design work will last for a",
+      "B": "Its entrance locations will be",
+      "C": "Some of its venues will be open to the public during construction.",
+      "D": "It postponed The Moons of Saturn exhibition. 122 Hackers.co.kr"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Its entrance locations will be'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "notice",
+      "mainly",
+      "stated"
+    ],
+    "vietnameseMeaning": "(B) 150 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_150",
+    "num": 150,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Question 150: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(C) 151 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_151",
+    "num": 151,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "According to Ms. Sharpe, what does Romano's Groceries plan to do?",
+    "options": {
+      "A": "Finish a presentation for a meeting",
+      "B": "Perform some market studies",
+      "C": "List dairy items to be sold",
+      "D": "Develop concepts for product displays GO ON TO THE NEXT PAGE TEST4 PART? 123"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Develop concepts for product displays GO ON TO THE NEXT PAGE TEST4 PART? 123'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "According",
+      "Sharpe",
+      "does"
+    ],
+    "vietnameseMeaning": "(D) 152 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_152",
+    "num": 152,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What has Mr. Hillier's team NOT been asked to do?",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Hillier",
+      "team",
+      "asked"
+    ],
+    "vietnameseMeaning": "(C) 153 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_153",
+    "num": 153,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the purpose of the announcement?",
+    "options": {
+      "A": "To publicize a local event",
+      "B": "To introduce a public service",
+      "C": "To promote water conservation",
+      "D": "To inform residents about a change"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'To publicize a local event'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "purpose",
+      "announcement"
+    ],
+    "vietnameseMeaning": "(A) 154 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_154",
+    "num": 154,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is NOT indicated about the Millsboro Water Department?",
+    "options": {
+      "A": "It requires entries to have specific measurements.",
+      "B": "It will not accept submissions produced on a computer.",
+      "C": "It released a series of posters on water usage last year,",
+      "D": "It is cosponsoring an event with Millsboro Shopping Center,"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'It released a series of posters on water usage last year,'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "indicated",
+      "Millsboro",
+      "Water"
+    ],
+    "vietnameseMeaning": "(C) 155 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_155",
+    "num": 155,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What will the Millsboro Water Department do the next year?",
+    "options": {
+      "A": "Sponsor student art exhibits at area schools",
+      "B": "Sell some artworks to raise funds for charity",
+      "C": "Expand its services to other locations",
+      "D": "Hand out calendars with student art to its clients 124 n A yoiiPl MP3 Hackerslngang.com"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Hand out calendars with student art to its clients 124 n A yoiiPl MP3 Hackerslngang.com'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "Millsboro",
+      "Water",
+      "Department"
+    ],
+    "vietnameseMeaning": "(D) 156 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_156",
+    "num": 156,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is true about Ms. Konrad?",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "true",
+      "Konrad"
+    ],
+    "vietnameseMeaning": "(C) 157 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_157",
+    "num": 157,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "At 4:54 p.m., what does Ms. Sung most fjjfe likely mean when she writes, \"I'd try Mr. Stewart\"?",
+    "options": {
+      "A": "She believes he can suggest a replacement.",
+      "B": "She has already tried to contact Mr. Martin.",
+      "C": "She thinks he is more qualified than Mr. Martin.",
+      "D": "She is not well acquainted with Percy Lambert. GO ON TO THE NEXT PAGE TEST4 PART? 125"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'She thinks he is more qualified than Mr. Martin.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "does",
+      "Sung",
+      "most"
+    ],
+    "vietnameseMeaning": "(C) 158 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_158",
+    "num": 158,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "The word \"performance\" in paragraph 1, line 3, is closest in meaning to",
+    "options": {
+      "A": "production",
+      "B": "ability",
+      "C": "exhibition",
+      "D": "fulfillment"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'ability'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "word",
+      "performance",
+      "paragraph"
+    ],
+    "vietnameseMeaning": "(B) 159 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_159",
+    "num": 159,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does the advertisement mention about the Lynx sneaker?",
+    "options": {
+      "A": "It protects the joints while in use,",
+      "B": "It is the cheapest training shoe available,",
+      "C": "It supplies additional warmth in winter.",
+      "D": "It is sold in a wide variety of colors."
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'It protects the joints while in use,'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "does",
+      "advertisement",
+      "mention"
+    ],
+    "vietnameseMeaning": "(A) 160 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_160",
+    "num": 160,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Where can customers purchase the advertised product?",
+    "options": {
+      "A": "In some gym facilities",
+      "B": "At an upcoming event",
+      "C": "On the manufacturer's Web site",
+      "D": "At athletic goods shop 126 Hackers.co.kr"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'At athletic goods shop 126 Hackers.co.kr'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "customers",
+      "purchase",
+      "advertised"
+    ],
+    "vietnameseMeaning": "(D) 161 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_161",
+    "num": 161,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Why did Mr. Mansbridge most likely send a letter on November 12?",
+    "options": {
+      "A": "To confirm booking details",
+      "B": "To inquire about an extra room",
+      "C": "To ask about a travel program",
+      "D": "To make a complaint about a stay"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'To make a complaint about a stay'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "Mansbridge",
+      "most",
+      "likely"
+    ],
+    "vietnameseMeaning": "(D) 162 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_162",
+    "num": 162,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is true about Mr. Mansbridge?",
+    "options": {
+      "A": "He was charged extra for requesting an additional bed.",
+      "B": "His membership points were not credited correctly.",
+      "C": "He will receive a complete refund for his stay.",
+      "D": "He was given vouchers for a hotel stay."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'He was given vouchers for a hotel stay.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "true",
+      "Mansbridge"
+    ],
+    "vietnameseMeaning": "(D) 163 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_163",
+    "num": 163,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In which of the positions marked [1], [2], iBfe [3], and [4] does the following sentence best belong? \"As a result, you were forced to share a room with your traveling companion.\"",
+    "options": {
+      "A": "[1]",
+      "B": "[2]",
+      "C": "[3]",
+      "D": "[4] GO OA/ TO THE NEXT PAGE. TEST A PART? 127"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) '[2]'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "positions",
+      "marked",
+      "iBfe"
+    ],
+    "vietnameseMeaning": "(B) 164 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_164",
+    "num": 164,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Why was the letter written?",
+    "options": {
+      "A": "To place a vitamin order",
+      "B": "To obtain organic certification",
+      "C": "To inquire about an advertisement",
+      "D": "To respond to a prior inquiry"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'To respond to a prior inquiry'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "letter",
+      "written"
+    ],
+    "vietnameseMeaning": "(D) 165 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_165",
+    "num": 165,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does Ms. Mills say about Pure Mix's products?",
+    "options": {
+      "A": "They all have strawberries as ingredients.",
+      "B": "They do not contain any animal materials.",
+      "C": "They are all completely organic.",
+      "D": "They have yet to be released on the market."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'They are all completely organic.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "does",
+      "Mills",
+      "Pure"
+    ],
+    "vietnameseMeaning": "(C) 166 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_166",
+    "num": 166,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Why should Mr. McCall avoid drinking Pure Mix's energy drinks?",
+    "options": {
+      "A": "They will cause him to have an allergic reaction.",
+      "B": "They have an ingredient he cannot consume.",
+      "C": "They are prohibited for diabetics.",
+      "D": "They will give him digestion issues."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'They have an ingredient he cannot consume.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "should",
+      "McCall",
+      "avoid"
+    ],
+    "vietnameseMeaning": "(B) 167 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_167",
+    "num": 167,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does Ms. Mills suggest Mr. McCall do?",
+    "options": {
+      "A": "Research the benefits of natural medications",
+      "B": "Speak to a doctor before taking dietary supplements",
+      "C": "Order vitamins from a manufacturer's Web site",
+      "D": "Keep the product's package after opening it 128 ¥^§^21 ^ twopi mpb Hackerslngang.com"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Speak to a doctor before taking dietary supplements'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "does",
+      "Mills",
+      "suggest"
+    ],
+    "vietnameseMeaning": "(B) 168 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_168",
+    "num": 168,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the article mainly about?",
+    "options": {
+      "A": "The establishment of a firm",
+      "B": "The opening of a fruit orchard",
+      "C": "The management of public land",
+      "D": "The work of an organization"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'The work of an organization'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "article",
+      "mainly"
+    ],
+    "vietnameseMeaning": "(D) 169 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_169",
+    "num": 169,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does Fresh From The Tree do with the fruit it collects?",
+    "options": {
+      "A": "Sells it to local restaurants",
+      "B": "Turns it into snacks",
+      "C": "Donates it to a charity",
+      "D": "Transports it to City Hall"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Turns it into snacks'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "does",
+      "Fresh",
+      "Tree"
+    ],
+    "vietnameseMeaning": "(B) 170 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_170",
+    "num": 170,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "According to the article, what do homeowners receive from Fresh From The Tree?",
+    "options": {
+      "A": "A small payment for the food",
+      "B": "Some of the collected produce",
+      "C": "Recognition at a public event",
+      "D": "Free baked goods"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Some of the collected produce'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "According",
+      "article",
+      "homeowners"
+    ],
+    "vietnameseMeaning": "(B) 171 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_171",
+    "num": 171,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In which of the positions marked [1], [2], llll [3], and [4] does the following sentence best belong? \"Most of the residents accept the offer with pleasure.\"",
+    "options": {
+      "A": "[1]",
+      "B": "[2]",
+      "C": "[3]",
+      "D": "[4] GO ON TO THE NEXT PAGE. TEST 4 PART? 129"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) '[3]'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "positions",
+      "marked",
+      "llll"
+    ],
+    "vietnameseMeaning": "(C) 172 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_172",
+    "num": 172,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is suggested about the presentation?",
+    "options": {
+      "A": "It targets a company based in Chicago.",
+      "B": "It is scheduled for tomorrow morning.",
+      "C": "It is going to be uploaded to a Web site.",
+      "D": "It is aimed at securing a contract."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'It is aimed at securing a contract.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "suggested",
+      "presentation"
+    ],
+    "vietnameseMeaning": "(D) 173 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_173",
+    "num": 173,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What can be inferred about Harper Telecom?",
+    "options": {
+      "A": "They are unsatisfied with a presentation.",
+      "B": "They are considering offers from several businesses.",
+      "C": "They want Mr, Baker to participate in the presentation.",
+      "D": "They will not be available at a different time."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'They are considering offers from several businesses.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "inferred",
+      "Harper",
+      "Telecom"
+    ],
+    "vietnameseMeaning": "(B) 174 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_174",
+    "num": 174,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is mentioned about Mr. Baker?",
+    "options": {
+      "A": "He is preparing to go to Chicago on business,",
+      "B": "He is proficient in technical matters.",
+      "C": "He previously worked at Harper Telecom.",
+      "D": "He produced all of the presentation materials."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'He is proficient in technical matters.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "mentioned",
+      "Baker"
+    ],
+    "vietnameseMeaning": "(B) 175 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_175",
+    "num": 175,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "At 3:59, what does Ms. Stone mean when |i|i| she writes, \"I'm on it\"?",
+    "options": {
+      "A": "She will call Harper Telecom.",
+      "B": "She will give a presentation tomorrow.",
+      "C": "She will wait for Mr. Baker's flight to arrive.",
+      "D": "She will contact her absent colleague. GO ON TO THE NEXT PAGE TEST A PART 7 131"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'She will call Harper Telecom.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "does",
+      "Stone",
+      "mean"
+    ],
+    "vietnameseMeaning": "(A) 176 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_176",
+    "num": 176,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about the City of Griggston?",
+    "options": {
+      "A": "It has city hall meetings once every month.",
+      "B": "It had some issues with its road conditions.",
+      "C": "It has hired contractors for building renovations,",
+      "D": "It will increase property taxes to pay for upcoming projects."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'It had some issues with its road conditions.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "indicated",
+      "City",
+      "Griggston"
+    ],
+    "vietnameseMeaning": "(B) 177 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_177",
+    "num": 177,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does the notice state about the city's projects?",
+    "options": {
+      "A": "They will not create much noise,",
+      "B": "They will end three weeks after a city council meeting.",
+      "C": "They will cause traffic to be detoured.",
+      "D": "They will be voted on by the public."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'They will cause traffic to be detoured.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "does",
+      "notice",
+      "state"
+    ],
+    "vietnameseMeaning": "(C) 178 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_178",
+    "num": 178,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "According to the notice, how can residents provide feedback on the roadwork projects?",
+    "options": {
+      "A": "By calling Lois Oliveira's personal assistant",
+      "B": "By sending an e-mail to a city official",
+      "C": "By visiting project contractors",
+      "D": "By posting on the city's online forum"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'By sending an e-mail to a city official'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "According",
+      "notice",
+      "residents"
+    ],
+    "vietnameseMeaning": "(B) 179 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_179",
+    "num": 179,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What can be inferred about Mr. Davis?",
+    "options": {
+      "A": "He asked for extra money to cover unexpected costs.",
+      "B": "He suggested using bricks for the city's pedestrian walkways.",
+      "C": "He organized the transportation office's meeting.",
+      "D": "He supervised a group of 10 workers on a project."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'He supervised a group of 10 workers on a project.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "inferred",
+      "Davis"
+    ],
+    "vietnameseMeaning": "(D) 180 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_180",
+    "num": 180,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about Walnut Creek Contracting?",
+    "options": {
+      "A": "It only accepts service payments by check.",
+      "B": "It presented building plans during a recent public meeting.",
+      "C": "It submitted a contracting bid for the Hartford Street project.",
+      "D": "It may do some roadwork on Rosedale Avenue for two weeks. GO ON TO THE NEXT PAGE. TESTA PART 7 133"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'It may do some roadwork on Rosedale Avenue for two weeks. GO ON TO THE NEXT PAGE. TESTA PART 7 133'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "indicated",
+      "Walnut",
+      "Creek"
+    ],
+    "vietnameseMeaning": "(D) 181 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_181",
+    "num": 181,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about Carlson Counters?",
+    "options": {
+      "A": "It provides services for residential spaces only.",
+      "B": "It accepts visit requests through multiple channels.",
+      "C": "It is situated in a central part of the town.",
+      "D": "It is currently offering a service at a discount."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'It accepts visit requests through multiple channels.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "indicated",
+      "Carlson",
+      "Counters"
+    ],
+    "vietnameseMeaning": "(B) 182 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_182",
+    "num": 182,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In the brochure, the word \"rough\" in paragraph 4, line 2, is closest in meaning to",
+    "options": {
+      "A": "forceful",
+      "B": "general",
+      "C": "coarse",
+      "D": "uneven"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'general'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "brochure",
+      "word",
+      "rough"
+    ],
+    "vietnameseMeaning": "(B) 183 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_183",
+    "num": 183,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "According to the brochure, what information will NOT be provided during an on-site visit?",
+    "options": {
+      "A": "The date of a delivery",
+      "B": "Descriptions of materials",
+      "C": "Prices of products",
+      "D": "The duration of a project GO ON TO THE NEXT PAGE, TEST 4 PART 7 135"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'The date of a delivery'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "According",
+      "brochure",
+      "information"
+    ],
+    "vietnameseMeaning": "(A) 184 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_184",
+    "num": 184,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "How much will Ms. Thomson have to pay for the new countertops?",
+    "options": {
+      "A": "$90 per square meter",
+      "B": "$120 per square meter",
+      "C": "$150 per square meter",
+      "D": "$190 per square meter"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) '$190 per square meter'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "much",
+      "Thomson",
+      "countertops"
+    ],
+    "vietnameseMeaning": "(D) 185 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_185",
+    "num": 185,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What most likely did Ms. Thomson do before Mr. Carlson's visit to her home?",
+    "options": {
+      "A": "Discarded an old countertop",
+      "B": "Looked through an informational leaflet",
+      "C": "E-mailed size specifications for an installation",
+      "D": "Visited a branch for a free consultation"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Looked through an informational leaflet'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "most",
+      "likely",
+      "Thomson"
+    ],
+    "vietnameseMeaning": "(B) 186 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_186",
+    "num": 186,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is NOT true about Threads of Royal History?",
+    "options": {
+      "A": "It includes items on loan.",
+      "B": "It has pieces from around the world.",
+      "C": "It is open to the public on weekends.",
+      "D": "It will close at the end of April."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'It is open to the public on weekends.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "true",
+      "Threads",
+      "Royal"
+    ],
+    "vietnameseMeaning": "(C) 187 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_187",
+    "num": 187,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Why did Ms. Augustine want Mr. Dent's students to join her group?",
+    "options": {
+      "A": "So that her group becomes eligible for a free tour guide",
+      "B": "So that she can obtain a discount on admission fees",
+      "C": "So that the school can cover the expense of a bus rental",
+      "D": "So that her students can enter their designs into a competition"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'So that she can obtain a discount on admission fees'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Augustine",
+      "want",
+      "Dent"
+    ],
+    "vietnameseMeaning": "(B) 188 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_188",
+    "num": 188,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "How much were the Terrington Secondary School students charged for admission?",
+    "options": {
+      "A": "£3.50 per person",
+      "B": "£4.00 per person",
+      "C": "£5.00 per person",
+      "D": "£6.50 per person"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) '£4.00 per person'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "much",
+      "were",
+      "Terrington"
+    ],
+    "vietnameseMeaning": "(B) 189 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_189",
+    "num": 189,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What did Mr, Dent's students most likely do on April 28?",
+    "options": {
+      "A": "Viewed ancient accessories",
+      "B": "Toured some local historic sites",
+      "C": "Attended a fashion show",
+      "D": "Displayed some outfits they had created"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Viewed ancient accessories'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "Dent",
+      "students",
+      "most"
+    ],
+    "vietnameseMeaning": "(A) 190 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_190",
+    "num": 190,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What are visitors to the exhibit asked to do?",
+    "options": {
+      "A": "Speak in low voices",
+      "B": "Leave food and drinks outside",
+      "C": "Avoid taking pictures",
+      "D": "Reserve a tour guide in advance GO ON TO THE NEXT PAGE. TEST 4 PART 7 137"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Avoid taking pictures'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "visitors",
+      "exhibit",
+      "asked"
+    ],
+    "vietnameseMeaning": "(C) 191 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_191",
+    "num": 191,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the purpose of the flyer?",
+    "options": {
+      "A": "To publicize availability of a software application",
+      "B": "To announce price reductions for a specified period",
+      "C": "To request reviews from users of a ride-share program",
+      "D": "To inform subscribers of special services available"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'To publicize availability of a software application'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "purpose",
+      "flyer"
+    ],
+    "vietnameseMeaning": "(A) 192 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_192",
+    "num": 192,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What problem does Mr. Diaz mention in the review?",
+    "options": {
+      "A": "People find a program complicated to use.",
+      "B": "Membership fees are too high.",
+      "C": "Local residents are unfamiliar with a program.",
+      "D": "Drivers take on too many passengers."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Local residents are unfamiliar with a program.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "problem",
+      "does",
+      "Diaz"
+    ],
+    "vietnameseMeaning": "(C) 193 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_193",
+    "num": 193,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about Mr. Diaz?",
+    "options": {
+      "A": "He has never used Wheel-Pals before.",
+      "B": "He drives his car up to twice a week,",
+      "C": "He recently relocated to Brisbane.",
+      "D": "He pays six dollars per month for his subscription."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'He pays six dollars per month for his subscription.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "indicated",
+      "Diaz"
+    ],
+    "vietnameseMeaning": "(D) 194 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_194",
+    "num": 194,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Where does Wheel-Pals plan to do additional product promotion?",
+    "options": {
+      "A": "In Brisbane",
+      "B": "In Sydney",
+      "C": "In Melbourne",
+      "D": "In Auckland"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'In Auckland'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "does",
+      "Wheel",
+      "Pals"
+    ],
+    "vietnameseMeaning": "(D) 195 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_195",
+    "num": 195,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In the e-mail, the word \"leave\" in paragraph 1, line 3, is closest in meaning to",
+    "options": {
+      "A": "exit",
+      "B": "make",
+      "C": "remain",
+      "D": "assign GO ON TO THE NEXT PAGE. TEST4 PART? 139"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'make'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "mail",
+      "word",
+      "leave"
+    ],
+    "vietnameseMeaning": "(B) 196 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_196",
+    "num": 196,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is NOT true about Coriander Fine Dining?",
+    "options": {
+      "A": "Its event room can accommodate up to 80 diners.",
+      "B": "It is available to provide meals for various occasions.",
+      "C": "It offers free delivery for any order within city limits.",
+      "D": "Its catering service can be booked through Cecilia Shiraz."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'It offers free delivery for any order within city limits.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "true",
+      "Coriander",
+      "Fine"
+    ],
+    "vietnameseMeaning": "(C) 197 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_197",
+    "num": 197,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does Mr. Potter ask about?",
+    "options": {
+      "A": "The availability of an event venue",
+      "B": "The price for catering a dinner",
+      "C": "The date of a final agreement",
+      "D": "The cost of renting out parking"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'The price for catering a dinner'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "does",
+      "Potter"
+    ],
+    "vietnameseMeaning": "(B) 198 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_198",
+    "num": 198,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What will Mr. Potter have to pay extra for?",
+    "options": {
+      "A": "Borrowing plates and cutlery",
+      "B": "Having several options for main courses",
+      "C": "Getting food delivered outside the city",
+      "D": "Serving an assortment of appetizers"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Borrowing plates and cutlery'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "Potter",
+      "extra"
+    ],
+    "vietnameseMeaning": "(A) 199 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_199",
+    "num": 199,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In the article, the word \"carrying\" in paragraph 1, line 4, is closest in meaning to",
+    "options": {
+      "A": "enduring",
+      "B": "transporting",
+      "C": "retailing",
+      "D": "absorbing"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'retailing'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "article",
+      "word",
+      "carrying"
+    ],
+    "vietnameseMeaning": "(C) 200 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t4_200",
+    "num": 200,
+    "source": "Hacker 3 Test 4 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Who might Ms. Shiraz be preparing a meal for on June 18?",
+    "options": {
+      "A": "Retiring executives at Spartan Tires",
+      "B": "Visitors from Maha-Rubber",
+      "C": "Guests at an event held at Coriander Fine Dining",
+      "D": "Participants in a celebration hosted by Lucas Industries This is the end of the test. You may review Part 5, 6, and 7 if you finish the test early. 33 p,32A / 34 SHJS p.327 / «I3 P.B52 / Part 5S6 tfS SJ-g M7| »Cfg E|0|x|0i| Ofe Self *||=i aiAMl ssn XKJO) sxfi to| EflE# ggsil mahs. TEST 4 PART 7 141"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Visitors from Maha-Rubber'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "might",
+      "Shiraz",
+      "preparing"
+    ],
+    "vietnameseMeaning": "(B) PART 5",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 4 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_101",
+    "num": 101,
+    "source": "Hacker 3 Test 5 Part 5",
+    "category": "Mệnh đề & Đại từ (Clauses & Pronouns)",
+    "question": "Holden Advertising Agency won all the major marketing awards this year. practical",
+    "options": {
+      "A": "Option A",
+      "B": "practicality",
+      "C": "practically practicalities",
+      "D": "his"
+    },
+    "correctAnswer": "C",
+    "explanation": "Đáp án chính xác theo Official Key là (C) 'practically practicalities'.",
+    "tip": "⚡ MẸO TOEIC: Đọc kỹ ngữ cảnh và loại trừ các đáp án sai ngữ pháp. Chọn (C).",
+    "keywords": [
+      "Holden",
+      "Advertising",
+      "Agency"
+    ],
+    "vietnameseMeaning": "(C) 102 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t5_102",
+    "num": 102,
+    "source": "Hacker 3 Test 5 Part 5",
+    "category": "Từ loại (Word Form)",
+    "question": "Mr. Harris neglected name at the bottom of his employment application.",
+    "options": {
+      "A": "sign",
+      "B": "signs",
+      "C": "to sign",
+      "D": "was signed"
+    },
+    "correctAnswer": "C",
+    "explanation": "Căn cứ vào ngữ pháp câu, vị trí cần điền đóng vai trò từ loại phù hợp trong mệnh đề. Chọn đáp án (C) 'to sign' để hoàn chỉnh cấu trúc ngữ pháp.",
+    "tip": "⚡ MẸO TỪ LOẠI: Xác định vị trí chỗ trống đứng sau từ loại gì (danh từ, động từ, tính từ hay trạng từ) để chọn đuôi hậu tố chính xác. Đáp án đúng là (C).",
+    "keywords": [
+      "Harris",
+      "neglected",
+      "name"
+    ],
+    "vietnameseMeaning": "(C) 103 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t5_103",
+    "num": 103,
+    "source": "Hacker 3 Test 5 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Eugene Rivera, who negotiated an agreement between the two firms, reported that the details would be settled the next several days.",
+    "options": {
+      "A": "within",
+      "B": "close to afterward",
+      "C": "Option C",
+      "D": "nearby"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'within'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'within'.",
+    "keywords": [
+      "Eugene",
+      "Rivera",
+      "negotiated"
+    ],
+    "vietnameseMeaning": "(A) 104 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t5_104",
+    "num": 104,
+    "source": "Hacker 3 Test 5 Part 5",
+    "category": "Từ loại (Word Form)",
+    "question": "Earlier this morning, Mr. Yang that everyone in his department would receive a bonus.",
+    "options": {
+      "A": "announcing",
+      "B": "announces",
+      "C": "announced has announced",
+      "D": "144 S2jiuh 901^7IS MP3 Hackerslngang.com Select the best answer and mark the sheet. about"
+    },
+    "correctAnswer": "C",
+    "explanation": "Căn cứ vào ngữ pháp câu, vị trí cần điền đóng vai trò từ loại phù hợp trong mệnh đề. Chọn đáp án (C) 'announced has announced' để hoàn chỉnh cấu trúc ngữ pháp.",
+    "tip": "⚡ MẸO TỪ LOẠI: Xác định vị trí chỗ trống đứng sau từ loại gì (danh từ, động từ, tính từ hay trạng từ) để chọn đuôi hậu tố chính xác. Đáp án đúng là (C).",
+    "keywords": [
+      "Earlier",
+      "morning",
+      "Yang"
+    ],
+    "vietnameseMeaning": "(C) 105 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t5_105",
+    "num": 105,
+    "source": "Hacker 3 Test 5 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Audio-One is so the quality of its products that it offers a money-back guarantee for all items.",
+    "options": {
+      "A": "beneficial",
+      "B": "probable confident",
+      "C": "Option C",
+      "D": "productive"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'Option C'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'Option C'.",
+    "keywords": [
+      "Audio",
+      "quality",
+      "products"
+    ],
+    "vietnameseMeaning": "(C) 106 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t5_106",
+    "num": 106,
+    "source": "Hacker 3 Test 5 Part 5",
+    "category": "Từ loại (Word Form)",
+    "question": "After carefully analyzing the budget report, approve Mr. Green could funding for the expansion of Jewett Resorts.",
+    "options": {
+      "A": "final",
+      "B": "finally",
+      "C": "finalize finals",
+      "D": "Option D"
+    },
+    "correctAnswer": "B",
+    "explanation": "Căn cứ vào ngữ pháp câu, vị trí cần điền đóng vai trò từ loại phù hợp trong mệnh đề. Chọn đáp án (B) 'finally' để hoàn chỉnh cấu trúc ngữ pháp.",
+    "tip": "⚡ MẸO TỪ LOẠI: Xác định vị trí chỗ trống đứng sau từ loại gì (danh từ, động từ, tính từ hay trạng từ) để chọn đuôi hậu tố chính xác. Đáp án đúng là (B).",
+    "keywords": [
+      "After",
+      "carefully",
+      "analyzing"
+    ],
+    "vietnameseMeaning": "(B) 107 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t5_107",
+    "num": 107,
+    "source": "Hacker 3 Test 5 Part 5",
+    "category": "Từ loại (Word Form)",
+    "question": "Ms. Warren is in charge of making sure that the clients receive everything they need during their stay,",
+    "options": {
+      "A": "to visit",
+      "B": "visit",
+      "C": "visited",
+      "D": "visiting"
+    },
+    "correctAnswer": "D",
+    "explanation": "Căn cứ vào ngữ pháp câu, vị trí cần điền đóng vai trò từ loại phù hợp trong mệnh đề. Chọn đáp án (D) 'visiting' để hoàn chỉnh cấu trúc ngữ pháp.",
+    "tip": "⚡ MẸO TỪ LOẠI: Xác định vị trí chỗ trống đứng sau từ loại gì (danh từ, động từ, tính từ hay trạng từ) để chọn đuôi hậu tố chính xác. Đáp án đúng là (D).",
+    "keywords": [
+      "Warren",
+      "charge",
+      "making"
+    ],
+    "vietnameseMeaning": "(D) 108 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t5_108",
+    "num": 108,
+    "source": "Hacker 3 Test 5 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Kembil Co.'s board instructed James to Holley to implement a versatile long-term planning for the next five years.",
+    "options": {
+      "A": "approach",
+      "B": "approaches approachable",
+      "C": "Option C",
+      "D": "approached"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'approach'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'approach'.",
+    "keywords": [
+      "Kembil",
+      "board",
+      "instructed"
+    ],
+    "vietnameseMeaning": "(A) 109 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t5_109",
+    "num": 109,
+    "source": "Hacker 3 Test 5 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Building of the Beverly Office Complex can 115. Ventera Inc. was able to build strong begin as soon as the all the relationships with its most valuable firm necessary permits from City Hall. customers by communicating with them.",
+    "options": {
+      "A": "marginally",
+      "B": "comparably",
+      "C": "consistently",
+      "D": "indefinitely to"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'indefinitely to'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'indefinitely to'.",
+    "keywords": [
+      "Building",
+      "Beverly",
+      "Office"
+    ],
+    "vietnameseMeaning": "(D) 110 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t5_110",
+    "num": 110,
+    "source": "Hacker 3 Test 5 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "A factor especially the agricultural satisfactory industry is whether there are reliable 116. In order to levels of supplies water and electricity. of",
+    "options": {
+      "A": "knowledgeable",
+      "B": "convenient pertinent",
+      "C": "Option C",
+      "D": "simultaneous"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'Option C'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'Option C'.",
+    "keywords": [
+      "factor",
+      "especially",
+      "agricultural"
+    ],
+    "vietnameseMeaning": "(C) 111 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t5_111",
+    "num": 111,
+    "source": "Hacker 3 Test 5 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "the most cutting-edge cellular phones may not satisfy the specific needs of every user.",
+    "options": {
+      "A": "Notwithstanding",
+      "B": "Once",
+      "C": "Nearly",
+      "D": "Even 60"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'Even 60'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'Even 60'.",
+    "keywords": [
+      "most",
+      "cutting",
+      "edge"
+    ],
+    "vietnameseMeaning": "(D) 112 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t5_112",
+    "num": 112,
+    "source": "Hacker 3 Test 5 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "As it has been business days since the purchase date, Branson Outlet will not allow an exchange or refund.",
+    "options": {
+      "A": "so much",
+      "B": "more than",
+      "C": "much longer",
+      "D": "as few as"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'more than'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'more than'.",
+    "keywords": [
+      "business",
+      "days",
+      "since"
+    ],
+    "vietnameseMeaning": "(B) 113 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t5_113",
+    "num": 113,
+    "source": "Hacker 3 Test 5 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Ms. Mitchell is looking for an apartment a train station so that she will not need to commute by car.",
+    "options": {
+      "A": "near",
+      "B": "toward adjacent",
+      "C": "Option C",
+      "D": "between"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'near'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'near'.",
+    "keywords": [
+      "Mitchell",
+      "looking",
+      "apartment"
+    ],
+    "vietnameseMeaning": "(A) 114 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t5_114",
+    "num": 114,
+    "source": "Hacker 3 Test 5 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Immediately after ordering a new office desk online, Mr. Perez was issued of the transaction.",
+    "options": {
+      "A": "Option A",
+      "B": "limit",
+      "C": "maintain",
+      "D": "remain"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'limit'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'limit'.",
+    "keywords": [
+      "Immediately",
+      "after",
+      "ordering"
+    ],
+    "vietnameseMeaning": "(B) 115 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t5_115",
+    "num": 115,
+    "source": "Hacker 3 Test 5 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Question 115: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) ' '.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) ' '.",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(C) 116 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t5_116",
+    "num": 116,
+    "source": "Hacker 3 Test 5 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Question 116: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) ' '.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) ' '.",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(C) 117 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t5_117",
+    "num": 117,
+    "source": "Hacker 3 Test 5 Part 5",
+    "category": "Từ loại (Word Form)",
+    "question": "The candidates for the job opening have experiences and career objectives despite all having worked in the same field. difference",
+    "options": {
+      "A": "Option A",
+      "B": "differently",
+      "C": "different",
+      "D": "differ"
+    },
+    "correctAnswer": "C",
+    "explanation": "Căn cứ vào ngữ pháp câu, vị trí cần điền đóng vai trò từ loại phù hợp trong mệnh đề. Chọn đáp án (C) 'different' để hoàn chỉnh cấu trúc ngữ pháp.",
+    "tip": "⚡ MẸO TỪ LOẠI: Xác định vị trí chỗ trống đứng sau từ loại gì (danh từ, động từ, tính từ hay trạng từ) để chọn đuôi hậu tố chính xác. Đáp án đúng là (C).",
+    "keywords": [
+      "candidates",
+      "opening",
+      "experiences"
+    ],
+    "vietnameseMeaning": "(C) 118 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t5_118",
+    "num": 118,
+    "source": "Hacker 3 Test 5 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Koester Company records all incoming customer calls with the of ensuring inquiries are handled appropriately.",
+    "options": {
+      "A": "status reservation",
+      "B": "Option B",
+      "C": "association",
+      "D": "intent"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'intent'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'intent'.",
+    "keywords": [
+      "Koester",
+      "Company",
+      "records"
+    ],
+    "vietnameseMeaning": "(D) 119 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t5_119",
+    "num": 119,
+    "source": "Hacker 3 Test 5 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Coalport's management is not certain that an advertising campaign will successfully boost sales because has launched it one before.",
+    "options": {
+      "A": "never also",
+      "B": "Option B",
+      "C": "always",
+      "D": "still GO ON TO THE NEXT PAGE. TESTS PARTS 145"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'never also'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'never also'.",
+    "keywords": [
+      "Coalport",
+      "management",
+      "certain"
+    ],
+    "vietnameseMeaning": "(A) 120 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t5_120",
+    "num": 120,
+    "source": "Hacker 3 Test 5 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "MediaCore's customers will have digital 126. Immigration gave Mr. Kim an on to dozens of publications by the end his stay, allowing him to remain another the month. months of six for work.",
+    "options": {
+      "A": "attendance",
+      "B": "expertise accessed",
+      "C": "operation",
+      "D": "extension"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'attendance'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'attendance'.",
+    "keywords": [
+      "MediaCore",
+      "customers",
+      "digital"
+    ],
+    "vietnameseMeaning": "(A) 121 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t5_121",
+    "num": 121,
+    "source": "Hacker 3 Test 5 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "fashion design jobs appear 127. The reason a new security gate was glamorous in popular media, most positions in the industry are demanding in reality. Although",
+    "options": {
+      "A": "Option A",
+      "B": "Despite",
+      "C": "Regarding Assuming",
+      "D": "Option D"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'Option A'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'Option A'.",
+    "keywords": [
+      "fashion",
+      "design",
+      "jobs"
+    ],
+    "vietnameseMeaning": "(A) 122 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t5_122",
+    "num": 122,
+    "source": "Hacker 3 Test 5 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Ryder Capital Bank now trains its advisors more to make certain that they are thoroughly familiar with the investment process. comprehensively",
+    "options": {
+      "A": "Option A",
+      "B": "temporarily",
+      "C": "wastefully",
+      "D": "optionally"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'Option A'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'Option A'.",
+    "keywords": [
+      "Ryder",
+      "Capital",
+      "Bank"
+    ],
+    "vietnameseMeaning": "(A) 123 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t5_123",
+    "num": 123,
+    "source": "Hacker 3 Test 5 Part 5",
+    "category": "Ngữ pháp & Thì (Grammar & Tenses)",
+    "question": "Once the project ends next year, employee evaluations to assess performance and decide on pay increases.",
+    "options": {
+      "A": "will conduct",
+      "B": "were conducted",
+      "C": "have conducted",
+      "D": "will be conducted"
+    },
+    "correctAnswer": "D",
+    "explanation": "Xét về sự hòa hợp giữa chủ ngữ và thì của câu, động từ (D) 'will be conducted' chia đúng thì và dạng chủ động/bị động.",
+    "tip": "⚡ MẸO CHIA THÌ: Nhìn dấu hiệu thời gian và xét chủ ngữ số ít/số nhiều để loại trừ các dạng sai thì. Đáp án đúng là (D).",
+    "keywords": [
+      "Once",
+      "project",
+      "ends"
+    ],
+    "vietnameseMeaning": "(D) 124 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t5_124",
+    "num": 124,
+    "source": "Hacker 3 Test 5 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Wheelpoint's new line of tires performs under the most hazardous road conditions.",
+    "options": {
+      "A": "habitually",
+      "B": "capably sizably",
+      "C": "Option C",
+      "D": "generously"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'capably sizably'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'capably sizably'.",
+    "keywords": [
+      "Wheelpoint",
+      "line",
+      "tires"
+    ],
+    "vietnameseMeaning": "(B) 125 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t5_125",
+    "num": 125,
+    "source": "Hacker 3 Test 5 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Bransonville Beach is closed further notice as the area is affected by strong tides caused by Hurricane Thurston.",
+    "options": {
+      "A": "Option A",
+      "B": "quick",
+      "C": "high",
+      "D": "main meet"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'high'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'high'.",
+    "keywords": [
+      "Bransonville",
+      "Beach",
+      "closed"
+    ],
+    "vietnameseMeaning": "(C) 126 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t5_126",
+    "num": 126,
+    "source": "Hacker 3 Test 5 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Question 126: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'Option D'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'Option D'.",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(D) 127 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t5_127",
+    "num": 127,
+    "source": "Hacker 3 Test 5 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Question 127: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'Option D'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'Option D'.",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(D) 128 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t5_128",
+    "num": 128,
+    "source": "Hacker 3 Test 5 Part 5",
+    "category": "Mệnh đề & Đại từ (Clauses & Pronouns)",
+    "question": "Submissions Literati Magazine's standard be considered for publication will in our next issue.",
+    "options": {
+      "A": "these",
+      "B": "those",
+      "C": "that",
+      "D": "they the"
+    },
+    "correctAnswer": "C",
+    "explanation": "Đáp án chính xác theo Official Key là (C) 'that'.",
+    "tip": "⚡ MẸO TOEIC: Đọc kỹ ngữ cảnh và loại trừ các đáp án sai ngữ pháp. Chọn (C).",
+    "keywords": [
+      "Submissions",
+      "Literati",
+      "Magazine"
+    ],
+    "vietnameseMeaning": "(C) 129 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t5_129",
+    "num": 129,
+    "source": "Hacker 3 Test 5 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Investor Link was able to financial crisis because Mr. Macintyre had the foresight to develop a contingency plan.",
+    "options": {
+      "A": "advocate",
+      "B": "engage",
+      "C": "persist",
+      "D": "withstand"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'withstand'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'withstand'.",
+    "keywords": [
+      "Investor",
+      "Link",
+      "able"
+    ],
+    "vietnameseMeaning": "(D) 130 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t5_130",
+    "num": 130,
+    "source": "Hacker 3 Test 5 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Ms. Kenner and Mr, Stone were both of invited to the meeting, but them has confirmed yet.",
+    "options": {
+      "A": "most",
+      "B": "few neither",
+      "C": "Option C",
+      "D": "whatever"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'Option C'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'Option C'.",
+    "keywords": [
+      "Kenner",
+      "Stone",
+      "were"
+    ],
+    "vietnameseMeaning": "(C) 131 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t5_131",
+    "num": 131,
+    "source": "Hacker 3 Test 5 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 131: Refer to the test material.",
+    "options": {
+      "A": "accustomed",
+      "B": "committed",
+      "C": "indifferent",
+      "D": "confused"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'committed'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(B) 132 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t5_132",
+    "num": 132,
+    "source": "Hacker 3 Test 5 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "g 18 and 24 would be helpful for developing television advertisements. This will provide us with O LD information to effectively this group. Over the next few weeks, he and his team will",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Option A'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "helpful",
+      "developing",
+      "television"
+    ],
+    "vietnameseMeaning": "(A) 133 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t5_133",
+    "num": 133,
+    "source": "Hacker 3 Test 5 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "o create concepts for 30-second commercials, which they will to us for consideration. —",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Option D'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "create",
+      "concepts",
+      "second"
+    ],
+    "vietnameseMeaning": "(D) 134 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t5_134",
+    "num": 134,
+    "source": "Hacker 3 Test 5 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 134: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(C) 135 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t5_135",
+    "num": 135,
+    "source": "Hacker 3 Test 5 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "136. flying to Budapest as planned. I would like to get my money back. If this is possible, can you please my request? I am hoping to book a different flight to Sydney in less than five",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Option D'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "flying",
+      "Budapest",
+      "planned"
+    ],
+    "vietnameseMeaning": "(D) 136 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t5_136",
+    "num": 136,
+    "source": "Hacker 3 Test 5 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 136: Refer to the test material.",
+    "options": {
+      "A": "prevents",
+      "B": "prevention",
+      "C": "preventing",
+      "D": "preventive"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'preventing'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(C) 137 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t5_137",
+    "num": 137,
+    "source": "Hacker 3 Test 5 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "days. I understand that I will have to pay a for this change. You may deduct this from",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "days",
+      "understand",
+      "change"
+    ],
+    "vietnameseMeaning": "(C) 138 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t5_138",
+    "num": 138,
+    "source": "Hacker 3 Test 5 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "the amount that will be returned to me. Please let me know if you need any other information, Sincerely, Alex Hogan",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Option B'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "amount",
+      "returned",
+      "Please"
+    ],
+    "vietnameseMeaning": "(B) 139 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t5_139",
+    "num": 139,
+    "source": "Hacker 3 Test 5 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Johnson and Eversham Accounting began by assisting small firms in Manchester, New Hampshire, and we have been expanding our reach ever since. -------- All of our accountants are by the Organization of Chartered Accountants, which allows",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Option B'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Johnson",
+      "Eversham",
+      "Accounting"
+    ],
+    "vietnameseMeaning": "(B) 140 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t5_140",
+    "num": 140,
+    "source": "Hacker 3 Test 5 Part 6",
+    "category": "Đọc hiểu Điền câu (Sentence Insertion)",
+    "question": "Question 140: Refer to the test material.",
+    "options": {
+      "A": "Our expansion was completed several Ipl years ago.",
+      "B": "These firms have announced that they will form an association.",
+      "C": "We now have 60 offices in cities across the nation.",
+      "D": "This prevented us from launching our first office in the region."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'We now have 60 offices in cities across the nation.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(C) 141 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t5_141",
+    "num": 141,
+    "source": "Hacker 3 Test 5 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "us to guarantee that our clients always receive top-notch services. Each of our employees",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Option D'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "guarantee",
+      "clients",
+      "always"
+    ],
+    "vietnameseMeaning": "(D) 142 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t5_142",
+    "num": 142,
+    "source": "Hacker 3 Test 5 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "have. in distinct business accounting fields, so we can handle any financial matter you might To find out more, contact us today at 555-6277 or go to www.jeaccounting.com.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Option A'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "distinct",
+      "business",
+      "accounting"
+    ],
+    "vietnameseMeaning": "(A) 143 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t5_143",
+    "num": 143,
+    "source": "Hacker 3 Test 5 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "deliberations on this request, they proposed raising fees by $25 a month, from $375 to $400, effective July 1. To the board, this action is justified for several reasons. First, the additional funds will contribute to important , such as the installation of a new security system in",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Option B'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "deliberations",
+      "request",
+      "they"
+    ],
+    "vietnameseMeaning": "(B) 144 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t5_144",
+    "num": 144,
+    "source": "Hacker 3 Test 5 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "the parking garage next year. Second, they will cover the rising cost of natural gas. The timing of the dues increase seems reasonable there has not been one in four",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Option D'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "parking",
+      "garage",
+      "next"
+    ],
+    "vietnameseMeaning": "(D) 145 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t5_145",
+    "num": 145,
+    "source": "Hacker 3 Test 5 Part 6",
+    "category": "Đọc hiểu Điền câu (Sentence Insertion)",
+    "question": "Question 145: Refer to the test material.",
+    "options": {
+      "A": "The homeowner's association WSk management made some repairs over the winter.",
+      "B": "Tenants were satisfied with the estimate provided to them by the contractor.",
+      "C": "We had to pay more than usual last winter due to a steep hike in gas prices.",
+      "D": "We hope the building's improved security system will attract more businesses."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'We had to pay more than usual last winter due to a steep hike in gas prices.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(C) 146 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t5_146",
+    "num": 146,
+    "source": "Hacker 3 Test 5 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "years. Tenants are invited to vote on the proposal at the Homeowner's Association meeting in June. Jordan Roper Accounting Manager Homeowner's Association",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Option B'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "years",
+      "Tenants",
+      "invited"
+    ],
+    "vietnameseMeaning": "(B) 147 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t5_147",
+    "num": 147,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is mentioned about greenhouse gas emissions?",
+    "options": {
+      "A": "They recently went up by a large amount.",
+      "B": "Residences are one source of them.",
+      "C": "They are limited by the government.",
+      "D": "Meters can be installed to measure them."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Residences are one source of them.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "mentioned",
+      "greenhouse",
+      "emissions"
+    ],
+    "vietnameseMeaning": "(B) 148 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_148",
+    "num": 148,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "How can customers receive a customized energy saving plan?",
+    "options": {
+      "A": "By arranging a meeting with a consultant",
+      "B": "By inputting their details on a Web site",
+      "C": "By visiting the Green Wave headquarters",
+      "D": "By sending an e-mail to a specialist GO ON TO THE NEXT PAGE^ TEST 5 PART? 151"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'By arranging a meeting with a consultant'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "customers",
+      "receive",
+      "customized"
+    ],
+    "vietnameseMeaning": "(A) 149 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_149",
+    "num": 149,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Who most likely is Ms. Anderson? 150. At 11:18 a.m., what does Ms. Bledsoe",
+    "options": {
+      "A": "She can confirm that Mr. Clark has the",
+      "B": "She is relieved to find out that someone can replace her.",
+      "C": "She is pleased with the results of a phone conversation.",
+      "D": "She likes the proposal that Mr. Clark has made. 152 ?SSat°ii!E5(a°|il<.h90t^lS?J90|°f7|MP3 Hackerslngang.com"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'She is relieved to find out that someone can replace her.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "most",
+      "likely",
+      "Anderson"
+    ],
+    "vietnameseMeaning": "(B) 150 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_150",
+    "num": 150,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Question 150: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Option D'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(D) 151 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_151",
+    "num": 151,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the main purpose of the e-mail?",
+    "options": {
+      "A": "To advertise tour packages to Asia",
+      "B": "To notify a traveler of airport transfer changes",
+      "C": "To solicit feedback from tour participants",
+      "D": "To announce the cancellation of a trip"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'To announce the cancellation of a trip'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "main",
+      "purpose",
+      "mail"
+    ],
+    "vietnameseMeaning": "(D) 152 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_152",
+    "num": 152,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What will happen if Mr. Fletcher travels at a later date?",
+    "options": {
+      "A": "He and his spouse will have to take some flights separately.",
+      "B": "He will be given superior accommodations.",
+      "C": "He will be unable to travel to all the destinations.",
+      "D": "He will receive a partial refund of the charges. GO ON TO THE NEXT PAGE. TEST 5 PART 7 153"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'He will be given superior accommodations.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "happen",
+      "Fletcher",
+      "travels"
+    ],
+    "vietnameseMeaning": "(B) 153 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_153",
+    "num": 153,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Where would the information most likely appear?",
+    "options": {
+      "A": "On a food product package",
+      "B": "In a kitchen appliance manual",
+      "C": "In a recipe book for meat dishes",
+      "D": "On a display in a dairy section"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'On a food product package'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "information",
+      "most",
+      "likely"
+    ],
+    "vietnameseMeaning": "(A) 154 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_154",
+    "num": 154,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What are cooks advised against doing?",
+    "options": {
+      "A": "Cooking at low temperatures",
+      "B": "Storing leftovers for too long",
+      "C": "Touching food items with bare hands",
+      "D": "Defrosting meat in certain temperatures 154 ^ *11# Hackers.co.kr"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Defrosting meat in certain temperatures 154 ^ *11# Hackers.co.kr'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "cooks",
+      "advised",
+      "against"
+    ],
+    "vietnameseMeaning": "(D) 155 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_155",
+    "num": 155,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the purpose of the article?",
+    "options": {
+      "A": "To discuss a company's plans for growth",
+      "B": "To encourage fitness among youth",
+      "C": "To describe a new line of products",
+      "D": "To report on the opening of a store"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'To discuss a company's plans for growth'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "purpose",
+      "article"
+    ],
+    "vietnameseMeaning": "(A) 156 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_156",
+    "num": 156,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "For whom most likely are Stretch Corporation's products made?",
+    "options": {
+      "A": "International businesspeople",
+      "B": "Fans of sports teams",
+      "C": "Working parents",
+      "D": "Fitness enthusiasts"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Fitness enthusiasts'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "whom",
+      "most",
+      "likely"
+    ],
+    "vietnameseMeaning": "(D) 157 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_157",
+    "num": 157,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In which of the positions marked [1], [2], lip [3], and [4] does the following sentence best belong? 'This is because the relocation is expected to create 150 additional jobs for the residents of Haverford.\"",
+    "options": {
+      "A": "[1]",
+      "B": "[2]",
+      "C": "[3]",
+      "D": "[4] GO ON TO THE NEXT PAGE. TESTS PART? 155"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) '[2]'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "positions",
+      "marked",
+      "does"
+    ],
+    "vietnameseMeaning": "(B) 158 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_158",
+    "num": 158,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is NOT indicated about Fashion-It?",
+    "options": {
+      "A": "It offers its employees excellent working condi tions.",
+      "B": "It stores job applications for one year.",
+      "C": "It is recruiting employees for several branches.",
+      "D": "It operates an online recruitment page."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'It is recruiting employees for several branches.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "indicated",
+      "Fashion"
+    ],
+    "vietnameseMeaning": "(C) 159 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_159",
+    "num": 159,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "The word \"comparable\" in paragraph 1, line 3, is closest in meaning to",
+    "options": {
+      "A": "affiliated",
+      "B": "similar",
+      "C": "significant",
+      "D": "balanced 156 ^ yWI MP3 Hackerslngang.com"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'similar'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "word",
+      "comparable",
+      "paragraph"
+    ],
+    "vietnameseMeaning": "(B) 160 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_160",
+    "num": 160,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "According to the notice, what will happen within two weeks of an application being submitted?",
+    "options": {
+      "A": "More job openings will be posted.",
+      "B": "Fashion-It will begin training new members of staff.",
+      "C": "The new store will officially open to the public.",
+      "D": "Applicants who have been selected will be notified."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Applicants who have been selected will be notified.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "According",
+      "notice",
+      "happen"
+    ],
+    "vietnameseMeaning": "(D) 161 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_161",
+    "num": 161,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Why did Ms. Johnstone write to Mr. Minkovski?",
+    "options": {
+      "A": "To invite him to be a guest speaker at an event",
+      "B": "To request that he make arrangements for a trip",
+      "C": "To suggest he register for a convention",
+      "D": "To ask for a progress report from the Minneapolis branch"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'To request that he make arrangements for a trip'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Johnstone",
+      "write",
+      "Minkovski"
+    ],
+    "vietnameseMeaning": "(B) 162 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_162",
+    "num": 162,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "When will Ms. Johnstone leave Milwaukee?",
+    "options": {
+      "A": "On June 17",
+      "B": "On June 18",
+      "C": "On June 21",
+      "D": "On June 22 GO ON TO THE NEXT PAGE, TEST 5 PART 7 157"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'On June 22 GO ON TO THE NEXT PAGE, TEST 5 PART 7 157'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "Johnstone",
+      "leave",
+      "Milwaukee"
+    ],
+    "vietnameseMeaning": "(D) 163 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_163",
+    "num": 163,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What has Mr. Minkovski been asked to find out?",
+    "options": {
+      "A": "The duration of a trip to the Midwest",
+      "B": "The cost of hotel accommodation in Milwaukee",
+      "C": "The availability of a regional manager for a visit",
+      "D": "The location of the upcoming convention"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'The availability of a regional manager for a visit'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Minkovski",
+      "asked",
+      "find"
+    ],
+    "vietnameseMeaning": "(C) 164 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_164",
+    "num": 164,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does Ms. Munro need assistance with? 166. What can be inferred about Ms. Munro?",
+    "options": {
+      "A": "Setting a favorite channel",
+      "B": "Renewing a subscription",
+      "C": "Gaining access to a service",
+      "D": "Repairing a faulty connection"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Gaining access to a service'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "does",
+      "Munro",
+      "need"
+    ],
+    "vietnameseMeaning": "(C) 165 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_165",
+    "num": 165,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about the standard plan?",
+    "options": {
+      "A": "She will pay a higher monthly fee.",
+      "B": "She will cancel a membership.",
+      "C": "She cannot get a good cable signal.",
+      "D": "She was not approved for a credit card."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'She was not approved for a credit card.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "indicated",
+      "standard",
+      "plan"
+    ],
+    "vietnameseMeaning": "(D) 166 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_166",
+    "num": 166,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Question 166: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Option A'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(A) 167 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_167",
+    "num": 167,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "At 18:49, what does Mr. Estrada mean « when he writes, \"That's all right\"?",
+    "options": {
+      "A": "He will ask about the credit card number later.",
+      "B": "He thinks a charge will be canceled.",
+      "C": "He has received payment for a bill.",
+      "D": "He does not require some information. 158 Hackers.co.kr"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'He does not require some information. 158 Hackers.co.kr'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "does",
+      "Estrada",
+      "mean"
+    ],
+    "vietnameseMeaning": "(D) 168 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_168",
+    "num": 168,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is NOT indicated about Katie's Cupcakes' products?",
+    "options": {
+      "A": "They were promoted in a magazine article.",
+      "B": "Some of them come in low calorie varieties.",
+      "C": "They can be tailored to customers' preferences.",
+      "D": "Some of them are appropriate for diabetics."
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'They were promoted in a magazine article.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "indicated",
+      "Katie",
+      "Cupcakes"
+    ],
+    "vietnameseMeaning": "(A) 169 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_169",
+    "num": 169,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "According to the advertisement, what does Katie's Cupcakes do for its customers?",
+    "options": {
+      "A": "Provides delivery to them for a small fee",
+      "B": "Allows them to taste products for free",
+      "C": "Prints ingredients on packaging materials",
+      "D": "Transports special arrangements to event venues"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Allows them to taste products for free'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "According",
+      "advertisement",
+      "does"
+    ],
+    "vietnameseMeaning": "(B) 170 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_170",
+    "num": 170,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "How can customers get a discount on cupcake arrangements?",
+    "options": {
+      "A": "By attending a sampling session",
+      "B": "By ordering during a specific period",
+      "C": "By submitting a coupon at an establishment",
+      "D": "By answering a customer questionnaire"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'By ordering during a specific period'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "customers",
+      "discount",
+      "cupcake"
+    ],
+    "vietnameseMeaning": "(B) 171 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_171",
+    "num": 171,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In which of the positions marked [1], [2], |j|fe [3], and [4] does the following sentence best belong? \"And for those with dietary restrictions, we offer an array of options.\"",
+    "options": {
+      "A": "[1]",
+      "B": "[2]",
+      "C": "[3]",
+      "D": "[4] GO ON TO THE NEXT PACE,_ TESTS PART 7 159"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) '[2]'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "positions",
+      "marked",
+      "does"
+    ],
+    "vietnameseMeaning": "(B) 172 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_172",
+    "num": 172,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the article mainly about? 174.",
+    "options": {
+      "A": "The launch of a software development firm",
+      "B": "A sale on new video games",
+      "C": "An expansion of a retail chain",
+      "D": "The release of a gaming device"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'An expansion of a retail chain'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "article",
+      "mainly"
+    ],
+    "vietnameseMeaning": "(C) 173 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_173",
+    "num": 173,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is NOT mentioned as a product type that will be sold at the new store?",
+    "options": {
+      "A": "period nj",
+      "B": "relocation o LU (0) swipe",
+      "C": "It is offering a special promotion at its San Diego store.",
+      "D": "change CD 4> O CD a -u a CO o LD O or !>\" Kn j2 nit rid o o o 2d LU X) m fu a. rj' GO ON TO THE NEXT PAGE^ TEST 5 PART 7 161"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'relocation o LU (0) swipe'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "mentioned",
+      "product",
+      "type"
+    ],
+    "vietnameseMeaning": "(B) 174 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_174",
+    "num": 174,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Question 174: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Option A'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(A) 175 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_175",
+    "num": 175,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Question 175: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Option D'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(D) 176 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_176",
+    "num": 176,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Why did Mr. Poison fill in the online contact form?",
+    "options": {
+      "A": "To purchase a computer program",
+      "B": "To request installation assistance",
+      "C": "To put in a work order for photography",
+      "D": "To ask about a home security system"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'To request installation assistance'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Poison",
+      "fill",
+      "online"
+    ],
+    "vietnameseMeaning": "(B) 177 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_177",
+    "num": 177,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is NOT mentioned as a way clients can get assistance from Cyprus Software?",
+    "options": {
+      "A": "Browsing an online forum",
+      "B": "Submitting an online form",
+      "C": "Visiting a branch office",
+      "D": "Using a chat service"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Visiting a branch office'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "mentioned",
+      "clients",
+      "assistance"
+    ],
+    "vietnameseMeaning": "(C) 178 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_178",
+    "num": 178,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is mentioned about Cyprus Software's Web site?",
+    "options": {
+      "A": "A repair program to assist with installation is available there.",
+      "B": "It includes instructional manuals for its products.",
+      "C": "It promotes a number of items currently being offered at a discount.",
+      "D": "Some of Cyprus Software's older products can be found there."
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'A repair program to assist with installation is available there.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "mentioned",
+      "Cyprus",
+      "Software"
+    ],
+    "vietnameseMeaning": "(A) 179 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_179",
+    "num": 179,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Why did the pop-up window probably appear on Mr. Poison's computer?",
+    "options": {
+      "A": "His payment was not accepted by the vendor.",
+      "B": "His operating system is not compatible with the software.",
+      "C": "He typed in a required access code incorrectly.",
+      "D": "He is using an unauthorized version of a program."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'His operating system is not compatible with the software.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "window",
+      "probably",
+      "appear"
+    ],
+    "vietnameseMeaning": "(B) 180 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_180",
+    "num": 180,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is NOT indicated about Cyprus Software?",
+    "options": {
+      "A": "Its programs can be downloaded multiple times.",
+      "B": "It offers on-site service visits via online request.",
+      "C": "Its photo-editing program comes in different versions.",
+      "D": "It can be contacted for assistance 24 hours a day. GO ON TO THE NEXT PAGE TEST 5 PART? 163"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'It offers on-site service visits via online request.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "indicated",
+      "Cyprus",
+      "Software"
+    ],
+    "vietnameseMeaning": "(B) 181 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_181",
+    "num": 181,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is suggested about the Cornwood Condominium Homeowners Association?",
+    "options": {
+      "A": "Its members do not have to pay course fees.",
+      "B": "It is raising funds to build a new pool.",
+      "C": "Its office is located in another building.",
+      "D": "It has arranged several summer activities."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'It has arranged several summer activities.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "suggested",
+      "Cornwood",
+      "Condominium"
+    ],
+    "vietnameseMeaning": "(D) 182 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_182",
+    "num": 182,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is NOT indicated about the swimming lessons?",
+    "options": {
+      "A": "They may sometimes take place at an outdoor pool.",
+      "B": "They are a joint effort of two organizations,",
+      "C": "They include a fee for using the pool.",
+      "D": "They are discounted for members of an athletics club."
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'They may sometimes take place at an outdoor pool.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "indicated",
+      "swimming",
+      "lessons"
+    ],
+    "vietnameseMeaning": "(A) 183 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_183",
+    "num": 183,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does Mr. Carpenter mention about his eldest daughter?",
+    "options": {
+      "A": "She already signed up for class,",
+      "B": "She recently graduated from school.",
+      "C": "She joined a swim team in the past,",
+      "D": "She plans to become an IAC member. GO ON TO THE NEXT PAGE. TEST 5 PART 7 165"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'She joined a swim team in the past,'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "does",
+      "Carpenter",
+      "mention"
+    ],
+    "vietnameseMeaning": "(C) 184 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_184",
+    "num": 184,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Which coach will most likely teach Kristin Carpenter's class?",
+    "options": {
+      "A": "Eric Moss",
+      "B": "Ty Warren",
+      "C": "Kay Sanders",
+      "D": "Liza Simmons"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Ty Warren'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "coach",
+      "most",
+      "likely"
+    ],
+    "vietnameseMeaning": "(B) 185 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_185",
+    "num": 185,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What has Mr. Macaulay been asked to provide?",
+    "options": {
+      "A": "A complete schedule of activities",
+      "B": "Information about a payment method",
+      "C": "The contact details of an instructor",
+      "D": "Directions to a registration desk"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Information about a payment method'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Macaulay",
+      "asked",
+      "provide"
+    ],
+    "vietnameseMeaning": "(B) 186 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_186",
+    "num": 186,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is NOT indicated about the event on May 9?",
+    "options": {
+      "A": "It will start 30 minutes before a performance begins.",
+      "B": "It has a suggested dress code for guests.",
+      "C": "It requires attendees to present invitations.",
+      "D": "It includes a reception with dancers at 8:00 p.m."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'It includes a reception with dancers at 8:00 p.m.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "indicated",
+      "event"
+    ],
+    "vietnameseMeaning": "(D) 187 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_187",
+    "num": 187,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is true about Carlotta's Bistro?",
+    "options": {
+      "A": "It stays open 24 hours a day.",
+      "B": "It is situated near a performance venue.",
+      "C": "It will be catering a reception.",
+      "D": "It provides discounts to theater patrons."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'It is situated near a performance venue.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "true",
+      "Carlotta",
+      "Bistro"
+    ],
+    "vietnameseMeaning": "(B) 188 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_188",
+    "num": 188,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What did Ms. Reid do on May 1 ?",
+    "options": {
+      "A": "Attended a premier performance",
+      "B": "Met with two lead dancers from a show",
+      "C": "Wrote a review of Dance of the Daffodils",
+      "D": "Confirmed her attendance for an event"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Met with two lead dancers from a show'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Reid"
+    ],
+    "vietnameseMeaning": "(B) 189 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_189",
+    "num": 189,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is suggested about Shonda Dixon?",
+    "options": {
+      "A": "She will see Ms, Pinsky perform the role of Princess Daffodil.",
+      "B": "She will contact Fraulein Danza Company about a ticket.",
+      "C": "She does not plan on attending a reception.",
+      "D": "She read a positive review of Dance of the Daffodils."
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'She will see Ms, Pinsky perform the role of Princess Daffodil.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "suggested",
+      "Shonda",
+      "Dixon"
+    ],
+    "vietnameseMeaning": "(A) 190 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_190",
+    "num": 190,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Where did Ms. Pinsky win her first dance award?",
+    "options": {
+      "A": "In Kiev",
+      "B": "In St. Petersburg",
+      "C": "In Moscow",
+      "D": "In London GO ON TO THE NEXT PAGE.. TEST5 PART? 167"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'In St. Petersburg'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Pinsky",
+      "first",
+      "dance"
+    ],
+    "vietnameseMeaning": "(B) 191 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_191",
+    "num": 191,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "For whom is the announcement most likely intended?",
+    "options": {
+      "A": "Parents of young children",
+      "B": "Fans of a theater production",
+      "C": "New and experienced actors",
+      "D": "Staff at a production studio"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'New and experienced actors'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "whom",
+      "announcement",
+      "most"
+    ],
+    "vietnameseMeaning": "(C) 192 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_192",
+    "num": 192,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is mentioned about classes at Dynamic Performance?",
+    "options": {
+      "A": "They were designed by a well-known acting coach.",
+      "B": "Only those who pass an audition can take part in them.",
+      "C": "Floyd Mink receives the applications to register for them.",
+      "D": "They are being offered in the summer for the first time."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Floyd Mink receives the applications to register for them.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "mentioned",
+      "classes",
+      "Dynamic"
+    ],
+    "vietnameseMeaning": "(C) 193 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_193",
+    "num": 193,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "How much was the class Ms. Berger took?",
+    "options": {
+      "A": "$1,800",
+      "B": "$2,250",
+      "C": "$2,500",
+      "D": "$3,495"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) '$3,495'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "much",
+      "class",
+      "Berger"
+    ],
+    "vietnameseMeaning": "(D) 194 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_194",
+    "num": 194,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about Mr. Norris?",
+    "options": {
+      "A": "He gave Dynamic Performance the highest possible rating.",
+      "B": "He joined a program with a group of his friends.",
+      "C": "He took the Spring Intensive class a second time.",
+      "D": "He selected a program based on its positive reviews."
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'He gave Dynamic Performance the highest possible rating.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "indicated",
+      "Norris"
+    ],
+    "vietnameseMeaning": "(A) 195 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_195",
+    "num": 195,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is suggested about Ms. Boyle?",
+    "options": {
+      "A": "She has been in several theatrical productions.",
+      "B": "She paid her tuition fee for a class online.",
+      "C": "She will be taking a course in Charleston.",
+      "D": "She is ineligible for Summer Youth Ensemble. GO ON TO THE NEXT PAGE, TESTS PART 7 169"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'She will be taking a course in Charleston.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "suggested",
+      "Boyle"
+    ],
+    "vietnameseMeaning": "(C) 196 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_196",
+    "num": 196,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is suggested about Ms. Henner?",
+    "options": {
+      "A": "She is willing to consider lower prices than listed.",
+      "B": "She is preparing to remodel her kitchen.",
+      "C": "She purchased all her appliances online.",
+      "D": "She has owned her home for three years."
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'She is willing to consider lower prices than listed.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "suggested",
+      "Henner"
+    ],
+    "vietnameseMeaning": "(A) 197 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_197",
+    "num": 197,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "When did Ms. Henner buy the appliance Mr. Volstead is interested in?",
+    "options": {
+      "A": "Less than a year ago",
+      "B": "One and a halt years ago",
+      "C": "Two years ago",
+      "D": "Three years ago"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'One and a halt years ago'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Henner",
+      "appliance",
+      "Volstead"
+    ],
+    "vietnameseMeaning": "(B) 198 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_198",
+    "num": 198,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "According to Ms. Henner, what information can be found on the Preserve-Mate Web site?",
+    "options": {
+      "A": "A product's exact size",
+      "B": "The price of some merchandise",
+      "C": "A product warranty's conditions",
+      "D": "The availability of a specific model"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'A product's exact size'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "According",
+      "Henner",
+      "information"
+    ],
+    "vietnameseMeaning": "(A) 199 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_199",
+    "num": 199,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "According to the second e-mail, what has Ms. Henner NOT been asked to do?",
+    "options": {
+      "A": "Provide her availability",
+      "B": "Give out contact information",
+      "C": "Tell about a parking situation",
+      "D": "Get a friend to help move an appliance"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Get a friend to help move an appliance'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "According",
+      "second",
+      "mail"
+    ],
+    "vietnameseMeaning": "(D) 200 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t5_200",
+    "num": 200,
+    "source": "Hacker 3 Test 5 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about Mr. Volstead?",
+    "options": {
+      "A": "He will visit Ms. Henner's home during his vacation.",
+      "B": "He will be moving into an apartment on May 31.",
+      "C": "He will hire someone to transport his purchase.",
+      "D": "He will give Ms. Henner $1,300 in cash. This is the end of the test. You may review Part 5, 6, and 7 if you finish the test early. FT ^ p.3E5 / p.327 / oH^ p.361 / Part 5&6 6^ M7| IM * cm miomoii ?ij= spif mau xkAiqi °t|| =01 ikajtu TEST 5 PART 7 171"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'He will give Ms. Henner $1,300 in cash. This is the end of the test. You may review Part 5, 6, and 7 if you finish the test early. FT ^ p.3E5 / p.327 / oH^ p.361 / Part 5&6 6^ M7| IM * cm miomoii ?ij= spif mau xkAiqi °t|| =01 ikajtu TEST 5 PART 7 171'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "indicated",
+      "Volstead"
+    ],
+    "vietnameseMeaning": "(D) PART 5",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 5 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_101",
+    "num": 101,
+    "source": "Hacker 3 Test 6 Part 5",
+    "category": "Ngữ pháp & Thì (Grammar & Tenses)",
+    "question": "Ms. Berkin their invitations for the Outstanding Citizenship Awards Gala last week.",
+    "options": {
+      "A": "sends sent",
+      "B": "Option B",
+      "C": "is sent",
+      "D": "sending"
+    },
+    "correctAnswer": "B",
+    "explanation": "Xét về sự hòa hợp giữa chủ ngữ và thì của câu, động từ (B) 'Option B' chia đúng thì và dạng chủ động/bị động.",
+    "tip": "⚡ MẸO CHIA THÌ: Nhìn dấu hiệu thời gian và xét chủ ngữ số ít/số nhiều để loại trừ các dạng sai thì. Đáp án đúng là (B).",
+    "keywords": [
+      "Berkin",
+      "their",
+      "invitations"
+    ],
+    "vietnameseMeaning": "(B) 102 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t6_102",
+    "num": 102,
+    "source": "Hacker 3 Test 6 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Patients undergoing a complete medical eating examination are asked solid food for 12 hours prior to their appointment.",
+    "options": {
+      "A": "avoid",
+      "B": "to avoid avoiding",
+      "C": "Option C",
+      "D": "avoidably"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'to avoid avoiding'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'to avoid avoiding'.",
+    "keywords": [
+      "Patients",
+      "undergoing",
+      "complete"
+    ],
+    "vietnameseMeaning": "(B) 103 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t6_103",
+    "num": 103,
+    "source": "Hacker 3 Test 6 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Strong winds knocked a tree down on the road and created a potential for speeding motorists.",
+    "options": {
+      "A": "treatment",
+      "B": "hazard",
+      "C": "expectation deliberation",
+      "D": "Option D"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'hazard'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'hazard'.",
+    "keywords": [
+      "Strong",
+      "winds",
+      "knocked"
+    ],
+    "vietnameseMeaning": "(B) 104 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t6_104",
+    "num": 104,
+    "source": "Hacker 3 Test 6 Part 5",
+    "category": "Mệnh đề & Đại từ (Clauses & Pronouns)",
+    "question": "The finance director noticed that the reports had submitted to the board were not the final version.",
+    "options": {
+      "A": "she",
+      "B": "her",
+      "C": "hers",
+      "D": "herself 174 Hackers.co.kr a statement that is missing a word or phrase. Select the best answer and mark the sheet."
+    },
+    "correctAnswer": "A",
+    "explanation": "Đáp án chính xác theo Official Key là (A) 'she'.",
+    "tip": "⚡ MẸO TOEIC: Đọc kỹ ngữ cảnh và loại trừ các đáp án sai ngữ pháp. Chọn (A).",
+    "keywords": [
+      "finance",
+      "director",
+      "noticed"
+    ],
+    "vietnameseMeaning": "(A) 105 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t6_105",
+    "num": 105,
+    "source": "Hacker 3 Test 6 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Local transport regulations permit city buses to have 32 seats for passengers.",
+    "options": {
+      "A": "as for up to",
+      "B": "Option B",
+      "C": "next to",
+      "D": "regardless of"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'Option B'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'Option B'.",
+    "keywords": [
+      "Local",
+      "transport",
+      "regulations"
+    ],
+    "vietnameseMeaning": "(B) 106 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t6_106",
+    "num": 106,
+    "source": "Hacker 3 Test 6 Part 5",
+    "category": "Ngữ pháp & Thì (Grammar & Tenses)",
+    "question": "In response to the feedback that her manuscript was too lengthy, author Dawn Wentz the number of pages.",
+    "options": {
+      "A": "reduction",
+      "B": "reduce reduced",
+      "C": "Option C",
+      "D": "are reducing"
+    },
+    "correctAnswer": "C",
+    "explanation": "Xét về sự hòa hợp giữa chủ ngữ và thì của câu, động từ (C) 'Option C' chia đúng thì và dạng chủ động/bị động.",
+    "tip": "⚡ MẸO CHIA THÌ: Nhìn dấu hiệu thời gian và xét chủ ngữ số ít/số nhiều để loại trừ các dạng sai thì. Đáp án đúng là (C).",
+    "keywords": [
+      "response",
+      "feedback",
+      "manuscript"
+    ],
+    "vietnameseMeaning": "(C) 107 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t6_107",
+    "num": 107,
+    "source": "Hacker 3 Test 6 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Zoo-Croft Fashion's corporate income and expense documents were delivered to the outside accountant to get an unbiased financial",
+    "options": {
+      "A": "analysis",
+      "B": "analyst analyzed",
+      "C": "Option C",
+      "D": "analyze"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'analysis'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'analysis'.",
+    "keywords": [
+      "Croft",
+      "Fashion",
+      "corporate"
+    ],
+    "vietnameseMeaning": "(A) 108 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t6_108",
+    "num": 108,
+    "source": "Hacker 3 Test 6 Part 5",
+    "category": "Từ loại (Word Form)",
+    "question": "Mr. Cantrell realized he had overbilled the client and contacted her to explain the error.",
+    "options": {
+      "A": "prompt",
+      "B": "prompted",
+      "C": "promptly prompts",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Căn cứ vào ngữ pháp câu, vị trí cần điền đóng vai trò từ loại phù hợp trong mệnh đề. Chọn đáp án (C) 'promptly prompts' để hoàn chỉnh cấu trúc ngữ pháp.",
+    "tip": "⚡ MẸO TỪ LOẠI: Xác định vị trí chỗ trống đứng sau từ loại gì (danh từ, động từ, tính từ hay trạng từ) để chọn đuôi hậu tố chính xác. Đáp án đúng là (C).",
+    "keywords": [
+      "Cantrell",
+      "realized",
+      "overbilled"
+    ],
+    "vietnameseMeaning": "(C) 109 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t6_109",
+    "num": 109,
+    "source": "Hacker 3 Test 6 Part 5",
+    "category": "Ngữ pháp & Thì (Grammar & Tenses)",
+    "question": "According to the survey, a greater number 115. Southern Mutual Insurance to residents than ever before in the sign up for long-term plans as they have of city's recycling program. lower rates.",
+    "options": {
+      "A": "was encouraged are participating",
+      "B": "Option B",
+      "C": "encourages",
+      "D": "is encouraged offered"
+    },
+    "correctAnswer": "B",
+    "explanation": "Xét về sự hòa hợp giữa chủ ngữ và thì của câu, động từ (B) 'Option B' chia đúng thì và dạng chủ động/bị động.",
+    "tip": "⚡ MẸO CHIA THÌ: Nhìn dấu hiệu thời gian và xét chủ ngữ số ít/số nhiều để loại trừ các dạng sai thì. Đáp án đúng là (B).",
+    "keywords": [
+      "According",
+      "survey",
+      "greater"
+    ],
+    "vietnameseMeaning": "(B) 110 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t6_110",
+    "num": 110,
+    "source": "Hacker 3 Test 6 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Just one day after announcing that a new 116. The Loughton Youth Club to factory would be opened, KerbCo Manufacturing received applications for jobs.",
+    "options": {
+      "A": "several",
+      "B": "none",
+      "C": "every",
+      "D": "each"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'several'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'several'.",
+    "keywords": [
+      "Just",
+      "after",
+      "announcing"
+    ],
+    "vietnameseMeaning": "(A) 111 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t6_111",
+    "num": 111,
+    "source": "Hacker 3 Test 6 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "After three months of intense negotiations, for the construction of new power signed. plants were",
+    "options": {
+      "A": "agreed",
+      "B": "agreeable",
+      "C": "agreements",
+      "D": "agreeably"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'agreements'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'agreements'.",
+    "keywords": [
+      "After",
+      "three",
+      "months"
+    ],
+    "vietnameseMeaning": "(C) 112 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t6_112",
+    "num": 112,
+    "source": "Hacker 3 Test 6 Part 5",
+    "category": "Ngữ pháp & Thì (Grammar & Tenses)",
+    "question": "Reviews of the Mardison Hotel chain's updated business centers are positive. overwhelming",
+    "options": {
+      "A": "Option A",
+      "B": "overwhelmingly",
+      "C": "overwhelmed",
+      "D": "overwhelm is"
+    },
+    "correctAnswer": "B",
+    "explanation": "Xét về sự hòa hợp giữa chủ ngữ và thì của câu, động từ (B) 'overwhelmingly' chia đúng thì và dạng chủ động/bị động.",
+    "tip": "⚡ MẸO CHIA THÌ: Nhìn dấu hiệu thời gian và xét chủ ngữ số ít/số nhiều để loại trừ các dạng sai thì. Đáp án đúng là (B).",
+    "keywords": [
+      "Reviews",
+      "Mardison",
+      "Hotel"
+    ],
+    "vietnameseMeaning": "(B) 113 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t6_113",
+    "num": 113,
+    "source": "Hacker 3 Test 6 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Mr. Holden's outgoing beneficial to him as his job requires a of networking lot and socializing.",
+    "options": {
+      "A": "person personality",
+      "B": "Option B",
+      "C": "personable",
+      "D": "personally"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'Option B'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'Option B'.",
+    "keywords": [
+      "Holden",
+      "outgoing",
+      "beneficial"
+    ],
+    "vietnameseMeaning": "(B) 114 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t6_114",
+    "num": 114,
+    "source": "Hacker 3 Test 6 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Mr. Henry gave his staff additional training on the new office policy, but several of them were still",
+    "options": {
+      "A": "manually g",
+      "B": "arguably suggestively",
+      "C": "o",
+      "D": "generously r\\j o"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'arguably suggestively'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'arguably suggestively'.",
+    "keywords": [
+      "Henry",
+      "gave",
+      "staff"
+    ],
+    "vietnameseMeaning": "(B) 115 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t6_115",
+    "num": 115,
+    "source": "Hacker 3 Test 6 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Question 115: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) ' '.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) ' '.",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(C) 116 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t6_116",
+    "num": 116,
+    "source": "Hacker 3 Test 6 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Question 116: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'Option D'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'Option D'.",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(D) 117 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t6_117",
+    "num": 117,
+    "source": "Hacker 3 Test 6 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Mr. Pullman has asked for time to LU turn in his report because he requires o •£- some additional information. O",
+    "options": {
+      "A": "any LTI",
+      "B": "a few",
+      "C": "more many o",
+      "D": "Lee's Senator o"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'more many o'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'more many o'.",
+    "keywords": [
+      "Pullman",
+      "asked",
+      "time"
+    ],
+    "vietnameseMeaning": "(C) 118 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t6_118",
+    "num": 118,
+    "source": "Hacker 3 Test 6 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Mayor David introduction of CO Laura Moncton her speech, giving o an overview of her track record of political LD reforms. o",
+    "options": {
+      "A": "required",
+      "B": "preceded or 3 D-",
+      "C": "performed j° Kn accomplished",
+      "D": "Kt r* o o sales o"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'preceded or 3 D-'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'preceded or 3 D-'.",
+    "keywords": [
+      "Mayor",
+      "David",
+      "introduction"
+    ],
+    "vietnameseMeaning": "(B) 119 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t6_119",
+    "num": 119,
+    "source": "Hacker 3 Test 6 Part 5",
+    "category": "Liên từ (Conjunctions)",
+    "question": "Album for rock band Trifecta have been low their concert tickets have LU 73 been selling out. DJ a. Z3 OQ",
+    "options": {
+      "A": "if only",
+      "B": "as long as",
+      "C": "even though",
+      "D": "provided that nhi Tn mpvt r*r\\ UU Ur/ IU TUP /nc /VcA / PA HP TEST6 PARTS 175"
+    },
+    "correctAnswer": "C",
+    "explanation": "Liên từ (C) 'even though' dùng để liên kết hai mệnh đề biểu thị mối quan hệ logic chính xác.",
+    "tip": "⚡ MẸO LIÊN TỪ: Phân biệt rõ liên từ (theo sau là mệnh đề S + V) và giới từ (theo sau là N/V-ing). Chọn (C).",
+    "keywords": [
+      "Album",
+      "rock",
+      "band"
+    ],
+    "vietnameseMeaning": "(C) 120 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t6_120",
+    "num": 120,
+    "source": "Hacker 3 Test 6 Part 5",
+    "category": "Từ loại (Word Form)",
+    "question": "Ms. Davies could only hear what 126. Due to their limited experience in Asia, executives made the choice was discussed since the restaurant KDM's chosen for the meeting was so noisy. to collaborate with a well-established firm in the region.",
+    "options": {
+      "A": "Option A",
+      "B": "sensing",
+      "C": "sensible",
+      "D": "sensibly"
+    },
+    "correctAnswer": "A",
+    "explanation": "Căn cứ vào ngữ pháp câu, vị trí cần điền đóng vai trò từ loại phù hợp trong mệnh đề. Chọn đáp án (A) 'Option A' để hoàn chỉnh cấu trúc ngữ pháp.",
+    "tip": "⚡ MẸO TỪ LOẠI: Xác định vị trí chỗ trống đứng sau từ loại gì (danh từ, động từ, tính từ hay trạng từ) để chọn đuôi hậu tố chính xác. Đáp án đúng là (A).",
+    "keywords": [
+      "Davies",
+      "could",
+      "only"
+    ],
+    "vietnameseMeaning": "(A) 121 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t6_121",
+    "num": 121,
+    "source": "Hacker 3 Test 6 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "There were malfunctions with the agency's updated software, so management decided to use the old version temporarily.",
+    "options": {
+      "A": "competent",
+      "B": "cautious",
+      "C": "persistent",
+      "D": "imperative an emergency, an"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'persistent'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'persistent'.",
+    "keywords": [
+      "There",
+      "were",
+      "malfunctions"
+    ],
+    "vietnameseMeaning": "(C) 122 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t6_122",
+    "num": 122,
+    "source": "Hacker 3 Test 6 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "In alarm in Hamley Towers will sound, indicating that everyone the inside must building immediately. oppose",
+    "options": {
+      "A": "Option A",
+      "B": "dismiss",
+      "C": "vacate",
+      "D": "assemble"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'vacate'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'vacate'.",
+    "keywords": [
+      "alarm",
+      "Hamley",
+      "Towers"
+    ],
+    "vietnameseMeaning": "(C) 123 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t6_123",
+    "num": 123,
+    "source": "Hacker 3 Test 6 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The accommodations at the Grandview seemed less than when Hotel compared to the attractive, reasonably priced options in town.",
+    "options": {
+      "A": "desirable",
+      "B": "responsible",
+      "C": "extensive",
+      "D": "unlimited"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'desirable'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'desirable'.",
+    "keywords": [
+      "accommodations",
+      "Grandview",
+      "seemed"
+    ],
+    "vietnameseMeaning": "(A) 124 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t6_124",
+    "num": 124,
+    "source": "Hacker 3 Test 6 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Madsen Industries' new microwave ovens high-quality are now available kitchen appliances are sold.",
+    "options": {
+      "A": "by the time",
+      "B": "as soon as wherever",
+      "C": "Option C",
+      "D": "throughout"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'Option C'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'Option C'.",
+    "keywords": [
+      "Madsen",
+      "Industries",
+      "microwave"
+    ],
+    "vietnameseMeaning": "(C) 125 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t6_125",
+    "num": 125,
+    "source": "Hacker 3 Test 6 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The sequel to last year's film Galactic Express made $400 million worldwide, is more than the first movie earned.",
+    "options": {
+      "A": "this",
+      "B": "what",
+      "C": "whose which",
+      "D": "176 my SojUAf ^ eoiopl MP3 Hackerslngang.com • named"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) '176 my SojUAf ^ eoiopl MP3 Hackerslngang.com • named'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) '176 my SojUAf ^ eoiopl MP3 Hackerslngang.com • named'.",
+    "keywords": [
+      "sequel",
+      "last",
+      "year"
+    ],
+    "vietnameseMeaning": "(D) 126 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t6_126",
+    "num": 126,
+    "source": "Hacker 3 Test 6 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Question 126: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) ' '.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) ' '.",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(C) 127 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t6_127",
+    "num": 127,
+    "source": "Hacker 3 Test 6 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The media have several medications that can be dangerous when taken without a doctor's prescription.",
+    "options": {
+      "A": "inconveniently",
+      "B": "expressly",
+      "C": "supportively",
+      "D": "comparably"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'expressly'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'expressly'.",
+    "keywords": [
+      "media",
+      "several",
+      "medications"
+    ],
+    "vietnameseMeaning": "(B) 128 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t6_128",
+    "num": 128,
+    "source": "Hacker 3 Test 6 Part 5",
+    "category": "Ngữ pháp & Thì (Grammar & Tenses)",
+    "question": "Jessup Inc. chose Bill Torres to represent his the firm in an upcoming meeting success in past negotiations.",
+    "options": {
+      "A": "likewise",
+      "B": "instead of",
+      "C": "apart from",
+      "D": "given The machinery Templex's factory has"
+    },
+    "correctAnswer": "D",
+    "explanation": "Xét về sự hòa hợp giữa chủ ngữ và thì của câu, động từ (D) 'given The machinery Templex's factory has' chia đúng thì và dạng chủ động/bị động.",
+    "tip": "⚡ MẸO CHIA THÌ: Nhìn dấu hiệu thời gian và xét chủ ngữ số ít/số nhiều để loại trừ các dạng sai thì. Đáp án đúng là (D).",
+    "keywords": [
+      "Jessup",
+      "chose",
+      "Bill"
+    ],
+    "vietnameseMeaning": "(D) 129 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t6_129",
+    "num": 129,
+    "source": "Hacker 3 Test 6 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "in become so outdated that funds have been to purchase new ones. exempted",
+    "options": {
+      "A": "Option A",
+      "B": "hosted",
+      "C": "conducted",
+      "D": "designated"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'designated'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'designated'.",
+    "keywords": [
+      "become",
+      "outdated",
+      "funds"
+    ],
+    "vietnameseMeaning": "(D) 130 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t6_130",
+    "num": 130,
+    "source": "Hacker 3 Test 6 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The manager did his best to make decisions that took the finance division members' suggestions into",
+    "options": {
+      "A": "recommendation",
+      "B": "calculation",
+      "C": "appliance",
+      "D": "consideration"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'consideration'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'consideration'.",
+    "keywords": [
+      "manager",
+      "best",
+      "make"
+    ],
+    "vietnameseMeaning": "(D) 131 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t6_131",
+    "num": 131,
+    "source": "Hacker 3 Test 6 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 131: Refer to the test material.",
+    "options": {
+      "A": "expertise",
+      "B": "volunteering",
+      "C": "establishment",
+      "D": "contribution"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'contribution'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(D) 132 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t6_132",
+    "num": 132,
+    "source": "Hacker 3 Test 6 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 132: Refer to the test material.",
+    "options": {
+      "A": "assess",
+      "B": "restore",
+      "C": "promote",
+      "D": "place"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'promote'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(C) 133 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t6_133",
+    "num": 133,
+    "source": "Hacker 3 Test 6 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 133: Refer to the test material.",
+    "options": {
+      "A": "Due to",
+      "B": "As",
+      "C": "By",
+      "D": "Even if"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'As'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(B) 134 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t6_134",
+    "num": 134,
+    "source": "Hacker 3 Test 6 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Thank you again for your ongoing financial support of our organization. Kindest regards, Marianne Lexington Program coordinator, The NewEd Foundation",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Option A'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "Thank",
+      "again",
+      "your"
+    ],
+    "vietnameseMeaning": "(A) 135 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t6_135",
+    "num": 135,
+    "source": "Hacker 3 Test 6 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "expected within the week. I have yet to receive a call from the delivery person, I suppose I won't get my furniture until next week. When the delivery comes, could you please sign for me and then call",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "expected",
+      "within",
+      "week"
+    ],
+    "vietnameseMeaning": "(C) 136 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t6_136",
+    "num": 136,
+    "source": "Hacker 3 Test 6 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 136: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Option D'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(D) 137 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t6_137",
+    "num": 137,
+    "source": "Hacker 3 Test 6 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Mike Flarrison in the maintenance division? Fle's responsible for putting furniture together and removing items, so he will get everything set up in my workspace.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Mike",
+      "Flarrison",
+      "maintenance"
+    ],
+    "vietnameseMeaning": "(C) 138 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t6_138",
+    "num": 138,
+    "source": "Hacker 3 Test 6 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Thanks a lot. Takeshi",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Option B'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Thanks",
+      "Takeshi"
+    ],
+    "vietnameseMeaning": "(B) 139 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t6_139",
+    "num": 139,
+    "source": "Hacker 3 Test 6 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "have asked Terrence Howard's team to provide some details related to specific increases in maintenance expenses. Also, I am quite surprised that certain project ----- have not been met. Lastly, inventory levels are currently lower than projected, I would like to set up a",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Option B'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "asked",
+      "Terrence",
+      "Howard"
+    ],
+    "vietnameseMeaning": "(B) 140 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t6_140",
+    "num": 140,
+    "source": "Hacker 3 Test 6 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 140: Refer to the test material.",
+    "options": {
+      "A": "objected",
+      "B": "objectively",
+      "C": "object",
+      "D": "objectives"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'objectives'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(D) 141 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t6_141",
+    "num": 141,
+    "source": "Hacker 3 Test 6 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "meeting with Carmine Gosford's group to discuss our ----- for managing inventory going",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "meeting",
+      "Carmine",
+      "Gosford"
+    ],
+    "vietnameseMeaning": "(C) 142 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t6_142",
+    "num": 142,
+    "source": "Hacker 3 Test 6 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "forward. We will be doing other performance reviews throughout the year, and I hope that this will help us become a more efficient and productive department.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "forward",
+      "doing",
+      "other"
+    ],
+    "vietnameseMeaning": "(C) 143 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t6_143",
+    "num": 143,
+    "source": "Hacker 3 Test 6 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 143: Refer to the test material.",
+    "options": {
+      "A": "examination",
+      "B": "interview",
+      "C": "assignment",
+      "D": "investigation"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'interview'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(B) 144 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t6_144",
+    "num": 144,
+    "source": "Hacker 3 Test 6 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 144: Refer to the test material.",
+    "options": {
+      "A": "valid",
+      "B": "inaccurate",
+      "C": "optimistic",
+      "D": "secretive"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'valid'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(A) 145 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t6_145",
+    "num": 145,
+    "source": "Hacker 3 Test 6 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "are relevant to the position. , we will talk about what your responsibilities will be should",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Option B'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "relevant",
+      "position",
+      "talk"
+    ],
+    "vietnameseMeaning": "(B) 146 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t6_146",
+    "num": 146,
+    "source": "Hacker 3 Test 6 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "you get the job. Please respond to this e-mail to confirm your availability. We look forward to meeting with you Sincerest regards, Lara Smith Hiring manager, LPR Analytics",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Option A'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "Please",
+      "respond",
+      "mail"
+    ],
+    "vietnameseMeaning": "(A) 147 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t6_147",
+    "num": 147,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Why was the advertisement written?",
+    "options": {
+      "A": "To advertise a Web page design service",
+      "B": "To promote some recently updated software",
+      "C": "To publicize a course at an establishment",
+      "D": "To encourage enrollment in an online class"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'To publicize a course at an establishment'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "advertisement",
+      "written"
+    ],
+    "vietnameseMeaning": "(C) 148 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_148",
+    "num": 148,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What will Richard Hernandez discuss?",
+    "options": {
+      "A": "Making effective presentations",
+      "B": "Studying literary classics",
+      "C": "Writing informative speeches",
+      "D": "Repairing electronic devices GO ON TO THE NEXT PAGE. TESTS PART 7 181"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Making effective presentations'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "Richard",
+      "Hernandez",
+      "discuss"
+    ],
+    "vietnameseMeaning": "(A) 149 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_149",
+    "num": 149,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "At 10:36 a.m., what does Ms. Flores mean f||| when she writes, \"It shouldn't be an issue\"?",
+    "options": {
+      "A": "She is pleased with the progress of the product launch.",
+      "B": "She cannot deal with an urgent problem.",
+      "C": "She will call back some coworkers.",
+      "D": "She is capable of managing a discussion alone."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'She is capable of managing a discussion alone.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "does",
+      "Flores",
+      "mean"
+    ],
+    "vietnameseMeaning": "(D) 150 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_150",
+    "num": 150,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What has Ms. Flores been asked to prepare?",
+    "options": {
+      "A": "Some product samples",
+      "B": "Videos from an event",
+      "C": "Some business documents",
+      "D": "A list of potential clients 182 ifSBWSHaSMJlg Hackers.co.kr"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Some business documents'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Flores",
+      "asked",
+      "prepare"
+    ],
+    "vietnameseMeaning": "(C) 151 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_151",
+    "num": 151,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What type of company most likely is Harwood Services?",
+    "options": {
+      "A": "A beverage manufacturer",
+      "B": "A wedding planning business",
+      "C": "A catering company",
+      "D": "A fresh produce supplier"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'A catering company'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "type",
+      "company",
+      "most"
+    ],
+    "vietnameseMeaning": "(C) 152 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_152",
+    "num": 152,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about the Indiana Agricultural Subsidy Seminar?",
+    "options": {
+      "A": "It featured two complete meal services.",
+      "B": "It included more than one intermission.",
+      "C": "It was not charged extra for service or preparation staff.",
+      "D": "It was attended by less individuals than expected. GO ON TO THE NEXT PAGE^ TEST 6 PART? 183"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'It included more than one intermission.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "indicated",
+      "Indiana",
+      "Agricultural"
+    ],
+    "vietnameseMeaning": "(B) 153 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_153",
+    "num": 153,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is being announced in the memo?",
+    "options": {
+      "A": "An executive change for a company division",
+      "B": "A firm's operational plan",
+      "C": "A temporary supervisory staffing change",
+      "D": "An available managerial position 184 ¥SSst?!i!sejH°)iuhE.K)(°f7®si90|°p|MP3 Hackerslngang.com"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'An executive change for a company division'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "being",
+      "announced",
+      "memo"
+    ],
+    "vietnameseMeaning": "(A) 154 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_154",
+    "num": 154,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What did Mr. Mikkola do for Thumston International?",
+    "options": {
+      "A": "Expanded its offices in various locations",
+      "B": "Formed stronger international partnerships",
+      "C": "Increased total customer numbers",
+      "D": "Helped it adopt new technology"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Formed stronger international partnerships'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Mikkola",
+      "Thumston",
+      "International"
+    ],
+    "vietnameseMeaning": "(B) 155 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_155",
+    "num": 155,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In what industry is Thumston International most likely involved?",
+    "options": {
+      "A": "Technical staff recruitment",
+      "B": "Global financial investments",
+      "C": "Computer hardware marketing",
+      "D": "Corporate advisory services"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Corporate advisory services'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "industry",
+      "Thumston",
+      "International"
+    ],
+    "vietnameseMeaning": "(D) 156 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_156",
+    "num": 156,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does the article indicate about the Los Ramos Art Council?",
+    "options": {
+      "A": "It will host a series of cooking courses.",
+      "B": "It organizes a community festival.",
+      "C": "It offers financial assistance to local craftspeople.",
+      "D": "It is affiliated with a national organization."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'It organizes a community festival.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "does",
+      "article",
+      "indicate"
+    ],
+    "vietnameseMeaning": "(B) 157 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_157",
+    "num": 157,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What will take place on July 13?",
+    "options": {
+      "A": "A festival in a downtown area will be canceled.",
+      "B": "A group will play some music during a celebration.",
+      "C": "A list of vendors will be distributed to visitors.",
+      "D": "A short talk will be given by an LRAC representative. GO ON TO THE NEXT PAGE. TEST 6 PART? 185"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'A group will play some music during a celebration.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "take",
+      "place",
+      "July"
+    ],
+    "vietnameseMeaning": "(B) 158 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_158",
+    "num": 158,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is suggested about Ms. Traynor?",
+    "options": {
+      "A": "She was promoted to copy editor.",
+      "B": "She is creating a new layout design for a magazine.",
+      "C": "She is responsible for checking articles prior to publication.",
+      "D": "She writes feature stories for a local newspaper."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'She is responsible for checking articles prior to publication.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "suggested",
+      "Traynor"
+    ],
+    "vietnameseMeaning": "(C) 159 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_159",
+    "num": 159,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is Ms. Traynor supposed to do at Mariano's?",
+    "options": {
+      "A": "Review next month's stories",
+      "B": "Meet with Tim about upcoming issues",
+      "C": "Have a work-lunch with Sarah",
+      "D": "Talk about sources with Greg"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Have a work-lunch with Sarah'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Traynor",
+      "supposed",
+      "Mariano"
+    ],
+    "vietnameseMeaning": "(C) 160 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_160",
+    "num": 160,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Why will Ms. Traynor contact Peter?",
+    "options": {
+      "A": "To set up a meeting",
+      "B": "To offer feedback on an article",
+      "C": "To respond to his e-mail",
+      "D": "To report an appointment cancellation 186 sans-sagMJig Hackers.co.kr"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'To set up a meeting'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "Traynor",
+      "contact",
+      "Peter"
+    ],
+    "vietnameseMeaning": "(A) 161 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_161",
+    "num": 161,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Who most likely is Fatima Sukarno?",
+    "options": {
+      "A": "A distribution firm executive",
+      "B": "A travel agent",
+      "C": "A factory representative",
+      "D": "A beauty item salesperson"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'A factory representative'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "most",
+      "likely",
+      "Fatima"
+    ],
+    "vietnameseMeaning": "(C) 162 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_162",
+    "num": 162,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is mentioned about Vert-Bleu Beauty?",
+    "options": {
+      "A": "Its headquarters is located in Jakarta.",
+      "B": "It plans to build its own manufacturing plant.",
+      "C": "It follows strict production guidelines.",
+      "D": "It is unprepared for an upcoming inspection."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'It follows strict production guidelines.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "mentioned",
+      "Vert",
+      "Bleu"
+    ],
+    "vietnameseMeaning": "(C) 163 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_163",
+    "num": 163,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In which of the positions marked [1], [2], |||| [3], and [4] does the following sentence best belong? \"This will also help you get a better idea of our needs and vice versa.\"",
+    "options": {
+      "A": "[1]",
+      "B": "[2]",
+      "C": "[3]",
+      "D": "[4] GO ON TO THE NEXT PAGE. TEST 6 PART 7 187"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) '[1]'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "positions",
+      "marked",
+      "does"
+    ],
+    "vietnameseMeaning": "(A) 164 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_164",
+    "num": 164,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the online chat mainly about?",
+    "options": {
+      "A": "Adjustments for a change of operations",
+      "B": "The reassignment of job duties",
+      "C": "Advantages of a corporate merger",
+      "D": "A visit to a new office building"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Adjustments for a change of operations'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "online",
+      "chat",
+      "mainly"
+    ],
+    "vietnameseMeaning": "(A) 165 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_165",
+    "num": 165,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What are some personnel required to do?",
+    "options": {
+      "A": "Contact a list of clients",
+      "B": "Revise some company policies",
+      "C": "Relocate to a different office",
+      "D": "Arrange a warehouse visit"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Relocate to a different office'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "some",
+      "personnel",
+      "required"
+    ],
+    "vietnameseMeaning": "(C) 166 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_166",
+    "num": 166,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In what department does Mr, Mason most likely work?",
+    "options": {
+      "A": "Human Resources",
+      "B": "Administration",
+      "C": "Marketing",
+      "D": "Shipping"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Shipping'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "department",
+      "does",
+      "Mason"
+    ],
+    "vietnameseMeaning": "(D) 167 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_167",
+    "num": 167,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "At 3:47, what does Ms. Gatineau most likely mean when she writes, \"That makes sense\"?",
+    "options": {
+      "A": "She agrees that some workers will need to attend a class.",
+      "B": "Her knowledge of meat products could be improved.",
+      "C": "She is willing to consider proposals to expand a product line.",
+      "D": "Her team can organize a welcoming event for new staff members. 188 a^UTAt. E!0)°p|9 % 90i?PI MP3 Hackerslngang.com"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'She agrees that some workers will need to attend a class.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "does",
+      "Gatineau",
+      "most"
+    ],
+    "vietnameseMeaning": "(A) 168 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_168",
+    "num": 168,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is stated about Starting Up?",
+    "options": {
+      "A": "It is on an international best-seller list.",
+      "B": "It motivated Mr. Lawman to pursue a career in business.",
+      "C": "It is about the career of an entrepreneur.",
+      "D": "It was published prior to the opening of Swift Enterprises."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'It is about the career of an entrepreneur.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "stated",
+      "Starting"
+    ],
+    "vietnameseMeaning": "(C) 169 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_169",
+    "num": 169,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is mentioned about Swift World?",
+    "options": {
+      "A": "It was developed in collaboration with a partner.",
+      "B": "It has seen its sales levels decline in recent years.",
+      "C": "It carries a wide selection of used sports products.",
+      "D": "It expanded globally after opening in Seattle."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'It expanded globally after opening in Seattle.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "mentioned",
+      "Swift",
+      "World"
+    ],
+    "vietnameseMeaning": "(D) 170 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_170",
+    "num": 170,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is suggested about Ms. Schubert?",
+    "options": {
+      "A": "She has an educational background in marketing.",
+      "B": "She went to university with Mr. Lawman.",
+      "C": "She experienced success in retailing shoes,",
+      "D": "She plans to increase the number of her company's branches."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'She experienced success in retailing shoes,'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "suggested",
+      "Schubert"
+    ],
+    "vietnameseMeaning": "(C) 171 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_171",
+    "num": 171,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In which of the positions marked [1], [2], |||| [3], and [4] does the following sentence best belong? \"However, she learned quickly that idea creation alone was simply not enough to bring a product to market.\"",
+    "options": {
+      "A": "[1]",
+      "B": "[2]",
+      "C": "[3]",
+      "D": "[4] GO ON TO THE NEXT PAGE. TEST B PART 7 189"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) '[2]'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "positions",
+      "marked",
+      "does"
+    ],
+    "vietnameseMeaning": "(B) 172 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_172",
+    "num": 172,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Where would the article most likely appear?",
+    "options": {
+      "A": "In a library brochure",
+      "B": "In a history text book",
+      "C": "In a travel magazine",
+      "D": "In a company newsletter"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'In a travel magazine'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "article",
+      "most",
+      "likely"
+    ],
+    "vietnameseMeaning": "(C) 173 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_173",
+    "num": 173,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does the article suggest about Chengdu?",
+    "options": {
+      "A": "It has a large Tibetan population.",
+      "B": "It needs more tour agencies for international visitors.",
+      "C": "It hosts many professional meetings.",
+      "D": "It attracts more travelers than other nearby cities."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'It hosts many professional meetings.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "does",
+      "article",
+      "suggest"
+    ],
+    "vietnameseMeaning": "(C) 174 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_174",
+    "num": 174,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "The word \"overshadowed\" in paragraph 1, line 1, is closest in meaning to",
+    "options": {
+      "A": "enclosed",
+      "B": "dominated",
+      "C": "modified",
+      "D": "governed"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'dominated'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "word",
+      "overshadowed",
+      "paragraph"
+    ],
+    "vietnameseMeaning": "(B) 175 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_175",
+    "num": 175,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is NOT mentioned as an activity tourists can do?",
+    "options": {
+      "A": "Trying the food in a nearby town",
+      "B": "Taking a train to a mountain area",
+      "C": "Observing animals with a tour guide",
+      "D": "Traveling to a historic area by bus GO ON TO THE NEXT PAGE, TEST 6 PART 7 191"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Taking a train to a mountain area'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "mentioned",
+      "activity",
+      "tourists"
+    ],
+    "vietnameseMeaning": "(B) 176 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_176",
+    "num": 176,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is stated about Sunfield Limousines in the advertisement?",
+    "options": {
+      "A": "The driving area is restricted to suburban towns.",
+      "B": "Different types of vehicles are available to clients.",
+      "C": "Limousines can only be booked during certain seasons.",
+      "D": "Services are not provided on national holidays."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Different types of vehicles are available to clients.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "stated",
+      "Sunfield",
+      "Limousines"
+    ],
+    "vietnameseMeaning": "(B) 177 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_177",
+    "num": 177,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is Sunfield Limousines now offering?",
+    "options": {
+      "A": "A program for mobile devices",
+      "B": "Complimentary phone consultations",
+      "C": "Coupon books for returning customers",
+      "D": "A worldwide service"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'A program for mobile devices'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "Sunfield",
+      "Limousines",
+      "offering"
+    ],
+    "vietnameseMeaning": "(A) 178 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_178",
+    "num": 178,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "How did Mr. Puccini most likely make his reservation?",
+    "options": {
+      "A": "By telephone",
+      "B": "In person at a store",
+      "C": "On a Web site",
+      "D": "Through a friend"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'On a Web site'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Puccini",
+      "most",
+      "likely"
+    ],
+    "vietnameseMeaning": "(C) 179 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_179",
+    "num": 179,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What occurred on December 10?",
+    "options": {
+      "A": "The Sunfield Limousines company sent a driver to the incorrect location.",
+      "B": "Mr. Puccini's clients were unable to reach an airport in time for a flight.",
+      "C": "Mr, Karrington's staff did not respond to telephone calls from visitors.",
+      "D": "The driver offered a small discount on driving services to make up for an"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'The Sunfield Limousines company sent a driver to the incorrect location.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "occurred",
+      "December"
+    ],
+    "vietnameseMeaning": "(A) 180 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_180",
+    "num": 180,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about Mr. Puccini?",
+    "options": {
+      "A": "He made a reservation on Saturday.",
+      "B": "He has no time in his schedule to meet some arriving guests.",
+      "C": "He came to an agreement with some corporate investors.",
+      "D": "He will not use Sunfield for the return trip. GO ON TO THE NEXT PAGE^ TEST B PART? 193"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'He will not use Sunfield for the return trip. GO ON TO THE NEXT PAGE^ TEST B PART? 193'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "indicated",
+      "Puccini"
+    ],
+    "vietnameseMeaning": "(D) 181 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_181",
+    "num": 181,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "For whom is the notice most likely intended?",
+    "options": {
+      "A": "Staff members at a bank",
+      "B": "A team of maintenance crew members",
+      "C": "A financial institution's clients",
+      "D": "A company's software developers"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'A financial institution's clients'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "whom",
+      "notice",
+      "most"
+    ],
+    "vietnameseMeaning": "(C) 182 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_182",
+    "num": 182,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is stated about the upcoming maintenance work?",
+    "options": {
+      "A": "It is carried out on all bank systems on a monthly basis.",
+      "B": "It will not affect the operation of automated teller machines.",
+      "C": "It will take an entire day for technicians to complete it.",
+      "D": "An outside service team has been hired to deal with it."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'It will not affect the operation of automated teller machines.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "stated",
+      "upcoming",
+      "maintenance"
+    ],
+    "vietnameseMeaning": "(B) 183 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_183",
+    "num": 183,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What most likely is Datup Solutions?",
+    "options": {
+      "A": "A computer repair center",
+      "B": "A corporate equipment retailer",
+      "C": "An information technology company",
+      "D": "A conference organizer"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'An information technology company'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "most",
+      "likely",
+      "Datup"
+    ],
+    "vietnameseMeaning": "(C) 184 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_184",
+    "num": 184,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is mentioned about Datup Solutions?",
+    "options": {
+      "A": "It offers free assessments to clients using its maintenance programs,",
+      "B": "It is developing an operating system for computers.",
+      "C": "It regularly participates in technology conferences.",
+      "D": "It has an online retailer as a client."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'It has an online retailer as a client.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "mentioned",
+      "Datup",
+      "Solutions"
+    ],
+    "vietnameseMeaning": "(D) 185 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_185",
+    "num": 185,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does Mr. Richards want to do?",
+    "options": {
+      "A": "Dispatch an assistant to perform an inspection",
+      "B": "Meet with Mr. Black sometime before May 22",
+      "C": "Hold a conference call on the coming Thursday",
+      "D": "Send a job application form to County Line Bank's headquarters GO ON TO THE NEXT PAGE, TEST 6 PART 7 195"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Meet with Mr. Black sometime before May 22'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "does",
+      "Richards",
+      "want"
+    ],
+    "vietnameseMeaning": "(B) 186 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_186",
+    "num": 186,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is stated about Segovia's paint",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "stated",
+      "Segovia",
+      "paint"
+    ],
+    "vietnameseMeaning": "(C) 187 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_187",
+    "num": 187,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is stated about Vibra paint?",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "stated",
+      "Vibra",
+      "paint"
+    ],
+    "vietnameseMeaning": "(C) 188 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_188",
+    "num": 188,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What brand did Ms. Eggers most likely X) ft) o. receive initially? oa",
+    "options": {
+      "A": "Vibra waterproof paint",
+      "B": "Densen metallic paint",
+      "C": "Fulmax blended paint",
+      "D": "Alpha basic paint GO ON TO THE NEXT PAGE.. TEST 6 PART 7 197"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Densen metallic paint'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "brand",
+      "Eggers",
+      "most"
+    ],
+    "vietnameseMeaning": "(B) 189 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_189",
+    "num": 189,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In the review, the phrase \"get back to\" in \\ J UJ o 4> products? paragraph 1, line 2, is closest in meaning O U1",
+    "options": {
+      "A": "reply",
+      "B": "recover time.",
+      "C": "repay CD --j",
+      "D": "retrieve a CO"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'reply'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "review",
+      "phrase",
+      "back"
+    ],
+    "vietnameseMeaning": "(A) 190 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_190",
+    "num": 190,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is suggested about Ms. Eggers? o ID",
+    "options": {
+      "A": "She changed her mind about a paint paint for years. color. O",
+      "B": "She had to visit a store in Conway, or colors.",
+      "C": "It requires a minimum purchase for a order. (ffl J2 discount.",
+      "D": "It is normally the most expensive paint. o o o -il UJ"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'She had to visit a store in Conway, or colors.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "suggested",
+      "Eggers"
+    ],
+    "vietnameseMeaning": "(B) 191 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_191",
+    "num": 191,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the announcement mainly about?",
+    "options": {
+      "A": "Job vacancies for teachers",
+      "B": "Testing guidelines for students",
+      "C": "Professional skills training",
+      "D": "Course schedule changes"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Professional skills training'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "announcement",
+      "mainly"
+    ],
+    "vietnameseMeaning": "(C) 192 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_192",
+    "num": 192,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In the announcement, the word \"discretion\" in paragraph 3, line 6, is closest in meaning to",
+    "options": {
+      "A": "substitute",
+      "B": "choice",
+      "C": "attention",
+      "D": "disparity"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'choice'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "announcement",
+      "word",
+      "discretion"
+    ],
+    "vietnameseMeaning": "(B) 193 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_193",
+    "num": 193,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Which instructor is teaching a new course?",
+    "options": {
+      "A": "Ted Angelotti",
+      "B": "Harold Singh",
+      "C": "Sandy Packard",
+      "D": "Wendy Dufresne"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Ted Angelotti'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "instructor",
+      "teaching",
+      "course"
+    ],
+    "vietnameseMeaning": "(A) 194 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_194",
+    "num": 194,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Based on the e-mail, what is true about Mr. Partido?",
+    "options": {
+      "A": "He has paid for all of his tuition tees.",
+      "B": "He plans to take the same course he has taken before.",
+      "C": "He is currently working for a company.",
+      "D": "He has an account with Oak Valley Bank."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'He is currently working for a company.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Based",
+      "mail",
+      "true"
+    ],
+    "vietnameseMeaning": "(C) 195 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_195",
+    "num": 195,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What class did Mr. Partido most likely enroll in?",
+    "options": {
+      "A": "Real Estate Brokering",
+      "B": "Automobile Safety",
+      "C": "Computers and Tablets",
+      "D": "Basic Nursing GO ON TO THE NEXT PAGE, TEST 5 PART 7 199"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Basic Nursing GO ON TO THE NEXT PAGE, TEST 5 PART 7 199'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "class",
+      "Partido",
+      "most"
+    ],
+    "vietnameseMeaning": "(D) 196 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_196",
+    "num": 196,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is a feature of the Lakeshore Recreational Complex?",
+    "options": {
+      "A": "Locker rentals",
+      "B": "A dining area",
+      "C": "Membership privileges",
+      "D": "Discounts on catering"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'A dining area'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "feature",
+      "Lakeshore",
+      "Recreational"
+    ],
+    "vietnameseMeaning": "(B) 197 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_197",
+    "num": 197,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does Ms. Butler inquire about on the form?",
+    "options": {
+      "A": "The availability of temporary staff",
+      "B": "The price of renting equipment",
+      "C": "The possibility of extending rental hours",
+      "D": "The venue's policies on parking"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'The venue's policies on parking'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "does",
+      "Butler",
+      "inquire"
+    ],
+    "vietnameseMeaning": "(D) 198 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_198",
+    "num": 198,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about Markovich Insurance?",
+    "options": {
+      "A": "It is bringing its own sports equipment.",
+      "B": "It requires the assistance of additional staff.",
+      "C": "It is renting a facility during its off-peak hours.",
+      "D": "It must settle all rental charges by August 29."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'It must settle all rental charges by August 29.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "indicated",
+      "Markovich",
+      "Insurance"
+    ],
+    "vietnameseMeaning": "(D) 199 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_199",
+    "num": 199,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In the memo, the phrase \"in store\" in paragraph 1, line 2, is closest in meaning to",
+    "options": {
+      "A": "preserved",
+      "B": "arrived",
+      "C": "donated",
+      "D": "prepared"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'prepared'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "memo",
+      "phrase",
+      "store"
+    ],
+    "vietnameseMeaning": "(D) 200 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t6_200",
+    "num": 200,
+    "source": "Hacker 3 Test 6 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Where will the employees most likely meet on the morning of August 29?",
+    "options": {
+      "A": "Zone 1",
+      "B": "Zone 2",
+      "C": "Zone 3",
+      "D": "Zone 4 This is the end of the test. You may review Part 5, 6, and 7 if you finish the test early. smm p.325 / p.327 / SIH p.369 / Part S&6 61® U|S M71 • qg mioixioj ojfe Self *113 aiAmi g4H xkjoi gxfi #o| ^14 cnsf ggsH MAjia TEST 6 PART 7 201"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Zone 1'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "employees",
+      "most",
+      "likely"
+    ],
+    "vietnameseMeaning": "(A) PART 5",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 6 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_101",
+    "num": 101,
+    "source": "Hacker 3 Test 7 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Mr. Finney paused during his speech to change the slide projected on the screen. moment",
+    "options": {
+      "A": "Option A",
+      "B": "momentarily",
+      "C": "momentous",
+      "D": "momentary"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'momentarily'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'momentarily'.",
+    "keywords": [
+      "Finney",
+      "paused",
+      "during"
+    ],
+    "vietnameseMeaning": "(B) 102 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t7_102",
+    "num": 102,
+    "source": "Hacker 3 Test 7 Part 5",
+    "category": "Mệnh đề & Đại từ (Clauses & Pronouns)",
+    "question": "All of the presenters at the social media seminar to the marketing introduced audience before beginning to speak.",
+    "options": {
+      "A": "they",
+      "B": "theirs",
+      "C": "them",
+      "D": "themselves"
+    },
+    "correctAnswer": "D",
+    "explanation": "Đáp án chính xác theo Official Key là (D) 'themselves'.",
+    "tip": "⚡ MẸO TOEIC: Đọc kỹ ngữ cảnh và loại trừ các đáp án sai ngữ pháp. Chọn (D).",
+    "keywords": [
+      "presenters",
+      "social",
+      "media"
+    ],
+    "vietnameseMeaning": "(D) 103 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t7_103",
+    "num": 103,
+    "source": "Hacker 3 Test 7 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Rattan Furniture House's new production by plant is expected to be fully early April.",
+    "options": {
+      "A": "operate",
+      "B": "operator",
+      "C": "operation",
+      "D": "operational"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'operational'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'operational'.",
+    "keywords": [
+      "Rattan",
+      "Furniture",
+      "House"
+    ],
+    "vietnameseMeaning": "(D) 104 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t7_104",
+    "num": 104,
+    "source": "Hacker 3 Test 7 Part 5",
+    "category": "Ngữ pháp & Thì (Grammar & Tenses)",
+    "question": "Petra Towers is located just of the downtown area, close to a subway station.",
+    "options": {
+      "A": "outside beyond",
+      "B": "Option B",
+      "C": "away",
+      "D": "across 204 Hackerslngang.com a statement that is missing a word or phrase. Select the best answer and mark the sheet."
+    },
+    "correctAnswer": "A",
+    "explanation": "Xét về sự hòa hợp giữa chủ ngữ và thì của câu, động từ (A) 'outside beyond' chia đúng thì và dạng chủ động/bị động.",
+    "tip": "⚡ MẸO CHIA THÌ: Nhìn dấu hiệu thời gian và xét chủ ngữ số ít/số nhiều để loại trừ các dạng sai thì. Đáp án đúng là (A).",
+    "keywords": [
+      "Petra",
+      "Towers",
+      "located"
+    ],
+    "vietnameseMeaning": "(A) 105 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t7_105",
+    "num": 105,
+    "source": "Hacker 3 Test 7 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "gas containers in a cool environment to prevent them from exploding. To store",
+    "options": {
+      "A": "Option A",
+      "B": "Store",
+      "C": "Stored",
+      "D": "Storing to"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'Store'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'Store'.",
+    "keywords": [
+      "containers",
+      "cool",
+      "environment"
+    ],
+    "vietnameseMeaning": "(B) 106 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t7_106",
+    "num": 106,
+    "source": "Hacker 3 Test 7 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Ms. Brendon received a see a accountant specializing tax skilled in preparation from her coworker.",
+    "options": {
+      "A": "refer",
+      "B": "referral",
+      "C": "refers",
+      "D": "referable"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'referral'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'referral'.",
+    "keywords": [
+      "Brendon",
+      "received",
+      "accountant"
+    ],
+    "vietnameseMeaning": "(B) 107 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t7_107",
+    "num": 107,
+    "source": "Hacker 3 Test 7 Part 5",
+    "category": "Ngữ pháp & Thì (Grammar & Tenses)",
+    "question": "If the animation convention had not been a canceled, the Richelieu Hotel considerable amount business. of",
+    "options": {
+      "A": "has had",
+      "B": "has",
+      "C": "is being had",
+      "D": "would have had"
+    },
+    "correctAnswer": "D",
+    "explanation": "Xét về sự hòa hợp giữa chủ ngữ và thì của câu, động từ (D) 'would have had' chia đúng thì và dạng chủ động/bị động.",
+    "tip": "⚡ MẸO CHIA THÌ: Nhìn dấu hiệu thời gian và xét chủ ngữ số ít/số nhiều để loại trừ các dạng sai thì. Đáp án đúng là (D).",
+    "keywords": [
+      "animation",
+      "convention",
+      "canceled"
+    ],
+    "vietnameseMeaning": "(D) 108 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t7_108",
+    "num": 108,
+    "source": "Hacker 3 Test 7 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The Society for Ecological Excellence is currently accepting of environmentally friendly organizations for its upcoming awards ceremony.",
+    "options": {
+      "A": "reputations",
+      "B": "nominations",
+      "C": "concentrations",
+      "D": "assumptions"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'nominations'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'nominations'.",
+    "keywords": [
+      "Society",
+      "Ecological",
+      "Excellence"
+    ],
+    "vietnameseMeaning": "(B) 109 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t7_109",
+    "num": 109,
+    "source": "Hacker 3 Test 7 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Ms. Crawford accepted the most job 115. The campus parking lot is used by so many offer she received after considering all her students that even those with parking options. passes are not guaranteed a spot.",
+    "options": {
+      "A": "insistently",
+      "B": "measurably preferable necessarily",
+      "C": "Option C",
+      "D": "markedly"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'Option C'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'Option C'.",
+    "keywords": [
+      "Crawford",
+      "accepted",
+      "most"
+    ],
+    "vietnameseMeaning": "(C) 110 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t7_110",
+    "num": 110,
+    "source": "Hacker 3 Test 7 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Southbound traffic Highway 14A will 116. Ram Builders' supervisor the client be slow for the next two weeks while road repairs take place. among",
+    "options": {
+      "A": "Option A",
+      "B": "all",
+      "C": "along aboard",
+      "D": "a"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'along aboard'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'along aboard'.",
+    "keywords": [
+      "Southbound",
+      "traffic",
+      "Highway"
+    ],
+    "vietnameseMeaning": "(C) 111 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t7_111",
+    "num": 111,
+    "source": "Hacker 3 Test 7 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Greil Manufacturing began partnership with FRN Inc. that benefited both companies.",
+    "options": {
+      "A": "mutually delicately",
+      "B": "Option B",
+      "C": "densely",
+      "D": "preventively"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'mutually delicately'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'mutually delicately'.",
+    "keywords": [
+      "Greil",
+      "Manufacturing",
+      "began"
+    ],
+    "vietnameseMeaning": "(A) 112 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t7_112",
+    "num": 112,
+    "source": "Hacker 3 Test 7 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The expense for fixing the vehicle was cost higher than the given by the auto mechanic.",
+    "options": {
+      "A": "estimating",
+      "B": "estimated estimation",
+      "C": "Option C",
+      "D": "estimates"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'estimated estimation'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'estimated estimation'.",
+    "keywords": [
+      "expense",
+      "fixing",
+      "vehicle"
+    ],
+    "vietnameseMeaning": "(B) 113 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t7_113",
+    "num": 113,
+    "source": "Hacker 3 Test 7 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Logan Home Appliances' annual promotion is now underway, the store is far busier than usual.",
+    "options": {
+      "A": "But that",
+      "B": "Due to",
+      "C": "Notwithstanding Since",
+      "D": "say a values"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'say a values'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'say a values'.",
+    "keywords": [
+      "Logan",
+      "Home",
+      "Appliances"
+    ],
+    "vietnameseMeaning": "(D) 114 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t7_114",
+    "num": 114,
+    "source": "Hacker 3 Test 7 Part 5",
+    "category": "Ngữ pháp & Thì (Grammar & Tenses)",
+    "question": "Experts that rise in property in the Bedford area will be the outcome of the increase in local population.",
+    "options": {
+      "A": "bargained",
+      "B": "concerned",
+      "C": "predicted assured",
+      "D": "has"
+    },
+    "correctAnswer": "C",
+    "explanation": "Xét về sự hòa hợp giữa chủ ngữ và thì của câu, động từ (C) 'predicted assured' chia đúng thì và dạng chủ động/bị động.",
+    "tip": "⚡ MẸO CHIA THÌ: Nhìn dấu hiệu thời gian và xét chủ ngữ số ít/số nhiều để loại trừ các dạng sai thì. Đáp án đúng là (C).",
+    "keywords": [
+      "Experts",
+      "rise",
+      "property"
+    ],
+    "vietnameseMeaning": "(C) 115 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t7_115",
+    "num": 115,
+    "source": "Hacker 3 Test 7 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Question 115: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) ' '.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) ' '.",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(C) 116 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t7_116",
+    "num": 116,
+    "source": "Hacker 3 Test 7 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Question 116: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'Option D'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'Option D'.",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(D) 117 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t7_117",
+    "num": 117,
+    "source": "Hacker 3 Test 7 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Schilling Investors Group not found a suitable candidate to replace Mr. Macmillan, who resigned two weeks ago. almost",
+    "options": {
+      "A": "Option A",
+      "B": "yet",
+      "C": "far",
+      "D": "only"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'yet'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'yet'.",
+    "keywords": [
+      "Schilling",
+      "Investors",
+      "Group"
+    ],
+    "vietnameseMeaning": "(B) 118 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t7_118",
+    "num": 118,
+    "source": "Hacker 3 Test 7 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The athlete recently beat the world record for the marathon less than a minute.",
+    "options": {
+      "A": "beneath",
+      "B": "above at",
+      "C": "Option C",
+      "D": "by"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'by'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'by'.",
+    "keywords": [
+      "athlete",
+      "recently",
+      "beat"
+    ],
+    "vietnameseMeaning": "(D) 119 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t7_119",
+    "num": 119,
+    "source": "Hacker 3 Test 7 Part 5",
+    "category": "Ngữ pháp & Thì (Grammar & Tenses)",
+    "question": "First Canadian National Bank charges a from commission when cash its machines by non-customers.",
+    "options": {
+      "A": "to withdraw",
+      "B": "is withdrawn",
+      "C": "withdraws is withdrawing",
+      "D": "an"
+    },
+    "correctAnswer": "B",
+    "explanation": "Xét về sự hòa hợp giữa chủ ngữ và thì của câu, động từ (B) 'is withdrawn' chia đúng thì và dạng chủ động/bị động.",
+    "tip": "⚡ MẸO CHIA THÌ: Nhìn dấu hiệu thời gian và xét chủ ngữ số ít/số nhiều để loại trừ các dạng sai thì. Đáp án đúng là (B).",
+    "keywords": [
+      "First",
+      "Canadian",
+      "National"
+    ],
+    "vietnameseMeaning": "(B) 120 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t7_120",
+    "num": 120,
+    "source": "Hacker 3 Test 7 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The city of Myerstown plans to turn 80-acre of land near Weller River into a public park next year.",
+    "options": {
+      "A": "period",
+      "B": "stretch",
+      "C": "degree",
+      "D": "collection GOON THE NEXT PAGE. TO TEST? PARTS 205"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'stretch'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'stretch'.",
+    "keywords": [
+      "city",
+      "Myerstown",
+      "plans"
+    ],
+    "vietnameseMeaning": "(B) 121 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t7_121",
+    "num": 121,
+    "source": "Hacker 3 Test 7 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The woman sitting Mr. Heath at the 126. Customers who subscribe to Travelog's meeting was kind enough to lend him a online magazine will receive discounts pen at his request. their subscriptions are for six months or a year.",
+    "options": {
+      "A": "rather",
+      "B": "either closely even",
+      "C": "Option C",
+      "D": "whether his"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'either closely even'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'either closely even'.",
+    "keywords": [
+      "woman",
+      "sitting",
+      "Heath"
+    ],
+    "vietnameseMeaning": "(B) 122 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t7_122",
+    "num": 122,
+    "source": "Hacker 3 Test 7 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Once the vendor payment, Smith Cooper Wholesalers will ship his & order out.",
+    "options": {
+      "A": "substitutes leases",
+      "B": "Option B",
+      "C": "transfers",
+      "D": "enforces agreed"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'transfers'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'transfers'.",
+    "keywords": [
+      "Once",
+      "vendor",
+      "payment"
+    ],
+    "vietnameseMeaning": "(C) 123 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t7_123",
+    "num": 123,
+    "source": "Hacker 3 Test 7 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The board of directors to change Two-Tone Media's logo as all the members considered outdated, it",
+    "options": {
+      "A": "inseparably",
+      "B": "unanimously elaborately",
+      "C": "Option C",
+      "D": "intimately"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'unanimously elaborately'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'unanimously elaborately'.",
+    "keywords": [
+      "board",
+      "directors",
+      "change"
+    ],
+    "vietnameseMeaning": "(B) 124 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t7_124",
+    "num": 124,
+    "source": "Hacker 3 Test 7 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Airport officials have announced that more security checks will be adopted to eliminate any potential threats.",
+    "options": {
+      "A": "reluctant",
+      "B": "mundane",
+      "C": "obtainable rigorous",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'Option D'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'Option D'.",
+    "keywords": [
+      "Airport",
+      "officials",
+      "announced"
+    ],
+    "vietnameseMeaning": "(D) 125 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t7_125",
+    "num": 125,
+    "source": "Hacker 3 Test 7 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The organizers of the Brock County Fair have decided to the event due to the poor weather conditions.",
+    "options": {
+      "A": "back down",
+      "B": "give away",
+      "C": "keep out",
+      "D": "put off 206 Hackers.co.kr"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'put off 206 Hackers.co.kr'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'put off 206 Hackers.co.kr'.",
+    "keywords": [
+      "organizers",
+      "Brock",
+      "County"
+    ],
+    "vietnameseMeaning": "(D) 126 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t7_126",
+    "num": 126,
+    "source": "Hacker 3 Test 7 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Question 126: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'Option D'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'Option D'.",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(D) 127 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t7_127",
+    "num": 127,
+    "source": "Hacker 3 Test 7 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Barton Electronics will have to boost production to meet the demand for its newest dishwasher model.",
+    "options": {
+      "A": "bulky",
+      "B": "proficient",
+      "C": "sizable wealthy",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'sizable wealthy'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'sizable wealthy'.",
+    "keywords": [
+      "Barton",
+      "Electronics",
+      "boost"
+    ],
+    "vietnameseMeaning": "(C) 128 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t7_128",
+    "num": 128,
+    "source": "Hacker 3 Test 7 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Mr. Sampson must renew his gym membership by December 31, he will be unable to access the facility.",
+    "options": {
+      "A": "but",
+      "B": "or",
+      "C": "so",
+      "D": "not"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'or'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'or'.",
+    "keywords": [
+      "Sampson",
+      "must",
+      "renew"
+    ],
+    "vietnameseMeaning": "(B) 129 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t7_129",
+    "num": 129,
+    "source": "Hacker 3 Test 7 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "ReliaCorp's sale of some surplus property with is saving the company from bankruptcy.",
+    "options": {
+      "A": "agreed",
+      "B": "motivated",
+      "C": "reminded",
+      "D": "credited"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'credited'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'credited'.",
+    "keywords": [
+      "ReliaCorp",
+      "sale",
+      "some"
+    ],
+    "vietnameseMeaning": "(D) 130 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t7_130",
+    "num": 130,
+    "source": "Hacker 3 Test 7 Part 5",
+    "category": "Liên từ (Conjunctions)",
+    "question": "otherwise stated, all course materials will be available at the campus bookstore two weeks before the first day of class.",
+    "options": {
+      "A": "While",
+      "B": "Still Unless",
+      "C": "Option C",
+      "D": "Whereas"
+    },
+    "correctAnswer": "C",
+    "explanation": "Liên từ (C) 'Option C' dùng để liên kết hai mệnh đề biểu thị mối quan hệ logic chính xác.",
+    "tip": "⚡ MẸO LIÊN TỪ: Phân biệt rõ liên từ (theo sau là mệnh đề S + V) và giới từ (theo sau là N/V-ing). Chọn (C).",
+    "keywords": [
+      "otherwise",
+      "stated",
+      "course"
+    ],
+    "vietnameseMeaning": "(C) 131 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t7_131",
+    "num": 131,
+    "source": "Hacker 3 Test 7 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "mentioned that the missing card had a $50 balance and that you hoped to get it back. Unfortunately, we cannot fulfill this request because our records show that you failed for balance protection, which allows us to track card balances. It is a service we offer to recover money left on your card in the event that it is",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "mentioned",
+      "missing",
+      "card"
+    ],
+    "vietnameseMeaning": "(C) 132 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t7_132",
+    "num": 132,
+    "source": "Hacker 3 Test 7 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 132: Refer to the test material.",
+    "options": {
+      "A": "registers",
+      "B": "to register",
+      "C": "registered",
+      "D": "be registering"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'to register'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(B) 133 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t7_133",
+    "num": 133,
+    "source": "Hacker 3 Test 7 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "134. misplaced or stolen. If you get it, we'll be able to secure your balance in the future and send you a replacement card immediately. We are sorry that we cannot be of more help, Mac Benson, Super Wash Center",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "misplaced",
+      "stolen",
+      "able"
+    ],
+    "vietnameseMeaning": "(C) 134 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t7_134",
+    "num": 134,
+    "source": "Hacker 3 Test 7 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 134: Refer to the test material.",
+    "options": {
+      "A": "what",
+      "B": "every",
+      "C": "some of",
+      "D": "any GO ON TO THE NEXT PAGE TEST 7 PART 6 207"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'any GO ON TO THE NEXT PAGE TEST 7 PART 6 207'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(D) 135 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t7_135",
+    "num": 135,
+    "source": "Hacker 3 Test 7 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "that grant applications for local businesses will soon be available. According to spokesperson Meryl Pond, proposals will be accepted from August 1 to September 30. Applicants",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "grant",
+      "applications",
+      "local"
+    ],
+    "vietnameseMeaning": "(C) 136 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t7_136",
+    "num": 136,
+    "source": "Hacker 3 Test 7 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "should note that one aspect of the initiative has changed. Businesses have traditionally used the funding to supplement their existing programs. , they will now be expected to use",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Option B'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "should",
+      "note",
+      "aspect"
+    ],
+    "vietnameseMeaning": "(B) 137 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t7_137",
+    "num": 137,
+    "source": "Hacker 3 Test 7 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "the money to develop new services for the community. \"We're willing to give grant recipients more than before. But we expect more in return",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "money",
+      "develop",
+      "services"
+    ],
+    "vietnameseMeaning": "(C) 138 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t7_138",
+    "num": 138,
+    "source": "Hacker 3 Test 7 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "for this additional money. We want to inspire the design of better, more productive programs that can make a bigger difference for more people,\" she said.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Option A'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "additional",
+      "money",
+      "want"
+    ],
+    "vietnameseMeaning": "(A) 139 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t7_139",
+    "num": 139,
+    "source": "Hacker 3 Test 7 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "improve the appearance of public areas while removing substances that could contaminate the environment. There are a few things that you need to be aware of. First, each neighborhood has been assigned a day of the week for its streets to be cleaned. Additionally, residents must",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Option D'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "improve",
+      "appearance",
+      "public"
+    ],
+    "vietnameseMeaning": "(D) 140 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t7_140",
+    "num": 140,
+    "source": "Hacker 3 Test 7 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "make sure to keep their curbs at these times. This is vital as our cleaning vehicles will",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Option B'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "make",
+      "sure",
+      "keep"
+    ],
+    "vietnameseMeaning": "(B) 141 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t7_141",
+    "num": 141,
+    "source": "Hacker 3 Test 7 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "be unable to reach them otherwise. We would truly appreciate your with these changes.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "unable",
+      "reach",
+      "them"
+    ],
+    "vietnameseMeaning": "(C) 142 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t7_142",
+    "num": 142,
+    "source": "Hacker 3 Test 7 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "139.",
+    "options": {
+      "A": "For instance",
+      "B": "Until now",
+      "C": "On the other hand",
+      "D": "In this way"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'On the other hand'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Test 7 Q142",
+      "Part 6",
+      "On the other hand"
+    ],
+    "vietnameseMeaning": "(C) 143 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t7_143",
+    "num": 143,
+    "source": "Hacker 3 Test 7 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 143: Refer to the test material.",
+    "options": {
+      "A": "will have acquired",
+      "B": "has acquired",
+      "C": "will acquire",
+      "D": "to acquire"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'has acquired'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(B) 144 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t7_144",
+    "num": 144,
+    "source": "Hacker 3 Test 7 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 144: Refer to the test material.",
+    "options": {
+      "A": "unsuccessful",
+      "B": "incomparable",
+      "C": "unintentional",
+      "D": "inaccurate"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'unsuccessful'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(A) 145 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t7_145",
+    "num": 145,
+    "source": "Hacker 3 Test 7 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "determine whether they should undergo additional modifications. According to consultants, this is the best strategy as loyal Lexi's customers may need to during the transition.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "determine",
+      "whether",
+      "they"
+    ],
+    "vietnameseMeaning": "(C) 146 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t7_146",
+    "num": 146,
+    "source": "Hacker 3 Test 7 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "143.",
+    "options": {
+      "A": "will have acquired",
+      "B": "has acquired",
+      "C": "will acquire",
+      "D": "to acquire"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'has acquired'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Test 7 Q146",
+      "Part 6",
+      "has acquired"
+    ],
+    "vietnameseMeaning": "(B) 147 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t7_147",
+    "num": 147,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is mentioned about parking garage B?",
+    "options": {
+      "A": "It has recently been repaired.",
+      "B": "Its service booth was relocated.",
+      "C": "It will be enlarged to hold more vehicles.",
+      "D": "It may not be used for a period of time."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'It may not be used for a period of time.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "mentioned",
+      "parking",
+      "garage"
+    ],
+    "vietnameseMeaning": "(D) 148 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_148",
+    "num": 148,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is offered to airport visitors using Well's Parking Lot?",
+    "options": {
+      "A": "Free parking passes",
+      "B": "A ride to a terminal entrance",
+      "C": "Additional pickup points",
+      "D": "A schedule for local buses GO ON TO THE NEXT PAGE TEST 7 PART 7 211"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'A ride to a terminal entrance'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "offered",
+      "airport",
+      "visitors"
+    ],
+    "vietnameseMeaning": "(B) 149 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_149",
+    "num": 149,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "At 9:13 a.m., what does Mr. Mitchell most likely mean when he writes, \"Everything should be okay\"?",
+    "options": {
+      "A": "He remembers loading an updated map to the site.",
+      "B": "He believes a customer will write a positive review.",
+      "C": "He is sure that a Web page is functioning properly.",
+      "D": "He has a suggestion for addressing a complaint."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'He is sure that a Web page is functioning properly.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "does",
+      "Mitchell",
+      "most"
+    ],
+    "vietnameseMeaning": "(C) 150 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_150",
+    "num": 150,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What problem did a customer have with a Web site?",
+    "options": {
+      "A": "Locating a customer inquiry menu",
+      "B": "Understanding a return policy",
+      "C": "Reading user feedback",
+      "D": "Viewing pictures of some goods 212 A!£qj sojjT/pyojopixh \u0003! Q^opi MP3 Hackerslngang.com"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Viewing pictures of some goods 212 A!£qj sojjT/pyojopixh \u0003! Q^opi MP3 Hackerslngang.com'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "problem",
+      "customer",
+      "site"
+    ],
+    "vietnameseMeaning": "(D) 151 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_151",
+    "num": 151,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is stated about Tidy Up Time?",
+    "options": {
+      "A": "Its employees do not clean bathrooms.",
+      "B": "It only services certain types of houses.",
+      "C": "It does not offer services on weekends.",
+      "D": "It provides discounts for regular services."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'It provides discounts for regular services.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "stated",
+      "Tidy",
+      "Time"
+    ],
+    "vietnameseMeaning": "(D) 152 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_152",
+    "num": 152,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What service is provided for an additional charge?",
+    "options": {
+      "A": "Cleaning garments",
+      "B": "Disinfecting rooms",
+      "C": "Collecting unwanted items",
+      "D": "Wiping down windows GO ON TO THE NEXT PAGE^ TEST 7 PART? 213"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Cleaning garments'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "service",
+      "provided",
+      "additional"
+    ],
+    "vietnameseMeaning": "(A) 153 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_153",
+    "num": 153,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "According to the manual, what can the dashboard interface do?",
+    "options": {
+      "A": "Display fuel consumption",
+      "B": "Give driving directions",
+      "C": "Read the outside temperature",
+      "D": "Provide parking assistance"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Give driving directions'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "According",
+      "manual",
+      "dashboard"
+    ],
+    "vietnameseMeaning": "(B) 154 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_154",
+    "num": 154,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does the manual say about connecting a cell phone?",
+    "options": {
+      "A": "It may take a few minutes to set up.",
+      "B": "It may be incompatible with some models.",
+      "C": "It is a feature that costs extra.",
+      "D": "It requires the use of a cable."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'It requires the use of a cable.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "does",
+      "manual",
+      "connecting"
+    ],
+    "vietnameseMeaning": "(D) 155 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_155",
+    "num": 155,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In which of the positions marked [1], [2], IBfe [3], and [4] does the following sentence best belong? \"Select your preferred path from the choices provided.\"",
+    "options": {
+      "A": "[1]",
+      "B": "[2]",
+      "C": "[3]",
+      "D": "[4] 214 Hackers.co.kr"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) '[2]'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "positions",
+      "marked",
+      "IBfe"
+    ],
+    "vietnameseMeaning": "(B) 156 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_156",
+    "num": 156,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the main purpose of the Web page?",
+    "options": {
+      "A": "To promote a language course",
+      "B": "To announce a job vacancy",
+      "C": "To explain pricing for a service",
+      "D": "To provide a description of a business"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'To provide a description of a business'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "main",
+      "purpose",
+      "page"
+    ],
+    "vietnameseMeaning": "(D) 157 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_157",
+    "num": 157,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is true about translators at International Interpreter Network?",
+    "options": {
+      "A": "All of them are fluent in at least three languages.",
+      "B": "They majored in language instruction in college.",
+      "C": "Some of them can translate spoken and written communications.",
+      "D": "They have published their own textbooks more than once. TEST 7 PART 7 215"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Some of them can translate spoken and written communications.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "true",
+      "translators",
+      "International"
+    ],
+    "vietnameseMeaning": "(C) 158 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_158",
+    "num": 158,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "How does the organization maintain the quality of its services?",
+    "options": {
+      "A": "By hiring workers with teaching certificates",
+      "B": "By holding monthly training sessions",
+      "C": "By gathering assessments from clients",
+      "D": "By implementing a peer evaluation system"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'By gathering assessments from clients'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "does",
+      "organization",
+      "maintain"
+    ],
+    "vietnameseMeaning": "(C) 159 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_159",
+    "num": 159,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In which of the positions marked [1], [2], ||p [3], and [4] does the following sentence best belong? \"To begin, click on the \"Request an Interpreter\" button.\"",
+    "options": {
+      "A": "[1]",
+      "B": "[2]",
+      "C": "[3]",
+      "D": "[4] GO ON TO THE NEXT PAGE."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) '[3]'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "positions",
+      "marked",
+      "does"
+    ],
+    "vietnameseMeaning": "(C) 160 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_160",
+    "num": 160,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the article mainly about?",
+    "options": {
+      "A": "The profitability of a new venture",
+      "B": "A consolidation of two firms",
+      "C": "The effect of a government regulation",
+      "D": "An industry's long-term outlook"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'A consolidation of two firms'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "article",
+      "mainly"
+    ],
+    "vietnameseMeaning": "(B) 161 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_161",
+    "num": 161,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about Farnsworth Capital Bank?",
+    "options": {
+      "A": "It plans to move its headquarters to a new city,",
+      "B": "It will keep wages at current levels.",
+      "C": "It is not expected to earn more money right away.",
+      "D": "It will reduce the size of its branch network."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'It is not expected to earn more money right away.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "indicated",
+      "Farnsworth",
+      "Capital"
+    ],
+    "vietnameseMeaning": "(C) 162 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_162",
+    "num": 162,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is NOT mentioned about the merger?",
+    "options": {
+      "A": "The number of bank branches will not change.",
+      "B": "Staff may be requested to fill different roles.",
+      "C": "Some employees will transfer to other offices.",
+      "D": "It will have been completed before the new year. 216 ?SSrt?!i!Sa|H°UUf 90B7|5f^Etot°f7|MP3 Hackerslngang.com"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'It will have been completed before the new year. 216 ?SSrt?!i!Sa|H°UUf 90B7|5f^Etot°f7|MP3 Hackerslngang.com'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "mentioned",
+      "merger"
+    ],
+    "vietnameseMeaning": "(D) 163 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_163",
+    "num": 163,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about Duluth University?",
+    "options": {
+      "A": "It is located near Go-C Tech.",
+      "B": "It offered Go-C Tech a sponsorship deal.",
+      "C": "It is well-known for its scientific research.",
+      "D": "It holds a career fair annually."
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'It is located near Go-C Tech.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "indicated",
+      "Duluth",
+      "University"
+    ],
+    "vietnameseMeaning": "(A) 164 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_164",
+    "num": 164,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "At 3:55 p.m., what does Ms. Kovac mean when she writes, \"You can leave me out\"?",
+    "options": {
+      "A": "She needs time to train some staff.",
+      "B": "She does not want to attend an event.",
+      "C": "She has already participated in a career fair.",
+      "D": "She is not familiar with a recruitment process."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'She does not want to attend an event.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "does",
+      "Kovac",
+      "mean"
+    ],
+    "vietnameseMeaning": "(B) 165 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_165",
+    "num": 165,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is implied about Go-C Tech?",
+    "options": {
+      "A": "It lost several employees in the past month.",
+      "B": "It recently released a new product.",
+      "C": "It will be closing down a research facility soon.",
+      "D": "It is preparing for an expansion."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'It is preparing for an expansion.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "implied",
+      "Tech"
+    ],
+    "vietnameseMeaning": "(D) 166 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_166",
+    "num": 166,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Who will delegate a representative to the career fair?",
+    "options": {
+      "A": "Amy Lintan",
+      "B": "Peter Mercer",
+      "C": "Janet Chan",
+      "D": "Melissa Kovac GO ON TO THE NEXT PAGE TEST 7 PART 7 217"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Peter Mercer'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "delegate",
+      "representative",
+      "career"
+    ],
+    "vietnameseMeaning": "(B) 167 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_167",
+    "num": 167,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is scheduled immediately after Dr. Simon's talk?",
+    "options": {
+      "A": "A video presentation",
+      "B": "A brief intermission",
+      "C": "A talk on government projects",
+      "D": "A one-hour lunch service"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'A brief intermission'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "scheduled",
+      "immediately",
+      "after"
+    ],
+    "vietnameseMeaning": "(B) 168 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_168",
+    "num": 168,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is NOT indicated about Ms. Summers?",
+    "options": {
+      "A": "She will be involved in reviewing proposals,",
+      "B": "She is the proprietor of a business.",
+      "C": "She teaches courses at a university.",
+      "D": "She is the final speaker of the event."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'She teaches courses at a university.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "indicated",
+      "Summers"
+    ],
+    "vietnameseMeaning": "(C) 169 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_169",
+    "num": 169,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does the LPSBA ask attendees to do?",
+    "options": {
+      "A": "Share experiences starting a business",
+      "B": "Register for a follow-up workshop",
+      "C": "Avoid causing noise disturbances",
+      "D": "Use meeting rooms for private discussions O CO O ID O l> Kn j2 CD a a 2d UJ X) fD OJ a. =3* OQ GO ON TO THE NEXT PAGE TEST 7 PART 7 219"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Avoid causing noise disturbances'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "does",
+      "LPSBA",
+      "attendees"
+    ],
+    "vietnameseMeaning": "(C) 170 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_170",
+    "num": 170,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is being announced in the memo?",
+    "options": {
+      "A": "A plan to take on new permanent employees",
+      "B": "A new company incentive program",
+      "C": "A need to produce more goods than usual",
+      "D": "A revised monthly staff pay scale"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'A need to produce more goods than usual'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "being",
+      "announced",
+      "memo"
+    ],
+    "vietnameseMeaning": "(C) 171 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_171",
+    "num": 171,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does Ms. Pollack request that workers do?",
+    "options": {
+      "A": "Take two options into consideration",
+      "B": "Train the short-term helpers",
+      "C": "Recommend training topics they would prefer",
+      "D": "Check their pay statements"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Take two options into consideration'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "does",
+      "Pollack",
+      "request"
+    ],
+    "vietnameseMeaning": "(A) 172 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_172",
+    "num": 172,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "The word \"dismiss\" in paragraph 2, line 4, is closest in meaning to",
+    "options": {
+      "A": "disregard",
+      "B": "surrender",
+      "C": "eradicate",
+      "D": "discharge"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'discharge'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "word",
+      "dismiss",
+      "paragraph"
+    ],
+    "vietnameseMeaning": "(D) 173 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_173",
+    "num": 173,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What will take place if not enough staff are willing to work overtime?",
+    "options": {
+      "A": "Employees' salaries will be altered.",
+      "B": "An order request will have to be denied.",
+      "C": "Managers will fill in as provisional workers.",
+      "D": "Short-term staff will be taken on. 220 ¥esaK!i!S5)HepuhtB|^®5!E!0iof7|MP3 Hackerslngang.com"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Short-term staff will be taken on. 220 ¥esaK!i!S5)HepuhtB|^®5!E!0iof7|MP3 Hackerslngang.com'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "take",
+      "place",
+      "enough"
+    ],
+    "vietnameseMeaning": "(D) 174 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_174",
+    "num": 174,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "According to the Web page, how often can customers receive deliveries?",
+    "options": {
+      "A": "Every day",
+      "B": "Twice weekly",
+      "C": "Every week",
+      "D": "Twice monthly"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Every week'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "According",
+      "page",
+      "often"
+    ],
+    "vietnameseMeaning": "(C) 175 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_175",
+    "num": 175,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is NOT indicated about the company's products?",
+    "options": {
+      "A": "They can be ordered through a Web site.",
+      "B": "They are available in meatless varieties.",
+      "C": "They contain only natural ingredients.",
+      "D": "They can be paid for after delivery. GO ON TO THE NEXT PACE. TEST 7 PART 7 221"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'They can be paid for after delivery. GO ON TO THE NEXT PACE. TEST 7 PART 7 221'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "indicated",
+      "company",
+      "products"
+    ],
+    "vietnameseMeaning": "(D) 176 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_176",
+    "num": 176,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is NOT indicated about Tribcott Manor House?",
+    "options": {
+      "A": "Food services can be arranged for an event.",
+      "B": "The servants' area remains accessible.",
+      "C": "Guided tours are available upon request.",
+      "D": "Events can be held in some of the"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Guided tours are available upon request.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "indicated",
+      "Tribcott",
+      "Manor"
+    ],
+    "vietnameseMeaning": "(C) 177 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_177",
+    "num": 177,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Why was the e-mail written?",
+    "options": {
+      "A": "To seek recommendations for a restaurant",
+      "B": "To announce an executive's recent promotion",
+      "C": "To make arrangements for a special occasion",
+      "D": "To inform participants of a scheduled meeting"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'To make arrangements for a special occasion'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "mail",
+      "written"
+    ],
+    "vietnameseMeaning": "(C) 178 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_178",
+    "num": 178,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Which room will Ms. Carter most likely be interested in renting?",
+    "options": {
+      "A": "The Somerset Room",
+      "B": "The Cornwall Room",
+      "C": "The Devonshire Room",
+      "D": "The Wiltshire Room"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'The Devonshire Room'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "room",
+      "Carter",
+      "most"
+    ],
+    "vietnameseMeaning": "(C) 179 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_179",
+    "num": 179,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is implied about Mr. McGuire?",
+    "options": {
+      "A": "He was satisfied with the services at Tribcott Manor House.",
+      "B": "He is considering taking another position.",
+      "C": "He was unable to book the caterer he regularly uses.",
+      "D": "He works with Ms. Carter,"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'He works with Ms. Carter,'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "implied",
+      "McGuire"
+    ],
+    "vietnameseMeaning": "(D) 180 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_180",
+    "num": 180,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In the e-mail, the word \"assess\" in paragraph 2, line 1, is closest in meaning to",
+    "options": {
+      "A": "judge",
+      "B": "secure",
+      "C": "establish",
+      "D": "complete goonjvthene^PAGE^ TEST? PART? 223"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'judge'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "mail",
+      "word",
+      "assess"
+    ],
+    "vietnameseMeaning": "(A) 181 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_181",
+    "num": 181,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the main purpose of the Web page?",
+    "options": {
+      "A": "To invite customers to rate a product",
+      "B": "To give instructions for removing a computer virus",
+      "C": "To notify customers of a product improvement",
+      "D": "To provide information about a presentation"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'To notify customers of a product improvement'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "main",
+      "purpose",
+      "page"
+    ],
+    "vietnameseMeaning": "(C) 182 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_182",
+    "num": 182,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about BizzSpec 4.0?",
+    "options": {
+      "A": "It can convert one file type to another,",
+      "B": "Unused functions are automatically deleted,",
+      "C": "The version is only available for existing customers.",
+      "D": "Tasks are processed faster than in earlier versions,"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Tasks are processed faster than in earlier versions,'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "indicated",
+      "BizzSpec"
+    ],
+    "vietnameseMeaning": "(D) 183 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_183",
+    "num": 183,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In the review, the word \"navigate\" in paragraph 1, line 3, is closest in meaning to",
+    "options": {
+      "A": "examine",
+      "B": "guide",
+      "C": "operate",
+      "D": "plan"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'operate'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "review",
+      "word",
+      "navigate"
+    ],
+    "vietnameseMeaning": "(C) 184 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_184",
+    "num": 184,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does Mr. Nestor say about the setup process?",
+    "options": {
+      "A": "It has too many complicated steps.",
+      "B": "It took more than half an hour.",
+      "C": "It did not require the import of files.",
+      "D": "It tends to pause intermittently."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'It took more than half an hour.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "does",
+      "Nestor",
+      "setup"
+    ],
+    "vietnameseMeaning": "(B) 185 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_185",
+    "num": 185,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is suggested about Mr. Nestor?",
+    "options": {
+      "A": "He prefers the appearance of the 3.0 product version more.",
+      "B": "He got a new program version free of charge.",
+      "C": "He uses the software program mostly at home.",
+      "D": "He recommended the software to his colleagues. GO ON TO THE NEXT PAGE. TEST 7 PART 7 225"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'He got a new program version free of charge.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "suggested",
+      "Nestor"
+    ],
+    "vietnameseMeaning": "(B) 186 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_186",
+    "num": 186,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is stated about Ms. Krall?",
+    "options": {
+      "A": "She has written songs for Ken Lewes's albums.",
+      "B": "She collaborated with the same composer on all her albums.",
+      "C": "She has yet to have a number one hit song.",
+      "D": "She recorded all her songs with live orchestras."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'She collaborated with the same composer on all her albums.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "stated",
+      "Krall"
+    ],
+    "vietnameseMeaning": "(B) 187 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_187",
+    "num": 187,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Which of Ms. Krall's albums did critics like best?",
+    "options": {
+      "A": "The Temptation",
+      "B": "Listen Here",
+      "C": "Midsummer Day's Dream",
+      "D": "Little Thoughts"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'The Temptation'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "Krall",
+      "albums",
+      "critics"
+    ],
+    "vietnameseMeaning": "(A) 188 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_188",
+    "num": 188,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is true about On the Whole'?",
+    "options": {
+      "A": "It won an award for the best album",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Option D'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "true",
+      "Whole"
+    ],
+    "vietnameseMeaning": "(D) 189 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_189",
+    "num": 189,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does Mr. Rivers ask Ms. Oliver to do?",
+    "options": {
+      "A": "Provide him with a musician's contact information",
+      "B": "Post the newest episode of a talk show",
+      "C": "Work on an upcoming program",
+      "D": "Become a producer for a film"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Work on an upcoming program'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "does",
+      "Rivers",
+      "Oliver"
+    ],
+    "vietnameseMeaning": "(C) 190 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_190",
+    "num": 190,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "When did Mr. Rivers watch Ms. Krall's interview?",
+    "options": {
+      "A": "On August 9",
+      "B": "It is disliked by fans despite receiving critical acclaim.",
+      "C": "It has achieved the highest sales among all of Ms. Krall's albums.",
+      "D": "It contains a song ranked third on a global chart. GO ON TO THE NEXT PAGE. TEST 7 PART 7 227"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'It is disliked by fans despite receiving critical acclaim.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Rivers",
+      "watch",
+      "Krall"
+    ],
+    "vietnameseMeaning": "(B) 191 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_191",
+    "num": 191,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is NOT mentioned as a feature of News Incorporated?",
+    "options": {
+      "A": "Award-winning writers",
+      "B": "Access to images",
+      "C": "Continuous updates",
+      "D": "A user comments section"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Award-winning writers'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "mentioned",
+      "feature",
+      "News"
+    ],
+    "vietnameseMeaning": "(A) 192 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_192",
+    "num": 192,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "How can subscribers access video footage?",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "subscribers",
+      "access",
+      "video"
+    ],
+    "vietnameseMeaning": "(C) 193 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_193",
+    "num": 193,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Why did Ms. Andres write the e-mail?",
+    "options": {
+      "A": "To express appreciation for a Web service",
+      "B": "To alter her original subscription package",
+      "C": "To inquire how to download the application",
+      "D": "To report her inability to access content GO ON TO THE NEXT PAGE TEST 7 PART 7 229"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'To report her inability to access content GO ON TO THE NEXT PAGE TEST 7 PART 7 229'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "Andres",
+      "write",
+      "mail"
+    ],
+    "vietnameseMeaning": "(D) 194 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_194",
+    "num": 194,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is suggested about Ms. Andres?",
+    "options": {
+      "A": "By entering a promotional code",
+      "B": "By paying for a full year's subscription",
+      "C": "By signing up for an online magazine",
+      "D": "By subscribing to the printed publication"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'By paying for a full year's subscription'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "suggested",
+      "Andres"
+    ],
+    "vietnameseMeaning": "(B) 195 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_195",
+    "num": 195,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "How much did Ms. Andres pay for her subscription?",
+    "options": {
+      "A": "$2.75",
+      "B": "$3.85",
+      "C": "$15",
+      "D": "$110"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) '$15'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "much",
+      "Andres",
+      "subscription"
+    ],
+    "vietnameseMeaning": "(C) 196 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_196",
+    "num": 196,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What has Beetle Advertising Agency been asked to do?",
+    "options": {
+      "A": "Find some different cast members",
+      "B": "Select a venue for an upcoming shoot",
+      "C": "Produce different versions of a commercial",
+      "D": "Use an updated version of a script"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Use an updated version of a script'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "Beetle",
+      "Advertising",
+      "Agency"
+    ],
+    "vietnameseMeaning": "(D) 197 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_197",
+    "num": 197,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about Mr. Lipton?",
+    "options": {
+      "A": "He agreed to film a commercial on Friday.",
+      "B": "He spoke to Mr. Pierce about a schedule.",
+      "C": "He wanted to make some minor script changes.",
+      "D": "He extended the rental of a venue by a day."
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'He agreed to film a commercial on Friday.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "indicated",
+      "Lipton"
+    ],
+    "vietnameseMeaning": "(A) 198 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_198",
+    "num": 198,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In the second e-mail, the word \"function\" in paragraph 1, line 3, is closest in meaning to",
+    "options": {
+      "A": "duty",
+      "B": "event",
+      "C": "purpose",
+      "D": "result"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'event'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "second",
+      "mail",
+      "word"
+    ],
+    "vietnameseMeaning": "(B) 199 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_199",
+    "num": 199,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What can be inferred about Juan Carlos?",
+    "options": {
+      "A": "Diana Watson will replace him for part of the day on April 12.",
+      "B": "He was unavailable to work extended hours on the requested date.",
+      "C": "Beetle Advertising Agency was charged $600 for his services.",
+      "D": "He was forwarded a copy of a script by Ms. Bateman."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Beetle Advertising Agency was charged $600 for his services.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "inferred",
+      "Juan",
+      "Carlos"
+    ],
+    "vietnameseMeaning": "(C) 200 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t7_200",
+    "num": 200,
+    "source": "Hacker 3 Test 7 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is true about Beetle Advertising Agency?",
+    "options": {
+      "A": "It sent Mr. Nichols to Van Ness Avenue to complete a payment.",
+      "B": "It rented lighting equipment from Hinterland Production Studios.",
+      "C": "It received a discount on some staffing services.",
+      "D": "It is located in the same city as Hinterland Production Studios. This is the end of the test. You may review Part 5, 6, and 7 if you finish the test early. igii p.325 / Sits p.327 / StH p,378 / Part SS6 6||M HfS fi7| • c® liiioi jioii Self *l|a a|AMi §611 xhjo| s*ii m \"m EflsLU ggsn axiia TEST 7 PART 7 231"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'It is located in the same city as Hinterland Production Studios. This is the end of the test. You may review Part 5, 6, and 7 if you finish the test early. igii p.325 / Sits p.327 / StH p,378 / Part SS6 6||M HfS fi7| • c® liiioi jioii Self *l|a a|AMi §611 xhjo| s*ii m \"m EflsLU ggsn axiia TEST 7 PART 7 231'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "true",
+      "Beetle",
+      "Advertising"
+    ],
+    "vietnameseMeaning": "(D) PART 5",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 7 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_101",
+    "num": 101,
+    "source": "Hacker 3 Test 8 Part 5",
+    "category": "Từ loại (Word Form)",
+    "question": "The meteorologist reviews the daily for weather patterns and makes temperatures and conditions.",
+    "options": {
+      "A": "predicts",
+      "B": "predictions",
+      "C": "predicted",
+      "D": "predictably Sommerland Shopping situated"
+    },
+    "correctAnswer": "B",
+    "explanation": "Căn cứ vào ngữ pháp câu, vị trí cần điền đóng vai trò từ loại phù hợp trong mệnh đề. Chọn đáp án (B) 'predictions' để hoàn chỉnh cấu trúc ngữ pháp.",
+    "tip": "⚡ MẸO TỪ LOẠI: Xác định vị trí chỗ trống đứng sau từ loại gì (danh từ, động từ, tính từ hay trạng từ) để chọn đuôi hậu tố chính xác. Đáp án đúng là (B).",
+    "keywords": [
+      "meteorologist",
+      "reviews",
+      "daily"
+    ],
+    "vietnameseMeaning": "(B) 102 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t8_102",
+    "num": 102,
+    "source": "Hacker 3 Test 8 Part 5",
+    "category": "Từ loại (Word Form)",
+    "question": "Mall is ten minutes away from the downtown area.",
+    "options": {
+      "A": "approximating",
+      "B": "approximated",
+      "C": "approximately",
+      "D": "approximate"
+    },
+    "correctAnswer": "C",
+    "explanation": "Căn cứ vào ngữ pháp câu, vị trí cần điền đóng vai trò từ loại phù hợp trong mệnh đề. Chọn đáp án (C) 'approximately' để hoàn chỉnh cấu trúc ngữ pháp.",
+    "tip": "⚡ MẸO TỪ LOẠI: Xác định vị trí chỗ trống đứng sau từ loại gì (danh từ, động từ, tính từ hay trạng từ) để chọn đuôi hậu tố chính xác. Đáp án đúng là (C).",
+    "keywords": [
+      "Mall",
+      "minutes",
+      "away"
+    ],
+    "vietnameseMeaning": "(C) 103 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t8_103",
+    "num": 103,
+    "source": "Hacker 3 Test 8 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "All airlines are required by law to keep inflatable life jackets located passenger seats in case there is an emergency.",
+    "options": {
+      "A": "following",
+      "B": "next",
+      "C": "except",
+      "D": "underneath could"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'underneath could'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'underneath could'.",
+    "keywords": [
+      "airlines",
+      "required",
+      "keep"
+    ],
+    "vietnameseMeaning": "(D) 104 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t8_104",
+    "num": 104,
+    "source": "Hacker 3 Test 8 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Mr. Katz was confident that do database a better job with maintenance than his highly skilled team.",
+    "options": {
+      "A": "less",
+      "B": "few",
+      "C": "those",
+      "D": "whatever 234 Jig Hackers.co.kr Select the best answer and mark the sheet."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'few'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'few'.",
+    "keywords": [
+      "Katz",
+      "confident",
+      "database"
+    ],
+    "vietnameseMeaning": "(B) 105 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t8_105",
+    "num": 105,
+    "source": "Hacker 3 Test 8 Part 5",
+    "category": "Ngữ pháp & Thì (Grammar & Tenses)",
+    "question": "After Benton Enterprises adopted the of allowing its staff to work flexible hours, productivity began to rise.",
+    "options": {
+      "A": "practice",
+      "B": "practically",
+      "C": "practiced practitioner",
+      "D": "Evergreen was a"
+    },
+    "correctAnswer": "A",
+    "explanation": "Xét về sự hòa hợp giữa chủ ngữ và thì của câu, động từ (A) 'practice' chia đúng thì và dạng chủ động/bị động.",
+    "tip": "⚡ MẸO CHIA THÌ: Nhìn dấu hiệu thời gian và xét chủ ngữ số ít/số nhiều để loại trừ các dạng sai thì. Đáp án đúng là (A).",
+    "keywords": [
+      "After",
+      "Benton",
+      "Enterprises"
+    ],
+    "vietnameseMeaning": "(A) 106 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t8_106",
+    "num": 106,
+    "source": "Hacker 3 Test 8 Part 5",
+    "category": "Ngữ pháp & Thì (Grammar & Tenses)",
+    "question": "Hotel built at time when Baldwin City strong growth, but it may close if the recession continues.",
+    "options": {
+      "A": "undergoes",
+      "B": "is undergoing",
+      "C": "will undergo",
+      "D": "was undergoing"
+    },
+    "correctAnswer": "D",
+    "explanation": "Xét về sự hòa hợp giữa chủ ngữ và thì của câu, động từ (D) 'was undergoing' chia đúng thì và dạng chủ động/bị động.",
+    "tip": "⚡ MẸO CHIA THÌ: Nhìn dấu hiệu thời gian và xét chủ ngữ số ít/số nhiều để loại trừ các dạng sai thì. Đáp án đúng là (D).",
+    "keywords": [
+      "Hotel",
+      "built",
+      "time"
+    ],
+    "vietnameseMeaning": "(D) 107 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t8_107",
+    "num": 107,
+    "source": "Hacker 3 Test 8 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The display coordinator's role is to ensure that everything sold in the store is arranged to look appealing to customers.",
+    "options": {
+      "A": "barely",
+      "B": "namely",
+      "C": "formerly",
+      "D": "carefully"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'carefully'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'carefully'.",
+    "keywords": [
+      "display",
+      "coordinator",
+      "role"
+    ],
+    "vietnameseMeaning": "(D) 108 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t8_108",
+    "num": 108,
+    "source": "Hacker 3 Test 8 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Many consumers agreed that Edgewood in Limited's greatest strength was its maintaining high levels of quality.",
+    "options": {
+      "A": "comparison",
+      "B": "component",
+      "C": "consistency conclusion",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'consistency conclusion'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'consistency conclusion'.",
+    "keywords": [
+      "Many",
+      "consumers",
+      "agreed"
+    ],
+    "vietnameseMeaning": "(C) 109 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t8_109",
+    "num": 109,
+    "source": "Hacker 3 Test 8 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The human resources manager called a 115. Customers with packages exceeding 250 meeting on Monday everyone about centimeters in length are additional his plan to hire new employees in the shipping fees by Bowden Couriers, coming months.",
+    "options": {
+      "A": "Option A",
+      "B": "informed",
+      "C": "be informed",
+      "D": "to inform"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'to inform'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'to inform'.",
+    "keywords": [
+      "human",
+      "resources",
+      "manager"
+    ],
+    "vietnameseMeaning": "(D) 110 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t8_110",
+    "num": 110,
+    "source": "Hacker 3 Test 8 Part 5",
+    "category": "Ngữ pháp & Thì (Grammar & Tenses)",
+    "question": "Mary Rose was asked to join the information access team because she to similar projects previously.",
+    "options": {
+      "A": "was contributed had contributed",
+      "B": "Option B",
+      "C": "contributes",
+      "D": "will contribute"
+    },
+    "correctAnswer": "B",
+    "explanation": "Xét về sự hòa hợp giữa chủ ngữ và thì của câu, động từ (B) 'Option B' chia đúng thì và dạng chủ động/bị động.",
+    "tip": "⚡ MẸO CHIA THÌ: Nhìn dấu hiệu thời gian và xét chủ ngữ số ít/số nhiều để loại trừ các dạng sai thì. Đáp án đúng là (B).",
+    "keywords": [
+      "Mary",
+      "Rose",
+      "asked"
+    ],
+    "vietnameseMeaning": "(B) 111 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t8_111",
+    "num": 111,
+    "source": "Hacker 3 Test 8 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The accounting department's current for software program is not the tasks that need to be performed.",
+    "options": {
+      "A": "adequate",
+      "B": "competent",
+      "C": "comforting",
+      "D": "proficient"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'adequate'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'adequate'.",
+    "keywords": [
+      "accounting",
+      "department",
+      "current"
+    ],
+    "vietnameseMeaning": "(A) 112 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t8_112",
+    "num": 112,
+    "source": "Hacker 3 Test 8 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Chef Alan Peralta's of classic French dishes is considered both unique and daring in the culinary world. obligation",
+    "options": {
+      "A": "Option A",
+      "B": "calculation",
+      "C": "subtraction",
+      "D": "interpretation"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'interpretation'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'interpretation'.",
+    "keywords": [
+      "Chef",
+      "Alan",
+      "Peralta"
+    ],
+    "vietnameseMeaning": "(D) 113 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t8_113",
+    "num": 113,
+    "source": "Hacker 3 Test 8 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Work from artist Leah Mills' newest collection was displayed at the Beech Gallery in Atlanta.",
+    "options": {
+      "A": "exclusion exclusively",
+      "B": "Option B",
+      "C": "excludes",
+      "D": "exclude"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'Option B'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'Option B'.",
+    "keywords": [
+      "Work",
+      "artist",
+      "Leah"
+    ],
+    "vietnameseMeaning": "(B) 114 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t8_114",
+    "num": 114,
+    "source": "Hacker 3 Test 8 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "wishing to work overtime this month is reminded to advise the supervisor before the end of the week.",
+    "options": {
+      "A": "raise",
+      "B": "discharge",
+      "C": "screen",
+      "D": "invest"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'invest'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'invest'.",
+    "keywords": [
+      "wishing",
+      "work",
+      "overtime"
+    ],
+    "vietnameseMeaning": "(D) 115 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t8_115",
+    "num": 115,
+    "source": "Hacker 3 Test 8 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Question 115: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'Option B'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'Option B'.",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(B) 116 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t8_116",
+    "num": 116,
+    "source": "Hacker 3 Test 8 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Participants will be given ample time after",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'Option A'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'Option A'.",
+    "keywords": [
+      "Participants",
+      "given",
+      "ample"
+    ],
+    "vietnameseMeaning": "(A) 117 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t8_117",
+    "num": 117,
+    "source": "Hacker 3 Test 8 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The new road from Batik Enterprise's warehouse to the post office has been a for great employees in the shipping department.",
+    "options": {
+      "A": "registration",
+      "B": "increment movement",
+      "C": "Option C",
+      "D": "advantage"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'advantage'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'advantage'.",
+    "keywords": [
+      "road",
+      "Batik",
+      "Enterprise"
+    ],
+    "vietnameseMeaning": "(D) 118 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t8_118",
+    "num": 118,
+    "source": "Hacker 3 Test 8 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The launch of Blanca Restaurant was successful , but the proprietor wished the event had attracted greater attention from local media.",
+    "options": {
+      "A": "rather",
+      "B": "enough soon",
+      "C": "Option C",
+      "D": "yet"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'enough soon'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'enough soon'.",
+    "keywords": [
+      "launch",
+      "Blanca",
+      "Restaurant"
+    ],
+    "vietnameseMeaning": "(B) 119 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t8_119",
+    "num": 119,
+    "source": "Hacker 3 Test 8 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Edmonton Supply is to extend a discount when customers place a minimum order for 1,000 units of the camping accessories.",
+    "options": {
+      "A": "capable",
+      "B": "respective compatible",
+      "C": "Option C",
+      "D": "willing GO ON TO THE NEXT PAGE. TESTS PARTS 235"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'willing GO ON TO THE NEXT PAGE. TESTS PARTS 235'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'willing GO ON TO THE NEXT PAGE. TESTS PARTS 235'.",
+    "keywords": [
+      "Edmonton",
+      "Supply",
+      "extend"
+    ],
+    "vietnameseMeaning": "(D) 120 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t8_120",
+    "num": 120,
+    "source": "Hacker 3 Test 8 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Renovations can begin on Bounty Bank's 125. few members opposing the plan, the the main offices board authorizes the executive board has decided to go through project. the investment Diehl Electronics. with in",
+    "options": {
+      "A": "Notwithstanding",
+      "B": "Consequently",
+      "C": "Option C",
+      "D": "Throughout"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'Throughout'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'Throughout'.",
+    "keywords": [
+      "Renovations",
+      "begin",
+      "Bounty"
+    ],
+    "vietnameseMeaning": "(D) 121 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t8_121",
+    "num": 121,
+    "source": "Hacker 3 Test 8 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Ms. Wilson left behind a career in law to 126. An international body has the her dream of running a bed-and-breakfast in Tuscany.",
+    "options": {
+      "A": "aspire",
+      "B": "pursue",
+      "C": "withdraw",
+      "D": "contend The staff charge press"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'pursue'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'pursue'.",
+    "keywords": [
+      "Wilson",
+      "left",
+      "behind"
+    ],
+    "vietnameseMeaning": "(B) 122 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t8_122",
+    "num": 122,
+    "source": "Hacker 3 Test 8 Part 5",
+    "category": "Từ loại (Word Form)",
+    "question": "in of writing releases should get all facts thoroughly before sending an announcement to the media.",
+    "options": {
+      "A": "checked",
+      "B": "checking",
+      "C": "check checks",
+      "D": "Reyes"
+    },
+    "correctAnswer": "A",
+    "explanation": "Căn cứ vào ngữ pháp câu, vị trí cần điền đóng vai trò từ loại phù hợp trong mệnh đề. Chọn đáp án (A) 'checked' để hoàn chỉnh cấu trúc ngữ pháp.",
+    "tip": "⚡ MẸO TỪ LOẠI: Xác định vị trí chỗ trống đứng sau từ loại gì (danh từ, động từ, tính từ hay trạng từ) để chọn đuôi hậu tố chính xác. Đáp án đúng là (A).",
+    "keywords": [
+      "writing",
+      "releases",
+      "should"
+    ],
+    "vietnameseMeaning": "(A) 123 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t8_123",
+    "num": 123,
+    "source": "Hacker 3 Test 8 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Ms. considered the amount of luggage she was taking on her beach car excursion before deciding on to rent.",
+    "options": {
+      "A": "these",
+      "B": "where",
+      "C": "other which",
+      "D": "the"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'the'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'the'.",
+    "keywords": [
+      "considered",
+      "amount",
+      "luggage"
+    ],
+    "vietnameseMeaning": "(D) 124 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t8_124",
+    "num": 124,
+    "source": "Hacker 3 Test 8 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "A top competitor withdrew from international tennis tournament due to a injury.",
+    "options": {
+      "A": "notified",
+      "B": "approved",
+      "C": "deducted",
+      "D": "signified"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'signified'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'signified'.",
+    "keywords": [
+      "competitor",
+      "withdrew",
+      "international"
+    ],
+    "vietnameseMeaning": "(D) 125 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t8_125",
+    "num": 125,
+    "source": "Hacker 3 Test 8 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Question 125: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'Option A'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'Option A'.",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(A) 126 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t8_126",
+    "num": 126,
+    "source": "Hacker 3 Test 8 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Question 126: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'Option B'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'Option B'.",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(B) 127 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t8_127",
+    "num": 127,
+    "source": "Hacker 3 Test 8 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Steeltop's machinery is solidly built and will operate for years without the need for costly maintenance and repairs.",
+    "options": {
+      "A": "explicitly",
+      "B": "regretfully",
+      "C": "reliably",
+      "D": "attentively"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'reliably'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'reliably'.",
+    "keywords": [
+      "Steeltop",
+      "machinery",
+      "solidly"
+    ],
+    "vietnameseMeaning": "(C) 128 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t8_128",
+    "num": 128,
+    "source": "Hacker 3 Test 8 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The spokesperson for Beaumont Industries the made an official apology company for the way dealt with a delivery delay. it",
+    "options": {
+      "A": "as soon as",
+      "B": "according to",
+      "C": "spite of in",
+      "D": "on behalf of"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'on behalf of'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'on behalf of'.",
+    "keywords": [
+      "spokesperson",
+      "Beaumont",
+      "Industries"
+    ],
+    "vietnameseMeaning": "(D) 129 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t8_129",
+    "num": 129,
+    "source": "Hacker 3 Test 8 Part 5",
+    "category": "Từ loại (Word Form)",
+    "question": "Copyright have the exclusive right to use, modify, and distribute the images they upload to Westforth Corporation's Web site.",
+    "options": {
+      "A": "held",
+      "B": "holds",
+      "C": "holding",
+      "D": "holders the weather pleasant, the"
+    },
+    "correctAnswer": "D",
+    "explanation": "Căn cứ vào ngữ pháp câu, vị trí cần điền đóng vai trò từ loại phù hợp trong mệnh đề. Chọn đáp án (D) 'holders the weather pleasant, the' để hoàn chỉnh cấu trúc ngữ pháp.",
+    "tip": "⚡ MẸO TỪ LOẠI: Xác định vị trí chỗ trống đứng sau từ loại gì (danh từ, động từ, tính từ hay trạng từ) để chọn đuôi hậu tố chính xác. Đáp án đúng là (D).",
+    "keywords": [
+      "Copyright",
+      "exclusive",
+      "right"
+    ],
+    "vietnameseMeaning": "(D) 130 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t8_130",
+    "num": 130,
+    "source": "Hacker 3 Test 8 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "is company's social gathering will occur at Ogilvy Park this weekend. Rather than",
+    "options": {
+      "A": "Option A",
+      "B": "Assuming that",
+      "C": "Owing to",
+      "D": "Hence"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'Assuming that'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'Assuming that'.",
+    "keywords": [
+      "company",
+      "social",
+      "gathering"
+    ],
+    "vietnameseMeaning": "(B) 131 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t8_131",
+    "num": 131,
+    "source": "Hacker 3 Test 8 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 131: Refer to the test material.",
+    "options": {
+      "A": "spends",
+      "B": "spent",
+      "C": "will spend",
+      "D": "spending"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'spent'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(B) 132 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t8_132",
+    "num": 132,
+    "source": "Hacker 3 Test 8 Part 6",
+    "category": "Đọc hiểu Điền câu (Sentence Insertion)",
+    "question": "Question 132: Refer to the test material.",
+    "options": {
+      "A": "It will take another year before the ||j| hotel opens its doors.",
+      "B": "This is Verdant Group's first project that is a joint venture.",
+      "C": "Judging from the results, it seems that they were successful.",
+      "D": "Consequently, the construction firm's initial proposal was rejected. TESTS PART 6 237"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Judging from the results, it seems that they were successful.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(C) 133 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t8_133",
+    "num": 133,
+    "source": "Hacker 3 Test 8 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "accommodations, such as a pool and spa. The combination of the hotel's modern facilities with its historic appearance makes the venue a major for tourists. Already, suites are fully booked for its opening weekend, which is scheduled for late next month.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Option D'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "accommodations",
+      "such",
+      "pool"
+    ],
+    "vietnameseMeaning": "(D) 134 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t8_134",
+    "num": 134,
+    "source": "Hacker 3 Test 8 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 134: Refer to the test material.",
+    "options": {
+      "A": "issue",
+      "B": "accomplishment",
+      "C": "attraction",
+      "D": "commitment GO ON TO THE NEXT PAGE_"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'attraction'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(C) 135 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t8_135",
+    "num": 135,
+    "source": "Hacker 3 Test 8 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "claims agent Gary Fink on July 6, , at the time, explained the process and",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Option B'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "claims",
+      "agent",
+      "Gary"
+    ],
+    "vietnameseMeaning": "(B) 136 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t8_136",
+    "num": 136,
+    "source": "Hacker 3 Test 8 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "recommended that I write this letter. Last month, on June 20, I suffered an injury when I slipped and fell in my kitchen. The impact caused me to break my wrist, which forced me to undergo surgery. Does my policy cover injuries of this nature? I expect to be reimbursed. Currently, my medical expenses amount to about $900. Please respond as soon as you review my documentation. Thank you. Sincerely, June Miller",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Option B'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "recommended",
+      "write",
+      "letter"
+    ],
+    "vietnameseMeaning": "(B) 137 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t8_137",
+    "num": 137,
+    "source": "Hacker 3 Test 8 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 137: Refer to the test material.",
+    "options": {
+      "A": "If so",
+      "B": "Until then",
+      "C": "After that",
+      "D": "On condition of 238 Hackers.co.kr"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'If so'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(A) 138 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t8_138",
+    "num": 138,
+    "source": "Hacker 3 Test 8 Part 6",
+    "category": "Đọc hiểu Điền câu (Sentence Insertion)",
+    "question": "Question 138: Refer to the test material.",
+    "options": {
+      "A": "I have enclosed receipts to support this ill claim'",
+      "B": "Only half of the amount has been paid by your company.",
+      "C": "It is difficult to determine who was at fault for the accident.",
+      "D": "Let me know when my insurance contract has been authorized."
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'I have enclosed receipts to support this ill claim''.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(A) 139 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t8_139",
+    "num": 139,
+    "source": "Hacker 3 Test 8 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Redstone National Park officially closes at 8 p.m. there are a number of campsites situated throughout the park for those who wish to stay overnight. It is important to note that this option is only available to those with permits. We also ask that all visitors be thoughtful about maintaining the premises. Please make sure that rubbish and anything brought into wildlife areas is taken out upon leaving or disposed of in the appropriate receptacles. Following these rules will help to ensure the of the park's beauty for future visitors. For any questions or concerns, please call 555-9092.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Redstone",
+      "National",
+      "Park"
+    ],
+    "vietnameseMeaning": "(C) 140 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t8_140",
+    "num": 140,
+    "source": "Hacker 3 Test 8 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 140: Refer to the test material.",
+    "options": {
+      "A": "Previously",
+      "B": "Besides",
+      "C": "However",
+      "D": "Moreover"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'However'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(C) 141 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t8_141",
+    "num": 141,
+    "source": "Hacker 3 Test 8 Part 6",
+    "category": "Đọc hiểu Điền câu (Sentence Insertion)",
+    "question": "Question 141: Refer to the test material.",
+    "options": {
+      "A": "We project that these campsites will be |||| completed by the end of the year.",
+      "B": "It must be closely monitored by park rangers at all times,",
+      "C": "The easiest way to get to the park is by taking a shuttle bus.",
+      "D": "These can be obtained at the visitor center every day until noon."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'These can be obtained at the visitor center every day until noon.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(D) 142 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t8_142",
+    "num": 142,
+    "source": "Hacker 3 Test 8 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 142: Refer to the test material.",
+    "options": {
+      "A": "preserves",
+      "B": "preservation",
+      "C": "preservative",
+      "D": "preserved GO ON TO THE NEXT PAGE^ TEST B PART 6 239"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'preservation'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(B) 143 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t8_143",
+    "num": 143,
+    "source": "Hacker 3 Test 8 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "flights must be reported to airline personnel at an airport within 48 hours of flight arrival. However, if you have flown in from outside the country, you may report any destruction to your luggage to claims@lagoonair.com using the attached form. Claims can also be in",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Option B'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "flights",
+      "must",
+      "reported"
+    ],
+    "vietnameseMeaning": "(B) 144 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t8_144",
+    "num": 144,
+    "source": "Hacker 3 Test 8 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "person at an airline office. , The airline will not grant any claim made more than 14 days",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Option A'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "person",
+      "airline",
+      "office"
+    ],
+    "vietnameseMeaning": "(A) 145 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t8_145",
+    "num": 145,
+    "source": "Hacker 3 Test 8 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "following your flight. Lagoon Airlines is not liable for any harm to luggage that is of poor quality or possesses an inherent defect. , reimbursement for repairs is not offered for minor wear and tear.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Option D'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "following",
+      "your",
+      "flight"
+    ],
+    "vietnameseMeaning": "(D) 146 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t8_146",
+    "num": 146,
+    "source": "Hacker 3 Test 8 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Sincerely, Lagoon Airlines Customer Service",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Sincerely",
+      "Lagoon",
+      "Airlines"
+    ],
+    "vietnameseMeaning": "(C) 147 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t8_147",
+    "num": 147,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the purpose of the memo?",
+    "options": {
+      "A": "To announce the results of a scientific study",
+      "B": "To report the findings of a water system inspection",
+      "C": "To request that staff monitor their water consumption",
+      "D": "To explain a measure to treat water contamination"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'To request that staff monitor their water consumption'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "purpose",
+      "memo"
+    ],
+    "vietnameseMeaning": "(C) 148 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_148",
+    "num": 148,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What did Mr. Sutton recently do?",
+    "options": {
+      "A": "Met with a government official",
+      "B": "Renovated some laboratory facilities",
+      "C": "Purchased new equipment",
+      "D": "Restricted access to an amenity GO ON TO THE NEXT PAGE TESTS PART? 241"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Restricted access to an amenity GO ON TO THE NEXT PAGE TESTS PART? 241'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "Sutton",
+      "recently"
+    ],
+    "vietnameseMeaning": "(D) 149 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_149",
+    "num": 149,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "will It likely August 31?",
+    "options": {
+      "A": "Close its establishment for relocation applicants a",
+      "B": "Interview for new facility",
+      "C": "Sign a rental agreement with Perkins Plaza",
+      "D": "Begin offering international shipping options 242 xJIg Hackers.co.kr will resume on that date. that was specifically designed for our needs, who prefer to bring in their items and site. Customers can also purchase our boxes, the tape, scissors, and worktable. as before, but will assist you more quickly as employees to work during peak hours. As a mailing, faxing, and notarizing items as well mailboxes. We will continue to offer both will send packages or documents through continue business at our you to do new suggested Send"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Close its establishment for relocation applicants a'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "likely",
+      "August"
+    ],
+    "vietnameseMeaning": "(A) 150 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_150",
+    "num": 150,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is about It Right in the Perkins Plaza?",
+    "options": {
+      "A": "Its customers are permitted to park for free.",
+      "B": "Some current services will not be offered.",
+      "C": "It may employ more personnel than previously.",
+      "D": "It will extend its hours of operation."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'It may employ more personnel than previously.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Right",
+      "Perkins",
+      "Plaza"
+    ],
+    "vietnameseMeaning": "(C) 151 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_151",
+    "num": 151,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "At 2:27, what does Ms. Fuller mean when ^||| she writes, \"Oh, didn't you know\"?",
+    "options": {
+      "A": "She thinks Mr. Cavanaugh should have contacted a client.",
+      "B": "A customer's transaction was canceled at the last minute.",
+      "C": "She expected Mr. Cavanaugh to be aware of a decision.",
+      "D": "A message was sent to the wrong person by mistake."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'She expected Mr. Cavanaugh to be aware of a decision.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "does",
+      "Fuller",
+      "mean"
+    ],
+    "vietnameseMeaning": "(C) 152 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_152",
+    "num": 152,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What can be inferred about IPD Toy Incorporated?",
+    "options": {
+      "A": "It will request some changes to a product's appearance.",
+      "B": "It operates retail outlets in different countries.",
+      "C": "It specializes in educational toys and games.",
+      "D": "It manufactures most of the items it sells. GO ON TO THE NEXT PAGE. TEST 8 PART 7 243"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'It operates retail outlets in different countries.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "inferred",
+      "Incorporated"
+    ],
+    "vietnameseMeaning": "(B) 153 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_153",
+    "num": 153,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Why does Mr. Warner want to change his 154. What does Mr, Warner ask Ms. Fine to company's reservation? do?",
+    "options": {
+      "A": "Suggest a good restaurant confirmed.",
+      "B": "An initially booked space will not be",
+      "C": "Another meeting was scheduled for the same day.",
+      "D": "An executive will not be available to come. 244 ?SSa)?!ilse|H5)iAh90i?f7l5(5!E!0)of7|MP3 Hackerslngang.com"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'An executive will not be available to come. 244 ?SSa)?!ilse|H5)iAh90i?f7l5(5!E!0)of7|MP3 Hackerslngang.com'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "does",
+      "Warner",
+      "want"
+    ],
+    "vietnameseMeaning": "(D) 154 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_154",
+    "num": 154,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Question 154: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Option B'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(B) 155 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_155",
+    "num": 155,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What type of product most likely is the Flextone 900?",
+    "options": {
+      "A": "A workout machine",
+      "B": "A kitchen appliance",
+      "C": "Factory equipment",
+      "D": "A health supplement"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'A workout machine'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "type",
+      "product",
+      "most"
+    ],
+    "vietnameseMeaning": "(A) 156 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_156",
+    "num": 156,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is stated about the Flextone 900?",
+    "options": {
+      "A": "Some of its pieces are sold separately.",
+      "B": "It is not for use in the home.",
+      "C": "It requires some maintenance.",
+      "D": "It must be attached to a charger."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'It requires some maintenance.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "stated",
+      "Flextone"
+    ],
+    "vietnameseMeaning": "(C) 157 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_157",
+    "num": 157,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is NOT a recommendation for users?",
+    "options": {
+      "A": "Adjusting the settings for children",
+      "B": "Checking that components are secure",
+      "C": "Keeping sufficient space around the machine",
+      "D": "Wearing appropriate types of clothing GO ON TO THE NEXT PAGE, TESTS PART7 245"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Adjusting the settings for children'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "recommendation",
+      "users"
+    ],
+    "vietnameseMeaning": "(A) 158 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_158",
+    "num": 158,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What kind of business most likely is Alstrop?",
+    "options": {
+      "A": "A retailer of tires",
+      "B": "A home builder",
+      "C": "A staffing firm",
+      "D": "A moving company"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'A retailer of tires'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "kind",
+      "business",
+      "most"
+    ],
+    "vietnameseMeaning": "(A) 159 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_159",
+    "num": 159,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is mentioned as a concern about staff transfers?",
+    "options": {
+      "A": "The cost of relocating a workforce is high.",
+      "B": "Staff may not want to move away from their current homes.",
+      "C": "There is insufficient time to carry out a move.",
+      "D": "New administrative employees have limited experience."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Staff may not want to move away from their current homes.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "mentioned",
+      "concern",
+      "staff"
+    ],
+    "vietnameseMeaning": "(B) 160 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_160",
+    "num": 160,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "At 10:38 a.m., what does Ms. Schultz mean Ull when she writes, \"he needs a challenge\"?",
+    "options": {
+      "A": "She believes finding the right employee will be a challenge.",
+      "B": "Mr. Drake wishes to be assigned a recruitment task.",
+      "C": "She thinks a staff member should take on a new responsibility.",
+      "D": "A purchasing clerk is deserving of a promotion. 246 Hackers.co.kr"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'She thinks a staff member should take on a new responsibility.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "does",
+      "Schultz",
+      "mean"
+    ],
+    "vietnameseMeaning": "(C) 161 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_161",
+    "num": 161,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What will Mr. Dunlap do later in the day?",
+    "options": {
+      "A": "Go through some phone messages",
+      "B": "Supply a list of open positions",
+      "C": "Meet with human resources staff",
+      "D": "Forward some suggestions to a superior"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Supply a list of open positions'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Dunlap",
+      "later"
+    ],
+    "vietnameseMeaning": "(B) 162 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_162",
+    "num": 162,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about Clean Genie?",
+    "options": {
+      "A": "It did not charge for some services. makes some of its own cleaning",
+      "B": "It products.",
+      "C": "It holds membership in a food industry association.",
+      "D": "has visited Vasco's Bistro three times. It Why the client request cleaning services?"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'It products.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "indicated",
+      "Clean",
+      "Genie"
+    ],
+    "vietnameseMeaning": "(B) 163 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_163",
+    "num": 163,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "did",
+    "options": {
+      "A": "It received some customer complaints.",
+      "B": "It is preparing its venue for an important event.",
+      "C": "It received a discount coupon in the mail.",
+      "D": "It has to comply with cleanliness standards. Price 24 $9.00 Genie Protect Burst 9HI •J 1 5 •II discount ($15.00) $111.50 Sub-total permit Additional discounts ($15.00) Food Tax $9.00 Genie TOTAL $105.50 Customer Signature Signing your name below indicates your acceptance of the job as performed and agreement with all charges. Svcbttt P7H<wie supervisor Evelyn Moore,"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'It has to comply with cleanliness standards. Price 24 $9.00 Genie Protect Burst 9HI •J 1 5 •II discount ($15.00) $111.50 Sub-total permit Additional discounts ($15.00) Food Tax $9.00 Genie TOTAL $105.50 Customer Signature Signing your name below indicates your acceptance of the job as performed and agreement with all charges. Svcbttt P7H<wie supervisor Evelyn Moore,'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "Test 8 Q163",
+      "Part 7",
+      "It has to comply with cleanliness standards. Price 24 $9.00 Genie Protect Burst 9HI •J 1 5 •II discount ($15.00) $111.50 Sub-total permit Additional discounts ($15.00) Food Tax $9.00 Genie TOTAL $105.50 Customer Signature Signing your name below indicates your acceptance of the job as performed and agreement with all charges. Svcbttt P7H<wie supervisor Evelyn Moore,"
+    ],
+    "vietnameseMeaning": "(D) 164 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_164",
+    "num": 164,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Who most likely is Evelyn Moore?",
+    "options": {
+      "A": "A city sanitation official",
+      "B": "A dining facility manager",
+      "C": "A professional cleaner",
+      "D": "An event organizer GO OA/ TO THE NEXT PAGE, TEST 8 PART? 247"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'A dining facility manager'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "most",
+      "likely",
+      "Evelyn"
+    ],
+    "vietnameseMeaning": "(B) 165 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_165",
+    "num": 165,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Who is Ms. Josephine Tan?",
+    "options": {
+      "A": "A magazine publisher",
+      "B": "A public speaker",
+      "C": "A professional writer",
+      "D": "A literary critic"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'A professional writer'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Josephine"
+    ],
+    "vietnameseMeaning": "(C) 166 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_166",
+    "num": 166,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What can be inferred about Mr. Morton?",
+    "options": {
+      "A": "His photographs will be featured on a cover.",
+      "B": "He will meet Ms. Tan at an awards celebration.",
+      "C": "He has traveled to Mexico City before.",
+      "D": "He will have to submit a revised draft."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'He has traveled to Mexico City before.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "inferred",
+      "Morton"
+    ],
+    "vietnameseMeaning": "(C) 167 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_167",
+    "num": 167,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In which of the positions marked [1], [2], wSm [3], and [4] does the following sentence best belong? \"You will find it alongside other selected entries in our regular section on travel.\"",
+    "options": {
+      "A": "[1]",
+      "B": "[2]",
+      "C": "[3]",
+      "D": "[4] 248 51 B01?PI mpb Hackerslngang.com"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) '[1]'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "positions",
+      "marked",
+      "does"
+    ],
+    "vietnameseMeaning": "(A) 168 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_168",
+    "num": 168,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about Vixo Mob?",
+    "options": {
+      "A": "It will be offered for free for a limited time.",
+      "B": "It focuses on a particular genre of music.",
+      "C": "It has yet to be released to the public.",
+      "D": "It is largely dependent on advertising."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'It has yet to be released to the public.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "indicated",
+      "Vixo"
+    ],
+    "vietnameseMeaning": "(C) 169 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_169",
+    "num": 169,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "According to the article, what competitive advantage does Vixo have?",
+    "options": {
+      "A": "It has a substantial user base.",
+      "B": "It offers a flexible payment scheme.",
+      "C": "It is available in several languages.",
+      "D": "It provides excellent customer service."
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'It has a substantial user base.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "According",
+      "article",
+      "competitive"
+    ],
+    "vietnameseMeaning": "(A) 170 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_170",
+    "num": 170,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does the article mention about SoundStorm?",
+    "options": {
+      "A": "It is fast approaching the same level of popularity as Vixo.",
+      "B": "Almost half its users have signed up for a service.",
+      "C": "It achieved profitability in a short amount of time.",
+      "D": "Some of its former executives now work for Vixo."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Almost half its users have signed up for a service.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "does",
+      "article",
+      "mention"
+    ],
+    "vietnameseMeaning": "(B) 171 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_171",
+    "num": 171,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In which of the positions marked [1], [2], mm [3], and [4] does the following sentence best belong? \"Once it is launched, users will be able to stream a wider range of both music and videos in a high-quality digital format.\"",
+    "options": {
+      "A": "[1]",
+      "B": "[2]",
+      "C": "[3]",
+      "D": "[4] GO ON TO THE NEXT PAGE. TESTS PART? 249"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) '[2]'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "positions",
+      "marked",
+      "does"
+    ],
+    "vietnameseMeaning": "(B) 172 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_172",
+    "num": 172,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the main purpose of the information?",
+    "options": {
+      "A": "To promote a new service",
+      "B": "To give instructions on ticket purchase methods",
+      "C": "To notify passengers of a canceled cruise",
+      "D": "To describe booking modification procedures"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'To describe booking modification procedures'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "main",
+      "purpose",
+      "information"
+    ],
+    "vietnameseMeaning": "(D) 173 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_173",
+    "num": 173,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "The word \"established\" in paragraph 1, line 4, is closest in meaning to",
+    "options": {
+      "A": "instituted",
+      "B": "restored",
+      "C": "contained",
+      "D": "convened"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'instituted'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "word",
+      "established",
+      "paragraph"
+    ],
+    "vietnameseMeaning": "(A) 174 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_174",
+    "num": 174,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is NOT indicated in the information?",
+    "options": {
+      "A": "Cancellation requests may be submitted over the phone.",
+      "B": "Passengers can change their cruise dates if needed.",
+      "C": "Additional charges may be imposed by travel agencies.",
+      "D": "Refund amounts vary based on days from departure."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Additional charges may be imposed by travel agencies.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "indicated",
+      "information"
+    ],
+    "vietnameseMeaning": "(C) 175 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_175",
+    "num": 175,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "According to the information, what is required for cancellation?",
+    "options": {
+      "A": "A passenger number",
+      "B": "Contact information",
+      "C": "A reservation voucher",
+      "D": "Signed forms O ID O or !>• mi r* o CD UJ XI ft) CD o. ZD OQ GO ON TO THE NEXT PAGE TESTS PART? 251"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Contact information'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "According",
+      "information",
+      "required"
+    ],
+    "vietnameseMeaning": "(B) 176 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_176",
+    "num": 176,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "How can customers receive a discount?",
+    "options": {
+      "A": "By placing a bulk order",
+      "B": "By filling out a survey",
+      "C": "By using an existing design",
+      "D": "By visiting a new store"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'By placing a bulk order'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "customers",
+      "receive",
+      "discount"
+    ],
+    "vietnameseMeaning": "(A) 177 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_177",
+    "num": 177,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about Mr. Okata?",
+    "options": {
+      "A": "His delivery was expedited upon request.",
+      "B": "He is the coach of a school basketball team.",
+      "C": "His T-shirt design was created by a faculty member.",
+      "D": "He will pay an extra fee for his order,"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'He will pay an extra fee for his order,'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "indicated",
+      "Okata"
+    ],
+    "vietnameseMeaning": "(D) 178 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_178",
+    "num": 178,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In the advertisement, the word \"create\" in paragraph 1, line 3, is closest in meaning to",
+    "options": {
+      "A": "equip",
+      "B": "reverse",
+      "C": "appear",
+      "D": "produce"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'produce'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "advertisement",
+      "word",
+      "create"
+    ],
+    "vietnameseMeaning": "(D) 179 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_179",
+    "num": 179,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is NOT indicated about the T-shirts requested by Mr. Okata?",
+    "options": {
+      "A": "They will be paid for by a credit card.",
+      "B": "They will be worn by elementary school students,",
+      "C": "They will be delivered within a week.",
+      "D": "They will feature a school's symbol."
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'They will be paid for by a credit card.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "indicated",
+      "shirts",
+      "requested"
+    ],
+    "vietnameseMeaning": "(A) 180 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_180",
+    "num": 180,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What should customers do if they are dissatisfied with their T-shirts?",
+    "options": {
+      "A": "E-mail a completed complaint form",
+      "B": "Call an establishment's number",
+      "C": "Return their purchases to a service counter",
+      "D": "Submit an original receipt to Mr. Boswell TEST 8 PART? 253"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Call an establishment's number'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "should",
+      "customers",
+      "they"
+    ],
+    "vietnameseMeaning": "(B) 181 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_181",
+    "num": 181,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is mentioned about Mr. Summers' house?",
+    "options": {
+      "A": "It has had previous occupants.",
+      "B": "It is a one-story building.",
+      "C": "It has modern characteristics.",
+      "D": "It was built last year."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'It has modern characteristics.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "mentioned",
+      "Summers",
+      "house"
+    ],
+    "vietnameseMeaning": "(C) 182 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_182",
+    "num": 182,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What did Mr. Summers send to Ms. Gale?",
+    "options": {
+      "A": "Interior design plans for a home",
+      "B": "A set of paint samples",
+      "C": "Images of his belongings",
+      "D": "A list of furniture stores"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Images of his belongings'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Summers",
+      "send",
+      "Gale"
+    ],
+    "vietnameseMeaning": "(C) 183 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_183",
+    "num": 183,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about the two-person sofa?",
+    "options": {
+      "A": "It was a secondhand item.",
+      "B": "It will not fit well in the music room.",
+      "C": "It is incompatible with other furniture.",
+      "D": "It is entirely white in color."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'It will not fit well in the music room.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "indicated",
+      "person",
+      "sofa"
+    ],
+    "vietnameseMeaning": "(B) 184 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_184",
+    "num": 184,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Who most likely is Ms. Gale?",
+    "options": {
+      "A": "A furniture store employee",
+      "B": "A hardware supply representative",
+      "C": "A home interior decorator",
+      "D": "A commercial photographer"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'A home interior decorator'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "most",
+      "likely",
+      "Gale"
+    ],
+    "vietnameseMeaning": "(C) 185 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_185",
+    "num": 185,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What will Martha Gale do next week?",
+    "options": {
+      "A": "Show some material samples to Mr. Summers in person",
+      "B": "Move some furniture for a customer",
+      "C": "Request a paint color change from a supplier",
+      "D": "Ask her team to develop some design concepts GO ON TO THE NEXT PAGE_ TESTS PART 7 255"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Show some material samples to Mr. Summers in person'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "Martha",
+      "Gale",
+      "next"
+    ],
+    "vietnameseMeaning": "(A) 186 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_186",
+    "num": 186,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is NOT true about the courses at Pittman Training?",
+    "options": {
+      "A": "They include a certificate of completion.",
+      "B": "None of them are scheduled for a weekend.",
+      "C": "They can be taken over the Internet.",
+      "D": "All of them take place in the afternoon."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'All of them take place in the afternoon.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "true",
+      "courses",
+      "Pittman"
+    ],
+    "vietnameseMeaning": "(D) 187 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_187",
+    "num": 187,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about course registration?",
+    "options": {
+      "A": "It requires applicants to visit a Chicago office.",
+      "B": "Its price is discounted if completed online.",
+      "C": "It can be canceled after the payment is processed.",
+      "D": "Its confirmation may take more than a day."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Its confirmation may take more than a day.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "indicated",
+      "course",
+      "registration"
+    ],
+    "vietnameseMeaning": "(D) 188 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_188",
+    "num": 188,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is suggested about Mr. Flinds?",
+    "options": {
+      "A": "Ffe has been with Dayton Bank for at least two years.",
+      "B": "He will be participating in classes on weekday mornings.",
+      "C": "He has taken the Effective Teller Operations course before.",
+      "D": "He will be traveling to a different city for his classes."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'He has taken the Effective Teller Operations course before.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "suggested",
+      "Flinds"
+    ],
+    "vietnameseMeaning": "(C) 189 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_189",
+    "num": 189,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is one purpose of the e-mail?",
+    "options": {
+      "A": "To ask about enrolling another student",
+      "B": "To inquire about paying for another course",
+      "C": "To find out a registration deadline",
+      "D": "To announce a planned absence"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'To ask about enrolling another student'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "purpose",
+      "mail"
+    ],
+    "vietnameseMeaning": "(A) 190 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_190",
+    "num": 190,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What can be inferred about Mr. Hinds' payment?",
+    "options": {
+      "A": "It was submitted after a deadline.",
+      "B": "It must be processed by the end of April.",
+      "C": "It was mailed to an office on South Emerald Avenue.",
+      "D": "It was not made in full. GO ON TO THE NEXT PAGE. TESTS PART 7 257"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'It was mailed to an office on South Emerald Avenue.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "inferred",
+      "Hinds",
+      "payment"
+    ],
+    "vietnameseMeaning": "(C) 191 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_191",
+    "num": 191,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What can be inferred about Ms. Salazar?",
+    "options": {
+      "A": "She volunteered to bring her own vehicle.",
+      "B": "She will not participate in horseback riding,",
+      "C": "She will be reimbursed for the cost of her accommodations.",
+      "D": "She is in charge of arranging a staff meeting."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'She will not participate in horseback riding,'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "inferred",
+      "Salazar"
+    ],
+    "vietnameseMeaning": "(B) 192 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_192",
+    "num": 192,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In the memo, the word \"circulated\" in paragraph 2, line 1, is closest in meaning to",
+    "options": {
+      "A": "distributed",
+      "B": "revolved",
+      "C": "transferred",
+      "D": "exhibited"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'distributed'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "memo",
+      "word",
+      "circulated"
+    ],
+    "vietnameseMeaning": "(A) 193 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_193",
+    "num": 193,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What will occur twice during the staff retreat?",
+    "options": {
+      "A": "A photo shoot",
+      "B": "A speech by an executive",
+      "C": "A communication skills workshop",
+      "D": "A guided leisure activity"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'A guided leisure activity'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "occur",
+      "twice",
+      "during"
+    ],
+    "vietnameseMeaning": "(D) 194 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_194",
+    "num": 194,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "According to the e-mail, what has NOT been requested by Mr. Tran?",
+    "options": {
+      "A": "Preparing meals to satisfy different preferences",
+      "B": "Arranging specific rooms for staff members",
+      "C": "Furnishing an annex with tables and chairs",
+      "D": "Stocking refreshments throughout the day"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Furnishing an annex with tables and chairs'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "According",
+      "mail",
+      "requested"
+    ],
+    "vietnameseMeaning": "(C) 195 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_195",
+    "num": 195,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does Mr. Oliver suggest that Mr. Tran do?",
+    "options": {
+      "A": "Finish a corporate event earlier than scheduled",
+      "B": "Confirm reservations for a particular activity",
+      "C": "Flave breakfast at another location",
+      "D": "Make arrangements for additional transportation GO ON TO THE NEXT PAGE TEST B PART? 259"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Flave breakfast at another location'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "does",
+      "Oliver",
+      "suggest"
+    ],
+    "vietnameseMeaning": "(C) 196 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_196",
+    "num": 196,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is NOT mentioned about Botwell's new establishment?",
+    "options": {
+      "A": "It is situated on the fifth floor of a department store,",
+      "B": "It requires the presentation of travel documents.",
+      "C": "It provides extra discounts to members of a program.",
+      "D": "It is opening a branch at an airport terminal."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'It is opening a branch at an airport terminal.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "mentioned",
+      "Botwell",
+      "establishment"
+    ],
+    "vietnameseMeaning": "(D) 197 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_197",
+    "num": 197,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the purpose of the notice?",
+    "options": {
+      "A": "To announce future regulation changes",
+      "B": "To provide information about current policies",
+      "C": "To remind security workers about a procedure",
+      "D": "To suggest some solutions for a system error"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'To provide information about current policies'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "purpose",
+      "notice"
+    ],
+    "vietnameseMeaning": "(B) 198 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_198",
+    "num": 198,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Which product did Ms. Fortich probably buy at a discount?",
+    "options": {
+      "A": "A camera",
+      "B": "A lipstick",
+      "C": "A handbag",
+      "D": "A scarf"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'A lipstick'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "product",
+      "Fortich",
+      "probably"
+    ],
+    "vietnameseMeaning": "(B) 199 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_199",
+    "num": 199,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is true about Ms. Fortich?",
+    "options": {
+      "A": "She misplaced her frequent shopper card.",
+      "B": "She signed up to be a member of a program in April,",
+      "C": "She is eligible to receive a voucher for a purchase.",
+      "D": "She must return to Botwell's store to retrieve her items."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'She is eligible to receive a voucher for a purchase.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "true",
+      "Fortich"
+    ],
+    "vietnameseMeaning": "(C) 200 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t8_200",
+    "num": 200,
+    "source": "Hacker 3 Test 8 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In the receipt, the word \"secured\" in paragraph 1, line 3. is closest in meaning to",
+    "options": {
+      "A": "obtained",
+      "B": "attached",
+      "C": "enclosed",
+      "D": "guaranteed This is the end of the test. You may review Part 5, 6, and 7 if you finish the test early. aa p.325 / 94 Shtts p.327 / SJ-iil p,387 / Part 5&6 4S SHi ffS fi7| IPJ'-ACrv * q-s hioixioii oifc Self *l|3 a|4Sl m *tdai m to| arxiq ehei ggsN axiia TESTS PART 7 261"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'enclosed'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "receipt",
+      "word",
+      "secured"
+    ],
+    "vietnameseMeaning": "(C) PART 5",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 8 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_101",
+    "num": 101,
+    "source": "Hacker 3 Test 9 Part 5",
+    "category": "Từ loại (Word Form)",
+    "question": "Food manufacturers are responsible for the safety requirements set by the government.",
+    "options": {
+      "A": "fulfillment",
+      "B": "fulfilling",
+      "C": "fulfilled",
+      "D": "fulfill"
+    },
+    "correctAnswer": "B",
+    "explanation": "Căn cứ vào ngữ pháp câu, vị trí cần điền đóng vai trò từ loại phù hợp trong mệnh đề. Chọn đáp án (B) 'fulfilling' để hoàn chỉnh cấu trúc ngữ pháp.",
+    "tip": "⚡ MẸO TỪ LOẠI: Xác định vị trí chỗ trống đứng sau từ loại gì (danh từ, động từ, tính từ hay trạng từ) để chọn đuôi hậu tố chính xác. Đáp án đúng là (B).",
+    "keywords": [
+      "Food",
+      "manufacturers",
+      "responsible"
+    ],
+    "vietnameseMeaning": "(B) 102 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t9_102",
+    "num": 102,
+    "source": "Hacker 3 Test 9 Part 5",
+    "category": "Từ loại (Word Form)",
+    "question": "A number of people are lining up in the in Sherwood Hotel lobby the two-day technology symposium.",
+    "options": {
+      "A": "enroll",
+      "B": "enrolls",
+      "C": "enrollment to enroll",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Căn cứ vào ngữ pháp câu, vị trí cần điền đóng vai trò từ loại phù hợp trong mệnh đề. Chọn đáp án (D) 'Option D' để hoàn chỉnh cấu trúc ngữ pháp.",
+    "tip": "⚡ MẸO TỪ LOẠI: Xác định vị trí chỗ trống đứng sau từ loại gì (danh từ, động từ, tính từ hay trạng từ) để chọn đuôi hậu tố chính xác. Đáp án đúng là (D).",
+    "keywords": [
+      "number",
+      "people",
+      "lining"
+    ],
+    "vietnameseMeaning": "(D) 103 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t9_103",
+    "num": 103,
+    "source": "Hacker 3 Test 9 Part 5",
+    "category": "Từ loại (Word Form)",
+    "question": "Tel-Corn Corp.'s merger with Voice Messenger Inc. at a press conference on Monday last week.",
+    "options": {
+      "A": "was announcing",
+      "B": "to announce",
+      "C": "was announced",
+      "D": "announced for"
+    },
+    "correctAnswer": "C",
+    "explanation": "Căn cứ vào ngữ pháp câu, vị trí cần điền đóng vai trò từ loại phù hợp trong mệnh đề. Chọn đáp án (C) 'was announced' để hoàn chỉnh cấu trúc ngữ pháp.",
+    "tip": "⚡ MẸO TỪ LOẠI: Xác định vị trí chỗ trống đứng sau từ loại gì (danh từ, động từ, tính từ hay trạng từ) để chọn đuôi hậu tố chính xác. Đáp án đúng là (C).",
+    "keywords": [
+      "Corn",
+      "Corp",
+      "merger"
+    ],
+    "vietnameseMeaning": "(C) 104 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t9_104",
+    "num": 104,
+    "source": "Hacker 3 Test 9 Part 5",
+    "category": "Mệnh đề & Đại từ (Clauses & Pronouns)",
+    "question": "Mr. Kim went to Beijing by a digital media conference and met several potential clients there.",
+    "options": {
+      "A": "he",
+      "B": "him",
+      "C": "his",
+      "D": "himself 264 ?SSar2!i!se(as|mf go|°i7®^9CH?}7|MP3 Hackerslngang.com Select the best answer and mark the sheet."
+    },
+    "correctAnswer": "D",
+    "explanation": "Đáp án chính xác theo Official Key là (D) 'himself 264 ?SSar2!i!se(as|mf go|°i7®^9CH?}7|MP3 Hackerslngang.com Select the best answer and mark the sheet.'.",
+    "tip": "⚡ MẸO TOEIC: Đọc kỹ ngữ cảnh và loại trừ các đáp án sai ngữ pháp. Chọn (D).",
+    "keywords": [
+      "went",
+      "Beijing",
+      "digital"
+    ],
+    "vietnameseMeaning": "(D) 105 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t9_105",
+    "num": 105,
+    "source": "Hacker 3 Test 9 Part 5",
+    "category": "Từ loại (Word Form)",
+    "question": "People who donate more than $50 to the Children's Cancer Group will receive a T-shirt.",
+    "options": {
+      "A": "compliment",
+      "B": "compliments",
+      "C": "complimented",
+      "D": "complimentary"
+    },
+    "correctAnswer": "D",
+    "explanation": "Căn cứ vào ngữ pháp câu, vị trí cần điền đóng vai trò từ loại phù hợp trong mệnh đề. Chọn đáp án (D) 'complimentary' để hoàn chỉnh cấu trúc ngữ pháp.",
+    "tip": "⚡ MẸO TỪ LOẠI: Xác định vị trí chỗ trống đứng sau từ loại gì (danh từ, động từ, tính từ hay trạng từ) để chọn đuôi hậu tố chính xác. Đáp án đúng là (D).",
+    "keywords": [
+      "People",
+      "donate",
+      "more"
+    ],
+    "vietnameseMeaning": "(D) 106 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t9_106",
+    "num": 106,
+    "source": "Hacker 3 Test 9 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "To move items that are fragile and breakable, the manager has rented from specialized Relocation Shippers.",
+    "options": {
+      "A": "equipment",
+      "B": "condition",
+      "C": "background",
+      "D": "quality"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'equipment'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'equipment'.",
+    "keywords": [
+      "move",
+      "items",
+      "fragile"
+    ],
+    "vietnameseMeaning": "(A) 107 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t9_107",
+    "num": 107,
+    "source": "Hacker 3 Test 9 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The Grenville Heritage Museum visitors from taking any photos or videos of the exhibition pieces. differentiates",
+    "options": {
+      "A": "Option A",
+      "B": "presents",
+      "C": "prohibits",
+      "D": "releases it"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'prohibits'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'prohibits'.",
+    "keywords": [
+      "Grenville",
+      "Heritage",
+      "Museum"
+    ],
+    "vietnameseMeaning": "(C) 108 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t9_108",
+    "num": 108,
+    "source": "Hacker 3 Test 9 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "If you lose your room key, please to reception staff to get a replacement.",
+    "options": {
+      "A": "reports",
+      "B": "report reported",
+      "C": "Option C",
+      "D": "reporting"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'report reported'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'report reported'.",
+    "keywords": [
+      "lose",
+      "your",
+      "room"
+    ],
+    "vietnameseMeaning": "(B) 109 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t9_109",
+    "num": 109,
+    "source": "Hacker 3 Test 9 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Reyman Steel is building a new warehouse 115. The Russian tennis player is confident that the street from its main manufacturing she can defeat her opponent by a plant. wide margin.",
+    "options": {
+      "A": "slightly between effortlessly",
+      "B": "Option B",
+      "C": "cautiously",
+      "D": "diversely"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'cautiously'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'cautiously'.",
+    "keywords": [
+      "Reyman",
+      "Steel",
+      "building"
+    ],
+    "vietnameseMeaning": "(C) 110 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t9_110",
+    "num": 110,
+    "source": "Hacker 3 Test 9 Part 5",
+    "category": "Ngữ pháp & Thì (Grammar & Tenses)",
+    "question": "Dr. Germain dozens of research 116. The Magic Attic, a newly released movie papers on electronic commerce before she by director Ron Speilman, is a family film retired a few years ago.",
+    "options": {
+      "A": "will write",
+      "B": "writing writes",
+      "C": "Option C",
+      "D": "had written"
+    },
+    "correctAnswer": "D",
+    "explanation": "Xét về sự hòa hợp giữa chủ ngữ và thì của câu, động từ (D) 'had written' chia đúng thì và dạng chủ động/bị động.",
+    "tip": "⚡ MẸO CHIA THÌ: Nhìn dấu hiệu thời gian và xét chủ ngữ số ít/số nhiều để loại trừ các dạng sai thì. Đáp án đúng là (D).",
+    "keywords": [
+      "Germain",
+      "dozens",
+      "research"
+    ],
+    "vietnameseMeaning": "(D) 111 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t9_111",
+    "num": 111,
+    "source": "Hacker 3 Test 9 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The CEO is in the office but communicates with his staff through frequent e-mails.",
+    "options": {
+      "A": "immediately",
+      "B": "similarly",
+      "C": "rarely concisely",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'rarely concisely'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'rarely concisely'.",
+    "keywords": [
+      "office",
+      "communicates",
+      "staff"
+    ],
+    "vietnameseMeaning": "(C) 112 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t9_112",
+    "num": 112,
+    "source": "Hacker 3 Test 9 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The federal government abandoned a plan to build a pipeline through Alton City due to overwhelming public",
+    "options": {
+      "A": "opposition",
+      "B": "oppose",
+      "C": "opposes",
+      "D": "opposing"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'opposition'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'opposition'.",
+    "keywords": [
+      "federal",
+      "government",
+      "abandoned"
+    ],
+    "vietnameseMeaning": "(A) 113 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t9_113",
+    "num": 113,
+    "source": "Hacker 3 Test 9 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The Ergonicore office chair is , so it can comfortably seat individuals of varying heights.",
+    "options": {
+      "A": "occupied",
+      "B": "productive adjustable",
+      "C": "Option C",
+      "D": "committed"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'Option C'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'Option C'.",
+    "keywords": [
+      "Ergonicore",
+      "office",
+      "chair"
+    ],
+    "vietnameseMeaning": "(C) 114 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t9_114",
+    "num": 114,
+    "source": "Hacker 3 Test 9 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The presentation will commence all the audience members have taken their seats.",
+    "options": {
+      "A": "resistant",
+      "B": "appropriate simultaneous",
+      "C": "Option C",
+      "D": "equivalent"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'appropriate simultaneous'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'appropriate simultaneous'.",
+    "keywords": [
+      "presentation",
+      "commence",
+      "audience"
+    ],
+    "vietnameseMeaning": "(B) 115 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t9_115",
+    "num": 115,
+    "source": "Hacker 3 Test 9 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Question 115: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'Option B'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'Option B'.",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(B) 116 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t9_116",
+    "num": 116,
+    "source": "Hacker 3 Test 9 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Question 116: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'Option B'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'Option B'.",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(B) 117 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t9_117",
+    "num": 117,
+    "source": "Hacker 3 Test 9 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Excursion Travel Agency has numerous listings for priced accommodations within city limits. reasonable",
+    "options": {
+      "A": "Option A",
+      "B": "reasonably",
+      "C": "reasonability",
+      "D": "reasoned"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'reasonably'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'reasonably'.",
+    "keywords": [
+      "Excursion",
+      "Travel",
+      "Agency"
+    ],
+    "vietnameseMeaning": "(B) 118 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t9_118",
+    "num": 118,
+    "source": "Hacker 3 Test 9 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Reports that Shadco will be acquiring Durbania remain at best as neither company has confirmed any such plans.",
+    "options": {
+      "A": "tentative perpetual",
+      "B": "Option B",
+      "C": "formal",
+      "D": "consistent"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'tentative perpetual'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'tentative perpetual'.",
+    "keywords": [
+      "Reports",
+      "Shadco",
+      "acquiring"
+    ],
+    "vietnameseMeaning": "(A) 119 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t9_119",
+    "num": 119,
+    "source": "Hacker 3 Test 9 Part 5",
+    "category": "Ngữ pháp & Thì (Grammar & Tenses)",
+    "question": "All goods by ship must be thoroughly inspected by customs officials before entering the country.",
+    "options": {
+      "A": "arrive",
+      "B": "arrives arriving",
+      "C": "Option C",
+      "D": "have arrived"
+    },
+    "correctAnswer": "C",
+    "explanation": "Xét về sự hòa hợp giữa chủ ngữ và thì của câu, động từ (C) 'Option C' chia đúng thì và dạng chủ động/bị động.",
+    "tip": "⚡ MẸO CHIA THÌ: Nhìn dấu hiệu thời gian và xét chủ ngữ số ít/số nhiều để loại trừ các dạng sai thì. Đáp án đúng là (C).",
+    "keywords": [
+      "goods",
+      "ship",
+      "must"
+    ],
+    "vietnameseMeaning": "(C) 120 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t9_120",
+    "num": 120,
+    "source": "Hacker 3 Test 9 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Brilla Boutique staff may refund a after customer's clothing purchase a customer has presented a receipt.",
+    "options": {
+      "A": "when",
+      "B": "only",
+      "C": "yet",
+      "D": "still GO ON TO THE NEXT PAGE^ TEST 9 PARTS 265"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'only'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'only'.",
+    "keywords": [
+      "Brilla",
+      "Boutique",
+      "staff"
+    ],
+    "vietnameseMeaning": "(B) 121 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t9_121",
+    "num": 121,
+    "source": "Hacker 3 Test 9 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Attending the shareholders' meeting takes 126. All Swift-Dent electronic toothbrushes are warranty for the president of Goodman for a year from the time Company despite his hectic work schedule. they are purchased.",
+    "options": {
+      "A": "after",
+      "B": "among under",
+      "C": "Option C",
+      "D": "behind"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'Option C'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'Option C'.",
+    "keywords": [
+      "Attending",
+      "shareholders",
+      "meeting"
+    ],
+    "vietnameseMeaning": "(C) 122 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t9_122",
+    "num": 122,
+    "source": "Hacker 3 Test 9 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Quest Airlines allows registered members 127. Production has been on Grant Auto's they to accumulate mileage points new line of cars while engineers resolve a buy a plane ticket.",
+    "options": {
+      "A": "whatever",
+      "B": "instead",
+      "C": "whenever that",
+      "D": "about"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'whenever that'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'whenever that'.",
+    "keywords": [
+      "Quest",
+      "Airlines",
+      "allows"
+    ],
+    "vietnameseMeaning": "(C) 123 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t9_123",
+    "num": 123,
+    "source": "Hacker 3 Test 9 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Offering rooms that can 40 persons, Bean's Playpen is ideal for small parties and events.",
+    "options": {
+      "A": "convey",
+      "B": "accommodate",
+      "C": "furnish",
+      "D": "familiarize"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'accommodate'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'accommodate'.",
+    "keywords": [
+      "Offering",
+      "rooms",
+      "persons"
+    ],
+    "vietnameseMeaning": "(B) 124 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t9_124",
+    "num": 124,
+    "source": "Hacker 3 Test 9 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "the unfavorable feedback Borebrooke University received in the past, this year's survey results show that students are generally satisfied.",
+    "options": {
+      "A": "As far as",
+      "B": "Compared to",
+      "C": "Given that",
+      "D": "Rather"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'Compared to'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'Compared to'.",
+    "keywords": [
+      "unfavorable",
+      "feedback",
+      "Borebrooke"
+    ],
+    "vietnameseMeaning": "(B) 125 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t9_125",
+    "num": 125,
+    "source": "Hacker 3 Test 9 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Because the Web site for Workmates updated, Consulting was not it listed several job vacancies that had already been filled.",
+    "options": {
+      "A": "attracted",
+      "B": "subtracted",
+      "C": "confronted",
+      "D": "suspended outsources"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'attracted'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'attracted'.",
+    "keywords": [
+      "Because",
+      "site",
+      "Workmates"
+    ],
+    "vietnameseMeaning": "(A) 126 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t9_126",
+    "num": 126,
+    "source": "Hacker 3 Test 9 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Question 126: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) ' '.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) ' '.",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(C) 127 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t9_127",
+    "num": 127,
+    "source": "Hacker 3 Test 9 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Question 127: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'Option D'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'Option D'.",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(D) 128 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t9_128",
+    "num": 128,
+    "source": "Hacker 3 Test 9 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Tai Shing Electronics usually manufacturing to foreign partners its domestic facilities are unable to keep up with demand.",
+    "options": {
+      "A": "but for",
+      "B": "in case",
+      "C": "so that up to",
+      "D": "Option D"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'in case'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'in case'.",
+    "keywords": [
+      "Shing",
+      "Electronics",
+      "usually"
+    ],
+    "vietnameseMeaning": "(B) 129 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t9_129",
+    "num": 129,
+    "source": "Hacker 3 Test 9 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Patrick Jolson will be interviewed three other promising candidates for the position of research and development head. even though",
+    "options": {
+      "A": "Option A",
+      "B": "up until",
+      "C": "in honor of along",
+      "D": "with of"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'with of'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'with of'.",
+    "keywords": [
+      "Patrick",
+      "Jolson",
+      "interviewed"
+    ],
+    "vietnameseMeaning": "(D) 130 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t9_130",
+    "num": 130,
+    "source": "Hacker 3 Test 9 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Eastwood County likely has a natural resources given its proximity to both a mountain range and the ocean.",
+    "options": {
+      "A": "deliberation dedication",
+      "B": "Option B",
+      "C": "wealth",
+      "D": "leisure"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'wealth'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'wealth'.",
+    "keywords": [
+      "Eastwood",
+      "County",
+      "likely"
+    ],
+    "vietnameseMeaning": "(C) 131 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t9_131",
+    "num": 131,
+    "source": "Hacker 3 Test 9 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 131: Refer to the test material.",
+    "options": {
+      "A": "discovery",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Option D'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(D) 132 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t9_132",
+    "num": 132,
+    "source": "Hacker 3 Test 9 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "appreciated that you incorporated problem-solving examples applicable to several different fields of learning into your session. My students, major in various disciplines, all rated",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "appreciated",
+      "incorporated",
+      "problem"
+    ],
+    "vietnameseMeaning": "(C) 133 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t9_133",
+    "num": 133,
+    "source": "Hacker 3 Test 9 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "the session highly as they were able to gain something from your insights. Accordingly, I would like to invite you back next month. If you're available, please let me know so we can discuss the details. Thank you again. Mila Hyatt, Ph.D. Rappleton University Professor",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Option A'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "session",
+      "highly",
+      "they"
+    ],
+    "vietnameseMeaning": "(A) 134 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t9_134",
+    "num": 134,
+    "source": "Hacker 3 Test 9 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 134: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "lecture"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Option B'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(B) 135 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t9_135",
+    "num": 135,
+    "source": "Hacker 3 Test 9 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Therefore, please consider the potential candidates carefully. We advise you to keep in mind their teaching performance and academic accomplishments before writing letters of",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Therefore",
+      "please",
+      "consider"
+    ],
+    "vietnameseMeaning": "(C) 136 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t9_136",
+    "num": 136,
+    "source": "Hacker 3 Test 9 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "recommendation for the board to take into account. You will also need to submit some evaluative documents. Please answer all of the questions as ----- as possible. I will forward the requisite paperwork to you later today with some instructions. These should the",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Option D'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "recommendation",
+      "board",
+      "take"
+    ],
+    "vietnameseMeaning": "(D) 137 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t9_137",
+    "num": 137,
+    "source": "Hacker 3 Test 9 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 137: Refer to the test material.",
+    "options": {
+      "A": "specific",
+      "B": "specifically",
+      "C": "specify",
+      "D": "specification"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'specifically'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(B) 138 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t9_138",
+    "num": 138,
+    "source": "Hacker 3 Test 9 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "decision-making process.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Option D'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "decision",
+      "making",
+      "process"
+    ],
+    "vietnameseMeaning": "(D) 139 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t9_139",
+    "num": 139,
+    "source": "Hacker 3 Test 9 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "their stalls. Also, please be reminded that vendors must adhere to the state regulations on food safety and customer protection listed on our Web site. It is the vendor's responsibility to stay informed about these guidelines.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Option D'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "their",
+      "stalls",
+      "Also"
+    ],
+    "vietnameseMeaning": "(D) 140 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t9_140",
+    "num": 140,
+    "source": "Hacker 3 Test 9 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Furthermore, any applicable fees should be paid on time. The amount will depend on your stall's Those closer to the entrance will be charged more.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Option A'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "Furthermore",
+      "applicable",
+      "fees"
+    ],
+    "vietnameseMeaning": "(A) 141 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t9_141",
+    "num": 141,
+    "source": "Hacker 3 Test 9 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Finally, it is illegal to leave any litter in your sales area. all vendors should have a receptacle on hand to dispose of any refuse.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Option B'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Finally",
+      "illegal",
+      "leave"
+    ],
+    "vietnameseMeaning": "(B) 142 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t9_142",
+    "num": 142,
+    "source": "Hacker 3 Test 9 Part 6",
+    "category": "Đọc hiểu Điền câu (Sentence Insertion)",
+    "question": "Question 142: Refer to the test material.",
+    "options": {
+      "A": "Meanwhile may lose their vending license.",
+      "B": "You may request an application form if",
+      "C": "Some of the food items have been identified as top sellers.",
+      "D": "We believe the status of our regular vendors has changed. GO ON TO THE NEXT PAGE_ TEST 9 PART 6 269"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Some of the food items have been identified as top sellers.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(C) 143 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t9_143",
+    "num": 143,
+    "source": "Hacker 3 Test 9 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 143: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Option D'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(D) 144 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t9_144",
+    "num": 144,
+    "source": "Hacker 3 Test 9 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "results, the city approved its construction, and development plans are expected to commence in the coming months. Gainesburg's one existing fitness club was last year after 30 years of use. This left the",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Option A'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "results",
+      "city",
+      "approved"
+    ],
+    "vietnameseMeaning": "(A) 145 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t9_145",
+    "num": 145,
+    "source": "Hacker 3 Test 9 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "area without any functional leisure facilities at all, and residents had been pushing for a sports complex ever since. \"Having a fitness center will make athletic resources readily accessible to a wider",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Option D'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "area",
+      "without",
+      "functional"
+    ],
+    "vietnameseMeaning": "(D) 146 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t9_146",
+    "num": 146,
+    "source": "Hacker 3 Test 9 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "range of people. It will also help unite the community in a fun and healthy way,\" said council member Claire Faukes.",
+    "options": {
+      "A": "will vote",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Option B'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "range",
+      "people",
+      "also"
+    ],
+    "vietnameseMeaning": "(B) 147 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t9_147",
+    "num": 147,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What type of event is the invitation for?",
+    "options": {
+      "A": "A community food fair",
+      "B": "An annual banquet",
+      "C": "A grand opening",
+      "D": "A cooking competition"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'A grand opening'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "type",
+      "event",
+      "invitation"
+    ],
+    "vietnameseMeaning": "(C) 148 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_148",
+    "num": 148,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is true about Ricardo's Corner?",
+    "options": {
+      "A": "It operates multiple stores.",
+      "B": "It will not sell goods on weekends.",
+      "C": "It sells ingredients from different regions.",
+      "D": "It will offer coupons to all visiting customers. GO ON TO THE NEXT PAGE. TEST 9 PART 7 271"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'It sells ingredients from different regions.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "true",
+      "Ricardo",
+      "Corner"
+    ],
+    "vietnameseMeaning": "(C) 149 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_149",
+    "num": 149,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the purpose of the notice?",
+    "options": {
+      "A": "To describe a gymnasium's added service facilities",
+      "B": "To announce changes to a staff member work policy",
+      "C": "To provide details on emergency safety procedures",
+      "D": "To inform members of guidelines concerning belongings"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'To inform members of guidelines concerning belongings'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "purpose",
+      "notice"
+    ],
+    "vietnameseMeaning": "(D) 150 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_150",
+    "num": 150,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "According to the notice, what should gym users do when reporting a loss?",
+    "options": {
+      "A": "Visit the facility's front desk",
+      "B": "Fill out a complaint form",
+      "C": "Write to a head office",
+      "D": "Post a note on a bulletin board"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Visit the facility's front desk'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "According",
+      "notice",
+      "should"
+    ],
+    "vietnameseMeaning": "(A) 151 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_151",
+    "num": 151,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong? \"They will provide you with a ticket which must be presented to retrieve your stored items.\"",
+    "options": {
+      "A": "[1]",
+      "B": "[2]",
+      "C": "[3]",
+      "D": "[4] 272 £z\\°l ho]^.qj yo^opi mp3 Hackerslngang.com"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) '[3]'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "positions",
+      "marked",
+      "does"
+    ],
+    "vietnameseMeaning": "(C) 152 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_152",
+    "num": 152,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "At 8:53 a.m., what does Ms. Chan most likely mean when she writes, \"I wish I could\"?",
+    "options": {
+      "A": "She hopes to attend a meeting.",
+      "B": "She is unable to switch times.",
+      "C": "She does not want to accept a proposal.",
+      "D": "She wants to leave the office early."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'She is unable to switch times.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "does",
+      "Chan",
+      "most"
+    ],
+    "vietnameseMeaning": "(B) 153 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_153",
+    "num": 153,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What will Mr. McKay most likely do next?",
+    "options": {
+      "A": "Meet with a factory manager",
+      "B": "Cancel a plant visit",
+      "C": "Check some sales figures",
+      "D": "Rearrange an appointment GO ON TO THE NEXT PAGE, TEST9 PART? 273"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Rearrange an appointment GO ON TO THE NEXT PAGE, TEST9 PART? 273'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "McKay",
+      "most",
+      "likely"
+    ],
+    "vietnameseMeaning": "(D) 154 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_154",
+    "num": 154,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the problem with Ms. Patton's order?",
+    "options": {
+      "A": "An item was damaged during transit.",
+      "B": "A selection is unavailable now.",
+      "C": "A price has been changed.",
+      "D": "A shipment has been lost."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'A selection is unavailable now.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "problem",
+      "Patton",
+      "order"
+    ],
+    "vietnameseMeaning": "(B) 155 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_155",
+    "num": 155,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is NOT an option suggested by Mr. Compton?",
+    "options": {
+      "A": "Delaying a shipment",
+      "B": "Replacing a selection",
+      "C": "Canceling a single item",
+      "D": "Returning a defective product 274 Hackers.co.kr"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Returning a defective product 274 Hackers.co.kr'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "option",
+      "suggested",
+      "Compton"
+    ],
+    "vietnameseMeaning": "(D) 156 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_156",
+    "num": 156,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is NOT a task arranged for 157. What time will the second rehearsal Ms. Greene? commence?",
+    "options": {
+      "A": "At 1:30 p.m.",
+      "B": "At 2:00 p.m.",
+      "C": "At 2:30 p.m.",
+      "D": "At 3:30 p.m. GO ON TO THE NEXT PAGE. TEST 9 PART 7 275"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'At 2:30 p.m.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "task",
+      "arranged",
+      "time"
+    ],
+    "vietnameseMeaning": "(C) 157 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_157",
+    "num": 157,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Question 157: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Option B'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(B) 158 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_158",
+    "num": 158,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What can be inferred about the Gordon Institute?",
+    "options": {
+      "A": "It releases survey results every five years.",
+      "B": "It has produced at least three studies.",
+      "C": "It advises the government on medical concerns.",
+      "D": "It holds seminars on maintaining a healthy diet."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'It has produced at least three studies.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "inferred",
+      "Gordon",
+      "Institute"
+    ],
+    "vietnameseMeaning": "(B) 159 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_159",
+    "num": 159,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What type of exercise did most survey participants prefer?",
+    "options": {
+      "A": "Taking lengthy walks",
+      "B": "Participating in weight training",
+      "C": "Running at a slow pace",
+      "D": "Engaging in competitive sport"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Running at a slow pace'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "type",
+      "exercise",
+      "most"
+    ],
+    "vietnameseMeaning": "(C) 160 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_160",
+    "num": 160,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does the most recent survey indicate about Americans?",
+    "options": {
+      "A": "They have the tendency to overeat.",
+      "B": "They are making better choices about their health.",
+      "C": "They got more exercise a decade ago.",
+      "D": "They spend most of their spare time exercising."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'They are making better choices about their health.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "does",
+      "most",
+      "recent"
+    ],
+    "vietnameseMeaning": "(B) 161 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_161",
+    "num": 161,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In which of the positions marked [1], [2], mh [3], and [4] does the following sentence best belong? \"The rest of them say they do not work out at all.\"",
+    "options": {
+      "A": "[1]",
+      "B": "[2]",
+      "C": "[3]",
+      "D": "[4] 276 ^|oi ^ MP3 Hackerslngang.com"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) '[1]'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "positions",
+      "marked",
+      "does"
+    ],
+    "vietnameseMeaning": "(A) 162 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_162",
+    "num": 162,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is true about Super Ticket Exchange?",
+    "options": {
+      "A": "It operates a Philadelphia office.",
+      "B": "It offers refunds for a limited amount of time.",
+      "C": "It charges a small commission on every transaction.",
+      "D": "It sells tickets at the lowest prices on the market."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'It offers refunds for a limited amount of time.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "true",
+      "Super",
+      "Ticket"
+    ],
+    "vietnameseMeaning": "(B) 163 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_163",
+    "num": 163,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "On what date will a school group give a performance?",
+    "options": {
+      "A": "October 3",
+      "B": "October 12",
+      "C": "October 15",
+      "D": "October 26 GO ON TO THE NEXT PAGE_ TEST9 PART? Ill"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'October 3'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "date",
+      "school",
+      "group"
+    ],
+    "vietnameseMeaning": "(A) 164 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_164",
+    "num": 164,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What are ticket sellers required to do?",
+    "options": {
+      "A": "Send an e-mail to confirm an address",
+      "B": "Make a phone call to provide payment details",
+      "C": "Fill in an online form with some details",
+      "D": "Create an advertisement to post on the site"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Fill in an online form with some details'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "ticket",
+      "sellers",
+      "required"
+    ],
+    "vietnameseMeaning": "(C) 165 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_165",
+    "num": 165,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about Wembley Hotel?",
+    "options": {
+      "A": "It charges a fee to use the business center.",
+      "B": "It has branches located in many different countries.",
+      "C": "It recently updated many of its facilities.",
+      "D": "It is considering introducing a new service."
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'It charges a fee to use the business center.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "indicated",
+      "Wembley",
+      "Hotel"
+    ],
+    "vietnameseMeaning": "(A) 166 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_166",
+    "num": 166,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What did Mr. Gould have difficulty with?",
+    "options": {
+      "A": "An inoperable phone system",
+      "B": "A malfunctioning device",
+      "C": "An occupied meeting venue",
+      "D": "A poor Internet connection 278 Hackers.co.kr"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'A malfunctioning device'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Gould",
+      "difficulty"
+    ],
+    "vietnameseMeaning": "(B) 167 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_167",
+    "num": 167,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is NOT mentioned about Mr. Gould?",
+    "options": {
+      "A": "He traveled to Chicago on business.",
+      "B": "He was pleased with a member of staff.",
+      "C": "He printed out some documents.",
+      "D": "He recommended the hotel to a coworker."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'He recommended the hotel to a coworker.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "mentioned",
+      "Gould"
+    ],
+    "vietnameseMeaning": "(D) 168 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_168",
+    "num": 168,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is stated about La Defense?",
+    "options": {
+      "A": "It had lower sales than Mr. Martin's previous albums.",
+      "B": "It ranked highly on some charts for a period of time.",
+      "C": "It consists of recordings with other artists.",
+      "D": "It was produced at a recording studio in Paris."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'It ranked highly on some charts for a period of time.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "stated",
+      "Defense"
+    ],
+    "vietnameseMeaning": "(B) 169 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_169",
+    "num": 169,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is implied about Mr. Martin?",
+    "options": {
+      "A": "He hosted his own televised talk show for a time.",
+      "B": "He built a recording studio near his home in Colorado.",
+      "C": "He has not performed in public for three years.",
+      "D": "He produced a best-selling album for James Norwell."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'He has not performed in public for three years.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "implied",
+      "Martin"
+    ],
+    "vietnameseMeaning": "(C) 170 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_170",
+    "num": 170,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is posted on Mr. Martin's Web site?",
+    "options": {
+      "A": "Tour schedules",
+      "B": "A song by Carly Fey",
+      "C": "Ways to contact his agent",
+      "D": "Album release information"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Album release information'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "posted",
+      "Martin",
+      "site"
+    ],
+    "vietnameseMeaning": "(D) 171 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_171",
+    "num": 171,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "How has Mr. Martin promoted his upcoming album?",
+    "options": {
+      "A": "By putting out a song in advance",
+      "B": "By performing free concerts",
+      "C": "By being interviewed by journalists",
+      "D": "By writing about it on his music blog GO ON TO THE NEXT PAGE, TEST9 PART? 279"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'By putting out a song in advance'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "Martin",
+      "promoted",
+      "upcoming"
+    ],
+    "vietnameseMeaning": "(A) 172 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_172",
+    "num": 172,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Why is Mr. Walker asking for ideas?",
+    "options": {
+      "A": "A department is preparing to train new employees.",
+      "B": "A committee has been asked to review a list of applicants.",
+      "C": "A company is having trouble finding qualified personnel.",
+      "D": "A team has been given the task of developing a Web site."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'A company is having trouble finding qualified personnel.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Walker",
+      "asking",
+      "ideas"
+    ],
+    "vietnameseMeaning": "(C) 173 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_173",
+    "num": 173,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is NOT mentioned about Revenco?",
+    "options": {
+      "A": "It has tried to recruit new employees at job fairs.",
+      "B": "It is experiencing rapid growth at the present time.",
+      "C": "It recently stopped running a job advertisement.",
+      "D": "It has more than one office location."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'It recently stopped running a job advertisement.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "mentioned",
+      "Revenco"
+    ],
+    "vietnameseMeaning": "(C) 174 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_174",
+    "num": 174,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "At 4:50, what does Ms. Page mean when she writes, \"There's just one thing\"?",
+    "options": {
+      "A": "She believes there is only one way to deal with a lack of applicants.",
+      "B": "She is not sure that people will be interested in the position.",
+      "C": "She thinks that candidates should have to fulfill a certain condition.",
+      "D": "She does not fully agree with a colleague's proposal."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'She does not fully agree with a colleague's proposal.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "does",
+      "Page",
+      "mean"
+    ],
+    "vietnameseMeaning": "(D) 175 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_175",
+    "num": 175,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does Mr. Walker ask Ms. Page to do?",
+    "options": {
+      "A": "Organize a meeting with Mr. Garnier",
+      "B": "Compile a list of people to invite",
+      "C": "Register the company for a recruitment event",
+      "D": "Give candidates a tour of the workplace GO ON TO THE NEXT PAGE TEST9 PART? 281"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Compile a list of people to invite'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "does",
+      "Walker",
+      "Page"
+    ],
+    "vietnameseMeaning": "(B) 176 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_176",
+    "num": 176,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the schedule mainly about?",
+    "options": {
+      "A": "An event to promote enrollment at a university",
+      "B": "A tour of some historical buildings",
+      "C": "An academic gathering regarding history",
+      "D": "A series of presentations from graduate students"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'An academic gathering regarding history'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "schedule",
+      "mainly"
+    ],
+    "vietnameseMeaning": "(C) 177 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_177",
+    "num": 177,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Which speaker will talk about the clothing of an ancient culture?",
+    "options": {
+      "A": "Jonathan Taylor",
+      "B": "Grace Li",
+      "C": "Zoe Harris",
+      "D": "Michael Jones"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Michael Jones'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "speaker",
+      "talk",
+      "clothing"
+    ],
+    "vietnameseMeaning": "(D) 178 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_178",
+    "num": 178,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is mentioned about the Royal Harrington Hotel?",
+    "options": {
+      "A": "It is located in the suburbs of Melbourne.",
+      "B": "It is offering complimentary accommodations to guests.",
+      "C": "It is one of the largest hotels in the city.",
+      "D": "It is hosting more than one event on July 25."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'It is hosting more than one event on July 25.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "mentioned",
+      "Royal",
+      "Harrington"
+    ],
+    "vietnameseMeaning": "(D) 179 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_179",
+    "num": 179,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Why will Ms. Christie arrive after the registration period?",
+    "options": {
+      "A": "She is taking transit that arrives at a later time.",
+      "B": "She has another event to attend first.",
+      "C": "She needs to check in to her hotel room.",
+      "D": "She has a work assignment to complete."
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'She is taking transit that arrives at a later time.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "Christie",
+      "arrive",
+      "after"
+    ],
+    "vietnameseMeaning": "(A) 180 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_180",
+    "num": 180,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Where will Ms. Christie most likely eat lunch?",
+    "options": {
+      "A": "In the main dining hall",
+      "B": "In the Hampton Conference Room",
+      "C": "In the Main Conference Hall",
+      "D": "In the lobby GO ON TO THE NEXT PAGE TEST 9 PART? 283"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'In the Hampton Conference Room'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Christie",
+      "most",
+      "likely"
+    ],
+    "vietnameseMeaning": "(B) 181 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_181",
+    "num": 181,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the main topic of the article?",
+    "options": {
+      "A": "A bicycle parking facility",
+      "B": "An upgraded fitness tracking device",
+      "C": "A new navigation program",
+      "D": "A searchable city map"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'A new navigation program'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "main",
+      "topic",
+      "article"
+    ],
+    "vietnameseMeaning": "(C) 182 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_182",
+    "num": 182,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is Two Wheels?",
+    "options": {
+      "A": "A bicycling group",
+      "B": "A motorbike manufacturer",
+      "C": "A government agency",
+      "D": "A software developer"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'A bicycling group'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "Wheels"
+    ],
+    "vietnameseMeaning": "(A) 183 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_183",
+    "num": 183,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What has Ms. McGrath recently done?",
+    "options": {
+      "A": "Deleted a mobile application",
+      "B": "Relocated for work",
+      "C": "Hiked in the mountains",
+      "D": "Rented a car"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Relocated for work'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "McGrath",
+      "recently",
+      "done"
+    ],
+    "vietnameseMeaning": "(B) 184 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_184",
+    "num": 184,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What can be implied about Ms. McGrath?",
+    "options": {
+      "A": "She uses the software mostly for bicycling to work.",
+      "B": "She received a discount for renewing her membership.",
+      "C": "She paid for a one-year subscription to the application.",
+      "D": "She will be charged an extra fee to see walking routes."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'She paid for a one-year subscription to the application.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "implied",
+      "McGrath"
+    ],
+    "vietnameseMeaning": "(C) 185 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_185",
+    "num": 185,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about Red-Routes?",
+    "options": {
+      "A": "It has an interface that is hard to use.",
+      "B": "It operates at a fast speed.",
+      "C": "It is a trial program for cyclists.",
+      "D": "It costs less than similar software. GO ON TO THE NEXT PAGE, TEST 9 PART? 285"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'It operates at a fast speed.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "indicated",
+      "Routes"
+    ],
+    "vietnameseMeaning": "(B) 186 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_186",
+    "num": 186,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is NOT true about Shelton Media?",
+    "options": {
+      "A": "It accepts multiple methods of payment.",
+      "B": "It targets residents of a particular community.",
+      "C": "It prints one newsletter issue weekly.",
+      "D": "It hosts events for job seekers."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'It prints one newsletter issue weekly.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "true",
+      "Shelton",
+      "Media"
+    ],
+    "vietnameseMeaning": "(C) 187 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_187",
+    "num": 187,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What extension number should clients dial to inquire about discounted rates?",
+    "options": {
+      "A": "11",
+      "B": "18",
+      "C": "24",
+      "D": "30"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) '18'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "extension",
+      "number",
+      "should"
+    ],
+    "vietnameseMeaning": "(B) 188 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_188",
+    "num": 188,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What can customers do on Shelton Media's Web site?",
+    "options": {
+      "A": "Provide feedback on services",
+      "B": "Order products from a catalogue",
+      "C": "Enter a monthly draw",
+      "D": "Chat with a company representative"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Provide feedback on services'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "customers",
+      "Shelton",
+      "Media"
+    ],
+    "vietnameseMeaning": "(A) 189 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_189",
+    "num": 189,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does Ms. Loeb indicate about Lawler Scapes?",
+    "options": {
+      "A": "It plans to sign a two-year agreement.",
+      "B": "It has more business during the spring.",
+      "C": "It will increase its budget for advertising.",
+      "D": "It is a new company in the region."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'It has more business during the spring.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "does",
+      "Loeb",
+      "indicate"
+    ],
+    "vietnameseMeaning": "(B) 190 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_190",
+    "num": 190,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "How much does Ms. Loeb suggest spending on each advertisement?",
+    "options": {
+      "A": "$125",
+      "B": "$150",
+      "C": "$165",
+      "D": "$175 GO ON TO THE NEXT PAGE. TEST 9 PART 7 287"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) '$165'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "much",
+      "does",
+      "Loeb"
+    ],
+    "vietnameseMeaning": "(C) 191 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_191",
+    "num": 191,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is NOT true about the trip through the Sahara?",
+    "options": {
+      "A": "It can be purchased at a discount.",
+      "B": "It passes through at least three countries.",
+      "C": "It is offered by Borderland Tours year-round.",
+      "D": "It is scheduled to last for about a month."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'It is offered by Borderland Tours year-round.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "true",
+      "trip",
+      "through"
+    ],
+    "vietnameseMeaning": "(C) 192 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_192",
+    "num": 192,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "According to the online form, what are travelers required to do upon booking?",
+    "options": {
+      "A": "Indicate their meal preferences",
+      "B": "Transmit a partial payment",
+      "C": "Provide a home address",
+      "D": "Arrange for necessary visas"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Transmit a partial payment'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "According",
+      "online",
+      "form"
+    ],
+    "vietnameseMeaning": "(B) 193 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_193",
+    "num": 193,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is suggested about Mr. Turner?",
+    "options": {
+      "A": "He frequently goes on trips to exotic locations.",
+      "B": "He is in a healthy state of physical fitness.",
+      "C": "He took a safety course before his trip.",
+      "D": "He had to pay extra for changing his reservation."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'He is in a healthy state of physical fitness.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "suggested",
+      "Turner"
+    ],
+    "vietnameseMeaning": "(B) 194 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_194",
+    "num": 194,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What aspect of the trip was Mr. Turner not satisfied with?",
+    "options": {
+      "A": "The impoliteness of a staff member",
+      "B": "The uncomfortable accommodations",
+      "C": "The incompatibility of the group members",
+      "D": "The lack of variety of meal options"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'The lack of variety of meal options'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "aspect",
+      "trip",
+      "Turner"
+    ],
+    "vietnameseMeaning": "(D) 195 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_195",
+    "num": 195,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Which destination in Mauritania did Mr. Turner originally want to visit most?",
+    "options": {
+      "A": "Nouakchott",
+      "B": "Banc d' Auguin",
+      "C": "Atar",
+      "D": "Tagant GO ON TO THE NEXT PAGE TEST 9 PART? 289"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Atar'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "destination",
+      "Mauritania",
+      "Turner"
+    ],
+    "vietnameseMeaning": "(C) 196 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_196",
+    "num": 196,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "According to the article, why is Autumn Leaf opening a new hotel?",
+    "options": {
+      "A": "To make up for the closure of its first one",
+      "B": "To satisfy a need for extended stays",
+      "C": "To accommodate an excess of customers",
+      "D": "To take advantage of a district's growing popularity"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'To satisfy a need for extended stays'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "According",
+      "article",
+      "Autumn"
+    ],
+    "vietnameseMeaning": "(B) 197 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_197",
+    "num": 197,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about Autumn Leaf's new hotel?",
+    "options": {
+      "A": "It will rent rooms for events.",
+      "B": "It will serve meals in guests' rooms.",
+      "C": "It could open later than August.",
+      "D": "It may offer a valet parking service."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'It could open later than August.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "indicated",
+      "Autumn",
+      "Leaf"
+    ],
+    "vietnameseMeaning": "(C) 198 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_198",
+    "num": 198,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does Mr. Suarez state about the article?",
+    "options": {
+      "A": "It could be reprinted in a company newsletter.",
+      "B": "It is the second one written about Autumn Leaf.",
+      "C": "It failed to mention a special promotion.",
+      "D": "It prompted readers to contact Autumn Leaf. This is the end of the test. You may review Part 5, 6, and 7 if you finish the test early. TEST 9 PART? 291"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'It prompted readers to contact Autumn Leaf. This is the end of the test. You may review Part 5, 6, and 7 if you finish the test early. TEST 9 PART? 291'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "does",
+      "Suarez",
+      "state"
+    ],
+    "vietnameseMeaning": "(D) 199 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_199",
+    "num": 199,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is suggested about Mr. Oldman?",
+    "options": {
+      "A": "He interviewed Mr. Suarez in New York.",
+      "B": "He took a translator with him to Buenos Aires.",
+      "C": "He visited Monserrat sometime in March.",
+      "D": "He was hired by Autumn Leaf to write his article."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'He visited Monserrat sometime in March.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "suggested",
+      "Oldman"
+    ],
+    "vietnameseMeaning": "(C) 200 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t9_200",
+    "num": 200,
+    "source": "Hacker 3 Test 9 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In the e-mail, the word \"settled\" in paragraph 2, line 1, is closest in meaning to",
+    "options": {
+      "A": "paid",
+      "B": "finalized",
+      "C": "located",
+      "D": "relieved eh: S S 33 p.326 / 34= StS p.327 / 61I3 p.39B / Part 5&6 UfS M7| • c® ni|0|x|0|| Self *13. e| AS1 #sn gxi| #o| ^34 ehe# ggsii suiifl."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'finalized'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "mail",
+      "word",
+      "settled"
+    ],
+    "vietnameseMeaning": "(B) PART 5",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 9 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_101",
+    "num": 101,
+    "source": "Hacker 3 Test 10 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Body-Wise Gym for minor renovations and cleaning.",
+    "options": {
+      "A": "periodic",
+      "B": "periodical",
+      "C": "period",
+      "D": "periodically The reporter forecasted sunny weather"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'periodically The reporter forecasted sunny weather'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'periodically The reporter forecasted sunny weather'.",
+    "keywords": [
+      "Body",
+      "Wise",
+      "minor"
+    ],
+    "vietnameseMeaning": "(D) 102 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t10_102",
+    "num": 102,
+    "source": "Hacker 3 Test 10 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "the Midwestern region for tomorrow.",
+    "options": {
+      "A": "among throughout",
+      "B": "Option B",
+      "C": "without",
+      "D": "until"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'Option B'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'Option B'.",
+    "keywords": [
+      "Midwestern",
+      "region",
+      "tomorrow"
+    ],
+    "vietnameseMeaning": "(B) 103 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t10_103",
+    "num": 103,
+    "source": "Hacker 3 Test 10 Part 5",
+    "category": "Ngữ pháp & Thì (Grammar & Tenses)",
+    "question": "The faulty card reader located at the side entrance of Carter & Associates' headquarters in the coming week.",
+    "options": {
+      "A": "was repaired",
+      "B": "repairs",
+      "C": "will be repaired",
+      "D": "has been repaired"
+    },
+    "correctAnswer": "C",
+    "explanation": "Xét về sự hòa hợp giữa chủ ngữ và thì của câu, động từ (C) 'will be repaired' chia đúng thì và dạng chủ động/bị động.",
+    "tip": "⚡ MẸO CHIA THÌ: Nhìn dấu hiệu thời gian và xét chủ ngữ số ít/số nhiều để loại trừ các dạng sai thì. Đáp án đúng là (C).",
+    "keywords": [
+      "faulty",
+      "card",
+      "reader"
+    ],
+    "vietnameseMeaning": "(C) 104 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t10_104",
+    "num": 104,
+    "source": "Hacker 3 Test 10 Part 5",
+    "category": "Từ loại (Word Form)",
+    "question": "The accounting department revised estimates for expenditures after the news that the budget would be changed. to receive",
+    "options": {
+      "A": "Option A",
+      "B": "receives",
+      "C": "receiver",
+      "D": "receiving 294 Hackers.co.kr Select the best answer and mark the sheet."
+    },
+    "correctAnswer": "D",
+    "explanation": "Căn cứ vào ngữ pháp câu, vị trí cần điền đóng vai trò từ loại phù hợp trong mệnh đề. Chọn đáp án (D) 'receiving 294 Hackers.co.kr Select the best answer and mark the sheet.' để hoàn chỉnh cấu trúc ngữ pháp.",
+    "tip": "⚡ MẸO TỪ LOẠI: Xác định vị trí chỗ trống đứng sau từ loại gì (danh từ, động từ, tính từ hay trạng từ) để chọn đuôi hậu tố chính xác. Đáp án đúng là (D).",
+    "keywords": [
+      "accounting",
+      "department",
+      "revised"
+    ],
+    "vietnameseMeaning": "(D) 105 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t10_105",
+    "num": 105,
+    "source": "Hacker 3 Test 10 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Colorlast makes a line of outdoor paints formulated that are to withstand years of exposure to sun and precipitation.",
+    "options": {
+      "A": "special",
+      "B": "specialty specially",
+      "C": "Option C",
+      "D": "specialization"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'Option C'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'Option C'.",
+    "keywords": [
+      "Colorlast",
+      "makes",
+      "line"
+    ],
+    "vietnameseMeaning": "(C) 106 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t10_106",
+    "num": 106,
+    "source": "Hacker 3 Test 10 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Athlete Tim Ferguson has made a recovery from his injuries and will be able to play in his team's next match. reverse",
+    "options": {
+      "A": "Option A",
+      "B": "preferable",
+      "C": "remarkable negligible",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'remarkable negligible'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'remarkable negligible'.",
+    "keywords": [
+      "Athlete",
+      "Ferguson",
+      "made"
+    ],
+    "vietnameseMeaning": "(C) 107 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t10_107",
+    "num": 107,
+    "source": "Hacker 3 Test 10 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Prospective candidates for the position will be notified of the final decision by June 1 at the .",
+    "options": {
+      "A": "late latest",
+      "B": "Option B",
+      "C": "lately",
+      "D": "later the"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'Option B'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'Option B'.",
+    "keywords": [
+      "Prospective",
+      "candidates",
+      "position"
+    ],
+    "vietnameseMeaning": "(B) 108 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t10_108",
+    "num": 108,
+    "source": "Hacker 3 Test 10 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Dr. Watanabe was seated keynote speaker and the foundation president during the banquet.",
+    "options": {
+      "A": "about",
+      "B": "between versus",
+      "C": "Option C",
+      "D": "except"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'between versus'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'between versus'.",
+    "keywords": [
+      "Watanabe",
+      "seated",
+      "keynote"
+    ],
+    "vietnameseMeaning": "(B) 109 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t10_109",
+    "num": 109,
+    "source": "Hacker 3 Test 10 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Ms. Larrington's how 114. to improve customer satisfaction has professor working at the university for be motivated service specialists across the three decades would retiring. country. rarely",
+    "options": {
+      "A": "perishable",
+      "B": "portable",
+      "C": "enthusiastic",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'enthusiastic'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'enthusiastic'.",
+    "keywords": [
+      "Larrington",
+      "improve",
+      "customer"
+    ],
+    "vietnameseMeaning": "(C) 110 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t10_110",
+    "num": 110,
+    "source": "Hacker 3 Test 10 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Verdant Island can only be visited in the daytime since of it is covered by water at night.",
+    "options": {
+      "A": "much",
+      "B": "few",
+      "C": "less",
+      "D": "enough"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'much'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'much'.",
+    "keywords": [
+      "Verdant",
+      "Island",
+      "only"
+    ],
+    "vietnameseMeaning": "(A) 111 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t10_111",
+    "num": 111,
+    "source": "Hacker 3 Test 10 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Extra staff were called in from nearby branches to help plant crews - production deadlines for an unexpected order.",
+    "options": {
+      "A": "meet",
+      "B": "enter",
+      "C": "relieve",
+      "D": "commit"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (A) 'meet'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (A) 'meet'.",
+    "keywords": [
+      "Extra",
+      "staff",
+      "were"
+    ],
+    "vietnameseMeaning": "(A) 112 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t10_112",
+    "num": 112,
+    "source": "Hacker 3 Test 10 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Officials at Lextar International were a unable to agree definite solution to the problem of steadily declining profit margins.",
+    "options": {
+      "A": "at that",
+      "B": "Option B",
+      "C": "by",
+      "D": "on"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'on'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'on'.",
+    "keywords": [
+      "Officials",
+      "Lextar",
+      "International"
+    ],
+    "vietnameseMeaning": "(D) 113 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t10_113",
+    "num": 113,
+    "source": "Hacker 3 Test 10 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "According to the Ministry of the on Environment, updated water consumption go into effect next month. will",
+    "options": {
+      "A": "Option A",
+      "B": "distinctiveness",
+      "C": "distinctive",
+      "D": "distinctively"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'distinctively'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'distinctively'.",
+    "keywords": [
+      "According",
+      "Ministry",
+      "Environment"
+    ],
+    "vietnameseMeaning": "(D) 114 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t10_114",
+    "num": 114,
+    "source": "Hacker 3 Test 10 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Question 114: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'Option D'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'Option D'.",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(D) 115 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t10_115",
+    "num": 115,
+    "source": "Hacker 3 Test 10 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Torres Architecture, the agency that planned the Steadman Tower, won an",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) ' '.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) ' '.",
+    "keywords": [
+      "Torres",
+      "Architecture",
+      "agency"
+    ],
+    "vietnameseMeaning": "(C) 116 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t10_116",
+    "num": 116,
+    "source": "Hacker 3 Test 10 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "To increase the stability of large data transfers, the technical crew an will upgraded software program on Friday.",
+    "options": {
+      "A": "detach install",
+      "B": "Option B",
+      "C": "convert",
+      "D": "capture"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'Option B'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'Option B'.",
+    "keywords": [
+      "increase",
+      "stability",
+      "large"
+    ],
+    "vietnameseMeaning": "(B) 117 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t10_117",
+    "num": 117,
+    "source": "Hacker 3 Test 10 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The Cottonwood Gallery guarantees that of the items it sells is an original and comes an certificate with official of authenticity.",
+    "options": {
+      "A": "many each",
+      "B": "Option B",
+      "C": "both",
+      "D": "all"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'Option B'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'Option B'.",
+    "keywords": [
+      "Cottonwood",
+      "Gallery",
+      "guarantees"
+    ],
+    "vietnameseMeaning": "(B) 118 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t10_118",
+    "num": 118,
+    "source": "Hacker 3 Test 10 Part 5",
+    "category": "Ngữ pháp & Thì (Grammar & Tenses)",
+    "question": "If Jennifer hits all of her sales targets for the next quarter, there is a good chance she will",
+    "options": {
+      "A": "promote",
+      "B": "have promoted",
+      "C": "be promoted",
+      "D": "be promoting GO ON TO THE NEXT PAGE 295 TEST 10 PARTS"
+    },
+    "correctAnswer": "C",
+    "explanation": "Xét về sự hòa hợp giữa chủ ngữ và thì của câu, động từ (C) 'be promoted' chia đúng thì và dạng chủ động/bị động.",
+    "tip": "⚡ MẸO CHIA THÌ: Nhìn dấu hiệu thời gian và xét chủ ngữ số ít/số nhiều để loại trừ các dạng sai thì. Đáp án đúng là (C).",
+    "keywords": [
+      "Jennifer",
+      "hits",
+      "sales"
+    ],
+    "vietnameseMeaning": "(C) 119 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t10_119",
+    "num": 119,
+    "source": "Hacker 3 Test 10 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "125. Responding to declining sales figures, software multiple times as their overall Senturia Automotive concluded that they objective is to detect and eliminate any had to the M5 Sedan line. defects.",
+    "options": {
+      "A": "almost disobey",
+      "B": "barely",
+      "C": "suddenly",
+      "D": "typically"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'typically'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'typically'.",
+    "keywords": [
+      "Responding",
+      "declining",
+      "sales"
+    ],
+    "vietnameseMeaning": "(D) 120 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t10_120",
+    "num": 120,
+    "source": "Hacker 3 Test 10 Part 5",
+    "category": "Mệnh đề & Đại từ (Clauses & Pronouns)",
+    "question": "discount to existing sign up for some scenes which may be inappropriate for under the age of 15.",
+    "options": {
+      "A": "whoever",
+      "B": "them",
+      "C": "these",
+      "D": "those"
+    },
+    "correctAnswer": "D",
+    "explanation": "Đáp án chính xác theo Official Key là (D) 'those'.",
+    "tip": "⚡ MẸO TOEIC: Đọc kỹ ngữ cảnh và loại trừ các đáp án sai ngữ pháp. Chọn (D).",
+    "keywords": [
+      "discount",
+      "existing",
+      "sign"
+    ],
+    "vietnameseMeaning": "(D) 121 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t10_121",
+    "num": 121,
+    "source": "Hacker 3 Test 10 Part 5",
+    "category": "Từ loại (Word Form)",
+    "question": "After years of difficulty doing it herself, Pace had her taxes through an Ms. accounting agency.",
+    "options": {
+      "A": "filing",
+      "B": "file",
+      "C": "filed",
+      "D": "to file"
+    },
+    "correctAnswer": "C",
+    "explanation": "Căn cứ vào ngữ pháp câu, vị trí cần điền đóng vai trò từ loại phù hợp trong mệnh đề. Chọn đáp án (C) 'filed' để hoàn chỉnh cấu trúc ngữ pháp.",
+    "tip": "⚡ MẸO TỪ LOẠI: Xác định vị trí chỗ trống đứng sau từ loại gì (danh từ, động từ, tính từ hay trạng từ) để chọn đuôi hậu tố chính xác. Đáp án đúng là (C).",
+    "keywords": [
+      "After",
+      "years",
+      "difficulty"
+    ],
+    "vietnameseMeaning": "(C) 122 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t10_122",
+    "num": 122,
+    "source": "Hacker 3 Test 10 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "expectations, the band's greatest hits CD sold a million copies shortly after release. its",
+    "options": {
+      "A": "Recommending",
+      "B": "Perceiving",
+      "C": "Evolving",
+      "D": "Exceeding"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'Exceeding'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'Exceeding'.",
+    "keywords": [
+      "expectations",
+      "band",
+      "greatest"
+    ],
+    "vietnameseMeaning": "(D) 123 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t10_123",
+    "num": 123,
+    "source": "Hacker 3 Test 10 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Conrad posted advertisements on Mr. several recruitment sites, including the regarding salaries and benefits. permissions",
+    "options": {
+      "A": "Option A",
+      "B": "configurations",
+      "C": "particulars",
+      "D": "institutions"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) 'particulars'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) 'particulars'.",
+    "keywords": [
+      "Conrad",
+      "posted",
+      "advertisements"
+    ],
+    "vietnameseMeaning": "(C) 124 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t10_124",
+    "num": 124,
+    "source": "Hacker 3 Test 10 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Top executives from Home Stock gave members the media a tour the of local of new store its grand opening.",
+    "options": {
+      "A": "subscription",
+      "B": "subscribed subscribes",
+      "C": "Option C",
+      "D": "subscribers"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'subscribed subscribes'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'subscribed subscribes'.",
+    "keywords": [
+      "executives",
+      "Home",
+      "Stock"
+    ],
+    "vietnameseMeaning": "(B) 125 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t10_125",
+    "num": 125,
+    "source": "Hacker 3 Test 10 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Question 125: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (C) ' '.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (C) ' '.",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(C) 126 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t10_126",
+    "num": 126,
+    "source": "Hacker 3 Test 10 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "The Chicago /-/era/d gives a 40 percent Gigantica Studio's new action movie has who",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (D) 'Option D'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (D) 'Option D'.",
+    "keywords": [
+      "Chicago",
+      "gives",
+      "percent"
+    ],
+    "vietnameseMeaning": "(D) 127 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t10_127",
+    "num": 127,
+    "source": "Hacker 3 Test 10 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Sunny River Vacations endeavors to satisfy every customer by personalizing travel details to ensure that each trip is",
+    "options": {
+      "A": "memory",
+      "B": "memorable",
+      "C": "memorizing memorials",
+      "D": "Option D"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'memorable'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'memorable'.",
+    "keywords": [
+      "Sunny",
+      "River",
+      "Vacations"
+    ],
+    "vietnameseMeaning": "(B) 128 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t10_128",
+    "num": 128,
+    "source": "Hacker 3 Test 10 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "Rowan Training Center has added more business classes, which brings the total sessions number of to nearly double that of last year. schedule",
+    "options": {
+      "A": "Option A",
+      "B": "scheduled",
+      "C": "schedules scheduling",
+      "D": "Option D"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'scheduled'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'scheduled'.",
+    "keywords": [
+      "Rowan",
+      "Training",
+      "Center"
+    ],
+    "vietnameseMeaning": "(B) 129 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t10_129",
+    "num": 129,
+    "source": "Hacker 3 Test 10 Part 5",
+    "category": "Liên từ (Conjunctions)",
+    "question": "Ms. Jacobs' managerial style is democratic she includes her staff the in decision-making process.",
+    "options": {
+      "A": "in that for example",
+      "B": "Option B",
+      "C": "so that",
+      "D": "rather than"
+    },
+    "correctAnswer": "A",
+    "explanation": "Liên từ (A) 'in that for example' dùng để liên kết hai mệnh đề biểu thị mối quan hệ logic chính xác.",
+    "tip": "⚡ MẸO LIÊN TỪ: Phân biệt rõ liên từ (theo sau là mệnh đề S + V) và giới từ (theo sau là N/V-ing). Chọn (A).",
+    "keywords": [
+      "Jacobs",
+      "managerial",
+      "style"
+    ],
+    "vietnameseMeaning": "(A) 130 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t10_130",
+    "num": 130,
+    "source": "Hacker 3 Test 10 Part 5",
+    "category": "Từ vựng (Vocabulary)",
+    "question": "MEG Electronics has a page on its Web from site dedicated to users of its products.",
+    "options": {
+      "A": "licenses",
+      "B": "testimonials accomplishments",
+      "C": "Option C",
+      "D": "tendencies"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào ngữ cảnh câu văn, từ phù hợp nhất về nghĩa là (B) 'testimonials accomplishments'.",
+    "tip": "⚡ MẸO TỪ VỰNG: Dịch nghĩa nhanh ngữ cảnh của câu và kết hợp cụm từ cố định (collocation). Chọn (B) 'testimonials accomplishments'.",
+    "keywords": [
+      "Electronics",
+      "page",
+      "site"
+    ],
+    "vietnameseMeaning": "(B) 131 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 5"
+  },
+  {
+    "id": "docs6_hacker3_t10_131",
+    "num": 131,
+    "source": "Hacker 3 Test 10 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "trusted housekeeping service in Kent. Since opening five years ago, we have consistently received top ratings from our customers. Our crew takes care of window and floor washing, vacuuming, and tile polishing. We",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Option B'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "trusted",
+      "housekeeping",
+      "service"
+    ],
+    "vietnameseMeaning": "(B) 132 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t10_132",
+    "num": 132,
+    "source": "Hacker 3 Test 10 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "use state-of-the-art equipment to get rid of the odors, dirt, and stains you've been struggling with. Furthermore, if you need to remove large items such as furniture or appliances,",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "state",
+      "equipment",
+      "odors"
+    ],
+    "vietnameseMeaning": "(C) 133 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t10_133",
+    "num": 133,
+    "source": "Hacker 3 Test 10 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "the Wimberley's staff can do this for a small additional fee. We your home at whatever time is most convenient for you! So, if you're interested,",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Wimberley",
+      "staff",
+      "small"
+    ],
+    "vietnameseMeaning": "(C) 134 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t10_134",
+    "num": 134,
+    "source": "Hacker 3 Test 10 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "please call us at 555-9190.",
+    "options": {
+      "A": "buying",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Option D'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "please",
+      "call"
+    ],
+    "vietnameseMeaning": "(D) 135 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t10_135",
+    "num": 135,
+    "source": "Hacker 3 Test 10 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "brought up by other customers in the past. Our technicians have since discovered what the problem is.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Option A'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "brought",
+      "other",
+      "customers"
+    ],
+    "vietnameseMeaning": "(A) 136 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t10_136",
+    "num": 136,
+    "source": "Hacker 3 Test 10 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "As indicated in the manual, to ---— the door, you must push it forward until a clicking sound is heard. If you simply close the compartment without holding the tab, the door will not remain closed. Could you please try this method first? If you continue to have a problem, please contact a service center on our Web site.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Option B'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "indicated",
+      "manual",
+      "door"
+    ],
+    "vietnameseMeaning": "(B) 137 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t10_137",
+    "num": 137,
+    "source": "Hacker 3 Test 10 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 137: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Option D'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(D) 138 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t10_138",
+    "num": 138,
+    "source": "Hacker 3 Test 10 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Thank you for writing, and I hope I have been of service to you. Sincerely, Miles Kaufmann Warranty service agent",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Thank",
+      "writing",
+      "hope"
+    ],
+    "vietnameseMeaning": "(C) 139 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t10_139",
+    "num": 139,
+    "source": "Hacker 3 Test 10 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "inform you that you have not been shortlisted for this post. we have closely examined your qualifications and consider you eligible for the project assistant position. • Interviews for this vacancy will take place on March 20 from 10 a.m. to 3 p.m. Please get in touch with me to let me know if you are interested in the job and can come in between these times. If you are not perhaps we can arrange a date that is more convenient for you. Yours truly, Jacqueline Hart Human resources manager Gleeson Consulting",
+    "options": {
+      "A": "supposition",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "inform",
+      "shortlisted",
+      "post"
+    ],
+    "vietnameseMeaning": "(C) 140 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t10_140",
+    "num": 140,
+    "source": "Hacker 3 Test 10 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 140: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Option B'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(B) 141 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t10_141",
+    "num": 141,
+    "source": "Hacker 3 Test 10 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 141: Refer to the test material.",
+    "options": {
+      "A": "Likewise",
+      "B": "Nonetheless was accepted.",
+      "C": "Therefore",
+      "D": "Henceforth interviewed for this opening."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Henceforth interviewed for this opening.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(D) 142 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t10_142",
+    "num": 142,
+    "source": "Hacker 3 Test 10 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 142: Refer to the test material.",
+    "options": {
+      "A": "anxious",
+      "B": "determined",
+      "C": "fortunate",
+      "D": "available GO ON TO THE NEXT PAGE TEST 10 PART 6 299"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'available GO ON TO THE NEXT PAGE TEST 10 PART 6 299'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(D) 143 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t10_143",
+    "num": 143,
+    "source": "Hacker 3 Test 10 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Question 143: Refer to the test material.",
+    "options": {
+      "A": "can be held",
+      "B": "has held",
+      "C": "will be held",
+      "D": "is holding"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'is holding'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(D) 144 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t10_144",
+    "num": 144,
+    "source": "Hacker 3 Test 10 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "Interested professors and lecturers are asked to submit their abstracts before May 1. You will be sent a notification from the department if your is selected. Once you receive",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Option B'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Interested",
+      "professors",
+      "lecturers"
+    ],
+    "vietnameseMeaning": "(B) 145 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t10_145",
+    "num": 145,
+    "source": "Hacker 3 Test 10 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "this notice, you will be required to submit the full paper for review and approval. Submissions are welcome from all universities, and we look forward to seeing a range of topics. the conference's focus on the Midwest, we welcome work from other regions as",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Option A'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "notice",
+      "required",
+      "submit"
+    ],
+    "vietnameseMeaning": "(A) 146 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t10_146",
+    "num": 146,
+    "source": "Hacker 3 Test 10 Part 6",
+    "category": "Đọc hiểu Điền từ (Text Completion)",
+    "question": "long as it relates to the needs of the target area.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) ' '.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "long",
+      "relates",
+      "needs"
+    ],
+    "vietnameseMeaning": "(C) 147 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 6"
+  },
+  {
+    "id": "docs6_hacker3_t10_147",
+    "num": 147,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the purpose of the message? advertise a sale on secondhand",
+    "options": {
+      "A": "To items",
+      "B": "To confirm registration on a Web page",
+      "C": "To promote a new line of home furnishings",
+      "D": "To encourage shopping at an online store m lh Glazer Details o o 1:00 p.m. pu at Bergman Glazer for great o UJ and accessories. Enter the o at www.bergmanglazer.com shipping on any order of o LTI only once and cannot be P.M. This message has been customer of www. o interested in receiving similar text \"STOP\" as reply to a o text \"HELP.\" Standard CO o LD o"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'To encourage shopping at an online store m lh Glazer Details o o 1:00 p.m. pu at Bergman Glazer for great o UJ and accessories. Enter the o at www.bergmanglazer.com shipping on any order of o LTI only once and cannot be P.M. This message has been customer of www. o interested in receiving similar text \"STOP\" as reply to a o text \"HELP.\" Standard CO o LD o'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "purpose",
+      "message",
+      "advertise"
+    ],
+    "vietnameseMeaning": "(D) 148 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_148",
+    "num": 148,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about Ms. Crowder?",
+    "options": {
+      "A": "She recently placed an order worth at least $100.",
+      "B": "She signed up as a customer on a Web site.",
+      "C": "She entered a draw to get a discount coupon.",
+      "D": "She works for a furniture design company. GO ON TO THE NEXT PAGE TEST 10 PART? 301"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'She signed up as a customer on a Web site.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "indicated",
+      "Crowder"
+    ],
+    "vietnameseMeaning": "(B) 149 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_149",
+    "num": 149,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the purpose of the notice? 150. What is indicated about the West Springs",
+    "options": {
+      "A": "Its current building will be used as a",
+      "B": "The closest public library to it is in",
+      "C": "Its renovations will last over three",
+      "D": "The facility is located in downtown Calgary. 302 Hackers.co.kr"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'Its current building will be used as a'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "purpose",
+      "notice",
+      "indicated"
+    ],
+    "vietnameseMeaning": "(A) 150 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_150",
+    "num": 150,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Question 150: Refer to the test material.",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": " ",
+      "D": "Option D"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Option B'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Question",
+      "Refer",
+      "test"
+    ],
+    "vietnameseMeaning": "(B) 151 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_151",
+    "num": 151,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Why was the letter written?",
+    "options": {
+      "A": "To request a transfer to Oklahoma City",
+      "B": "To apply for a technical position",
+      "C": "To register for a degree program",
+      "D": "To inquire if a job is still available"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'To apply for a technical position'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "letter",
+      "written"
+    ],
+    "vietnameseMeaning": "(B) 152 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_152",
+    "num": 152,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does Mr. Delaney suggest about Loyalty Limited?",
+    "options": {
+      "A": "It has employed him for the past 15 years.",
+      "B": "It produces products for animals.",
+      "C": "It offers financial support to staff earning degrees.",
+      "D": "It operates a branch plant in Lawton, GO ON TO THE NEXT PAGE TEST 10 PART 7 303"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'It produces products for animals.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "does",
+      "Delaney",
+      "suggest"
+    ],
+    "vietnameseMeaning": "(B) 153 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_153",
+    "num": 153,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is mentioned about Cornucopia Industries?",
+    "options": {
+      "A": "It has been recognized with several business awards.",
+      "B": "It is known for providing excellent customer service.",
+      "C": "It derives most of its business from government contracts.",
+      "D": "It sold a share of its business to a foreign firm."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'It is known for providing excellent customer service.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "mentioned",
+      "Cornucopia",
+      "Industries"
+    ],
+    "vietnameseMeaning": "(B) 154 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_154",
+    "num": 154,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What can visitors most likely do on Cornucopia Industries' Web site?",
+    "options": {
+      "A": "View information on job vacancies",
+      "B": "Place orders for equipment",
+      "C": "Obtain details on a refund policy",
+      "D": "Find local retailers of its merchandise 304 a A yolSPI mpb Hackerslngang.com"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'View information on job vacancies'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "visitors",
+      "most",
+      "likely"
+    ],
+    "vietnameseMeaning": "(A) 155 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_155",
+    "num": 155,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is Cornucopia Industries' plan?",
+    "options": {
+      "A": "To acquire another communications company",
+      "B": "To upgrade technological equipment at its factory",
+      "C": "To get involved in other fields within the industry",
+      "D": "To hire a customer service training specialist"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'To get involved in other fields within the industry'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Cornucopia",
+      "Industries",
+      "plan"
+    ],
+    "vietnameseMeaning": "(C) 156 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_156",
+    "num": 156,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In which of the positions marked [1], [2], |||| [3], and [4] does the following sentence best belong? \"To achieve this, we must apply decades' of technical experience to the latest technologies available today.\"",
+    "options": {
+      "A": "[1]",
+      "B": "[2]",
+      "C": "[3]",
+      "D": "[4]"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) '[3]'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "positions",
+      "marked",
+      "does"
+    ],
+    "vietnameseMeaning": "(C) 157 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_157",
+    "num": 157,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does the hotel NOT request feedback on?",
+    "options": {
+      "A": "The attitude and behavior of employees",
+      "B": "The state of the room upon initial entry",
+      "C": "The accessibility of the hotel",
+      "D": "The correctness of items in the directory"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'The accessibility of the hotel'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "does",
+      "hotel",
+      "request"
+    ],
+    "vietnameseMeaning": "(C) 158 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_158",
+    "num": 158,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What did the guest most likely do following hotel check-in?",
+    "options": {
+      "A": "Ordered a room service meal",
+      "B": "Used an outdoor swimming pool",
+      "C": "Carried luggage to his room by himself",
+      "D": "Made a complaint to a travel agency"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Carried luggage to his room by himself'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "guest",
+      "most",
+      "likely"
+    ],
+    "vietnameseMeaning": "(C) 159 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_159",
+    "num": 159,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is suggested about the guest's room?",
+    "options": {
+      "A": "The air conditioning had been left running.",
+      "B": "The bed had not been properly made.",
+      "C": "The bathroom did not contain any towels.",
+      "D": "The hotel directory was not easily found. GO ON TO THE NEXT PAGE TEST 10 PART? 305"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'The air conditioning had been left running.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "suggested",
+      "guest",
+      "room"
+    ],
+    "vietnameseMeaning": "(A) 160 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_160",
+    "num": 160,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Why was the notice written?",
+    "options": {
+      "A": "To advertise membership in a historical society",
+      "B": "To announce an upcoming regional event",
+      "C": "To explain a change to transit regulations",
+      "D": "To provide summer train service updates"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'To announce an upcoming regional event'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "notice",
+      "written"
+    ],
+    "vietnameseMeaning": "(B) 161 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_161",
+    "num": 161,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about the steam railway?",
+    "options": {
+      "A": "It only operates on a special occasion.",
+      "B": "It is funded by a history preservation group.",
+      "C": "It recently renovated its facilities.",
+      "D": "It offers a discount to the elderly."
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'It only operates on a special occasion.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "indicated",
+      "steam",
+      "railway"
+    ],
+    "vietnameseMeaning": "(A) 162 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_162",
+    "num": 162,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What can visitors do during the first weekend of May?",
+    "options": {
+      "A": "Participate in a charity fundraiser near Hudson Station",
+      "B": "Enjoy refreshments at a train's final destination",
+      "C": "Borrow historical costumes at the event venue",
+      "D": "Purchase souvenirs at Concord Station 306 Hackers.co.kr"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'Enjoy refreshments at a train's final destination'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "visitors",
+      "during",
+      "first"
+    ],
+    "vietnameseMeaning": "(B) 163 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_163",
+    "num": 163,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "At 5:07 p.m., what does Ms. Dalton mean when she writes, \"That's news to me\"?",
+    "options": {
+      "A": "She wishes she could help arrange a banquet.",
+      "B": "She was not aware of a schedule alteration.",
+      "C": "She has other plans for her holiday.",
+      "D": "She did not hear about a change in venue."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'She was not aware of a schedule alteration.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "does",
+      "Dalton",
+      "mean"
+    ],
+    "vietnameseMeaning": "(B) 164 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_164",
+    "num": 164,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "When will staff receive the notice?",
+    "options": {
+      "A": "On December 15",
+      "B": "On December 16",
+      "C": "On December 27",
+      "D": "On December 28 GO ON TO THE NEXT PAGE TEST 10 PART? 307"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'On December 16'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "staff",
+      "receive",
+      "notice"
+    ],
+    "vietnameseMeaning": "(B) 165 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_165",
+    "num": 165,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What will NOT be offered at the event?",
+    "options": {
+      "A": "Locally-made drinks",
+      "B": "Live performances",
+      "C": "Day care services",
+      "D": "Use of a shuttle"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Use of a shuttle'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "offered",
+      "event"
+    ],
+    "vietnameseMeaning": "(D) 166 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_166",
+    "num": 166,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is mentioned about the participants?",
+    "options": {
+      "A": "They may attend an orientation session.",
+      "B": "They will each receive a complimentary item.",
+      "C": "They must submit an online registration form.",
+      "D": "They will need to wear T-shirts for the race."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'They will each receive a complimentary item.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "mentioned",
+      "participants"
+    ],
+    "vietnameseMeaning": "(B) 167 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_167",
+    "num": 167,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "According to the notice, who should contact Ms. Bocher?",
+    "options": {
+      "A": "Race volunteers",
+      "B": "Visiting tourists",
+      "C": "Prospective vendors",
+      "D": "Group organizers 308 ^£^1 eojUAr • yojopis- \u0003! yojopi MP3 Hackerslngang.com"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Group organizers 308 ^£^1 eojUAr • yojopis- \u0003! yojopi MP3 Hackerslngang.com'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "According",
+      "notice",
+      "should"
+    ],
+    "vietnameseMeaning": "(D) 168 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_168",
+    "num": 168,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the topic of the article?",
+    "options": {
+      "A": "A property development project",
+      "B": "A city's decline in construction",
+      "C": "A retail branch closure",
+      "D": "An increase in regional rents"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'A property development project'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "topic",
+      "article"
+    ],
+    "vietnameseMeaning": "(A) 169 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_169",
+    "num": 169,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about Phoenix-Star Properties?",
+    "options": {
+      "A": "It has been contracted by Bradford City on several occasions.",
+      "B": "It has transformed some vacant structures into retail facilities.",
+      "C": "It provided the majority of the investment capital for the project.",
+      "D": "It will complete its renovation work in three weeks."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'It has transformed some vacant structures into retail facilities.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "indicated",
+      "Phoenix",
+      "Star"
+    ],
+    "vietnameseMeaning": "(B) 170 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_170",
+    "num": 170,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is NOT true about the Bradford Retail Cooperative building?",
+    "options": {
+      "A": "It has already secured tenants for many of its units.",
+      "B": "It will house numerous small businesses.",
+      "C": "It will be rented by the city government.",
+      "D": "It was partially financed by local taxes."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'It will be rented by the city government.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "true",
+      "Bradford",
+      "Retail"
+    ],
+    "vietnameseMeaning": "(C) 171 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_171",
+    "num": 171,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In which of the positions marked [1], [2], Mm [3], and [4] does the following sentence best belong? \"However, it still remains to be seen whether local shoppers will like the place as much.\"",
+    "options": {
+      "A": "[1]",
+      "B": "[2]",
+      "C": "[3]",
+      "D": "[4] GO ON TO THE NEXT PAGE. TEST 10 PART? 309"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) '[4] GO ON TO THE NEXT PAGE. TEST 10 PART? 309'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "positions",
+      "marked",
+      "does"
+    ],
+    "vietnameseMeaning": "(D) 172 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_172",
+    "num": 172,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What kind of company does Ms. Kumar most likely work for?",
+    "options": {
+      "A": "A retail store",
+      "B": "A moving company",
+      "C": "A construction firm",
+      "D": "A vehicle manufacturer"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'A construction firm'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "kind",
+      "company",
+      "does"
+    ],
+    "vietnameseMeaning": "(C) 173 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_173",
+    "num": 173,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "At 4:15, what does Mr. Bostwick mean when he writes, \"I can lend you a hand\"?",
+    "options": {
+      "A": "He can send extra staff to assist visitors.",
+      "B": "He has some time tomorrow to work at the booth.",
+      "C": "He will be able to fill in for a coworker.",
+      "D": "He is willing to register a colleague for an event."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'He has some time tomorrow to work at the booth.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "does",
+      "Bostwick",
+      "mean"
+    ],
+    "vietnameseMeaning": "(B) 174 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_174",
+    "num": 174,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does Ms. Cambie say she will do?",
+    "options": {
+      "A": "Recruit volunteers for a job",
+      "B": "Buy some tickets at a counter",
+      "C": "Leave some admission passes at an office",
+      "D": "Wait for her colleagues by a venue's entrance"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Leave some admission passes at an office'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "does",
+      "Cambie"
+    ],
+    "vietnameseMeaning": "(C) 175 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_175",
+    "num": 175,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is mentioned about the job fair?",
+    "options": {
+      "A": "It attracted few visitors on the first day.",
+      "B": "It is being held at a new building.",
+      "C": "It is specific to an industry.",
+      "D": "It takes place once a year. GO ON TO THE NEXT PAGE, TEST 10 PART 7 311"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'It takes place once a year. GO ON TO THE NEXT PAGE, TEST 10 PART 7 311'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "mentioned",
+      "fair"
+    ],
+    "vietnameseMeaning": "(D) 176 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_176",
+    "num": 176,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Why did Mr. Duff write to Ms. Vespino?",
+    "options": {
+      "A": "To inform her of some new employees",
+      "B": "To check some information regarding new staff",
+      "C": "To update her login name and password",
+      "D": "To announce the cancellation of her account"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'To check some information regarding new staff'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Duff",
+      "write",
+      "Vespino"
+    ],
+    "vietnameseMeaning": "(B) 177 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_177",
+    "num": 177,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What do Mr. Firth and Mr. Braxton have in common?",
+    "options": {
+      "A": "They have signed a confidentiality agreement.",
+      "B": "They will both work for Ms. Vespino.",
+      "C": "They have worked on the same project before.",
+      "D": "They were hired to do temporary work."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'They will both work for Ms. Vespino.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "Firth",
+      "Braxton",
+      "common"
+    ],
+    "vietnameseMeaning": "(B) 178 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_178",
+    "num": 178,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In the first e-mail, the word \"prompted\" in paragraph 3, line 3, is closest in meaning to",
+    "options": {
+      "A": "convinced",
+      "B": "hastened",
+      "C": "instructed",
+      "D": "activated"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'instructed'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "first",
+      "mail",
+      "word"
+    ],
+    "vietnameseMeaning": "(C) 179 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_179",
+    "num": 179,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does Ms. Vespino indicate in her message?",
+    "options": {
+      "A": "She discovered errors in the list of names provided.",
+      "B": "She will be directly supervising more than one department.",
+      "C": "She needs Mr. Martinez to install a browser on new office computers.",
+      "D": "She wants Mr. Martinez to have access to clients' e-mails."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'She wants Mr. Martinez to have access to clients' e-mails.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "does",
+      "Vespino",
+      "indicate"
+    ],
+    "vietnameseMeaning": "(D) 180 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_180",
+    "num": 180,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is mentioned about the company's user account pages?",
+    "options": {
+      "A": "They are set up by employees' direct supervisors.",
+      "B": "They automatically record login and password information.",
+      "C": "They were sometimes inaccessible using a particular Web program.",
+      "D": "They list privileges and benefits provided to each staff member. GO ON TO THE NEXT PAGE, TEST 10 PART? 313"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'They were sometimes inaccessible using a particular Web program.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "mentioned",
+      "company",
+      "user"
+    ],
+    "vietnameseMeaning": "(C) 181 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_181",
+    "num": 181,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about London Gifts?",
+    "options": {
+      "A": "It opened for business a few weeks ago.",
+      "B": "It is situated across from a subway station.",
+      "C": "It is owned by a large corporate franchise.",
+      "D": "It plans to launch more branches."
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'It opened for business a few weeks ago.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "indicated",
+      "London",
+      "Gifts"
+    ],
+    "vietnameseMeaning": "(A) 182 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_182",
+    "num": 182,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is mentioned about the products sold at London Gifts?",
+    "options": {
+      "A": "Some of them have been exported abroad.",
+      "B": "They are intended to have a higher quality than most souvenirs.",
+      "C": "Some of them have been designed by Stephanie Blanc.",
+      "D": "They are more expensive than items available at tourist sites."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'They are intended to have a higher quality than most souvenirs.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "mentioned",
+      "products",
+      "sold"
+    ],
+    "vietnameseMeaning": "(B) 183 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_183",
+    "num": 183,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Where does Sarah Broadhurst work?",
+    "options": {
+      "A": "In Birmingham",
+      "B": "In London",
+      "C": "In Manchester",
+      "D": "In Southampton"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'In Southampton'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "does",
+      "Sarah",
+      "Broadhurst"
+    ],
+    "vietnameseMeaning": "(D) 184 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_184",
+    "num": 184,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does Ms. Broadhurst mention in her e-mail?",
+    "options": {
+      "A": "She plans to offer bulk orders to stores needing a supplier.",
+      "B": "Her business has a Web site with product descriptions and prices.",
+      "C": "She will send some samples to Southern Clothing in the mail.",
+      "D": "Some of her items have a British theme."
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Some of her items have a British theme.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "does",
+      "Broadhurst",
+      "mention"
+    ],
+    "vietnameseMeaning": "(D) 185 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_185",
+    "num": 185,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What does Ms. Broadhurst offer to do for Ms. Blanc?",
+    "options": {
+      "A": "Deliver some housewares from a store in Manchester",
+      "B": "Draw up a tentative supply contract",
+      "C": "Bring selections of merchandise to London",
+      "D": "Do some personalized engraving services GO ON TO THE NEXT PAGE. TEST 10 PART 7 315"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Bring selections of merchandise to London'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "does",
+      "Broadhurst",
+      "offer"
+    ],
+    "vietnameseMeaning": "(C) 186 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_186",
+    "num": 186,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Why did Mr. Whitmore write to Ms. Foust?",
+    "options": {
+      "A": "To complain about a trip he took",
+      "B": "To schedule an interview for an article",
+      "C": "To assign an article for a future publication",
+      "D": "To ask her to attend a business meeting"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'To assign an article for a future publication'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Whitmore",
+      "write",
+      "Foust"
+    ],
+    "vietnameseMeaning": "(C) 187 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_187",
+    "num": 187,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Which sail date did Ms. Foust most likely reserve?",
+    "options": {
+      "A": "August 3",
+      "B": "August 7",
+      "C": "August 13",
+      "D": "August 16"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'August 7'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "sail",
+      "date",
+      "Foust"
+    ],
+    "vietnameseMeaning": "(B) 188 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_188",
+    "num": 188,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about Seabird Ocean Liner?",
+    "options": {
+      "A": "Its cruise ships were built earlier in the year.",
+      "B": "It accepts trip bookings online.",
+      "C": "It has added extra destinations.",
+      "D": "Its trips to Baja will be discontinued soon."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'It accepts trip bookings online.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "indicated",
+      "Seabird",
+      "Ocean"
+    ],
+    "vietnameseMeaning": "(B) 189 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_189",
+    "num": 189,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "In the review, the word \"exceptional\" in paragraph 1, line 4, is closest in meaning to",
+    "options": {
+      "A": "superb",
+      "B": "abnormal",
+      "C": "crucial",
+      "D": "expected"
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'superb'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "review",
+      "word",
+      "exceptional"
+    ],
+    "vietnameseMeaning": "(A) 190 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_190",
+    "num": 190,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What can be inferred about Ms. Foust?",
+    "options": {
+      "A": "She had to pay extra for some activities.",
+      "B": "Her room was smaller than those of fellow passengers.",
+      "C": "She plans on returning to Baja on another cruise.",
+      "D": "Her room was equipped with a television. GO ON TO THE NEXT PAGE. TESTIO PART 7 317"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'Her room was equipped with a television. GO ON TO THE NEXT PAGE. TESTIO PART 7 317'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "inferred",
+      "Foust"
+    ],
+    "vietnameseMeaning": "(D) 191 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_191",
+    "num": 191,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is NOT mentioned about the Flash-805 distance recorder?",
+    "options": {
+      "A": "It can be assembled manually by the user.",
+      "B": "It accurately duplicates the original sound.",
+      "C": "Its battery lasts longer than older models.",
+      "D": "It is capable of deleting undesired noise."
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'It can be assembled manually by the user.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "mentioned",
+      "Flash",
+      "distance"
+    ],
+    "vietnameseMeaning": "(A) 192 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_192",
+    "num": 192,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What must customers do to take advantage of a special offer?",
+    "options": {
+      "A": "Download an online coupon",
+      "B": "Purchase a quantity of two or more items",
+      "C": "Place an order within specific amount of time",
+      "D": "Provide proof of residence within Bournemouth"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'Place an order within specific amount of time'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "must",
+      "customers",
+      "take"
+    ],
+    "vietnameseMeaning": "(C) 193 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_193",
+    "num": 193,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is suggested about Mr. Altman?",
+    "options": {
+      "A": "He will have three days to cancel his order.",
+      "B": "He wants to use another delivery company.",
+      "C": "He requested expedited delivery.",
+      "D": "He is working on a research project."
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'He requested expedited delivery.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "suggested",
+      "Altman"
+    ],
+    "vietnameseMeaning": "(C) 194 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_194",
+    "num": 194,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the purpose of the e-mail?",
+    "options": {
+      "A": "To complain about the high shipping cost",
+      "B": "To inquire about changing an order",
+      "C": "To request a cancellation of a recent purchase",
+      "D": "To point out a defect in a product"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'To inquire about changing an order'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "purpose",
+      "mail"
+    ],
+    "vietnameseMeaning": "(B) 195 (D)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_195",
+    "num": 195,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is true about Mr. Altman's colleague?",
+    "options": {
+      "A": "She used to own a Brilliant Techware product.",
+      "B": "She has written to customer service several times.",
+      "C": "She read a positive online review about Brilliant Techware.",
+      "D": "She is interested in the Flash-805's patented feature. GO ON TO THE NEXT PAGE TEST 10 PART? 319"
+    },
+    "correctAnswer": "D",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (D) 'She is interested in the Flash-805's patented feature. GO ON TO THE NEXT PAGE TEST 10 PART? 319'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (D).",
+    "keywords": [
+      "true",
+      "Altman",
+      "colleague"
+    ],
+    "vietnameseMeaning": "(D) 196 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_196",
+    "num": 196,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is the announcement mainly about?",
+    "options": {
+      "A": "A new franchise branch",
+      "B": "A naming contest",
+      "C": "A discounted menu item",
+      "D": "A cooking competition"
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'A naming contest'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "announcement",
+      "mainly"
+    ],
+    "vietnameseMeaning": "(B) 197 (A)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_197",
+    "num": 197,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What is indicated about O-Deli's on the announcement?",
+    "options": {
+      "A": "It operates multiple locations within a state.",
+      "B": "It recently announced plans to open new branches.",
+      "C": "It is currently not open for business.",
+      "D": "It regularly sponsors monthly competitions."
+    },
+    "correctAnswer": "A",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (A) 'It operates multiple locations within a state.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (A).",
+    "keywords": [
+      "indicated",
+      "Deli",
+      "announcement"
+    ],
+    "vietnameseMeaning": "(A) 198 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_198",
+    "num": 198,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What did Ms. Rosen probably receive?",
+    "options": {
+      "A": "A personalized sandwich",
+      "B": "A cash prize for a contest",
+      "C": "A coupon for a complimentary drink",
+      "D": "A list of new menu items"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'A coupon for a complimentary drink'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Rosen",
+      "probably",
+      "receive"
+    ],
+    "vietnameseMeaning": "(C) 199 (B)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_199",
+    "num": 199,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "What can be inferred about Mr. Vaughn?",
+    "options": {
+      "A": "He did not get an invitation letter sent in February.",
+      "B": "He agreed to attend an event at 59th Street on February 28.",
+      "C": "He is a frequent diner at O-Deli's restaurants.",
+      "D": "He sent a message requesting special assistance."
+    },
+    "correctAnswer": "B",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (B) 'He agreed to attend an event at 59th Street on February 28.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (B).",
+    "keywords": [
+      "inferred",
+      "Vaughn"
+    ],
+    "vietnameseMeaning": "(B) 200 (C)",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  },
+  {
+    "id": "docs6_hacker3_t10_200",
+    "num": 200,
+    "source": "Hacker 3 Test 10 Part 7",
+    "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
+    "question": "Why has O-Deli's changed its plans for an event?",
+    "options": {
+      "A": "An important executive will be unable to attend.",
+      "B": "A space is not large enough for participants.",
+      "C": "A technical concern has occurred at a venue.",
+      "D": "A transport provider became unavailable. This is the end of the test. You may review Part 5, 6, and 7 if you finish the test early. 0 0 lA m p.326 / p.327 / P.A04 / Part 5&6 ^ ^ ^ S7| \u0003\u0003nuowoil Ol^ Self m EL| AE1 £*1| #0| EH^l M*i|o TEST 10 PART? 321"
+    },
+    "correctAnswer": "C",
+    "explanation": "Dựa vào thông tin chi tiết trong bài đọc, đáp án chính xác là (C) 'A technical concern has occurred at a venue.'.",
+    "tip": "⚡ MẸO ĐỌC HIỂU PART 7: Quét từ khóa trong câu hỏi, đối chiếu vị trí thông tin trong đoạn văn để tìm câu chứa manh mối tương đương (paraphrase). Chọn (C).",
+    "keywords": [
+      "Deli",
+      "changed",
+      "plans"
+    ],
+    "vietnameseMeaning": "(C) PART 5",
+    "stage": 6,
+    "badge": "💎 Hacker 3 Test 10 Part 7"
+  }
+];

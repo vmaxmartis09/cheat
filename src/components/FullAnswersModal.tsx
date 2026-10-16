@@ -651,6 +651,23 @@ export const FullAnswersModal: React.FC = () => {
               </button>
             </div>
 
+            {/* View Full Exam Set Button */}
+            <button
+              onClick={() => {
+                const info = resolveFullExamSetInfo({ source: effectiveBook, test: selectedTest, num: highlightNum || 101 });
+                openFullExamSet({
+                  examSetId: info.examSetId,
+                  examSetName: info.examSetName,
+                  questionNum: highlightNum || 101,
+                });
+              }}
+              className="flex items-center gap-1 px-2.5 py-1.5 rounded-xl bg-sky-50 border border-sky-300 hover:bg-sky-100 text-xs font-bold text-sky-800 transition cursor-pointer shadow-2xs"
+              title="Mở toàn bộ đề thi để xem toàn bộ câu hỏi và làm bài"
+            >
+              <BookOpen className="w-3.5 h-3.5 text-sky-600" />
+              <span className="hidden sm:inline">Xem Cả Đề</span>
+            </button>
+
             {/* Copy Button */}
             <button
               onClick={handleCopyAll}
@@ -1356,6 +1373,22 @@ export const FullAnswersModal: React.FC = () => {
                     className="px-3 py-2 rounded-xl border border-[#DCD3C7] bg-white hover:bg-gray-50 text-xs font-bold text-[#5C5247] cursor-pointer transition shadow-2xs"
                   >
                     Đóng
+                  </button>
+
+                  <button
+                    onClick={() => {
+                      handleCloseDetail();
+                      const info = resolveFullExamSetInfo({ source: effectiveBook, test: selectedTest, num: detailNum });
+                      openFullExamSet({
+                        examSetId: info.examSetId,
+                        examSetName: info.examSetName,
+                        questionNum: detailNum,
+                      });
+                    }}
+                    className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-sky-50 hover:bg-sky-100 text-sky-900 border border-sky-300 font-bold text-xs shadow-2xs transition cursor-pointer"
+                  >
+                    <BookOpen className="w-3.5 h-3.5 text-sky-600" />
+                    <span>Xem Cả Đề</span>
                   </button>
 
                   <button

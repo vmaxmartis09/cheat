@@ -13,6 +13,7 @@ import {
   Check,
   HelpCircle,
   Grid,
+  BookOpen,
 } from 'lucide-react';
 import { allQuestions } from '../data/questions';
 import { getAllListeningQuestions } from '../data/listeningQuestions';
@@ -20,6 +21,7 @@ import { DOCS_IMAGE_CATALOG, DocsImageItem } from '../data/docsImageCatalog';
 import { PART1_TESTS_CATALOG } from '../data/part1VisualIndex';
 import { matchImageToPart1Tests, VisualTestMatch } from '../utils/visualSimilarityMatcher';
 import { useQuizStore } from '../store/useQuizStore';
+import { resolveFullExamSetInfo } from '../data/examSetResolver';
 
 interface ImageSearchModalProps {
   isOpen: boolean;
@@ -311,6 +313,16 @@ export const ImageSearchModal: React.FC<ImageSearchModalProps> = ({
     onClose();
   };
 
+  const handleOpenFullExamSet = (bookId: string, testNum: string, qNum: number = 1) => {
+    const info = resolveFullExamSetInfo({ source: bookId, test: testNum, num: qNum });
+    useQuizStore.getState().openFullExamSet({
+      examSetId: info.examSetId,
+      examSetName: info.examSetName,
+      questionNum: qNum,
+    });
+    onClose();
+  };
+
   const handleOpenDocInAnswers = (doc: DocsImageItem) => {
     if (doc.test) {
       useQuizStore.getState().openFullAnswers({
@@ -553,10 +565,18 @@ export const ImageSearchModal: React.FC<ImageSearchModalProps> = ({
                             </div>
                           </div>
 
-                          <div className="flex items-center gap-2">
+                          <div className="flex items-center gap-1.5 flex-wrap justify-end">
                             <span className="px-2.5 py-1 rounded-lg bg-emerald-100 text-emerald-900 border border-emerald-300 text-xs font-extrabold">
                               Khớp {match.confidence}%
                             </span>
+                            <button
+                              onClick={() => handleOpenFullExamSet(match.bookId, match.testNum, match.matchedQNum)}
+                              className="flex items-center gap-1 px-3 py-1.5 rounded-xl bg-sky-50 hover:bg-sky-100 text-sky-900 border border-sky-300 font-extrabold text-xs shadow-2xs transition cursor-pointer"
+                              title="Xem toàn bộ câu hỏi và làm bài thi của đề này"
+                            >
+                              <BookOpen className="w-3.5 h-3.5 text-sky-600" />
+                              <span>Xem Cả Đề</span>
+                            </button>
                             <button
                               onClick={() => handleOpenAnswersForTest(match.bookId, match.testNum)}
                               className="flex items-center gap-1 px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs shadow-2xs transition cursor-pointer"
@@ -762,13 +782,23 @@ export const ImageSearchModal: React.FC<ImageSearchModalProps> = ({
                           {item.photos.length} hình Part 1
                         </span>
                       </div>
-                      <button
-                        onClick={() => handleOpenAnswersForTest(item.bookId, item.testNum)}
-                        className="flex items-center gap-1 px-2.5 py-1 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-[11px] font-bold shadow-2xs transition cursor-pointer"
-                      >
-                        <Table className="w-3 h-3" />
-                        <span>Xem Full 200 Đáp Án</span>
-                      </button>
+                      <div className="flex items-center gap-1.5">
+                        <button
+                          onClick={() => handleOpenFullExamSet(item.bookId, item.testNum, 1)}
+                          className="flex items-center gap-1 px-2.5 py-1 rounded-xl bg-sky-50 hover:bg-sky-100 text-sky-900 border border-sky-300 text-[11px] font-bold shadow-2xs transition cursor-pointer"
+                          title="Xem toàn bộ câu hỏi và làm bài thi của đề này"
+                        >
+                          <BookOpen className="w-3 h-3 text-sky-600" />
+                          <span>Xem Cả Đề</span>
+                        </button>
+                        <button
+                          onClick={() => handleOpenAnswersForTest(item.bookId, item.testNum)}
+                          className="flex items-center gap-1 px-2.5 py-1 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-[11px] font-bold shadow-2xs transition cursor-pointer"
+                        >
+                          <Table className="w-3 h-3" />
+                          <span>Xem Full 200 Đáp Án</span>
+                        </button>
+                      </div>
                     </div>
 
                     {/* 6 Photos Grid */}

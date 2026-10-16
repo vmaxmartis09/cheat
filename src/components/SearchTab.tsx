@@ -35,7 +35,9 @@ import {
   Table,
   Headphones,
   Image as ImageIcon,
+  Camera,
 } from 'lucide-react';
+import { ImageSearchModal } from './ImageSearchModal';
 
 // ============================================================
 // Types & Match Indicators
@@ -1337,10 +1339,27 @@ export const SearchTab: React.FC = () => {
   const [searchKindFilter, setSearchKindFilter] = useState<'all' | 'listening' | 'reading'>('all');
   const [searchPartFilter, setSearchPartFilter] = useState<'all' | number>('all');
   const [visibleLimit, setVisibleLimit] = useState<number>(60);
+  const [showImageModal, setShowImageModal] = useState<boolean>(false);
 
   // Auto-focus input on mount
   useEffect(() => {
     inputRef.current?.focus();
+  }, []);
+
+  // Global paste handler to open image OCR search
+  useEffect(() => {
+    const handleGlobalPaste = (e: ClipboardEvent) => {
+      const items = e.clipboardData?.items;
+      if (!items) return;
+      for (let i = 0; i < items.length; i++) {
+        if (items[i].type.startsWith('image/')) {
+          setShowImageModal(true);
+          break;
+        }
+      }
+    };
+    window.addEventListener('paste', handleGlobalPaste);
+    return () => window.removeEventListener('paste', handleGlobalPaste);
   }, []);
 
   // Reset pagination on filter or query change
@@ -1788,27 +1807,39 @@ export const SearchTab: React.FC = () => {
       <>
       {/* ---- Search bar & Filters ---- */}
       <div className="shrink-0 px-3 pt-1 pb-2">
-        <div className="relative">
-          <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-[#B0A89E] pointer-events-none" />
-          <input
-            ref={inputRef}
-            type="text"
-            value={query}
-            onChange={(e) => {
-              setQuery(e.target.value);
-              setExpandedId(null);
-            }}
-            placeholder="Tìm tất cả: câu hỏi, từ khóa, transcript, giải thích, số câu (vd: hacker 2 45, 101, once, as does)..."
-            className="w-full pl-9 pr-10 py-2.5 rounded-2xl border-2 border-[#EFE8DE] bg-white text-[13.5px] text-[#262320] placeholder:text-[#B0A89E] focus:outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-100 transition-all shadow-xs"
-          />
-          {query && (
-            <button
-              onClick={clearSearch}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-[#B0A89E] hover:text-[#262320] transition cursor-pointer"
-            >
-              <X className="w-4 h-4" />
-            </button>
-          )}
+        <div className="flex items-center gap-2">
+          <div className="relative flex-1">
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-[#B0A89E] pointer-events-none" />
+            <input
+              ref={inputRef}
+              type="text"
+              value={query}
+              onChange={(e) => {
+                setQuery(e.target.value);
+                setExpandedId(null);
+              }}
+              placeholder="Tìm tất cả: câu hỏi, từ khóa, transcript, giải thích, số câu (vd: hacker 2 45, 101, once, as does)..."
+              className="w-full pl-9 pr-10 py-2.5 rounded-2xl border-2 border-[#EFE8DE] bg-white text-[13.5px] text-[#262320] placeholder:text-[#B0A89E] focus:outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-100 transition-all shadow-xs"
+            />
+            {query && (
+              <button
+                onClick={clearSearch}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-[#B0A89E] hover:text-[#262320] transition cursor-pointer"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            )}
+          </div>
+
+          <button
+            onClick={() => setShowImageModal(true)}
+            className="flex items-center gap-1.5 px-3 py-2.5 rounded-2xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-extrabold text-xs shadow-xs transition-all cursor-pointer shrink-0 border border-amber-400/40 active:scale-95"
+            title="Tìm kiếm bằng hình ảnh hoặc dán ảnh chụp đề (Ctrl+V)"
+          >
+            <Camera className="w-4 h-4" />
+            <span className="hidden sm:inline">Tìm Bằng Ảnh (OCR)</span>
+            <span className="sm:hidden">Ảnh</span>
+          </button>
         </div>
 
         {hasResults && (
@@ -2064,6 +2095,17 @@ export const SearchTab: React.FC = () => {
       </div>
       </>
       )}
+
+      <ImageSearchModal
+        isOpen={showImageModal}
+        onClose={() => setShowImageModal(false)}
+        onSelectQuery={(q) => {
+          setQuery(q);
+          setSearchMode('search');
+          setShowImageModal(false);
+          inputRef.current?.focus();
+        }}
+      />
     </div>
   );
 };

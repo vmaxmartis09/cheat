@@ -19,7 +19,7 @@ export interface UserSyncPayload {
   mode?: StudyMode;
   currentIndex?: number;
   listeningCurrentIndex?: number;
-  listeningSelectedPart?: number | 'all';
+  listeningSelectedPart?: number | 'all' | 'images';
   // Questions progress
   answeredMap: Record<string, QuestionAnswerRecord>;
   listeningAnswersMap: Record<string, { choice: string; isCorrect: boolean }>;

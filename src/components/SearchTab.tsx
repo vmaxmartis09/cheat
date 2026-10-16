@@ -1,8 +1,11 @@
 import React, { useState, useRef, useEffect, useMemo, useCallback } from 'react';
 import { allQuestions } from '../data/questions';
-import { listeningQuestions, getAllListeningQuestions } from '../data/listeningQuestions';
+import {
+  getAllListeningQuestions,
+  getListeningQuestionsByTestAndPart,
+  ListeningQuestion,
+} from '../data/listeningQuestions';
 import { Question, AnswerChoice } from '../types';
-import { ListeningQuestion } from '../data/listeningQuestions';
 import {
   EXAM_BOOKS_META,
   MASTER_ANSWER_KEYS,
@@ -30,14 +33,37 @@ import {
   HelpCircle,
   Share2,
   Table,
+  Headphones,
+  Image as ImageIcon,
 } from 'lucide-react';
 
 // ============================================================
-// Types
+// Types & Match Indicators
 // ============================================================
-type SearchResult =
-  | { kind: 'reading'; question: Question; matchedIn: 'question' | 'answer' | 'passage' | 'num' }
-  | { kind: 'listening'; question: ListeningQuestion; matchedIn: 'question' | 'answer' | 'num' };
+export type MatchType =
+  | 'question'
+  | 'answer'
+  | 'passage'
+  | 'transcript'
+  | 'num'
+  | 'explanation'
+  | 'source'
+  | 'keywords';
+
+export const MATCH_TYPE_LABELS: Record<MatchType, { text: string; color: string }> = {
+  question: { text: 'Khớp: Câu hỏi', color: 'bg-emerald-100 text-emerald-800 border-emerald-300' },
+  answer: { text: 'Khớp: Phương án', color: 'bg-purple-100 text-purple-800 border-purple-300' },
+  transcript: { text: 'Khớp: Transcript', color: 'bg-sky-100 text-sky-800 border-sky-300' },
+  passage: { text: 'Khớp: Bài đọc', color: 'bg-amber-100 text-amber-900 border-amber-300' },
+  num: { text: 'Khớp: Số câu', color: 'bg-rose-100 text-rose-800 border-rose-300' },
+  explanation: { text: 'Khớp: Giải thích', color: 'bg-indigo-100 text-indigo-800 border-indigo-300' },
+  source: { text: 'Khớp: Bộ đề/Test', color: 'bg-teal-100 text-teal-800 border-teal-300' },
+  keywords: { text: 'Khớp: Mẹo / Từ khóa', color: 'bg-orange-100 text-orange-900 border-orange-300' },
+};
+
+export type SearchResult =
+  | { kind: 'reading'; question: Question; matchedIn: MatchType; score: number }
+  | { kind: 'listening'; question: ListeningQuestion; matchedIn: MatchType; score: number };
 
 interface ExamSetFocus {
   kind: 'reading' | 'listening';
@@ -51,33 +77,66 @@ interface ExamSetFocus {
 // Helpers
 // ============================================================
 function normalize(s: string) {
-  return s
+  return (s || '')
     .toLowerCase()
     .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '');
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[\x00-\x1f\x7f]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
 }
 
 function highlight(text: string, query: string): React.ReactNode {
-  if (!query.trim()) return text;
+  if (!text || !query.trim()) return text || '';
   const normQ = normalize(query);
-  const parts: React.ReactNode[] = [];
-  let i = 0;
-  const lower = normalize(text);
-  while (i < text.length) {
-    const idx = lower.indexOf(normQ, i);
-    if (idx === -1) {
-      parts.push(text.slice(i));
-      break;
-    }
-    if (idx > i) parts.push(text.slice(i, idx));
-    parts.push(
-      <mark key={idx} className="bg-amber-200 text-amber-900 rounded px-0.5">
-        {text.slice(idx, idx + query.length)}
-      </mark>
+  if (!normQ) return text;
+
+  const rawLower = text.toLowerCase();
+  const queryLower = query.trim().toLowerCase();
+
+  const idx = rawLower.indexOf(queryLower);
+  if (idx !== -1) {
+    const before = text.slice(0, idx);
+    const matched = text.slice(idx, idx + queryLower.length);
+    const after = text.slice(idx + queryLower.length);
+    return (
+      <>
+        {before}
+        <mark className="bg-amber-200/90 text-amber-950 font-bold px-0.5 rounded shadow-2xs">
+          {matched}
+        </mark>
+        {highlight(after, query)}
+      </>
     );
-    i = idx + query.length;
   }
-  return <>{parts}</>;
+
+  // Token fallback for multi-word queries
+  const tokens = queryLower.split(/\s+/).filter((t) => t.length >= 2);
+  if (tokens.length > 0) {
+    try {
+      const escaped = tokens.map((t) => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
+      const regex = new RegExp(`(${escaped})`, 'gi');
+      const parts = text.split(regex);
+      return (
+        <>
+          {parts.map((part, i) => {
+            const isMatch = tokens.some((t) => t.toLowerCase() === part.toLowerCase());
+            return isMatch ? (
+              <mark key={i} className="bg-amber-200/90 text-amber-950 font-bold px-0.5 rounded shadow-2xs">
+                {part}
+              </mark>
+            ) : (
+              part
+            );
+          })}
+        </>
+      );
+    } catch {
+      return text;
+    }
+  }
+
+  return text;
 }
 
 const CHOICE_LABELS: AnswerChoice[] = ['A', 'B', 'C', 'D'];
@@ -196,12 +255,22 @@ function analyzeToeicQuestion(query: string, partLabel: string): AnalysisResult 
 const ReadingQuestionCard: React.FC<{
   question: Question;
   query: string;
+  matchedIn?: MatchType;
   isExpanded: boolean;
   isHighlighted?: boolean;
   onToggle: () => void;
   onViewExamSet?: () => void;
   showViewExamSetBtn?: boolean;
-}> = ({ question, query, isExpanded, isHighlighted, onToggle, onViewExamSet, showViewExamSetBtn }) => {
+}> = ({
+  question,
+  query,
+  matchedIn,
+  isExpanded,
+  isHighlighted,
+  onToggle,
+  onViewExamSet,
+  showViewExamSetBtn,
+}) => {
   const q = question;
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -211,6 +280,8 @@ const ReadingQuestionCard: React.FC<{
       cardRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
   }, [isHighlighted]);
+
+  const matchLabel = matchedIn ? MATCH_TYPE_LABELS[matchedIn] : null;
 
   return (
     <div
@@ -239,12 +310,24 @@ const ReadingQuestionCard: React.FC<{
         </span>
 
         <div className="flex-1 min-w-0">
-          <div className="flex flex-wrap items-center gap-1 mb-1">
+          <div className="flex flex-wrap items-center gap-1.5 mb-1">
             <span className="text-[10px] font-semibold text-[#8C8276] uppercase tracking-wide">
               {q.source}
             </span>
             <span className="text-[10px] text-[#B0A89E]">·</span>
             <span className="text-[10px] text-[#8C8276]">{q.category}</span>
+            {q.passageInfo && (
+              <span className="text-[9.5px] font-bold px-1.5 py-0.2 rounded bg-sky-100 text-sky-800 border border-sky-200 truncate max-w-[200px]">
+                📄 {q.passageInfo.title || 'Đoạn văn'}
+              </span>
+            )}
+            {matchLabel && (
+              <span
+                className={`text-[9.5px] font-extrabold px-1.5 py-0.2 rounded-md border ${matchLabel.color}`}
+              >
+                {matchLabel.text}
+              </span>
+            )}
             {isHighlighted && (
               <span className="text-[10px] font-bold text-amber-600 ml-1">← đang tìm</span>
             )}
@@ -272,9 +355,15 @@ const ReadingQuestionCard: React.FC<{
         <div className="px-4 pb-4 border-t border-amber-200/60">
           {/* Passage */}
           {q.passageInfo && (
-            <div className="mt-3 p-3 rounded-xl bg-sky-50/70 border border-sky-200 text-[12px] text-sky-900 max-h-48 overflow-y-auto leading-relaxed whitespace-pre-wrap">
+            <div className="mt-3 p-3 rounded-xl bg-sky-50/70 border border-sky-200 text-[12px] text-sky-900 max-h-52 overflow-y-auto leading-relaxed whitespace-pre-wrap">
               <p className="font-bold text-sky-700 mb-1">📄 {q.passageInfo.title}</p>
               {highlight(q.passageInfo.content, query)}
+              {q.passageInfo.vietnameseTranslation && (
+                <div className="mt-2 pt-2 border-t border-sky-200 text-[11px] text-sky-800 italic">
+                  <span className="font-bold not-italic text-sky-900">Bản dịch đoạn văn:</span>{' '}
+                  {highlight(q.passageInfo.vietnameseTranslation, query)}
+                </div>
+              )}
             </div>
           )}
 
@@ -307,24 +396,52 @@ const ReadingQuestionCard: React.FC<{
           {/* Explanation */}
           <div className="mt-3 p-2.5 rounded-xl bg-white border border-[#EFE8DE] text-[11.5px] text-[#5C554E] leading-relaxed">
             <span className="font-bold text-amber-700">💡 Giải thích: </span>
-            {q.explanation}
+            {highlight(q.explanation, query)}
           </div>
 
-          {q.tip && (
-            <div className="mt-2 p-2.5 rounded-xl bg-amber-50 border border-amber-200 text-[11.5px] text-amber-900 leading-relaxed">
-              {q.tip}
+          {/* Vietnamese meaning */}
+          {q.vietnameseMeaning && (
+            <div className="mt-2 p-2.5 rounded-xl bg-emerald-50/80 border border-emerald-200 text-[11.5px] text-emerald-950 leading-relaxed">
+              <span className="font-bold text-emerald-800">🌐 Dịch nghĩa: </span>
+              {highlight(q.vietnameseMeaning, query)}
             </div>
           )}
 
-          {/* "View exam set" & "Full Đáp Án 200 câu" buttons */}
-          <div className="mt-3 flex flex-col sm:flex-row items-center gap-2">
+          {q.tip && (
+            <div className="mt-2 p-2.5 rounded-xl bg-amber-50 border border-amber-200 text-[11.5px] text-amber-900 leading-relaxed">
+              <span className="font-bold text-amber-800">⚡ Mẹo: </span>
+              {highlight(q.tip, query)}
+            </div>
+          )}
+
+          {/* Action buttons: Jump to practice, View Full Answers, View Exam Set */}
+          <div className="mt-3.5 flex flex-wrap items-center gap-2">
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                const store = useQuizStore.getState();
+                store.setSourceFilter(q.source);
+                store.initSession('sequential', q.source, 'all');
+                const qIdx = useQuizStore.getState().questions.findIndex((item) => item.id === q.id);
+                if (qIdx !== -1) {
+                  store.jumpToIndex(qIdx);
+                }
+                store.setActiveTab('practice');
+              }}
+              className="flex-1 min-w-[130px] flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-white text-[12px] font-bold cursor-pointer transition-all shadow-2xs"
+              title="Mở câu này trong chế độ luyện tập để làm bài"
+            >
+              <Zap className="w-3.5 h-3.5" />
+              <span>Làm Câu Này</span>
+            </button>
+
             <button
               onClick={(e) => {
                 e.stopPropagation();
                 const resolved = resolveBookAndTestFromSource(q.source, q.id, q.num);
                 useQuizStore.getState().openFullAnswers(resolved || { questionNum: q.num });
               }}
-              className="w-full sm:w-auto flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-[12px] font-bold cursor-pointer transition-all shadow-sm"
+              className="flex-1 min-w-[130px] flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-[12px] font-bold cursor-pointer transition-all shadow-2xs"
               title="Xem bảng đáp án trọn bộ (Full 200 câu) của đề này"
             >
               <CheckCircle2 className="w-3.5 h-3.5" />
@@ -337,7 +454,7 @@ const ReadingQuestionCard: React.FC<{
                   e.stopPropagation();
                   onViewExamSet();
                 }}
-                className="w-full sm:w-auto flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-white text-[12px] font-bold cursor-pointer transition-all shadow-sm"
+                className="w-full sm:w-auto flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-white hover:bg-amber-50 text-amber-800 border border-amber-300 text-[12px] font-bold cursor-pointer transition-all shadow-2xs"
               >
                 <Layers className="w-3.5 h-3.5" />
                 <span>Xem cả đề "{q.source}"</span>
@@ -356,12 +473,22 @@ const ReadingQuestionCard: React.FC<{
 const ListeningQuestionCard: React.FC<{
   question: ListeningQuestion;
   query: string;
+  matchedIn?: MatchType;
   isExpanded: boolean;
   isHighlighted?: boolean;
   onToggle: () => void;
   onViewExamSet?: () => void;
   showViewExamSetBtn?: boolean;
-}> = ({ question, query, isExpanded, isHighlighted, onToggle, onViewExamSet, showViewExamSetBtn }) => {
+}> = ({
+  question,
+  query,
+  matchedIn,
+  isExpanded,
+  isHighlighted,
+  onToggle,
+  onViewExamSet,
+  showViewExamSetBtn,
+}) => {
   const q = question;
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -370,6 +497,10 @@ const ListeningQuestionCard: React.FC<{
       cardRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
   }, [isHighlighted]);
+
+  const testNum = (q as any).test;
+  const testLabel = testNum ? `Hacker 2 · Test ${testNum}` : 'Docs 2 Listening';
+  const matchLabel = matchedIn ? MATCH_TYPE_LABELS[matchedIn] : null;
 
   return (
     <div
@@ -397,13 +528,23 @@ const ListeningQuestionCard: React.FC<{
         </span>
 
         <div className="flex-1 min-w-0">
-          <div className="flex flex-wrap items-center gap-1 mb-1">
-            <Mic className="w-3 h-3 text-sky-500" />
-            <span className="text-[10px] font-semibold text-sky-700 uppercase tracking-wide">
-              Listening Part {q.part}
+          <div className="flex flex-wrap items-center gap-1.5 mb-1">
+            <span className="text-[10px] font-bold text-sky-800 bg-sky-100 border border-sky-200 px-1.5 py-0.2 rounded">
+              🎧 {testLabel}
             </span>
             <span className="text-[10px] text-[#B0A89E]">·</span>
-            <span className="text-[10px] text-[#8C8276]">{q.category}</span>
+            <span className="text-[10px] font-semibold text-sky-700 uppercase tracking-wide">
+              Part {q.part}
+            </span>
+            <span className="text-[10px] text-[#B0A89E]">·</span>
+            <span className="text-[10px] text-[#8C8276] truncate max-w-[150px]">{q.category}</span>
+            {matchLabel && (
+              <span
+                className={`text-[9.5px] font-extrabold px-1.5 py-0.2 rounded-md border ${matchLabel.color}`}
+              >
+                {matchLabel.text}
+              </span>
+            )}
             {isHighlighted && (
               <span className="text-[10px] font-bold text-sky-600 ml-1">← đang tìm</span>
             )}
@@ -428,10 +569,35 @@ const ListeningQuestionCard: React.FC<{
 
       {isExpanded && (
         <div className="px-4 pb-4 border-t border-sky-200/60">
+          {/* Photograph / Graphic illustration if present */}
+          {q.imageUrl && (
+            <div className="mt-3 relative rounded-xl overflow-hidden border border-sky-200 bg-sky-950/5 p-1 max-w-sm">
+              <div className="flex items-center gap-1 px-1.5 pb-1 text-[10px] font-bold text-sky-800">
+                <ImageIcon className="w-3 h-3 text-sky-600" />
+                <span>Hình ảnh câu #{q.num}</span>
+              </div>
+              <img
+                src={q.imageUrl}
+                alt={`TOEIC Listening illustration #${q.num}`}
+                className="w-full h-auto max-h-56 object-contain rounded-lg mx-auto bg-white"
+                loading="lazy"
+              />
+            </div>
+          )}
+
+          {/* Accent badge */}
+          {q.accent && (
+            <div className="mt-2.5 inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-sky-100 text-sky-800 text-[11px] font-bold border border-sky-200">
+              <Mic className="w-3 h-3 text-sky-600" />
+              <span>Giọng đọc: {highlight(q.accent, query)}</span>
+            </div>
+          )}
+
           <p className="mt-3 text-[13.5px] font-semibold leading-relaxed text-[#262320]">
             {highlight(q.question, query)}
           </p>
 
+          {/* Options */}
           <div className="mt-2.5 grid grid-cols-1 gap-1.5">
             {(Object.keys(q.options) as AnswerChoice[]).map((ch) => {
               const isCorrect = ch === q.correctAnswer;
@@ -452,39 +618,69 @@ const ListeningQuestionCard: React.FC<{
             })}
           </div>
 
+          {/* Transcript */}
+          {q.transcript && (
+            <div className="mt-3 p-3 rounded-xl bg-slate-900 border border-slate-800 text-[11.5px] text-slate-100 leading-relaxed whitespace-pre-wrap font-mono">
+              <div className="flex items-center justify-between pb-1.5 mb-1.5 border-b border-slate-700 text-slate-400 text-[10px] uppercase font-bold tracking-wider">
+                <span className="flex items-center gap-1.5 text-sky-400">
+                  <Headphones className="w-3.5 h-3.5" />
+                  Transcript Audio
+                </span>
+                {q.accent && <span className="text-slate-300 font-normal">{q.accent}</span>}
+              </div>
+              {highlight(q.transcript, query)}
+            </div>
+          )}
+
+          {/* Explanation */}
           <div className="mt-3 p-2.5 rounded-xl bg-white border border-[#EFE8DE] text-[11.5px] text-[#5C554E] leading-relaxed">
             <span className="font-bold text-sky-700">💡 Giải thích: </span>
-            {q.explanation}
+            {highlight(q.explanation, query)}
           </div>
 
           {q.tip && (
             <div className="mt-2 p-2.5 rounded-xl bg-sky-50 border border-sky-200 text-[11.5px] text-sky-900 leading-relaxed">
-              {q.tip}
+              <span className="font-bold text-sky-800">⚡ Mẹo Part {q.part}: </span>
+              {highlight(q.tip, query)}
             </div>
           )}
 
-          {q.transcript && (
-            <div className="mt-2 p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-[11px] text-slate-700 leading-relaxed whitespace-pre-wrap font-mono">
-              <span className="font-bold not-italic text-slate-500 text-[10px] uppercase">
-                Transcript:
-              </span>
-              {'\n'}
-              {q.transcript}
-            </div>
-          )}
-
-          {/* "View exam set" & "Full Đáp Án 200 câu" buttons */}
-          <div className="mt-3 flex flex-col sm:flex-row items-center gap-2">
+          {/* Action buttons */}
+          <div className="mt-3.5 flex flex-wrap items-center gap-2">
             <button
               onClick={(e) => {
                 e.stopPropagation();
-                useQuizStore.getState().openFullAnswers({
-                  book: 'Hacker 2 (Full 200 câu)',
-                  test: '1',
-                  questionNum: q.num,
-                });
+                const store = useQuizStore.getState();
+                const targetTest = testNum || 1;
+                store.setListeningSelectedTest(targetTest);
+                store.setListeningSelectedPart('all');
+                const list = getListeningQuestionsByTestAndPart(targetTest, 'all');
+                const qIdx = list.findIndex((item) => item.id === q.id);
+                if (qIdx !== -1) {
+                  store.setListeningCurrentIndex(qIdx);
+                }
+                store.setActiveTab('listening');
               }}
-              className="w-full sm:w-auto flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-[12px] font-bold cursor-pointer transition-all shadow-sm"
+              className="flex-1 min-w-[130px] flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-sky-600 hover:bg-sky-700 text-white text-[12px] font-bold cursor-pointer transition-all shadow-2xs"
+              title="Mở câu này trong tab Luyện Nghe và bật audio"
+            >
+              <Headphones className="w-3.5 h-3.5" />
+              <span>Luyện Nghe Câu Này</span>
+            </button>
+
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                const resolved = resolveBookAndTestFromSource(testLabel, q.id, q.num);
+                useQuizStore.getState().openFullAnswers(
+                  resolved || {
+                    book: 'Hacker 2 (Full 200 câu)',
+                    test: String(testNum || '1'),
+                    questionNum: q.num,
+                  }
+                );
+              }}
+              className="flex-1 min-w-[130px] flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-[12px] font-bold cursor-pointer transition-all shadow-2xs"
               title="Xem bảng đáp án trọn bộ (Full 200 câu) của đề này"
             >
               <CheckCircle2 className="w-3.5 h-3.5" />
@@ -497,10 +693,10 @@ const ListeningQuestionCard: React.FC<{
                   e.stopPropagation();
                   onViewExamSet();
                 }}
-                className="w-full sm:w-auto flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-sky-500 hover:bg-sky-600 text-white text-[12px] font-bold cursor-pointer transition-all shadow-sm"
+                className="w-full sm:w-auto flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-white hover:bg-sky-50 text-sky-800 border border-sky-300 text-[12px] font-bold cursor-pointer transition-all shadow-2xs"
               >
                 <Layers className="w-3.5 h-3.5" />
-                <span>Xem cả Part {q.part}</span>
+                <span>Xem cả {testNum ? `Test ${testNum}` : `Part ${q.part}`}</span>
               </button>
             )}
           </div>
@@ -527,8 +723,14 @@ const ExamSetView: React.FC<{
         .filter((q) => q.source === focus.setKey)
         .sort((a, b) => a.num - b.num);
     } else {
-      const partNum = parseInt(focus.setKey) as 1 | 2 | 3 | 4;
-      return listeningQuestions
+      if (focus.setKey.startsWith('hacker2_t')) {
+        const testNum = parseInt(focus.setKey.replace('hacker2_t', ''), 10);
+        return getAllListeningQuestions()
+          .filter((q) => (q as any).test === testNum)
+          .sort((a, b) => a.num - b.num);
+      }
+      const partNum = parseInt(focus.setKey, 10) as 1 | 2 | 3 | 4;
+      return getAllListeningQuestions()
         .filter((q) => q.part === partNum)
         .sort((a, b) => a.num - b.num);
     }
@@ -537,6 +739,8 @@ const ExamSetView: React.FC<{
   const setLabel =
     focus.kind === 'reading'
       ? focus.setKey
+      : focus.setKey.startsWith('hacker2_t')
+      ? `Hacker 2 · Test ${focus.setKey.replace('hacker2_t', '')} (Listening 100 câu)`
       : `Listening Part ${focus.setKey}`;
 
   return (
@@ -573,6 +777,12 @@ const ExamSetView: React.FC<{
                 if (focus.kind === 'reading') {
                   const resolved = resolveBookAndTestFromSource(focus.setKey);
                   useQuizStore.getState().openFullAnswers(resolved || {});
+                } else if (focus.setKey.startsWith('hacker2_t')) {
+                  const testNum = focus.setKey.replace('hacker2_t', '');
+                  useQuizStore.getState().openFullAnswers({
+                    book: 'Hacker 2 (Full 200 câu)',
+                    test: testNum,
+                  });
                 } else {
                   useQuizStore.getState().openFullAnswers({
                     book: 'Hacker 2 (Full 200 câu)',
@@ -1120,70 +1330,182 @@ export const SearchTab: React.FC = () => {
   const inputRef = useRef<HTMLInputElement>(null);
   const [query, setQuery] = useState('');
   const [expandedId, setExpandedId] = useState<string | null>(null);
-  const [focusedPassageId, setFocusedPassageId] = useState<string | null>(null);
   const [examSetFocus, setExamSetFocus] = useState<ExamSetFocus | null>(null);
   const [searchMode, setSearchMode] = useState<'search' | 'matrix'>('search');
   const [selectedBook, setSelectedBook] = useState<string>(EXAM_BOOKS_META[0]?.id || 'Hacker 2 (Full 200 câu)');
   const [selectedTestNum, setSelectedTestNum] = useState<string>('1');
+  const [searchKindFilter, setSearchKindFilter] = useState<'all' | 'listening' | 'reading'>('all');
+  const [searchPartFilter, setSearchPartFilter] = useState<'all' | number>('all');
+  const [visibleLimit, setVisibleLimit] = useState<number>(60);
 
   // Auto-focus input on mount
   useEffect(() => {
     inputRef.current?.focus();
   }, []);
 
-  // ---- Dynamic search (hooks MUST be before any conditional return) ----
+  // Reset pagination on filter or query change
+  useEffect(() => {
+    setVisibleLimit(60);
+  }, [query, searchKindFilter, searchPartFilter]);
+
+  // ---- Comprehensive Dynamic search across all 5,666 questions ----
   const results = useMemo<SearchResult[]>(() => {
     const raw = query.trim();
     if (!raw) return [];
     const normQ = normalize(raw);
+    if (!normQ) return [];
+
     const out: SearchResult[] = [];
-    const isNumericSearch = /^\d+$/.test(raw);
+    const numMatch = raw.match(/^(?:câu|cau|#|q)?\s*(\d+)$/i);
+    const targetNum = numMatch ? parseInt(numMatch[1], 10) : null;
+    const tokens = normQ.split(/\s+/).filter(Boolean);
 
-    // Reading questions
+    // 1. All Reading questions (4,566 questions)
     for (const q of allQuestions) {
-      if (isNumericSearch) {
-        if (String(q.num).startsWith(raw)) {
-          out.push({ kind: 'reading', question: q, matchedIn: 'num' });
-          continue;
+      let matchedIn: MatchType | null = null;
+      let score = 0;
+
+      // Question number direct match
+      if (targetNum !== null) {
+        if (q.num === targetNum) {
+          matchedIn = 'num';
+          score += 200;
+        } else if (String(q.num).startsWith(String(targetNum))) {
+          matchedIn = 'num';
+          score += 60;
         }
       }
-      if (normalize(q.question).includes(normQ)) {
-        out.push({ kind: 'reading', question: q, matchedIn: 'question' });
-        continue;
+
+      const normQuestion = normalize(q.question);
+      const normOptions = Object.values(q.options).map(normalize).join(' ');
+      const normExplanation = normalize(q.explanation || '');
+      const normSource = normalize(q.source || '');
+      const normCategory = normalize(q.category || '');
+      const normTip = normalize(q.tip || '');
+      const normMeaning = normalize(q.vietnameseMeaning || '');
+      const normKeywords = (q.keywords || []).map(normalize).join(' ');
+      const normPassage = q.passageInfo
+        ? normalize(
+            `${q.passageInfo.title} ${q.passageInfo.content} ${q.passageInfo.vietnameseTranslation || ''}`
+          )
+        : '';
+
+      // Direct phrase match
+      if (!matchedIn) {
+        if (normQuestion.includes(normQ)) {
+          matchedIn = 'question';
+          score += 100;
+        } else if (normOptions.includes(normQ)) {
+          matchedIn = 'answer';
+          score += 90;
+        } else if (normPassage && normPassage.includes(normQ)) {
+          matchedIn = 'passage';
+          score += 85;
+        } else if (normExplanation.includes(normQ)) {
+          matchedIn = 'explanation';
+          score += 70;
+        } else if (
+          normMeaning.includes(normQ) ||
+          normKeywords.includes(normQ) ||
+          normTip.includes(normQ)
+        ) {
+          matchedIn = 'keywords';
+          score += 60;
+        } else if (normSource.includes(normQ) || normCategory.includes(normQ)) {
+          matchedIn = 'source';
+          score += 50;
+        }
       }
-      if (Object.values(q.options).some((opt) => normalize(opt).includes(normQ))) {
-        out.push({ kind: 'reading', question: q, matchedIn: 'answer' });
-        continue;
+
+      // Multi-token fallback: raise if EVERY token appears somewhere in the question
+      if (!matchedIn && tokens.length > 1) {
+        const combined = `${q.num} câu ${q.num} ${normQuestion} ${normOptions} ${normPassage} ${normExplanation} ${normSource} ${normCategory} ${normTip} ${normMeaning} ${normKeywords}`;
+        if (tokens.every((tok) => combined.includes(tok))) {
+          if (normQuestion.includes(tokens[0])) matchedIn = 'question';
+          else if (normOptions.includes(tokens[0])) matchedIn = 'answer';
+          else if (normPassage.includes(tokens[0])) matchedIn = 'passage';
+          else if (normSource.includes(tokens[0])) matchedIn = 'source';
+          else matchedIn = 'explanation';
+          score += 40 + tokens.length * 5;
+        }
       }
-      if (q.passageInfo && normalize(q.passageInfo.content).includes(normQ)) {
-        out.push({ kind: 'reading', question: q, matchedIn: 'passage' });
-        continue;
+
+      if (matchedIn) {
+        out.push({ kind: 'reading', question: q, matchedIn, score });
       }
     }
 
-    // Listening questions (All 1,100 questions from Hacker 2 & Final Trial)
-    for (const q of getAllListeningQuestions()) {
-      if (isNumericSearch) {
-        if (String(q.num).startsWith(raw)) {
-          out.push({ kind: 'listening', question: q, matchedIn: 'num' });
-          continue;
+    // 2. All Listening questions (1,100 questions: Hacker 2 LC Tests 1-10 [1,000 Qs] + Docs 2 LC [100 Qs])
+    const allListening = getAllListeningQuestions();
+    for (const q of allListening) {
+      let matchedIn: MatchType | null = null;
+      let score = 0;
+
+      if (targetNum !== null) {
+        if (q.num === targetNum) {
+          matchedIn = 'num';
+          score += 200;
+        } else if (String(q.num).startsWith(String(targetNum))) {
+          matchedIn = 'num';
+          score += 60;
         }
       }
-      if (normalize(q.question).includes(normQ)) {
-        out.push({ kind: 'listening', question: q, matchedIn: 'question' });
-        continue;
+
+      const testNum = (q as any).test;
+      const testSetName = testNum
+        ? `hacker 2 test ${testNum} lc part ${q.part}`
+        : `docs 2 listening part ${q.part}`;
+      const normTestSet = normalize(testSetName);
+      const normQuestion = normalize(q.question);
+      const normTranscript = normalize(q.transcript || '');
+      const normOptions = Object.values(q.options).map(normalize).join(' ');
+      const normExplanation = normalize(q.explanation || '');
+      const normCategory = normalize(q.category || '');
+      const normTip = normalize(q.tip || '');
+      const normAccent = normalize(q.accent || '');
+
+      if (!matchedIn) {
+        if (normQuestion.includes(normQ)) {
+          matchedIn = 'question';
+          score += 100;
+        } else if (normTranscript.includes(normQ)) {
+          matchedIn = 'transcript';
+          score += 95;
+        } else if (normOptions.includes(normQ)) {
+          matchedIn = 'answer';
+          score += 90;
+        } else if (normExplanation.includes(normQ)) {
+          matchedIn = 'explanation';
+          score += 70;
+        } else if (normTip.includes(normQ) || normAccent.includes(normQ)) {
+          matchedIn = 'keywords';
+          score += 60;
+        } else if (normTestSet.includes(normQ) || normCategory.includes(normQ)) {
+          matchedIn = 'source';
+          score += 50;
+        }
       }
-      if (Object.values(q.options).some((opt) => normalize(opt).includes(normQ))) {
-        out.push({ kind: 'listening', question: q, matchedIn: 'answer' });
-        continue;
+
+      // Multi-token fallback
+      if (!matchedIn && tokens.length > 1) {
+        const combined = `${q.num} câu ${q.num} part ${q.part} p${q.part} ${normTestSet} ${normQuestion} ${normOptions} ${normTranscript} ${normExplanation} ${normCategory} ${normTip} ${normAccent}`;
+        if (tokens.every((tok) => combined.includes(tok))) {
+          if (normTranscript.includes(tokens[0])) matchedIn = 'transcript';
+          else if (normQuestion.includes(tokens[0])) matchedIn = 'question';
+          else if (normOptions.includes(tokens[0])) matchedIn = 'answer';
+          else if (normTestSet.includes(tokens[0])) matchedIn = 'source';
+          else matchedIn = 'explanation';
+          score += 40 + tokens.length * 5;
+        }
       }
-      if (q.transcript && normalize(q.transcript).includes(normQ)) {
-        out.push({ kind: 'listening', question: q, matchedIn: 'question' });
-        continue;
+
+      if (matchedIn) {
+        out.push({ kind: 'listening', question: q, matchedIn, score });
       }
     }
 
-    return out;
+    // Sort descending by score, then by question number
+    return out.sort((a, b) => b.score - a.score || a.question.num - b.question.num);
   }, [query]);
 
   const handleToggle = useCallback((id: string) => {
@@ -1193,24 +1515,47 @@ export const SearchTab: React.FC = () => {
   const clearSearch = () => {
     setQuery('');
     setExpandedId(null);
-    setFocusedPassageId(null);
     inputRef.current?.focus();
   };
 
-  // Group passage results
-  const passageGroups = useMemo(() => {
-    const groups: Record<string, SearchResult[]> = {};
-    const solo: SearchResult[] = [];
-    for (const r of results) {
-      if (r.kind === 'reading' && r.question.passageId) {
-        const pid = r.question.passageId;
-        if (!groups[pid]) groups[pid] = [];
-        groups[pid].push(r);
-      } else {
-        solo.push(r);
+  // Filtered results by kind and part
+  const filteredResults = useMemo(() => {
+    return results.filter((r) => {
+      if (searchKindFilter === 'listening' && r.kind !== 'listening') return false;
+      if (searchKindFilter === 'reading' && r.kind !== 'reading') return false;
+      if (searchPartFilter !== 'all') {
+        const part =
+          r.kind === 'listening'
+            ? r.question.part
+            : r.question.num <= 130
+            ? 5
+            : r.question.num <= 146
+            ? 6
+            : 7;
+        if (part !== searchPartFilter) return false;
       }
+      return true;
+    });
+  }, [results, searchKindFilter, searchPartFilter]);
+
+  const lcCount = useMemo(() => results.filter((r) => r.kind === 'listening').length, [results]);
+  const rcCount = useMemo(() => results.filter((r) => r.kind === 'reading').length, [results]);
+
+  // Breakdown by parts for filter pills
+  const partCounts = useMemo(() => {
+    const counts: Record<number, number> = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0 };
+    for (const r of results) {
+      const part =
+        r.kind === 'listening'
+          ? r.question.part
+          : r.question.num <= 130
+          ? 5
+          : r.question.num <= 146
+          ? 6
+          : 7;
+      if (counts[part] !== undefined) counts[part]++;
     }
-    return { groups, solo };
+    return counts;
   }, [results]);
 
   const hasResults = results.length > 0;
@@ -1441,7 +1786,7 @@ export const SearchTab: React.FC = () => {
         </div>
       ) : (
       <>
-      {/* ---- Search bar ---- */}
+      {/* ---- Search bar & Filters ---- */}
       <div className="shrink-0 px-3 pt-1 pb-2">
         <div className="relative">
           <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-[#B0A89E] pointer-events-none" />
@@ -1452,9 +1797,8 @@ export const SearchTab: React.FC = () => {
             onChange={(e) => {
               setQuery(e.target.value);
               setExpandedId(null);
-              setFocusedPassageId(null);
             }}
-            placeholder="Nhập câu hỏi, từ khóa, đáp án, hoặc số câu (vd: 101, 32, once)..."
+            placeholder="Tìm tất cả: câu hỏi, từ khóa, transcript, giải thích, số câu (vd: hacker 2 45, 101, once, as does)..."
             className="w-full pl-9 pr-10 py-2.5 rounded-2xl border-2 border-[#EFE8DE] bg-white text-[13.5px] text-[#262320] placeholder:text-[#B0A89E] focus:outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-100 transition-all shadow-xs"
           />
           {query && (
@@ -1468,36 +1812,113 @@ export const SearchTab: React.FC = () => {
         </div>
 
         {hasResults && (
-          <div className="mt-2 flex items-center gap-2 px-1">
-            <span className="text-[11px] text-[#8C8276]">
-              Tìm thấy{' '}
-              <span className="font-bold text-amber-700">{results.length}</span> kết quả
-            </span>
-            <span className="flex-1 h-px bg-[#EFE8DE]" />
-            <span className="text-[10px] text-[#B0A89E]">
-              Mở câu → nhấn <strong>Xem toàn bộ đề</strong> 📚
-            </span>
+          <div className="mt-2.5 space-y-2 px-1">
+            <div className="flex flex-wrap items-center justify-between gap-1.5 text-[11px] text-[#8C8276]">
+              <span>
+                Tìm thấy <span className="font-extrabold text-amber-700">{results.length}</span> câu hỏi (Toàn bộ 5.666 câu LC + RC)
+              </span>
+              <span className="text-[10px] text-[#B0A89E]">
+                Hiển thị <span className="font-bold text-[#5C554E]">{Math.min(visibleLimit, filteredResults.length)}</span> / {filteredResults.length} câu
+              </span>
+            </div>
+
+            {/* Kind & Part Filters */}
+            <div className="flex flex-wrap items-center gap-1.5">
+              <button
+                onClick={() => setSearchKindFilter('all')}
+                className={`px-2.5 py-1 rounded-xl text-xs font-bold transition cursor-pointer ${
+                  searchKindFilter === 'all'
+                    ? 'bg-amber-500 text-white shadow-2xs'
+                    : 'bg-[#F2ECE3] text-[#6B635B] hover:bg-[#EAE2D7]'
+                }`}
+              >
+                Tất cả ({results.length})
+              </button>
+              <button
+                onClick={() => setSearchKindFilter('listening')}
+                className={`flex items-center gap-1 px-2.5 py-1 rounded-xl text-xs font-bold transition cursor-pointer ${
+                  searchKindFilter === 'listening'
+                    ? 'bg-sky-600 text-white shadow-2xs'
+                    : 'bg-sky-50 text-sky-800 border border-sky-200 hover:bg-sky-100'
+                }`}
+              >
+                <Headphones className="w-3 h-3" />
+                <span>Nghe ({lcCount})</span>
+              </button>
+              <button
+                onClick={() => setSearchKindFilter('reading')}
+                className={`flex items-center gap-1 px-2.5 py-1 rounded-xl text-xs font-bold transition cursor-pointer ${
+                  searchKindFilter === 'reading'
+                    ? 'bg-amber-600 text-white shadow-2xs'
+                    : 'bg-amber-50 text-amber-900 border border-amber-200 hover:bg-amber-100'
+                }`}
+              >
+                <BookOpen className="w-3 h-3" />
+                <span>Đọc ({rcCount})</span>
+              </button>
+
+              <span className="h-4 w-px bg-[#DCD3C7] mx-0.5" />
+
+              <button
+                onClick={() => setSearchPartFilter('all')}
+                className={`px-2 py-0.5 rounded-lg text-[11px] font-semibold transition cursor-pointer ${
+                  searchPartFilter === 'all'
+                    ? 'bg-[#262320] text-white'
+                    : 'bg-white border border-[#DCD3C7] text-[#6B635B] hover:bg-gray-50'
+                }`}
+              >
+                All Parts
+              </button>
+              {([1, 2, 3, 4, 5, 6, 7] as const).map((p) => {
+                const count = partCounts[p] || 0;
+                if (count === 0 && searchPartFilter !== p) return null;
+                const isLc = p <= 4;
+                return (
+                  <button
+                    key={p}
+                    onClick={() => setSearchPartFilter(searchPartFilter === p ? 'all' : p)}
+                    className={`px-2 py-0.5 rounded-lg text-[11px] font-semibold transition cursor-pointer ${
+                      searchPartFilter === p
+                        ? isLc ? 'bg-sky-600 text-white' : 'bg-amber-600 text-white'
+                        : isLc
+                        ? 'bg-sky-50 text-sky-800 border border-sky-200 hover:bg-sky-100'
+                        : 'bg-amber-50 text-amber-900 border border-amber-200 hover:bg-amber-100'
+                    }`}
+                  >
+                    P{p} ({count})
+                  </button>
+                );
+              })}
+            </div>
           </div>
         )}
       </div>
 
-      {/* ---- Results ---- */}
+      {/* ---- Results Scroll View ---- */}
       <div className="flex-1 overflow-y-auto px-3 pb-4 min-h-0 space-y-2">
         {/* Empty / hint state */}
         {!query.trim() && (
-          <div className="flex flex-col items-center justify-center h-full text-center gap-3 py-12">
+          <div className="flex flex-col items-center justify-center h-full text-center gap-3 py-10">
             <Search className="w-12 h-12 text-[#D4CBBC]" />
-            <p className="text-[#8C8276] font-semibold text-sm">Tra đáp án nhanh</p>
-            <p className="text-[11px] text-[#B0A89E] max-w-[280px] leading-relaxed">
-              Tìm theo câu hỏi, đáp án, đoạn văn hoặc số câu. Tìm thấy → mở câu → nhấn{' '}
-              <strong>Xem toàn bộ đề</strong> để đọc cả bộ đề từ câu 1.
+            <p className="text-[#8C8276] font-bold text-sm">Tra cứu toàn diện 5.666 câu TOEIC</p>
+            <p className="text-[11.5px] text-[#B0A89E] max-w-sm leading-relaxed">
+              Tìm theo bất kỳ từ khóa nào trong đề: câu hỏi, đáp án, transcript, giọng đọc, bài đọc, số câu (vd: 101, hacker 2 45, once, as does).
             </p>
-            <div className="mt-2 flex flex-wrap gap-2 justify-center">
-              {['101', 'native', 'as does', 'Once'].map((ex) => (
+            <div className="mt-2 flex flex-wrap gap-2 justify-center max-w-md">
+              {[
+                'hacker 2 45',
+                'câu 101',
+                'transcript',
+                'as does',
+                'Once',
+                'water leak',
+                'native',
+                'deputy',
+              ].map((ex) => (
                 <button
                   key={ex}
                   onClick={() => setQuery(ex)}
-                  className="px-2.5 py-1 rounded-lg border border-amber-200 bg-amber-50 text-amber-800 text-[11px] font-semibold cursor-pointer hover:bg-amber-100 transition"
+                  className="px-2.5 py-1 rounded-xl border border-amber-200 bg-amber-50 text-amber-900 text-[11px] font-semibold cursor-pointer hover:bg-amber-100 transition shadow-2xs"
                 >
                   {ex}
                 </button>
@@ -1505,73 +1926,92 @@ export const SearchTab: React.FC = () => {
             </div>
 
             {/* Quick jump: browse exam sets directly */}
-            <div className="mt-4 w-full max-w-sm text-left">
-              <p className="text-[11px] font-bold text-[#8C8276] mb-2 px-1">
-                📚 Hoặc chọn thẳng bộ đề:
+            <div className="mt-4 w-full max-w-md text-left space-y-3">
+              <p className="text-[11px] font-bold text-[#8C8276] px-1">
+                📚 Xem toàn bộ danh sách câu theo đề:
               </p>
-              <div className="flex flex-col gap-1.5">
-                {ALL_READING_SOURCES.map((src) => {
-                  const count = allQuestions.filter((q) => q.source === src).length;
-                  return (
+
+              {/* Hacker 2 LC */}
+              <div className="bg-sky-50/70 border border-sky-200 rounded-2xl p-2.5 space-y-1.5">
+                <div className="flex items-center justify-between text-xs font-bold text-sky-900 px-1">
+                  <span className="flex items-center gap-1.5">
+                    <Headphones className="w-3.5 h-3.5 text-sky-600" />
+                    Hacker 2 Listening (Tests 1 - 10)
+                  </span>
+                  <span className="text-[10px] text-sky-700 bg-sky-100 px-2 py-0.5 rounded-full">
+                    1.000 câu LC
+                  </span>
+                </div>
+                <div className="grid grid-cols-5 gap-1.5">
+                  {Array.from({ length: 10 }, (_, i) => i + 1).map((t) => (
                     <button
-                      key={src}
-                      onClick={() =>
-                        setExamSetFocus({
-                          kind: 'reading',
-                          setKey: src,
-                          originId: allQuestions.find((q) => q.source === src)?.id ?? '',
-                        })
-                      }
-                      className="flex items-center justify-between px-3 py-2 rounded-xl border border-[#EFE8DE] bg-white hover:border-amber-300 hover:bg-amber-50 text-[12px] text-[#262320] font-medium cursor-pointer transition"
-                    >
-                      <span className="flex items-center gap-2">
-                        <BookOpen className="w-3.5 h-3.5 text-amber-600" />
-                        {src}
-                      </span>
-                      <span className="text-[10px] text-[#B0A89E]">{count} câu →</span>
-                    </button>
-                  );
-                })}
-                {([1, 2, 3, 4] as const).map((part) => {
-                  const count = listeningQuestions.filter((q) => q.part === part).length;
-                  return (
-                    <button
-                      key={`lc_p${part}`}
+                      key={`h2_lc_${t}`}
                       onClick={() =>
                         setExamSetFocus({
                           kind: 'listening',
-                          setKey: String(part),
-                          originId: listeningQuestions.find((q) => q.part === part)?.id ?? '',
+                          setKey: `hacker2_t${t}`,
+                          originId: `hacker2_t${t}_q1`,
                         })
                       }
-                      className="flex items-center justify-between px-3 py-2 rounded-xl border border-[#EFE8DE] bg-white hover:border-sky-300 hover:bg-sky-50 text-[12px] text-[#262320] font-medium cursor-pointer transition"
+                      className="px-2 py-1.5 rounded-lg bg-white border border-sky-200 hover:bg-sky-500 hover:text-white text-sky-800 text-xs font-bold text-center transition cursor-pointer"
                     >
-                      <span className="flex items-center gap-2">
-                        <Mic className="w-3.5 h-3.5 text-sky-600" />
-                        Listening Part {part}
-                      </span>
-                      <span className="text-[10px] text-[#B0A89E]">{count} câu →</span>
+                      Test {t}
                     </button>
-                  );
-                })}
+                  ))}
+                </div>
+              </div>
+
+              {/* Reading Sources */}
+              <div className="bg-amber-50/70 border border-amber-200 rounded-2xl p-2.5 space-y-1.5">
+                <div className="flex items-center justify-between text-xs font-bold text-amber-900 px-1">
+                  <span className="flex items-center gap-1.5">
+                    <BookOpen className="w-3.5 h-3.5 text-amber-600" />
+                    Hacker 2 Reading & Toàn bộ Đề RC
+                  </span>
+                  <span className="text-[10px] text-amber-800 bg-amber-100 px-2 py-0.5 rounded-full">
+                    4.566 câu RC
+                  </span>
+                </div>
+                <div className="max-h-48 overflow-y-auto space-y-1 pr-1">
+                  {ALL_READING_SOURCES.slice(0, 15).map((src) => {
+                    const count = allQuestions.filter((q) => q.source === src).length;
+                    return (
+                      <button
+                        key={src}
+                        onClick={() =>
+                          setExamSetFocus({
+                            kind: 'reading',
+                            setKey: src,
+                            originId: allQuestions.find((q) => q.source === src)?.id ?? '',
+                          })
+                        }
+                        className="w-full flex items-center justify-between px-2.5 py-1.5 rounded-lg border border-[#EFE8DE] bg-white hover:border-amber-300 hover:bg-amber-50 text-[11.5px] text-[#262320] font-medium cursor-pointer transition"
+                      >
+                        <span className="truncate pr-2">{src}</span>
+                        <span className="text-[10px] text-[#8C8276] shrink-0">{count} câu →</span>
+                      </button>
+                    );
+                  })}
+                </div>
               </div>
             </div>
           </div>
         )}
 
-        {/* ── Empty results panel with Part selector, prompt modes, and in-app web viewer ── */}
+        {/* ── Empty results panel ── */}
         {showEmpty && (
           <NoResultsPanel query={query} onRetry={(word) => setQuery(word)} />
         )}
 
-        {/* Solo results */}
-        {passageGroups.solo.map((r) => {
+        {/* ── Direct Question Cards (Raised immediately!) ── */}
+        {filteredResults.slice(0, visibleLimit).map((r) => {
           const id = r.question.id;
           return r.kind === 'reading' ? (
             <ReadingQuestionCard
               key={id}
               question={r.question}
               query={query}
+              matchedIn={r.matchedIn}
               isExpanded={expandedId === id}
               onToggle={() => handleToggle(id)}
               showViewExamSetBtn
@@ -1586,129 +2026,41 @@ export const SearchTab: React.FC = () => {
           ) : (
             <ListeningQuestionCard
               key={id}
-              question={(r as { kind: 'listening'; question: ListeningQuestion; matchedIn: string }).question}
+              question={r.question}
               query={query}
+              matchedIn={r.matchedIn}
               isExpanded={expandedId === id}
               onToggle={() => handleToggle(id)}
               showViewExamSetBtn
-              onViewExamSet={() =>
+              onViewExamSet={() => {
+                const testVal = (r.question as any).test;
                 setExamSetFocus({
                   kind: 'listening',
-                  setKey: String((r as { kind: 'listening'; question: ListeningQuestion; matchedIn: string }).question.part),
+                  setKey: testVal ? `hacker2_t${testVal}` : String(r.question.part),
                   originId: id,
-                })
-              }
+                });
+              }}
             />
           );
         })}
 
-        {/* Passage groups */}
-        {Object.entries(passageGroups.groups).map(([pid, groupResults]) => {
-          const firstR = groupResults[0];
-          const passageInfo =
-            firstR.kind === 'reading' ? firstR.question.passageInfo : undefined;
-          const isFocused = focusedPassageId === pid;
-
-          return (
-            <div
-              key={pid}
-              className={`rounded-2xl border transition-all duration-200 overflow-hidden ${
-                isFocused
-                  ? 'border-amber-400 shadow-md'
-                  : 'border-[#EFE8DE] hover:border-amber-300'
-              }`}
+        {/* Load more / Pagination buttons */}
+        {filteredResults.length > visibleLimit && (
+          <div className="pt-3 pb-6 flex flex-col sm:flex-row items-center justify-center gap-2">
+            <button
+              onClick={() => setVisibleLimit((prev) => prev + 60)}
+              className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs shadow-xs transition cursor-pointer"
             >
-              <button
-                onClick={() =>
-                  setFocusedPassageId((prev) => (prev === pid ? null : pid))
-                }
-                className="w-full text-left flex items-start gap-3 px-4 py-3 bg-amber-50/60 cursor-pointer"
-              >
-                <span className="shrink-0 text-[11px] font-bold px-2 py-0.5 rounded-lg bg-amber-200 text-amber-900 border border-amber-300">
-                  Đoạn văn
-                </span>
-                <div className="flex-1 min-w-0">
-                  <p className="text-[13px] font-bold text-amber-900 line-clamp-1">
-                    {passageInfo?.title ?? pid}
-                  </p>
-                  <p className="text-[11px] text-[#8C8276]">
-                    {groupResults.length} câu hỏi khớp
-                  </p>
-                </div>
-                {isFocused ? (
-                  <ChevronUp className="w-4 h-4 text-amber-700 shrink-0 mt-0.5" />
-                ) : (
-                  <ChevronDown className="w-4 h-4 text-[#B0A89E] shrink-0 mt-0.5" />
-                )}
-              </button>
-
-              {isFocused && (
-                <div className="bg-white">
-                  {passageInfo && (
-                    <div className="px-4 pt-3 pb-2">
-                      <div className="p-3 rounded-xl bg-sky-50/70 border border-sky-200 text-[12px] text-sky-900 max-h-52 overflow-y-auto leading-relaxed whitespace-pre-wrap">
-                        <p className="font-bold text-sky-700 mb-1">📄 {passageInfo.title}</p>
-                        {highlight(passageInfo.content, query)}
-                      </div>
-                    </div>
-                  )}
-
-                  <div className="px-4 pb-2 space-y-2">
-                    {groupResults.map((r) => {
-                      if (r.kind !== 'reading') return null;
-                      const q = r.question;
-                      return (
-                        <ReadingQuestionCard
-                          key={q.id}
-                          question={q}
-                          query={query}
-                          isExpanded={expandedId === q.id}
-                          onToggle={() => handleToggle(q.id)}
-                          showViewExamSetBtn
-                          onViewExamSet={() =>
-                            setExamSetFocus({
-                              kind: 'reading',
-                              setKey: q.source,
-                              originId: q.id,
-                            })
-                          }
-                        />
-                      );
-                    })}
-                  </div>
-
-                  {/* View full exam set for passage's source */}
-                  {firstR.kind === 'reading' && (
-                    <div className="px-4 pb-3">
-                      <button
-                        onClick={() =>
-                          setExamSetFocus({
-                            kind: 'reading',
-                            setKey: firstR.question.source,
-                            originId: firstR.question.id,
-                          })
-                        }
-                        className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white text-[12.5px] font-bold cursor-pointer transition-all shadow-sm"
-                      >
-                        <Layers className="w-4 h-4" />
-                        Xem toàn bộ đề "{firstR.question.source}"
-                      </button>
-                    </div>
-                  )}
-
-                  <div className="px-4 pb-3">
-                    <button
-                      onClick={() => setFocusedPassageId(null)}
-                      className="w-full text-center text-[11px] text-[#8C8276] py-1.5 rounded-xl hover:bg-amber-50 transition cursor-pointer border border-[#EFE8DE]"
-                    >
-                      ✕ Thu gọn đoạn văn này
-                    </button>
-                  </div>
-                </div>
-              )}
-            </div>
-          );
-        })}
+              Hiển thị thêm 60 câu nữa (Còn {filteredResults.length - visibleLimit} câu)
+            </button>
+            <button
+              onClick={() => setVisibleLimit(filteredResults.length)}
+              className="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-white hover:bg-gray-50 border border-[#EFE8DE] text-[#5C554E] font-semibold text-xs transition cursor-pointer"
+            >
+              Xem tất cả ({filteredResults.length} câu)
+            </button>
+          </div>
+        )}
       </div>
       </>
       )}

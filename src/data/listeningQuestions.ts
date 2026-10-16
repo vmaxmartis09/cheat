@@ -2057,20 +2057,23 @@ export const listeningQuestions: ListeningQuestion[] = [
 
 import { hacker2AllQuestions } from './hacker2Questions';
 
-export const getListeningQuestionsByPart = (part: number | 'all', test: number | 'all' = 1): ListeningQuestion[] => {
+export const getListeningQuestionsByPart = (part: number | 'all' | 'images', test: number | 'all' = 1): ListeningQuestion[] => {
   return getListeningQuestionsByTestAndPart(test, part);
 };
 
-export const getListeningQuestionsByTestAndPart = (test: number | 'all', part: number | 'all'): ListeningQuestion[] => {
+export const getListeningQuestionsByTestAndPart = (test: number | 'all', part: number | 'all' | 'images'): ListeningQuestion[] => {
   if (test === 0) {
     if (part === 'all') return listeningQuestions;
+    if (part === 'images') return listeningQuestions.filter((q) => Boolean(q.imageUrl));
     return listeningQuestions.filter((q) => q.part === part);
   }
   
   return (hacker2AllQuestions as any[]).filter((q: any) => {
     const matchTest = test === 'all' || q.test === test;
-    const matchPart = part === 'all' || q.part === part;
-    return matchTest && matchPart;
+    if (!matchTest) return false;
+    if (part === 'all') return true;
+    if (part === 'images') return Boolean(q.imageUrl);
+    return q.part === part;
   }) as ListeningQuestion[];
 };
 

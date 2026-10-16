@@ -25,6 +25,7 @@ import {
   X,
   Maximize2,
   RotateCcw,
+  Image as ImageIcon,
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
@@ -61,6 +62,11 @@ export const ListeningTab: React.FC = () => {
   const filteredQuestions: ListeningQuestion[] = React.useMemo(() => {
     return getListeningQuestionsByTestAndPart(selectedTest, selectedPart);
   }, [selectedTest, selectedPart]);
+
+  // Total questions with images for current test
+  const totalImageQuestions = React.useMemo(() => {
+    return getListeningQuestionsByTestAndPart(selectedTest, 'images').length;
+  }, [selectedTest]);
 
   const safeIdx = Math.min(Math.max(0, currentIdx), Math.max(0, filteredQuestions.length - 1));
   const currentQ: ListeningQuestion | undefined = filteredQuestions[safeIdx];
@@ -287,6 +293,18 @@ export const ListeningTab: React.FC = () => {
                 }`}
               >
                 P4 (Độc Thoại)
+              </button>
+              <button
+                onClick={() => { setSelectedPart('images'); setCurrentIdx(0); }}
+                className={`px-2.5 py-1 rounded-lg transition cursor-pointer whitespace-nowrap flex items-center gap-1 font-bold ${
+                  selectedPart === 'images'
+                    ? 'bg-emerald-600 text-white shadow-2xs'
+                    : 'bg-emerald-50 text-emerald-800 hover:bg-emerald-100 border border-emerald-200'
+                }`}
+                title="Lọc riêng toàn bộ các câu hỏi có tranh ảnh và bảng biểu"
+              >
+                <ImageIcon className="w-3.5 h-3.5" />
+                <span>📷 Có Hình ({totalImageQuestions})</span>
               </button>
             </div>
           </div>

@@ -70,8 +70,8 @@ interface QuizState {
   openFullAnswers: (target?: { book?: string; test?: string; questionNum?: number }) => void;
   listeningCurrentIndex: number;
   setListeningCurrentIndex: (idx: number) => void;
-  listeningSelectedPart: number | 'all';
-  setListeningSelectedPart: (part: number | 'all') => void;
+  listeningSelectedPart: number | 'all' | 'images';
+  setListeningSelectedPart: (part: number | 'all' | 'images') => void;
   listeningSelectedTest: number | 'all';
   setListeningSelectedTest: (test: number | 'all') => void;
   resumeLastStudy: () => { tab: 'practice' | 'listening'; questionNum: number; sectionName: string };

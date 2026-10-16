@@ -94,7 +94,7 @@ export const App: React.FC = () => {
       />
 
       {/* MAIN VIEWPORT: TAB "ÔN ĐỌC", "LUYỆN NGHE", "FULL ĐÁP ÁN", "TRA TỪ", HOẶC "KẾT QUẢ" */}
-      <main className={`flex-1 w-full mx-auto px-2 sm:px-4 md:px-6 py-2 flex flex-col min-h-0 overflow-hidden transition-all duration-200 ${
+      <main className={`flex-1 w-full mx-auto px-1 sm:px-4 md:px-6 py-1 sm:py-2 flex flex-col min-h-0 overflow-hidden transition-all duration-200 ${
         activeTab === 'listening' ? 'max-w-4xl' : activeTab === 'answers' ? 'max-w-7xl' : activeTab === 'search' ? 'max-w-3xl' : isPassageView ? 'max-w-7xl' : 'max-w-2xl'
       }`}>
         {activeTab === 'practice' ? (
@@ -130,14 +130,14 @@ export const App: React.FC = () => {
       </main>
 
       {/* COMPACT BOTTOM NAVIGATION BAR: 5 TABS */}
-      <nav className="border-t border-[#EFE8DE] bg-[#FAF7F2]/95 backdrop-blur-md px-2 sm:px-6 py-1.5 flex items-center justify-around shrink-0 safe-bottom">
+      <nav className="border-t border-[#EFE8DE] bg-[#FAF7F2]/95 backdrop-blur-md px-1 sm:px-6 py-1 sm:py-1.5 flex items-center justify-around shrink-0 safe-bottom">
         <div className={`flex items-center justify-around w-full mx-auto gap-0.5 sm:gap-2 ${
           activeTab === 'listening' ? 'max-w-4xl' : activeTab === 'answers' ? 'max-w-7xl' : activeTab === 'search' ? 'max-w-3xl' : isPassageView ? 'max-w-7xl' : 'max-w-2xl'
         }`}>
           {/* Tab 1: ÔN ĐỌC */}
           <button
             onClick={() => setActiveTab('practice')}
-            className={`flex-1 flex flex-col items-center gap-0.5 py-1 px-0.5 sm:px-3 rounded-xl transition cursor-pointer ${
+            className={`flex-1 flex flex-col items-center gap-0.5 py-0.5 sm:py-1 px-0.5 sm:px-3 rounded-xl transition cursor-pointer ${
               activeTab === 'practice'
                 ? 'text-amber-800 font-bold bg-amber-100/60 shadow-2xs'
                 : 'text-[#8C8276] hover:text-[#262320]'

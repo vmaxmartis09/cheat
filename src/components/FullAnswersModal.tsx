@@ -291,8 +291,8 @@ export const FullAnswersModal: React.FC = () => {
   // View Mode: 'matrix' (Single screen 1-màn-hình) vs 'cards' (Chi tiết)
   const [viewMode, setViewMode] = useState<'matrix' | 'cards'>('matrix');
 
-  // Mobile active section for matrix view ('lc' | 'rc')
-  const [mobileSection, setMobileSection] = useState<'lc' | 'rc'>('lc');
+  // Mobile active section for matrix view ('lc' | 'rc' | 'both')
+  const [mobileSection, setMobileSection] = useState<'lc' | 'rc' | 'both'>('lc');
 
   // Search filter inside answers
   const [searchNum, setSearchNum] = useState<string>('');
@@ -979,45 +979,63 @@ export const FullAnswersModal: React.FC = () => {
               <div className="md:hidden flex items-center gap-1 bg-[#F2ECE3] p-0.5 rounded-xl text-xs font-bold shrink-0">
                 <button
                   onClick={() => setMobileSection('lc')}
-                  className={`flex-1 py-1 px-2 rounded-lg transition flex items-center justify-center gap-1.5 cursor-pointer ${
+                  className={`flex-1 py-1 px-1.5 rounded-lg transition flex items-center justify-center gap-1 cursor-pointer ${
                     mobileSection === 'lc'
-                      ? 'bg-sky-600 text-white shadow-2xs'
+                      ? 'bg-sky-600 text-white shadow-2xs font-black'
                       : 'text-[#6B635B]'
                   }`}
                 >
                   <Headphones className="w-3.5 h-3.5" />
-                  <span>🎧 Listening (1-100)</span>
+                  <span>🎧 LC (1-100)</span>
                 </button>
                 <button
                   onClick={() => setMobileSection('rc')}
-                  className={`flex-1 py-1 px-2 rounded-lg transition flex items-center justify-center gap-1.5 cursor-pointer ${
+                  className={`flex-1 py-1 px-1.5 rounded-lg transition flex items-center justify-center gap-1 cursor-pointer ${
                     mobileSection === 'rc'
-                      ? 'bg-amber-600 text-white shadow-2xs'
+                      ? 'bg-amber-600 text-white shadow-2xs font-black'
                       : 'text-[#6B635B]'
                   }`}
                 >
                   <BookOpen className="w-3.5 h-3.5" />
-                  <span>📖 Reading (101-200)</span>
+                  <span>📖 RC (101-200)</span>
+                </button>
+                <button
+                  onClick={() => setMobileSection('both')}
+                  className={`flex-1 py-1 px-1.5 rounded-lg transition flex items-center justify-center gap-1 cursor-pointer ${
+                    mobileSection === 'both'
+                      ? 'bg-emerald-600 text-white shadow-2xs font-black'
+                      : 'text-[#6B635B]'
+                  }`}
+                  title="Hiển thị cả 200 câu cuộn mượt mà trên 1 trang"
+                >
+                  <Layers className="w-3.5 h-3.5" />
+                  <span>Cả 200 Câu</span>
                 </button>
               </div>
             )}
 
             {/* Matrix Dual Columns (or single if only LC or RC) */}
-            <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-3 min-h-0 overflow-hidden">
+            <div className={`flex-1 ${
+              mobileSection === 'both' ? 'overflow-y-auto' : 'overflow-hidden'
+            } grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-3 min-h-0`}>
               {/* Listening Matrix */}
               {lcNums.length > 0 && (
-                <div className={`h-full min-h-0 ${
-                  rcNums.length > 0 && mobileSection === 'rc' ? 'hidden md:flex' : 'flex'
-                } flex-col`}>
+                <div className={`${
+                  mobileSection === 'both'
+                    ? 'flex'
+                    : rcNums.length > 0 && mobileSection === 'rc' ? 'hidden md:flex' : 'flex'
+                } flex-col ${mobileSection === 'both' ? 'shrink-0' : 'h-full min-h-0'}`}>
                   {renderDenseMatrix(lcNums, '🎧 LISTENING (Câu 1 - 100)', true)}
                 </div>
               )}
 
               {/* Reading Matrix */}
               {rcNums.length > 0 && (
-                <div className={`h-full min-h-0 ${
-                  lcNums.length > 0 && mobileSection === 'lc' ? 'hidden md:flex' : 'flex'
-                } flex-col`}>
+                <div className={`${
+                  mobileSection === 'both'
+                    ? 'flex'
+                    : lcNums.length > 0 && mobileSection === 'lc' ? 'hidden md:flex' : 'flex'
+                } flex-col ${mobileSection === 'both' ? 'shrink-0' : 'h-full min-h-0'}`}>
                   {renderDenseMatrix(rcNums, '📖 READING (Câu 101 - 200)', false)}
                 </div>
               )}

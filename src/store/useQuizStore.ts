@@ -72,8 +72,8 @@ interface QuizState {
   setListeningCurrentIndex: (idx: number) => void;
   listeningSelectedPart: number | 'all' | 'images';
   setListeningSelectedPart: (part: number | 'all' | 'images') => void;
-  listeningSelectedTest: number | 'all';
-  setListeningSelectedTest: (test: number | 'all') => void;
+  listeningSelectedTest: number | string;
+  setListeningSelectedTest: (test: number | string) => void;
   resumeLastStudy: () => { tab: 'practice' | 'listening'; questionNum: number; sectionName: string };
 
   // Actions

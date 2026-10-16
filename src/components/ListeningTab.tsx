@@ -218,13 +218,15 @@ export const ListeningTab: React.FC = () => {
             <select
               value={selectedTest}
               onChange={(e) => {
-                const val = e.target.value === 'all' ? 'all' : Number(e.target.value);
+                const raw = e.target.value;
+                const num = Number(raw);
+                const val = raw === 'all' || isNaN(num) ? raw : num;
                 setSelectedTest(val);
                 setCurrentIdx(0);
               }}
               className="bg-[#FAF7F2] border border-[#E0D7CC] text-[#262320] text-xs font-bold rounded-lg px-2.5 py-1 focus:outline-none focus:border-amber-500 cursor-pointer shadow-2xs"
             >
-              <optgroup label="🎧 HACKER TOEIC 2 (10 TESTS)">
+              <optgroup label="🎧 HACKER TOEIC 2 (10 TESTS FULL LC)">
                 <option value={1}>Hacker 2 - Test 1 (100 câu)</option>
                 <option value={2}>Hacker 2 - Test 2 (100 câu)</option>
                 <option value={3}>Hacker 2 - Test 3 (100 câu)</option>
@@ -236,9 +238,16 @@ export const ListeningTab: React.FC = () => {
                 <option value={9}>Hacker 2 - Test 9 (100 câu)</option>
                 <option value={10}>Hacker 2 - Test 10 (100 câu)</option>
               </optgroup>
+              <optgroup label="✨ HACKER TOEIC 3 (MỚI KHÔI PHỤC LC)">
+                <option value="h3_1">Hacker 3 - Test 1 LC (100 câu)</option>
+                <option value="h3_2">Hacker 3 - Test 2 LC (100 câu)</option>
+              </optgroup>
+              <optgroup label="✨ HACKER TOEIC 1 (MỚI KHÔI PHỤC LC)">
+                <option value="h1_1">Hacker 1 - Test 1 LC (100 câu)</option>
+              </optgroup>
               <optgroup label="⭐ ĐỀ LUYỆN KHÁC">
                 <option value={0}>Final Trial Test (Hacker 3 & 2 Part 1-4)</option>
-                <option value="all">Toàn bộ 1,100 câu Listening</option>
+                <option value="all">Toàn bộ 1,400 câu Listening</option>
               </optgroup>
             </select>
 

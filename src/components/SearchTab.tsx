@@ -501,7 +501,12 @@ const ListeningQuestionCard: React.FC<{
   }, [isHighlighted]);
 
   const testNum = (q as any).test;
-  const testLabel = testNum ? `Hacker 2 · Test ${testNum}` : 'Docs 2 Listening';
+  const bookName = (q as any).book || (q.id.startsWith('h3_') ? 'Hacker 3' : q.id.startsWith('h1_') ? 'Hacker 1' : testNum ? 'Hacker 2' : 'Docs 2');
+  const testLabel = (q as any).book
+    ? `${bookName} · Test ${testNum}`
+    : testNum
+    ? `${bookName} · Test ${testNum}`
+    : 'Docs 2 Listening';
   const matchLabel = matchedIn ? MATCH_TYPE_LABELS[matchedIn] : null;
 
   return (
@@ -653,7 +658,12 @@ const ListeningQuestionCard: React.FC<{
               onClick={(e) => {
                 e.stopPropagation();
                 const store = useQuizStore.getState();
-                const targetTest = testNum || 1;
+                let targetTest: number | string = testNum || 1;
+                if (q.id.startsWith('h3_t1')) targetTest = 'h3_1';
+                else if (q.id.startsWith('h3_t2')) targetTest = 'h3_2';
+                else if (q.id.startsWith('h1_t1')) targetTest = 'h1_1';
+                else if (q.id.startsWith('lc_')) targetTest = 0;
+
                 store.setListeningSelectedTest(targetTest);
                 store.setListeningSelectedPart('all');
                 const list = getListeningQuestionsByTestAndPart(targetTest, 'all');
@@ -674,9 +684,10 @@ const ListeningQuestionCard: React.FC<{
               onClick={(e) => {
                 e.stopPropagation();
                 const resolved = resolveBookAndTestFromSource(testLabel, q.id, q.num);
+                const defaultBook = (q as any).book === 'Hacker 3' ? 'Hacker 3 (RC 101-200)' : (q as any).book === 'Hacker 1' ? 'Hacker 1 (RC 101-200)' : 'Hacker 2 (Full 200 câu)';
                 useQuizStore.getState().openFullAnswers(
                   resolved || {
-                    book: 'Hacker 2 (Full 200 câu)',
+                    book: defaultBook,
                     test: String(testNum || '1'),
                     questionNum: q.num,
                   }

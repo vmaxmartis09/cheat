@@ -2056,19 +2056,42 @@ export const listeningQuestions: ListeningQuestion[] = [
 ];
 
 import { hacker2AllQuestions } from './hacker2Questions';
+import { hackerExtraListeningQuestions } from './hackerExtraListening';
 
 export const getListeningQuestionsByPart = (part: number | 'all' | 'images', test: number | 'all' = 1): ListeningQuestion[] => {
   return getListeningQuestionsByTestAndPart(test, part);
 };
 
-export const getListeningQuestionsByTestAndPart = (test: number | 'all', part: number | 'all' | 'images'): ListeningQuestion[] => {
-  if (test === 0) {
+export const getListeningQuestionsByTestAndPart = (test: number | string, part: number | 'all' | 'images'): ListeningQuestion[] => {
+  if (test === 0 || test === 'trial') {
     if (part === 'all') return listeningQuestions;
     if (part === 'images') return listeningQuestions.filter((q) => Boolean(q.imageUrl));
     return listeningQuestions.filter((q) => q.part === part);
   }
+
+  if (test === 'h3_1' || test === 31) {
+    const list = hackerExtraListeningQuestions.filter((q) => q.book === 'Hacker 3' && q.test === 1);
+    if (part === 'all') return list;
+    if (part === 'images') return list.filter((q) => Boolean(q.imageUrl));
+    return list.filter((q) => q.part === part);
+  }
+
+  if (test === 'h3_2' || test === 32) {
+    const list = hackerExtraListeningQuestions.filter((q) => q.book === 'Hacker 3' && q.test === 2);
+    if (part === 'all') return list;
+    if (part === 'images') return list.filter((q) => Boolean(q.imageUrl));
+    return list.filter((q) => q.part === part);
+  }
+
+  if (test === 'h1_1' || test === 11) {
+    const list = hackerExtraListeningQuestions.filter((q) => q.book === 'Hacker 1' && q.test === 1);
+    if (part === 'all') return list;
+    if (part === 'images') return list.filter((q) => Boolean(q.imageUrl));
+    return list.filter((q) => q.part === part);
+  }
   
-  return (hacker2AllQuestions as any[]).filter((q: any) => {
+  const pool = hacker2AllQuestions as any[];
+  return pool.filter((q: any) => {
     const matchTest = test === 'all' || q.test === test;
     if (!matchTest) return false;
     if (part === 'all') return true;
@@ -2078,17 +2101,21 @@ export const getListeningQuestionsByTestAndPart = (test: number | 'all', part: n
 };
 
 export const getAllListeningQuestions = (): ListeningQuestion[] => {
-  return [...listeningQuestions, ...(hacker2AllQuestions as any[])] as ListeningQuestion[];
+  return [...listeningQuestions, ...(hacker2AllQuestions as any[]), ...(hackerExtraListeningQuestions as any[])] as ListeningQuestion[];
 };
 
 export const getListeningStats = () => {
   const parts = { 1: 0, 2: 0, 3: 0, 4: 0 };
-  listeningQuestions.forEach((q) => {
-    parts[q.part]++;
+  const all = getAllListeningQuestions();
+  all.forEach((q) => {
+    if (q.part in parts) {
+      parts[q.part as 1 | 2 | 3 | 4]++;
+    }
   });
   return {
-    total: listeningQuestions.length + hacker2AllQuestions.length,
+    total: all.length,
     parts,
   };
 };
+
 

@@ -32,7 +32,104 @@ export function resolveFullExamSetInfo(q: {
   const book = (q.book || '').toLowerCase();
   const num = q.num;
 
-  // 1. Hacker 2 (Tests 1-10: Full 200 questions each, 100 LC + 100 RC)
+  // 1. Docs 3 (TMA Online & Hackers Reading in Docs 3)
+  if (id.startsWith('docs3_hk2')) {
+    return {
+      examSetId: 'hacker2_t1',
+      examSetName: 'Hacker 2 · Test 1',
+      badgeText: 'Hacker 2 · Test 1',
+      book: 'Hacker 2 (Full 200 câu)',
+      test: '1',
+      questionNum: num,
+      hasListening: true,
+      hasReading: true,
+      totalQuestions: 200,
+      rcSource: 'Docs 5 - Hacker 2 Test 1 Full',
+      lcTest: 1,
+    };
+  }
+  if (id.startsWith('docs3_hk3')) {
+    return {
+      examSetId: 'hacker3_t1',
+      examSetName: 'Hacker 3 · Test 1',
+      badgeText: 'Hacker 3 · Test 1',
+      book: 'Hacker 3 (RC 101-200)',
+      test: '1',
+      questionNum: num,
+      hasListening: true,
+      hasReading: true,
+      totalQuestions: 200,
+      rcSource: 'Hacker 3 Test 1 Full',
+      lcTest: 'h3_1',
+    };
+  }
+  if (src.includes('tma') || src.includes('docs 3') || id.startsWith('docs3_')) {
+    return {
+      examSetId: 'docs3_tma',
+      examSetName: 'Docs 3 · Đề TMA Online',
+      badgeText: 'Docs 3 · TMA',
+      book: 'Docs 3 (TMA Online)',
+      test: 'Đề TMA Online',
+      questionNum: num,
+      hasListening: false,
+      hasReading: true,
+      totalQuestions: 70,
+      rcSource: 'Docs 3 - Đề TMA Online Full',
+    };
+  }
+
+  // 2. Docs 4 (Hacker 3 Reading Test 1)
+  if (src.includes('docs 4') || id.startsWith('docs4_')) {
+    return {
+      examSetId: 'docs4_t1',
+      examSetName: 'Docs 4 · Hacker 3 Reading Test 1',
+      badgeText: 'Docs 4 · Test 1',
+      book: 'Docs 4 (Hacker 3 Reading)',
+      test: 'Test 1',
+      questionNum: num,
+      hasListening: false,
+      hasReading: true,
+      totalQuestions: 100,
+      rcSource: 'Docs 4 - Hacker 3 Test 1 Full',
+    };
+  }
+
+  // 3. Docs 5: YBM (100% matches YBM 2025) vs Hacker 2
+  if (id.startsWith('docs5_ybm1_') || (src.includes('docs 5') && src.includes('ybm'))) {
+    const tMatch = src.match(/test\s*(\d+)/i) || id.match(/_t(\d+)_/i);
+    const t = tMatch ? tMatch[1] : '1';
+    return {
+      examSetId: `ybm2025_t${t}`,
+      examSetName: `YBM 2025 · Test ${t}`,
+      badgeText: `YBM 2025 · Test ${t}`,
+      book: 'YBM 2025 (RC 101-200)',
+      test: t,
+      questionNum: num,
+      hasListening: false,
+      hasReading: true,
+      totalQuestions: 100,
+      rcSource: `Docs 5 - YBM 1000 Vol 1 Test ${t} Full`,
+    };
+  }
+  if (id.startsWith('docs5_hacker2_') || (src.includes('docs 5') && src.includes('hacker 2'))) {
+    const tMatch = src.match(/test\s*(\d+)/i) || id.match(/_t(\d+)_/i);
+    const t = tMatch ? tMatch[1] : '1';
+    return {
+      examSetId: `hacker2_t${t}`,
+      examSetName: `Hacker 2 · Test ${t}`,
+      badgeText: `Hacker 2 · Test ${t}`,
+      book: 'Hacker 2 (Full 200 câu)',
+      test: t,
+      questionNum: num,
+      hasListening: true,
+      hasReading: true,
+      totalQuestions: 200,
+      rcSource: `Docs 5 - Hacker 2 Test ${t} Full`,
+      lcTest: parseInt(t, 10),
+    };
+  }
+
+  // 4. Hacker 2 (Tests 1-10: Full 200 questions each, 100 LC + 100 RC)
   if (src.includes('hacker 2') || src.includes('hacker2') || id.includes('hacker2') || book.includes('hacker 2')) {
     const tMatch = src.match(/test\s*(\d+)/i) || id.match(/_t(\d+)_/i) || [null, String(q.test || 1)];
     const t = tMatch ? tMatch[1] : '1';
@@ -51,13 +148,12 @@ export function resolveFullExamSetInfo(q: {
     };
   }
 
-  // 2. Hacker 3 (Tests 1-10: Tests 1 & 2 have full 200 questions, Tests 3-10 have 100 RC)
+  // 5. Hacker 3 (Tests 1-10: Tests 1 & 2 have full 200 questions, Tests 3-10 have 100 RC)
   if (
     src.includes('hacker 3') ||
     src.includes('hacker3') ||
     id.includes('hacker3') ||
     id.startsWith('h3_') ||
-    id.startsWith('docs4_hacker3_') ||
     id.startsWith('docs6_hacker3_') ||
     book.includes('hacker 3')
   ) {
@@ -79,7 +175,7 @@ export function resolveFullExamSetInfo(q: {
     };
   }
 
-  // 3. Hacker 1 (Tests 1-10: Test 1 has full 200 questions, Tests 2-10 have 100 RC)
+  // 6. Hacker 1 (Tests 1-10: Test 1 has full 200 questions, Tests 2-10 have 100 RC)
   if (
     src.includes('hacker 1') ||
     src.includes('hacker1') ||
@@ -106,7 +202,7 @@ export function resolveFullExamSetInfo(q: {
     };
   }
 
-  // 4. YBM 1000 Vol 1 (Tests 1-10: 100 RC each)
+  // 7. YBM 1000 Vol 1 (Tests 1-10: 100 RC each)
   if (src.includes('ybm 1000') || src.includes('ybm1') || id.includes('ybm1')) {
     const tMatch = src.match(/test\s*(\d+)/i) || id.match(/_t(\d+)_/i);
     const t = tMatch ? tMatch[1] : '1';
@@ -124,7 +220,7 @@ export function resolveFullExamSetInfo(q: {
     };
   }
 
-  // 5. Docs 2 - Đề 2 (YBM Test 1: 100 RC)
+  // 8. Docs 2 - Đề 2 (YBM Test 1: 100 RC)
   if (src.includes('đề 2') || src.includes('de 2') || id.includes('docs2_de2')) {
     return {
       examSetId: 'docs2_de2',
@@ -140,7 +236,7 @@ export function resolveFullExamSetInfo(q: {
     };
   }
 
-  // 6. Docs 2 - Chuyên đề Tips (34 RC questions)
+  // 9. Docs 2 - Chuyên đề Tips (34 RC questions)
   if (src.includes('chuyên đề') || src.includes('chuyen de') || id.includes('docs2_drill')) {
     return {
       examSetId: 'docs2_tips',
@@ -300,11 +396,23 @@ export function getFullExamSetQuestions(examSetId: string): {
     };
   }
 
-  // 4. YBM 1000 Vol 1 (Tests 1-10)
-  if (examSetId.startsWith('ybm1_t')) {
-    const t = parseInt(examSetId.replace('ybm1_t', ''), 10);
-    const info = resolveFullExamSetInfo({ source: `YBM 1000 Vol 1 Test ${t}` });
+  // 4. YBM 2025 / YBM 1000 (Tests 1-10)
+  if (examSetId.startsWith('ybm2025_t') || examSetId.startsWith('ybm1_t')) {
+    const t = parseInt(examSetId.replace(/^(?:ybm2025_t|ybm1_t)/, ''), 10);
+    const info = resolveFullExamSetInfo({ source: `Docs 5 - YBM 1000 Vol 1 Test ${t}` });
     const rcQuestions = getQuestionsBySource(`Docs 5 - YBM 1000 Vol 1 Test ${t} Full`).sort((a, b) => a.num - b.num);
+    return {
+      info,
+      lcQuestions: [],
+      rcQuestions,
+      allQuestionsCount: rcQuestions.length,
+    };
+  }
+
+  // 4b. Docs 4 (Hacker 3 Reading Test 1)
+  if (examSetId === 'docs4_t1') {
+    const info = resolveFullExamSetInfo({ id: 'docs4_hacker3_t1_101' });
+    const rcQuestions = getQuestionsBySource('Docs 4 - Hacker 3 Test 1 Full').sort((a, b) => a.num - b.num);
     return {
       info,
       lcQuestions: [],

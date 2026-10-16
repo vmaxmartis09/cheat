@@ -14,12 +14,13 @@ export const EXAM_BOOKS_META: ExamBookMeta[] = [
   { id: 'Hacker 2 (Full 200 câu)', name: 'Hacker TOEIC 2 (Full 200 câu LC + RC)', hasListening: true, hasReading: true, testCount: 10 },
   { id: 'Hacker 3 (RC 101-200)', name: 'Hacker TOEIC 3 (Test 1-2 Full 200 câu + 10 RC)', hasListening: true, hasReading: true, testCount: 10 },
   { id: 'Hacker 1 (RC 101-200)', name: 'Hacker TOEIC 1 (Test 1 Full 200 câu + 10 RC)', hasListening: true, hasReading: true, testCount: 10 },
+  { id: 'YBM 2025 (RC 101-200)', name: 'YBM TOEIC 2025 (10 Tests Reading)', hasListening: false, hasReading: true, testCount: 10 },
   { id: 'YBM 1000 Vol 1 (RC 101-200)', name: 'YBM 1000 Vol 1 (10 Tests Reading)', hasListening: false, hasReading: true, testCount: 10 },
   { id: 'Docs 2 (Reading)', name: 'Docs 2 (Đề 1 Full 200 câu, Đề 2 YBM, Chuyên đề Tips)', hasListening: true, hasReading: true, testCount: 3 },
   { id: 'Docs 2 (Listening Test 1)', name: 'Docs 2 Listening (Test 1 Full 100 câu)', hasListening: true, hasReading: false, testCount: 1 },
   { id: 'Docs 1 (Test 2)', name: 'Docs 1 (Test 2 Full 100 câu & ToIce 2)', hasListening: false, hasReading: true, testCount: 2 },
-  { id: 'Docs 3 (TMA Online)', name: 'Docs 3 TMA Online (Full Reading 81 câu)', hasListening: false, hasReading: true, testCount: 1 },
-  { id: 'YBM 2025 (RC 101-200)', name: 'YBM TOEIC 2025 (10 Tests Reading)', hasListening: false, hasReading: true, testCount: 10 },
+  { id: 'Docs 3 (TMA Online)', name: 'Docs 3 TMA Online (Đề TMA Online 70 câu)', hasListening: false, hasReading: true, testCount: 1 },
+  { id: 'Docs 4 (Hacker 3 Reading)', name: 'Docs 4 (Hacker 3 Reading Test 1 Full 100 câu)', hasListening: false, hasReading: true, testCount: 1 },
 ];
 
 export const MASTER_ANSWER_KEYS: Record<string, Record<string, Record<string, string>>> = {
@@ -6638,55 +6639,105 @@ export const MASTER_ANSWER_KEYS: Record<string, Record<string, Record<string, st
     },
     "Đề 2 (YBM Test 1)": {
       "101": "C",
+      "102": "D",
       "103": "A",
+      "104": "C",
       "105": "B",
+      "106": "A",
       "107": "A",
+      "108": "C",
       "109": "C",
+      "110": "A",
       "111": "B",
+      "112": "D",
       "113": "A",
+      "114": "A",
       "115": "A",
+      "116": "D",
       "117": "B",
+      "118": "B",
       "119": "B",
+      "120": "A",
       "121": "B",
+      "122": "B",
       "123": "D",
+      "124": "D",
       "125": "C",
+      "126": "C",
       "127": "D",
+      "128": "B",
       "129": "D",
+      "130": "B",
       "131": "C",
+      "132": "D",
       "133": "B",
+      "134": "A",
       "135": "A",
+      "136": "B",
       "137": "B",
+      "138": "C",
       "139": "C",
+      "140": "A",
       "141": "A",
+      "142": "B",
       "143": "D",
+      "144": "A",
       "145": "C",
+      "146": "C",
       "147": "D",
+      "148": "C",
       "149": "D",
+      "150": "D",
       "151": "A",
+      "152": "C",
       "153": "D",
+      "154": "B",
       "155": "D",
+      "156": "B",
       "157": "C",
+      "158": "A",
       "159": "A",
+      "160": "A",
       "161": "C",
+      "162": "C",
       "163": "D",
+      "164": "D",
       "165": "D",
+      "166": "B",
       "167": "D",
+      "168": "C",
       "169": "C",
+      "170": "A",
       "171": "D",
+      "172": "D",
       "173": "A",
+      "174": "C",
       "175": "D",
+      "176": "B",
       "177": "C",
+      "178": "C",
       "179": "D",
+      "180": "B",
       "181": "A",
+      "182": "D",
       "183": "D",
+      "184": "A",
       "185": "B",
+      "186": "A",
       "187": "D",
+      "188": "C",
       "189": "D",
+      "190": "C",
       "191": "B",
+      "192": "B",
       "193": "D",
+      "194": "D",
       "195": "C",
+      "196": "D",
       "197": "B",
-      "199": "D"
+      "198": "A",
+      "199": "D",
+      "200": "D"
     },
     "Chuyên đề Tips": {
       "107": "C",
@@ -7011,24 +7062,23 @@ export const MASTER_ANSWER_KEYS: Record<string, Record<string, Record<string, st
       "121": "A",
       "122": "D",
       "123": "B",
-      "124": "D",
-      "125": "B",
+      "124": "A",
+      "125": "D",
       "126": "D",
       "127": "D",
       "128": "A",
-      "130": "D",
-      "131": "B",
-      "132": "A",
+      "131": "C",
+      "132": "C",
       "133": "D",
       "134": "A",
       "135": "B",
       "136": "D",
       "137": "B",
       "138": "A",
-      "143": "D",
-      "144": "A",
-      "145": "C",
-      "146": "D",
+      "143": "B",
+      "144": "C",
+      "145": "D",
+      "146": "A",
       "147": "A",
       "148": "A",
       "149": "B",
@@ -7055,6 +7105,110 @@ export const MASTER_ANSWER_KEYS: Record<string, Record<string, Record<string, st
       "193": "C",
       "194": "B",
       "195": "D"
+    }
+  },
+  "Docs 4 (Hacker 3 Reading)": {
+    "Test 1": {
+      "101": "B",
+      "102": "C",
+      "103": "C",
+      "104": "B",
+      "105": "B",
+      "106": "A",
+      "107": "B",
+      "108": "D",
+      "109": "B",
+      "110": "C",
+      "111": "B",
+      "112": "C",
+      "113": "D",
+      "114": "A",
+      "115": "A",
+      "116": "D",
+      "117": "B",
+      "118": "A",
+      "119": "C",
+      "120": "C",
+      "121": "A",
+      "122": "D",
+      "123": "C",
+      "124": "A",
+      "125": "D",
+      "126": "A",
+      "127": "C",
+      "128": "B",
+      "129": "A",
+      "130": "B",
+      "131": "B",
+      "132": "B",
+      "133": "A",
+      "134": "D",
+      "135": "A",
+      "136": "D",
+      "137": "D",
+      "138": "B",
+      "139": "C",
+      "140": "A",
+      "141": "A",
+      "142": "C",
+      "143": "B",
+      "144": "A",
+      "145": "C",
+      "146": "D",
+      "147": "B",
+      "148": "C",
+      "149": "B",
+      "150": "A",
+      "151": "B",
+      "152": "D",
+      "153": "B",
+      "154": "D",
+      "155": "A",
+      "156": "C",
+      "157": "D",
+      "158": "B",
+      "159": "C",
+      "160": "B",
+      "161": "B",
+      "162": "D",
+      "163": "C",
+      "164": "C",
+      "165": "B",
+      "166": "A",
+      "167": "C",
+      "168": "C",
+      "169": "C",
+      "170": "B",
+      "171": "C",
+      "172": "B",
+      "173": "B",
+      "174": "D",
+      "175": "B",
+      "176": "A",
+      "177": "C",
+      "178": "C",
+      "179": "C",
+      "180": "B",
+      "181": "D",
+      "182": "C",
+      "183": "C",
+      "184": "A",
+      "185": "B",
+      "186": "D",
+      "187": "B",
+      "188": "B",
+      "189": "A",
+      "190": "C",
+      "191": "B",
+      "192": "C",
+      "193": "C",
+      "194": "B",
+      "195": "C",
+      "196": "D",
+      "197": "B",
+      "198": "D",
+      "199": "D",
+      "200": "C"
     }
   }
 };
@@ -7083,68 +7237,99 @@ export function resolveBookAndTestFromSource(
   const src = (source || '').toLowerCase();
   const qId = (questionId || '').toLowerCase();
 
-  // 1. Hacker 2
+  // 1. Docs 3 (TMA Online & Hackers Reading sample in Docs 3)
+  if (qId.startsWith('docs3_hk2')) {
+    return { book: 'Hacker 2 (Full 200 câu)', test: '1', num: questionNum, questionNum };
+  }
+  if (qId.startsWith('docs3_hk3')) {
+    return { book: 'Hacker 3 (RC 101-200)', test: '1', num: questionNum, questionNum };
+  }
+  if (src.includes('tma') || src.includes('docs 3') || qId.startsWith('docs3_')) {
+    return { book: 'Docs 3 (TMA Online)', test: 'Đề TMA Online', num: questionNum, questionNum };
+  }
+
+  // 2. Docs 4 (Hacker 3 Reading Test 1)
+  if (src.includes('docs 4') || qId.startsWith('docs4_')) {
+    return { book: 'Docs 4 (Hacker 3 Reading)', test: 'Test 1', num: questionNum, questionNum };
+  }
+
+  // 3. Docs 2
+  if (src.includes('docs 2 - đề 2') || src.includes('đề 2 ybm') || qId.startsWith('docs2_de2')) {
+    return { book: 'Docs 2 (Reading)', test: 'Đề 2 (YBM Test 1)', num: questionNum, questionNum };
+  }
+  if (src.includes('chuyên đề') || qId.startsWith('docs2_drill')) {
+    return { book: 'Docs 2 (Reading)', test: 'Chuyên đề Tips', num: questionNum, questionNum };
+  }
+  if (
+    src.includes('docs 2 - đề 1') ||
+    src.includes('đề 1 part 7') ||
+    src.includes('luyện đề') ||
+    qId.startsWith('docs2_de1') ||
+    qId.startsWith('docs2_p5') ||
+    qId.startsWith('docs2_p6')
+  ) {
+    return { book: 'Docs 2 (Reading)', test: 'Đề 1 (Trial Test)', num: questionNum, questionNum };
+  }
+
+  // 4. Docs 5: YBM vs Hacker 2
+  // Note: Docs 5 YBM questions match 100% with YBM 2025 Reading tests!
+  if (qId.startsWith('docs5_ybm1_') || (src.includes('docs 5') && src.includes('ybm'))) {
+    const tMatch = src.match(/test\s*(\d+)/i) || qId.match(/_t(\d+)_/i);
+    const testNum = tMatch ? tMatch[1] : '1';
+    return { book: 'YBM 2025 (RC 101-200)', test: testNum, num: questionNum, questionNum };
+  }
+  if (qId.startsWith('docs5_hacker2_') || (src.includes('docs 5') && src.includes('hacker 2'))) {
+    const tMatch = src.match(/test\s*(\d+)/i) || qId.match(/_t(\d+)_/i);
+    const testNum = tMatch ? tMatch[1] : '1';
+    return { book: 'Hacker 2 (Full 200 câu)', test: testNum, num: questionNum, questionNum };
+  }
+
+  // 5. Hacker 1
+  if (src.includes('hacker 1') || src.includes('hacker1') || qId.includes('hacker1') || qId.startsWith('h1_') || qId.startsWith('docs7_h1_')) {
+    const tMatch = src.match(/test\s*(\d+)/i) || qId.match(/h1_(?:t)?(\d+)/i) || qId.match(/_t(\d+)_/i);
+    const testNum = tMatch ? tMatch[1] : '1';
+    return { book: 'Hacker 1 (RC 101-200)', test: testNum, num: questionNum, questionNum };
+  }
+
+  // 6. Hacker 3
+  if (src.includes('hacker 3') || src.includes('hacker3') || qId.includes('hacker3') || qId.startsWith('h3_') || qId.startsWith('docs6_h3_')) {
+    const tMatch = src.match(/test\s*(\d+)/i) || qId.match(/h3_(?:t)?(\d+)/i) || qId.match(/_t(\d+)_/i);
+    const testNum = tMatch ? tMatch[1] : '1';
+    return { book: 'Hacker 3 (RC 101-200)', test: testNum, num: questionNum, questionNum };
+  }
+
+  // 7. Hacker 2
   if (src.includes('hacker 2') || src.includes('hacker2') || qId.includes('hacker2')) {
     const tMatch = src.match(/test\s*(\d+)/i) || qId.match(/_t(\d+)_/i);
     const testNum = tMatch ? tMatch[1] : '1';
     return { book: 'Hacker 2 (Full 200 câu)', test: testNum, num: questionNum, questionNum };
   }
 
-  // 2. Hacker 1
-  if (src.includes('hacker 1') || src.includes('hacker1') || qId.includes('hacker1') || qId.startsWith('h1_')) {
-    const tMatch = src.match(/test\s*(\d+)/i) || qId.match(/h1_(?:t)?(\d+)/i) || qId.match(/_t(\d+)_/i);
-    const testNum = tMatch ? tMatch[1] : '1';
-    return { book: 'Hacker 1 (RC 101-200)', test: testNum, num: questionNum, questionNum };
-  }
-
-  // 3. Hacker 3
-  if (src.includes('hacker 3') || src.includes('hacker3') || qId.includes('hacker3') || qId.startsWith('h3_')) {
-    const tMatch = src.match(/test\s*(\d+)/i) || qId.match(/h3_(?:t)?(\d+)/i) || qId.match(/_t(\d+)_/i);
-    const testNum = tMatch ? tMatch[1] : '1';
-    return { book: 'Hacker 3 (RC 101-200)', test: testNum, num: questionNum, questionNum };
-  }
-
-  // 4. YBM 2025
+  // 8. YBM 2025
   if (src.includes('ybm 2025') || src.includes('ybm2025')) {
     const tMatch = src.match(/test\s*(\d+)/i) || qId.match(/_t(\d+)_/i);
     const testNum = tMatch ? tMatch[1] : '1';
     return { book: 'YBM 2025 (RC 101-200)', test: testNum, num: questionNum, questionNum };
   }
 
-  // 5. YBM 1000 Vol 1
+  // 9. YBM 1000 Vol 1
   if (src.includes('ybm 1000') || src.includes('ybm1') || src.includes('ybm') || qId.includes('ybm1')) {
     const tMatch = src.match(/test\s*(\d+)/i) || qId.match(/_t(\d+)_/i);
     const testNum = tMatch ? tMatch[1] : '1';
     return { book: 'YBM 1000 Vol 1 (RC 101-200)', test: testNum, num: questionNum, questionNum };
   }
 
-  // 6. Docs 2 Reading
-  if (src.includes('docs 2 - đề 1') || src.includes('đề 1') || src.includes('luyện đề') || qId.includes('docs2_de1') || qId.includes('docs2_p5') || qId.includes('docs2_p6')) {
-    return { book: 'Docs 2 (Reading)', test: 'Đề 1 (Trial Test)', num: questionNum, questionNum };
-  }
-  if (src.includes('docs 2 - đề 2') || src.includes('đề 2') || qId.includes('docs2_de2')) {
-    return { book: 'Docs 2 (Reading)', test: 'Đề 2 (YBM Test 1)', num: questionNum, questionNum };
-  }
-  if (src.includes('chuyên đề') || qId.includes('docs2_drill')) {
-    return { book: 'Docs 2 (Reading)', test: 'Chuyên đề Tips', num: questionNum, questionNum };
-  }
-
-  // 7. Docs 2 Listening
-  if (src.includes('listening') || qId.includes('listening_') || qId.startsWith('p1_') || qId.startsWith('p2_') || qId.startsWith('p3_') || qId.startsWith('p4_') || qId.startsWith('lc_')) {
-    return { book: 'Docs 2 (Reading)', test: 'Đề 1 (Trial Test)', num: questionNum, questionNum };
-  }
-
-  // 8. Docs 1
-  if (src.includes('toice 2') || qId.includes('toice2_')) {
+  // 10. Docs 1 (ToIce 2 & Test 2)
+  if (src.includes('toice 2') || qId.startsWith('toice2_')) {
     return { book: 'Docs 1 (Test 2)', test: 'ToIce 2', num: questionNum, questionNum };
   }
-  if (src.includes('test 2') || qId.includes('test2_')) {
+  if (src.includes('test 2') || src.includes('docs 1') || src.includes('part 6') || src.includes('part 7') || qId.startsWith('test2_')) {
     return { book: 'Docs 1 (Test 2)', test: 'Test 2', num: questionNum, questionNum };
   }
 
-  // 9. Docs 3 TMA Online
-  if (src.includes('tma') || src.includes('hackers reading') || qId.includes('docs3_')) {
-    return { book: 'Docs 3 (TMA Online)', test: 'Đề TMA Online', num: questionNum, questionNum };
+  // 11. Docs 2 Listening
+  if (src.includes('listening') || qId.includes('listening_') || qId.startsWith('p1_') || qId.startsWith('p2_') || qId.startsWith('p3_') || qId.startsWith('p4_') || qId.startsWith('lc_')) {
+    return { book: 'Docs 2 (Reading)', test: 'Đề 1 (Trial Test)', num: questionNum, questionNum };
   }
 
   return null;

@@ -15,6 +15,8 @@ import {
   X,
   ChevronDown,
   ChevronUp,
+  ChevronLeft,
+  ChevronRight,
   CheckCircle2,
   Mic,
   BookOpen,
@@ -24,7 +26,6 @@ import {
   ExternalLink,
   Globe,
   Sparkles,
-  ChevronRight,
   Zap,
   BookMarked,
   HelpCircle,
@@ -1304,6 +1305,7 @@ export const SearchTab: React.FC = () => {
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const [examSetFocus, setExamSetFocus] = useState<ExamSetFocus | null>(null);
   const [searchMode, setSearchMode] = useState<'search' | 'matrix'>('search');
+  const [matrixSubView, setMatrixSubView] = useState<'matrix' | 'cards'>('matrix');
   const [selectedBook, setSelectedBook] = useState<string>(EXAM_BOOKS_META[0]?.id || 'Hacker 2 (Full 200 câu)');
   const [selectedTestNum, setSelectedTestNum] = useState<string>('1');
   const [searchKindFilter, setSearchKindFilter] = useState<'all' | 'listening' | 'reading'>('all');
@@ -1623,54 +1625,129 @@ export const SearchTab: React.FC = () => {
       </div>
 
       {searchMode === 'matrix' ? (
-        <div className="flex-1 overflow-y-auto px-3 py-2 min-h-0 space-y-3">
+        <div className="flex-1 overflow-y-auto px-2.5 sm:px-3 py-2 min-h-0 space-y-3">
           {/* Book & Test Selection Bar */}
-          <div className="bg-white p-3 rounded-2xl border border-[#EFE8DE] shadow-xs flex flex-wrap items-center justify-between gap-2.5">
-            <div className="flex items-center gap-2 flex-wrap">
-              <label className="text-xs font-bold text-[#5C5247]">Bộ Đề:</label>
-              <select
-                value={selectedBook}
-                onChange={(e) => {
-                  const newBook = e.target.value;
-                  setSelectedBook(newBook);
-                  const tests = Object.keys(MASTER_ANSWER_KEYS[newBook] || {});
-                  setSelectedTestNum(tests[0] || '1');
-                }}
-                className="bg-[#FAF7F2] border border-[#DCD3C7] text-xs font-bold rounded-xl px-2.5 py-1.5 text-[#262320] focus:outline-none focus:border-emerald-500 cursor-pointer"
-              >
-                {EXAM_BOOKS_META.map((bm) => (
-                  <option key={bm.id} value={bm.id}>
-                    {bm.name}
-                  </option>
-                ))}
-              </select>
+          <div className="bg-white p-3 rounded-2xl border border-[#EFE8DE] shadow-xs space-y-2.5">
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              {/* Selectors with Prev/Next Test Buttons */}
+              {(() => {
+                const currentTestIdx = availableMatrixTests.indexOf(selectedTestNum);
+                const prevTest = currentTestIdx > 0 ? availableMatrixTests[currentTestIdx - 1] : null;
+                const nextTest = currentTestIdx >= 0 && currentTestIdx < availableMatrixTests.length - 1 ? availableMatrixTests[currentTestIdx + 1] : null;
 
-              <label className="text-xs font-bold text-[#5C5247] ml-1">Đề Thi:</label>
-              <select
-                value={availableMatrixTests.includes(selectedTestNum) ? selectedTestNum : availableMatrixTests[0] || '1'}
-                onChange={(e) => setSelectedTestNum(e.target.value)}
-                className="bg-[#FAF7F2] border border-[#DCD3C7] text-xs font-bold rounded-xl px-2.5 py-1.5 text-[#262320] focus:outline-none focus:border-emerald-500 cursor-pointer"
-              >
-                {availableMatrixTests.map((t) => (
-                  <option key={t} value={t}>
-                    {/^(test|đề)\b/i.test(t) ? t : `Test ${t}`}
-                  </option>
-                ))}
-              </select>
+                return (
+                  <div className="flex items-center gap-1.5 flex-wrap">
+                    <label className="text-xs font-bold text-[#5C5247]">Bộ Đề:</label>
+                    <select
+                      value={selectedBook}
+                      onChange={(e) => {
+                        const newBook = e.target.value;
+                        setSelectedBook(newBook);
+                        const tests = Object.keys(MASTER_ANSWER_KEYS[newBook] || {});
+                        setSelectedTestNum(tests[0] || '1');
+                      }}
+                      className="bg-[#FAF7F2] border border-[#DCD3C7] text-xs font-bold rounded-xl px-2.5 py-1.5 text-[#262320] focus:outline-none focus:border-emerald-500 cursor-pointer shadow-2xs"
+                    >
+                      {EXAM_BOOKS_META.map((bm) => (
+                        <option key={bm.id} value={bm.id}>
+                          {bm.name}
+                        </option>
+                      ))}
+                    </select>
+
+                    <label className="text-xs font-bold text-[#5C5247] ml-1">Đề Thi:</label>
+                    <div className="inline-flex items-center gap-1">
+                      <button
+                        onClick={() => prevTest && setSelectedTestNum(prevTest)}
+                        disabled={!prevTest}
+                        className="p-1.5 rounded-xl border border-[#DCD3C7] bg-[#FAF7F2] hover:bg-white disabled:opacity-30 disabled:pointer-events-none text-[#5C5247] cursor-pointer transition shadow-2xs"
+                        title="Đề trước"
+                      >
+                        <ChevronLeft className="w-3.5 h-3.5" />
+                      </button>
+
+                      <select
+                        value={availableMatrixTests.includes(selectedTestNum) ? selectedTestNum : availableMatrixTests[0] || '1'}
+                        onChange={(e) => setSelectedTestNum(e.target.value)}
+                        className="bg-[#FAF7F2] border border-[#DCD3C7] text-xs font-bold rounded-xl px-2.5 py-1.5 text-[#262320] focus:outline-none focus:border-emerald-500 cursor-pointer shadow-2xs"
+                      >
+                        {availableMatrixTests.map((t) => (
+                          <option key={t} value={t}>
+                            {/^(test|đề)\b/i.test(t) ? t : `Test ${t}`}
+                          </option>
+                        ))}
+                      </select>
+
+                      <button
+                        onClick={() => nextTest && setSelectedTestNum(nextTest)}
+                        disabled={!nextTest}
+                        className="p-1.5 rounded-xl border border-[#DCD3C7] bg-[#FAF7F2] hover:bg-white disabled:opacity-30 disabled:pointer-events-none text-[#5C5247] cursor-pointer transition shadow-2xs"
+                        title="Đề tiếp theo"
+                      >
+                        <ChevronRight className="w-3.5 h-3.5" />
+                      </button>
+                    </div>
+                  </div>
+                );
+              })()}
+
+              {/* View Mode Toggle & Fullscreen Modal Jump */}
+              <div className="flex items-center gap-1.5">
+                <div className="flex items-center bg-[#F2ECE3] rounded-xl p-0.5 text-xs font-bold">
+                  <button
+                    onClick={() => setMatrixSubView('matrix')}
+                    className={`px-2.5 py-1 rounded-lg transition flex items-center gap-1 cursor-pointer ${
+                      matrixSubView === 'matrix' ? 'bg-white text-emerald-800 shadow-2xs font-black' : 'text-[#6B635B]'
+                    }`}
+                    title="Hiển thị dạng bảng nén 10x10 ô vuông"
+                  >
+                    <Table className="w-3.5 h-3.5" />
+                    <span>Bảng Nén 10x10</span>
+                  </button>
+                  <button
+                    onClick={() => setMatrixSubView('cards')}
+                    className={`px-2.5 py-1 rounded-lg transition flex items-center gap-1 cursor-pointer ${
+                      matrixSubView === 'cards' ? 'bg-white text-emerald-800 shadow-2xs font-black' : 'text-[#6B635B]'
+                    }`}
+                    title="Hiển thị theo từng thẻ 5 câu"
+                  >
+                    <BookOpen className="w-3.5 h-3.5" />
+                    <span>Thẻ Chi Tiết</span>
+                  </button>
+                </div>
+
+                <button
+                  onClick={() => useQuizStore.getState().openFullAnswers({ book: selectedBook, test: selectedTestNum })}
+                  className="flex items-center gap-1 px-2.5 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-2xs transition cursor-pointer"
+                  title="Mở toàn màn hình chuyên biệt"
+                >
+                  <Sparkles className="w-3.5 h-3.5" />
+                  <span className="hidden sm:inline">Toàn Màn Hình</span>
+                </button>
+              </div>
             </div>
 
-            <div className="flex items-center gap-2">
-              <button
-                onClick={() => useQuizStore.getState().openFullAnswers({ book: selectedBook, test: selectedTestNum })}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-2xs transition cursor-pointer"
-                title="Mở toàn màn hình xem đáp án nén 1 màn hình"
-              >
-                <Table className="w-3.5 h-3.5" />
-                <span>Xem Bảng Nén 1 Màn Hình</span>
-              </button>
-              <div className="text-[11px] font-mono text-[#8C8276] hidden sm:block">
-                {selectedBook} • Đề #{selectedTestNum}
-              </div>
+            {/* Horizontal Swipeable Test Switcher Bar */}
+            <div className="pt-1 border-t border-[#F4EFEA] flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none overscroll-contain">
+              <span className="text-[11px] font-bold text-[#8C8276] shrink-0 mr-1">
+                Lướt chọn Đề:
+              </span>
+              {availableMatrixTests.map((t) => {
+                const isSelected = (availableMatrixTests.includes(selectedTestNum) ? selectedTestNum : availableMatrixTests[0]) === t;
+                return (
+                  <button
+                    key={t}
+                    onClick={() => setSelectedTestNum(t)}
+                    className={`px-3 py-1 rounded-xl text-xs font-bold shrink-0 transition-all cursor-pointer select-none ${
+                      isSelected
+                        ? 'bg-emerald-600 text-white shadow-2xs scale-102 font-black'
+                        : 'bg-[#FAF8F5] hover:bg-white text-[#5C5247] border border-[#EAE3D9]'
+                    }`}
+                  >
+                    {/^(test|đề)\b/i.test(t) ? t : `Test ${t}`}
+                  </button>
+                );
+              })}
             </div>
           </div>
 
@@ -1678,9 +1755,10 @@ export const SearchTab: React.FC = () => {
           <Part1VisualStrip
             bookId={selectedBook}
             testNum={selectedTestNum}
+            initialExpanded={false}
           />
 
-          {/* Quick Stats & Jump */}
+          {/* Answer Matrix / Cards */}
           {(() => {
             const currentKeys = MASTER_ANSWER_KEYS[selectedBook]?.[selectedTestNum] || {};
             const qNums = Object.keys(currentKeys).map(Number).sort((a, b) => a - b);
@@ -1695,18 +1773,104 @@ export const SearchTab: React.FC = () => {
               );
             }
 
+            const pillStyles: Record<string, { bg: string; text: string; badge: string }> = {
+              A: { bg: 'bg-sky-500', text: 'text-white', badge: 'bg-sky-500 text-white' },
+              B: { bg: 'bg-indigo-600', text: 'text-white', badge: 'bg-indigo-600 text-white' },
+              C: { bg: 'bg-emerald-600', text: 'text-white', badge: 'bg-emerald-600 text-white' },
+              D: { bg: 'bg-amber-500', text: 'text-white', badge: 'bg-amber-500 text-white' },
+            };
+
+            const handleCellClick = (num: number) => {
+              useQuizStore.getState().openFullAnswers({
+                book: selectedBook,
+                test: selectedTestNum,
+                questionNum: num,
+              });
+            };
+
+            // Render 10x10 Matrix
+            if (matrixSubView === 'matrix') {
+              const renderMatrixBlock = (nums: number[], title: string, isLc: boolean) => {
+                if (nums.length === 0) return null;
+                const rows: number[][] = [];
+                for (let i = 0; i < nums.length; i += 10) {
+                  rows.push(nums.slice(i, i + 10));
+                }
+
+                return (
+                  <div className="flex-1 bg-white rounded-2xl border border-[#E8DFD3] shadow-xs overflow-hidden">
+                    <div className={`px-3 py-2 border-b flex items-center justify-between ${
+                      isLc ? 'bg-sky-50/80 border-sky-100' : 'bg-amber-50/80 border-amber-100'
+                    }`}>
+                      <div className="flex items-center gap-1.5">
+                        {isLc ? <Headphones className="w-4 h-4 text-sky-700" /> : <BookOpen className="w-4 h-4 text-amber-700" />}
+                        <span className={`text-xs font-black uppercase tracking-wide ${
+                          isLc ? 'text-sky-900' : 'text-amber-900'
+                        }`}>
+                          {title}
+                        </span>
+                      </div>
+                      <span className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded-full ${
+                        isLc ? 'bg-sky-100 text-sky-800' : 'bg-amber-100 text-amber-800'
+                      }`}>
+                        {nums.length} câu • Nhấp ô để xem đề
+                      </span>
+                    </div>
+
+                    <div className="p-2 sm:p-2.5 space-y-1">
+                      {rows.map((row, rIdx) => {
+                        const startN = row[0];
+                        const endN = row[row.length - 1];
+                        return (
+                          <div key={rIdx} className="flex items-center gap-1">
+                            <span className="w-10 sm:w-11 text-[9.5px] font-mono font-semibold text-[#8C8276] shrink-0 text-right pr-1">
+                              {startN}-{endN}:
+                            </span>
+                            <div className="flex-1 grid grid-cols-10 gap-0.5 sm:gap-1">
+                              {row.map((num) => {
+                                const ans = currentKeys[num] || '-';
+                                const style = pillStyles[ans] || { bg: 'bg-gray-300', text: 'text-gray-800', badge: 'bg-gray-300 text-gray-800' };
+                                return (
+                                  <button
+                                    key={num}
+                                    onClick={() => handleCellClick(num)}
+                                    title={`Câu ${num}: Đáp án (${ans}) - Nhấp để xem chi tiết dạng Bottom Sheet`}
+                                    className="group flex flex-col items-center justify-center py-1 rounded-lg transition-all cursor-pointer border border-[#EFE8DE] bg-[#FAF8F5] hover:bg-amber-50 hover:border-amber-400 hover:scale-105 shadow-2xs select-none"
+                                  >
+                                    <span className="text-[9px] font-mono leading-none text-[#7A7065] group-hover:text-amber-950 font-semibold">
+                                      {num}
+                                    </span>
+                                    <span
+                                      className={`w-4 h-4 sm:w-5 sm:h-5 mt-0.5 rounded-md text-[10px] sm:text-[11px] font-black flex items-center justify-center transition-transform ${style.badge} group-hover:scale-105`}
+                                    >
+                                      {ans}
+                                    </span>
+                                  </button>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                );
+              };
+
+              return (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  {renderMatrixBlock(lcNums, '🎧 LISTENING (1 - 100)', true)}
+                  {renderMatrixBlock(rcNums, '📖 READING (101 - 200)', false)}
+                </div>
+              );
+            }
+
+            // Cards View
             const renderQuestionBlocks = (nums: number[], isLc: boolean) => {
               const blocks: number[][] = [];
               for (let i = 0; i < nums.length; i += 5) {
                 blocks.push(nums.slice(i, i + 5));
               }
-
-              const pillStyles: Record<string, { bg: string; text: string }> = {
-                A: { bg: 'bg-sky-500', text: 'text-white' },
-                B: { bg: 'bg-indigo-600', text: 'text-white' },
-                C: { bg: 'bg-emerald-600', text: 'text-white' },
-                D: { bg: 'bg-amber-500', text: 'text-white' },
-              };
 
               return (
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5">
@@ -1725,12 +1889,14 @@ export const SearchTab: React.FC = () => {
                       <div className="space-y-1">
                         {block.map((num) => {
                           const ans = currentKeys[num] || '-';
-                          const style = pillStyles[ans] || { bg: 'bg-gray-400', text: 'text-white' };
+                          const style = pillStyles[ans] || { bg: 'bg-gray-400', text: 'text-white', badge: 'bg-gray-400 text-white' };
 
                           return (
                             <div
                               key={num}
-                              className="flex items-center justify-between px-2 py-1 rounded-lg bg-[#FAF8F5] border border-[#F2ECE3] hover:bg-white text-xs"
+                              onClick={() => handleCellClick(num)}
+                              title={`Câu ${num}: Đáp án (${ans}) - Nhấp để xem đề`}
+                              className="flex items-center justify-between px-2 py-1 rounded-lg bg-[#FAF8F5] border border-[#F2ECE3] hover:bg-white hover:border-emerald-300 cursor-pointer text-xs transition"
                             >
                               <span className="font-mono font-bold text-[#5C5247]">#{num}</span>
                               <div className="flex items-center gap-1">
@@ -1740,7 +1906,7 @@ export const SearchTab: React.FC = () => {
                                     <span
                                       key={ch}
                                       className={`w-5 h-5 rounded-md text-[11px] font-black flex items-center justify-center transition ${
-                                        isSelected ? `${style.bg} ${style.text} shadow-2xs` : 'text-[#D0C7BD]'
+                                        isSelected ? `${style.badge} shadow-2xs` : 'text-[#D0C7BD]'
                                       }`}
                                     >
                                       {ch}

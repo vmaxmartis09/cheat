@@ -1,4 +1,4 @@
-import { Question } from '../types';
+import { Question } from "../types";
 
 export const docs5Questions: Question[] = [
   {
@@ -1918,15 +1918,15 @@ export const docs5Questions: Question[] = [
       "D": "It requires the purchase of new medical equipment."
     },
     "correctAnswer": "C",
-    "explanation": "Đáp án đúng là (C): Bệnh viện muốn cải tạo một phần của tòa nhà ('refurbish a section of the building'). Đoạn 2 nêu rõ khu cánh phía đông hầu như chưa thay đổi kể từ năm 1960 và bệnh viện cần 300.000 bảng để nâng cấp/cải tạo khu vực này ('make improvements to it').",
-    "tip": "⚡ MẸO TỪ ĐỒNG NGHĨA PART 7: 'make improvements to = refurbish / renovate' (cải tạo, tân trang). 'the east wing = a section of the building'.",
+    "explanation": "Đáp án chính xác là (C): It would like to refurbish a section of the building.. Thông tin đối chiếu trực tiếp từ đoạn văn: Thư mời tiệc gây quỹ Bệnh viện Đa khoa Cardigan Bay.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'Why does the hospital need funding?...' trong bài đọc để đối chiếu phương án (C).",
     "keywords": [
       "refurbish a section of the building",
       "make improvements to",
       "east wing",
       "fundraising"
     ],
-    "vietnameseMeaning": "Tại sao bệnh viện cần nguồn kinh phí tài trợ? - Bệnh viện muốn cải tạo một khu vực của tòa nhà (khu cánh đông).",
+    "vietnameseMeaning": "Câu hỏi 147: Why does the hospital need funding? -> Đáp án (C): It would like to refurbish a section of the building.",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
@@ -1935,7 +1935,7 @@ export const docs5Questions: Question[] = [
       "id": "docs5_p7_h2_t1_p1",
       "title": "Thư mời tiệc gây quỹ Bệnh viện Đa khoa Cardigan Bay",
       "type": "Thư mời (Invitation)",
-      "content": "Cardigan Bay General Hospital Fundraising Dinner\nYou are cordially invited to attend a dinner fundraiser in aid of Cardigan Bay General Hospital on April 25 at 7:30 p.m. in the Iris Room at the Beaufort Hotel.\n\nThe hospital was first built in 1960, and while much of it has been completely renovated, the east wing has barely changed since the opening day. In order to make improvements to it, the hospital needs about £300,000, which this dinner will raise funds for.\n\nTickets can be purchased for £100 at the hospital's main reception desk. Those purchasing four tickets or more at one time will receive a copy of Dr. Dianne Larsen's book on nutrition, Food Fit, valued at £25, as a gift.\n\nWe sincerely hope you will attend so that the hospital can make some necessary upgrades that will improve the level of care we provide.",
+      "content": "Cardigan Bay General Hospital Fundraising Dinner \nYou are cordially invited to attend a dinner fundraiser in aid of \nCardigan Bay General Hospital on April 25 at 7:30 p.m. in the \nIris Room at the Beaufort Hotel. \nThe hospital was first built in 1960, and while much of it has \nbeen completely renovated, the east wing has barely changed \nsince the opening day. In order to make improvements to it, the \nhospital needs about £300,000, which this dinner will raise \nfunds for. \nTickets can be purchased for £100 at the hospital's main \nreception desk. Those purchasing four tickets or more at one \ntime will receive a copy of Dr. Dianne Larsen's book on \nnutrition, Food Fit, valued at £25, as a gift. \nWe sincerely hope you will attend so that the hospital can \nmake some necessary upgrades that will improve the level of \ncare we provide.",
       "vietnameseTranslation": "Tiệc tối gây quỹ Bệnh viện Đa khoa Cardigan Bay: Trân trọng kính mời quý vị tham dự buổi tiệc gây quỹ hỗ trợ Bệnh viện Đa khoa Cardigan Bay vào ngày 25 tháng 4 lúc 7:30 tối tại Phòng Iris thuộc Khách sạn Beaufort. Bệnh viện được xây dựng lần đầu vào năm 1960, trong khi phần lớn đã được cải tạo toàn diện thì khu cánh đông hầu như chưa thay đổi. Để nâng cấp khu vực này, bệnh viện cần khoảng 300.000 bảng Anh mà buổi tiệc này nhằm gây quỹ...",
       "clues": [
         {
@@ -1975,18 +1975,18 @@ export const docs5Questions: Question[] = [
       "A": "By paying for at least four guests",
       "B": "By presenting an invitation from a previous event",
       "C": "By making reservations for an event online",
-      "D": "By volunteering to help at the hospital"
+      "D": "By volunteering to help at the hospital r\\j uu (_n en --J CO LO O s 31 \\> w j9 ri! r\\j jj"
     },
-    "correctAnswer": "A",
-    "explanation": "Đáp án đúng là (A): Bằng cách trả tiền vé cho ít nhất 4 khách ('paying for at least four guests'). Đoạn 3 nêu: 'Those purchasing four tickets or more at one time will receive a copy of Dr. Dianne Larsen's book on nutrition, Food Fit, valued at £25, as a gift.'",
-    "tip": "⚡ MẸO PARAPHRASING: 'complimentary item = as a gift / free'. 'purchasing four tickets or more = paying for at least four guests'.",
+    "correctAnswer": "C",
+    "explanation": "Đáp án chính xác là (C): By making reservations for an event online. Thông tin đối chiếu trực tiếp từ đoạn văn: Thư mời tiệc gây quỹ Bệnh viện Đa khoa Cardigan Bay.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'How can guests obtain a complimentary it...' trong bài đọc để đối chiếu phương án (C).",
     "keywords": [
       "complimentary item",
       "purchasing four tickets or more",
       "as a gift",
       "Food Fit"
     ],
-    "vietnameseMeaning": "Làm thế nào để khách tham dự nhận được một món quà miễn phí? - Bằng cách thanh toán vé cho ít nhất 4 khách.",
+    "vietnameseMeaning": "Câu hỏi 148: How can guests obtain a complimentary item? -> Đáp án (C): By making reservations for an event online",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
@@ -1995,7 +1995,7 @@ export const docs5Questions: Question[] = [
       "id": "docs5_p7_h2_t1_p1",
       "title": "Thư mời tiệc gây quỹ Bệnh viện Đa khoa Cardigan Bay",
       "type": "Thư mời (Invitation)",
-      "content": "Cardigan Bay General Hospital Fundraising Dinner\nYou are cordially invited to attend a dinner fundraiser in aid of Cardigan Bay General Hospital on April 25 at 7:30 p.m. in the Iris Room at the Beaufort Hotel.\n\nThe hospital was first built in 1960, and while much of it has been completely renovated, the east wing has barely changed since the opening day. In order to make improvements to it, the hospital needs about £300,000, which this dinner will raise funds for.\n\nTickets can be purchased for £100 at the hospital's main reception desk. Those purchasing four tickets or more at one time will receive a copy of Dr. Dianne Larsen's book on nutrition, Food Fit, valued at £25, as a gift.\n\nWe sincerely hope you will attend so that the hospital can make some necessary upgrades that will improve the level of care we provide.",
+      "content": "Cardigan Bay General Hospital Fundraising Dinner \nYou are cordially invited to attend a dinner fundraiser in aid of \nCardigan Bay General Hospital on April 25 at 7:30 p.m. in the \nIris Room at the Beaufort Hotel. \nThe hospital was first built in 1960, and while much of it has \nbeen completely renovated, the east wing has barely changed \nsince the opening day. In order to make improvements to it, the \nhospital needs about £300,000, which this dinner will raise \nfunds for. \nTickets can be purchased for £100 at the hospital's main \nreception desk. Those purchasing four tickets or more at one \ntime will receive a copy of Dr. Dianne Larsen's book on \nnutrition, Food Fit, valued at £25, as a gift. \nWe sincerely hope you will attend so that the hospital can \nmake some necessary upgrades that will improve the level of \ncare we provide.",
       "vietnameseTranslation": "Tiệc tối gây quỹ Bệnh viện Đa khoa Cardigan Bay: Trân trọng kính mời quý vị tham dự buổi tiệc gây quỹ hỗ trợ Bệnh viện Đa khoa Cardigan Bay vào ngày 25 tháng 4 lúc 7:30 tối tại Phòng Iris thuộc Khách sạn Beaufort. Bệnh viện được xây dựng lần đầu vào năm 1960, trong khi phần lớn đã được cải tạo toàn diện thì khu cánh đông hầu như chưa thay đổi. Để nâng cấp khu vực này, bệnh viện cần khoảng 300.000 bảng Anh mà buổi tiệc này nhằm gây quỹ...",
       "clues": [
         {
@@ -2037,24 +2037,24 @@ export const docs5Questions: Question[] = [
       "C": "He plans on staying the night in Columbus.",
       "D": "He is a resident of New York."
     },
-    "correctAnswer": "D",
-    "explanation": "Đáp án đúng là (D): Ông Singer là một cư dân của New York ('resident of New York'). Trên vé ghi rõ địa chỉ nhà: 'HOME ADDRESS: 21 West 74th St., New York, NY 10023'.",
-    "tip": "⚡ MẸO QUÉT BIỂU MẪU: Đọc kỹ các nhãn thông tin như 'HOME ADDRESS' chỉ nơi cư trú (resident).",
+    "correctAnswer": "B",
+    "explanation": "Đáp án chính xác là (B): He was charged a reduced fare.. Thông tin đối chiếu trực tiếp từ đoạn văn: Vé vào cổng Triển lãm Nông nghiệp thường niên.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'What is indicated about Mr. Singer?...' trong bài đọc để đối chiếu phương án (B).",
     "keywords": [
       "resident of New York",
       "HOME ADDRESS: 21 West 74th St., New York",
       "William Singer"
     ],
-    "vietnameseMeaning": "Điều gì được chỉ ra về ông Singer? - Ông ấy là cư dân của New York.",
+    "vietnameseMeaning": "Câu hỏi 149: What is indicated about Mr. Singer? -> Đáp án (B): He was charged a reduced fare.",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p2",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p2",
-      "title": "Vé xe khách đường dài Wallace Transportation",
-      "type": "Vé hành khách (Transportation Ticket)",
-      "content": "WALLACE TRANSPORTATION: TICKET\n*PLEASE PRINT THIS OUT*\nPASSENGER: William Singer\nPHONE NUMBER: (212) 555-3201\nHOME ADDRESS: 21 West 74th St., New York, NY 10023\nTICKET NUMBER: 41249101ABKOA\nCLASS: Regular\nFARE: $52.00\nDATE OF DEPARTURE: August 11\nITINERARY:\nDepart: New York City 5:10 A.M.\nArrive: Pittsburgh 12:12 P.M.\nDepart: Pittsburgh 1:20 P.M.\nArrive: Columbus 4:50 P.M.\nDepart: Columbus 5:30 P.M.\nArrive: Chicago 10:05 P.M.\n\nYour bus will leave the Park Avenue Coach Terminal in New York City at 5:10 a.m. Please have your ticket ready to present to the driver when you arrive. Passengers are permitted to bring two pieces of luggage on board, one for carry-on and one that can be stored away. No refunds will be provided to passengers who miss their departure. If you would like to cancel your ticket, please call (212) 555-8843.",
+      "title": "Vé vào cổng Triển lãm Nông nghiệp thường niên",
+      "type": "Vé (Ticket)",
+      "content": "WALLACE TRANSPORTATION: TICKET \n*PLEASE PRINT THIS OUT* \nPASSENGER: William Singer \nPHONE NUMBER: (212) 555-3201 \nHOME ADDRESS: 21 West 74th St., New York, NY 10023 \nTICKET NUMBER: 41249101ABKOA \nCLASS: Regular \nFARE: $52.00 \nDATE OF DEPARTURE: August 11 \nITINERARY: \nDepart: New York City \n5:10 a.M. \nArrive: Pittsburgh \n12:12 p.m. \nDepart: Pittsburgh \n1:20 P.M. \nArrive: Columbus \n4:50 P.M. \nDepart: Columbus \n5:30 P.M. \nArrive: Chicago \n10:05 P.M. \nYour bus will leave the Park Avenue Coach Terminal in New York \nCity at 5:10 a.m. Please have your ticket ready to present to the \ndriver when you arrive. Passengers are permitted to bring two \npieces of luggage on board, one for carry-on and one that can be \nstored away. No refunds will be provided to passengers who miss \ntheir departure. If you would like to cancel your ticket, please \ncall (212) 555-8843.",
       "vietnameseTranslation": "VÉ XE KHÁCH WALLACE TRANSPORTATION: Hành khách: William Singer. Địa chỉ: New York. Khởi hành từ New York lúc 5:10 sáng, đến Pittsburgh 12:12 trưa, rời Pittsburgh 1:20 chiều, đến Columbus 4:50 chiều, rời Columbus 5:30 chiều, đến Chicago 10:05 tối...",
       "clues": [
         {
@@ -2094,27 +2094,27 @@ export const docs5Questions: Question[] = [
       "A": "The company's refund policy",
       "B": "The estimated arrival time in Pittsburgh",
       "C": "The baggage allowance",
-      "D": "The time of departure from Chicago"
+      "D": "The time of departure from Chicago 32 ?S-y£^Sai2!H5|2A| t!Oi°(7|5J^Eioi?j7|MP3"
     },
     "correctAnswer": "D",
-    "explanation": "Đáp án đúng là (D): Thời gian khởi hành từ Chicago ('The time of departure from Chicago'). Trong lộ trình, Chicago là điểm kết thúc (Arrive: Chicago 10:05 P.M.), không có giờ rời Chicago.",
-    "tip": "⚡ MẸO CÂU HỎI NOT: Điểm cuối của lộ trình chỉ có 'Arrive' (đến), không có 'Depart' (khởi hành đi tiếp).",
+    "explanation": "Đáp án chính xác là (D): The time of departure from Chicago 32 ?S-y£^Sai2!H5|2A| t!Oi°(7|5J^Eioi?j7|MP3 Hackerslngang.com. Thông tin đối chiếu trực tiếp từ đoạn văn: Vé vào cổng Triển lãm Nông nghiệp thường niên.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'What information is NOT included on the ...' trong bài đọc để đối chiếu phương án (D).",
     "keywords": [
       "time of departure from Chicago",
       "refund policy",
       "baggage allowance",
       "Arrive: Chicago"
     ],
-    "vietnameseMeaning": "Thông tin nào KHÔNG được bao gồm trên vé? - Thời gian khởi hành từ Chicago.",
+    "vietnameseMeaning": "Câu hỏi 150: What information is NOT included on the ticket? -> Đáp án (D): The time of departure from Chicago 32 ?S-y£^Sai2!H5|2A| t!Oi°(7|5J^Eioi?j7|MP3 Hackerslngang.com",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p2",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p2",
-      "title": "Vé xe khách đường dài Wallace Transportation",
-      "type": "Vé hành khách (Transportation Ticket)",
-      "content": "WALLACE TRANSPORTATION: TICKET\n*PLEASE PRINT THIS OUT*\nPASSENGER: William Singer\nPHONE NUMBER: (212) 555-3201\nHOME ADDRESS: 21 West 74th St., New York, NY 10023\nTICKET NUMBER: 41249101ABKOA\nCLASS: Regular\nFARE: $52.00\nDATE OF DEPARTURE: August 11\nITINERARY:\nDepart: New York City 5:10 A.M.\nArrive: Pittsburgh 12:12 P.M.\nDepart: Pittsburgh 1:20 P.M.\nArrive: Columbus 4:50 P.M.\nDepart: Columbus 5:30 P.M.\nArrive: Chicago 10:05 P.M.\n\nYour bus will leave the Park Avenue Coach Terminal in New York City at 5:10 a.m. Please have your ticket ready to present to the driver when you arrive. Passengers are permitted to bring two pieces of luggage on board, one for carry-on and one that can be stored away. No refunds will be provided to passengers who miss their departure. If you would like to cancel your ticket, please call (212) 555-8843.",
+      "title": "Vé vào cổng Triển lãm Nông nghiệp thường niên",
+      "type": "Vé (Ticket)",
+      "content": "WALLACE TRANSPORTATION: TICKET \n*PLEASE PRINT THIS OUT* \nPASSENGER: William Singer \nPHONE NUMBER: (212) 555-3201 \nHOME ADDRESS: 21 West 74th St., New York, NY 10023 \nTICKET NUMBER: 41249101ABKOA \nCLASS: Regular \nFARE: $52.00 \nDATE OF DEPARTURE: August 11 \nITINERARY: \nDepart: New York City \n5:10 a.M. \nArrive: Pittsburgh \n12:12 p.m. \nDepart: Pittsburgh \n1:20 P.M. \nArrive: Columbus \n4:50 P.M. \nDepart: Columbus \n5:30 P.M. \nArrive: Chicago \n10:05 P.M. \nYour bus will leave the Park Avenue Coach Terminal in New York \nCity at 5:10 a.m. Please have your ticket ready to present to the \ndriver when you arrive. Passengers are permitted to bring two \npieces of luggage on board, one for carry-on and one that can be \nstored away. No refunds will be provided to passengers who miss \ntheir departure. If you would like to cancel your ticket, please \ncall (212) 555-8843.",
       "vietnameseTranslation": "VÉ XE KHÁCH WALLACE TRANSPORTATION: Hành khách: William Singer. Địa chỉ: New York. Khởi hành từ New York lúc 5:10 sáng, đến Pittsburgh 12:12 trưa, rời Pittsburgh 1:20 chiều, đến Columbus 4:50 chiều, rời Columbus 5:30 chiều, đến Chicago 10:05 tối...",
       "clues": [
         {
@@ -2149,30 +2149,30 @@ export const docs5Questions: Question[] = [
     "num": 151,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 151 based on Thư giới thiệu gói bảo hiểm Well Time Benefits:",
+    "question": "What is the purpose of the letter?",
     "options": {
-      "A": "Option A for question 151",
+      "A": "To introduce an employee training program",
       "B": "To describe a company's products",
-      "C": "Option C for question 151",
-      "D": "Option D for question 151"
+      "C": "To invite a participant to a human resources seminar",
+      "D": "To compare a variety of insurance packages"
     },
-    "correctAnswer": "B",
-    "explanation": "Đáp án chính xác là (B): To describe a company's products. Thư giới thiệu các gói bảo hiểm và phúc lợi của Well Time Benefits.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'To describe a company's products' để đối chiếu trực tiếp thông tin trong bài.",
+    "correctAnswer": "C",
+    "explanation": "Đáp án chính xác là (C): To invite a participant to a human resources seminar. Thông tin đối chiếu trực tiếp từ đoạn văn: Thư giới thiệu gói bảo hiểm nhóm Advantage.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'What is the purpose of the letter?...' trong bài đọc để đối chiếu phương án (C).",
     "keywords": [
       "To describe a company's products",
       "Thư giới thiệu gói bảo hiểm Well Time Benefits"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 151 kiểm tra thông tin về: To describe a company's products.",
+    "vietnameseMeaning": "Câu hỏi 151: What is the purpose of the letter? -> Đáp án (C): To invite a participant to a human resources seminar",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_151",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_151",
-      "title": "Thư giới thiệu gói bảo hiểm Well Time Benefits",
-      "type": "Thư tín (Letter)",
-      "content": "Bài đọc TOEIC Part 7: Thư giới thiệu gói bảo hiểm Well Time Benefits. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "title": "Thư giới thiệu gói bảo hiểm nhóm Advantage",
+      "type": "Thư thương mại (Letter)",
+      "content": "r Nisa Miskin \nInman Pharmaceuticals \n92450 Interstate 164 \nBoise, ID 83714 \nAugust 12 \nDear Ms. Miskin, \nI am a representative from Well Time Benefits, and we would be very interested in meeting with you to \ndiscuss what we can offer your firm. At Well Time Benefits, we understand your role as a company's \nbenefits manager and can offer plans that make your job easier, as well as suit the needs of your \ncompany. That's why our employee benefits packages rate number one with many businesses and \norganizations. \nWell Time Benefits offers a variety of packages covering every type of insurance need, such as medical, \nmental health, dental, life, and more. Popular packages include \"Health Plus\" and the comprehensive \n\"Choice Care.\" You can customize either of these to suit your organization's needs. Disability and \nparental leave benefits are inclusive with the Choice Care package. \nI will contact your office within the next two weeks to find out if you'd like to set up an appointment. If \nyou would like to speak with me sooner, please call 555-4433. \nSincerely, \nLucas Moreland \nWell Time Benefits Client Services",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Thư giới thiệu gói bảo hiểm Well Time Benefits.",
       "clues": [
         {
@@ -2199,30 +2199,30 @@ export const docs5Questions: Question[] = [
     "num": 152,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 152 based on Thư giới thiệu gói bảo hiểm Well Time Benefits:",
+    "question": "How can companies receive insurance for parental absence?",
     "options": {
-      "A": "Option A for question 152",
-      "B": "Option B for question 152",
+      "A": "By renewing membership in a benefits program",
+      "B": "By sending a document within the next two weeks",
       "C": "By registering employees for comprehensive coverage",
-      "D": "Option D for question 152"
+      "D": "By paying an additional monthly charge o i> Hn jo rat ri)"
     },
-    "correctAnswer": "C",
-    "explanation": "Đáp án chính xác là (C): By registering employees for comprehensive coverage. Quyền lợi nghỉ phép chăm sóc con (parental leave) nằm trong gói bảo hiểm toàn diện 'Choice Care'.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'By registering employees for comprehensive coverage' để đối chiếu trực tiếp thông tin trong bài.",
+    "correctAnswer": "B",
+    "explanation": "Đáp án chính xác là (B): By sending a document within the next two weeks. Thông tin đối chiếu trực tiếp từ đoạn văn: Thư giới thiệu gói bảo hiểm nhóm Advantage.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'How can companies receive insurance for ...' trong bài đọc để đối chiếu phương án (B).",
     "keywords": [
       "By registering employees for comprehensive coverage",
       "Thư giới thiệu gói bảo hiểm Well Time Benefits"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 152 kiểm tra thông tin về: By registering employees for comprehensive coverage.",
+    "vietnameseMeaning": "Câu hỏi 152: How can companies receive insurance for parental absence? -> Đáp án (B): By sending a document within the next two weeks",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_152",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_152",
-      "title": "Thư giới thiệu gói bảo hiểm Well Time Benefits",
-      "type": "Thư tín (Letter)",
-      "content": "Bài đọc TOEIC Part 7: Thư giới thiệu gói bảo hiểm Well Time Benefits. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "title": "Thư giới thiệu gói bảo hiểm nhóm Advantage",
+      "type": "Thư thương mại (Letter)",
+      "content": "r Nisa Miskin \nInman Pharmaceuticals \n92450 Interstate 164 \nBoise, ID 83714 \nAugust 12 \nDear Ms. Miskin, \nI am a representative from Well Time Benefits, and we would be very interested in meeting with you to \ndiscuss what we can offer your firm. At Well Time Benefits, we understand your role as a company's \nbenefits manager and can offer plans that make your job easier, as well as suit the needs of your \ncompany. That's why our employee benefits packages rate number one with many businesses and \norganizations. \nWell Time Benefits offers a variety of packages covering every type of insurance need, such as medical, \nmental health, dental, life, and more. Popular packages include \"Health Plus\" and the comprehensive \n\"Choice Care.\" You can customize either of these to suit your organization's needs. Disability and \nparental leave benefits are inclusive with the Choice Care package. \nI will contact your office within the next two weeks to find out if you'd like to set up an appointment. If \nyou would like to speak with me sooner, please call 555-4433. \nSincerely, \nLucas Moreland \nWell Time Benefits Client Services",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Thư giới thiệu gói bảo hiểm Well Time Benefits.",
       "clues": [
         {
@@ -2249,30 +2249,30 @@ export const docs5Questions: Question[] = [
     "num": 153,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 153 based on Chuỗi tin nhắn trao đổi tài liệu trên bàn làm việc:",
+    "question": "What is suggested about Market Street?",
     "options": {
-      "A": "Option A for question 153",
-      "B": "Option B for question 153",
-      "C": "Option C for question 153",
-      "D": "It is currently undergoing some roadwork"
+      "A": "It is half an hour away from Ms. Meadows' office.",
+      "B": "It is located in a shopping district.",
+      "C": "It is difficult to find parking there.",
+      "D": "It is near a major transit stop."
     },
-    "correctAnswer": "D",
-    "explanation": "Đáp án chính xác là (D): It is currently undergoing some roadwork. Market Street đang được thi công/sửa đường nên tài xế phải đi đường vòng.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'It is currently undergoing some roadwork' để đối chiếu trực tiếp thông tin trong bài.",
+    "correctAnswer": "C",
+    "explanation": "Đáp án chính xác là (C): It is difficult to find parking there.. Thông tin đối chiếu trực tiếp từ đoạn văn: Tin nhắn trao đổi giao hợp đồng thuê văn phòng State Tower.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'What is suggested about Market Street?...' trong bài đọc để đối chiếu phương án (C).",
     "keywords": [
       "It is currently undergoing some roadwork",
       "Chuỗi tin nhắn trao đổi tài liệu trên bàn làm việc"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 153 kiểm tra thông tin về: It is currently undergoing some roadwork.",
+    "vietnameseMeaning": "Câu hỏi 153: What is suggested about Market Street? -> Đáp án (C): It is difficult to find parking there.",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_153",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_153",
-      "title": "Chuỗi tin nhắn trao đổi tài liệu trên bàn làm việc",
+      "title": "Tin nhắn trao đổi giao hợp đồng thuê văn phòng State Tower",
       "type": "Chuỗi tin nhắn (Text Message Chain)",
-      "content": "Bài đọc TOEIC Part 7: Chuỗi tin nhắn trao đổi tài liệu trên bàn làm việc. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "content": "Sonya Meadows 1:45 p.m. \nBrian, sorry to bother you, but I need to ask a favor. I \nhave to deliver the final rental contract for an office \nspace, but my last appointment ran long. I don't think I \ncan make it there on time. \nBrian Hull 1:46 p.m. \nI can probably deliver it for you. Send me the details. \nSonya Meadows 1:48 p.m. \nThanks! The client is Coventry Financial, and they're renting \na space at State Tower on Market Street. It's Unit 1804. \nBrian Hull \nOK, What time is the appointment? \n1:49 p.m. \nSonya Meadows 1:49 p.m. \n2:40. You should be able to make it if you leave in the \nnext 10-15 minutes. \nv \nBrian Hull 1:50 p.m. \nI'll take a cab so I get there faster. It'd take me twice as \nlong if I had to look for parking in that area. What about \nthe contract? \nSonya Meadows 1:51p.m. \nIt should be sitting on my desk. I asked our receptionist to \nmake copies of it earlier and leave it in my office.",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Chuỗi tin nhắn trao đổi tài liệu trên bàn làm việc.",
       "clues": [
         {
@@ -2299,30 +2299,30 @@ export const docs5Questions: Question[] = [
     "num": 154,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 154 based on Chuỗi tin nhắn trao đổi tài liệu trên bàn làm việc:",
+    "question": "At 1:51 p.m., what does Ms. Meadows mean when she writes, \"It should be sitting on my desk\"?",
     "options": {
-      "A": "She knows the location of a document",
-      "B": "Option B for question 154",
-      "C": "Option C for question 154",
-      "D": "Option D for question 154"
+      "A": "She put a message from a customer on a counter.",
+      "B": "She misplaced a client's business card.",
+      "C": "She could not access her appointment schedule.",
+      "D": "She believes that a document is in her workspace. 34 S<2Wg-wags Hlg"
     },
-    "correctAnswer": "A",
-    "explanation": "Đáp án chính xác là (A): She knows the location of a document. 'It should be sitting on my desk' chỉ tài liệu đang nằm trên bàn làm việc.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'She knows the location of a document' để đối chiếu trực tiếp thông tin trong bài.",
+    "correctAnswer": "C",
+    "explanation": "Đáp án chính xác là (C): She could not access her appointment schedule.. Thông tin đối chiếu trực tiếp từ đoạn văn: Tin nhắn trao đổi giao hợp đồng thuê văn phòng State Tower.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'At 1:51 p.m., what does Ms. Meadows mean...' trong bài đọc để đối chiếu phương án (C).",
     "keywords": [
       "She knows the location of a document",
       "Chuỗi tin nhắn trao đổi tài liệu trên bàn làm việc"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 154 kiểm tra thông tin về: She knows the location of a document.",
+    "vietnameseMeaning": "Câu hỏi 154: At 1:51 p.m., what does Ms. Meadows mean when she writes, \"It should be sitting on my desk\"? -> Đáp án (C): She could not access her appointment schedule.",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_154",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_154",
-      "title": "Chuỗi tin nhắn trao đổi tài liệu trên bàn làm việc",
+      "title": "Tin nhắn trao đổi giao hợp đồng thuê văn phòng State Tower",
       "type": "Chuỗi tin nhắn (Text Message Chain)",
-      "content": "Bài đọc TOEIC Part 7: Chuỗi tin nhắn trao đổi tài liệu trên bàn làm việc. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "content": "Sonya Meadows 1:45 p.m. \nBrian, sorry to bother you, but I need to ask a favor. I \nhave to deliver the final rental contract for an office \nspace, but my last appointment ran long. I don't think I \ncan make it there on time. \nBrian Hull 1:46 p.m. \nI can probably deliver it for you. Send me the details. \nSonya Meadows 1:48 p.m. \nThanks! The client is Coventry Financial, and they're renting \na space at State Tower on Market Street. It's Unit 1804. \nBrian Hull \nOK, What time is the appointment? \n1:49 p.m. \nSonya Meadows 1:49 p.m. \n2:40. You should be able to make it if you leave in the \nnext 10-15 minutes. \nv \nBrian Hull 1:50 p.m. \nI'll take a cab so I get there faster. It'd take me twice as \nlong if I had to look for parking in that area. What about \nthe contract? \nSonya Meadows 1:51p.m. \nIt should be sitting on my desk. I asked our receptionist to \nmake copies of it earlier and leave it in my office.",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Chuỗi tin nhắn trao đổi tài liệu trên bàn làm việc.",
       "clues": [
         {
@@ -2349,30 +2349,30 @@ export const docs5Questions: Question[] = [
     "num": 155,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 155 based on Email chuẩn bị Ngày hội Đĩa than (Record Store Day):",
+    "question": "What is the main purpose of the e-mail?",
     "options": {
-      "A": "Option A for question 155",
-      "B": "To describe the responsibilities of store workers",
-      "C": "Option C for question 155",
-      "D": "Option D for question 155"
+      "A": "To announce a record store's grand opening",
+      "B": "To list music-related events for the summer months",
+      "C": "To provide a schedule for a special celebration",
+      "D": "To keep members informed of local concerts"
     },
     "correctAnswer": "B",
-    "explanation": "Đáp án chính xác là (B): To describe the responsibilities of store workers. Email hướng dẫn các nhiệm vụ nhân viên cần làm trong Ngày hội Đĩa than (Record Store Day).",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'To describe the responsibilities of store workers' để đối chiếu trực tiếp thông tin trong bài.",
+    "explanation": "Đáp án chính xác là (B): To list music-related events for the summer months. Thông tin đối chiếu trực tiếp từ đoạn văn: Email xác nhận đổi ca làm việc tại bộ phận lễ tân.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'What is the main purpose of the e-mail?...' trong bài đọc để đối chiếu phương án (B).",
     "keywords": [
       "To describe the responsibilities of store workers",
       "Email chuẩn bị Ngày hội Đĩa than (Record Store Day)"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 155 kiểm tra thông tin về: To describe the responsibilities of store workers.",
+    "vietnameseMeaning": "Câu hỏi 155: What is the main purpose of the e-mail? -> Đáp án (B): To list music-related events for the summer months",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_155",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_155",
-      "title": "Email chuẩn bị Ngày hội Đĩa than (Record Store Day)",
-      "type": "E-mail",
-      "content": "Bài đọc TOEIC Part 7: Email chuẩn bị Ngày hội Đĩa than (Record Store Day). Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "title": "Email xác nhận đổi ca làm việc tại bộ phận lễ tân",
+      "type": "Thư điện tử (E-mail)",
+      "content": "TO: Steven Joyce <sjoyce@fastmail.com> \nFROM: Fast Track Records <information@fasttrackrecords.com> \nDATE: May 20 \nSUBJECT: Information \nDear Mr. Joyce, \nEvery year on the third Saturday of May, we celebrate Record Store Day as a way to honor the independent \nspirit of record stores. That means Fast Track Records will once again be partnering with all the other major \nstores in the city for a day of music celebration. As you are a member of our Music Fans Club, we are \nforwarding you some of the planned highlights of the day; \n11 a.m.-12 p.m. John Kher, Sarah Feinstein, Ernest Yates, and other local music critics will be reading \nselections from their work at Gold Sounds Records. \n12 p.m.-5 p.m. Marshalltown Records will be offering a special discount on all jazz and blues records. Stop \nby their store and receive up to 50% off on your favorite albums. \n1 p.m..-5 p.m. Duke Records will stage a raffle for a variety of merchandise, including vinyl cases, T-shirts, \nand other memorabilia. \n2:30 p.m.-3:30 p.m. Local rock band The Chimney Sweeps will be performing an in-store concert at Desert \nIsland Records. \n4 p.m.-5 p.m. Gold Sounds Records will be holding a music-themed trivia competition. Winners will \nreceive special prizes including autographed CDs and posters. \n5 p.m. A small after-party will be held at Marshalltown Records. \nIf you have questions about the events and activities, call Fast Track Records at 555-3009 or send a reply to \nthis e-mail. A detailed schedule with further festivities can be found at www.fasttrackrecords.com/ \nrecordstoreday. \nLU \n-O \nen \nCD \n\\J \nCO \nOD \no \nl>- \nHn \njo \nmi \nri! \nru \nXI",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Email chuẩn bị Ngày hội Đĩa than (Record Store Day).",
       "clues": [
         {
@@ -2399,30 +2399,30 @@ export const docs5Questions: Question[] = [
     "num": 156,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 156 based on Email chuẩn bị Ngày hội Đĩa than (Record Store Day):",
+    "question": "What is NOT mentioned as an activity planned for Record Store Day?",
     "options": {
-      "A": "Option A for question 156",
-      "B": "Option B for question 156",
-      "C": "Option C for question 156",
-      "D": "A performance by a musical guest"
+      "A": "A store-sponsored contest",
+      "B": "A musical performance",
+      "C": "A speech by a musician",
+      "D": "A reading from local reviewers"
     },
-    "correctAnswer": "D",
-    "explanation": "Đáp án chính xác là (D): A performance by a musical guest. Bài nhắc đến giảm giá, đồ ăn nhẹ, tặng quà nhưng không có ban nhạc khách mời biểu diễn.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'A performance by a musical guest' để đối chiếu trực tiếp thông tin trong bài.",
+    "correctAnswer": "C",
+    "explanation": "Đáp án chính xác là (C): A speech by a musician. Thông tin đối chiếu trực tiếp từ đoạn văn: Email xác nhận đổi ca làm việc tại bộ phận lễ tân.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'What is NOT mentioned as an activity pla...' trong bài đọc để đối chiếu phương án (C).",
     "keywords": [
       "A performance by a musical guest",
       "Email chuẩn bị Ngày hội Đĩa than (Record Store Day)"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 156 kiểm tra thông tin về: A performance by a musical guest.",
+    "vietnameseMeaning": "Câu hỏi 156: What is NOT mentioned as an activity planned for Record Store Day? -> Đáp án (C): A speech by a musician",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_156",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_156",
-      "title": "Email chuẩn bị Ngày hội Đĩa than (Record Store Day)",
-      "type": "E-mail",
-      "content": "Bài đọc TOEIC Part 7: Email chuẩn bị Ngày hội Đĩa than (Record Store Day). Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "title": "Email xác nhận đổi ca làm việc tại bộ phận lễ tân",
+      "type": "Thư điện tử (E-mail)",
+      "content": "TO: Steven Joyce <sjoyce@fastmail.com> \nFROM: Fast Track Records <information@fasttrackrecords.com> \nDATE: May 20 \nSUBJECT: Information \nDear Mr. Joyce, \nEvery year on the third Saturday of May, we celebrate Record Store Day as a way to honor the independent \nspirit of record stores. That means Fast Track Records will once again be partnering with all the other major \nstores in the city for a day of music celebration. As you are a member of our Music Fans Club, we are \nforwarding you some of the planned highlights of the day; \n11 a.m.-12 p.m. John Kher, Sarah Feinstein, Ernest Yates, and other local music critics will be reading \nselections from their work at Gold Sounds Records. \n12 p.m.-5 p.m. Marshalltown Records will be offering a special discount on all jazz and blues records. Stop \nby their store and receive up to 50% off on your favorite albums. \n1 p.m..-5 p.m. Duke Records will stage a raffle for a variety of merchandise, including vinyl cases, T-shirts, \nand other memorabilia. \n2:30 p.m.-3:30 p.m. Local rock band The Chimney Sweeps will be performing an in-store concert at Desert \nIsland Records. \n4 p.m.-5 p.m. Gold Sounds Records will be holding a music-themed trivia competition. Winners will \nreceive special prizes including autographed CDs and posters. \n5 p.m. A small after-party will be held at Marshalltown Records. \nIf you have questions about the events and activities, call Fast Track Records at 555-3009 or send a reply to \nthis e-mail. A detailed schedule with further festivities can be found at www.fasttrackrecords.com/ \nrecordstoreday. \nLU \n-O \nen \nCD \n\\J \nCO \nOD \no \nl>- \nHn \njo \nmi \nri! \nru \nXI",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Email chuẩn bị Ngày hội Đĩa than (Record Store Day).",
       "clues": [
         {
@@ -2449,30 +2449,30 @@ export const docs5Questions: Question[] = [
     "num": 157,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 157 based on Email chuẩn bị Ngày hội Đĩa than (Record Store Day):",
+    "question": "What is stated about Marshalltown Records?",
     "options": {
-      "A": "Option A for question 157",
-      "B": "Option B for question 157",
-      "C": "It was established thirty-five years ago",
-      "D": "Option D for question 157"
+      "A": "It specializes in jazz and blues records.",
+      "B": "It has two branches in the city.",
+      "C": "It is giving away a selection of merchandise.",
+      "D": "It will be the venue for the final event. ,"
     },
-    "correctAnswer": "C",
-    "explanation": "Đáp án chính xác là (C): It was established thirty-five years ago. Cửa hàng kỷ niệm 35 năm thành lập (celebrating 35 years).",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'It was established thirty-five years ago' để đối chiếu trực tiếp thông tin trong bài.",
+    "correctAnswer": "B",
+    "explanation": "Đáp án chính xác là (B): It has two branches in the city.. Thông tin đối chiếu trực tiếp từ đoạn văn: Email xác nhận đổi ca làm việc tại bộ phận lễ tân.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'What is stated about Marshalltown Record...' trong bài đọc để đối chiếu phương án (B).",
     "keywords": [
       "It was established thirty-five years ago",
       "Email chuẩn bị Ngày hội Đĩa than (Record Store Day)"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 157 kiểm tra thông tin về: It was established thirty-five years ago.",
+    "vietnameseMeaning": "Câu hỏi 157: What is stated about Marshalltown Records? -> Đáp án (B): It has two branches in the city.",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_157",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_157",
-      "title": "Email chuẩn bị Ngày hội Đĩa than (Record Store Day)",
-      "type": "E-mail",
-      "content": "Bài đọc TOEIC Part 7: Email chuẩn bị Ngày hội Đĩa than (Record Store Day). Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "title": "Email xác nhận đổi ca làm việc tại bộ phận lễ tân",
+      "type": "Thư điện tử (E-mail)",
+      "content": "TO: Steven Joyce <sjoyce@fastmail.com> \nFROM: Fast Track Records <information@fasttrackrecords.com> \nDATE: May 20 \nSUBJECT: Information \nDear Mr. Joyce, \nEvery year on the third Saturday of May, we celebrate Record Store Day as a way to honor the independent \nspirit of record stores. That means Fast Track Records will once again be partnering with all the other major \nstores in the city for a day of music celebration. As you are a member of our Music Fans Club, we are \nforwarding you some of the planned highlights of the day; \n11 a.m.-12 p.m. John Kher, Sarah Feinstein, Ernest Yates, and other local music critics will be reading \nselections from their work at Gold Sounds Records. \n12 p.m.-5 p.m. Marshalltown Records will be offering a special discount on all jazz and blues records. Stop \nby their store and receive up to 50% off on your favorite albums. \n1 p.m..-5 p.m. Duke Records will stage a raffle for a variety of merchandise, including vinyl cases, T-shirts, \nand other memorabilia. \n2:30 p.m.-3:30 p.m. Local rock band The Chimney Sweeps will be performing an in-store concert at Desert \nIsland Records. \n4 p.m.-5 p.m. Gold Sounds Records will be holding a music-themed trivia competition. Winners will \nreceive special prizes including autographed CDs and posters. \n5 p.m. A small after-party will be held at Marshalltown Records. \nIf you have questions about the events and activities, call Fast Track Records at 555-3009 or send a reply to \nthis e-mail. A detailed schedule with further festivities can be found at www.fasttrackrecords.com/ \nrecordstoreday. \nLU \n-O \nen \nCD \n\\J \nCO \nOD \no \nl>- \nHn \njo \nmi \nri! \nru \nXI",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Email chuẩn bị Ngày hội Đĩa than (Record Store Day).",
       "clues": [
         {
@@ -2499,30 +2499,30 @@ export const docs5Questions: Question[] = [
     "num": 158,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 158 based on Thông báo cảnh giác gấu mèo và lịch tình nguyện dọn dẹp công viên:",
+    "question": "Why was the announcement written?",
     "options": {
-      "A": "Option A for question 158",
-      "B": "Option B for question 158",
-      "C": "Option C for question 158",
+      "A": "To declare a public meeting",
+      "B": "To announce the opening of a wildlife park",
+      "C": "To provide directions to a visitor center",
       "D": "To alert visitors of a problem"
     },
     "correctAnswer": "D",
-    "explanation": "Đáp án chính xác là (D): To alert visitors of a problem. Thông báo cảnh báo du khách về tình trạng gấu mèo (raccoons) xuất hiện nhiều.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'To alert visitors of a problem' để đối chiếu trực tiếp thông tin trong bài.",
+    "explanation": "Đáp án chính xác là (D): To alert visitors of a problem. Thông tin đối chiếu trực tiếp từ đoạn văn: Thông báo an toàn và hoạt động dọn dẹp tại Công viên Eagle Canyon.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'Why was the announcement written?...' trong bài đọc để đối chiếu phương án (D).",
     "keywords": [
       "To alert visitors of a problem",
       "Thông báo cảnh giác gấu mèo và lịch tình nguyện dọn dẹp công viên"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 158 kiểm tra thông tin về: To alert visitors of a problem.",
+    "vietnameseMeaning": "Câu hỏi 158: Why was the announcement written? -> Đáp án (D): To alert visitors of a problem",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_158",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_158",
-      "title": "Thông báo cảnh giác gấu mèo và lịch tình nguyện dọn dẹp công viên",
+      "title": "Thông báo an toàn và hoạt động dọn dẹp tại Công viên Eagle Canyon",
       "type": "Thông báo (Announcement)",
-      "content": "Bài đọc TOEIC Part 7: Thông báo cảnh giác gấu mèo và lịch tình nguyện dọn dẹp công viên. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "content": "Eagle Canyon City Park \nOver the past month, there has been a sharp increase in reported sightings of raccoons in \nthe open spaces of the park. The park rangers suspect the creatures are attracted by food \nscraps that are left—whether on purpose or accidentally—by visitors to the park. — [i] —. \nThe city's public health department does not want to encourage the raccoons to leave the \nwooded areas of the park as they can be carriers of disease and pose a risk to visitors and \ntheir pets. — [2] —. With that in mind: \n• Please do not leave any garbage in the park—either take it with you when you leave, or \nplace it in the closed garbage bins that are provided throughout the park. \n• If you see raccoons, do not approach them or give them food as they are wild animals \nwith sharp claws and can be dangerous when they feel frightened. \n— [3] —• Along with this, we will be holding volunteer park cleanups on the last Saturday of \neach month. Our next one is scheduled for June 27. Anyone interested in taking part should \nreport to the park visitor center to register. — [4] —. All participants will be provided with \nprotective gloves and vests, water, and a light lunch.",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Thông báo cảnh giác gấu mèo và lịch tình nguyện dọn dẹp công viên.",
       "clues": [
         {
@@ -2549,30 +2549,30 @@ export const docs5Questions: Question[] = [
     "num": 159,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 159 based on Thông báo cảnh giác gấu mèo và lịch tình nguyện dọn dẹp công viên:",
+    "question": "What is NOT stated about raccoons? [3], and [4] does the following sentence",
     "options": {
-      "A": "Option A for question 159",
-      "B": "They should only be approached under staff supervision",
-      "C": "Option C for question 159",
-      "D": "Option D for question 159"
+      "A": "[1]",
+      "B": "[2]",
+      "D": "[4] 36 ¥3 iJ£5| gafoi eeiHAf • eo|°t7|g \"A t'oiepl MP3",
+      "C": "[3]"
     },
     "correctAnswer": "B",
-    "explanation": "Đáp án chính xác là (B): They should only be approached under staff supervision. Bài khuyên không được tiếp cận gấu mèo dưới bất kỳ hình thức nào vì chúng nguy hiểm.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'They should only be approached under staff supervision' để đối chiếu trực tiếp thông tin trong bài.",
+    "explanation": "Đáp án chính xác là (B): [2]. Thông tin đối chiếu trực tiếp từ đoạn văn: Thông báo an toàn và hoạt động dọn dẹp tại Công viên Eagle Canyon.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'What is NOT stated about raccoons? [3], ...' trong bài đọc để đối chiếu phương án (B).",
     "keywords": [
       "They should only be approached under staff supervision",
       "Thông báo cảnh giác gấu mèo và lịch tình nguyện dọn dẹp công viên"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 159 kiểm tra thông tin về: They should only be approached under staff supervision.",
+    "vietnameseMeaning": "Câu hỏi 159: What is NOT stated about raccoons? [3], and [4] does the following sentence -> Đáp án (B): [2]",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_159",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_159",
-      "title": "Thông báo cảnh giác gấu mèo và lịch tình nguyện dọn dẹp công viên",
+      "title": "Thông báo an toàn và hoạt động dọn dẹp tại Công viên Eagle Canyon",
       "type": "Thông báo (Announcement)",
-      "content": "Bài đọc TOEIC Part 7: Thông báo cảnh giác gấu mèo và lịch tình nguyện dọn dẹp công viên. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "content": "Eagle Canyon City Park \nOver the past month, there has been a sharp increase in reported sightings of raccoons in \nthe open spaces of the park. The park rangers suspect the creatures are attracted by food \nscraps that are left—whether on purpose or accidentally—by visitors to the park. — [i] —. \nThe city's public health department does not want to encourage the raccoons to leave the \nwooded areas of the park as they can be carriers of disease and pose a risk to visitors and \ntheir pets. — [2] —. With that in mind: \n• Please do not leave any garbage in the park—either take it with you when you leave, or \nplace it in the closed garbage bins that are provided throughout the park. \n• If you see raccoons, do not approach them or give them food as they are wild animals \nwith sharp claws and can be dangerous when they feel frightened. \n— [3] —• Along with this, we will be holding volunteer park cleanups on the last Saturday of \neach month. Our next one is scheduled for June 27. Anyone interested in taking part should \nreport to the park visitor center to register. — [4] —. All participants will be provided with \nprotective gloves and vests, water, and a light lunch.",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Thông báo cảnh giác gấu mèo và lịch tình nguyện dọn dẹp công viên.",
       "clues": [
         {
@@ -2599,30 +2599,30 @@ export const docs5Questions: Question[] = [
     "num": 160,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 160 based on Thông báo cảnh giác gấu mèo và lịch tình nguyện dọn dẹp công viên:",
+    "question": "What will volunteers be given?",
     "options": {
-      "A": "Option A for question 160",
-      "B": "Option B for question 160",
-      "C": "Option C for question 160",
+      "A": "A map of the park",
+      "B": "Some food to distribute to animals",
+      "C": "A certificate of accomplishment",
       "D": "Some protective gear"
     },
     "correctAnswer": "D",
-    "explanation": "Đáp án chính xác là (D): Some protective gear. Tình nguyện viên dọn dẹp sẽ được phát găng tay bảo hộ và áo phản quang ('protective gloves and vests').",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'Some protective gear' để đối chiếu trực tiếp thông tin trong bài.",
+    "explanation": "Đáp án chính xác là (D): Some protective gear. Thông tin đối chiếu trực tiếp từ đoạn văn: Thông báo an toàn và hoạt động dọn dẹp tại Công viên Eagle Canyon.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'What will volunteers be given?...' trong bài đọc để đối chiếu phương án (D).",
     "keywords": [
       "Some protective gear",
       "Thông báo cảnh giác gấu mèo và lịch tình nguyện dọn dẹp công viên"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 160 kiểm tra thông tin về: Some protective gear.",
+    "vietnameseMeaning": "Câu hỏi 160: What will volunteers be given? -> Đáp án (D): Some protective gear",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_160",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_160",
-      "title": "Thông báo cảnh giác gấu mèo và lịch tình nguyện dọn dẹp công viên",
+      "title": "Thông báo an toàn và hoạt động dọn dẹp tại Công viên Eagle Canyon",
       "type": "Thông báo (Announcement)",
-      "content": "Bài đọc TOEIC Part 7: Thông báo cảnh giác gấu mèo và lịch tình nguyện dọn dẹp công viên. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "content": "Eagle Canyon City Park \nOver the past month, there has been a sharp increase in reported sightings of raccoons in \nthe open spaces of the park. The park rangers suspect the creatures are attracted by food \nscraps that are left—whether on purpose or accidentally—by visitors to the park. — [i] —. \nThe city's public health department does not want to encourage the raccoons to leave the \nwooded areas of the park as they can be carriers of disease and pose a risk to visitors and \ntheir pets. — [2] —. With that in mind: \n• Please do not leave any garbage in the park—either take it with you when you leave, or \nplace it in the closed garbage bins that are provided throughout the park. \n• If you see raccoons, do not approach them or give them food as they are wild animals \nwith sharp claws and can be dangerous when they feel frightened. \n— [3] —• Along with this, we will be holding volunteer park cleanups on the last Saturday of \neach month. Our next one is scheduled for June 27. Anyone interested in taking part should \nreport to the park visitor center to register. — [4] —. All participants will be provided with \nprotective gloves and vests, water, and a light lunch.",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Thông báo cảnh giác gấu mèo và lịch tình nguyện dọn dẹp công viên.",
       "clues": [
         {
@@ -2649,30 +2649,30 @@ export const docs5Questions: Question[] = [
     "num": 161,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 161 based on Thông báo cảnh giác gấu mèo và lịch tình nguyện dọn dẹp công viên:",
+    "question": "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong? \"We will accept registration forms up to two days prior to the event.\"",
     "options": {
-      "A": "Option A for question 161",
-      "B": "Option B for question 161",
-      "C": "Option C for question 161",
+      "A": "[1]",
+      "B": "[2]",
+      "C": "[3]",
       "D": "[4]"
     },
-    "correctAnswer": "D",
-    "explanation": "Đáp án chính xác là (D): [4]. Câu 'We will accept registration forms up to two days prior to the event' nằm ở vị trí [4] ngay sau câu hướng dẫn đăng ký.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa '[4]' để đối chiếu trực tiếp thông tin trong bài.",
+    "correctAnswer": "C",
+    "explanation": "Đáp án chính xác là (C): [3]. Thông tin đối chiếu trực tiếp từ đoạn văn: Thông báo an toàn và hoạt động dọn dẹp tại Công viên Eagle Canyon.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'In which of the positions marked [1], [2...' trong bài đọc để đối chiếu phương án (C).",
     "keywords": [
       "[4]",
       "Thông báo cảnh giác gấu mèo và lịch tình nguyện dọn dẹp công viên"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 161 kiểm tra thông tin về: [4].",
+    "vietnameseMeaning": "Câu hỏi 161: In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong? \"We will accept registration forms up to two days prior to the event.\" -> Đáp án (C): [3]",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_161",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_161",
-      "title": "Thông báo cảnh giác gấu mèo và lịch tình nguyện dọn dẹp công viên",
+      "title": "Thông báo an toàn và hoạt động dọn dẹp tại Công viên Eagle Canyon",
       "type": "Thông báo (Announcement)",
-      "content": "Bài đọc TOEIC Part 7: Thông báo cảnh giác gấu mèo và lịch tình nguyện dọn dẹp công viên. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "content": "Eagle Canyon City Park \nOver the past month, there has been a sharp increase in reported sightings of raccoons in \nthe open spaces of the park. The park rangers suspect the creatures are attracted by food \nscraps that are left—whether on purpose or accidentally—by visitors to the park. — [i] —. \nThe city's public health department does not want to encourage the raccoons to leave the \nwooded areas of the park as they can be carriers of disease and pose a risk to visitors and \ntheir pets. — [2] —. With that in mind: \n• Please do not leave any garbage in the park—either take it with you when you leave, or \nplace it in the closed garbage bins that are provided throughout the park. \n• If you see raccoons, do not approach them or give them food as they are wild animals \nwith sharp claws and can be dangerous when they feel frightened. \n— [3] —• Along with this, we will be holding volunteer park cleanups on the last Saturday of \neach month. Our next one is scheduled for June 27. Anyone interested in taking part should \nreport to the park visitor center to register. — [4] —. All participants will be provided with \nprotective gloves and vests, water, and a light lunch.",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Thông báo cảnh giác gấu mèo và lịch tình nguyện dọn dẹp công viên.",
       "clues": [
         {
@@ -2699,30 +2699,30 @@ export const docs5Questions: Question[] = [
     "num": 162,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 162 based on Thảo luận nhóm dự án quảng cáo xe hơi N-Genz Auto:",
+    "question": "What type of business does Ms. Hanson most likely work for?",
     "options": {
-      "A": "Option A for question 162",
+      "A": "A television studio",
       "B": "An advertising firm",
-      "C": "Option C for question 162",
-      "D": "Option D for question 162"
+      "C": "A Web design company",
+      "D": "An automobile manufacturer"
     },
     "correctAnswer": "B",
-    "explanation": "Đáp án chính xác là (B): An advertising firm. Các nhân viên bàn về kịch bản quảng cáo TV (TV commercial), diễn viên, và chiến dịch online cho khách hàng N-Genz Auto -> Công ty quảng cáo.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'An advertising firm' để đối chiếu trực tiếp thông tin trong bài.",
+    "explanation": "Đáp án chính xác là (B): An advertising firm. Thông tin đối chiếu trực tiếp từ đoạn văn: Thảo luận nhóm về chiến dịch quảng cáo N-Genz Auto.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'What type of business does Ms. Hanson mo...' trong bài đọc để đối chiếu phương án (B).",
     "keywords": [
       "An advertising firm",
       "Thảo luận nhóm dự án quảng cáo xe hơi N-Genz Auto"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 162 kiểm tra thông tin về: An advertising firm.",
+    "vietnameseMeaning": "Câu hỏi 162: What type of business does Ms. Hanson most likely work for? -> Đáp án (B): An advertising firm",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_162",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_162",
-      "title": "Thảo luận nhóm dự án quảng cáo xe hơi N-Genz Auto",
-      "type": "Thảo luận trực tuyến (Chat Discussion)",
-      "content": "Bài đọc TOEIC Part 7: Thảo luận nhóm dự án quảng cáo xe hơi N-Genz Auto. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "title": "Thảo luận nhóm về chiến dịch quảng cáo N-Genz Auto",
+      "type": "Thảo luận trực tuyến (Online Chat)",
+      "content": "O Michelle Hanson \nBarry Carr \nDustin Rodriguez \nMichelle Hanson \nWilla Hopkins \nDustin Rodriguez \nBarry Carr \nDustin Rodriguez \nO Michelle Hanson \nDustin Rodriguez \nWilla Hopkins \n11:40| Can I get an update from everyone on the promotion project for N-Genz \nAuto? Our next presentation's been moved up to Tuesday, August 10. \n11 ;42| The script changes for the TV commercial will be done this afternoon. Other \nthan that, I'm just waiting for production to give me permission to proceed. \n11:45j Barry, our first choice for the lead actor backed out, so I'm waiting to hear \nback from the talent agency about a replacement. But still, we can proceed \nwith our shoot on July 18 at Snappy Studios. \n11:47| Thank you both. What about the online campaign? My contact at N-Genz \nAuto is eager to see what's been done. \n11:50| Well, I'm in the final stages of developing the Web site. I need about a week \nmore to do the finishing touches, but I'm quite confident we'll be done in \ntime. \n11:54| Good news. I called the agency and was told that my second choice for a \nperformer can do the job. \n11:55| Great, Dustin. I'll send you a copy of the finished script tonight. By the way, I \ncan't make it on the 18th as I need to be at a client meeting, so I'll send \nBrianna Johns in my place. \n11:571 No problem, Barry. I'll get in touch with her shortly to make further \narrangements. \n11:58) It looks like we are on the right track. Dustin, keep me posted on your \nschedule. Willa, could you send me a link to the site so I can see the \nprogress so far? \n11:59) Understood. I'll send you the most current schedule I have right now. \n11:59) OK, Michelle. 1 can send you the link now. Just bear in mind there are some \nissues to work out. \nSend \nO \n<>",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Thảo luận nhóm dự án quảng cáo xe hơi N-Genz Auto.",
       "clues": [
         {
@@ -2749,30 +2749,30 @@ export const docs5Questions: Question[] = [
     "num": 163,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 163 based on Thảo luận nhóm dự án quảng cáo xe hơi N-Genz Auto:",
+    "question": "At 11:58, what does Ms. Hanson mean when she writes, \"on the right track\"?",
     "options": {
-      "A": "Option A for question 163",
-      "B": "Option B for question 163",
-      "C": "She thinks the project is going according to plan",
-      "D": "Option D for question 163"
+      "A": "She has agreed to some script modifications.",
+      "B": "She is pleased with the progress for a site design.",
+      "C": "She thinks the project is going according to plan.",
+      "D": "She is satisfied with a casting decision."
     },
     "correctAnswer": "C",
-    "explanation": "Đáp án chính xác là (C): She thinks the project is going according to plan. 'on the right track' = dự án đang diễn ra đúng hướng và tiến độ.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'She thinks the project is going according to plan' để đối chiếu trực tiếp thông tin trong bài.",
+    "explanation": "Đáp án chính xác là (C): She thinks the project is going according to plan.. Thông tin đối chiếu trực tiếp từ đoạn văn: Thảo luận nhóm về chiến dịch quảng cáo N-Genz Auto.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'At 11:58, what does Ms. Hanson mean when...' trong bài đọc để đối chiếu phương án (C).",
     "keywords": [
       "She thinks the project is going according to plan",
       "Thảo luận nhóm dự án quảng cáo xe hơi N-Genz Auto"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 163 kiểm tra thông tin về: She thinks the project is going according to plan.",
+    "vietnameseMeaning": "Câu hỏi 163: At 11:58, what does Ms. Hanson mean when she writes, \"on the right track\"? -> Đáp án (C): She thinks the project is going according to plan.",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_163",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_163",
-      "title": "Thảo luận nhóm dự án quảng cáo xe hơi N-Genz Auto",
-      "type": "Thảo luận trực tuyến (Chat Discussion)",
-      "content": "Bài đọc TOEIC Part 7: Thảo luận nhóm dự án quảng cáo xe hơi N-Genz Auto. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "title": "Thảo luận nhóm về chiến dịch quảng cáo N-Genz Auto",
+      "type": "Thảo luận trực tuyến (Online Chat)",
+      "content": "O Michelle Hanson \nBarry Carr \nDustin Rodriguez \nMichelle Hanson \nWilla Hopkins \nDustin Rodriguez \nBarry Carr \nDustin Rodriguez \nO Michelle Hanson \nDustin Rodriguez \nWilla Hopkins \n11:40| Can I get an update from everyone on the promotion project for N-Genz \nAuto? Our next presentation's been moved up to Tuesday, August 10. \n11 ;42| The script changes for the TV commercial will be done this afternoon. Other \nthan that, I'm just waiting for production to give me permission to proceed. \n11:45j Barry, our first choice for the lead actor backed out, so I'm waiting to hear \nback from the talent agency about a replacement. But still, we can proceed \nwith our shoot on July 18 at Snappy Studios. \n11:47| Thank you both. What about the online campaign? My contact at N-Genz \nAuto is eager to see what's been done. \n11:50| Well, I'm in the final stages of developing the Web site. I need about a week \nmore to do the finishing touches, but I'm quite confident we'll be done in \ntime. \n11:54| Good news. I called the agency and was told that my second choice for a \nperformer can do the job. \n11:55| Great, Dustin. I'll send you a copy of the finished script tonight. By the way, I \ncan't make it on the 18th as I need to be at a client meeting, so I'll send \nBrianna Johns in my place. \n11:571 No problem, Barry. I'll get in touch with her shortly to make further \narrangements. \n11:58) It looks like we are on the right track. Dustin, keep me posted on your \nschedule. Willa, could you send me a link to the site so I can see the \nprogress so far? \n11:59) Understood. I'll send you the most current schedule I have right now. \n11:59) OK, Michelle. 1 can send you the link now. Just bear in mind there are some \nissues to work out. \nSend \nO \n<>",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Thảo luận nhóm dự án quảng cáo xe hơi N-Genz Auto.",
       "clues": [
         {
@@ -2799,30 +2799,30 @@ export const docs5Questions: Question[] = [
     "num": 164,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 164 based on Thảo luận nhóm dự án quảng cáo xe hơi N-Genz Auto:",
+    "question": "What is true about Mr. Rodriguez?",
     "options": {
-      "A": "Option A for question 164",
-      "B": "He plans to get in contact with Ms. Johns",
-      "C": "Option C for question 164",
-      "D": "Option D for question 164"
+      "A": "He only recently started working at the company.",
+      "B": "He plans to get in contact with Ms. Johns.",
+      "C": "He will send someone in his place to a meeting.",
+      "D": "He will deliver an upcoming client presentation."
     },
-    "correctAnswer": "B",
-    "explanation": "Đáp án chính xác là (B): He plans to get in contact with Ms. Johns. Dustin Rodriguez bảo sẽ liên lạc với Brianna Johns để bàn tiếp.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'He plans to get in contact with Ms. Johns' để đối chiếu trực tiếp thông tin trong bài.",
+    "correctAnswer": "A",
+    "explanation": "Đáp án chính xác là (A): He only recently started working at the company.. Thông tin đối chiếu trực tiếp từ đoạn văn: Thảo luận nhóm về chiến dịch quảng cáo N-Genz Auto.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'What is true about Mr. Rodriguez?...' trong bài đọc để đối chiếu phương án (A).",
     "keywords": [
       "He plans to get in contact with Ms. Johns",
       "Thảo luận nhóm dự án quảng cáo xe hơi N-Genz Auto"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 164 kiểm tra thông tin về: He plans to get in contact with Ms. Johns.",
+    "vietnameseMeaning": "Câu hỏi 164: What is true about Mr. Rodriguez? -> Đáp án (A): He only recently started working at the company.",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_164",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_164",
-      "title": "Thảo luận nhóm dự án quảng cáo xe hơi N-Genz Auto",
-      "type": "Thảo luận trực tuyến (Chat Discussion)",
-      "content": "Bài đọc TOEIC Part 7: Thảo luận nhóm dự án quảng cáo xe hơi N-Genz Auto. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "title": "Thảo luận nhóm về chiến dịch quảng cáo N-Genz Auto",
+      "type": "Thảo luận trực tuyến (Online Chat)",
+      "content": "O Michelle Hanson \nBarry Carr \nDustin Rodriguez \nMichelle Hanson \nWilla Hopkins \nDustin Rodriguez \nBarry Carr \nDustin Rodriguez \nO Michelle Hanson \nDustin Rodriguez \nWilla Hopkins \n11:40| Can I get an update from everyone on the promotion project for N-Genz \nAuto? Our next presentation's been moved up to Tuesday, August 10. \n11 ;42| The script changes for the TV commercial will be done this afternoon. Other \nthan that, I'm just waiting for production to give me permission to proceed. \n11:45j Barry, our first choice for the lead actor backed out, so I'm waiting to hear \nback from the talent agency about a replacement. But still, we can proceed \nwith our shoot on July 18 at Snappy Studios. \n11:47| Thank you both. What about the online campaign? My contact at N-Genz \nAuto is eager to see what's been done. \n11:50| Well, I'm in the final stages of developing the Web site. I need about a week \nmore to do the finishing touches, but I'm quite confident we'll be done in \ntime. \n11:54| Good news. I called the agency and was told that my second choice for a \nperformer can do the job. \n11:55| Great, Dustin. I'll send you a copy of the finished script tonight. By the way, I \ncan't make it on the 18th as I need to be at a client meeting, so I'll send \nBrianna Johns in my place. \n11:571 No problem, Barry. I'll get in touch with her shortly to make further \narrangements. \n11:58) It looks like we are on the right track. Dustin, keep me posted on your \nschedule. Willa, could you send me a link to the site so I can see the \nprogress so far? \n11:59) Understood. I'll send you the most current schedule I have right now. \n11:59) OK, Michelle. 1 can send you the link now. Just bear in mind there are some \nissues to work out. \nSend \nO \n<>",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Thảo luận nhóm dự án quảng cáo xe hơi N-Genz Auto.",
       "clues": [
         {
@@ -2849,30 +2849,30 @@ export const docs5Questions: Question[] = [
     "num": 165,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 165 based on Thảo luận nhóm dự án quảng cáo xe hơi N-Genz Auto:",
+    "question": "What has Ms. Hopkins been asked to do?",
     "options": {
-      "A": "Option A for question 165",
-      "B": "Option B for question 165",
+      "A": "Send a progress report",
+      "B": "Forward a detailed calendar",
       "C": "Provide a Web site address",
-      "D": "Option D for question 165"
+      "D": "E-mail a performer's resume ^ r\\j uu un cn -u CO UD o l>- Bn j° ni!"
     },
-    "correctAnswer": "C",
-    "explanation": "Đáp án chính xác là (C): Provide a Web site address. Michelle bảo Willa: 'could you send me a link to the site' -> Cung cấp địa chỉ trang web.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'Provide a Web site address' để đối chiếu trực tiếp thông tin trong bài.",
+    "correctAnswer": "D",
+    "explanation": "Đáp án chính xác là (D): E-mail a performer's resume ^ r\\j uu un cn -u CO UD o l>- Bn j° ni! TEST 1 PART? 37. Thông tin đối chiếu trực tiếp từ đoạn văn: Thảo luận nhóm về chiến dịch quảng cáo N-Genz Auto.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'What has Ms. Hopkins been asked to do?...' trong bài đọc để đối chiếu phương án (D).",
     "keywords": [
       "Provide a Web site address",
       "Thảo luận nhóm dự án quảng cáo xe hơi N-Genz Auto"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 165 kiểm tra thông tin về: Provide a Web site address.",
+    "vietnameseMeaning": "Câu hỏi 165: What has Ms. Hopkins been asked to do? -> Đáp án (D): E-mail a performer's resume ^ r\\j uu un cn -u CO UD o l>- Bn j° ni! TEST 1 PART? 37",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_165",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_165",
-      "title": "Thảo luận nhóm dự án quảng cáo xe hơi N-Genz Auto",
-      "type": "Thảo luận trực tuyến (Chat Discussion)",
-      "content": "Bài đọc TOEIC Part 7: Thảo luận nhóm dự án quảng cáo xe hơi N-Genz Auto. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "title": "Thảo luận nhóm về chiến dịch quảng cáo N-Genz Auto",
+      "type": "Thảo luận trực tuyến (Online Chat)",
+      "content": "O Michelle Hanson \nBarry Carr \nDustin Rodriguez \nMichelle Hanson \nWilla Hopkins \nDustin Rodriguez \nBarry Carr \nDustin Rodriguez \nO Michelle Hanson \nDustin Rodriguez \nWilla Hopkins \n11:40| Can I get an update from everyone on the promotion project for N-Genz \nAuto? Our next presentation's been moved up to Tuesday, August 10. \n11 ;42| The script changes for the TV commercial will be done this afternoon. Other \nthan that, I'm just waiting for production to give me permission to proceed. \n11:45j Barry, our first choice for the lead actor backed out, so I'm waiting to hear \nback from the talent agency about a replacement. But still, we can proceed \nwith our shoot on July 18 at Snappy Studios. \n11:47| Thank you both. What about the online campaign? My contact at N-Genz \nAuto is eager to see what's been done. \n11:50| Well, I'm in the final stages of developing the Web site. I need about a week \nmore to do the finishing touches, but I'm quite confident we'll be done in \ntime. \n11:54| Good news. I called the agency and was told that my second choice for a \nperformer can do the job. \n11:55| Great, Dustin. I'll send you a copy of the finished script tonight. By the way, I \ncan't make it on the 18th as I need to be at a client meeting, so I'll send \nBrianna Johns in my place. \n11:571 No problem, Barry. I'll get in touch with her shortly to make further \narrangements. \n11:58) It looks like we are on the right track. Dustin, keep me posted on your \nschedule. Willa, could you send me a link to the site so I can see the \nprogress so far? \n11:59) Understood. I'll send you the most current schedule I have right now. \n11:59) OK, Michelle. 1 can send you the link now. Just bear in mind there are some \nissues to work out. \nSend \nO \n<>",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Thảo luận nhóm dự án quảng cáo xe hơi N-Genz Auto.",
       "clues": [
         {
@@ -2899,30 +2899,30 @@ export const docs5Questions: Question[] = [
     "num": 166,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 166 based on Chính sách thu mua cà phê có đạo đức Hanlan's Coffee:",
+    "question": "What is indicated about Hanlan's Coffee Company's partner farms?",
     "options": {
-      "A": "Option A for question 166",
-      "B": "Option B for question 166",
-      "C": "Option C for question 166",
-      "D": "They are situated in several countries"
+      "A": "They sell their products on the open market.",
+      "B": "They are subsidized by local governments.",
+      "C": "They grow a number of different crops.",
+      "D": "They are situated in several countries."
     },
     "correctAnswer": "D",
-    "explanation": "Đáp án chính xác là (D): They are situated in several countries. Các trang trại đối tác đặt tại Guatemala, Ethiopia và Vietnam (nhiều quốc gia).",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'They are situated in several countries' để đối chiếu trực tiếp thông tin trong bài.",
+    "explanation": "Đáp án chính xác là (D): They are situated in several countries.. Thông tin đối chiếu trực tiếp từ đoạn văn: Chính sách mua hàng đạo đức của Công ty Cà phê Hanlan.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'What is indicated about Hanlan's Coffee ...' trong bài đọc để đối chiếu phương án (D).",
     "keywords": [
       "They are situated in several countries",
       "Chính sách thu mua cà phê có đạo đức Hanlan's Coffee"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 166 kiểm tra thông tin về: They are situated in several countries.",
+    "vietnameseMeaning": "Câu hỏi 166: What is indicated about Hanlan's Coffee Company's partner farms? -> Đáp án (D): They are situated in several countries.",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_166",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_166",
-      "title": "Chính sách thu mua cà phê có đạo đức Hanlan's Coffee",
-      "type": "Thông tin (Information)",
-      "content": "Bài đọc TOEIC Part 7: Chính sách thu mua cà phê có đạo đức Hanlan's Coffee. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "title": "Chính sách mua hàng đạo đức của Công ty Cà phê Hanlan",
+      "type": "Bản thông tin (Information)",
+      "content": "Hanlan's Coffee Company — Ethical Purchasing Policy \nAt Hanlan's, we know that our customers like to drink only the finest coffee from around the \nworld. We also recognize that they want to be sure that the people who grow that coffee are \ntreated fairly. Many coffee producers provide their employees with poor working conditions \nand low pay, which are practices that Hanlan's does not support. — [I] —. \nCoffee companies that buy fheir stock on the open market never know exactly where it \ncomes from. But at Hanlan's, we take a different approach. We have exclusive contracts \nwith farms in Guatemala, Ethiopia, and Vietnam. — [2] —. Because of this, we know exactly \nwho is producing our coffee and the conditions in which it is being grown. We appreciate all \nthe hard work of our farmers and ensure that they have acceptable working conditions and \nwages. But our commitment doesn't end there. — [3] —. Hanlan's pays them an additional I0 \npercent above current market prices as our way of saying \"thanks.\" \nFurthermore, to give even more back to these communities, we have started the Hanlan's \nDevelopment Foundation. Each year through this organization, we put five percent of our \ntotal corporate profits into building schools, water pumps and purification plants, and health \ncare facilities in the towns and villages near where our coffee is grown. The main goal is to \nmake certain that all our workers' children are safe, healthy, and have the chance to go to \nschool and receive a full education. — [4] —. \nFind out more about Hanlan's development projects, our coffee producers, and what you \ncan do to support our cause at www.hanlancoffee.com/foundation.",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Chính sách thu mua cà phê có đạo đức Hanlan's Coffee.",
       "clues": [
         {
@@ -2949,30 +2949,30 @@ export const docs5Questions: Question[] = [
     "num": 167,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 167 based on Chính sách thu mua cà phê có đạo đức Hanlan's Coffee:",
+    "question": "Who does the Hanlan's Development Foundation mostly benefit?",
     "options": {
-      "A": "Option A for question 167",
+      "A": "International agriculture researchers",
       "B": "Coffee farmers' children",
-      "C": "Option C for question 167",
-      "D": "Option D for question 167"
+      "C": "Employees working abroad",
+      "D": "Members of a coffee growers' association"
     },
-    "correctAnswer": "B",
-    "explanation": "Đáp án chính xác là (B): Coffee farmers' children. Mục tiêu chính của quỹ là giúp con cái của nông dân trồng cà phê được an toàn và đi học đầy đủ.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'Coffee farmers' children' để đối chiếu trực tiếp thông tin trong bài.",
+    "correctAnswer": "C",
+    "explanation": "Đáp án chính xác là (C): Employees working abroad. Thông tin đối chiếu trực tiếp từ đoạn văn: Chính sách mua hàng đạo đức của Công ty Cà phê Hanlan.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'Who does the Hanlan's Development Founda...' trong bài đọc để đối chiếu phương án (C).",
     "keywords": [
       "Coffee farmers' children",
       "Chính sách thu mua cà phê có đạo đức Hanlan's Coffee"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 167 kiểm tra thông tin về: Coffee farmers' children.",
+    "vietnameseMeaning": "Câu hỏi 167: Who does the Hanlan's Development Foundation mostly benefit? -> Đáp án (C): Employees working abroad",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_167",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_167",
-      "title": "Chính sách thu mua cà phê có đạo đức Hanlan's Coffee",
-      "type": "Thông tin (Information)",
-      "content": "Bài đọc TOEIC Part 7: Chính sách thu mua cà phê có đạo đức Hanlan's Coffee. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "title": "Chính sách mua hàng đạo đức của Công ty Cà phê Hanlan",
+      "type": "Bản thông tin (Information)",
+      "content": "Hanlan's Coffee Company — Ethical Purchasing Policy \nAt Hanlan's, we know that our customers like to drink only the finest coffee from around the \nworld. We also recognize that they want to be sure that the people who grow that coffee are \ntreated fairly. Many coffee producers provide their employees with poor working conditions \nand low pay, which are practices that Hanlan's does not support. — [I] —. \nCoffee companies that buy fheir stock on the open market never know exactly where it \ncomes from. But at Hanlan's, we take a different approach. We have exclusive contracts \nwith farms in Guatemala, Ethiopia, and Vietnam. — [2] —. Because of this, we know exactly \nwho is producing our coffee and the conditions in which it is being grown. We appreciate all \nthe hard work of our farmers and ensure that they have acceptable working conditions and \nwages. But our commitment doesn't end there. — [3] —. Hanlan's pays them an additional I0 \npercent above current market prices as our way of saying \"thanks.\" \nFurthermore, to give even more back to these communities, we have started the Hanlan's \nDevelopment Foundation. Each year through this organization, we put five percent of our \ntotal corporate profits into building schools, water pumps and purification plants, and health \ncare facilities in the towns and villages near where our coffee is grown. The main goal is to \nmake certain that all our workers' children are safe, healthy, and have the chance to go to \nschool and receive a full education. — [4] —. \nFind out more about Hanlan's development projects, our coffee producers, and what you \ncan do to support our cause at www.hanlancoffee.com/foundation.",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Chính sách thu mua cà phê có đạo đức Hanlan's Coffee.",
       "clues": [
         {
@@ -2999,30 +2999,30 @@ export const docs5Questions: Question[] = [
     "num": 168,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 168 based on Chính sách thu mua cà phê có đạo đức Hanlan's Coffee:",
+    "question": "In which of the positions marked [1], [2], jfjjfe [3], and [4] does the following sentence best belong? \"By achieving this worthwhile objective, we'll be able to continue our efforts.\"",
     "options": {
-      "A": "Option A for question 168",
-      "B": "Option B for question 168",
-      "C": "Option C for question 168",
-      "D": "[4]"
+      "A": "International agriculture researchers",
+      "B": "Coffee farmers' children",
+      "C": "Employees working abroad",
+      "D": "Members of a coffee growers' association"
     },
     "correctAnswer": "D",
-    "explanation": "Đáp án chính xác là (D): [4]. Câu chèn 'By achieving this worthwhile objective...' đứng sau câu giải thích mục tiêu hỗ trợ trẻ em học hành ở vị trí [4].",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa '[4]' để đối chiếu trực tiếp thông tin trong bài.",
+    "explanation": "Đáp án chính xác là (D): Members of a coffee growers' association. Thông tin đối chiếu trực tiếp từ đoạn văn: Chính sách mua hàng đạo đức của Công ty Cà phê Hanlan.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'In which of the positions marked [1], [2...' trong bài đọc để đối chiếu phương án (D).",
     "keywords": [
       "[4]",
       "Chính sách thu mua cà phê có đạo đức Hanlan's Coffee"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 168 kiểm tra thông tin về: [4].",
+    "vietnameseMeaning": "Câu hỏi 168: In which of the positions marked [1], [2], jfjjfe [3], and [4] does the following sentence best belong? \"By achieving this worthwhile objective, we'll be able to continue our efforts.\" -> Đáp án (D): Members of a coffee growers' association",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_168",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_168",
-      "title": "Chính sách thu mua cà phê có đạo đức Hanlan's Coffee",
-      "type": "Thông tin (Information)",
-      "content": "Bài đọc TOEIC Part 7: Chính sách thu mua cà phê có đạo đức Hanlan's Coffee. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "title": "Chính sách mua hàng đạo đức của Công ty Cà phê Hanlan",
+      "type": "Bản thông tin (Information)",
+      "content": "Hanlan's Coffee Company — Ethical Purchasing Policy \nAt Hanlan's, we know that our customers like to drink only the finest coffee from around the \nworld. We also recognize that they want to be sure that the people who grow that coffee are \ntreated fairly. Many coffee producers provide their employees with poor working conditions \nand low pay, which are practices that Hanlan's does not support. — [I] —. \nCoffee companies that buy fheir stock on the open market never know exactly where it \ncomes from. But at Hanlan's, we take a different approach. We have exclusive contracts \nwith farms in Guatemala, Ethiopia, and Vietnam. — [2] —. Because of this, we know exactly \nwho is producing our coffee and the conditions in which it is being grown. We appreciate all \nthe hard work of our farmers and ensure that they have acceptable working conditions and \nwages. But our commitment doesn't end there. — [3] —. Hanlan's pays them an additional I0 \npercent above current market prices as our way of saying \"thanks.\" \nFurthermore, to give even more back to these communities, we have started the Hanlan's \nDevelopment Foundation. Each year through this organization, we put five percent of our \ntotal corporate profits into building schools, water pumps and purification plants, and health \ncare facilities in the towns and villages near where our coffee is grown. The main goal is to \nmake certain that all our workers' children are safe, healthy, and have the chance to go to \nschool and receive a full education. — [4] —. \nFind out more about Hanlan's development projects, our coffee producers, and what you \ncan do to support our cause at www.hanlancoffee.com/foundation.",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Chính sách thu mua cà phê có đạo đức Hanlan's Coffee.",
       "clues": [
         {
@@ -3049,30 +3049,30 @@ export const docs5Questions: Question[] = [
     "num": 169,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 169 based on Bài báo vinh danh nữ Tổng giám đốc Rebecca Curtis của Ping Software:",
+    "question": "What is stated about Ping?",
     "options": {
-      "A": "Option A for question 169",
-      "B": "Option B for question 169",
-      "C": "Option C for question 169",
-      "D": "It was associated with a particular software type"
+      "A": "It recently hired new systems programmers.",
+      "B": "It was founded five years ago.",
+      "C": "It offers free downloads to members.",
+      "D": "It was associated with a particular software type."
     },
-    "correctAnswer": "D",
-    "explanation": "Đáp án chính xác là (D): It was associated with a particular software type. Trước đây Ping chủ yếu nổi tiếng về phần mềm soạn thảo văn bản (word processing software).",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'It was associated with a particular software type' để đối chiếu trực tiếp thông tin trong bài.",
+    "correctAnswer": "C",
+    "explanation": "Đáp án chính xác là (C): It offers free downloads to members.. Thông tin đối chiếu trực tiếp từ đoạn văn: Bài báo về dự án mở rộng trạm năng lượng mặt trời Sunfield.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'What is stated about Ping?...' trong bài đọc để đối chiếu phương án (C).",
     "keywords": [
       "It was associated with a particular software type",
       "Bài báo vinh danh nữ Tổng giám đốc Rebecca Curtis của Ping Software"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 169 kiểm tra thông tin về: It was associated with a particular software type.",
+    "vietnameseMeaning": "Câu hỏi 169: What is stated about Ping? -> Đáp án (C): It offers free downloads to members.",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_169",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_169",
-      "title": "Bài báo vinh danh nữ Tổng giám đốc Rebecca Curtis của Ping Software",
+      "title": "Bài báo về dự án mở rộng trạm năng lượng mặt trời Sunfield",
       "type": "Bài báo (Article)",
-      "content": "Bài đọc TOEIC Part 7: Bài báo vinh danh nữ Tổng giám đốc Rebecca Curtis của Ping Software. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "content": "Plug Software's Head Honored as Tech Woman of the Year \nBy Carmen Marshall \nRebecca Curtis, CEO of software company Ping, lias been named the most successful woman in the tech \nworld by Gadget Lover magazine. Ms. Curtis, who took over the company five years ago and transformed it \ninto a thriving multi-platform enterprise, is expected to deliver an acceptance speech at the Gadget Lover \nannual conference on December 2. \nMs. Curtis's achievements as CEO have been widely celebrated. When she replaced the previous CEO, \nMark Spalding, Ping was mainly known for its word processing software. Due to the influx of new word- \nprocessing products, Ping's software was not selling as well as it once had. Ms. Curtis quickly reversed that \nsituation by developing a wide range of high-quality software including photo-editing and spreadsheet \nprograms. Now the name \"Ping\" is notable for its cutting-edge, dependable technology. \nOver the next several years, Ms. Curtis says Ping will create a membership plan for its frequent users. \nThose who sign up will be able to download new Ping products at a reduced rate. Ms. Curtis says the \ncompany also plans to redevelop its Web site. With all these plans ahead. Ping is expected to grow even \nmore. Most experts agree that Ms. Curtis has been the primary reason behind the company's success. \n■",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Bài báo vinh danh nữ Tổng giám đốc Rebecca Curtis của Ping Software.",
       "clues": [
         {
@@ -3099,30 +3099,30 @@ export const docs5Questions: Question[] = [
     "num": 170,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 170 based on Bài báo vinh danh nữ Tổng giám đốc Rebecca Curtis của Ping Software:",
+    "question": "What is NOT mentioned about Rebecca Curtis?",
     "options": {
-      "A": "Option A for question 170",
-      "B": "She was Ping's first female CEO",
-      "C": "Option C for question 170",
-      "D": "Option D for question 170"
+      "A": "She could be speaking at an upcoming conference.",
+      "B": "She was Ping's first female CEO.",
+      "C": "She was recognized by a magazine.",
+      "D": "She helped Ping expand its product line."
     },
     "correctAnswer": "B",
-    "explanation": "Đáp án chính xác là (B): She was Ping's first female CEO. Bài không hề nói bà Curtis là nữ CEO đầu tiên, chỉ nói bà thay thế Mark Spalding.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'She was Ping's first female CEO' để đối chiếu trực tiếp thông tin trong bài.",
+    "explanation": "Đáp án chính xác là (B): She was Ping's first female CEO.. Thông tin đối chiếu trực tiếp từ đoạn văn: Bài báo về dự án mở rộng trạm năng lượng mặt trời Sunfield.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'What is NOT mentioned about Rebecca Curt...' trong bài đọc để đối chiếu phương án (B).",
     "keywords": [
       "She was Ping's first female CEO",
       "Bài báo vinh danh nữ Tổng giám đốc Rebecca Curtis của Ping Software"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 170 kiểm tra thông tin về: She was Ping's first female CEO.",
+    "vietnameseMeaning": "Câu hỏi 170: What is NOT mentioned about Rebecca Curtis? -> Đáp án (B): She was Ping's first female CEO.",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_170",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_170",
-      "title": "Bài báo vinh danh nữ Tổng giám đốc Rebecca Curtis của Ping Software",
+      "title": "Bài báo về dự án mở rộng trạm năng lượng mặt trời Sunfield",
       "type": "Bài báo (Article)",
-      "content": "Bài đọc TOEIC Part 7: Bài báo vinh danh nữ Tổng giám đốc Rebecca Curtis của Ping Software. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "content": "Plug Software's Head Honored as Tech Woman of the Year \nBy Carmen Marshall \nRebecca Curtis, CEO of software company Ping, lias been named the most successful woman in the tech \nworld by Gadget Lover magazine. Ms. Curtis, who took over the company five years ago and transformed it \ninto a thriving multi-platform enterprise, is expected to deliver an acceptance speech at the Gadget Lover \nannual conference on December 2. \nMs. Curtis's achievements as CEO have been widely celebrated. When she replaced the previous CEO, \nMark Spalding, Ping was mainly known for its word processing software. Due to the influx of new word- \nprocessing products, Ping's software was not selling as well as it once had. Ms. Curtis quickly reversed that \nsituation by developing a wide range of high-quality software including photo-editing and spreadsheet \nprograms. Now the name \"Ping\" is notable for its cutting-edge, dependable technology. \nOver the next several years, Ms. Curtis says Ping will create a membership plan for its frequent users. \nThose who sign up will be able to download new Ping products at a reduced rate. Ms. Curtis says the \ncompany also plans to redevelop its Web site. With all these plans ahead. Ping is expected to grow even \nmore. Most experts agree that Ms. Curtis has been the primary reason behind the company's success. \n■",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Bài báo vinh danh nữ Tổng giám đốc Rebecca Curtis của Ping Software.",
       "clues": [
         {
@@ -3149,30 +3149,30 @@ export const docs5Questions: Question[] = [
     "num": 171,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 171 based on Bài báo vinh danh nữ Tổng giám đốc Rebecca Curtis của Ping Software:",
+    "question": "According to the article, what is expected to happen at Ping Software?",
     "options": {
-      "A": "Option A for question 171",
-      "B": "Option B for question 171",
-      "C": "It will offer programs at lower prices",
-      "D": "Option D for question 171"
+      "A": "It will develop a hardware product.",
+      "B": "Its Web site will be closed down permanently.",
+      "C": "It will offer programs at lower prices.",
+      "D": "It will merge with another company. m r\\j UJ lti cn CD CD O !>■ fro j2 ait r2 ,"
     },
     "correctAnswer": "C",
-    "explanation": "Đáp án chính xác là (C): It will offer programs at lower prices. Kế hoạch thành viên sẽ cho phép tải phần mềm mới với giá ưu đãi ('at a reduced rate').",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'It will offer programs at lower prices' để đối chiếu trực tiếp thông tin trong bài.",
+    "explanation": "Đáp án chính xác là (C): It will offer programs at lower prices.. Thông tin đối chiếu trực tiếp từ đoạn văn: Bài báo về dự án mở rộng trạm năng lượng mặt trời Sunfield.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'According to the article, what is expect...' trong bài đọc để đối chiếu phương án (C).",
     "keywords": [
       "It will offer programs at lower prices",
       "Bài báo vinh danh nữ Tổng giám đốc Rebecca Curtis của Ping Software"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 171 kiểm tra thông tin về: It will offer programs at lower prices.",
+    "vietnameseMeaning": "Câu hỏi 171: According to the article, what is expected to happen at Ping Software? -> Đáp án (C): It will offer programs at lower prices.",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_171",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_171",
-      "title": "Bài báo vinh danh nữ Tổng giám đốc Rebecca Curtis của Ping Software",
+      "title": "Bài báo về dự án mở rộng trạm năng lượng mặt trời Sunfield",
       "type": "Bài báo (Article)",
-      "content": "Bài đọc TOEIC Part 7: Bài báo vinh danh nữ Tổng giám đốc Rebecca Curtis của Ping Software. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "content": "Plug Software's Head Honored as Tech Woman of the Year \nBy Carmen Marshall \nRebecca Curtis, CEO of software company Ping, lias been named the most successful woman in the tech \nworld by Gadget Lover magazine. Ms. Curtis, who took over the company five years ago and transformed it \ninto a thriving multi-platform enterprise, is expected to deliver an acceptance speech at the Gadget Lover \nannual conference on December 2. \nMs. Curtis's achievements as CEO have been widely celebrated. When she replaced the previous CEO, \nMark Spalding, Ping was mainly known for its word processing software. Due to the influx of new word- \nprocessing products, Ping's software was not selling as well as it once had. Ms. Curtis quickly reversed that \nsituation by developing a wide range of high-quality software including photo-editing and spreadsheet \nprograms. Now the name \"Ping\" is notable for its cutting-edge, dependable technology. \nOver the next several years, Ms. Curtis says Ping will create a membership plan for its frequent users. \nThose who sign up will be able to download new Ping products at a reduced rate. Ms. Curtis says the \ncompany also plans to redevelop its Web site. With all these plans ahead. Ping is expected to grow even \nmore. Most experts agree that Ms. Curtis has been the primary reason behind the company's success. \n■",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Bài báo vinh danh nữ Tổng giám đốc Rebecca Curtis của Ping Software.",
       "clues": [
         {
@@ -3199,30 +3199,30 @@ export const docs5Questions: Question[] = [
     "num": 172,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 172 based on Báo cáo xếp hạng mức độ hài lòng khách hàng các hãng hàng không:",
+    "question": "What is the report mainly about?",
     "options": {
-      "A": "Option A for question 172",
-      "B": "Customer feedback on airline carriers",
-      "C": "Option C for question 172",
-      "D": "Option D for question 172"
+      "A": "Campaigns to make a city more liveable",
+      "B": "Upgrades to an international conference facility",
+      "C": "Changes to a government's building codes",
+      "D": "Improvements to a city's tourism industry"
     },
     "correctAnswer": "B",
-    "explanation": "Đáp án chính xác là (B): Customer feedback on airline carriers. Báo cáo xếp hạng mức độ hài lòng của khách hàng đối với các hãng hàng không Tây Ban Nha.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'Customer feedback on airline carriers' để đối chiếu trực tiếp thông tin trong bài.",
+    "explanation": "Đáp án chính xác là (B): Upgrades to an international conference facility. Thông tin đối chiếu trực tiếp từ đoạn văn: Báo cáo khảo sát mức độ hài lòng khách hàng chuỗi siêu thị GreenGrocer.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'What is the report mainly about?...' trong bài đọc để đối chiếu phương án (B).",
     "keywords": [
       "Customer feedback on airline carriers",
       "Báo cáo xếp hạng mức độ hài lòng khách hàng các hãng hàng không"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 172 kiểm tra thông tin về: Customer feedback on airline carriers.",
+    "vietnameseMeaning": "Câu hỏi 172: What is the report mainly about? -> Đáp án (B): Upgrades to an international conference facility",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_172",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_172",
-      "title": "Báo cáo xếp hạng mức độ hài lòng khách hàng các hãng hàng không",
+      "title": "Báo cáo khảo sát mức độ hài lòng khách hàng chuỗi siêu thị GreenGrocer",
       "type": "Báo cáo (Report)",
-      "content": "Bài đọc TOEIC Part 7: Báo cáo xếp hạng mức độ hài lòng khách hàng các hãng hàng không. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "content": "City Trends Report — Valencia \nTourism numbers in Valencia have been increasing for three years \nrunning as people are beginning to discover this often underrated \ncity on the eastern coast of Spain. At the beginning of the survey \nperiod, the city received just under a million visitors a year, but the \nlatest figures show this has jumped to over 1.4 million. \nThere are a number of factors that can account for this change. The \nnew Sanchez Museum of Iberian Art and its nearby conference \nfacilities have proven to be a big draw since opening last year. And \nupdates to rail services from Valencia to Madrid and Barcelona have \nreduced travel time significantly. With a major airport expansion due \nto be completed before the end of the year, things are expected to \nget even better for Valencia. \nIn addition, the city government's launch of an international \nadvertising campaign two years ago has also proved beneficial. The \ncity was marketed by television, print, and social media as a tourism \ndestination. Reaction to the campaign continues to be positive. \nFinally, as well as its attraction to tourists and business visitors, \nValencia is increasingly being recognized as an excellent place to live. \nThe consultancy Apollo and Company recently put the city in third \nplace in a report measuring the quality of life in small European \ncities. They cited its lovely waterfront location, low housing costs, \nand modern infrastructure as reasons for its high place. \n40 ?Si!£«ISa|2iS°UiAhE!Oia7|S5JEioisJ7|MP3 Hackerslngang.com",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Báo cáo xếp hạng mức độ hài lòng khách hàng các hãng hàng không.",
       "clues": [
         {
@@ -3249,30 +3249,30 @@ export const docs5Questions: Question[] = [
     "num": 173,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 173 based on Báo cáo xếp hạng mức độ hài lòng khách hàng các hãng hàng không:",
+    "question": "What is NOT mentioned as a reason for the figure increase?",
     "options": {
-      "A": "Frequent delays in departure",
-      "B": "Option B for question 173",
-      "C": "Option C for question 173",
-      "D": "Option D for question 173"
+      "A": "A new museum facility",
+      "B": "An updated tax system",
+      "C": "A marketing campaign",
+      "D": "A shorter transit time"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án chính xác là (A): Frequent delays in departure. Lý do phàn nàn gồm chỗ ngồi chật, dịch vụ ăn uống, giá vé, nhưng không nhắc tới hoãn chuyến thường xuyên.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'Frequent delays in departure' để đối chiếu trực tiếp thông tin trong bài.",
+    "explanation": "Đáp án chính xác là (A): A new museum facility. Thông tin đối chiếu trực tiếp từ đoạn văn: Báo cáo khảo sát mức độ hài lòng khách hàng chuỗi siêu thị GreenGrocer.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'What is NOT mentioned as a reason for th...' trong bài đọc để đối chiếu phương án (A).",
     "keywords": [
       "Frequent delays in departure",
       "Báo cáo xếp hạng mức độ hài lòng khách hàng các hãng hàng không"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 173 kiểm tra thông tin về: Frequent delays in departure.",
+    "vietnameseMeaning": "Câu hỏi 173: What is NOT mentioned as a reason for the figure increase? -> Đáp án (A): A new museum facility",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_173",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_173",
-      "title": "Báo cáo xếp hạng mức độ hài lòng khách hàng các hãng hàng không",
+      "title": "Báo cáo khảo sát mức độ hài lòng khách hàng chuỗi siêu thị GreenGrocer",
       "type": "Báo cáo (Report)",
-      "content": "Bài đọc TOEIC Part 7: Báo cáo xếp hạng mức độ hài lòng khách hàng các hãng hàng không. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "content": "City Trends Report — Valencia \nTourism numbers in Valencia have been increasing for three years \nrunning as people are beginning to discover this often underrated \ncity on the eastern coast of Spain. At the beginning of the survey \nperiod, the city received just under a million visitors a year, but the \nlatest figures show this has jumped to over 1.4 million. \nThere are a number of factors that can account for this change. The \nnew Sanchez Museum of Iberian Art and its nearby conference \nfacilities have proven to be a big draw since opening last year. And \nupdates to rail services from Valencia to Madrid and Barcelona have \nreduced travel time significantly. With a major airport expansion due \nto be completed before the end of the year, things are expected to \nget even better for Valencia. \nIn addition, the city government's launch of an international \nadvertising campaign two years ago has also proved beneficial. The \ncity was marketed by television, print, and social media as a tourism \ndestination. Reaction to the campaign continues to be positive. \nFinally, as well as its attraction to tourists and business visitors, \nValencia is increasingly being recognized as an excellent place to live. \nThe consultancy Apollo and Company recently put the city in third \nplace in a report measuring the quality of life in small European \ncities. They cited its lovely waterfront location, low housing costs, \nand modern infrastructure as reasons for its high place. \n40 ?Si!£«ISa|2iS°UiAhE!Oia7|S5JEioisJ7|MP3 Hackerslngang.com",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Báo cáo xếp hạng mức độ hài lòng khách hàng các hãng hàng không.",
       "clues": [
         {
@@ -3299,30 +3299,30 @@ export const docs5Questions: Question[] = [
     "num": 174,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 174 based on Báo cáo xếp hạng mức độ hài lòng khách hàng các hãng hàng không:",
+    "question": "What is indicated about Madrid?",
     "options": {
-      "A": "Option A for question 174",
-      "B": "Option B for question 174",
-      "C": "It has fewer direct flight options",
-      "D": "Option D for question 174"
+      "A": "It was selected by a consultancy as having a high quality of life.",
+      "B": "It was less popular with tourists than Barcelona for three years.",
+      "C": "Its transportation time from Valencia has been shortened.",
+      "D": "Its city council hired a firm to develop a marketing strategy."
     },
     "correctAnswer": "C",
-    "explanation": "Đáp án chính xác là (C): It has fewer direct flight options. Hãng Madrid có ít đường bay thẳng hơn so với các đối thủ hàng đầu.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'It has fewer direct flight options' để đối chiếu trực tiếp thông tin trong bài.",
+    "explanation": "Đáp án chính xác là (C): Its transportation time from Valencia has been shortened.. Thông tin đối chiếu trực tiếp từ đoạn văn: Báo cáo khảo sát mức độ hài lòng khách hàng chuỗi siêu thị GreenGrocer.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'What is indicated about Madrid?...' trong bài đọc để đối chiếu phương án (C).",
     "keywords": [
       "It has fewer direct flight options",
       "Báo cáo xếp hạng mức độ hài lòng khách hàng các hãng hàng không"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 174 kiểm tra thông tin về: It has fewer direct flight options.",
+    "vietnameseMeaning": "Câu hỏi 174: What is indicated about Madrid? -> Đáp án (C): Its transportation time from Valencia has been shortened.",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_174",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_174",
-      "title": "Báo cáo xếp hạng mức độ hài lòng khách hàng các hãng hàng không",
+      "title": "Báo cáo khảo sát mức độ hài lòng khách hàng chuỗi siêu thị GreenGrocer",
       "type": "Báo cáo (Report)",
-      "content": "Bài đọc TOEIC Part 7: Báo cáo xếp hạng mức độ hài lòng khách hàng các hãng hàng không. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "content": "City Trends Report — Valencia \nTourism numbers in Valencia have been increasing for three years \nrunning as people are beginning to discover this often underrated \ncity on the eastern coast of Spain. At the beginning of the survey \nperiod, the city received just under a million visitors a year, but the \nlatest figures show this has jumped to over 1.4 million. \nThere are a number of factors that can account for this change. The \nnew Sanchez Museum of Iberian Art and its nearby conference \nfacilities have proven to be a big draw since opening last year. And \nupdates to rail services from Valencia to Madrid and Barcelona have \nreduced travel time significantly. With a major airport expansion due \nto be completed before the end of the year, things are expected to \nget even better for Valencia. \nIn addition, the city government's launch of an international \nadvertising campaign two years ago has also proved beneficial. The \ncity was marketed by television, print, and social media as a tourism \ndestination. Reaction to the campaign continues to be positive. \nFinally, as well as its attraction to tourists and business visitors, \nValencia is increasingly being recognized as an excellent place to live. \nThe consultancy Apollo and Company recently put the city in third \nplace in a report measuring the quality of life in small European \ncities. They cited its lovely waterfront location, low housing costs, \nand modern infrastructure as reasons for its high place. \n40 ?Si!£«ISa|2iS°UiAhE!Oia7|S5JEioisJ7|MP3 Hackerslngang.com",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Báo cáo xếp hạng mức độ hài lòng khách hàng các hãng hàng không.",
       "clues": [
         {
@@ -3349,30 +3349,30 @@ export const docs5Questions: Question[] = [
     "num": 175,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 175 based on Báo cáo xếp hạng mức độ hài lòng khách hàng các hãng hàng không:",
+    "question": "Why was Valencia ranked in third place?",
     "options": {
-      "A": "Option A for question 175",
-      "B": "Option B for question 175",
-      "C": "Option C for question 175",
-      "D": "Its ticket prices are relatively high"
+      "A": "It is popular with business travelers.",
+      "B": "It recently updated its waterfront location.",
+      "C": "It offers residents affordable homes.",
+      "D": "It schedules a lot of outdoor activities. rv) UJ 4> LTl CT) -^J CO LD O l>- Hn j® mi ri)"
     },
-    "correctAnswer": "D",
-    "explanation": "Đáp án chính xác là (D): Its ticket prices are relatively high. Hãng Valencia bị trừ điểm và xếp thứ 3 vì giá vé tương đối đắt đỏ.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'Its ticket prices are relatively high' để đối chiếu trực tiếp thông tin trong bài.",
+    "correctAnswer": "B",
+    "explanation": "Đáp án chính xác là (B): It recently updated its waterfront location.. Thông tin đối chiếu trực tiếp từ đoạn văn: Báo cáo khảo sát mức độ hài lòng khách hàng chuỗi siêu thị GreenGrocer.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'Why was Valencia ranked in third place?...' trong bài đọc để đối chiếu phương án (B).",
     "keywords": [
       "Its ticket prices are relatively high",
       "Báo cáo xếp hạng mức độ hài lòng khách hàng các hãng hàng không"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 175 kiểm tra thông tin về: Its ticket prices are relatively high.",
+    "vietnameseMeaning": "Câu hỏi 175: Why was Valencia ranked in third place? -> Đáp án (B): It recently updated its waterfront location.",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_175",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_175",
-      "title": "Báo cáo xếp hạng mức độ hài lòng khách hàng các hãng hàng không",
+      "title": "Báo cáo khảo sát mức độ hài lòng khách hàng chuỗi siêu thị GreenGrocer",
       "type": "Báo cáo (Report)",
-      "content": "Bài đọc TOEIC Part 7: Báo cáo xếp hạng mức độ hài lòng khách hàng các hãng hàng không. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "content": "City Trends Report — Valencia \nTourism numbers in Valencia have been increasing for three years \nrunning as people are beginning to discover this often underrated \ncity on the eastern coast of Spain. At the beginning of the survey \nperiod, the city received just under a million visitors a year, but the \nlatest figures show this has jumped to over 1.4 million. \nThere are a number of factors that can account for this change. The \nnew Sanchez Museum of Iberian Art and its nearby conference \nfacilities have proven to be a big draw since opening last year. And \nupdates to rail services from Valencia to Madrid and Barcelona have \nreduced travel time significantly. With a major airport expansion due \nto be completed before the end of the year, things are expected to \nget even better for Valencia. \nIn addition, the city government's launch of an international \nadvertising campaign two years ago has also proved beneficial. The \ncity was marketed by television, print, and social media as a tourism \ndestination. Reaction to the campaign continues to be positive. \nFinally, as well as its attraction to tourists and business visitors, \nValencia is increasingly being recognized as an excellent place to live. \nThe consultancy Apollo and Company recently put the city in third \nplace in a report measuring the quality of life in small European \ncities. They cited its lovely waterfront location, low housing costs, \nand modern infrastructure as reasons for its high place. \n40 ?Si!£«ISa|2iS°UiAhE!Oia7|S5JEioisJ7|MP3 Hackerslngang.com",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Báo cáo xếp hạng mức độ hài lòng khách hàng các hãng hàng không.",
       "clues": [
         {
@@ -3399,30 +3399,30 @@ export const docs5Questions: Question[] = [
     "num": 176,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 176 based on Thư và Email cập nhật sao kê tài khoản ngân hàng điện tử:",
+    "question": "Why was the letter written?",
     "options": {
-      "A": "To notify a customer of account changes",
-      "B": "Option B for question 176",
-      "C": "Option C for question 176",
-      "D": "Option D for question 176"
+      "A": "To describe the steps necessary to obtain a card",
+      "B": "To inform a customer of a change in correspondence",
+      "C": "To alert an online banking user of unusual transactions",
+      "D": "To offer receipt recycling policy details to an account holder"
     },
-    "correctAnswer": "A",
-    "explanation": "Đáp án chính xác là (A): To notify a customer of account changes. Thư thông báo về việc cập nhật sao kê tài khoản ngân hàng điện tử.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'To notify a customer of account changes' để đối chiếu trực tiếp thông tin trong bài.",
+    "correctAnswer": "B",
+    "explanation": "Đáp án chính xác là (B): To inform a customer of a change in correspondence. Thông tin đối chiếu trực tiếp từ đoạn văn: Thư và Email cập nhật sao kê tài khoản ngân hàng điện tử Maxfield.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'Why was the letter written?...' trong bài đọc để đối chiếu phương án (B).",
     "keywords": [
       "To notify a customer of account changes",
       "Thư và Email cập nhật sao kê tài khoản ngân hàng điện tử"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 176 kiểm tra thông tin về: To notify a customer of account changes.",
+    "vietnameseMeaning": "Câu hỏi 176: Why was the letter written? -> Đáp án (B): To inform a customer of a change in correspondence",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_176",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_176",
-      "title": "Thư và Email cập nhật sao kê tài khoản ngân hàng điện tử",
+      "title": "Thư và Email cập nhật sao kê tài khoản ngân hàng điện tử Maxfield",
       "type": "Đoạn văn đôi (Letter & E-mail)",
-      "content": "Bài đọc TOEIC Part 7: Thư và Email cập nhật sao kê tài khoản ngân hàng điện tử. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "content": "Maxfield Financial Group \nMay 10 \nBethany Aldridge \n18 Juniper Road \nWestport. CT 06880 \nDear Ms. Aldridge. \nThis letter is in response to your request to sign up for paperless statements. Your statements will \nnow be sent via e-mail on the 25th of each month. All such statements will also be accessible from \nyour online account, and you will be able to print them at your convenience. They will contain all of the \nsame information that is included in your paper statements. In order to protect your account details, \nplease ensure that the device you use to download and save your paperless statements is secure. \nIf you would like a paper statement mailed to your primary address in addition to the paperless one. \nlog on to your account and check the \"Mail my Statement\" box under \"Delivery Preferences.\" Keep in \nmind that Maxfield Financial group does charge an annual fee of $24 to clients who choose to receive \npaper statements. If you would like to stop receiving paperless statements and revert back to mailed \npaper statements only, return to your account and uncheck \"E-mail my Statement.\" \nBest regards, \nCustomer Service \nMaxfield Financial Group \nTo: Bethany Aldridge <bethanyal2i(a>totalmail.net> \nFrom: Customer Service <cs@maxfieldfin.com> \nDate; May 25 \nSubject: Your May Statement \nAttachment: May_Statement \nDear Ms. Aldridge, \nPlease find your Maxfield Financial Group electronic account statement for the month of May \nattached. As this is the first electronic statement that has been sent to you, please review it \ncarefully and contact our service center if you have any questions or concerns. We have \nreceived your payment, and your copy will arrive via mail within the next five to seven days. \nTo ensure that you receive monthly statement notifications, make sure to keep a current \ne-mail and postal address on file with us. If you are planning to change them, simply update \nthem in the \"Personal Information\" section of our Web site. If you use a work e-mail address, \nkeep in mind that some companies may block the receipt of employees' personal e-mail. \nSincerely, \nCustomer Service \nMaxfield Financial Group",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Thư và Email cập nhật sao kê tài khoản ngân hàng điện tử.",
       "clues": [
         {
@@ -3449,30 +3449,30 @@ export const docs5Questions: Question[] = [
     "num": 177,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 177 based on Thư và Email cập nhật sao kê tài khoản ngân hàng điện tử:",
+    "question": "What is stated about paperless statements in the letter?",
     "options": {
-      "A": "Option A for question 177",
-      "B": "They can be viewed on mobile devices",
-      "C": "Option C for question 177",
-      "D": "Option D for question 177"
+      "A": "They must be retained by recipients for tax purposes.",
+      "B": "They require an assigned password to open.",
+      "C": "They can be accessed from an online account at anytime.",
+      "D": "They contain less detail than the paper documents that are mailed."
     },
-    "correctAnswer": "B",
-    "explanation": "Đáp án chính xác là (B): They can be viewed on mobile devices. Sao kê điện tử có thể xem trực tiếp trên ứng dụng di động.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'They can be viewed on mobile devices' để đối chiếu trực tiếp thông tin trong bài.",
+    "correctAnswer": "C",
+    "explanation": "Đáp án chính xác là (C): They can be accessed from an online account at anytime.. Thông tin đối chiếu trực tiếp từ đoạn văn: Thư và Email cập nhật sao kê tài khoản ngân hàng điện tử Maxfield.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'What is stated about paperless statement...' trong bài đọc để đối chiếu phương án (C).",
     "keywords": [
       "They can be viewed on mobile devices",
       "Thư và Email cập nhật sao kê tài khoản ngân hàng điện tử"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 177 kiểm tra thông tin về: They can be viewed on mobile devices.",
+    "vietnameseMeaning": "Câu hỏi 177: What is stated about paperless statements in the letter? -> Đáp án (C): They can be accessed from an online account at anytime.",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_177",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_177",
-      "title": "Thư và Email cập nhật sao kê tài khoản ngân hàng điện tử",
+      "title": "Thư và Email cập nhật sao kê tài khoản ngân hàng điện tử Maxfield",
       "type": "Đoạn văn đôi (Letter & E-mail)",
-      "content": "Bài đọc TOEIC Part 7: Thư và Email cập nhật sao kê tài khoản ngân hàng điện tử. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "content": "Maxfield Financial Group \nMay 10 \nBethany Aldridge \n18 Juniper Road \nWestport. CT 06880 \nDear Ms. Aldridge. \nThis letter is in response to your request to sign up for paperless statements. Your statements will \nnow be sent via e-mail on the 25th of each month. All such statements will also be accessible from \nyour online account, and you will be able to print them at your convenience. They will contain all of the \nsame information that is included in your paper statements. In order to protect your account details, \nplease ensure that the device you use to download and save your paperless statements is secure. \nIf you would like a paper statement mailed to your primary address in addition to the paperless one. \nlog on to your account and check the \"Mail my Statement\" box under \"Delivery Preferences.\" Keep in \nmind that Maxfield Financial group does charge an annual fee of $24 to clients who choose to receive \npaper statements. If you would like to stop receiving paperless statements and revert back to mailed \npaper statements only, return to your account and uncheck \"E-mail my Statement.\" \nBest regards, \nCustomer Service \nMaxfield Financial Group \nTo: Bethany Aldridge <bethanyal2i(a>totalmail.net> \nFrom: Customer Service <cs@maxfieldfin.com> \nDate; May 25 \nSubject: Your May Statement \nAttachment: May_Statement \nDear Ms. Aldridge, \nPlease find your Maxfield Financial Group electronic account statement for the month of May \nattached. As this is the first electronic statement that has been sent to you, please review it \ncarefully and contact our service center if you have any questions or concerns. We have \nreceived your payment, and your copy will arrive via mail within the next five to seven days. \nTo ensure that you receive monthly statement notifications, make sure to keep a current \ne-mail and postal address on file with us. If you are planning to change them, simply update \nthem in the \"Personal Information\" section of our Web site. If you use a work e-mail address, \nkeep in mind that some companies may block the receipt of employees' personal e-mail. \nSincerely, \nCustomer Service \nMaxfield Financial Group",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Thư và Email cập nhật sao kê tài khoản ngân hàng điện tử.",
       "clues": [
         {
@@ -3499,30 +3499,30 @@ export const docs5Questions: Question[] = [
     "num": 178,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 178 based on Thư và Email cập nhật sao kê tài khoản ngân hàng điện tử:",
+    "question": "According to the letter, how can print copies of statements be requested?",
     "options": {
-      "A": "Option A for question 178",
-      "B": "Option B for question 178",
-      "C": "By logging into an online account",
-      "D": "Option D for question 178"
+      "A": "By e-mailing the service center",
+      "B": "By calling the accounts department",
+      "C": "By selecting an option online",
+      "D": "By faxing a request form"
     },
     "correctAnswer": "C",
-    "explanation": "Đáp án chính xác là (C): By logging into an online account. Khách hàng có thể chuyển lại sao kê giấy bằng cách đăng nhập vào tài khoản trực tuyến.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'By logging into an online account' để đối chiếu trực tiếp thông tin trong bài.",
+    "explanation": "Đáp án chính xác là (C): By selecting an option online. Thông tin đối chiếu trực tiếp từ đoạn văn: Thư và Email cập nhật sao kê tài khoản ngân hàng điện tử Maxfield.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'According to the letter, how can print c...' trong bài đọc để đối chiếu phương án (C).",
     "keywords": [
       "By logging into an online account",
       "Thư và Email cập nhật sao kê tài khoản ngân hàng điện tử"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 178 kiểm tra thông tin về: By logging into an online account.",
+    "vietnameseMeaning": "Câu hỏi 178: According to the letter, how can print copies of statements be requested? -> Đáp án (C): By selecting an option online",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_178",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_178",
-      "title": "Thư và Email cập nhật sao kê tài khoản ngân hàng điện tử",
+      "title": "Thư và Email cập nhật sao kê tài khoản ngân hàng điện tử Maxfield",
       "type": "Đoạn văn đôi (Letter & E-mail)",
-      "content": "Bài đọc TOEIC Part 7: Thư và Email cập nhật sao kê tài khoản ngân hàng điện tử. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "content": "Maxfield Financial Group \nMay 10 \nBethany Aldridge \n18 Juniper Road \nWestport. CT 06880 \nDear Ms. Aldridge. \nThis letter is in response to your request to sign up for paperless statements. Your statements will \nnow be sent via e-mail on the 25th of each month. All such statements will also be accessible from \nyour online account, and you will be able to print them at your convenience. They will contain all of the \nsame information that is included in your paper statements. In order to protect your account details, \nplease ensure that the device you use to download and save your paperless statements is secure. \nIf you would like a paper statement mailed to your primary address in addition to the paperless one. \nlog on to your account and check the \"Mail my Statement\" box under \"Delivery Preferences.\" Keep in \nmind that Maxfield Financial group does charge an annual fee of $24 to clients who choose to receive \npaper statements. If you would like to stop receiving paperless statements and revert back to mailed \npaper statements only, return to your account and uncheck \"E-mail my Statement.\" \nBest regards, \nCustomer Service \nMaxfield Financial Group \nTo: Bethany Aldridge <bethanyal2i(a>totalmail.net> \nFrom: Customer Service <cs@maxfieldfin.com> \nDate; May 25 \nSubject: Your May Statement \nAttachment: May_Statement \nDear Ms. Aldridge, \nPlease find your Maxfield Financial Group electronic account statement for the month of May \nattached. As this is the first electronic statement that has been sent to you, please review it \ncarefully and contact our service center if you have any questions or concerns. We have \nreceived your payment, and your copy will arrive via mail within the next five to seven days. \nTo ensure that you receive monthly statement notifications, make sure to keep a current \ne-mail and postal address on file with us. If you are planning to change them, simply update \nthem in the \"Personal Information\" section of our Web site. If you use a work e-mail address, \nkeep in mind that some companies may block the receipt of employees' personal e-mail. \nSincerely, \nCustomer Service \nMaxfield Financial Group",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Thư và Email cập nhật sao kê tài khoản ngân hàng điện tử.",
       "clues": [
         {
@@ -3549,30 +3549,30 @@ export const docs5Questions: Question[] = [
     "num": 179,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 179 based on Thư và Email cập nhật sao kê tài khoản ngân hàng điện tử:",
+    "question": "Why has Ms. Aldridge been asked to check her digital statement?",
     "options": {
-      "A": "Option A for question 179",
-      "B": "Option B for question 179",
-      "C": "Option C for question 179",
-      "D": "To verify some personal details"
+      "A": "It includes an important notification.",
+      "B": "It has the incorrect contact information.",
+      "C": "It shows some additional charges for services.",
+      "D": "It is the first one she has received."
     },
     "correctAnswer": "D",
-    "explanation": "Đáp án chính xác là (D): To verify some personal details. Email yêu cầu xác nhận một số thông tin cá nhân và địa chỉ nhận thư.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'To verify some personal details' để đối chiếu trực tiếp thông tin trong bài.",
+    "explanation": "Đáp án chính xác là (D): It is the first one she has received.. Thông tin đối chiếu trực tiếp từ đoạn văn: Thư và Email cập nhật sao kê tài khoản ngân hàng điện tử Maxfield.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'Why has Ms. Aldridge been asked to check...' trong bài đọc để đối chiếu phương án (D).",
     "keywords": [
       "To verify some personal details",
       "Thư và Email cập nhật sao kê tài khoản ngân hàng điện tử"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 179 kiểm tra thông tin về: To verify some personal details.",
+    "vietnameseMeaning": "Câu hỏi 179: Why has Ms. Aldridge been asked to check her digital statement? -> Đáp án (D): It is the first one she has received.",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_179",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_179",
-      "title": "Thư và Email cập nhật sao kê tài khoản ngân hàng điện tử",
+      "title": "Thư và Email cập nhật sao kê tài khoản ngân hàng điện tử Maxfield",
       "type": "Đoạn văn đôi (Letter & E-mail)",
-      "content": "Bài đọc TOEIC Part 7: Thư và Email cập nhật sao kê tài khoản ngân hàng điện tử. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "content": "Maxfield Financial Group \nMay 10 \nBethany Aldridge \n18 Juniper Road \nWestport. CT 06880 \nDear Ms. Aldridge. \nThis letter is in response to your request to sign up for paperless statements. Your statements will \nnow be sent via e-mail on the 25th of each month. All such statements will also be accessible from \nyour online account, and you will be able to print them at your convenience. They will contain all of the \nsame information that is included in your paper statements. In order to protect your account details, \nplease ensure that the device you use to download and save your paperless statements is secure. \nIf you would like a paper statement mailed to your primary address in addition to the paperless one. \nlog on to your account and check the \"Mail my Statement\" box under \"Delivery Preferences.\" Keep in \nmind that Maxfield Financial group does charge an annual fee of $24 to clients who choose to receive \npaper statements. If you would like to stop receiving paperless statements and revert back to mailed \npaper statements only, return to your account and uncheck \"E-mail my Statement.\" \nBest regards, \nCustomer Service \nMaxfield Financial Group \nTo: Bethany Aldridge <bethanyal2i(a>totalmail.net> \nFrom: Customer Service <cs@maxfieldfin.com> \nDate; May 25 \nSubject: Your May Statement \nAttachment: May_Statement \nDear Ms. Aldridge, \nPlease find your Maxfield Financial Group electronic account statement for the month of May \nattached. As this is the first electronic statement that has been sent to you, please review it \ncarefully and contact our service center if you have any questions or concerns. We have \nreceived your payment, and your copy will arrive via mail within the next five to seven days. \nTo ensure that you receive monthly statement notifications, make sure to keep a current \ne-mail and postal address on file with us. If you are planning to change them, simply update \nthem in the \"Personal Information\" section of our Web site. If you use a work e-mail address, \nkeep in mind that some companies may block the receipt of employees' personal e-mail. \nSincerely, \nCustomer Service \nMaxfield Financial Group",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Thư và Email cập nhật sao kê tài khoản ngân hàng điện tử.",
       "clues": [
         {
@@ -3599,30 +3599,30 @@ export const docs5Questions: Question[] = [
     "num": 180,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 180 based on Thư và Email cập nhật sao kê tài khoản ngân hàng điện tử:",
+    "question": "What can be inferred about Ms. Aldridge?",
     "options": {
-      "A": "Option A for question 180",
-      "B": "Option B for question 180",
-      "C": "She opened an account after June 1",
-      "D": "Option D for question 180"
+      "A": "She notified a financial provider of an address change.",
+      "B": "She must submit a complete payment within seven days.",
+      "C": "She reported an error found on a monthly statement.",
+      "D": "She paid a yearly charge to Maxfield Financial Group."
     },
     "correctAnswer": "C",
-    "explanation": "Đáp án chính xác là (C): She opened an account after June 1. Tài khoản của bà Aldridge tự động đăng ký sao kê điện tử vì mở sau ngày 1 tháng 6.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'She opened an account after June 1' để đối chiếu trực tiếp thông tin trong bài.",
+    "explanation": "Đáp án chính xác là (C): She reported an error found on a monthly statement.. Thông tin đối chiếu trực tiếp từ đoạn văn: Thư và Email cập nhật sao kê tài khoản ngân hàng điện tử Maxfield.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'What can be inferred about Ms. Aldridge?...' trong bài đọc để đối chiếu phương án (C).",
     "keywords": [
       "She opened an account after June 1",
       "Thư và Email cập nhật sao kê tài khoản ngân hàng điện tử"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 180 kiểm tra thông tin về: She opened an account after June 1.",
+    "vietnameseMeaning": "Câu hỏi 180: What can be inferred about Ms. Aldridge? -> Đáp án (C): She reported an error found on a monthly statement.",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_180",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_180",
-      "title": "Thư và Email cập nhật sao kê tài khoản ngân hàng điện tử",
+      "title": "Thư và Email cập nhật sao kê tài khoản ngân hàng điện tử Maxfield",
       "type": "Đoạn văn đôi (Letter & E-mail)",
-      "content": "Bài đọc TOEIC Part 7: Thư và Email cập nhật sao kê tài khoản ngân hàng điện tử. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "content": "Maxfield Financial Group \nMay 10 \nBethany Aldridge \n18 Juniper Road \nWestport. CT 06880 \nDear Ms. Aldridge. \nThis letter is in response to your request to sign up for paperless statements. Your statements will \nnow be sent via e-mail on the 25th of each month. All such statements will also be accessible from \nyour online account, and you will be able to print them at your convenience. They will contain all of the \nsame information that is included in your paper statements. In order to protect your account details, \nplease ensure that the device you use to download and save your paperless statements is secure. \nIf you would like a paper statement mailed to your primary address in addition to the paperless one. \nlog on to your account and check the \"Mail my Statement\" box under \"Delivery Preferences.\" Keep in \nmind that Maxfield Financial group does charge an annual fee of $24 to clients who choose to receive \npaper statements. If you would like to stop receiving paperless statements and revert back to mailed \npaper statements only, return to your account and uncheck \"E-mail my Statement.\" \nBest regards, \nCustomer Service \nMaxfield Financial Group \nTo: Bethany Aldridge <bethanyal2i(a>totalmail.net> \nFrom: Customer Service <cs@maxfieldfin.com> \nDate; May 25 \nSubject: Your May Statement \nAttachment: May_Statement \nDear Ms. Aldridge, \nPlease find your Maxfield Financial Group electronic account statement for the month of May \nattached. As this is the first electronic statement that has been sent to you, please review it \ncarefully and contact our service center if you have any questions or concerns. We have \nreceived your payment, and your copy will arrive via mail within the next five to seven days. \nTo ensure that you receive monthly statement notifications, make sure to keep a current \ne-mail and postal address on file with us. If you are planning to change them, simply update \nthem in the \"Personal Information\" section of our Web site. If you use a work e-mail address, \nkeep in mind that some companies may block the receipt of employees' personal e-mail. \nSincerely, \nCustomer Service \nMaxfield Financial Group",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Thư và Email cập nhật sao kê tài khoản ngân hàng điện tử.",
       "clues": [
         {
@@ -3649,30 +3649,30 @@ export const docs5Questions: Question[] = [
     "num": 181,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 181 based on Thông báo và Lịch trình chuỗi hòa nhạc mùa hè Summer Music Series:",
+    "question": "What is the announcement mainly about?",
     "options": {
-      "A": "Option A for question 181",
-      "B": "A series of musical performances",
-      "C": "Option C for question 181",
-      "D": "Option D for question 181"
+      "A": "A request for performers for a concert series",
+      "B": "A revised policy regarding advertising materials",
+      "C": "A campaign to increase membership in a group",
+      "D": "A promotional opportunity for local establishments"
     },
-    "correctAnswer": "B",
-    "explanation": "Đáp án chính xác là (B): A series of musical performances. Thông báo về chuỗi hòa nhạc mùa hè ngoài trời 'Summer Music Series'.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'A series of musical performances' để đối chiếu trực tiếp thông tin trong bài.",
+    "correctAnswer": "C",
+    "explanation": "Đáp án chính xác là (C): A campaign to increase membership in a group. Thông tin đối chiếu trực tiếp từ đoạn văn: Thông báo và Lịch trình Hội nghị Thượng đỉnh Khởi nghiệp Công nghệ.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'What is the announcement mainly about?...' trong bài đọc để đối chiếu phương án (C).",
     "keywords": [
       "A series of musical performances",
       "Thông báo và Lịch trình chuỗi hòa nhạc mùa hè Summer Music Series"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 181 kiểm tra thông tin về: A series of musical performances.",
+    "vietnameseMeaning": "Câu hỏi 181: What is the announcement mainly about? -> Đáp án (C): A campaign to increase membership in a group",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_181",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_181",
-      "title": "Thông báo và Lịch trình chuỗi hòa nhạc mùa hè Summer Music Series",
+      "title": "Thông báo và Lịch trình Hội nghị Thượng đỉnh Khởi nghiệp Công nghệ",
       "type": "Đoạn văn đôi (Announcement & Schedule)",
-      "content": "Bài đọc TOEIC Part 7: Thông báo và Lịch trình chuỗi hòa nhạc mùa hè Summer Music Series. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "content": "Announcement for Woodlands Business Owners: \nThe Woodlands Merchants Association is planning to host Thursday evening concerts on the Center \nSquare lawn from May 28 through July 2, from 6 P.M. until 9 p.m. We have held die concerts over the \npast few years and have had a good turnout every dme. However, these events do entail a significant \nexpense for the association, as we most pay our performers. As a result, we are offering local \nbusinesses the opportunity to sponsor a concert. This will help the associadon to control costs while \npromoting your stores or shops to the public. \nA sponsorship includes a banner with your business name on it that will be attached to the \nperformance stage. You have the option of setting up a promotional booth on the lawn and are \nallowed to hand out flyers or give away coupons and product samples. Those sponsoring a concert for \nS500 or more will also have their business's name, logo, and contact information printed with event \nadvertisements in T/je Woodlands Times newspaper. \nThe Woodlands Merchants Association aims to bring together the business community and local \nresidents, and the sponsored concerts will be an enjoyable way to achieve that goal. If you would like to \nparticipate, contact the event coordinator, Dan Perry, at DanPerry@woodlandsmerchantsassn.com to \nfinalize the sponsorship arrangements. \nWoodlands Merchants Association Summer Concert Schedule \nBelow is the concert schedule. Sponsorship rates were determined by the cost of the performer or \nband. Each sponsorship package includes a banner and one promotional booth if desired. \nCo-sponsorship by two companies is also permissible. Any distributed items are not part of the listed \ncost and must be paid for by the sponsor. Sponsors must be current members of the Woodlands \nMerchants Association. \nDate \nPerformer or Band \nStyle of Music \nSponsorship Cost \nMay 28 \nPearson Trio \nJazz \n$450 \nJune 4 \nAmy Evans \nChildren's Folk \n$150 \nJune 11 \nThrowback \n1950's Pop \n$500 \nJune 18 \nUniversity Chorus* \nBroadway Tunes \n$550 \nJune 25 \nTreble Trouble \nDance and Pop \n$550 \nJuly 2 \nJoe Thomas* \nBlues \n$150 \n*Contract not yet signed. Performers subject to change. \n44 e°|ivi yoiSPIS 5! E!0I2PI MP3 Hackerslngang.com",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Thông báo và Lịch trình chuỗi hòa nhạc mùa hè Summer Music Series.",
       "clues": [
         {
@@ -3699,30 +3699,30 @@ export const docs5Questions: Question[] = [
     "num": 182,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 182 based on Thông báo và Lịch trình chuỗi hòa nhạc mùa hè Summer Music Series:",
+    "question": "According to the announcement, what is a goal of the event?",
     "options": {
-      "A": "Having a company name printed on banners",
-      "B": "Option B for question 182",
-      "C": "Option C for question 182",
-      "D": "Option D for question 182"
+      "A": "Increasing economic activity in a town",
+      "B": "Fostering interaction between businesses and citizens",
+      "C": "Recognizing the creative talents of local performers",
+      "D": "Raising money for a charity program"
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án chính xác là (A): Having a company name printed on banners. Nhà tài trợ được in tên và logo công ty lên băng rôn của sự kiện.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'Having a company name printed on banners' để đối chiếu trực tiếp thông tin trong bài.",
+    "explanation": "Đáp án chính xác là (A): Increasing economic activity in a town. Thông tin đối chiếu trực tiếp từ đoạn văn: Thông báo và Lịch trình Hội nghị Thượng đỉnh Khởi nghiệp Công nghệ.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'According to the announcement, what is a...' trong bài đọc để đối chiếu phương án (A).",
     "keywords": [
       "Having a company name printed on banners",
       "Thông báo và Lịch trình chuỗi hòa nhạc mùa hè Summer Music Series"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 182 kiểm tra thông tin về: Having a company name printed on banners.",
+    "vietnameseMeaning": "Câu hỏi 182: According to the announcement, what is a goal of the event? -> Đáp án (A): Increasing economic activity in a town",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_182",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_182",
-      "title": "Thông báo và Lịch trình chuỗi hòa nhạc mùa hè Summer Music Series",
+      "title": "Thông báo và Lịch trình Hội nghị Thượng đỉnh Khởi nghiệp Công nghệ",
       "type": "Đoạn văn đôi (Announcement & Schedule)",
-      "content": "Bài đọc TOEIC Part 7: Thông báo và Lịch trình chuỗi hòa nhạc mùa hè Summer Music Series. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "content": "Announcement for Woodlands Business Owners: \nThe Woodlands Merchants Association is planning to host Thursday evening concerts on the Center \nSquare lawn from May 28 through July 2, from 6 P.M. until 9 p.m. We have held die concerts over the \npast few years and have had a good turnout every dme. However, these events do entail a significant \nexpense for the association, as we most pay our performers. As a result, we are offering local \nbusinesses the opportunity to sponsor a concert. This will help the associadon to control costs while \npromoting your stores or shops to the public. \nA sponsorship includes a banner with your business name on it that will be attached to the \nperformance stage. You have the option of setting up a promotional booth on the lawn and are \nallowed to hand out flyers or give away coupons and product samples. Those sponsoring a concert for \nS500 or more will also have their business's name, logo, and contact information printed with event \nadvertisements in T/je Woodlands Times newspaper. \nThe Woodlands Merchants Association aims to bring together the business community and local \nresidents, and the sponsored concerts will be an enjoyable way to achieve that goal. If you would like to \nparticipate, contact the event coordinator, Dan Perry, at DanPerry@woodlandsmerchantsassn.com to \nfinalize the sponsorship arrangements. \nWoodlands Merchants Association Summer Concert Schedule \nBelow is the concert schedule. Sponsorship rates were determined by the cost of the performer or \nband. Each sponsorship package includes a banner and one promotional booth if desired. \nCo-sponsorship by two companies is also permissible. Any distributed items are not part of the listed \ncost and must be paid for by the sponsor. Sponsors must be current members of the Woodlands \nMerchants Association. \nDate \nPerformer or Band \nStyle of Music \nSponsorship Cost \nMay 28 \nPearson Trio \nJazz \n$450 \nJune 4 \nAmy Evans \nChildren's Folk \n$150 \nJune 11 \nThrowback \n1950's Pop \n$500 \nJune 18 \nUniversity Chorus* \nBroadway Tunes \n$550 \nJune 25 \nTreble Trouble \nDance and Pop \n$550 \nJuly 2 \nJoe Thomas* \nBlues \n$150 \n*Contract not yet signed. Performers subject to change. \n44 e°|ivi yoiSPIS 5! E!0I2PI MP3 Hackerslngang.com",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Thông báo và Lịch trình chuỗi hòa nhạc mùa hè Summer Music Series.",
       "clues": [
         {
@@ -3749,30 +3749,30 @@ export const docs5Questions: Question[] = [
     "num": 183,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 183 based on Thông báo và Lịch trình chuỗi hòa nhạc mùa hè Summer Music Series:",
+    "question": "What is suggested about the evening concerts?",
     "options": {
-      "A": "Option A for question 183",
-      "B": "Option B for question 183",
-      "C": "They will be held on a weekly basis",
-      "D": "Option D for question 183"
+      "A": "Poor weather conditions may cause them to be held indoors.",
+      "B": "They are paid for partly by donations gathered from the audiences.",
+      "C": "Cosponsors can distribute flyers and samples at them.",
+      "D": "They will take place for the first time at Center Square this year."
     },
     "correctAnswer": "C",
-    "explanation": "Đáp án chính xác là (C): They will be held on a weekly basis. Các buổi hòa nhạc diễn ra định kỳ vào tối thứ Năm hàng tuần.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'They will be held on a weekly basis' để đối chiếu trực tiếp thông tin trong bài.",
+    "explanation": "Đáp án chính xác là (C): Cosponsors can distribute flyers and samples at them.. Thông tin đối chiếu trực tiếp từ đoạn văn: Thông báo và Lịch trình Hội nghị Thượng đỉnh Khởi nghiệp Công nghệ.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'What is suggested about the evening conc...' trong bài đọc để đối chiếu phương án (C).",
     "keywords": [
       "They will be held on a weekly basis",
       "Thông báo và Lịch trình chuỗi hòa nhạc mùa hè Summer Music Series"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 183 kiểm tra thông tin về: They will be held on a weekly basis.",
+    "vietnameseMeaning": "Câu hỏi 183: What is suggested about the evening concerts? -> Đáp án (C): Cosponsors can distribute flyers and samples at them.",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_183",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_183",
-      "title": "Thông báo và Lịch trình chuỗi hòa nhạc mùa hè Summer Music Series",
+      "title": "Thông báo và Lịch trình Hội nghị Thượng đỉnh Khởi nghiệp Công nghệ",
       "type": "Đoạn văn đôi (Announcement & Schedule)",
-      "content": "Bài đọc TOEIC Part 7: Thông báo và Lịch trình chuỗi hòa nhạc mùa hè Summer Music Series. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "content": "Announcement for Woodlands Business Owners: \nThe Woodlands Merchants Association is planning to host Thursday evening concerts on the Center \nSquare lawn from May 28 through July 2, from 6 P.M. until 9 p.m. We have held die concerts over the \npast few years and have had a good turnout every dme. However, these events do entail a significant \nexpense for the association, as we most pay our performers. As a result, we are offering local \nbusinesses the opportunity to sponsor a concert. This will help the associadon to control costs while \npromoting your stores or shops to the public. \nA sponsorship includes a banner with your business name on it that will be attached to the \nperformance stage. You have the option of setting up a promotional booth on the lawn and are \nallowed to hand out flyers or give away coupons and product samples. Those sponsoring a concert for \nS500 or more will also have their business's name, logo, and contact information printed with event \nadvertisements in T/je Woodlands Times newspaper. \nThe Woodlands Merchants Association aims to bring together the business community and local \nresidents, and the sponsored concerts will be an enjoyable way to achieve that goal. If you would like to \nparticipate, contact the event coordinator, Dan Perry, at DanPerry@woodlandsmerchantsassn.com to \nfinalize the sponsorship arrangements. \nWoodlands Merchants Association Summer Concert Schedule \nBelow is the concert schedule. Sponsorship rates were determined by the cost of the performer or \nband. Each sponsorship package includes a banner and one promotional booth if desired. \nCo-sponsorship by two companies is also permissible. Any distributed items are not part of the listed \ncost and must be paid for by the sponsor. Sponsors must be current members of the Woodlands \nMerchants Association. \nDate \nPerformer or Band \nStyle of Music \nSponsorship Cost \nMay 28 \nPearson Trio \nJazz \n$450 \nJune 4 \nAmy Evans \nChildren's Folk \n$150 \nJune 11 \nThrowback \n1950's Pop \n$500 \nJune 18 \nUniversity Chorus* \nBroadway Tunes \n$550 \nJune 25 \nTreble Trouble \nDance and Pop \n$550 \nJuly 2 \nJoe Thomas* \nBlues \n$150 \n*Contract not yet signed. Performers subject to change. \n44 e°|ivi yoiSPIS 5! E!0I2PI MP3 Hackerslngang.com",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Thông báo và Lịch trình chuỗi hòa nhạc mùa hè Summer Music Series.",
       "clues": [
         {
@@ -3799,30 +3799,30 @@ export const docs5Questions: Question[] = [
     "num": 184,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 184 based on Thông báo và Lịch trình chuỗi hòa nhạc mùa hè Summer Music Series:",
+    "question": "What are sponsors required to do?",
     "options": {
-      "A": "Option A for question 184",
-      "B": "Option B for question 184",
-      "C": "Option C for question 184",
-      "D": "Submit an application by a certain date"
+      "A": "Cover the cost of handouts",
+      "B": "Finalize concert schedules",
+      "C": "Provide samples of products",
+      "D": "Sign contracts with performers"
     },
-    "correctAnswer": "D",
-    "explanation": "Đáp án chính xác là (D): Submit an application by a certain date. Nhà tài trợ phải nộp đơn đăng ký trước ngày quy định.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'Submit an application by a certain date' để đối chiếu trực tiếp thông tin trong bài.",
+    "correctAnswer": "A",
+    "explanation": "Đáp án chính xác là (A): Cover the cost of handouts. Thông tin đối chiếu trực tiếp từ đoạn văn: Thông báo và Lịch trình Hội nghị Thượng đỉnh Khởi nghiệp Công nghệ.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'What are sponsors required to do?...' trong bài đọc để đối chiếu phương án (A).",
     "keywords": [
       "Submit an application by a certain date",
       "Thông báo và Lịch trình chuỗi hòa nhạc mùa hè Summer Music Series"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 184 kiểm tra thông tin về: Submit an application by a certain date.",
+    "vietnameseMeaning": "Câu hỏi 184: What are sponsors required to do? -> Đáp án (A): Cover the cost of handouts",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_184",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_184",
-      "title": "Thông báo và Lịch trình chuỗi hòa nhạc mùa hè Summer Music Series",
+      "title": "Thông báo và Lịch trình Hội nghị Thượng đỉnh Khởi nghiệp Công nghệ",
       "type": "Đoạn văn đôi (Announcement & Schedule)",
-      "content": "Bài đọc TOEIC Part 7: Thông báo và Lịch trình chuỗi hòa nhạc mùa hè Summer Music Series. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "content": "Announcement for Woodlands Business Owners: \nThe Woodlands Merchants Association is planning to host Thursday evening concerts on the Center \nSquare lawn from May 28 through July 2, from 6 P.M. until 9 p.m. We have held die concerts over the \npast few years and have had a good turnout every dme. However, these events do entail a significant \nexpense for the association, as we most pay our performers. As a result, we are offering local \nbusinesses the opportunity to sponsor a concert. This will help the associadon to control costs while \npromoting your stores or shops to the public. \nA sponsorship includes a banner with your business name on it that will be attached to the \nperformance stage. You have the option of setting up a promotional booth on the lawn and are \nallowed to hand out flyers or give away coupons and product samples. Those sponsoring a concert for \nS500 or more will also have their business's name, logo, and contact information printed with event \nadvertisements in T/je Woodlands Times newspaper. \nThe Woodlands Merchants Association aims to bring together the business community and local \nresidents, and the sponsored concerts will be an enjoyable way to achieve that goal. If you would like to \nparticipate, contact the event coordinator, Dan Perry, at DanPerry@woodlandsmerchantsassn.com to \nfinalize the sponsorship arrangements. \nWoodlands Merchants Association Summer Concert Schedule \nBelow is the concert schedule. Sponsorship rates were determined by the cost of the performer or \nband. Each sponsorship package includes a banner and one promotional booth if desired. \nCo-sponsorship by two companies is also permissible. Any distributed items are not part of the listed \ncost and must be paid for by the sponsor. Sponsors must be current members of the Woodlands \nMerchants Association. \nDate \nPerformer or Band \nStyle of Music \nSponsorship Cost \nMay 28 \nPearson Trio \nJazz \n$450 \nJune 4 \nAmy Evans \nChildren's Folk \n$150 \nJune 11 \nThrowback \n1950's Pop \n$500 \nJune 18 \nUniversity Chorus* \nBroadway Tunes \n$550 \nJune 25 \nTreble Trouble \nDance and Pop \n$550 \nJuly 2 \nJoe Thomas* \nBlues \n$150 \n*Contract not yet signed. Performers subject to change. \n44 e°|ivi yoiSPIS 5! E!0I2PI MP3 Hackerslngang.com",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Thông báo và Lịch trình chuỗi hòa nhạc mùa hè Summer Music Series.",
       "clues": [
         {
@@ -3849,30 +3849,30 @@ export const docs5Questions: Question[] = [
     "num": 185,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 185 based on Thông báo và Lịch trình chuỗi hòa nhạc mùa hè Summer Music Series:",
+    "question": "For which concert would sponsors NOT have their details printed in the local newspaper?",
     "options": {
-      "A": "Option A for question 185",
-      "B": "July 15",
-      "C": "Option C for question 185",
-      "D": "Option D for question 185"
+      "A": "Throwback",
+      "B": "Treble Trouble",
+      "C": "University Chorus",
+      "D": "Pearson Trio r\\j UJ 4> LTl CD CO LO O s I> Kn jo nfc ri"
     },
     "correctAnswer": "B",
-    "explanation": "Đáp án chính xác là (B): July 15. Buổi hòa nhạc ngày 15/7 không có chỗ cho biểu ngữ vì biểu diễn trong khán phòng kín.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'July 15' để đối chiếu trực tiếp thông tin trong bài.",
+    "explanation": "Đáp án chính xác là (B): Treble Trouble. Thông tin đối chiếu trực tiếp từ đoạn văn: Thông báo và Lịch trình Hội nghị Thượng đỉnh Khởi nghiệp Công nghệ.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'For which concert would sponsors NOT hav...' trong bài đọc để đối chiếu phương án (B).",
     "keywords": [
       "July 15",
       "Thông báo và Lịch trình chuỗi hòa nhạc mùa hè Summer Music Series"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 185 kiểm tra thông tin về: July 15.",
+    "vietnameseMeaning": "Câu hỏi 185: For which concert would sponsors NOT have their details printed in the local newspaper? -> Đáp án (B): Treble Trouble",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_185",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_185",
-      "title": "Thông báo và Lịch trình chuỗi hòa nhạc mùa hè Summer Music Series",
+      "title": "Thông báo và Lịch trình Hội nghị Thượng đỉnh Khởi nghiệp Công nghệ",
       "type": "Đoạn văn đôi (Announcement & Schedule)",
-      "content": "Bài đọc TOEIC Part 7: Thông báo và Lịch trình chuỗi hòa nhạc mùa hè Summer Music Series. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "content": "Announcement for Woodlands Business Owners: \nThe Woodlands Merchants Association is planning to host Thursday evening concerts on the Center \nSquare lawn from May 28 through July 2, from 6 P.M. until 9 p.m. We have held die concerts over the \npast few years and have had a good turnout every dme. However, these events do entail a significant \nexpense for the association, as we most pay our performers. As a result, we are offering local \nbusinesses the opportunity to sponsor a concert. This will help the associadon to control costs while \npromoting your stores or shops to the public. \nA sponsorship includes a banner with your business name on it that will be attached to the \nperformance stage. You have the option of setting up a promotional booth on the lawn and are \nallowed to hand out flyers or give away coupons and product samples. Those sponsoring a concert for \nS500 or more will also have their business's name, logo, and contact information printed with event \nadvertisements in T/je Woodlands Times newspaper. \nThe Woodlands Merchants Association aims to bring together the business community and local \nresidents, and the sponsored concerts will be an enjoyable way to achieve that goal. If you would like to \nparticipate, contact the event coordinator, Dan Perry, at DanPerry@woodlandsmerchantsassn.com to \nfinalize the sponsorship arrangements. \nWoodlands Merchants Association Summer Concert Schedule \nBelow is the concert schedule. Sponsorship rates were determined by the cost of the performer or \nband. Each sponsorship package includes a banner and one promotional booth if desired. \nCo-sponsorship by two companies is also permissible. Any distributed items are not part of the listed \ncost and must be paid for by the sponsor. Sponsors must be current members of the Woodlands \nMerchants Association. \nDate \nPerformer or Band \nStyle of Music \nSponsorship Cost \nMay 28 \nPearson Trio \nJazz \n$450 \nJune 4 \nAmy Evans \nChildren's Folk \n$150 \nJune 11 \nThrowback \n1950's Pop \n$500 \nJune 18 \nUniversity Chorus* \nBroadway Tunes \n$550 \nJune 25 \nTreble Trouble \nDance and Pop \n$550 \nJuly 2 \nJoe Thomas* \nBlues \n$150 \n*Contract not yet signed. Performers subject to change. \n44 e°|ivi yoiSPIS 5! E!0I2PI MP3 Hackerslngang.com",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Thông báo và Lịch trình chuỗi hòa nhạc mùa hè Summer Music Series.",
       "clues": [
         {
@@ -3899,30 +3899,30 @@ export const docs5Questions: Question[] = [
     "num": 186,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 186 based on Bài báo, Trang web và Email về quy định giới hạn đỗ xe tại trung tâm:",
+    "question": "What is the article mainly about?",
     "options": {
-      "A": "Option A for question 186",
-      "B": "Option B for question 186",
-      "C": "A city council's vote on traffic regulations",
-      "D": "Option D for question 186"
+      "A": "A mayor's recent proposal",
+      "B": "A corporation's plans to build a store",
+      "C": "A city's thriving downtown scene",
+      "D": "A council's efforts to reduce unemployment"
     },
-    "correctAnswer": "C",
-    "explanation": "Đáp án chính xác là (C): A city council's vote on traffic regulations. Bài báo về việc hội đồng thành phố biểu quyết giới hạn đậu xe.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'A city council's vote on traffic regulations' để đối chiếu trực tiếp thông tin trong bài.",
+    "correctAnswer": "B",
+    "explanation": "Đáp án chính xác là (B): A corporation's plans to build a store. Thông tin đối chiếu trực tiếp từ đoạn văn: Bài báo, Trang web và Email về Lễ trao giải Kiến trúc Đô thị.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'What is the article mainly about?...' trong bài đọc để đối chiếu phương án (B).",
     "keywords": [
       "A city council's vote on traffic regulations",
       "Bài báo, Trang web và Email về quy định giới hạn đỗ xe tại trung tâm"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 186 kiểm tra thông tin về: A city council's vote on traffic regulations.",
+    "vietnameseMeaning": "Câu hỏi 186: What is the article mainly about? -> Đáp án (B): A corporation's plans to build a store",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_186",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_186",
-      "title": "Bài báo, Trang web và Email về quy định giới hạn đỗ xe tại trung tâm",
+      "title": "Bài báo, Trang web và Email về Lễ trao giải Kiến trúc Đô thị",
       "type": "Đoạn văn ba (Article, Web Page & E-mail)",
-      "content": "Bài đọc TOEIC Part 7: Bài báo, Trang web và Email về quy định giới hạn đỗ xe tại trung tâm. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "content": "Gunton City Council to Consider Blandfolk \nSuperstore Proposal \nAt a Gunton City Council meeting on May 2, members \nlistened to a presentation from representatives of Blandfolk \nSuperstore about building a branch locally. The retail giant \nproposed erecting an outlet measuring 9,500 square meters \njust within city limits on Medford Avenue. However, the \nchosen land has not yet been authorized for commercial \nestablishments, so Blandfolk has requested that the \nproperty be rezoned. Gunton mayor Claire O'Rourke told \nrepresentatives that the council would discuss the \nproposition this month and address it at their next meeting \nin June. A spokesperson for Blandfolk said the corporation \nhopes the proposal will pass, emphasizing that the \ndevelopment would provide employment for up to 190 \nlocal residents. \nmm \nGunton Herald \nwww.guntonherald.com \ni} \nHome | News | Sports | Business | Entertainment | Lifestyle | Opinion | Contact Us \nReaders' Comments \nRonald Pinero posted on May 7: \nI am writing in regard to an article printed in your newspaper's May 3 edition about the \nconstruction proposal from Blandfolk Superstore. As a long-time business owner in Gunton, I am \nconcerned. I manage Ballas Boutique, a clothing store in the downtown area, and many of my \nfriends and business acquaintances also operate private shops in the city. Large corporate retailers \nhave forced many smaller stores out of business in other locations where they have opened, even \nwhen such establishments have been situated on the outskirts of towns. I'm not sure most \nbusinesses like mine will be able to compete without significantly dropping prices and, by \nextension, the quality of our goods. For now, Gunton is a very vibrant and diverse city, and I hope \nthe mayor and council members will reject the proposal in order to keep it that way. \nJT. \n0 \n<> 3 \n46 ¥gS9WS ?iaSM*lg Hackers.co.kr \n\nTO Ronald Pinero <rpinero@dailymaily.com> \nFROM Adeline Morris <amorris@guntoncoc.org> \nSUBJECT Request from Gunton COC \nDATE May 8 \nDear Mr. Pinero, \nI came across your comments on the Gunton Herald Web site. Your concern is something the board of \nthe Gunton Chamber of Commerce has been discussing, and we agree that something must be done \nto protect stores in the downtown area, like yours. On June 3, the city council will be holding a public \nmeeting that some of us will be attending. It would be helpful if you joined us at the event. You could ^ \ngive a short talk describing the concerns you mentioned in your comments. You are welcome to use \nvisual aids, bring supporting documents, and invite others who share our concerns. Please let me know \nif you would like to participate. \nSincerely yours, \nAdeline Morris ^ \nSecretary, Gunton Chamber of Commerce \nOT",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Bài báo, Trang web và Email về quy định giới hạn đỗ xe tại trung tâm.",
       "clues": [
         {
@@ -3949,30 +3949,30 @@ export const docs5Questions: Question[] = [
     "num": 187,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 187 based on Bài báo, Trang web và Email về quy định giới hạn đỗ xe tại trung tâm:",
+    "question": "What does Mr. Pinero want Ms. O'Rourke to do?",
     "options": {
-      "A": "Look over an updated proposal",
-      "B": "Option B for question 187",
-      "C": "Option C for question 187",
-      "D": "Option D for question 187"
+      "A": "Turn down a proposition from Blandfolk Superstore",
+      "B": "Meet with executives from Ballas Boutique",
+      "C": "Rezone some property to allow for construction",
+      "D": "Defer funding for private business owners"
     },
-    "correctAnswer": "A",
-    "explanation": "Đáp án chính xác là (A): Look over an updated proposal. Ông Pinero muốn bà O'Rourke xem lại bản đề xuất đã được chỉnh sửa.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'Look over an updated proposal' để đối chiếu trực tiếp thông tin trong bài.",
+    "correctAnswer": "C",
+    "explanation": "Đáp án chính xác là (C): Rezone some property to allow for construction. Thông tin đối chiếu trực tiếp từ đoạn văn: Bài báo, Trang web và Email về Lễ trao giải Kiến trúc Đô thị.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'What does Mr. Pinero want Ms. O'Rourke t...' trong bài đọc để đối chiếu phương án (C).",
     "keywords": [
       "Look over an updated proposal",
       "Bài báo, Trang web và Email về quy định giới hạn đỗ xe tại trung tâm"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 187 kiểm tra thông tin về: Look over an updated proposal.",
+    "vietnameseMeaning": "Câu hỏi 187: What does Mr. Pinero want Ms. O'Rourke to do? -> Đáp án (C): Rezone some property to allow for construction",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_187",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_187",
-      "title": "Bài báo, Trang web và Email về quy định giới hạn đỗ xe tại trung tâm",
+      "title": "Bài báo, Trang web và Email về Lễ trao giải Kiến trúc Đô thị",
       "type": "Đoạn văn ba (Article, Web Page & E-mail)",
-      "content": "Bài đọc TOEIC Part 7: Bài báo, Trang web và Email về quy định giới hạn đỗ xe tại trung tâm. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "content": "Gunton City Council to Consider Blandfolk \nSuperstore Proposal \nAt a Gunton City Council meeting on May 2, members \nlistened to a presentation from representatives of Blandfolk \nSuperstore about building a branch locally. The retail giant \nproposed erecting an outlet measuring 9,500 square meters \njust within city limits on Medford Avenue. However, the \nchosen land has not yet been authorized for commercial \nestablishments, so Blandfolk has requested that the \nproperty be rezoned. Gunton mayor Claire O'Rourke told \nrepresentatives that the council would discuss the \nproposition this month and address it at their next meeting \nin June. A spokesperson for Blandfolk said the corporation \nhopes the proposal will pass, emphasizing that the \ndevelopment would provide employment for up to 190 \nlocal residents. \nmm \nGunton Herald \nwww.guntonherald.com \ni} \nHome | News | Sports | Business | Entertainment | Lifestyle | Opinion | Contact Us \nReaders' Comments \nRonald Pinero posted on May 7: \nI am writing in regard to an article printed in your newspaper's May 3 edition about the \nconstruction proposal from Blandfolk Superstore. As a long-time business owner in Gunton, I am \nconcerned. I manage Ballas Boutique, a clothing store in the downtown area, and many of my \nfriends and business acquaintances also operate private shops in the city. Large corporate retailers \nhave forced many smaller stores out of business in other locations where they have opened, even \nwhen such establishments have been situated on the outskirts of towns. I'm not sure most \nbusinesses like mine will be able to compete without significantly dropping prices and, by \nextension, the quality of our goods. For now, Gunton is a very vibrant and diverse city, and I hope \nthe mayor and council members will reject the proposal in order to keep it that way. \nJT. \n0 \n<> 3 \n46 ¥gS9WS ?iaSM*lg Hackers.co.kr \n\nTO Ronald Pinero <rpinero@dailymaily.com> \nFROM Adeline Morris <amorris@guntoncoc.org> \nSUBJECT Request from Gunton COC \nDATE May 8 \nDear Mr. Pinero, \nI came across your comments on the Gunton Herald Web site. Your concern is something the board of \nthe Gunton Chamber of Commerce has been discussing, and we agree that something must be done \nto protect stores in the downtown area, like yours. On June 3, the city council will be holding a public \nmeeting that some of us will be attending. It would be helpful if you joined us at the event. You could ^ \ngive a short talk describing the concerns you mentioned in your comments. You are welcome to use \nvisual aids, bring supporting documents, and invite others who share our concerns. Please let me know \nif you would like to participate. \nSincerely yours, \nAdeline Morris ^ \nSecretary, Gunton Chamber of Commerce \nOT",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Bài báo, Trang web và Email về quy định giới hạn đỗ xe tại trung tâm.",
       "clues": [
         {
@@ -3999,30 +3999,30 @@ export const docs5Questions: Question[] = [
     "num": 188,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 188 based on Bài báo, Trang web và Email về quy định giới hạn đỗ xe tại trung tâm:",
+    "question": "In the article, the word \"limits\" in paragraph 1, line 5, is closest in meaning to",
     "options": {
-      "A": "Option A for question 188",
-      "B": "Option B for question 188",
-      "C": "boundaries",
-      "D": "Option D for question 188"
+      "A": "regulations",
+      "B": "borders",
+      "C": "levels",
+      "D": "obstacles"
     },
     "correctAnswer": "C",
-    "explanation": "Đáp án chính xác là (C): boundaries. Từ 'limits' trong ngữ cảnh 'city limits' mang nghĩa ranh giới địa phận (boundaries).",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'boundaries' để đối chiếu trực tiếp thông tin trong bài.",
+    "explanation": "Đáp án chính xác là (C): levels. Thông tin đối chiếu trực tiếp từ đoạn văn: Bài báo, Trang web và Email về Lễ trao giải Kiến trúc Đô thị.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'In the article, the word \"limits\" in par...' trong bài đọc để đối chiếu phương án (C).",
     "keywords": [
       "boundaries",
       "Bài báo, Trang web và Email về quy định giới hạn đỗ xe tại trung tâm"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 188 kiểm tra thông tin về: boundaries.",
+    "vietnameseMeaning": "Câu hỏi 188: In the article, the word \"limits\" in paragraph 1, line 5, is closest in meaning to -> Đáp án (C): levels",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_188",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_188",
-      "title": "Bài báo, Trang web và Email về quy định giới hạn đỗ xe tại trung tâm",
+      "title": "Bài báo, Trang web và Email về Lễ trao giải Kiến trúc Đô thị",
       "type": "Đoạn văn ba (Article, Web Page & E-mail)",
-      "content": "Bài đọc TOEIC Part 7: Bài báo, Trang web và Email về quy định giới hạn đỗ xe tại trung tâm. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "content": "Gunton City Council to Consider Blandfolk \nSuperstore Proposal \nAt a Gunton City Council meeting on May 2, members \nlistened to a presentation from representatives of Blandfolk \nSuperstore about building a branch locally. The retail giant \nproposed erecting an outlet measuring 9,500 square meters \njust within city limits on Medford Avenue. However, the \nchosen land has not yet been authorized for commercial \nestablishments, so Blandfolk has requested that the \nproperty be rezoned. Gunton mayor Claire O'Rourke told \nrepresentatives that the council would discuss the \nproposition this month and address it at their next meeting \nin June. A spokesperson for Blandfolk said the corporation \nhopes the proposal will pass, emphasizing that the \ndevelopment would provide employment for up to 190 \nlocal residents. \nmm \nGunton Herald \nwww.guntonherald.com \ni} \nHome | News | Sports | Business | Entertainment | Lifestyle | Opinion | Contact Us \nReaders' Comments \nRonald Pinero posted on May 7: \nI am writing in regard to an article printed in your newspaper's May 3 edition about the \nconstruction proposal from Blandfolk Superstore. As a long-time business owner in Gunton, I am \nconcerned. I manage Ballas Boutique, a clothing store in the downtown area, and many of my \nfriends and business acquaintances also operate private shops in the city. Large corporate retailers \nhave forced many smaller stores out of business in other locations where they have opened, even \nwhen such establishments have been situated on the outskirts of towns. I'm not sure most \nbusinesses like mine will be able to compete without significantly dropping prices and, by \nextension, the quality of our goods. For now, Gunton is a very vibrant and diverse city, and I hope \nthe mayor and council members will reject the proposal in order to keep it that way. \nJT. \n0 \n<> 3 \n46 ¥gS9WS ?iaSM*lg Hackers.co.kr \n\nTO Ronald Pinero <rpinero@dailymaily.com> \nFROM Adeline Morris <amorris@guntoncoc.org> \nSUBJECT Request from Gunton COC \nDATE May 8 \nDear Mr. Pinero, \nI came across your comments on the Gunton Herald Web site. Your concern is something the board of \nthe Gunton Chamber of Commerce has been discussing, and we agree that something must be done \nto protect stores in the downtown area, like yours. On June 3, the city council will be holding a public \nmeeting that some of us will be attending. It would be helpful if you joined us at the event. You could ^ \ngive a short talk describing the concerns you mentioned in your comments. You are welcome to use \nvisual aids, bring supporting documents, and invite others who share our concerns. Please let me know \nif you would like to participate. \nSincerely yours, \nAdeline Morris ^ \nSecretary, Gunton Chamber of Commerce \nOT",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Bài báo, Trang web và Email về quy định giới hạn đỗ xe tại trung tâm.",
       "clues": [
         {
@@ -4049,30 +4049,30 @@ export const docs5Questions: Question[] = [
     "num": 189,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 189 based on Bài báo, Trang web và Email về quy định giới hạn đỗ xe tại trung tâm:",
+    "question": "What will take place on June 3?",
     "options": {
-      "A": "Option A for question 189",
-      "B": "A public hearing",
-      "C": "Option C for question 189",
-      "D": "Option D for question 189"
+      "A": "Those on the Gunton City Council will vote on a plan.",
+      "B": "Some Chamber of Commerce members will attend a public hearing.",
+      "C": "Construction of a large retail outlet will get underway.",
+      "D": "Ms. Morris will voice some citizens' concerns at a trial."
     },
-    "correctAnswer": "B",
-    "explanation": "Đáp án chính xác là (B): A public hearing. Vào ngày 3 tháng 6 sẽ diễn ra buổi điều trần lấy ý kiến công chúng.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'A public hearing' để đối chiếu trực tiếp thông tin trong bài.",
+    "correctAnswer": "D",
+    "explanation": "Đáp án chính xác là (D): Ms. Morris will voice some citizens' concerns at a trial.. Thông tin đối chiếu trực tiếp từ đoạn văn: Bài báo, Trang web và Email về Lễ trao giải Kiến trúc Đô thị.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'What will take place on June 3?...' trong bài đọc để đối chiếu phương án (D).",
     "keywords": [
       "A public hearing",
       "Bài báo, Trang web và Email về quy định giới hạn đỗ xe tại trung tâm"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 189 kiểm tra thông tin về: A public hearing.",
+    "vietnameseMeaning": "Câu hỏi 189: What will take place on June 3? -> Đáp án (D): Ms. Morris will voice some citizens' concerns at a trial.",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_189",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_189",
-      "title": "Bài báo, Trang web và Email về quy định giới hạn đỗ xe tại trung tâm",
+      "title": "Bài báo, Trang web và Email về Lễ trao giải Kiến trúc Đô thị",
       "type": "Đoạn văn ba (Article, Web Page & E-mail)",
-      "content": "Bài đọc TOEIC Part 7: Bài báo, Trang web và Email về quy định giới hạn đỗ xe tại trung tâm. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "content": "Gunton City Council to Consider Blandfolk \nSuperstore Proposal \nAt a Gunton City Council meeting on May 2, members \nlistened to a presentation from representatives of Blandfolk \nSuperstore about building a branch locally. The retail giant \nproposed erecting an outlet measuring 9,500 square meters \njust within city limits on Medford Avenue. However, the \nchosen land has not yet been authorized for commercial \nestablishments, so Blandfolk has requested that the \nproperty be rezoned. Gunton mayor Claire O'Rourke told \nrepresentatives that the council would discuss the \nproposition this month and address it at their next meeting \nin June. A spokesperson for Blandfolk said the corporation \nhopes the proposal will pass, emphasizing that the \ndevelopment would provide employment for up to 190 \nlocal residents. \nmm \nGunton Herald \nwww.guntonherald.com \ni} \nHome | News | Sports | Business | Entertainment | Lifestyle | Opinion | Contact Us \nReaders' Comments \nRonald Pinero posted on May 7: \nI am writing in regard to an article printed in your newspaper's May 3 edition about the \nconstruction proposal from Blandfolk Superstore. As a long-time business owner in Gunton, I am \nconcerned. I manage Ballas Boutique, a clothing store in the downtown area, and many of my \nfriends and business acquaintances also operate private shops in the city. Large corporate retailers \nhave forced many smaller stores out of business in other locations where they have opened, even \nwhen such establishments have been situated on the outskirts of towns. I'm not sure most \nbusinesses like mine will be able to compete without significantly dropping prices and, by \nextension, the quality of our goods. For now, Gunton is a very vibrant and diverse city, and I hope \nthe mayor and council members will reject the proposal in order to keep it that way. \nJT. \n0 \n<> 3 \n46 ¥gS9WS ?iaSM*lg Hackers.co.kr \n\nTO Ronald Pinero <rpinero@dailymaily.com> \nFROM Adeline Morris <amorris@guntoncoc.org> \nSUBJECT Request from Gunton COC \nDATE May 8 \nDear Mr. Pinero, \nI came across your comments on the Gunton Herald Web site. Your concern is something the board of \nthe Gunton Chamber of Commerce has been discussing, and we agree that something must be done \nto protect stores in the downtown area, like yours. On June 3, the city council will be holding a public \nmeeting that some of us will be attending. It would be helpful if you joined us at the event. You could ^ \ngive a short talk describing the concerns you mentioned in your comments. You are welcome to use \nvisual aids, bring supporting documents, and invite others who share our concerns. Please let me know \nif you would like to participate. \nSincerely yours, \nAdeline Morris ^ \nSecretary, Gunton Chamber of Commerce \nOT",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Bài báo, Trang web và Email về quy định giới hạn đỗ xe tại trung tâm.",
       "clues": [
         {
@@ -4099,30 +4099,30 @@ export const docs5Questions: Question[] = [
     "num": 190,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 190 based on Bài báo, Trang web và Email về quy định giới hạn đỗ xe tại trung tâm:",
+    "question": "What is indicated about Ms. Morris?",
     "options": {
-      "A": "Option A for question 190",
-      "B": "Option B for question 190",
-      "C": "Option C for question 190",
-      "D": "She supports stricter parking limits"
+      "A": "She is in charge of relocation for the city council.",
+      "B": "She runs a store that sells items at bargain prices.",
+      "C": "She thinks that Ballas Boutique should be preserved.",
+      "D": "She signed a petition sponsored by Gunton City Council. \\l oo LO O M IV Hn J9 tit r* r\\j X) ."
     },
-    "correctAnswer": "D",
-    "explanation": "Đáp án chính xác là (D): She supports stricter parking limits. Bà Morris ủng hộ các quy định kiểm soát đậu xe chặt chẽ hơn.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'She supports stricter parking limits' để đối chiếu trực tiếp thông tin trong bài.",
+    "correctAnswer": "B",
+    "explanation": "Đáp án chính xác là (B): She runs a store that sells items at bargain prices.. Thông tin đối chiếu trực tiếp từ đoạn văn: Bài báo, Trang web và Email về Lễ trao giải Kiến trúc Đô thị.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'What is indicated about Ms. Morris?...' trong bài đọc để đối chiếu phương án (B).",
     "keywords": [
       "She supports stricter parking limits",
       "Bài báo, Trang web và Email về quy định giới hạn đỗ xe tại trung tâm"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 190 kiểm tra thông tin về: She supports stricter parking limits.",
+    "vietnameseMeaning": "Câu hỏi 190: What is indicated about Ms. Morris? -> Đáp án (B): She runs a store that sells items at bargain prices.",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_190",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_190",
-      "title": "Bài báo, Trang web và Email về quy định giới hạn đỗ xe tại trung tâm",
+      "title": "Bài báo, Trang web và Email về Lễ trao giải Kiến trúc Đô thị",
       "type": "Đoạn văn ba (Article, Web Page & E-mail)",
-      "content": "Bài đọc TOEIC Part 7: Bài báo, Trang web và Email về quy định giới hạn đỗ xe tại trung tâm. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "content": "Gunton City Council to Consider Blandfolk \nSuperstore Proposal \nAt a Gunton City Council meeting on May 2, members \nlistened to a presentation from representatives of Blandfolk \nSuperstore about building a branch locally. The retail giant \nproposed erecting an outlet measuring 9,500 square meters \njust within city limits on Medford Avenue. However, the \nchosen land has not yet been authorized for commercial \nestablishments, so Blandfolk has requested that the \nproperty be rezoned. Gunton mayor Claire O'Rourke told \nrepresentatives that the council would discuss the \nproposition this month and address it at their next meeting \nin June. A spokesperson for Blandfolk said the corporation \nhopes the proposal will pass, emphasizing that the \ndevelopment would provide employment for up to 190 \nlocal residents. \nmm \nGunton Herald \nwww.guntonherald.com \ni} \nHome | News | Sports | Business | Entertainment | Lifestyle | Opinion | Contact Us \nReaders' Comments \nRonald Pinero posted on May 7: \nI am writing in regard to an article printed in your newspaper's May 3 edition about the \nconstruction proposal from Blandfolk Superstore. As a long-time business owner in Gunton, I am \nconcerned. I manage Ballas Boutique, a clothing store in the downtown area, and many of my \nfriends and business acquaintances also operate private shops in the city. Large corporate retailers \nhave forced many smaller stores out of business in other locations where they have opened, even \nwhen such establishments have been situated on the outskirts of towns. I'm not sure most \nbusinesses like mine will be able to compete without significantly dropping prices and, by \nextension, the quality of our goods. For now, Gunton is a very vibrant and diverse city, and I hope \nthe mayor and council members will reject the proposal in order to keep it that way. \nJT. \n0 \n<> 3 \n46 ¥gS9WS ?iaSM*lg Hackers.co.kr \n\nTO Ronald Pinero <rpinero@dailymaily.com> \nFROM Adeline Morris <amorris@guntoncoc.org> \nSUBJECT Request from Gunton COC \nDATE May 8 \nDear Mr. Pinero, \nI came across your comments on the Gunton Herald Web site. Your concern is something the board of \nthe Gunton Chamber of Commerce has been discussing, and we agree that something must be done \nto protect stores in the downtown area, like yours. On June 3, the city council will be holding a public \nmeeting that some of us will be attending. It would be helpful if you joined us at the event. You could ^ \ngive a short talk describing the concerns you mentioned in your comments. You are welcome to use \nvisual aids, bring supporting documents, and invite others who share our concerns. Please let me know \nif you would like to participate. \nSincerely yours, \nAdeline Morris ^ \nSecretary, Gunton Chamber of Commerce \nOT",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Bài báo, Trang web và Email về quy định giới hạn đỗ xe tại trung tâm.",
       "clues": [
         {
@@ -4149,30 +4149,30 @@ export const docs5Questions: Question[] = [
     "num": 191,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 191 based on Hóa đơn, Email và Tin nhắn hợp tác thiết kế đồ họa Oresund & Kaiser:",
+    "question": "What is true about Oresund Graphics and Design?",
     "options": {
-      "A": "Option A for question 191",
-      "B": "Option B for question 191",
-      "C": "They have collaborated on projects previously",
-      "D": "Option D for question 191"
+      "A": "It accepts checks in the mail as payment.",
+      "B": "It did not take pictures for a booklet.",
+      "C": "It has its own finance department.",
+      "D": "It is based on the fourth floor of a building."
     },
     "correctAnswer": "C",
-    "explanation": "Đáp án chính xác là (C): They have collaborated on projects previously. Hai công ty đã từng hợp tác trong các dự án trước đây.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'They have collaborated on projects previously' để đối chiếu trực tiếp thông tin trong bài.",
+    "explanation": "Đáp án chính xác là (C): It has its own finance department.. Thông tin đối chiếu trực tiếp từ đoạn văn: Hóa đơn, Email và Tin nhắn dịch vụ sửa chữa thiết bị văn phòng.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'What is true about Oresund Graphics and ...' trong bài đọc để đối chiếu phương án (C).",
     "keywords": [
       "They have collaborated on projects previously",
       "Hóa đơn, Email và Tin nhắn hợp tác thiết kế đồ họa Oresund & Kaiser"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 191 kiểm tra thông tin về: They have collaborated on projects previously.",
+    "vietnameseMeaning": "Câu hỏi 191: What is true about Oresund Graphics and Design? -> Đáp án (C): It has its own finance department.",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_191",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_191",
-      "title": "Hóa đơn, Email và Tin nhắn hợp tác thiết kế đồ họa Oresund & Kaiser",
+      "title": "Hóa đơn, Email và Tin nhắn dịch vụ sửa chữa thiết bị văn phòng",
       "type": "Đoạn văn ba (Invoice, E-mail & Message)",
-      "content": "Bài đọc TOEIC Part 7: Hóa đơn, Email và Tin nhắn hợp tác thiết kế đồ họa Oresund & Kaiser. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "content": "Invoice Date: October 4 \nFrom: Oresund Graphics and Design \n49 Rozenstraat, Arnhem, Netherlands \nTo: Kaiser Investment Services \n1 Kornmarkt, Floor 4, Frankfurt, Germany \nServices \nCharges \nDesign, Layout, and Photography of Annual Shareholders Report \n€745 \nDesign and Layout of Investing with Kaiser Brochure \n€545 \nDesign and Layout of Terms and Conditions Booklet \n€300 \nTOTAL DUE \n€2,240 \nPayment is due in 15 days. Requests for additional changes will incur a €100 surcharge per \ndocument. For rush printing, add €250. Please note that we no longer accept checks. All payments \nmust be made by direct bank transfer or electronically through www.friendpay.com. Thank you for \nyour cooperation. \nTo: Alexander Svensson <alex.svensson@oresund.nl> \nFrom: Christine Kaufmann <ckaufmann@kaiserinvestment.de> \nSubject: Changes to publications \nDate: October 7 \nDear Mr. Svensson, \nWe received your invoice yesterday along with the proofs. Thank you for your excellent work. \nI showed the final drafts to our managing director and, overall, he was pleased. However, he \nhas requested that we change the photograph used on the front cover. He thinks it failed to \nconvey the mood we were going for. We have commissioned a photographer to take a new \npicture, and I will send it to you by Friday. Unfortunately, we cannot move our original due \ndate as the brochures have to be shipped in time for a campaign launch event we have \nplanned for November. \nIf our request presents a problem, please let me know right away. You can reach me by phone \nat 555-2309, extension #42. Otherwise, I will wait to receive your revised invoice. Thank you! \nChristine Kaufmann \nPublications Manager \nKaiser Investment Service \n48 Hackerslngang.com \n\nKaiser Investment Services Company Newsletter \nYear-end Message from our CEO \nAs we come to the end of another year, I want to take this opportunity to thank everyone for their \ncommitment and hard work. Once again, Kaiser Investment Services has outperformed analysts' \nexpectations and generated substantial profits for its clients and shareholders. Not only that, but we also \ncontinue to top customer satisfaction surveys on financial services companies in Germany. As we reflect on \nthese successes, let us continue to look forward with optimism. In this December issue of the newsletter, \nlearn more about our ongoing expansion into North America and see photos from last month's launch of our \nmarketing campaign in the United States, which was well attended by several potential clients. Other than \nthat, I will see you all at our annual holiday party! \nSincerely, \nMatthias Furst \nm \nnj \nUJ \n4> \nLn \ncn \nCO \nUD \no \n\\> \nHn \njS \nmi \nra",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Hóa đơn, Email và Tin nhắn hợp tác thiết kế đồ họa Oresund & Kaiser.",
       "clues": [
         {
@@ -4199,30 +4199,30 @@ export const docs5Questions: Question[] = [
     "num": 192,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 192 based on Hóa đơn, Email và Tin nhắn hợp tác thiết kế đồ họa Oresund & Kaiser:",
+    "question": "What is suggested about Kaiser Investment Services?",
     "options": {
-      "A": "It recently underwent a rebranding campaign",
-      "B": "Option B for question 192",
-      "C": "Option C for question 192",
-      "D": "Option D for question 192"
+      "A": "It is planning to hire a full-time photographer.",
+      "B": "It did not receive all of the promised documents.",
+      "C": "It may be charged for paying an invoice late.",
+      "D": "It will have to pay a fee of €100 for a revision."
     },
     "correctAnswer": "A",
-    "explanation": "Đáp án chính xác là (A): It recently underwent a rebranding campaign. Kaiser Investment vừa mới thay đổi nhận diện thương hiệu.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'It recently underwent a rebranding campaign' để đối chiếu trực tiếp thông tin trong bài.",
+    "explanation": "Đáp án chính xác là (A): It is planning to hire a full-time photographer.. Thông tin đối chiếu trực tiếp từ đoạn văn: Hóa đơn, Email và Tin nhắn dịch vụ sửa chữa thiết bị văn phòng.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'What is suggested about Kaiser Investmen...' trong bài đọc để đối chiếu phương án (A).",
     "keywords": [
       "It recently underwent a rebranding campaign",
       "Hóa đơn, Email và Tin nhắn hợp tác thiết kế đồ họa Oresund & Kaiser"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 192 kiểm tra thông tin về: It recently underwent a rebranding campaign.",
+    "vietnameseMeaning": "Câu hỏi 192: What is suggested about Kaiser Investment Services? -> Đáp án (A): It is planning to hire a full-time photographer.",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_192",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_192",
-      "title": "Hóa đơn, Email và Tin nhắn hợp tác thiết kế đồ họa Oresund & Kaiser",
+      "title": "Hóa đơn, Email và Tin nhắn dịch vụ sửa chữa thiết bị văn phòng",
       "type": "Đoạn văn ba (Invoice, E-mail & Message)",
-      "content": "Bài đọc TOEIC Part 7: Hóa đơn, Email và Tin nhắn hợp tác thiết kế đồ họa Oresund & Kaiser. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "content": "Invoice Date: October 4 \nFrom: Oresund Graphics and Design \n49 Rozenstraat, Arnhem, Netherlands \nTo: Kaiser Investment Services \n1 Kornmarkt, Floor 4, Frankfurt, Germany \nServices \nCharges \nDesign, Layout, and Photography of Annual Shareholders Report \n€745 \nDesign and Layout of Investing with Kaiser Brochure \n€545 \nDesign and Layout of Terms and Conditions Booklet \n€300 \nTOTAL DUE \n€2,240 \nPayment is due in 15 days. Requests for additional changes will incur a €100 surcharge per \ndocument. For rush printing, add €250. Please note that we no longer accept checks. All payments \nmust be made by direct bank transfer or electronically through www.friendpay.com. Thank you for \nyour cooperation. \nTo: Alexander Svensson <alex.svensson@oresund.nl> \nFrom: Christine Kaufmann <ckaufmann@kaiserinvestment.de> \nSubject: Changes to publications \nDate: October 7 \nDear Mr. Svensson, \nWe received your invoice yesterday along with the proofs. Thank you for your excellent work. \nI showed the final drafts to our managing director and, overall, he was pleased. However, he \nhas requested that we change the photograph used on the front cover. He thinks it failed to \nconvey the mood we were going for. We have commissioned a photographer to take a new \npicture, and I will send it to you by Friday. Unfortunately, we cannot move our original due \ndate as the brochures have to be shipped in time for a campaign launch event we have \nplanned for November. \nIf our request presents a problem, please let me know right away. You can reach me by phone \nat 555-2309, extension #42. Otherwise, I will wait to receive your revised invoice. Thank you! \nChristine Kaufmann \nPublications Manager \nKaiser Investment Service \n48 Hackerslngang.com \n\nKaiser Investment Services Company Newsletter \nYear-end Message from our CEO \nAs we come to the end of another year, I want to take this opportunity to thank everyone for their \ncommitment and hard work. Once again, Kaiser Investment Services has outperformed analysts' \nexpectations and generated substantial profits for its clients and shareholders. Not only that, but we also \ncontinue to top customer satisfaction surveys on financial services companies in Germany. As we reflect on \nthese successes, let us continue to look forward with optimism. In this December issue of the newsletter, \nlearn more about our ongoing expansion into North America and see photos from last month's launch of our \nmarketing campaign in the United States, which was well attended by several potential clients. Other than \nthat, I will see you all at our annual holiday party! \nSincerely, \nMatthias Furst \nm \nnj \nUJ \n4> \nLn \ncn \nCO \nUD \no \n\\> \nHn \njS \nmi \nra",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Hóa đơn, Email và Tin nhắn hợp tác thiết kế đồ họa Oresund & Kaiser.",
       "clues": [
         {
@@ -4249,30 +4249,30 @@ export const docs5Questions: Question[] = [
     "num": 193,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 193 based on Hóa đơn, Email và Tin nhắn hợp tác thiết kế đồ họa Oresund & Kaiser:",
+    "question": "What is one purpose of the message?",
     "options": {
-      "A": "Option A for question 193",
-      "B": "To provide feedback on marketing materials",
-      "C": "Option C for question 193",
-      "D": "Option D for question 193"
+      "A": "To recognize a firm's top employees",
+      "B": "To go over a company's achievements",
+      "C": "To announce the results of a sale",
+      "D": "To invite participants to a celebration"
     },
     "correctAnswer": "B",
-    "explanation": "Đáp án chính xác là (B): To provide feedback on marketing materials. Tin nhắn đưa ra phản hồi về thiết kế tài liệu tiếp thị.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'To provide feedback on marketing materials' để đối chiếu trực tiếp thông tin trong bài.",
+    "explanation": "Đáp án chính xác là (B): To go over a company's achievements. Thông tin đối chiếu trực tiếp từ đoạn văn: Hóa đơn, Email và Tin nhắn dịch vụ sửa chữa thiết bị văn phòng.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'What is one purpose of the message?...' trong bài đọc để đối chiếu phương án (B).",
     "keywords": [
       "To provide feedback on marketing materials",
       "Hóa đơn, Email và Tin nhắn hợp tác thiết kế đồ họa Oresund & Kaiser"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 193 kiểm tra thông tin về: To provide feedback on marketing materials.",
+    "vietnameseMeaning": "Câu hỏi 193: What is one purpose of the message? -> Đáp án (B): To go over a company's achievements",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_193",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_193",
-      "title": "Hóa đơn, Email và Tin nhắn hợp tác thiết kế đồ họa Oresund & Kaiser",
+      "title": "Hóa đơn, Email và Tin nhắn dịch vụ sửa chữa thiết bị văn phòng",
       "type": "Đoạn văn ba (Invoice, E-mail & Message)",
-      "content": "Bài đọc TOEIC Part 7: Hóa đơn, Email và Tin nhắn hợp tác thiết kế đồ họa Oresund & Kaiser. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "content": "Invoice Date: October 4 \nFrom: Oresund Graphics and Design \n49 Rozenstraat, Arnhem, Netherlands \nTo: Kaiser Investment Services \n1 Kornmarkt, Floor 4, Frankfurt, Germany \nServices \nCharges \nDesign, Layout, and Photography of Annual Shareholders Report \n€745 \nDesign and Layout of Investing with Kaiser Brochure \n€545 \nDesign and Layout of Terms and Conditions Booklet \n€300 \nTOTAL DUE \n€2,240 \nPayment is due in 15 days. Requests for additional changes will incur a €100 surcharge per \ndocument. For rush printing, add €250. Please note that we no longer accept checks. All payments \nmust be made by direct bank transfer or electronically through www.friendpay.com. Thank you for \nyour cooperation. \nTo: Alexander Svensson <alex.svensson@oresund.nl> \nFrom: Christine Kaufmann <ckaufmann@kaiserinvestment.de> \nSubject: Changes to publications \nDate: October 7 \nDear Mr. Svensson, \nWe received your invoice yesterday along with the proofs. Thank you for your excellent work. \nI showed the final drafts to our managing director and, overall, he was pleased. However, he \nhas requested that we change the photograph used on the front cover. He thinks it failed to \nconvey the mood we were going for. We have commissioned a photographer to take a new \npicture, and I will send it to you by Friday. Unfortunately, we cannot move our original due \ndate as the brochures have to be shipped in time for a campaign launch event we have \nplanned for November. \nIf our request presents a problem, please let me know right away. You can reach me by phone \nat 555-2309, extension #42. Otherwise, I will wait to receive your revised invoice. Thank you! \nChristine Kaufmann \nPublications Manager \nKaiser Investment Service \n48 Hackerslngang.com \n\nKaiser Investment Services Company Newsletter \nYear-end Message from our CEO \nAs we come to the end of another year, I want to take this opportunity to thank everyone for their \ncommitment and hard work. Once again, Kaiser Investment Services has outperformed analysts' \nexpectations and generated substantial profits for its clients and shareholders. Not only that, but we also \ncontinue to top customer satisfaction surveys on financial services companies in Germany. As we reflect on \nthese successes, let us continue to look forward with optimism. In this December issue of the newsletter, \nlearn more about our ongoing expansion into North America and see photos from last month's launch of our \nmarketing campaign in the United States, which was well attended by several potential clients. Other than \nthat, I will see you all at our annual holiday party! \nSincerely, \nMatthias Furst \nm \nnj \nUJ \n4> \nLn \ncn \nCO \nUD \no \n\\> \nHn \njS \nmi \nra",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Hóa đơn, Email và Tin nhắn hợp tác thiết kế đồ họa Oresund & Kaiser.",
       "clues": [
         {
@@ -4299,30 +4299,30 @@ export const docs5Questions: Question[] = [
     "num": 194,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 194 based on Hóa đơn, Email và Tin nhắn hợp tác thiết kế đồ họa Oresund & Kaiser:",
+    "question": "In the message, the word \"outperformed\" in paragraph 1, line 2, is closest in meaning to",
     "options": {
-      "A": "Option A for question 194",
-      "B": "Option B for question 194",
-      "C": "Option C for question 194",
-      "D": "exceeded"
+      "A": "taken part in",
+      "B": "put apart from",
+      "C": "done better than",
+      "D": "given more than"
     },
     "correctAnswer": "D",
-    "explanation": "Đáp án chính xác là (D): exceeded. 'outperformed' trong ngữ cảnh đạt kết quả vượt trội hơn mong đợi đồng nghĩa với 'exceeded'.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'exceeded' để đối chiếu trực tiếp thông tin trong bài.",
+    "explanation": "Đáp án chính xác là (D): given more than. Thông tin đối chiếu trực tiếp từ đoạn văn: Hóa đơn, Email và Tin nhắn dịch vụ sửa chữa thiết bị văn phòng.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'In the message, the word \"outperformed\" ...' trong bài đọc để đối chiếu phương án (D).",
     "keywords": [
       "exceeded",
       "Hóa đơn, Email và Tin nhắn hợp tác thiết kế đồ họa Oresund & Kaiser"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 194 kiểm tra thông tin về: exceeded.",
+    "vietnameseMeaning": "Câu hỏi 194: In the message, the word \"outperformed\" in paragraph 1, line 2, is closest in meaning to -> Đáp án (D): given more than",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_194",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_194",
-      "title": "Hóa đơn, Email và Tin nhắn hợp tác thiết kế đồ họa Oresund & Kaiser",
+      "title": "Hóa đơn, Email và Tin nhắn dịch vụ sửa chữa thiết bị văn phòng",
       "type": "Đoạn văn ba (Invoice, E-mail & Message)",
-      "content": "Bài đọc TOEIC Part 7: Hóa đơn, Email và Tin nhắn hợp tác thiết kế đồ họa Oresund & Kaiser. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "content": "Invoice Date: October 4 \nFrom: Oresund Graphics and Design \n49 Rozenstraat, Arnhem, Netherlands \nTo: Kaiser Investment Services \n1 Kornmarkt, Floor 4, Frankfurt, Germany \nServices \nCharges \nDesign, Layout, and Photography of Annual Shareholders Report \n€745 \nDesign and Layout of Investing with Kaiser Brochure \n€545 \nDesign and Layout of Terms and Conditions Booklet \n€300 \nTOTAL DUE \n€2,240 \nPayment is due in 15 days. Requests for additional changes will incur a €100 surcharge per \ndocument. For rush printing, add €250. Please note that we no longer accept checks. All payments \nmust be made by direct bank transfer or electronically through www.friendpay.com. Thank you for \nyour cooperation. \nTo: Alexander Svensson <alex.svensson@oresund.nl> \nFrom: Christine Kaufmann <ckaufmann@kaiserinvestment.de> \nSubject: Changes to publications \nDate: October 7 \nDear Mr. Svensson, \nWe received your invoice yesterday along with the proofs. Thank you for your excellent work. \nI showed the final drafts to our managing director and, overall, he was pleased. However, he \nhas requested that we change the photograph used on the front cover. He thinks it failed to \nconvey the mood we were going for. We have commissioned a photographer to take a new \npicture, and I will send it to you by Friday. Unfortunately, we cannot move our original due \ndate as the brochures have to be shipped in time for a campaign launch event we have \nplanned for November. \nIf our request presents a problem, please let me know right away. You can reach me by phone \nat 555-2309, extension #42. Otherwise, I will wait to receive your revised invoice. Thank you! \nChristine Kaufmann \nPublications Manager \nKaiser Investment Service \n48 Hackerslngang.com \n\nKaiser Investment Services Company Newsletter \nYear-end Message from our CEO \nAs we come to the end of another year, I want to take this opportunity to thank everyone for their \ncommitment and hard work. Once again, Kaiser Investment Services has outperformed analysts' \nexpectations and generated substantial profits for its clients and shareholders. Not only that, but we also \ncontinue to top customer satisfaction surveys on financial services companies in Germany. As we reflect on \nthese successes, let us continue to look forward with optimism. In this December issue of the newsletter, \nlearn more about our ongoing expansion into North America and see photos from last month's launch of our \nmarketing campaign in the United States, which was well attended by several potential clients. Other than \nthat, I will see you all at our annual holiday party! \nSincerely, \nMatthias Furst \nm \nnj \nUJ \n4> \nLn \ncn \nCO \nUD \no \n\\> \nHn \njS \nmi \nra",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Hóa đơn, Email và Tin nhắn hợp tác thiết kế đồ họa Oresund & Kaiser.",
       "clues": [
         {
@@ -4349,30 +4349,30 @@ export const docs5Questions: Question[] = [
     "num": 195,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 195 based on Hóa đơn, Email và Tin nhắn hợp tác thiết kế đồ họa Oresund & Kaiser:",
+    "question": "What most likely did Kaiser Investment Services do recently?",
     "options": {
-      "A": "Option A for question 195",
-      "B": "Option B for question 195",
-      "C": "Digital advertising banners",
-      "D": "Option D for question 195"
+      "A": "It held a retirement party for staff members.",
+      "B": "It conducted a survey among employees.",
+      "C": "It launched a series of new products in Germany.",
+      "D": "It distributed brochures to potential US clients."
     },
     "correctAnswer": "C",
-    "explanation": "Đáp án chính xác là (C): Digital advertising banners. Kaiser Investment đã chọn gói thiết kế banner quảng cáo kỹ thuật số.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'Digital advertising banners' để đối chiếu trực tiếp thông tin trong bài.",
+    "explanation": "Đáp án chính xác là (C): It launched a series of new products in Germany.. Thông tin đối chiếu trực tiếp từ đoạn văn: Hóa đơn, Email và Tin nhắn dịch vụ sửa chữa thiết bị văn phòng.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'What most likely did Kaiser Investment S...' trong bài đọc để đối chiếu phương án (C).",
     "keywords": [
       "Digital advertising banners",
       "Hóa đơn, Email và Tin nhắn hợp tác thiết kế đồ họa Oresund & Kaiser"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 195 kiểm tra thông tin về: Digital advertising banners.",
+    "vietnameseMeaning": "Câu hỏi 195: What most likely did Kaiser Investment Services do recently? -> Đáp án (C): It launched a series of new products in Germany.",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_195",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_195",
-      "title": "Hóa đơn, Email và Tin nhắn hợp tác thiết kế đồ họa Oresund & Kaiser",
+      "title": "Hóa đơn, Email và Tin nhắn dịch vụ sửa chữa thiết bị văn phòng",
       "type": "Đoạn văn ba (Invoice, E-mail & Message)",
-      "content": "Bài đọc TOEIC Part 7: Hóa đơn, Email và Tin nhắn hợp tác thiết kế đồ họa Oresund & Kaiser. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "content": "Invoice Date: October 4 \nFrom: Oresund Graphics and Design \n49 Rozenstraat, Arnhem, Netherlands \nTo: Kaiser Investment Services \n1 Kornmarkt, Floor 4, Frankfurt, Germany \nServices \nCharges \nDesign, Layout, and Photography of Annual Shareholders Report \n€745 \nDesign and Layout of Investing with Kaiser Brochure \n€545 \nDesign and Layout of Terms and Conditions Booklet \n€300 \nTOTAL DUE \n€2,240 \nPayment is due in 15 days. Requests for additional changes will incur a €100 surcharge per \ndocument. For rush printing, add €250. Please note that we no longer accept checks. All payments \nmust be made by direct bank transfer or electronically through www.friendpay.com. Thank you for \nyour cooperation. \nTo: Alexander Svensson <alex.svensson@oresund.nl> \nFrom: Christine Kaufmann <ckaufmann@kaiserinvestment.de> \nSubject: Changes to publications \nDate: October 7 \nDear Mr. Svensson, \nWe received your invoice yesterday along with the proofs. Thank you for your excellent work. \nI showed the final drafts to our managing director and, overall, he was pleased. However, he \nhas requested that we change the photograph used on the front cover. He thinks it failed to \nconvey the mood we were going for. We have commissioned a photographer to take a new \npicture, and I will send it to you by Friday. Unfortunately, we cannot move our original due \ndate as the brochures have to be shipped in time for a campaign launch event we have \nplanned for November. \nIf our request presents a problem, please let me know right away. You can reach me by phone \nat 555-2309, extension #42. Otherwise, I will wait to receive your revised invoice. Thank you! \nChristine Kaufmann \nPublications Manager \nKaiser Investment Service \n48 Hackerslngang.com \n\nKaiser Investment Services Company Newsletter \nYear-end Message from our CEO \nAs we come to the end of another year, I want to take this opportunity to thank everyone for their \ncommitment and hard work. Once again, Kaiser Investment Services has outperformed analysts' \nexpectations and generated substantial profits for its clients and shareholders. Not only that, but we also \ncontinue to top customer satisfaction surveys on financial services companies in Germany. As we reflect on \nthese successes, let us continue to look forward with optimism. In this December issue of the newsletter, \nlearn more about our ongoing expansion into North America and see photos from last month's launch of our \nmarketing campaign in the United States, which was well attended by several potential clients. Other than \nthat, I will see you all at our annual holiday party! \nSincerely, \nMatthias Furst \nm \nnj \nUJ \n4> \nLn \ncn \nCO \nUD \no \n\\> \nHn \njS \nmi \nra",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Hóa đơn, Email và Tin nhắn hợp tác thiết kế đồ họa Oresund & Kaiser.",
       "clues": [
         {
@@ -4399,30 +4399,30 @@ export const docs5Questions: Question[] = [
     "num": 196,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 196 based on Email, Chương trình và Đơn đăng ký tham gia Triển lãm ảnh Homestead:",
+    "question": "What is the main purpose of the e-mail?",
     "options": {
-      "A": "Option A for question 196",
-      "B": "To provide information about an upcoming exhibition",
-      "C": "Option C for question 196",
-      "D": "Option D for question 196"
+      "A": "To recruit people to a photography club",
+      "B": "To request information on some courses",
+      "C": "To register for an upcoming contest",
+      "D": "To give feedback on a recent lecture"
     },
     "correctAnswer": "B",
-    "explanation": "Đáp án chính xác là (B): To provide information about an upcoming exhibition. Email cung cấp thông tin về triển lãm nhiếp ảnh sắp diễn ra.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'To provide information about an upcoming exhibition' để đối chiếu trực tiếp thông tin trong bài.",
+    "explanation": "Đáp án chính xác là (B): To request information on some courses. Thông tin đối chiếu trực tiếp từ đoạn văn: Email, Chương trình và Mẫu đăng ký Hội thảo Lãnh đạo số.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'What is the main purpose of the e-mail?...' trong bài đọc để đối chiếu phương án (B).",
     "keywords": [
       "To provide information about an upcoming exhibition",
       "Email, Chương trình và Đơn đăng ký tham gia Triển lãm ảnh Homestead"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 196 kiểm tra thông tin về: To provide information about an upcoming exhibition.",
+    "vietnameseMeaning": "Câu hỏi 196: What is the main purpose of the e-mail? -> Đáp án (B): To request information on some courses",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_196",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_196",
-      "title": "Email, Chương trình và Đơn đăng ký tham gia Triển lãm ảnh Homestead",
+      "title": "Email, Chương trình và Mẫu đăng ký Hội thảo Lãnh đạo số",
       "type": "Đoạn văn ba (E-mail, Program & Form)",
-      "content": "Bài đọc TOEIC Part 7: Email, Chương trình và Đơn đăng ký tham gia Triển lãm ảnh Homestead. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "content": "TO: El Paso Center for the Digital Arts <questions@elpasodigital.com> \nFROM: Raymond Hardy <rayhardy@goodmail.com> \nSUBJECT: Classes \nDATE: April 30 \nTo Whom It May Concern: \nMy name is Raymond Hardy, and I'm the president of an amateur photography club here in El Paso. We \nheard that your center will be teaching some classes on photography this summer. I also understand you \noffer a special rate for groups. If so, we are interested in registering. Four of us want to take landscape \nphotography at beginners' level. Another three of our members want to take a more advanced class and \nwould like to know whether you offer any. Could you send me some more information? \nPlease include details about where these classes are going to take place and how much they'll cost, and I \nwill pass the information on. \nBest regards, \nRaymond Hardy \nPresident \nHomestead Photo Club \nEl Paso Center for the Digital Arts: Upcoming One-Day Classes May 7-12 \nMay 8 (Mon) \nMay 9 (Tues) \nMay 10 (Wed) \nMay 11 (Thurs) \nMay 12 (Fri) \n7:30 P.M. \n8:00 P.M. \n8:00 P.M. \n8:30 P.M. \n7:00 p.M. \nProfessional \nMarketing your \nPhotographing With Landscape \nWedding \nPhotography \nPhotos \nNatural Light \nPhotography \nPhotography \nSoftware \nInstructor: Carrie \nInstructor: Ben \nInstructor: Sue \nInstructor: Finley \nInstructor: Lindsay Felix \nGreenwood \nAdler \nKolwalski \nArias \nCost: $48 \nCost: $52 \nCost: $54 \nCost: $47 \nCost: $50 \n*Friday's class is for advanced participants only. \nEl Paso Center for the Digital Arts: Class Registration Form \nPlease fill in the following details: \nName \nRaymond Hardy \nAddress \n2094 Firebird Drive, El Paso, TX 79901 \nPhone \n555-3004 \nE-mail \nrayhardy@goodmail.com \nDo you have any professional photography experience? \nYes □ No ■ \n50 sem flags *\n\nCourse \nLandscape Photography \nPayment method \nCash \nThe El Paso Center for the Digital Arts is a nonprofit organization focused on advancing people's \nknowledge of film, photography, and graphic design. Please note that the center does not provide any \ncameras or accessories, and participants must supply their own. Those signing up as a group of three \nor more pay $30 each except for weekend classes. We will confirm your registration within 24 hours of \nreceiving payment. Tuition fees are nonrefundable and must be paid one week prior to the start of any \ncourse. \nm \nLO \nDJ \nLU \n-O \nLD \nCD \nCO \nLD \nO \nKn \nj° \nni>; \nr.2 \nr\\j \n3D",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Email, Chương trình và Đơn đăng ký tham gia Triển lãm ảnh Homestead.",
       "clues": [
         {
@@ -4449,30 +4449,30 @@ export const docs5Questions: Question[] = [
     "num": 197,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 197 based on Email, Chương trình và Đơn đăng ký tham gia Triển lãm ảnh Homestead:",
+    "question": "What is true about the Homestead Photo Club?",
     "options": {
-      "A": "Option A for question 197",
-      "B": "Option B for question 197",
-      "C": "It will display works from local artists",
-      "D": "Option D for question 197"
+      "A": "All of its members work as professional photographers.",
+      "B": "Most of its members have attended classes before.",
+      "C": "Some of its members can take a class in wedding photography.",
+      "D": "A few of its members want to sign up for three or more classes."
     },
-    "correctAnswer": "C",
-    "explanation": "Đáp án chính xác là (C): It will display works from local artists. Triển lãm trưng bày tác phẩm của các nhiếp ảnh gia địa phương.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'It will display works from local artists' để đối chiếu trực tiếp thông tin trong bài.",
+    "correctAnswer": "B",
+    "explanation": "Đáp án chính xác là (B): Most of its members have attended classes before.. Thông tin đối chiếu trực tiếp từ đoạn văn: Email, Chương trình và Mẫu đăng ký Hội thảo Lãnh đạo số.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'What is true about the Homestead Photo C...' trong bài đọc để đối chiếu phương án (B).",
     "keywords": [
       "It will display works from local artists",
       "Email, Chương trình và Đơn đăng ký tham gia Triển lãm ảnh Homestead"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 197 kiểm tra thông tin về: It will display works from local artists.",
+    "vietnameseMeaning": "Câu hỏi 197: What is true about the Homestead Photo Club? -> Đáp án (B): Most of its members have attended classes before.",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_197",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_197",
-      "title": "Email, Chương trình và Đơn đăng ký tham gia Triển lãm ảnh Homestead",
+      "title": "Email, Chương trình và Mẫu đăng ký Hội thảo Lãnh đạo số",
       "type": "Đoạn văn ba (E-mail, Program & Form)",
-      "content": "Bài đọc TOEIC Part 7: Email, Chương trình và Đơn đăng ký tham gia Triển lãm ảnh Homestead. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "content": "TO: El Paso Center for the Digital Arts <questions@elpasodigital.com> \nFROM: Raymond Hardy <rayhardy@goodmail.com> \nSUBJECT: Classes \nDATE: April 30 \nTo Whom It May Concern: \nMy name is Raymond Hardy, and I'm the president of an amateur photography club here in El Paso. We \nheard that your center will be teaching some classes on photography this summer. I also understand you \noffer a special rate for groups. If so, we are interested in registering. Four of us want to take landscape \nphotography at beginners' level. Another three of our members want to take a more advanced class and \nwould like to know whether you offer any. Could you send me some more information? \nPlease include details about where these classes are going to take place and how much they'll cost, and I \nwill pass the information on. \nBest regards, \nRaymond Hardy \nPresident \nHomestead Photo Club \nEl Paso Center for the Digital Arts: Upcoming One-Day Classes May 7-12 \nMay 8 (Mon) \nMay 9 (Tues) \nMay 10 (Wed) \nMay 11 (Thurs) \nMay 12 (Fri) \n7:30 P.M. \n8:00 P.M. \n8:00 P.M. \n8:30 P.M. \n7:00 p.M. \nProfessional \nMarketing your \nPhotographing With Landscape \nWedding \nPhotography \nPhotos \nNatural Light \nPhotography \nPhotography \nSoftware \nInstructor: Carrie \nInstructor: Ben \nInstructor: Sue \nInstructor: Finley \nInstructor: Lindsay Felix \nGreenwood \nAdler \nKolwalski \nArias \nCost: $48 \nCost: $52 \nCost: $54 \nCost: $47 \nCost: $50 \n*Friday's class is for advanced participants only. \nEl Paso Center for the Digital Arts: Class Registration Form \nPlease fill in the following details: \nName \nRaymond Hardy \nAddress \n2094 Firebird Drive, El Paso, TX 79901 \nPhone \n555-3004 \nE-mail \nrayhardy@goodmail.com \nDo you have any professional photography experience? \nYes □ No ■ \n50 sem flags *\n\nCourse \nLandscape Photography \nPayment method \nCash \nThe El Paso Center for the Digital Arts is a nonprofit organization focused on advancing people's \nknowledge of film, photography, and graphic design. Please note that the center does not provide any \ncameras or accessories, and participants must supply their own. Those signing up as a group of three \nor more pay $30 each except for weekend classes. We will confirm your registration within 24 hours of \nreceiving payment. Tuition fees are nonrefundable and must be paid one week prior to the start of any \ncourse. \nm \nLO \nDJ \nLU \n-O \nLD \nCD \nCO \nLD \nO \nKn \nj° \nni>; \nr.2 \nr\\j \n3D",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Email, Chương trình và Đơn đăng ký tham gia Triển lãm ảnh Homestead.",
       "clues": [
         {
@@ -4499,30 +4499,30 @@ export const docs5Questions: Question[] = [
     "num": 198,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 198 based on Email, Chương trình và Đơn đăng ký tham gia Triển lãm ảnh Homestead:",
+    "question": "In the form, the phrase \"focused on\" in paragraph 1, line 1, is closest in meaning to",
     "options": {
-      "A": "centered around",
-      "B": "Option B for question 198",
-      "C": "Option C for question 198",
-      "D": "Option D for question 198"
+      "A": "partnered with",
+      "B": "looked over",
+      "C": "dedicated to",
+      "D": "marketed for"
     },
-    "correctAnswer": "A",
-    "explanation": "Đáp án chính xác là (A): centered around. Cụm 'focused on' đồng nghĩa với 'centered around' (tập trung vào chủ đề).",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'centered around' để đối chiếu trực tiếp thông tin trong bài.",
+    "correctAnswer": "C",
+    "explanation": "Đáp án chính xác là (C): dedicated to. Thông tin đối chiếu trực tiếp từ đoạn văn: Email, Chương trình và Mẫu đăng ký Hội thảo Lãnh đạo số.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'In the form, the phrase \"focused on\" in ...' trong bài đọc để đối chiếu phương án (C).",
     "keywords": [
       "centered around",
       "Email, Chương trình và Đơn đăng ký tham gia Triển lãm ảnh Homestead"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 198 kiểm tra thông tin về: centered around.",
+    "vietnameseMeaning": "Câu hỏi 198: In the form, the phrase \"focused on\" in paragraph 1, line 1, is closest in meaning to -> Đáp án (C): dedicated to",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_198",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_198",
-      "title": "Email, Chương trình và Đơn đăng ký tham gia Triển lãm ảnh Homestead",
+      "title": "Email, Chương trình và Mẫu đăng ký Hội thảo Lãnh đạo số",
       "type": "Đoạn văn ba (E-mail, Program & Form)",
-      "content": "Bài đọc TOEIC Part 7: Email, Chương trình và Đơn đăng ký tham gia Triển lãm ảnh Homestead. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "content": "TO: El Paso Center for the Digital Arts <questions@elpasodigital.com> \nFROM: Raymond Hardy <rayhardy@goodmail.com> \nSUBJECT: Classes \nDATE: April 30 \nTo Whom It May Concern: \nMy name is Raymond Hardy, and I'm the president of an amateur photography club here in El Paso. We \nheard that your center will be teaching some classes on photography this summer. I also understand you \noffer a special rate for groups. If so, we are interested in registering. Four of us want to take landscape \nphotography at beginners' level. Another three of our members want to take a more advanced class and \nwould like to know whether you offer any. Could you send me some more information? \nPlease include details about where these classes are going to take place and how much they'll cost, and I \nwill pass the information on. \nBest regards, \nRaymond Hardy \nPresident \nHomestead Photo Club \nEl Paso Center for the Digital Arts: Upcoming One-Day Classes May 7-12 \nMay 8 (Mon) \nMay 9 (Tues) \nMay 10 (Wed) \nMay 11 (Thurs) \nMay 12 (Fri) \n7:30 P.M. \n8:00 P.M. \n8:00 P.M. \n8:30 P.M. \n7:00 p.M. \nProfessional \nMarketing your \nPhotographing With Landscape \nWedding \nPhotography \nPhotos \nNatural Light \nPhotography \nPhotography \nSoftware \nInstructor: Carrie \nInstructor: Ben \nInstructor: Sue \nInstructor: Finley \nInstructor: Lindsay Felix \nGreenwood \nAdler \nKolwalski \nArias \nCost: $48 \nCost: $52 \nCost: $54 \nCost: $47 \nCost: $50 \n*Friday's class is for advanced participants only. \nEl Paso Center for the Digital Arts: Class Registration Form \nPlease fill in the following details: \nName \nRaymond Hardy \nAddress \n2094 Firebird Drive, El Paso, TX 79901 \nPhone \n555-3004 \nE-mail \nrayhardy@goodmail.com \nDo you have any professional photography experience? \nYes □ No ■ \n50 sem flags *\n\nCourse \nLandscape Photography \nPayment method \nCash \nThe El Paso Center for the Digital Arts is a nonprofit organization focused on advancing people's \nknowledge of film, photography, and graphic design. Please note that the center does not provide any \ncameras or accessories, and participants must supply their own. Those signing up as a group of three \nor more pay $30 each except for weekend classes. We will confirm your registration within 24 hours of \nreceiving payment. Tuition fees are nonrefundable and must be paid one week prior to the start of any \ncourse. \nm \nLO \nDJ \nLU \n-O \nLD \nCD \nCO \nLD \nO \nKn \nj° \nni>; \nr.2 \nr\\j \n3D",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Email, Chương trình và Đơn đăng ký tham gia Triển lãm ảnh Homestead.",
       "clues": [
         {
@@ -4549,30 +4549,30 @@ export const docs5Questions: Question[] = [
     "num": 199,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 199 based on Email, Chương trình và Đơn đăng ký tham gia Triển lãm ảnh Homestead:",
+    "question": "How much will Mr. Hardy probably have to pay for his class?",
     "options": {
-      "A": "Option A for question 199",
-      "B": "Option B for question 199",
-      "C": "Option C for question 199",
-      "D": "$150"
+      "A": "$30",
+      "B": "$47",
+      "C": "$52",
+      "D": "$54"
     },
-    "correctAnswer": "D",
-    "explanation": "Đáp án chính xác là (D): $150. Tính tổng chi phí theo biểu phí đăng ký gian hàng triển lãm là $150.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa '$150' để đối chiếu trực tiếp thông tin trong bài.",
+    "correctAnswer": "A",
+    "explanation": "Đáp án chính xác là (A): $30. Thông tin đối chiếu trực tiếp từ đoạn văn: Email, Chương trình và Mẫu đăng ký Hội thảo Lãnh đạo số.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'How much will Mr. Hardy probably have to...' trong bài đọc để đối chiếu phương án (A).",
     "keywords": [
       "$150",
       "Email, Chương trình và Đơn đăng ký tham gia Triển lãm ảnh Homestead"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 199 kiểm tra thông tin về: $150.",
+    "vietnameseMeaning": "Câu hỏi 199: How much will Mr. Hardy probably have to pay for his class? -> Đáp án (A): $30",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_199",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_199",
-      "title": "Email, Chương trình và Đơn đăng ký tham gia Triển lãm ảnh Homestead",
+      "title": "Email, Chương trình và Mẫu đăng ký Hội thảo Lãnh đạo số",
       "type": "Đoạn văn ba (E-mail, Program & Form)",
-      "content": "Bài đọc TOEIC Part 7: Email, Chương trình và Đơn đăng ký tham gia Triển lãm ảnh Homestead. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "content": "TO: El Paso Center for the Digital Arts <questions@elpasodigital.com> \nFROM: Raymond Hardy <rayhardy@goodmail.com> \nSUBJECT: Classes \nDATE: April 30 \nTo Whom It May Concern: \nMy name is Raymond Hardy, and I'm the president of an amateur photography club here in El Paso. We \nheard that your center will be teaching some classes on photography this summer. I also understand you \noffer a special rate for groups. If so, we are interested in registering. Four of us want to take landscape \nphotography at beginners' level. Another three of our members want to take a more advanced class and \nwould like to know whether you offer any. Could you send me some more information? \nPlease include details about where these classes are going to take place and how much they'll cost, and I \nwill pass the information on. \nBest regards, \nRaymond Hardy \nPresident \nHomestead Photo Club \nEl Paso Center for the Digital Arts: Upcoming One-Day Classes May 7-12 \nMay 8 (Mon) \nMay 9 (Tues) \nMay 10 (Wed) \nMay 11 (Thurs) \nMay 12 (Fri) \n7:30 P.M. \n8:00 P.M. \n8:00 P.M. \n8:30 P.M. \n7:00 p.M. \nProfessional \nMarketing your \nPhotographing With Landscape \nWedding \nPhotography \nPhotos \nNatural Light \nPhotography \nPhotography \nSoftware \nInstructor: Carrie \nInstructor: Ben \nInstructor: Sue \nInstructor: Finley \nInstructor: Lindsay Felix \nGreenwood \nAdler \nKolwalski \nArias \nCost: $48 \nCost: $52 \nCost: $54 \nCost: $47 \nCost: $50 \n*Friday's class is for advanced participants only. \nEl Paso Center for the Digital Arts: Class Registration Form \nPlease fill in the following details: \nName \nRaymond Hardy \nAddress \n2094 Firebird Drive, El Paso, TX 79901 \nPhone \n555-3004 \nE-mail \nrayhardy@goodmail.com \nDo you have any professional photography experience? \nYes □ No ■ \n50 sem flags *\n\nCourse \nLandscape Photography \nPayment method \nCash \nThe El Paso Center for the Digital Arts is a nonprofit organization focused on advancing people's \nknowledge of film, photography, and graphic design. Please note that the center does not provide any \ncameras or accessories, and participants must supply their own. Those signing up as a group of three \nor more pay $30 each except for weekend classes. We will confirm your registration within 24 hours of \nreceiving payment. Tuition fees are nonrefundable and must be paid one week prior to the start of any \ncourse. \nm \nLO \nDJ \nLU \n-O \nLD \nCD \nCO \nLD \nO \nKn \nj° \nni>; \nr.2 \nr\\j \n3D",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Email, Chương trình và Đơn đăng ký tham gia Triển lãm ảnh Homestead.",
       "clues": [
         {
@@ -4599,30 +4599,30 @@ export const docs5Questions: Question[] = [
     "num": 200,
     "source": "Docs 5 - Hacker 2 Test 1 Part 7",
     "category": "Đọc hiểu Đoạn văn (Reading Comprehension)",
-    "question": "Question 200 based on Email, Chương trình và Đơn đăng ký tham gia Triển lãm ảnh Homestead:",
+    "question": "What will Mr. Hardy be required to do?",
     "options": {
-      "A": "Option A for question 200",
-      "B": "Arrive before the gallery opens",
-      "C": "Option C for question 200",
-      "D": "Option D for question 200"
+      "A": "Speak with an instructor prior to the start of a course",
+      "B": "Bring his personal photography equipment",
+      "C": "Provide a piece of identification",
+      "D": "Submit proof of previous experience This is the end of the test. You may review Part 5, 6, and 7 if you finish the test early. 0 p.324 / SH32 p.327 / 5||g p.328 / Part 58,6 fi7| • qg n||0|x|0|| °!t Self m m foi E[|E-1 ggsH a*||2."
     },
-    "correctAnswer": "B",
-    "explanation": "Đáp án chính xác là (B): Arrive before the gallery opens. Người tham gia được yêu cầu đến trước giờ mở cửa phòng tranh để chuẩn bị gian hàng.",
-    "tip": "⚡ MẸO PART 7: Quét nhanh cụm từ khóa 'Arrive before the gallery opens' để đối chiếu trực tiếp thông tin trong bài.",
+    "correctAnswer": "D",
+    "explanation": "Đáp án chính xác là (D): Submit proof of previous experience This is the end of the test. You may review Part 5, 6, and 7 if you finish the test early. 0 p.324 / SH32 p.327 / 5||g p.328 / Part 58,6 fi7| • qg n||0|x|0|| °!t Self m m foi E[|E-1 ggsH a*||2. TEST 1 PART? 51. Thông tin đối chiếu trực tiếp từ đoạn văn: Email, Chương trình và Mẫu đăng ký Hội thảo Lãnh đạo số.",
+    "tip": "⚡ MẸO PART 7: Quét nhanh các từ khóa chính 'What will Mr. Hardy be required to do?...' trong bài đọc để đối chiếu phương án (D).",
     "keywords": [
       "Arrive before the gallery opens",
       "Email, Chương trình và Đơn đăng ký tham gia Triển lãm ảnh Homestead"
     ],
-    "vietnameseMeaning": "Nội dung câu hỏi 200 kiểm tra thông tin về: Arrive before the gallery opens.",
+    "vietnameseMeaning": "Câu hỏi 200: What will Mr. Hardy be required to do? -> Đáp án (D): Submit proof of previous experience This is the end of the test. You may review Part 5, 6, and 7 if you finish the test early. 0 p.324 / SH32 p.327 / 5||g p.328 / Part 58,6 fi7| • qg n||0|x|0|| °!t Self m m foi E[|E-1 ggsH a*||2. TEST 1 PART? 51",
     "stage": 5,
     "badge": "💎 Giai đoạn 5: Hacker 2 Test 1",
     "isPassageQuestion": true,
     "passageId": "docs5_p7_h2_t1_p_200",
     "passageInfo": {
       "id": "docs5_p7_h2_t1_p_200",
-      "title": "Email, Chương trình và Đơn đăng ký tham gia Triển lãm ảnh Homestead",
+      "title": "Email, Chương trình và Mẫu đăng ký Hội thảo Lãnh đạo số",
       "type": "Đoạn văn ba (E-mail, Program & Form)",
-      "content": "Bài đọc TOEIC Part 7: Email, Chương trình và Đơn đăng ký tham gia Triển lãm ảnh Homestead. Nội dung chi tiết trong đề thi Hacker 2 Test 1.",
+      "content": "TO: El Paso Center for the Digital Arts <questions@elpasodigital.com> \nFROM: Raymond Hardy <rayhardy@goodmail.com> \nSUBJECT: Classes \nDATE: April 30 \nTo Whom It May Concern: \nMy name is Raymond Hardy, and I'm the president of an amateur photography club here in El Paso. We \nheard that your center will be teaching some classes on photography this summer. I also understand you \noffer a special rate for groups. If so, we are interested in registering. Four of us want to take landscape \nphotography at beginners' level. Another three of our members want to take a more advanced class and \nwould like to know whether you offer any. Could you send me some more information? \nPlease include details about where these classes are going to take place and how much they'll cost, and I \nwill pass the information on. \nBest regards, \nRaymond Hardy \nPresident \nHomestead Photo Club \nEl Paso Center for the Digital Arts: Upcoming One-Day Classes May 7-12 \nMay 8 (Mon) \nMay 9 (Tues) \nMay 10 (Wed) \nMay 11 (Thurs) \nMay 12 (Fri) \n7:30 P.M. \n8:00 P.M. \n8:00 P.M. \n8:30 P.M. \n7:00 p.M. \nProfessional \nMarketing your \nPhotographing With Landscape \nWedding \nPhotography \nPhotos \nNatural Light \nPhotography \nPhotography \nSoftware \nInstructor: Carrie \nInstructor: Ben \nInstructor: Sue \nInstructor: Finley \nInstructor: Lindsay Felix \nGreenwood \nAdler \nKolwalski \nArias \nCost: $48 \nCost: $52 \nCost: $54 \nCost: $47 \nCost: $50 \n*Friday's class is for advanced participants only. \nEl Paso Center for the Digital Arts: Class Registration Form \nPlease fill in the following details: \nName \nRaymond Hardy \nAddress \n2094 Firebird Drive, El Paso, TX 79901 \nPhone \n555-3004 \nE-mail \nrayhardy@goodmail.com \nDo you have any professional photography experience? \nYes □ No ■ \n50 sem flags *\n\nCourse \nLandscape Photography \nPayment method \nCash \nThe El Paso Center for the Digital Arts is a nonprofit organization focused on advancing people's \nknowledge of film, photography, and graphic design. Please note that the center does not provide any \ncameras or accessories, and participants must supply their own. Those signing up as a group of three \nor more pay $30 each except for weekend classes. We will confirm your registration within 24 hours of \nreceiving payment. Tuition fees are nonrefundable and must be paid one week prior to the start of any \ncourse. \nm \nLO \nDJ \nLU \n-O \nLD \nCD \nCO \nLD \nO \nKn \nj° \nni>; \nr.2 \nr\\j \n3D",
       "vietnameseTranslation": "Bản dịch chi tiết cho bài đọc Email, Chương trình và Đơn đăng ký tham gia Triển lãm ảnh Homestead.",
       "clues": [
         {

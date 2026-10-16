@@ -14,6 +14,10 @@ import {
   HelpCircle,
   Grid,
   BookOpen,
+  ChevronLeft,
+  ChevronRight,
+  ZoomIn,
+  Headphones,
 } from 'lucide-react';
 import { allQuestions } from '../data/questions';
 import { getAllListeningQuestions } from '../data/listeningQuestions';
@@ -41,6 +45,15 @@ interface MatchResult {
   score: number;
 }
 
+interface ZoomLightboxState {
+  photos: Array<{ qNum: number; imageUrl: string }>;
+  currentIndex: number;
+  bookName: string;
+  testLabel: string;
+  bookId: string;
+  testNum: string;
+}
+
 export const ImageSearchModal: React.FC<ImageSearchModalProps> = ({
   isOpen,
   onClose,
@@ -61,7 +74,7 @@ export const ImageSearchModal: React.FC<ImageSearchModalProps> = ({
   // Tabs: 'upload' (Visual match + OCR) | 'browse_part1' (6 pictures all tests) | 'browse_docs' (old docs)
   const [activeTab, setActiveTab] = useState<'upload' | 'browse_part1' | 'browse_docs'>('upload');
   const [selectedBookFilter, setSelectedBookFilter] = useState<string>('all');
-  const [previewZoomPhoto, setPreviewZoomPhoto] = useState<string | null>(null);
+  const [zoomLightbox, setZoomLightbox] = useState<ZoomLightboxState | null>(null);
 
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -87,6 +100,24 @@ export const ImageSearchModal: React.FC<ImageSearchModalProps> = ({
     window.addEventListener('paste', handlePaste);
     return () => window.removeEventListener('paste', handlePaste);
   }, [isOpen]);
+
+  // Keyboard navigation for zoomLightbox
+  useEffect(() => {
+    if (!zoomLightbox) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft' && zoomLightbox.currentIndex > 0) {
+        setZoomLightbox((prev) => (prev ? { ...prev, currentIndex: prev.currentIndex - 1 } : null));
+      } else if (e.key === 'ArrowRight' && zoomLightbox.currentIndex < zoomLightbox.photos.length - 1) {
+        setZoomLightbox((prev) => (prev ? { ...prev, currentIndex: prev.currentIndex + 1 } : null));
+      } else if (e.key === 'Escape') {
+        setZoomLightbox(null);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [zoomLightbox]);
 
   // Clean up object URLs
   useEffect(() => {
@@ -566,57 +597,73 @@ export const ImageSearchModal: React.FC<ImageSearchModalProps> = ({
                           </div>
 
                           <div className="flex items-center gap-1.5 flex-wrap justify-end">
-                            <span className="px-2.5 py-1 rounded-lg bg-emerald-100 text-emerald-900 border border-emerald-300 text-xs font-extrabold">
+                            <span className="px-2 py-0.5 rounded-lg bg-emerald-100 text-emerald-900 border border-emerald-300 text-xs font-extrabold">
                               Khớp {match.confidence}%
                             </span>
                             <button
                               onClick={() => handleOpenFullExamSet(match.bookId, match.testNum, match.matchedQNum)}
-                              className="flex items-center gap-1 px-3 py-1.5 rounded-xl bg-sky-50 hover:bg-sky-100 text-sky-900 border border-sky-300 font-extrabold text-xs shadow-2xs transition cursor-pointer"
+                              className="flex items-center gap-1 px-2.5 py-1.5 rounded-xl bg-sky-50 hover:bg-sky-100 text-sky-900 border border-sky-300 font-extrabold text-xs shadow-2xs transition cursor-pointer"
                               title="Xem toàn bộ câu hỏi và làm bài thi của đề này"
                             >
                               <BookOpen className="w-3.5 h-3.5 text-sky-600" />
-                              <span>Xem Cả Đề</span>
+                              <span className="hidden sm:inline">Xem Cả Đề</span>
                             </button>
                             <button
                               onClick={() => handleOpenAnswersForTest(match.bookId, match.testNum)}
-                              className="flex items-center gap-1 px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs shadow-2xs transition cursor-pointer"
+                              className="flex items-center gap-1 px-2.5 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs shadow-2xs transition cursor-pointer"
                             >
                               <Table className="w-3.5 h-3.5" />
-                              <span>Mở Full 200 Đáp Án</span>
+                              <span className="hidden sm:inline">Mở 200 Đáp Án</span>
                             </button>
                           </div>
                         </div>
 
-                        {/* 6 Part 1 Pictures of this Matched Test */}
+                        {/* 6 Part 1 Pictures of this Matched Test - Bigger & Clearer */}
                         <div className="pt-1 border-t border-gray-100">
                           <p className="text-[10px] font-bold text-[#8C8276] uppercase tracking-wider mb-1.5">
                             🖼️ 6 Hình Part 1 của bộ đề này để đối chiếu:
                           </p>
-                          <div className="grid grid-cols-6 gap-1.5">
-                            {match.allPhotos.map((photo) => {
+                          <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
+                            {match.allPhotos.map((photo, pIdx) => {
                               const isTargetHit = photo.qNum === match.matchedQNum;
                               return (
                                 <div
                                   key={photo.qNum}
-                                  onClick={() => setPreviewZoomPhoto(photo.imageUrl)}
-                                  className={`relative rounded-lg p-0.5 border cursor-pointer group bg-gray-50 ${
+                                  onClick={() =>
+                                    setZoomLightbox({
+                                      photos: match.allPhotos,
+                                      currentIndex: pIdx,
+                                      bookName: match.bookName,
+                                      testLabel: match.testLabel,
+                                      bookId: match.bookId,
+                                      testNum: match.testNum,
+                                    })
+                                  }
+                                  className={`relative rounded-xl p-1 border cursor-pointer group bg-gray-50 flex flex-col justify-between hover:shadow-xs transition ${
                                     isTargetHit
-                                      ? 'border-emerald-500 ring-2 ring-emerald-300'
+                                      ? 'border-emerald-500 ring-2 ring-emerald-300 bg-emerald-50/20'
                                       : 'border-gray-200 hover:border-sky-400'
                                   }`}
-                                  title={`Câu #${photo.qNum} - Bấm để phóng to`}
+                                  title={`Câu #${photo.qNum} - Bấm để phóng to và lướt xem tiếp`}
                                 >
-                                  <span className={`absolute top-1 left-1 z-10 px-1 py-0.2 rounded text-[8.5px] font-mono font-bold ${
-                                    isTargetHit ? 'bg-emerald-600 text-white' : 'bg-black/60 text-white'
-                                  }`}>
-                                    #{photo.qNum}
-                                  </span>
-                                  <img
-                                    src={photo.imageUrl}
-                                    alt={`Câu #${photo.qNum}`}
-                                    className="w-full h-14 sm:h-16 object-contain rounded group-hover:scale-105 transition"
-                                    loading="lazy"
-                                  />
+                                  <div className="flex items-center justify-between pb-0.5 px-0.5">
+                                    <span
+                                      className={`px-1.5 py-0.2 rounded text-[9.5px] font-mono font-bold ${
+                                        isTargetHit ? 'bg-emerald-600 text-white' : 'bg-black/60 text-white'
+                                      }`}
+                                    >
+                                      #{photo.qNum}
+                                    </span>
+                                    <ZoomIn className="w-3 h-3 text-gray-400 group-hover:text-sky-600 transition" />
+                                  </div>
+                                  <div className="relative overflow-hidden rounded-lg bg-white aspect-4/3 min-h-[70px] sm:min-h-[85px] flex items-center justify-center p-0.5">
+                                    <img
+                                      src={photo.imageUrl}
+                                      alt={`Câu #${photo.qNum}`}
+                                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200"
+                                      loading="lazy"
+                                    />
+                                  </div>
                                 </div>
                               );
                             })}
@@ -788,36 +835,51 @@ export const ImageSearchModal: React.FC<ImageSearchModalProps> = ({
                           className="flex items-center gap-1 px-2.5 py-1 rounded-xl bg-sky-50 hover:bg-sky-100 text-sky-900 border border-sky-300 text-[11px] font-bold shadow-2xs transition cursor-pointer"
                           title="Xem toàn bộ câu hỏi và làm bài thi của đề này"
                         >
-                          <BookOpen className="w-3 h-3 text-sky-600" />
-                          <span>Xem Cả Đề</span>
+                          <BookOpen className="w-3.5 h-3.5 text-sky-600" />
+                          <span className="hidden sm:inline">Xem Cả Đề</span>
                         </button>
                         <button
                           onClick={() => handleOpenAnswersForTest(item.bookId, item.testNum)}
                           className="flex items-center gap-1 px-2.5 py-1 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-[11px] font-bold shadow-2xs transition cursor-pointer"
                         >
-                          <Table className="w-3 h-3" />
-                          <span>Xem Full 200 Đáp Án</span>
+                          <Table className="w-3.5 h-3.5" />
+                          <span className="hidden sm:inline">200 Đáp Án</span>
                         </button>
                       </div>
                     </div>
 
-                    {/* 6 Photos Grid */}
-                    <div className="grid grid-cols-6 gap-1.5">
-                      {item.photos.map((photo) => (
+                    {/* 6 Photos Grid: Bigger, 3 cols on mobile, 6 on desktop */}
+                    <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
+                      {item.photos.map((photo, pIdx) => (
                         <div
                           key={photo.qNum}
-                          onClick={() => setPreviewZoomPhoto(photo.imageUrl)}
-                          className="relative rounded-lg p-0.5 border border-gray-200 hover:border-sky-500 bg-gray-50 cursor-pointer group"
+                          onClick={() =>
+                            setZoomLightbox({
+                              photos: item.photos,
+                              currentIndex: pIdx,
+                              bookName: item.bookName,
+                              testLabel: item.testLabel,
+                              bookId: item.bookId,
+                              testNum: item.testNum,
+                            })
+                          }
+                          className="relative rounded-xl p-1 border border-gray-200 hover:border-sky-500 bg-gray-50 cursor-pointer group flex flex-col justify-between hover:shadow-xs transition"
+                          title={`Câu #${photo.qNum} - Bấm để phóng to và lướt xem tiếp`}
                         >
-                          <span className="absolute top-1 left-1 z-10 px-1 py-0.2 rounded text-[8.5px] font-mono font-bold bg-black/60 text-white">
-                            #{photo.qNum}
-                          </span>
-                          <img
-                            src={photo.imageUrl}
-                            alt={`Câu #${photo.qNum}`}
-                            className="w-full h-14 sm:h-18 object-contain rounded group-hover:scale-105 transition"
-                            loading="lazy"
-                          />
+                          <div className="flex items-center justify-between pb-0.5 px-0.5">
+                            <span className="px-1.5 py-0.2 rounded text-[9.5px] font-mono font-bold bg-black/60 text-white">
+                              #{photo.qNum}
+                            </span>
+                            <ZoomIn className="w-3 h-3 text-gray-400 group-hover:text-sky-600 transition" />
+                          </div>
+                          <div className="relative overflow-hidden rounded-lg bg-white aspect-4/3 min-h-[70px] sm:min-h-[85px] flex items-center justify-center p-0.5">
+                            <img
+                              src={photo.imageUrl}
+                              alt={`Câu #${photo.qNum}`}
+                              className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200"
+                              loading="lazy"
+                            />
+                          </div>
                         </div>
                       ))}
                     </div>
@@ -909,30 +971,123 @@ export const ImageSearchModal: React.FC<ImageSearchModalProps> = ({
         </div>
       </div>
 
-      {/* Lightbox Image Zoom */}
-      {previewZoomPhoto && (
-        <div
-          className="fixed inset-0 z-60 flex items-center justify-center p-4 bg-black/80 backdrop-blur-xs animate-in fade-in"
-          onClick={() => setPreviewZoomPhoto(null)}
-        >
+      {/* Lightbox Image Zoom with Prev / Next Navigation */}
+      {zoomLightbox && (() => {
+        const currentPhoto = zoomLightbox.photos[zoomLightbox.currentIndex];
+        const prevP = zoomLightbox.currentIndex > 0 ? zoomLightbox.photos[zoomLightbox.currentIndex - 1] : null;
+        const nextP = zoomLightbox.currentIndex < zoomLightbox.photos.length - 1 ? zoomLightbox.photos[zoomLightbox.currentIndex + 1] : null;
+
+        return (
           <div
-            className="relative bg-white rounded-3xl p-3 max-w-lg w-full shadow-2xl"
-            onClick={(e) => e.stopPropagation()}
+            className="fixed inset-0 z-60 flex items-center justify-center p-2 sm:p-4 bg-black/85 backdrop-blur-xs animate-in fade-in"
+            onClick={() => setZoomLightbox(null)}
           >
-            <button
-              onClick={() => setPreviewZoomPhoto(null)}
-              className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black transition cursor-pointer"
+            <div
+              className="relative bg-white rounded-3xl border border-gray-200 shadow-2xl p-3 sm:p-4 max-w-xl w-full space-y-3 animate-in zoom-in-95"
+              onClick={(e) => e.stopPropagation()}
             >
-              <X className="w-4 h-4" />
-            </button>
-            <img
-              src={previewZoomPhoto}
-              alt="Ảnh phóng to"
-              className="w-full h-auto max-h-[75vh] object-contain rounded-2xl"
-            />
+              {/* Header */}
+              <div className="flex items-center justify-between border-b pb-2">
+                <span className="font-extrabold text-xs sm:text-sm text-[#262320] flex items-center gap-1.5 truncate">
+                  <Headphones className="w-4 h-4 text-sky-600 shrink-0" />
+                  <span className="truncate">
+                    Part 1 — Câu #{currentPhoto?.qNum} ({zoomLightbox.currentIndex + 1}/{zoomLightbox.photos.length}) • {zoomLightbox.bookName} ({zoomLightbox.testLabel})
+                  </span>
+                </span>
+                <button
+                  onClick={() => setZoomLightbox(null)}
+                  className="w-8 h-8 rounded-full flex items-center justify-center text-gray-500 hover:bg-gray-100 transition cursor-pointer shrink-0"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+
+              {/* Photo with Navigation Overlay */}
+              <div className="relative bg-[#1A1816] rounded-2xl p-2 border border-gray-800 flex items-center justify-center min-h-[260px] max-h-[70vh] overflow-hidden select-none">
+                <img
+                  src={currentPhoto?.imageUrl}
+                  alt={`Part 1 Photo #${currentPhoto?.qNum}`}
+                  className="max-h-[62vh] w-auto max-w-full object-contain rounded-xl shadow-lg"
+                />
+
+                {/* Prev Button */}
+                {prevP && (
+                  <button
+                    onClick={() => setZoomLightbox({ ...zoomLightbox, currentIndex: zoomLightbox.currentIndex - 1 })}
+                    className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 hover:bg-black/90 text-white flex items-center justify-center shadow-lg transition cursor-pointer"
+                    title="Ảnh câu trước (Phím ←)"
+                  >
+                    <ChevronLeft className="w-6 h-6" />
+                  </button>
+                )}
+
+                {/* Next Button */}
+                {nextP && (
+                  <button
+                    onClick={() => setZoomLightbox({ ...zoomLightbox, currentIndex: zoomLightbox.currentIndex + 1 })}
+                    className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 hover:bg-black/90 text-white flex items-center justify-center shadow-lg transition cursor-pointer"
+                    title="Ảnh câu tiếp theo (Phím →)"
+                  >
+                    <ChevronRight className="w-6 h-6" />
+                  </button>
+                )}
+              </div>
+
+              {/* Thumbnails strip inside lightbox */}
+              <div className="flex items-center justify-center gap-1.5 overflow-x-auto py-1">
+                {zoomLightbox.photos.map((p, idx) => (
+                  <button
+                    key={p.qNum}
+                    onClick={() => setZoomLightbox({ ...zoomLightbox, currentIndex: idx })}
+                    className={`w-9 h-9 rounded-lg border overflow-hidden transition cursor-pointer shrink-0 ${
+                      idx === zoomLightbox.currentIndex
+                        ? 'border-sky-500 ring-2 ring-sky-400 scale-105'
+                        : 'border-gray-200 opacity-60 hover:opacity-100'
+                    }`}
+                    title={`Câu #${p.qNum}`}
+                  >
+                    <img src={p.imageUrl} alt="" className="w-full h-full object-cover" />
+                  </button>
+                ))}
+              </div>
+
+              {/* Footer Buttons */}
+              <div className="flex items-center justify-between text-xs pt-1 border-t border-gray-100 gap-2">
+                <div className="flex items-center gap-1.5">
+                  <button
+                    onClick={() => {
+                      const qn = currentPhoto?.qNum || 1;
+                      setZoomLightbox(null);
+                      handleOpenFullExamSet(zoomLightbox.bookId, zoomLightbox.testNum, qn);
+                    }}
+                    className="px-3 py-1.5 rounded-xl bg-sky-50 hover:bg-sky-100 text-sky-900 border border-sky-300 font-bold transition flex items-center gap-1 cursor-pointer"
+                  >
+                    <BookOpen className="w-3.5 h-3.5 text-sky-600" />
+                    <span>Xem Cả Đề</span>
+                  </button>
+                  <button
+                    onClick={() => {
+                      setZoomLightbox(null);
+                      handleOpenAnswersForTest(zoomLightbox.bookId, zoomLightbox.testNum);
+                    }}
+                    className="px-3 py-1.5 rounded-xl bg-emerald-600 text-white font-bold hover:bg-emerald-700 transition flex items-center gap-1 cursor-pointer"
+                  >
+                    <Table className="w-3.5 h-3.5" />
+                    <span>200 Đáp Án</span>
+                  </button>
+                </div>
+
+                <button
+                  onClick={() => setZoomLightbox(null)}
+                  className="px-3.5 py-1.5 rounded-xl bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold transition cursor-pointer"
+                >
+                  Đóng
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
-      )}
+        );
+      })()}
     </div>
   );
 };

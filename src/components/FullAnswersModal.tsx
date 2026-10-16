@@ -7,6 +7,8 @@ import {
 import {
   allQuestions,
   docs1Questions,
+  docs3Questions,
+  docs4Questions,
   docs5Questions,
   hacker3Questions,
   hacker1Questions,
@@ -21,7 +23,7 @@ import { hackerExtraListeningQuestions } from '../data/hackerExtraListening';
 import { Question } from '../types';
 import { useQuizStore } from '../store/useQuizStore';
 import { Part1VisualStrip } from './Part1VisualStrip';
-import { resolveFullExamSetInfo } from '../data/examSetResolver';
+import { resolveFullExamSetInfo, getFullExamSetQuestions } from '../data/examSetResolver';
 import {
   CheckCircle2,
   Copy,
@@ -142,8 +144,25 @@ function resolveQuestionDetail(
   let rq: Question | undefined;
   const testNum = parseInt(test, 10);
 
-  if (book.includes('Docs 1') || book.includes('Test 2')) {
-    rq = docs1Questions.find((q) => q.num === num);
+  if (book.includes('Docs 3') || book.includes('TMA')) {
+    rq = docs3Questions.find(
+      (q) => q.num === num && (q.id.startsWith('docs3_tma_') || q.source.includes('TMA'))
+    );
+    if (!rq) {
+      rq = docs3Questions.find((q) => q.num === num);
+    }
+  } else if (book.includes('Docs 4')) {
+    rq = docs4Questions.find((q) => q.num === num);
+  } else if (book.includes('Docs 1')) {
+    if (test.includes('ToIce') || test.includes('Test 1')) {
+      rq = docs1Questions.find(
+        (q) => (q.id.startsWith('docs1_t1') || q.source.includes('ToIce')) && q.num === num
+      );
+    } else {
+      rq = docs1Questions.find(
+        (q) => (q.id.startsWith('docs1_t2') || q.source.includes('Test 2') || !q.source.includes('ToIce')) && q.num === num
+      );
+    }
   } else if (book.includes('Hacker 2')) {
     rq = docs5Questions.find(
       (q) => q.id.startsWith(`docs5_hacker2_t${testNum || 1}_`) && q.num === num
@@ -161,7 +180,7 @@ function resolveQuestionDetail(
     rq = hacker1Questions.find(
       (q) => q.id.startsWith(`docs7_hacker1_t${testNum || 1}_`) && q.num === num
     );
-  } else if (book.includes('YBM 1000')) {
+  } else if (book.includes('YBM 2025') || book.includes('YBM 1000')) {
     rq = docs5Questions.find(
       (q) => q.id.startsWith(`docs5_ybm1_t${testNum || 1}_`) && q.num === num
     );
@@ -170,21 +189,29 @@ function resolveQuestionDetail(
       rq = docs2Questions.find(
         (q: Question) => (q.id.startsWith('docs2_de1') || q.source.includes('Đề 1')) && q.num === num
       );
+    } else if (test.includes('Đề 2')) {
+      rq = docs2Questions.find(
+        (q: Question) => (q.id.startsWith('docs2_de2') || q.source.includes('Đề 2') || q.source.includes('YBM')) && q.num === num
+      );
     } else {
       rq = docs2Questions.find(
-        (q: Question) => (q.id.startsWith('docs2_de2') || q.source.includes('YBM')) && q.num === num
+        (q: Question) => (q.id.startsWith('docs2_drill') || q.source.includes('Chuyên đề')) && q.num === num
       );
     }
   }
 
-  // Fallback search across all questions
+  // Canonical exam set fallback
+  if (!rq) {
+    const info = resolveFullExamSetInfo({ source: book, test, num });
+    const fullSet = getFullExamSetQuestions(info.examSetId);
+    rq = fullSet.rcQuestions.find((q) => q.num === num);
+  }
+
+  // Fallback search across all questions: only match if question's source actually relates to book or test
   if (!rq) {
     rq = allQuestions.find(
       (q) => q.num === num && (q.source.includes(book) || (testNum ? q.source.includes(`Test ${testNum}`) : false))
     );
-  }
-  if (!rq) {
-    rq = allQuestions.find((q) => q.num === num);
   }
 
   if (rq) {
@@ -193,7 +220,7 @@ function resolveQuestionDetail(
       book,
       test,
       partName: rq.category || getPartName(num),
-      correctAnswer: rq.correctAnswer || officialAns,
+      correctAnswer: officialAns || rq.correctAnswer,
       questionText: rq.question,
       options: rq.options as unknown as Record<string, string>,
       explanation: rq.explanation,
@@ -241,12 +268,20 @@ export const FullAnswersModal: React.FC = () => {
   const { fullAnswerTarget, setActiveTab, setListeningCurrentIndex, jumpToIndex, questions, openFullExamSet } = useQuizStore();
 
   // Selected Book and Test
-  const [selectedBook, setSelectedBook] = useState<string>(() =>
-    resolveValidBookId(fullAnswerTarget?.book)
-  );
-  const [selectedTest, setSelectedTest] = useState<string>(
-    fullAnswerTarget?.test || '1'
-  );
+  const [selectedBook, setSelectedBook] = useState<string>(() => {
+    if (!fullAnswerTarget?.book) return DEFAULT_BOOK_ID;
+    if (MASTER_ANSWER_KEYS[fullAnswerTarget.book]) return fullAnswerTarget.book;
+    const resolved = resolveBookAndTestFromSource(fullAnswerTarget.book, undefined, fullAnswerTarget.questionNum);
+    return resolved?.book || resolveValidBookId(fullAnswerTarget.book);
+  });
+  const [selectedTest, setSelectedTest] = useState<string>(() => {
+    if (fullAnswerTarget?.test) return fullAnswerTarget.test;
+    if (fullAnswerTarget?.book) {
+      const resolved = resolveBookAndTestFromSource(fullAnswerTarget.book, undefined, fullAnswerTarget.questionNum);
+      if (resolved?.test) return resolved.test;
+    }
+    return '1';
+  });
   const [highlightNum, setHighlightNum] = useState<number | undefined>(
     fullAnswerTarget?.questionNum ?? (fullAnswerTarget as any)?.num
   );
@@ -265,7 +300,6 @@ export const FullAnswersModal: React.FC = () => {
   // Bottom Sheet Detail State
   const [detailNum, setDetailNum] = useState<number | null>(null);
   const [showPassageTranslation, setShowPassageTranslation] = useState<boolean>(false);
-  const dialogRef = useRef<HTMLDialogElement>(null);
 
   const handleOpenDetail = (num: number) => {
     setHighlightNum(num);
@@ -277,57 +311,34 @@ export const FullAnswersModal: React.FC = () => {
     setDetailNum(null);
   };
 
-  // Synchronize native <dialog> with detailNum state
-  useEffect(() => {
-    const dialog = dialogRef.current;
-    if (!dialog) return;
-
-    if (detailNum !== null) {
-      if (!dialog.open) {
-        dialog.showModal();
-      }
-    } else {
-      if (dialog.open) {
-        dialog.close();
-      }
-    }
-  }, [detailNum]);
-
-  // Fallback light-dismiss for browsers without closedby support
-  useEffect(() => {
-    const dialog = dialogRef.current;
-    if (!dialog) return;
-
-    const handleBackdropClick = (event: MouseEvent) => {
-      if (event.target !== dialog) return;
-      const rect = dialog.getBoundingClientRect();
-      const isInside = (
-        rect.top <= event.clientY &&
-        event.clientY <= rect.top + rect.height &&
-        rect.left <= event.clientX &&
-        event.clientX <= rect.left + rect.width
-      );
-      if (!isInside) {
-        handleCloseDetail();
-      }
-    };
-
-    dialog.addEventListener('click', handleBackdropClick);
-    return () => dialog.removeEventListener('click', handleBackdropClick);
-  }, []);
-
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Update when fullAnswerTarget changes from another component
   useEffect(() => {
     if (fullAnswerTarget) {
-      const validBook = resolveValidBookId(fullAnswerTarget.book);
+      let targetBook = fullAnswerTarget.book;
+      let targetTest = fullAnswerTarget.test;
+      const qNum = fullAnswerTarget.questionNum ?? (fullAnswerTarget as any)?.num;
+
+      if (targetBook && !MASTER_ANSWER_KEYS[targetBook]) {
+        const resolved = resolveBookAndTestFromSource(targetBook, undefined, qNum);
+        if (resolved) {
+          targetBook = resolved.book;
+          if (!targetTest || targetTest === '1' || (MASTER_ANSWER_KEYS[resolved.book] && !MASTER_ANSWER_KEYS[resolved.book][targetTest])) {
+            targetTest = resolved.test;
+          }
+        }
+      }
+
+      const validBook = resolveValidBookId(targetBook);
       setSelectedBook(validBook);
 
-      if (fullAnswerTarget.test) {
-        setSelectedTest(String(fullAnswerTarget.test));
+      if (targetTest) {
+        setSelectedTest(String(targetTest));
+      } else if (MASTER_ANSWER_KEYS[validBook]) {
+        setSelectedTest(Object.keys(MASTER_ANSWER_KEYS[validBook])[0] || '1');
       }
-      const qNum = fullAnswerTarget.questionNum ?? (fullAnswerTarget as any)?.num;
+
       if (qNum) {
         setHighlightNum(qNum);
         if (qNum > 100) {
@@ -360,6 +371,11 @@ export const FullAnswersModal: React.FC = () => {
     }
   }, [availableTests, selectedTest]);
 
+  // Current test navigation: prev and next
+  const currentTestIdx = availableTests.indexOf(selectedTest);
+  const prevTest = currentTestIdx > 0 ? availableTests[currentTestIdx - 1] : null;
+  const nextTest = currentTestIdx >= 0 && currentTestIdx < availableTests.length - 1 ? availableTests[currentTestIdx + 1] : null;
+
   // Current answers dictionary
   const answersObj: Record<string, string> = useMemo(() => {
     const bookData = MASTER_ANSWER_KEYS[effectiveBook] || {};
@@ -381,6 +397,28 @@ export const FullAnswersModal: React.FC = () => {
 
   const lcNums = useMemo(() => allNums.filter((n) => n <= 100), [allNums]);
   const rcNums = useMemo(() => allNums.filter((n) => n > 100), [allNums]);
+
+  // Keyboard navigation when bottom sheet is open (Esc to close, Left/Right for prev/next question)
+  useEffect(() => {
+    if (detailNum === null) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        handleCloseDetail();
+      } else if (e.key === 'ArrowLeft') {
+        const currentIdx = allNums.indexOf(detailNum);
+        if (currentIdx > 0) {
+          handleOpenDetail(allNums[currentIdx - 1]);
+        }
+      } else if (e.key === 'ArrowRight') {
+        const currentIdx = allNums.indexOf(detailNum);
+        if (currentIdx >= 0 && currentIdx < allNums.length - 1) {
+          handleOpenDetail(allNums[currentIdx + 1]);
+        }
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [detailNum, allNums]);
 
   // Filtered list for Cards View
   const filteredNums = useMemo(() => {
@@ -561,9 +599,8 @@ export const FullAnswersModal: React.FC = () => {
                         <button
                           key={num}
                           id={`ans-matrix-${num}`}
-                          onClick={() => setHighlightNum(num)}
-                          onDoubleClick={() => handleOpenDetail(num)}
-                          title={`Câu ${num}: Đáp án (${ans}) - Nhấp đúp để xem chi tiết dạng Bottom Sheet`}
+                          onClick={() => handleOpenDetail(num)}
+                          title={`Câu ${num}: Đáp án (${ans}) - Nhấp để xem chi tiết dạng Bottom Sheet`}
                           className={`group relative flex flex-col items-center justify-center py-1 rounded-lg transition-all cursor-pointer border select-none ${
                             isHighlighted
                               ? 'ring-3 ring-amber-400 bg-amber-100 border-amber-500 scale-105 z-10 shadow-sm font-black'
@@ -689,52 +726,101 @@ export const FullAnswersModal: React.FC = () => {
           </div>
         </div>
 
-        {/* Row 2: Select Book & Test */}
-        <div className="grid grid-cols-1 sm:grid-cols-12 gap-2">
-          {/* Book selector */}
-          <div className="sm:col-span-8 flex items-center gap-1.5">
-            <label className="text-xs font-bold text-[#6B635B] shrink-0">Bộ đề:</label>
-            <div className="relative flex-1">
-              <select
-                value={effectiveBook}
-                onChange={(e) => setSelectedBook(e.target.value)}
-                className="w-full appearance-none bg-[#FAF7F2] border border-[#E8DFD3] focus:border-emerald-500 rounded-xl px-3 py-1.5 text-xs sm:text-sm font-bold text-[#262320] cursor-pointer shadow-2xs pr-8"
-              >
-                {EXAM_BOOKS_META.map((book) => (
-                  <option key={book.id} value={book.id}>
-                    {book.name}
-                  </option>
-                ))}
-              </select>
-              <Layers className="w-3.5 h-3.5 text-[#8C8276] absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+        {/* Row 2: Select Book & Test + Prev/Next buttons & Carousel */}
+        <div className="space-y-2">
+          <div className="grid grid-cols-1 sm:grid-cols-12 gap-2">
+            {/* Book selector */}
+            <div className="sm:col-span-7 flex items-center gap-1.5">
+              <label className="text-xs font-bold text-[#6B635B] shrink-0">Bộ đề:</label>
+              <div className="relative flex-1">
+                <select
+                  value={effectiveBook}
+                  onChange={(e) => {
+                    const newBook = e.target.value;
+                    setSelectedBook(newBook);
+                    const tests = Object.keys(MASTER_ANSWER_KEYS[newBook] || {});
+                    setSelectedTest(tests[0] || '1');
+                  }}
+                  className="w-full appearance-none bg-[#FAF7F2] border border-[#E8DFD3] focus:border-emerald-500 rounded-xl px-3 py-1.5 text-xs sm:text-sm font-bold text-[#262320] cursor-pointer shadow-2xs pr-8"
+                >
+                  {EXAM_BOOKS_META.map((book) => (
+                    <option key={book.id} value={book.id}>
+                      {book.name}
+                    </option>
+                  ))}
+                </select>
+                <Layers className="w-3.5 h-3.5 text-[#8C8276] absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+              </div>
+            </div>
+
+            {/* Test selector with Prev & Next buttons */}
+            <div className="sm:col-span-5 flex items-center gap-1.5">
+              <label className="text-xs font-bold text-[#6B635B] shrink-0">Đề:</label>
+              <div className="flex items-center gap-1 flex-1">
+                <button
+                  onClick={() => prevTest && setSelectedTest(prevTest)}
+                  disabled={!prevTest}
+                  className="p-1.5 rounded-xl border border-[#DCD3C7] bg-[#FAF7F2] hover:bg-white disabled:opacity-30 disabled:pointer-events-none text-xs font-bold text-[#5C5247] transition shadow-2xs cursor-pointer shrink-0"
+                  title="Đề thi trước"
+                >
+                  <ChevronLeft className="w-4 h-4" />
+                </button>
+                <div className="relative flex-1">
+                  <select
+                    value={availableTests.includes(selectedTest) ? selectedTest : availableTests[0] || '1'}
+                    onChange={(e) => setSelectedTest(e.target.value)}
+                    className="w-full appearance-none bg-[#FAF7F2] border border-[#E8DFD3] focus:border-emerald-500 rounded-xl px-2.5 py-1.5 text-xs sm:text-sm font-bold text-[#262320] cursor-pointer shadow-2xs pr-7 text-center"
+                  >
+                    {availableTests.map((t) => (
+                      <option key={t} value={t}>
+                        {/^(test|đề)\b/i.test(t) ? t : `Test ${t}`}
+                      </option>
+                    ))}
+                  </select>
+                  <ChevronRight className="w-3.5 h-3.5 text-[#8C8276] absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none rotate-90" />
+                </div>
+                <button
+                  onClick={() => nextTest && setSelectedTest(nextTest)}
+                  disabled={!nextTest}
+                  className="p-1.5 rounded-xl border border-[#DCD3C7] bg-[#FAF7F2] hover:bg-white disabled:opacity-30 disabled:pointer-events-none text-xs font-bold text-[#5C5247] transition shadow-2xs cursor-pointer shrink-0"
+                  title="Đề thi tiếp theo"
+                >
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+              </div>
             </div>
           </div>
 
-          {/* Test selector */}
-          <div className="sm:col-span-4 flex items-center gap-1.5">
-            <label className="text-xs font-bold text-[#6B635B] shrink-0">Test:</label>
-            <div className="relative flex-1">
-              <select
-                value={availableTests.includes(selectedTest) ? selectedTest : availableTests[0] || '1'}
-                onChange={(e) => setSelectedTest(e.target.value)}
-                className="w-full appearance-none bg-[#FAF7F2] border border-[#E8DFD3] focus:border-emerald-500 rounded-xl px-3 py-1.5 text-xs sm:text-sm font-bold text-[#262320] cursor-pointer shadow-2xs pr-8"
+          {/* Horizontal Test Carousel / Swipe Bar */}
+          <div className="flex items-center gap-1.5 overflow-x-auto py-0.5 scrollbar-none max-w-full">
+            <span className="text-[10px] font-bold text-[#8C8276] uppercase tracking-wider shrink-0 mr-0.5">
+              Đề thi:
+            </span>
+            {availableTests.map((t) => (
+              <button
+                key={t}
+                onClick={() => setSelectedTest(t)}
+                className={`px-3 py-1 rounded-xl text-xs font-extrabold transition cursor-pointer whitespace-nowrap shrink-0 ${
+                  t === selectedTest
+                    ? 'bg-emerald-600 text-white shadow-2xs ring-2 ring-emerald-300'
+                    : 'bg-[#FAF7F2] border border-[#E8DFD3] text-[#5C5247] hover:bg-white'
+                }`}
               >
-                {availableTests.map((t) => (
-                  <option key={t} value={t}>
-                    {/^(test|đề)\b/i.test(t) ? t : `Test ${t}`}
-                  </option>
-                ))}
-              </select>
-              <ChevronRight className="w-3.5 h-3.5 text-[#8C8276] absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none rotate-90" />
-            </div>
+                {/^(test|đề)\b/i.test(t) ? t : `Test ${t}`}
+              </button>
+            ))}
           </div>
         </div>
 
-        {/* Row 2.5: 6 Hình Nhận Diện Đề (Part 1) */}
+        {/* Row 2.5: 6 Hình Nhận Diện Đề (Part 1) - compact by default so matrix has full height */}
         <Part1VisualStrip
           bookId={effectiveBook}
           testNum={selectedTest}
-          onSelectQuestion={(qNum) => setHighlightNum(qNum)}
+          initialExpanded={false}
+          onSelectQuestion={(qNum) => {
+            setHighlightNum(qNum);
+            handleOpenDetail(qNum);
+          }}
         />
 
         {/* Row 3: Filter by Part + Search number */}
@@ -1032,9 +1118,8 @@ export const FullAnswersModal: React.FC = () => {
                               <div
                                 key={num}
                                 id={`ans-item-${num}`}
-                                onClick={() => setHighlightNum(num)}
-                                onDoubleClick={() => handleOpenDetail(num)}
-                                title={`Câu ${num}: Đáp án (${ans}) - Nhấp đúp để xem chi tiết dạng Bottom Sheet`}
+                                onClick={() => handleOpenDetail(num)}
+                                title={`Câu ${num}: Đáp án (${ans}) - Nhấp để xem chi tiết dạng Bottom Sheet`}
                                 className={`flex items-center justify-between px-2.5 py-1.5 rounded-xl border transition-all cursor-pointer select-none ${
                                   isHighlighted
                                     ? 'border-emerald-500 bg-emerald-50/90 shadow-2xs ring-2 ring-emerald-400 font-bold'
@@ -1079,37 +1164,43 @@ export const FullAnswersModal: React.FC = () => {
       {/* ======================================================== */}
       {/* BOTTOM SHEET: QUESTION CONTENT & EXPLANATION CHECK       */}
       {/* ======================================================== */}
-      <dialog
-        ref={dialogRef}
-        closedby="any"
-        aria-labelledby="question-detail-title"
-        className="bottom-sheet-dialog"
-        onCancel={(e) => {
-          e.preventDefault();
-          handleCloseDetail();
-        }}
-      >
-        {detailNum !== null && (() => {
-          const detailAns = answersObj[detailNum] || '-';
-          const detailResolved = resolveQuestionDetail(selectedBook, selectedTest, detailNum, detailAns);
-          const detailStyle = pillColors[detailAns] || {
-            bg: 'bg-amber-500',
-            text: 'text-white',
-            badge: 'bg-amber-500 text-white',
-          };
-          const currentIdxInAll = allNums.indexOf(detailNum);
-          const prevNum = currentIdxInAll > 0 ? allNums[currentIdxInAll - 1] : null;
-          const nextNum = currentIdxInAll >= 0 && currentIdxInAll < allNums.length - 1 ? allNums[currentIdxInAll + 1] : null;
+      {/* ======================================================== */}
+      {/* BOTTOM SHEET: QUESTION CONTENT & EXPLANATION CHECK       */}
+      {/* ======================================================== */}
+      {detailNum !== null && (() => {
+        const detailAns = answersObj[detailNum] || '-';
+        const detailResolved = resolveQuestionDetail(selectedBook, selectedTest, detailNum, detailAns);
+        const detailStyle = pillColors[detailAns] || {
+          bg: 'bg-amber-500',
+          text: 'text-white',
+          badge: 'bg-amber-500 text-white',
+        };
+        const currentIdxInAll = allNums.indexOf(detailNum);
+        const prevNum = currentIdxInAll > 0 ? allNums[currentIdxInAll - 1] : null;
+        const nextNum = currentIdxInAll >= 0 && currentIdxInAll < allNums.length - 1 ? allNums[currentIdxInAll + 1] : null;
 
-          return (
-            <div className="w-full max-w-3xl mx-auto bg-white rounded-t-3xl shadow-2xl border-t border-[#E8DFD3] flex flex-col max-h-[85vh] sm:max-h-[82vh] overflow-hidden animate-in slide-in-from-bottom duration-200">
+        return (
+          <div
+            className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/60 backdrop-blur-xs animate-in fade-in duration-150 p-0 sm:p-4"
+            onClick={handleCloseDetail}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="question-detail-title"
+          >
+            <div
+              className="w-full max-w-3xl bg-white rounded-t-3xl sm:rounded-2xl shadow-2xl border-t sm:border border-[#E8DFD3] flex flex-col h-[92vh] sm:h-[86vh] max-h-[94vh] overflow-hidden animate-in slide-in-from-bottom duration-200"
+              onClick={(e) => e.stopPropagation()}
+            >
               {/* Drag Handle Bar */}
-              <div className="pt-2.5 pb-1 flex justify-center shrink-0 cursor-grab">
+              <div
+                className="pt-2 pb-1 flex justify-center shrink-0 cursor-pointer sm:hidden"
+                onClick={handleCloseDetail}
+              >
                 <div className="w-12 h-1.5 rounded-full bg-[#D5CCC1]" />
               </div>
 
               {/* Bottom Sheet Header */}
-              <div className="px-4 py-2.5 border-b border-[#F0EAE1] flex items-center justify-between shrink-0 bg-[#FAF7F2]/90">
+              <div className="px-4 py-2.5 border-b border-[#F0EAE1] flex items-center justify-between shrink-0 bg-[#FAF7F2]">
                 <div className="flex items-center gap-2.5 min-w-0">
                   <span
                     className={`w-8 h-8 rounded-xl font-mono font-black text-sm flex items-center justify-center shrink-0 shadow-2xs ${detailStyle.badge}`}
@@ -1134,7 +1225,7 @@ export const FullAnswersModal: React.FC = () => {
                     onClick={() => prevNum && handleOpenDetail(prevNum)}
                     disabled={!prevNum}
                     className="p-1.5 rounded-lg border border-[#E8DFD3] bg-white hover:bg-[#FAF7F2] disabled:opacity-30 disabled:pointer-events-none text-[#5C5247] cursor-pointer transition shadow-2xs"
-                    title="Câu trước"
+                    title="Câu trước (←)"
                   >
                     <ChevronLeft className="w-4 h-4" />
                   </button>
@@ -1142,7 +1233,7 @@ export const FullAnswersModal: React.FC = () => {
                     onClick={() => nextNum && handleOpenDetail(nextNum)}
                     disabled={!nextNum}
                     className="p-1.5 rounded-lg border border-[#E8DFD3] bg-white hover:bg-[#FAF7F2] disabled:opacity-30 disabled:pointer-events-none text-[#5C5247] cursor-pointer transition shadow-2xs"
-                    title="Câu tiếp theo"
+                    title="Câu tiếp theo (→)"
                   >
                     <ChevronRight className="w-4 h-4" />
                   </button>
@@ -1157,7 +1248,7 @@ export const FullAnswersModal: React.FC = () => {
               </div>
 
               {/* Scrollable Content Body */}
-              <div className="flex-1 overflow-y-auto p-4 space-y-3.5 min-h-0 text-[#262320]">
+              <div className="flex-1 overflow-y-auto p-4 sm:p-5 space-y-4 min-h-0 text-[#262320] overscroll-contain pb-28 sm:pb-8">
                 {/* Listening Specific: Image / Audio / Transcript */}
                 {detailResolved.listening && (
                   <div className="space-y-3">
@@ -1204,9 +1295,9 @@ export const FullAnswersModal: React.FC = () => {
                   </div>
                 )}
 
-                {/* Reading Specific: Passage */}
+                {/* Reading Specific: Passage without restrictive max-h so users see the full text smoothly */}
                 {detailResolved.passage && (
-                  <div className="rounded-2xl border border-sky-200 bg-sky-50/60 p-3.5 space-y-2">
+                  <div className="rounded-2xl border border-sky-200 bg-sky-50/60 p-3.5 sm:p-4 space-y-2">
                     <div className="flex items-center justify-between border-b border-sky-200/80 pb-1.5">
                       <span className="font-extrabold text-xs text-sky-900 flex items-center gap-1.5">
                         <BookOpen className="w-4 h-4 text-sky-700" />
@@ -1222,7 +1313,7 @@ export const FullAnswersModal: React.FC = () => {
                       )}
                     </div>
 
-                    <div className="text-[12.5px] leading-relaxed text-[#2C2723] whitespace-pre-wrap max-h-56 overflow-y-auto pr-1">
+                    <div className="text-[12.5px] leading-relaxed text-[#2C2723] whitespace-pre-wrap">
                       {detailResolved.passage.content}
                     </div>
 
@@ -1270,7 +1361,7 @@ export const FullAnswersModal: React.FC = () => {
                             <span
                               className={`w-5 h-5 rounded-md font-mono font-black text-xs flex items-center justify-center shrink-0 mt-0.5 ${
                                 isCorrect
-                                  ? 'bg-emerald-600 text-white shadow-2xs'
+                                    ? 'bg-emerald-600 text-white shadow-2xs'
                                   : 'bg-white text-[#7A7065] border border-[#DCD3C7]'
                               }`}
                             >
@@ -1289,7 +1380,7 @@ export const FullAnswersModal: React.FC = () => {
 
                 {/* Detailed Explanation */}
                 {detailResolved.explanation && (
-                  <div className="p-3 rounded-2xl bg-amber-50/80 border border-amber-200 text-xs sm:text-[12.5px] leading-relaxed text-amber-950 space-y-1">
+                  <div className="p-3.5 rounded-2xl bg-amber-50/80 border border-amber-200 text-xs sm:text-[12.5px] leading-relaxed text-amber-950 space-y-1">
                     <div className="flex items-center gap-1.5 font-bold text-amber-900">
                       <Lightbulb className="w-4 h-4 text-amber-600" />
                       <span>Giải thích đáp án:</span>
@@ -1300,7 +1391,7 @@ export const FullAnswersModal: React.FC = () => {
 
                 {/* Vietnamese meaning */}
                 {detailResolved.vietnameseMeaning && (
-                  <div className="p-3 rounded-2xl bg-emerald-50/70 border border-emerald-200 text-xs sm:text-[12.5px] leading-relaxed text-emerald-950 space-y-1">
+                  <div className="p-3.5 rounded-2xl bg-emerald-50/70 border border-emerald-200 text-xs sm:text-[12.5px] leading-relaxed text-emerald-950 space-y-1">
                     <span className="font-bold text-emerald-900">🌐 Dịch nghĩa tiếng Việt: </span>
                     <p>{detailResolved.vietnameseMeaning}</p>
                   </div>
@@ -1308,7 +1399,7 @@ export const FullAnswersModal: React.FC = () => {
 
                 {/* Tips / Clues */}
                 {(detailResolved.tip || detailResolved.passage?.clue) && (
-                  <div className="p-3 rounded-2xl bg-[#FFF9E6] border border-amber-300/80 text-xs leading-relaxed text-[#5C4500] space-y-1.5">
+                  <div className="p-3.5 rounded-2xl bg-[#FFF9E6] border border-amber-300/80 text-xs leading-relaxed text-[#5C4500] space-y-1.5">
                     {detailResolved.tip && (
                       <div>
                         <span className="font-bold text-amber-900 flex items-center gap-1 mb-0.5">
@@ -1364,7 +1455,7 @@ export const FullAnswersModal: React.FC = () => {
               {/* Bottom Sheet Footer */}
               <div className="px-4 py-3 border-t border-[#F0EAE1] bg-[#FAF7F2] flex items-center justify-between gap-2 shrink-0 safe-bottom">
                 <div className="text-[11px] text-[#8C8276] hidden sm:block">
-                  Mẹo: Nhấn <kbd className="px-1.5 py-0.5 rounded bg-white border border-[#D5CCC1] font-mono text-[10px]">Esc</kbd> hoặc nhấp ra ngoài để đóng
+                  Phím tắt: <kbd className="px-1.5 py-0.5 rounded bg-white border border-[#D5CCC1] font-mono text-[10px]">Esc</kbd> đóng • <kbd className="px-1.5 py-0.5 rounded bg-white border border-[#D5CCC1] font-mono text-[10px]">←</kbd><kbd className="px-1.5 py-0.5 rounded bg-white border border-[#D5CCC1] font-mono text-[10px]">→</kbd> đổi câu
                 </div>
 
                 <div className="flex items-center gap-2 ml-auto w-full sm:w-auto justify-end">
@@ -1404,9 +1495,9 @@ export const FullAnswersModal: React.FC = () => {
                 </div>
               </div>
             </div>
-          );
-        })()}
-      </dialog>
+          </div>
+        );
+      })()}
     </div>
   );
 };

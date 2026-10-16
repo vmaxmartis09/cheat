@@ -21,6 +21,8 @@ interface Part1VisualStripProps {
   title?: string;
   className?: string;
   initialExpanded?: boolean;
+  hideAnswersBtn?: boolean;
+  hideExamSetBtn?: boolean;
   onSelectQuestion?: (num: number) => void;
 }
 
@@ -30,6 +32,8 @@ export const Part1VisualStrip: React.FC<Part1VisualStripProps> = ({
   title,
   className = '',
   initialExpanded = true,
+  hideAnswersBtn = false,
+  hideExamSetBtn = false,
   onSelectQuestion,
 }) => {
   const [isExpanded, setIsExpanded] = useState(initialExpanded);
@@ -85,49 +89,50 @@ export const Part1VisualStrip: React.FC<Part1VisualStripProps> = ({
 
   return (
     <div
-      className={`rounded-2xl border border-sky-200/90 bg-gradient-to-r from-sky-50/70 via-white to-sky-50/50 p-2.5 sm:p-3 shadow-2xs transition-all ${className}`}
+      className={`rounded-2xl border border-sky-200/90 bg-gradient-to-r from-sky-50/70 via-white to-sky-50/50 p-2 sm:p-2.5 shadow-2xs transition-all ${className}`}
     >
       {/* Header bar */}
-      <div className="flex items-center justify-between gap-2 pb-1.5">
-        <div className="flex items-center gap-2">
-          <div className="flex items-center justify-center w-6 h-6 rounded-lg bg-sky-600 text-white shadow-2xs shrink-0">
-            <ImageIcon className="w-3.5 h-3.5" />
+      <div className="flex items-center justify-between gap-1.5 pb-1">
+        <div className="flex items-center gap-1.5 min-w-0">
+          <div className="flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6 rounded-lg bg-sky-600 text-white shadow-2xs shrink-0">
+            <ImageIcon className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
           </div>
-          <div>
-            <h4 className="text-[12px] font-extrabold text-[#262320] flex items-center gap-1.5">
-              <span>{title || `6 Hình Nhận Diện Đề (Part 1: Câu 1–${photos.length})`}</span>
-              <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-sky-100 text-sky-800 border border-sky-200">
+          <div className="min-w-0">
+            <h4 className="text-[11px] sm:text-[12px] font-black text-[#262320] flex items-center gap-1.5 truncate">
+              <span className="truncate">{title || `6 Hình Nhận Diện Part 1 (Câu 1–${photos.length})`}</span>
+              <span className="text-[9px] sm:text-[10px] font-mono px-1.5 py-0.2 rounded bg-sky-100 text-sky-800 border border-sky-200 shrink-0">
                 {photos.length} hình
               </span>
             </h4>
-            <p className="text-[10px] text-[#8C8276] hidden sm:block">
-              Nhìn 6 ảnh này để nhận diện ngay bạn đang làm đề nào trong phòng thi hoặc trên giấy
-            </p>
           </div>
         </div>
 
-        <div className="flex items-center gap-1.5">
-          <button
-            onClick={() => handleOpenExamSet(1)}
-            className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-sky-50 hover:bg-sky-100 text-sky-900 border border-sky-300 text-[10.5px] font-bold shadow-2xs transition cursor-pointer"
-            title="Xem Toàn Bộ 200 Câu Của Đề Này"
-          >
-            <BookOpen className="w-3 h-3 text-sky-600" />
-            <span className="hidden sm:inline">Cả Đề</span>
-          </button>
+        <div className="flex items-center gap-1 shrink-0">
+          {!hideExamSetBtn && (
+            <button
+              onClick={() => handleOpenExamSet(1)}
+              className="flex items-center gap-1 px-2 py-0.5 rounded-lg bg-sky-50 hover:bg-sky-100 text-sky-900 border border-sky-300 text-[10px] font-bold shadow-2xs transition cursor-pointer"
+              title="Xem Toàn Bộ 200 Câu Của Đề Này"
+            >
+              <BookOpen className="w-3 h-3 text-sky-600" />
+              <span className="hidden sm:inline">Cả Đề</span>
+            </button>
+          )}
 
-          <button
-            onClick={handleOpenAnswers}
-            className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-[10.5px] font-bold shadow-2xs transition cursor-pointer"
-            title="Mở Bảng Nén 200 Đáp Án Của Đề Này"
-          >
-            <Table className="w-3 h-3" />
-            <span className="hidden sm:inline">200 Đáp Án</span>
-          </button>
+          {!hideAnswersBtn && (
+            <button
+              onClick={handleOpenAnswers}
+              className="flex items-center gap-1 px-2 py-0.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-[10px] font-bold shadow-2xs transition cursor-pointer"
+              title="Mở Bảng Nén 200 Đáp Án Của Đề Này"
+            >
+              <Table className="w-3 h-3" />
+              <span className="hidden sm:inline">200 Đáp Án</span>
+            </button>
+          )}
 
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="flex items-center gap-1 px-2 py-1 rounded-lg border border-sky-200 text-sky-800 bg-white hover:bg-sky-100/70 text-[11px] font-bold transition cursor-pointer"
+            className="flex items-center gap-1 px-2 py-0.5 rounded-lg border border-sky-200 text-sky-800 bg-white hover:bg-sky-100/70 text-[10px] sm:text-[11px] font-bold transition cursor-pointer"
           >
             {isExpanded ? (
               <>
@@ -168,7 +173,7 @@ export const Part1VisualStrip: React.FC<Part1VisualStripProps> = ({
 
               {/* Photo Image - larger aspect */}
               <div
-                className="relative overflow-hidden rounded-lg bg-gray-50 aspect-4/3 min-h-[75px] sm:min-h-[90px] cursor-pointer flex items-center justify-center p-0.5"
+                className="relative overflow-hidden rounded-lg bg-gray-50 aspect-4/3 min-h-[85px] sm:min-h-[110px] cursor-pointer flex items-center justify-center p-0.5 border border-gray-100"
                 onClick={() => {
                   setLightboxPhoto(photo);
                 }}
@@ -185,7 +190,7 @@ export const Part1VisualStrip: React.FC<Part1VisualStripProps> = ({
               {onSelectQuestion && (
                 <button
                   onClick={() => onSelectQuestion(photo.qNum)}
-                  className="mt-1 w-full py-0.5 text-[9.5px] font-bold text-sky-800 bg-sky-50 hover:bg-sky-100 rounded transition text-center cursor-pointer truncate"
+                  className="mt-1 w-full py-0.5 text-[9.5px] sm:text-[10px] font-bold text-sky-800 bg-sky-50 hover:bg-sky-100 rounded transition text-center cursor-pointer truncate"
                 >
                   Xem câu #{photo.qNum}
                 </button>

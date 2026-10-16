@@ -676,88 +676,97 @@ const ExamSetView: React.FC<{
 
   return (
     <div className="flex flex-col h-full min-h-0">
-      {/* Sticky header */}
-      <div className="shrink-0 px-3 pt-3 pb-2 bg-white border-b border-[#EFE8DE] shadow-xs">
-        <div className="flex flex-wrap items-center justify-between gap-3 p-3 sm:p-4 rounded-2xl bg-gradient-to-r from-sky-50 via-amber-50 to-emerald-50 border border-sky-200/90 shadow-2xs">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-sky-600 text-white flex items-center justify-center font-extrabold text-lg shadow-sm shrink-0">
+      {/* Sticky header - compact & clean */}
+      <div className="shrink-0 px-2 sm:px-3 pt-2 pb-1.5 bg-white border-b border-[#EFE8DE] shadow-xs">
+        <div className="flex flex-wrap items-center justify-between gap-1.5 p-2 sm:p-3 rounded-2xl bg-gradient-to-r from-sky-50 via-amber-50 to-emerald-50 border border-sky-200/90 shadow-2xs">
+          <div className="flex items-center gap-2 min-w-0">
+            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-sky-600 text-white flex items-center justify-center font-extrabold text-sm shadow-xs shrink-0">
               📚
             </div>
             <div className="min-w-0">
-              <div className="flex items-center gap-2 flex-wrap">
-                <h2 className="text-base sm:text-lg font-extrabold text-[#262320]">
+              <div className="flex items-center gap-1.5 flex-wrap">
+                <h2 className="text-xs sm:text-sm font-black text-[#262320] truncate">
                   {info.examSetName}
                 </h2>
-                <span className="text-[11px] font-bold px-2 py-0.5 rounded-full bg-sky-100 text-sky-900 border border-sky-300">
-                  Trọn bộ {allQuestionsCount} câu
+                <span className="text-[10px] font-bold px-1.5 py-0.2 rounded-full bg-sky-100 text-sky-900 border border-sky-300 shrink-0">
+                  {allQuestionsCount} câu
                 </span>
                 {lcQuestions.length > 0 && (
-                  <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-indigo-100 text-indigo-900 border border-indigo-200">
-                    🎧 {lcQuestions.length} câu LC (1-100)
+                  <span className="text-[9.5px] font-bold px-1.5 py-0.2 rounded-full bg-indigo-100 text-indigo-900 border border-indigo-200 hidden sm:inline shrink-0">
+                    🎧 {lcQuestions.length} LC
                   </span>
                 )}
                 {rcQuestions.length > 0 && (
-                  <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-100 text-amber-900 border border-amber-200">
-                    📖 {rcQuestions.length} câu RC (101-200)
+                  <span className="text-[9.5px] font-bold px-1.5 py-0.2 rounded-full bg-amber-100 text-amber-900 border border-amber-200 hidden sm:inline shrink-0">
+                    📖 {rcQuestions.length} RC
                   </span>
                 )}
               </div>
-              <p className="text-[11.5px] text-[#5C554E] mt-0.5">
-                Xem toàn bộ câu hỏi của đề này · Câu được highlight là câu bạn vừa bấm tới
-              </p>
             </div>
           </div>
 
-          <div className="flex items-center gap-2 flex-wrap">
+          <div className="flex items-center gap-1 shrink-0">
             {rcQuestions.length > 0 && (
               <button
                 onClick={() => useQuizStore.getState().startPracticeExamSet(info.rcSource, focus.questionNum)}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white text-xs font-bold transition cursor-pointer shadow-2xs"
+                className="flex items-center gap-1 px-2.5 py-1 rounded-xl bg-amber-500 hover:bg-amber-600 text-white text-[11px] font-bold transition cursor-pointer shadow-2xs"
                 title="Bắt đầu làm 100 câu đọc của đề này"
               >
-                <Zap className="w-3.5 h-3.5" />
-                <span>Làm Cả Đề RC</span>
+                <Zap className="w-3 h-3" />
+                <span className="hidden sm:inline">Làm Cả Đề</span> RC
               </button>
             )}
 
             {lcQuestions.length > 0 && (
               <button
                 onClick={() => useQuizStore.getState().startListeningExamSet(info.lcTest, focus.questionNum)}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-sky-600 hover:bg-sky-700 text-white text-xs font-bold transition cursor-pointer shadow-2xs"
+                className="flex items-center gap-1 px-2.5 py-1 rounded-xl bg-sky-600 hover:bg-sky-700 text-white text-[11px] font-bold transition cursor-pointer shadow-2xs"
                 title="Bắt đầu luyện nghe trọn bộ của đề này"
               >
-                <Headphones className="w-3.5 h-3.5" />
-                <span>Nghe Cả Đề LC</span>
+                <Headphones className="w-3 h-3" />
+                <span className="hidden sm:inline">Nghe Cả Đề</span> LC
               </button>
             )}
 
             <button
               onClick={() => useQuizStore.getState().openFullAnswers({ book: info.book, test: info.test, questionNum: focus.questionNum })}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition cursor-pointer shadow-2xs"
+              className="flex items-center gap-1 px-2.5 py-1 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-[11px] font-bold transition cursor-pointer shadow-2xs"
               title="Mở bảng đáp án trọn bộ của đề này"
             >
-              <CheckCircle2 className="w-3.5 h-3.5" />
-              <span>Full Đáp Án ({info.totalQuestions} câu)</span>
+              <CheckCircle2 className="w-3 h-3" />
+              <span>Full Đáp Án</span>
             </button>
 
             <button
               onClick={onExit}
-              className="flex items-center gap-1 px-3 py-1.5 rounded-xl bg-white border border-[#DCD3C7] text-xs font-bold text-[#5C554E] hover:bg-gray-100 transition cursor-pointer shadow-2xs"
+              className="flex items-center gap-1 px-2 py-1 rounded-xl bg-white border border-[#DCD3C7] text-[11px] font-bold text-[#5C554E] hover:bg-gray-100 transition cursor-pointer shadow-2xs"
             >
-              <ArrowLeft className="w-3.5 h-3.5" />
-              <span>Thoát Đề</span>
+              <ArrowLeft className="w-3 h-3" />
+              <span>Thoát</span>
             </button>
           </div>
         </div>
 
+        {/* 6 Hình Nhận Diện Đề (Part 1) */}
+        {info.hasListening && (
+          <div className="mt-1.5">
+            <Part1VisualStrip
+              bookId={info.book}
+              testNum={info.test}
+              initialExpanded={true}
+              hideExamSetBtn={true}
+            />
+          </div>
+        )}
+
         {/* Filter tabs if both LC and RC exist */}
         {lcQuestions.length > 0 && rcQuestions.length > 0 && (
-          <div className="mt-2.5 flex items-center gap-2">
-            <span className="text-[11px] font-bold text-[#8C8276]">Hiển thị:</span>
-            <div className="flex items-center gap-1 bg-[#FAF7F2] p-0.5 rounded-xl border border-[#E5DDD2]">
+          <div className="mt-1.5 flex items-center gap-1.5">
+            <span className="text-[10px] font-bold text-[#8C8276]">Hiển thị:</span>
+            <div className="flex items-center gap-0.5 bg-[#FAF7F2] p-0.5 rounded-xl border border-[#E5DDD2] text-xs">
               <button
                 onClick={() => setSectionFilter('all')}
-                className={`px-3 py-1 rounded-lg text-xs font-bold transition cursor-pointer ${
+                className={`px-2.5 py-0.5 rounded-lg text-xs font-bold transition cursor-pointer ${
                   sectionFilter === 'all'
                     ? 'bg-white text-sky-900 shadow-2xs'
                     : 'text-[#6B635B] hover:text-[#262320]'
@@ -767,37 +776,27 @@ const ExamSetView: React.FC<{
               </button>
               <button
                 onClick={() => setSectionFilter('lc')}
-                className={`px-3 py-1 rounded-lg text-xs font-bold transition cursor-pointer flex items-center gap-1 ${
+                className={`px-2 py-0.5 rounded-lg text-xs font-bold transition cursor-pointer flex items-center gap-1 ${
                   sectionFilter === 'lc'
                     ? 'bg-sky-600 text-white shadow-2xs'
                     : 'text-[#6B635B] hover:text-[#262320]'
                 }`}
               >
                 <Headphones className="w-3 h-3" />
-                <span>Nghe LC ({lcQuestions.length})</span>
+                <span>LC ({lcQuestions.length})</span>
               </button>
               <button
                 onClick={() => setSectionFilter('rc')}
-                className={`px-3 py-1 rounded-lg text-xs font-bold transition cursor-pointer flex items-center gap-1 ${
+                className={`px-2 py-0.5 rounded-lg text-xs font-bold transition cursor-pointer flex items-center gap-1 ${
                   sectionFilter === 'rc'
                     ? 'bg-amber-600 text-white shadow-2xs'
                     : 'text-[#6B635B] hover:text-[#262320]'
                 }`}
               >
                 <BookOpen className="w-3 h-3" />
-                <span>Đọc RC ({rcQuestions.length})</span>
+                <span>RC ({rcQuestions.length})</span>
               </button>
             </div>
-          </div>
-        )}
-
-        {/* 6 Hình Nhận Diện Đề (Part 1) */}
-        {info.hasListening && (
-          <div className="mt-2.5">
-            <Part1VisualStrip
-              bookId={info.book}
-              testNum={info.test}
-            />
           </div>
         )}
       </div>

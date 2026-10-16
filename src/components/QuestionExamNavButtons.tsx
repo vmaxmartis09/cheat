@@ -20,9 +20,11 @@ export const QuestionExamNavButtons: React.FC<QuestionExamNavButtonsProps> = ({
   question,
   variant = 'compact',
   className = '',
-  hidePractice = false,
+  hidePractice: propHidePractice,
 }) => {
-  const { openFullExamSet, openFullAnswers, startPracticeExamSet, startListeningExamSet } = useQuizStore();
+  const { openFullExamSet, openFullAnswers, startPracticeExamSet, startListeningExamSet, visibleTabs } = useQuizStore();
+
+  const hidePractice = propHidePractice !== undefined ? propHidePractice : (!visibleTabs.practice && !visibleTabs.listening);
 
   const info = resolveFullExamSetInfo(question);
   const isListening = question.num !== undefined && question.num <= 100 && (info.lcTest !== undefined || Boolean((question as any).audioUrl));

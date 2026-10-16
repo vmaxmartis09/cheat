@@ -25,9 +25,7 @@ import { useQuizStore } from '../store/useQuizStore';
 import { Part1VisualStrip } from './Part1VisualStrip';
 import { resolveFullExamSetInfo, getFullExamSetQuestions } from '../data/examSetResolver';
 import {
-  getRecentExams,
   saveRecentExam,
-  RecentExamItem,
   TOEIC_PARTS_SHORTCUTS,
 } from '../data/recentExams';
 import {
@@ -303,7 +301,6 @@ export const FullAnswersModal: React.FC = () => {
 
   // Search filter inside answers
   const [searchNum, setSearchNum] = useState<string>('');
-  const [partFilter, setPartFilter] = useState<'all' | 'lc' | 'rc' | 'p1' | 'p2' | 'p3' | 'p4' | 'p5' | 'p6' | 'p7'>('all');
   const [copied, setCopied] = useState<boolean>(false);
 
   // Bottom Sheet Detail State
@@ -365,12 +362,10 @@ export const FullAnswersModal: React.FC = () => {
 
   const effectiveBook = MASTER_ANSWER_KEYS[selectedBook] ? selectedBook : DEFAULT_BOOK_ID;
 
-  // Recent exams state & sync
-  const [recentExams, setRecentExams] = useState<RecentExamItem[]>(() => getRecentExams());
+  // Save recent exams on change
   useEffect(() => {
     if (effectiveBook && selectedTest) {
-      const updated = saveRecentExam(effectiveBook, selectedTest);
-      setRecentExams(updated);
+      saveRecentExam(effectiveBook, selectedTest);
     }
   }, [effectiveBook, selectedTest]);
 
@@ -397,6 +392,36 @@ export const FullAnswersModal: React.FC = () => {
   const currentTestIdx = availableTests.indexOf(selectedTest);
   const prevTest = currentTestIdx > 0 ? availableTests[currentTestIdx - 1] : null;
   const nextTest = currentTestIdx >= 0 && currentTestIdx < availableTests.length - 1 ? availableTests[currentTestIdx + 1] : null;
+
+  const handleNextExam = () => {
+    if (nextTest) {
+      setSelectedTest(nextTest);
+      return;
+    }
+    const currentBookIdx = EXAM_BOOKS_META.findIndex((b) => b.id === effectiveBook);
+    const nextBookIdx = (currentBookIdx + 1) % EXAM_BOOKS_META.length;
+    const nextBook = EXAM_BOOKS_META[nextBookIdx];
+    if (nextBook) {
+      setSelectedBook(nextBook.id);
+      const tests = Object.keys(MASTER_ANSWER_KEYS[nextBook.id] || {});
+      setSelectedTest(tests[0] || '1');
+    }
+  };
+
+  const handlePrevExam = () => {
+    if (prevTest) {
+      setSelectedTest(prevTest);
+      return;
+    }
+    const currentBookIdx = EXAM_BOOKS_META.findIndex((b) => b.id === effectiveBook);
+    const prevBookIdx = (currentBookIdx - 1 + EXAM_BOOKS_META.length) % EXAM_BOOKS_META.length;
+    const prevBook = EXAM_BOOKS_META[prevBookIdx];
+    if (prevBook) {
+      setSelectedBook(prevBook.id);
+      const tests = Object.keys(MASTER_ANSWER_KEYS[prevBook.id] || {});
+      setSelectedTest(tests[tests.length - 1] || '1');
+    }
+  };
 
   // Current answers dictionary
   const answersObj: Record<string, string> = useMemo(() => {
@@ -450,20 +475,9 @@ export const FullAnswersModal: React.FC = () => {
         const strNum = String(num);
         if (!strNum.includes(query)) return false;
       }
-
-      if (partFilter === 'lc') return num <= 100;
-      if (partFilter === 'rc') return num > 100;
-      if (partFilter === 'p1') return num >= 1 && num <= 6;
-      if (partFilter === 'p2') return num >= 7 && num <= 31;
-      if (partFilter === 'p3') return num >= 32 && num <= 70;
-      if (partFilter === 'p4') return num >= 71 && num <= 100;
-      if (partFilter === 'p5') return num >= 101 && num <= 130;
-      if (partFilter === 'p6') return num >= 131 && num <= 146;
-      if (partFilter === 'p7') return num >= 147 && num <= 200;
-
       return true;
     });
-  }, [allNums, searchNum, partFilter]);
+  }, [allNums, searchNum]);
 
   // If searchNum matches an exact number, highlight it
   useEffect(() => {
@@ -498,18 +512,6 @@ export const FullAnswersModal: React.FC = () => {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  // Stats calculation
-  const stats = useMemo(() => {
-    const counts = { A: 0, B: 0, C: 0, D: 0 };
-    allNums.forEach((n) => {
-      const a = answersObj[n];
-      if (a === 'A' || a === 'B' || a === 'C' || a === 'D') {
-        counts[a]++;
-      }
-    });
-    return counts;
-  }, [allNums, answersObj]);
-
   const pillColors: Record<string, { bg: string; text: string; badge: string }> = {
     A: { bg: 'bg-sky-500 hover:bg-sky-600', text: 'text-white', badge: 'bg-sky-500 text-white' },
     B: { bg: 'bg-indigo-600 hover:bg-indigo-700', text: 'text-white', badge: 'bg-indigo-600 text-white' },
@@ -525,20 +527,6 @@ export const FullAnswersModal: React.FC = () => {
     if (num <= 130) return 'Part 5 • Điền câu (Incomplete Sentences)';
     if (num <= 146) return 'Part 6 • Điền đoạn (Text Completion)';
     return 'Part 7 • Đọc hiểu đoạn văn (Reading Comprehension)';
-  };
-
-  const isNumInActiveFilter = (num: number) => {
-    if (partFilter === 'all') return true;
-    if (partFilter === 'lc') return num <= 100;
-    if (partFilter === 'rc') return num > 100;
-    if (partFilter === 'p1') return num >= 1 && num <= 6;
-    if (partFilter === 'p2') return num >= 7 && num <= 31;
-    if (partFilter === 'p3') return num >= 32 && num <= 70;
-    if (partFilter === 'p4') return num >= 71 && num <= 100;
-    if (partFilter === 'p5') return num >= 101 && num <= 130;
-    if (partFilter === 'p6') return num >= 131 && num <= 146;
-    if (partFilter === 'p7') return num >= 147 && num <= 200;
-    return true;
   };
 
   // Jump to practice mode
@@ -610,7 +598,6 @@ export const FullAnswersModal: React.FC = () => {
                     {row.map((num) => {
                       const ans = answersObj[num] || '-';
                       const isHighlighted = highlightNum === num;
-                      const inFilter = isNumInActiveFilter(num);
                       const style = pillColors[ans] || {
                         bg: 'bg-gray-300',
                         text: 'text-gray-800',
@@ -626,9 +613,7 @@ export const FullAnswersModal: React.FC = () => {
                           className={`group relative flex flex-col items-center justify-center py-0.5 sm:py-1 rounded-md sm:rounded-lg transition-all cursor-pointer border select-none ${
                             isHighlighted
                               ? 'ring-2 sm:ring-3 ring-amber-400 bg-amber-100 border-amber-500 scale-105 z-10 shadow-sm font-black'
-                              : inFilter
-                              ? 'bg-[#FAF8F5] hover:bg-white border-[#EFE8DE] hover:border-emerald-300'
-                              : 'opacity-25 grayscale bg-gray-100 border-gray-200'
+                              : 'bg-[#FAF8F5] hover:bg-white border-[#EFE8DE] hover:border-emerald-300'
                           }`}
                         >
                           <span className={`text-[8px] sm:text-[9px] font-mono leading-none ${
@@ -661,56 +646,82 @@ export const FullAnswersModal: React.FC = () => {
       {/* ======================================================== */}
       {/* TOP HEADER & EXAM SELECTOR                               */}
       {/* ======================================================== */}
-      <div className="shrink-0 bg-white border-b border-[#EFE8DE] p-2.5 sm:p-3.5 shadow-2xs space-y-2.5">
-        {/* Row 1: Title, View Switcher & Copy */}
-        <div className="flex flex-wrap items-center justify-between gap-2">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white shadow-xs">
-              <CheckCircle2 className="w-4 h-4" />
+      {/* ======================================================== */}
+      {/* TOP HEADER & EXAM SELECTOR (ULTRA COMPACT FOR MOBILE)    */}
+      {/* ======================================================== */}
+      <div className="shrink-0 bg-white border-b border-[#EFE8DE] p-2 sm:p-2.5 shadow-2xs space-y-1.5">
+        {/* Row 1: Book & Test selector + Next Đề ⚡ + Action Icons */}
+        <div className="flex items-center justify-between gap-1.5 flex-wrap sm:flex-nowrap">
+          {/* Left: Book + Test + Next Đề */}
+          <div className="flex items-center gap-1 flex-1 min-w-0">
+            {/* Book Selector */}
+            <div className="relative min-w-0 max-w-[125px] sm:max-w-[200px]">
+              <select
+                value={effectiveBook}
+                onChange={(e) => {
+                  const newBook = e.target.value;
+                  setSelectedBook(newBook);
+                  const tests = Object.keys(MASTER_ANSWER_KEYS[newBook] || {});
+                  setSelectedTest(tests[0] || '1');
+                }}
+                className="w-full appearance-none bg-[#FAF7F2] border border-[#E8DFD3] focus:border-emerald-500 rounded-lg pl-2 pr-6 py-1 text-xs font-black text-[#262320] cursor-pointer shadow-2xs truncate"
+                title="Chọn bộ đề thi"
+              >
+                {EXAM_BOOKS_META.map((book) => (
+                  <option key={book.id} value={book.id}>
+                    {book.name}
+                  </option>
+                ))}
+              </select>
+              <Layers className="w-3 h-3 text-[#8C8276] absolute right-1.5 top-1/2 -translate-y-1/2 pointer-events-none" />
             </div>
-            <div>
-              <h1 className="text-sm sm:text-base font-black text-[#262320] flex items-center gap-1.5">
-                Bảng Đáp Án Nén 1 Màn Hình
-                <span className="text-[10px] font-bold px-1.5 py-0.2 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-200">
-                  {allNums.length} câu
-                </span>
-              </h1>
-              <p className="text-[11px] text-[#8C8276] hidden sm:block">
-                Toàn bộ đáp án Listening (1-100) & Reading (101-200) trực quan trong một tầm mắt
-              </p>
+
+            {/* Test Selector with Prev/Next buttons */}
+            <div className="flex items-center gap-0.5 shrink-0">
+              <button
+                onClick={handlePrevExam}
+                className="p-1 rounded-lg border border-[#DCD3C7] bg-[#FAF7F2] hover:bg-white text-[#5C5247] transition shadow-2xs cursor-pointer"
+                title="Đề thi trước (hoặc bộ đề trước)"
+              >
+                <ChevronLeft className="w-3.5 h-3.5" />
+              </button>
+              <div className="relative">
+                <select
+                  value={availableTests.includes(selectedTest) ? selectedTest : availableTests[0] || '1'}
+                  onChange={(e) => setSelectedTest(e.target.value)}
+                  className="appearance-none bg-[#FAF7F2] border border-[#E8DFD3] focus:border-emerald-500 rounded-lg pl-2 pr-5 py-1 text-xs font-black text-[#262320] cursor-pointer shadow-2xs text-center"
+                >
+                  {availableTests.map((t) => (
+                    <option key={t} value={t}>
+                      {/^(test|đề)\b/i.test(t) ? t : `Test ${t}`}
+                    </option>
+                  ))}
+                </select>
+                <ChevronRight className="w-3 h-3 text-[#8C8276] absolute right-1.5 top-1/2 -translate-y-1/2 pointer-events-none rotate-90" />
+              </div>
+              <button
+                onClick={handleNextExam}
+                className="p-1 rounded-lg border border-[#DCD3C7] bg-[#FAF7F2] hover:bg-white text-[#5C5247] transition shadow-2xs cursor-pointer"
+                title="Đề thi tiếp theo (hoặc bộ đề tiếp theo)"
+              >
+                <ChevronRight className="w-3.5 h-3.5" />
+              </button>
             </div>
+
+            {/* NEXT ĐỀ ⚡ BUTTON (1-Tap Quick Next) */}
+            <button
+              onClick={handleNextExam}
+              className="flex items-center gap-1 px-2 py-1 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-black text-xs shadow-2xs transition cursor-pointer shrink-0"
+              title={nextTest ? `Chuyển ngay sang Đề ${nextTest}` : "Chuyển sang bộ đề tiếp theo"}
+            >
+              <Zap className="w-3.5 h-3.5 text-amber-300 fill-amber-300" />
+              <span className="text-[11px] font-black">Next Đề</span>
+            </button>
           </div>
 
-          <div className="flex items-center gap-1.5">
-            {/* View Mode Toggle */}
-            <div className="flex items-center bg-[#F2ECE3] rounded-xl p-0.5 text-xs font-bold">
-              <button
-                onClick={() => setViewMode('matrix')}
-                className={`flex items-center gap-1 px-2.5 py-1 rounded-lg transition cursor-pointer text-xs ${
-                  viewMode === 'matrix'
-                    ? 'bg-emerald-600 text-white shadow-2xs'
-                    : 'text-[#6B635B] hover:text-[#262320]'
-                }`}
-                title="Hiển thị dạng bảng nén 1 màn hình trực quan"
-              >
-                <LayoutGrid className="w-3.5 h-3.5" />
-                <span>Bảng Nén</span>
-              </button>
-              <button
-                onClick={() => setViewMode('cards')}
-                className={`flex items-center gap-1 px-2.5 py-1 rounded-lg transition cursor-pointer text-xs ${
-                  viewMode === 'cards'
-                    ? 'bg-emerald-600 text-white shadow-2xs'
-                    : 'text-[#6B635B] hover:text-[#262320]'
-                }`}
-                title="Hiển thị danh sách thẻ chi tiết"
-              >
-                <List className="w-3.5 h-3.5" />
-                <span>Thẻ Chi Tiết</span>
-              </button>
-            </div>
-
-            {/* View Full Exam Set Button */}
+          {/* Right: Action icons only (clean & space-saving) */}
+          <div className="flex items-center gap-1 shrink-0 ml-auto">
+            {/* View Full Exam Set */}
             <button
               onClick={() => {
                 const info = resolveFullExamSetInfo({ source: effectiveBook, test: selectedTest, num: highlightNum || 101 });
@@ -720,265 +731,137 @@ export const FullAnswersModal: React.FC = () => {
                   questionNum: highlightNum || 101,
                 });
               }}
-              className="flex items-center gap-1 px-2.5 py-1.5 rounded-xl bg-sky-50 border border-sky-300 hover:bg-sky-100 text-xs font-bold text-sky-800 transition cursor-pointer shadow-2xs"
-              title="Mở toàn bộ đề thi để xem toàn bộ câu hỏi và làm bài"
+              className="p-1 sm:px-2 sm:py-1 rounded-lg bg-sky-50 border border-sky-300 hover:bg-sky-100 text-xs font-bold text-sky-800 transition cursor-pointer shadow-2xs flex items-center gap-1"
+              title="Mở toàn bộ 200 câu hỏi đề này để đọc câu hỏi và làm bài"
             >
               <BookOpen className="w-3.5 h-3.5 text-sky-600" />
-              <span className="hidden sm:inline">Xem Cả Đề</span>
+              <span className="hidden sm:inline text-[11px]">Xem Cả Đề</span>
             </button>
 
             {/* Copy Button */}
             <button
               onClick={handleCopyAll}
-              className="flex items-center gap-1 px-2.5 py-1.5 rounded-xl bg-[#FAF7F2] border border-[#E8DFD3] hover:border-emerald-400 text-xs font-bold text-[#4A4238] transition cursor-pointer shadow-2xs"
+              className="p-1 sm:px-2 sm:py-1 rounded-lg bg-[#FAF7F2] border border-[#E8DFD3] hover:border-emerald-400 text-xs font-bold text-[#4A4238] transition cursor-pointer shadow-2xs flex items-center gap-1"
               title="Sao chép toàn bộ đáp án"
             >
               {copied ? (
                 <>
                   <Check className="w-3.5 h-3.5 text-emerald-600" />
-                  <span className="text-emerald-700 hidden sm:inline">Đã chép</span>
+                  <span className="text-emerald-700 hidden sm:inline text-[11px]">Đã chép</span>
                 </>
               ) : (
                 <>
                   <Copy className="w-3.5 h-3.5 text-[#6B635B]" />
-                  <span className="hidden sm:inline">Sao chép</span>
+                  <span className="hidden sm:inline text-[11px]">Chép</span>
                 </>
               )}
             </button>
+
+            {/* View Mode Toggle (Matrix / Cards) */}
+            <div className="flex items-center bg-[#F2ECE3] rounded-lg p-0.5 text-xs font-bold">
+              <button
+                onClick={() => setViewMode('matrix')}
+                className={`p-1 rounded-md transition cursor-pointer ${
+                  viewMode === 'matrix' ? 'bg-emerald-600 text-white shadow-2xs' : 'text-[#6B635B] hover:text-[#262320]'
+                }`}
+                title="Bảng Nén 1 màn hình"
+              >
+                <LayoutGrid className="w-3.5 h-3.5" />
+              </button>
+              <button
+                onClick={() => setViewMode('cards')}
+                className={`p-1 rounded-md transition cursor-pointer ${
+                  viewMode === 'cards' ? 'bg-emerald-600 text-white shadow-2xs' : 'text-[#6B635B] hover:text-[#262320]'
+                }`}
+                title="Thẻ chi tiết"
+              >
+                <List className="w-3.5 h-3.5" />
+              </button>
+            </div>
           </div>
         </div>
 
-        {/* Row 2: Select Book & Test + Prev/Next buttons & Carousel */}
-        <div className="space-y-2">
-          <div className="grid grid-cols-1 sm:grid-cols-12 gap-2">
-            {/* Book selector */}
-            <div className="sm:col-span-7 flex items-center gap-1.5">
-              <label className="text-xs font-bold text-[#6B635B] shrink-0">Bộ đề:</label>
-              <div className="relative flex-1">
-                <select
-                  value={effectiveBook}
-                  onChange={(e) => {
-                    const newBook = e.target.value;
-                    setSelectedBook(newBook);
-                    const tests = Object.keys(MASTER_ANSWER_KEYS[newBook] || {});
-                    setSelectedTest(tests[0] || '1');
-                  }}
-                  className="w-full appearance-none bg-[#FAF7F2] border border-[#E8DFD3] focus:border-emerald-500 rounded-xl px-3 py-1.5 text-xs sm:text-sm font-bold text-[#262320] cursor-pointer shadow-2xs pr-8"
-                >
-                  {EXAM_BOOKS_META.map((book) => (
-                    <option key={book.id} value={book.id}>
-                      {book.name}
-                    </option>
-                  ))}
-                </select>
-                <Layers className="w-3.5 h-3.5 text-[#8C8276] absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
-              </div>
-            </div>
-
-            {/* Test selector with Prev & Next buttons */}
-            <div className="sm:col-span-5 flex items-center gap-1.5">
-              <label className="text-xs font-bold text-[#6B635B] shrink-0">Đề:</label>
-              <div className="flex items-center gap-1 flex-1">
-                <button
-                  onClick={() => prevTest && setSelectedTest(prevTest)}
-                  disabled={!prevTest}
-                  className="p-1.5 rounded-xl border border-[#DCD3C7] bg-[#FAF7F2] hover:bg-white disabled:opacity-30 disabled:pointer-events-none text-xs font-bold text-[#5C5247] transition shadow-2xs cursor-pointer shrink-0"
-                  title="Đề thi trước"
-                >
-                  <ChevronLeft className="w-4 h-4" />
-                </button>
-                <div className="relative flex-1">
-                  <select
-                    value={availableTests.includes(selectedTest) ? selectedTest : availableTests[0] || '1'}
-                    onChange={(e) => setSelectedTest(e.target.value)}
-                    className="w-full appearance-none bg-[#FAF7F2] border border-[#E8DFD3] focus:border-emerald-500 rounded-xl px-2.5 py-1.5 text-xs sm:text-sm font-bold text-[#262320] cursor-pointer shadow-2xs pr-7 text-center"
-                  >
-                    {availableTests.map((t) => (
-                      <option key={t} value={t}>
-                        {/^(test|đề)\b/i.test(t) ? t : `Test ${t}`}
-                      </option>
-                    ))}
-                  </select>
-                  <ChevronRight className="w-3.5 h-3.5 text-[#8C8276] absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none rotate-90" />
-                </div>
-                <button
-                  onClick={() => nextTest && setSelectedTest(nextTest)}
-                  disabled={!nextTest}
-                  className="p-1.5 rounded-xl border border-[#DCD3C7] bg-[#FAF7F2] hover:bg-white disabled:opacity-30 disabled:pointer-events-none text-xs font-bold text-[#5C5247] transition shadow-2xs cursor-pointer shrink-0"
-                  title="Đề thi tiếp theo"
-                >
-                  <ChevronRight className="w-4 h-4" />
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Horizontal Test Carousel / Swipe Bar */}
-          <div className="flex items-center gap-1.5 overflow-x-auto py-0.5 scrollbar-none max-w-full">
-            <span className="text-[10px] font-bold text-[#8C8276] uppercase tracking-wider shrink-0 mr-0.5">
-              Đề thi:
-            </span>
-            {availableTests.map((t) => (
+        {/* Row 2: 1-Tap Quick Book Ribbon (Hacker 2, Hacker 3, Hacker 1, YBM, Docs 3, Docs 2) */}
+        <div className="flex items-center gap-1 overflow-x-auto py-0.5 scrollbar-none max-w-full">
+          <span className="text-[9.5px] font-black text-[#8C8276] uppercase tracking-wider shrink-0 mr-0.5">
+            Bộ đề:
+          </span>
+          {EXAM_BOOKS_META.map((b) => {
+            const isActive = effectiveBook === b.id;
+            const shortName = b.name.replace(/\s*\(.*\)/, '');
+            return (
               <button
-                key={t}
-                onClick={() => setSelectedTest(t)}
-                className={`px-3 py-1 rounded-xl text-xs font-extrabold transition cursor-pointer whitespace-nowrap shrink-0 ${
-                  t === selectedTest
-                    ? 'bg-emerald-600 text-white shadow-2xs ring-2 ring-emerald-300'
-                    : 'bg-[#FAF7F2] border border-[#E8DFD3] text-[#5C5247] hover:bg-white'
+                key={b.id}
+                onClick={() => {
+                  setSelectedBook(b.id);
+                  const tests = Object.keys(MASTER_ANSWER_KEYS[b.id] || {});
+                  setSelectedTest(tests[0] || '1');
+                }}
+                className={`px-2 py-0.5 rounded-lg text-[10.5px] font-bold shrink-0 transition cursor-pointer border ${
+                  isActive
+                    ? 'bg-amber-500 text-white border-amber-600 shadow-2xs font-black'
+                    : 'bg-[#FAF7F2] hover:bg-white text-[#5C5247] border-[#E8DFD3]'
                 }`}
               >
-                {/^(test|đề)\b/i.test(t) ? t : `Test ${t}`}
+                {shortName}
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Row 3: 6 Hình Nhận Diện Đề (Part 1) */}
+        {currentMeta?.hasListening && (
+          <Part1VisualStrip
+            bookId={effectiveBook}
+            testNum={selectedTest}
+            initialExpanded={false}
+            hideAnswersBtn={true}
+            onSelectQuestion={(qNum) => {
+              setHighlightNum(qNum);
+              handleOpenDetail(qNum);
+            }}
+          />
+        )}
+
+        {/* Row 4: Fast Search & Part Jump */}
+        <div className="flex items-center justify-between gap-1.5 pt-1 border-t border-[#F0EAE1]">
+          {/* Part Jump Chips */}
+          <div className="flex items-center gap-1 overflow-x-auto py-0.5 scrollbar-none flex-1 min-w-0">
+            {TOEIC_PARTS_SHORTCUTS.map((p) => (
+              <button
+                key={p.part}
+                onClick={() => {
+                  setHighlightNum(p.num);
+                  if (p.num <= 100) {
+                    setMobileSection('lc');
+                  } else {
+                    setMobileSection('rc');
+                  }
+                  const el = document.getElementById(`ans-matrix-${p.num}`);
+                  if (el) {
+                    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                  }
+                }}
+                className={`px-1.5 py-0.5 rounded text-[10px] sm:text-[11px] font-bold shrink-0 transition cursor-pointer border ${
+                  p.type === 'lc'
+                    ? 'bg-sky-50 text-sky-800 border-sky-200 hover:bg-sky-100'
+                    : 'bg-amber-50 text-amber-900 border-amber-200 hover:bg-amber-100'
+                }`}
+                title={`Nhảy tới ${p.name}`}
+              >
+                {p.label.split(':')[0]}
               </button>
             ))}
           </div>
 
-          {/* Recent Exams Dock (1-tap switch) */}
-          {recentExams.length > 0 && (
-            <div className="flex items-center gap-1.5 overflow-x-auto py-1 scrollbar-none max-w-full border-t border-[#F0EAE1]">
-              <span className="text-[10px] font-extrabold text-amber-800 uppercase tracking-wider shrink-0 flex items-center gap-1">
-                <Zap className="w-3 h-3 text-amber-500 fill-amber-500" /> Gần đây:
-              </span>
-              {recentExams.map((item) => {
-                const isActive = effectiveBook === item.book && selectedTest === item.test;
-                return (
-                  <button
-                    key={`recent_full_${item.book}_${item.test}`}
-                    onClick={() => {
-                      setSelectedBook(item.book);
-                      setSelectedTest(item.test);
-                    }}
-                    className={`px-2.5 py-0.5 rounded-xl text-xs font-bold shrink-0 transition-all cursor-pointer border ${
-                      isActive
-                        ? 'bg-amber-500 text-white border-amber-600 shadow-2xs font-black'
-                        : 'bg-[#FAF7F2] hover:bg-white text-[#5C5247] border-[#E8DFD3]'
-                    }`}
-                  >
-                    {item.label}
-                  </button>
-                );
-              })}
-            </div>
-          )}
-        </div>
-
-        {/* Row 2.5: 6 Hình Nhận Diện Đề (Part 1) - compact by default so matrix has full height */}
-        <Part1VisualStrip
-          bookId={effectiveBook}
-          testNum={selectedTest}
-          initialExpanded={false}
-          onSelectQuestion={(qNum) => {
-            setHighlightNum(qNum);
-            handleOpenDetail(qNum);
-          }}
-        />
-
-        {/* Row 3: Filter by Part + Search number */}
-        <div className="flex flex-wrap items-center justify-between gap-1.5 pt-1 border-t border-[#F0EAE1]">
-          {/* Part filters */}
-          <div className="flex items-center gap-1 overflow-x-auto py-0.5 max-w-full">
-            <button
-              onClick={() => setPartFilter('all')}
-              className={`px-2 py-0.5 rounded-lg text-xs font-bold transition cursor-pointer shrink-0 ${
-                partFilter === 'all'
-                  ? 'bg-emerald-600 text-white shadow-2xs'
-                  : 'bg-[#FAF7F2] text-[#6B635B] hover:text-[#262320]'
-              }`}
-            >
-              Tất cả ({allNums.length})
-            </button>
-
-            {currentMeta?.hasListening && (
-              <>
-                <button
-                  onClick={() => setPartFilter('lc')}
-                  className={`px-2 py-0.5 rounded-lg text-xs font-bold transition cursor-pointer shrink-0 ${
-                    partFilter === 'lc'
-                      ? 'bg-sky-600 text-white shadow-2xs'
-                      : 'bg-[#FAF7F2] text-[#6B635B] hover:text-[#262320]'
-                  }`}
-                >
-                  🎧 Nghe (1-100)
-                </button>
-                <button
-                  onClick={() => setPartFilter('p1')}
-                  className={`px-1.5 py-0.5 rounded text-[10.5px] font-semibold transition cursor-pointer shrink-0 ${
-                    partFilter === 'p1' ? 'bg-sky-200 text-sky-900 font-bold' : 'text-[#8C8276]'
-                  }`}
-                >
-                  P1
-                </button>
-                <button
-                  onClick={() => setPartFilter('p2')}
-                  className={`px-1.5 py-0.5 rounded text-[10.5px] font-semibold transition cursor-pointer shrink-0 ${
-                    partFilter === 'p2' ? 'bg-sky-200 text-sky-900 font-bold' : 'text-[#8C8276]'
-                  }`}
-                >
-                  P2
-                </button>
-                <button
-                  onClick={() => setPartFilter('p3')}
-                  className={`px-1.5 py-0.5 rounded text-[10.5px] font-semibold transition cursor-pointer shrink-0 ${
-                    partFilter === 'p3' ? 'bg-sky-200 text-sky-900 font-bold' : 'text-[#8C8276]'
-                  }`}
-                >
-                  P3
-                </button>
-                <button
-                  onClick={() => setPartFilter('p4')}
-                  className={`px-1.5 py-0.5 rounded text-[10.5px] font-semibold transition cursor-pointer shrink-0 ${
-                    partFilter === 'p4' ? 'bg-sky-200 text-sky-900 font-bold' : 'text-[#8C8276]'
-                  }`}
-                >
-                  P4
-                </button>
-              </>
-            )}
-
-            <button
-              onClick={() => setPartFilter('rc')}
-              className={`px-2 py-0.5 rounded-lg text-xs font-bold transition cursor-pointer shrink-0 ${
-                partFilter === 'rc'
-                  ? 'bg-amber-600 text-white shadow-2xs'
-                  : 'bg-[#FAF7F2] text-[#6B635B] hover:text-[#262320]'
-              }`}
-            >
-              📖 Đọc (101-200)
-            </button>
-            <button
-              onClick={() => setPartFilter('p5')}
-              className={`px-1.5 py-0.5 rounded text-[10.5px] font-semibold transition cursor-pointer shrink-0 ${
-                partFilter === 'p5' ? 'bg-amber-200 text-amber-900 font-bold' : 'text-[#8C8276]'
-              }`}
-            >
-              P5
-            </button>
-            <button
-              onClick={() => setPartFilter('p6')}
-              className={`px-1.5 py-0.5 rounded text-[10.5px] font-semibold transition cursor-pointer shrink-0 ${
-                partFilter === 'p6' ? 'bg-amber-200 text-amber-900 font-bold' : 'text-[#8C8276]'
-              }`}
-            >
-              P6
-            </button>
-            <button
-              onClick={() => setPartFilter('p7')}
-              className={`px-1.5 py-0.5 rounded text-[10.5px] font-semibold transition cursor-pointer shrink-0 ${
-                partFilter === 'p7' ? 'bg-amber-200 text-amber-900 font-bold' : 'text-[#8C8276]'
-              }`}
-            >
-              P7
-            </button>
-          </div>
-
           {/* Search box for quick number search with instant answer badge */}
-          <div className="flex items-center gap-1.5 shrink-0">
-            <div className="relative w-28 sm:w-36">
-              <Search className="w-3.5 h-3.5 text-[#8C8276] absolute left-2.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+          <div className="flex items-center gap-1 shrink-0">
+            <div className="relative w-24 sm:w-32">
+              <Search className="w-3 h-3 text-[#8C8276] absolute left-2 top-1/2 -translate-y-1/2 pointer-events-none" />
               <input
                 type="text"
                 inputMode="numeric"
-                placeholder="# Nhập câu..."
+                placeholder="# Câu..."
                 value={searchNum}
                 onChange={(e) => setSearchNum(e.target.value)}
                 onKeyDown={(e) => {
@@ -989,19 +872,19 @@ export const FullAnswersModal: React.FC = () => {
                     }
                   }
                 }}
-                className="w-full bg-[#FAF7F2] border border-[#E8DFD3] focus:border-emerald-500 rounded-lg pl-7 pr-6 py-1 text-xs text-[#262320] focus:outline-none font-bold shadow-2xs"
+                className="w-full bg-[#FAF7F2] border border-[#E8DFD3] focus:border-emerald-500 rounded-lg pl-6 pr-5 py-0.5 text-xs text-[#262320] focus:outline-none font-bold shadow-2xs"
               />
               {searchNum && (
                 <button
                   onClick={() => setSearchNum('')}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 text-xs text-[#8C8276] hover:text-[#262320] cursor-pointer"
+                  className="absolute right-1.5 top-1/2 -translate-y-1/2 text-xs text-[#8C8276] hover:text-[#262320] cursor-pointer"
                 >
                   ✕
                 </button>
               )}
             </div>
 
-            {/* Instant Answer Badge for searched question */}
+            {/* Instant Answer Badge */}
             {(() => {
               const parsed = parseInt(searchNum.trim(), 10);
               const targetAns = !isNaN(parsed) ? answersObj[parsed] : null;
@@ -1019,66 +902,17 @@ export const FullAnswersModal: React.FC = () => {
               return (
                 <button
                   onClick={() => handleOpenDetail(parsed, 'full')}
-                  className="flex items-center gap-1.5 px-2 py-1 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-black text-xs shadow-2xs cursor-pointer transition animate-in fade-in"
+                  className="flex items-center gap-1 px-1.5 py-0.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-black text-xs shadow-2xs cursor-pointer transition animate-in fade-in"
                   title={`Mở câu ${parsed}: Đáp án (${targetAns})`}
                 >
-                  <span className="text-[11px]">#{parsed}:</span>
-                  <span className={`w-4 h-4 rounded text-[10px] font-black flex items-center justify-center text-white ${badgeColor}`}>
+                  <span className="text-[10px]">#{parsed}:</span>
+                  <span className={`w-3.5 h-3.5 rounded text-[9px] font-black flex items-center justify-center text-white ${badgeColor}`}>
                     {targetAns}
                   </span>
-                  <span className="text-[10px] hidden sm:inline">Mở ⚡</span>
                 </button>
               );
             })()}
           </div>
-        </div>
-
-        {/* Part Jump Quick Chips (1-tap jump to Part 1-7) */}
-        <div className="flex items-center gap-1 overflow-x-auto py-1 scrollbar-none border-t border-[#F0EAE1]">
-          <span className="text-[10px] font-black text-[#8C8276] uppercase tracking-wider shrink-0 mr-1 flex items-center gap-1">
-            <Sparkles className="w-3 h-3 text-amber-500" /> Nhảy nhanh:
-          </span>
-          {TOEIC_PARTS_SHORTCUTS.map((p) => (
-            <button
-              key={p.part}
-              onClick={() => {
-                setHighlightNum(p.num);
-                if (p.num <= 100) {
-                  setMobileSection('lc');
-                } else {
-                  setMobileSection('rc');
-                }
-                handleOpenDetail(p.num, 'full');
-              }}
-              className={`px-2 py-0.5 rounded-lg text-xs font-bold shrink-0 transition cursor-pointer border shadow-2xs ${
-                p.type === 'lc'
-                  ? 'bg-sky-50 text-sky-800 border-sky-200 hover:bg-sky-100 hover:border-sky-400'
-                  : 'bg-amber-50 text-amber-900 border-amber-200 hover:bg-amber-100 hover:border-amber-400'
-              }`}
-              title={`Mở ngay câu ${p.num} (${p.name})`}
-            >
-              {p.label}
-            </button>
-          ))}
-        </div>
-
-        {/* Distribution quick bar */}
-        <div className="flex items-center gap-2 text-[10.5px] text-[#6B635B] bg-[#FAF7F2] px-2.5 py-1 rounded-lg">
-          <span className="font-bold text-[#4A4238]">Phân bổ:</span>
-          <span className="font-semibold text-sky-800">A: {stats.A}</span>
-          <span>·</span>
-          <span className="font-semibold text-violet-800">B: {stats.B}</span>
-          <span>·</span>
-          <span className="font-semibold text-emerald-800">C: {stats.C}</span>
-          <span>·</span>
-          <span className="font-semibold text-amber-900">D: {stats.D}</span>
-
-          {highlightNum && (
-            <span className="ml-auto text-[10px] text-amber-900 font-bold bg-amber-100 border border-amber-300 px-2 py-0.5 rounded-md flex items-center gap-1">
-              <Sparkles className="w-3 h-3 text-amber-600" />
-              <span>Đang chọn #{highlightNum}</span>
-            </span>
-          )}
         </div>
       </div>
 

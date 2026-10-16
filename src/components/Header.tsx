@@ -10,18 +10,22 @@ import {
   Cloud,
   Database,
   CheckCircle2,
+  SearchCheck,
+  SlidersHorizontal,
 } from 'lucide-react';
 
 interface HeaderProps {
   activeTab: 'practice' | 'listening' | 'results' | 'search' | 'answers';
   onSwitchToPracticeAll: () => void;
   onOpenSyncModal: () => void;
+  onOpenTabCustomizer?: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
   activeTab,
   onSwitchToPracticeAll,
   onOpenSyncModal,
+  onOpenTabCustomizer,
 }) => {
   const {
     mode,
@@ -241,6 +245,42 @@ export const Header: React.FC<HeaderProps> = ({
               </span>
             )}
           </div>
+        )}
+
+        {/* Quick Hub Switcher (Tra Cứu <-> Full Đáp Án) */}
+        {activeTab === 'search' && (
+          <button
+            onClick={() => useQuizStore.getState().setActiveTab('answers')}
+            className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-black text-xs shadow-2xs transition cursor-pointer"
+            title="Chuyển sang Bảng Đáp Án Trọn Bộ 200 câu"
+          >
+            <CheckCircle2 className="w-3.5 h-3.5" />
+            <span className="hidden sm:inline">Bảng Đáp Án</span>
+            <span className="sm:hidden">Đáp Án</span>
+          </button>
+        )}
+        {activeTab === 'answers' && (
+          <button
+            onClick={() => useQuizStore.getState().setActiveTab('search')}
+            className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-amber-500 hover:bg-amber-600 text-white font-black text-xs shadow-2xs transition cursor-pointer"
+            title="Chuyển sang Tra Cứu Từ Khóa & Số Câu"
+          >
+            <SearchCheck className="w-3.5 h-3.5" />
+            <span className="hidden sm:inline">Tra Cứu</span>
+            <span className="sm:hidden">Tìm</span>
+          </button>
+        )}
+
+        {/* Tab Customizer Button */}
+        {onOpenTabCustomizer && (
+          <button
+            onClick={onOpenTabCustomizer}
+            className="flex items-center gap-1 px-2 py-1 rounded-lg bg-white border border-[#E8DFD3] hover:border-amber-400 text-xs font-bold text-[#4A4238] shadow-2xs transition cursor-pointer"
+            title="Tuỳ biến hiển thị tab (Ẩn/Hiện Ôn Đọc & Luyện Nghe)"
+          >
+            <SlidersHorizontal className="w-3.5 h-3.5 text-amber-700" />
+            <span className="hidden sm:inline text-[11px]">Tuỳ biến</span>
+          </button>
         )}
 
         {/* Global Cloud Sync Button */}

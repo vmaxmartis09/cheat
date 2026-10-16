@@ -9,6 +9,7 @@ import { LoginSyncModal } from './components/LoginSyncModal';
 import { BookOpen, Headphones, BarChart3, SearchCheck, CheckCircle2 } from 'lucide-react';
 import { SearchTab } from './components/SearchTab';
 import { FullAnswersModal } from './components/FullAnswersModal';
+import { TabCustomizerModal } from './components/TabCustomizerModal';
 
 export const App: React.FC = () => {
   const {
@@ -22,9 +23,11 @@ export const App: React.FC = () => {
     loginWithPasskey,
     activeTab,
     setActiveTab,
+    visibleTabs,
     supabaseMissingTable,
   } = useQuizStore();
   const [isSyncModalOpen, setIsSyncModalOpen] = useState<boolean>(false);
+  const [isTabCustomizerOpen, setIsTabCustomizerOpen] = useState<boolean>(false);
 
   const currentQ = questions[currentIndex];
   const isPassageView = activeTab === 'practice' && !isFinished && Boolean(currentQ?.isPassageQuestion && currentQ?.passageInfo);
@@ -70,6 +73,7 @@ export const App: React.FC = () => {
         activeTab={activeTab}
         onSwitchToPracticeAll={handleGoToPracticeAll}
         onOpenSyncModal={() => setIsSyncModalOpen(true)}
+        onOpenTabCustomizer={() => setIsTabCustomizerOpen(true)}
       />
 
       {/* SUPABASE MISSING TABLE BANNER */}
@@ -129,84 +133,100 @@ export const App: React.FC = () => {
         )}
       </main>
 
-      {/* COMPACT BOTTOM NAVIGATION BAR: 5 TABS */}
+      {/* DYNAMIC BOTTOM NAVIGATION BAR */}
       <nav className="border-t border-[#EFE8DE] bg-[#FAF7F2]/95 backdrop-blur-md px-1 sm:px-6 py-1 sm:py-1.5 flex items-center justify-around shrink-0 safe-bottom">
         <div className={`flex items-center justify-around w-full mx-auto gap-0.5 sm:gap-2 ${
           activeTab === 'listening' ? 'max-w-4xl' : activeTab === 'answers' ? 'max-w-7xl' : activeTab === 'search' ? 'max-w-3xl' : isPassageView ? 'max-w-7xl' : 'max-w-2xl'
         }`}>
-          {/* Tab 1: ÔN ĐỌC */}
-          <button
-            onClick={() => setActiveTab('practice')}
-            className={`flex-1 flex flex-col items-center gap-0.5 py-0.5 sm:py-1 px-0.5 sm:px-3 rounded-xl transition cursor-pointer ${
-              activeTab === 'practice'
-                ? 'text-amber-800 font-bold bg-amber-100/60 shadow-2xs'
-                : 'text-[#8C8276] hover:text-[#262320]'
-            }`}
-          >
-            <BookOpen className="w-4 h-4 sm:w-5 sm:h-5" />
-            <span className="text-[10px] sm:text-xs font-semibold">Ôn Đọc</span>
-          </button>
+          {/* Tab: TRA ĐÁP ÁN (FOCUSED 1ST) */}
+          {visibleTabs.search !== false && (
+            <button
+              onClick={() => setActiveTab('search')}
+              className={`flex-1 flex flex-col items-center gap-0.5 py-1 px-0.5 sm:px-3 rounded-xl transition cursor-pointer ${
+                activeTab === 'search'
+                  ? 'text-amber-800 font-bold bg-amber-100/70 shadow-2xs'
+                  : 'text-[#8C8276] hover:text-[#262320]'
+              }`}
+            >
+              <SearchCheck className="w-4 h-4 sm:w-5 sm:h-5" />
+              <span className="text-[10px] sm:text-xs font-semibold">Tra Cứu</span>
+            </button>
+          )}
 
-          {/* Tab 2: LUYỆN NGHE */}
-          <button
-            onClick={() => setActiveTab('listening')}
-            className={`flex-1 flex flex-col items-center gap-0.5 py-1 px-0.5 sm:px-3 rounded-xl transition cursor-pointer ${
-              activeTab === 'listening'
-                ? 'text-amber-800 font-bold bg-amber-100/60 shadow-2xs'
-                : 'text-[#8C8276] hover:text-[#262320]'
-            }`}
-          >
-            <Headphones className="w-4 h-4 sm:w-5 sm:h-5" />
-            <span className="text-[10px] sm:text-xs font-semibold">Luyện Nghe</span>
-          </button>
+          {/* Tab: FULL ĐÁP ÁN (FOCUSED 2ND) */}
+          {visibleTabs.answers !== false && (
+            <button
+              onClick={() => setActiveTab('answers')}
+              className={`flex-1 flex flex-col items-center gap-0.5 py-1 px-0.5 sm:px-3 rounded-xl transition cursor-pointer ${
+                activeTab === 'answers'
+                  ? 'text-emerald-800 font-bold bg-emerald-100/70 shadow-2xs'
+                  : 'text-[#8C8276] hover:text-[#262320]'
+              }`}
+            >
+              <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600" />
+              <span className="text-[10px] sm:text-xs font-semibold text-emerald-800">Full Đáp Án</span>
+            </button>
+          )}
 
-          {/* Tab 3: FULL ĐÁP ÁN (NEW) */}
-          <button
-            onClick={() => setActiveTab('answers')}
-            className={`flex-1 flex flex-col items-center gap-0.5 py-1 px-0.5 sm:px-3 rounded-xl transition cursor-pointer ${
-              activeTab === 'answers'
-                ? 'text-emerald-800 font-bold bg-emerald-100/70 shadow-2xs'
-                : 'text-[#8C8276] hover:text-[#262320]'
-            }`}
-          >
-            <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600" />
-            <span className="text-[10px] sm:text-xs font-semibold text-emerald-800">Full Đáp Án</span>
-          </button>
+          {/* Tab: ÔN ĐỌC (Optional) */}
+          {visibleTabs.practice && (
+            <button
+              onClick={() => setActiveTab('practice')}
+              className={`flex-1 flex flex-col items-center gap-0.5 py-0.5 sm:py-1 px-0.5 sm:px-3 rounded-xl transition cursor-pointer ${
+                activeTab === 'practice'
+                  ? 'text-amber-800 font-bold bg-amber-100/60 shadow-2xs'
+                  : 'text-[#8C8276] hover:text-[#262320]'
+              }`}
+            >
+              <BookOpen className="w-4 h-4 sm:w-5 sm:h-5" />
+              <span className="text-[10px] sm:text-xs font-semibold">Ôn Đọc</span>
+            </button>
+          )}
 
-          {/* Tab 4: TRA ĐÁP ÁN */}
-          <button
-            onClick={() => setActiveTab('search')}
-            className={`flex-1 flex flex-col items-center gap-0.5 py-1 px-0.5 sm:px-3 rounded-xl transition cursor-pointer ${
-              activeTab === 'search'
-                ? 'text-amber-800 font-bold bg-amber-100/60 shadow-2xs'
-                : 'text-[#8C8276] hover:text-[#262320]'
-            }`}
-          >
-            <SearchCheck className="w-4 h-4 sm:w-5 sm:h-5" />
-            <span className="text-[10px] sm:text-xs font-semibold">Tra Cứu</span>
-          </button>
+          {/* Tab: LUYỆN NGHE (Optional) */}
+          {visibleTabs.listening && (
+            <button
+              onClick={() => setActiveTab('listening')}
+              className={`flex-1 flex flex-col items-center gap-0.5 py-1 px-0.5 sm:px-3 rounded-xl transition cursor-pointer ${
+                activeTab === 'listening'
+                  ? 'text-amber-800 font-bold bg-amber-100/60 shadow-2xs'
+                  : 'text-[#8C8276] hover:text-[#262320]'
+              }`}
+            >
+              <Headphones className="w-4 h-4 sm:w-5 sm:h-5" />
+              <span className="text-[10px] sm:text-xs font-semibold">Luyện Nghe</span>
+            </button>
+          )}
 
-          {/* Tab 5: KẾT QUẢ */}
-          <button
-            onClick={() => setActiveTab('results')}
-            className={`flex-1 flex flex-col items-center gap-0.5 py-1 px-0.5 sm:px-3 rounded-xl transition relative cursor-pointer ${
-              activeTab === 'results'
-                ? 'text-amber-800 font-bold bg-amber-100/60 shadow-2xs'
-                : 'text-[#8C8276] hover:text-[#262320]'
-            }`}
-          >
-            <div className="relative">
-              <BarChart3 className="w-4 h-4 sm:w-5 sm:h-5" />
-              {savedMistakeIds.length > 0 && (
-                <span className="absolute -top-1 -right-2 px-1 py-0.2 min-w-4 h-4 rounded-full bg-rose-500 text-white text-[9px] font-bold flex items-center justify-center">
-                  {savedMistakeIds.length}
-                </span>
-              )}
-            </div>
-            <span className="text-[10px] sm:text-xs font-semibold">Kết Quả</span>
-          </button>
+          {/* Tab: KẾT QUẢ */}
+          {visibleTabs.results !== false && (
+            <button
+              onClick={() => setActiveTab('results')}
+              className={`flex-1 flex flex-col items-center gap-0.5 py-1 px-0.5 sm:px-3 rounded-xl transition relative cursor-pointer ${
+                activeTab === 'results'
+                  ? 'text-amber-800 font-bold bg-amber-100/60 shadow-2xs'
+                  : 'text-[#8C8276] hover:text-[#262320]'
+              }`}
+            >
+              <div className="relative">
+                <BarChart3 className="w-4 h-4 sm:w-5 sm:h-5" />
+                {savedMistakeIds.length > 0 && (
+                  <span className="absolute -top-1 -right-2 px-1 py-0.2 min-w-4 h-4 rounded-full bg-rose-500 text-white text-[9px] font-bold flex items-center justify-center">
+                    {savedMistakeIds.length}
+                  </span>
+                )}
+              </div>
+              <span className="text-[10px] sm:text-xs font-semibold">Kết Quả</span>
+            </button>
+          )}
         </div>
       </nav>
+
+      {/* TAB CUSTOMIZER MODAL */}
+      <TabCustomizerModal
+        isOpen={isTabCustomizerOpen}
+        onClose={() => setIsTabCustomizerOpen(false)}
+      />
     </div>
   );
 };

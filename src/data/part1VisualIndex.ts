@@ -15544,15 +15544,43 @@ export const PART1_TESTS_CATALOG: TestPart1Info[] = [
 /**
  * Lookup Part 1 photos for a specific book and test
  */
-export function getPart1PhotosForTest(bookId: string, testNum: string): Part1PhotoItem[] {
+export function getPart1PhotosForTest(bookId: string, testNum: string | number): Part1PhotoItem[] {
+  if (!bookId) return [];
+  const rawTest = String(testNum || '1').trim();
+  const cleanTest = rawTest.replace(/[^0-9]/g, '') || '1';
+
+  // 1. Direct match
   const found = PART1_TESTS_CATALOG.find(
-    (item) => item.bookId === bookId && String(item.testNum) === String(testNum)
+    (item) => item.bookId === bookId && (String(item.testNum) === rawTest || String(item.testNum) === cleanTest)
   );
   if (found) return found.photos;
 
-  // Fallback: match by partial bookId
+  // 2. Either contains the other
   const partial = PART1_TESTS_CATALOG.find(
-    (item) => item.bookId.includes(bookId) && String(item.testNum) === String(testNum)
+    (item) =>
+      (item.bookId.toLowerCase().includes(bookId.toLowerCase()) ||
+        bookId.toLowerCase().includes(item.bookId.toLowerCase())) &&
+      (String(item.testNum) === rawTest || String(item.testNum) === cleanTest)
   );
-  return partial ? partial.photos : [];
+  if (partial) return partial.photos;
+
+  // 3. Keyword matching (Hacker 2, Hacker 3, Hacker 1, Docs 2, YBM)
+  const normBook = bookId.toLowerCase();
+  let key = '';
+  if (normBook.includes('hacker 2')) key = 'Hacker 2';
+  else if (normBook.includes('hacker 3')) key = 'Hacker 3';
+  else if (normBook.includes('docs 2')) key = 'Docs 2';
+  else if (normBook.includes('ybm 2025')) key = 'YBM 2025';
+  else if (normBook.includes('ybm 1000') || normBook.includes('ybm 1')) key = 'YBM 1000';
+
+  if (key) {
+    const keywordMatch = PART1_TESTS_CATALOG.find(
+      (item) =>
+        item.bookId.includes(key) &&
+        (String(item.testNum) === rawTest || String(item.testNum) === cleanTest)
+    );
+    if (keywordMatch) return keywordMatch.photos;
+  }
+
+  return [];
 }

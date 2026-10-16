@@ -12,8 +12,11 @@ import {
   Calendar,
   Clock,
   BookOpen,
+  Zap,
+  Check,
 } from 'lucide-react';
 import { QuestionExamNavButtons } from './QuestionExamNavButtons';
+import { TabCustomizerModal } from './TabCustomizerModal';
 
 interface ResultsViewProps {
   onGoToPracticeMistakes: () => void;
@@ -28,8 +31,9 @@ export const ResultsView: React.FC<ResultsViewProps> = ({
   onGoToPracticeAll,
   onGoToDocs2,
 }) => {
-  const { dailyLogs, savedMistakeIds, questionProgress, updateTodayNotes } = useQuizStore();
+  const { dailyLogs, savedMistakeIds, questionProgress, updateTodayNotes, visibleTabs, setTabPreset } = useQuizStore();
 
+  const [isCustomizerOpen, setIsCustomizerOpen] = useState<boolean>(false);
   const todayStr = new Date().toISOString().split('T')[0];
   const [selectedDate, setSelectedDate] = useState<string>(todayStr);
 
@@ -68,6 +72,73 @@ export const ResultsView: React.FC<ResultsViewProps> = ({
 
   return (
     <div className="flex-1 flex flex-col space-y-3.5 max-w-md w-full mx-auto pb-4">
+      {/* 0. CHẾ ĐỘ FOCUS TRA CỨU & TUỲ BIẾN TAB */}
+      <div className="bg-white border-2 border-amber-300 rounded-2xl p-3.5 sm:p-4 shadow-sm space-y-3">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-8 rounded-xl bg-amber-500 text-white flex items-center justify-center font-bold shadow-2xs">
+              <Sparkles className="w-4 h-4" />
+            </div>
+            <div>
+              <h2 className="text-sm font-black text-[#262320]">
+                Tuỳ Biến Tab & Chế Độ Focus
+              </h2>
+              <p className="text-[11px] text-[#8C8276]">
+                Ẩn bớt tab Ôn Đọc / Luyện Nghe để tra cứu thuận tiện nhất
+              </p>
+            </div>
+          </div>
+          <button
+            onClick={() => setIsCustomizerOpen(true)}
+            className="px-2.5 py-1 rounded-xl bg-amber-50 border border-amber-300 text-amber-900 font-bold text-xs hover:bg-amber-100 transition cursor-pointer shadow-2xs"
+          >
+            Tuỳ Chỉnh ⚙️
+          </button>
+        </div>
+
+        {/* Quick Presets */}
+        <div className="grid grid-cols-2 gap-2">
+          <button
+            onClick={() => setTabPreset('focus_lookup')}
+            className={`p-2.5 rounded-xl text-left border transition cursor-pointer flex flex-col gap-1 ${
+              visibleTabs.search && visibleTabs.answers && !visibleTabs.practice && !visibleTabs.listening
+                ? 'bg-amber-500 text-white border-amber-600 shadow-2xs font-bold'
+                : 'bg-[#FAF7F2] text-[#4A423B] border-[#E8DFD3] hover:border-amber-400'
+            }`}
+          >
+            <div className="flex items-center gap-1.5 text-xs font-black">
+              <Zap className="w-3.5 h-3.5" />
+              <span>Focus Tra Cứu (3 Tab)</span>
+            </div>
+            <p className="text-[10px] opacity-90 leading-tight">
+              Ẩn Ôn Đọc & Nghe, ưu tiên Tra Cứu + Full Đáp Án
+            </p>
+          </button>
+
+          <button
+            onClick={() => setTabPreset('all')}
+            className={`p-2.5 rounded-xl text-left border transition cursor-pointer flex flex-col gap-1 ${
+              visibleTabs.search && visibleTabs.answers && visibleTabs.practice && visibleTabs.listening
+                ? 'bg-emerald-600 text-white border-emerald-700 shadow-2xs font-bold'
+                : 'bg-[#FAF7F2] text-[#4A423B] border-[#E8DFD3] hover:border-emerald-400'
+            }`}
+          >
+            <div className="flex items-center gap-1.5 text-xs font-black">
+              <Check className="w-3.5 h-3.5" />
+              <span>Hiện Cả 5 Tab</span>
+            </div>
+            <p className="text-[10px] opacity-90 leading-tight">
+              Mở lại Ôn Đọc & Luyện Nghe
+            </p>
+          </button>
+        </div>
+      </div>
+
+      <TabCustomizerModal
+        isOpen={isCustomizerOpen}
+        onClose={() => setIsCustomizerOpen(false)}
+      />
+
       {/* 1. MỤC ÔN LẠI NHỮNG CÂU SAI (ĐƯỢC ĐẶT NỔI BẬT NHẤT TRÊN ĐẦU) */}
       <div className="bg-white border-2 border-rose-200 rounded-2xl p-4 shadow-sm space-y-3">
         <div className="flex items-center justify-between">

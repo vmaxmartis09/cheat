@@ -23,6 +23,16 @@ export interface QuestionAnswerRecord {
   timestamp: number;
 }
 
+export type AppTabId = 'practice' | 'listening' | 'results' | 'search' | 'answers';
+
+export interface VisibleTabsConfig {
+  practice: boolean;
+  listening: boolean;
+  answers: boolean;
+  search: boolean;
+  results: boolean;
+}
+
 interface QuizState {
   // Config & List
   questions: Question[];
@@ -64,8 +74,12 @@ interface QuizState {
   savedMistakeIds: string[]; // pool of all wrong questions across time
   questionProgress: Record<string, QuestionProgress>; // historical mistake and correct count per question
   // Active Navigation & Curriculum state
-  activeTab: 'practice' | 'listening' | 'results' | 'search' | 'answers';
-  setActiveTab: (tab: 'practice' | 'listening' | 'results' | 'search' | 'answers') => void;
+  activeTab: AppTabId;
+  setActiveTab: (tab: AppTabId) => void;
+  visibleTabs: VisibleTabsConfig;
+  setVisibleTabs: (config: Partial<VisibleTabsConfig>) => void;
+  toggleTabVisibility: (tab: AppTabId) => void;
+  setTabPreset: (preset: 'focus_lookup' | 'all') => void;
   fullAnswerTarget: { book?: string; test?: string; questionNum?: number } | null;
   openFullAnswers: (target?: { book?: string; test?: string; questionNum?: number }) => void;
   examSetTarget: { examSetId: string; examSetName: string; originId?: string; questionNum?: number } | null;
@@ -130,7 +144,65 @@ export const useQuizStore = create<QuizState>()(
       categoryFilter: 'all',
 
       // Navigation & Curriculum state
-      activeTab: 'practice',
+      activeTab: 'search',
+      visibleTabs: {
+        practice: false,
+        listening: false,
+        answers: true,
+        search: true,
+        results: true,
+      },
+      setVisibleTabs: (config) => {
+        const current = get().visibleTabs;
+        const updated = { ...current, ...config };
+        if (!Object.values(updated).some(Boolean)) {
+          updated.search = true;
+        }
+        set({ visibleTabs: updated });
+        if (!updated[get().activeTab]) {
+          const firstVisible = (['search', 'answers', 'results', 'practice', 'listening'] as AppTabId[]).find((t) => updated[t]) || 'search';
+          set({ activeTab: firstVisible });
+        }
+        scheduleAutoSync(get);
+      },
+      toggleTabVisibility: (tab) => {
+        const current = get().visibleTabs;
+        const updated = { ...current, [tab]: !current[tab] };
+        if (!Object.values(updated).some(Boolean)) {
+          return;
+        }
+        set({ visibleTabs: updated });
+        if (!updated[get().activeTab]) {
+          const firstVisible = (['search', 'answers', 'results', 'practice', 'listening'] as AppTabId[]).find((t) => updated[t]) || 'search';
+          set({ activeTab: firstVisible });
+        }
+        scheduleAutoSync(get);
+      },
+      setTabPreset: (preset) => {
+        if (preset === 'focus_lookup') {
+          set({
+            visibleTabs: {
+              practice: false,
+              listening: false,
+              answers: true,
+              search: true,
+              results: true,
+            },
+            activeTab: get().activeTab === 'practice' || get().activeTab === 'listening' ? 'search' : get().activeTab,
+          });
+        } else {
+          set({
+            visibleTabs: {
+              practice: true,
+              listening: true,
+              answers: true,
+              search: true,
+              results: true,
+            },
+          });
+        }
+        scheduleAutoSync(get);
+      },
       fullAnswerTarget: null,
       openFullAnswers: (target) => {
         set({
@@ -1010,6 +1082,7 @@ export const useQuizStore = create<QuizState>()(
         categoryFilter: state.categoryFilter,
         currentIndex: state.currentIndex,
         activeTab: state.activeTab,
+        visibleTabs: state.visibleTabs,
         listeningCurrentIndex: state.listeningCurrentIndex,
         listeningSelectedPart: state.listeningSelectedPart,
         listeningSelectedTest: state.listeningSelectedTest,

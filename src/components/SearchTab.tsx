@@ -1327,67 +1327,102 @@ export const SearchTab: React.FC = () => {
               );
             }
 
+            const renderQuestionBlocks = (nums: number[], isLc: boolean) => {
+              const blocks: number[][] = [];
+              for (let i = 0; i < nums.length; i += 5) {
+                blocks.push(nums.slice(i, i + 5));
+              }
+
+              const pillStyles: Record<string, { bg: string; text: string }> = {
+                A: { bg: 'bg-sky-500', text: 'text-white' },
+                B: { bg: 'bg-indigo-600', text: 'text-white' },
+                C: { bg: 'bg-emerald-600', text: 'text-white' },
+                D: { bg: 'bg-amber-500', text: 'text-white' },
+              };
+
+              return (
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5">
+                  {blocks.map((block, idx) => (
+                    <div
+                      key={idx}
+                      className="bg-white rounded-xl border border-[#E8DFD3] p-2.5 shadow-2xs space-y-1.5 hover:border-emerald-300 transition"
+                    >
+                      <div className="flex items-center justify-between text-[10.5px] font-bold text-[#8C8276] pb-1 border-b border-[#F4EFEA]">
+                        <span>Câu {block[0]} - {block[block.length - 1]}</span>
+                        <span className={`text-[9px] font-mono px-1 rounded ${isLc ? 'bg-sky-50 text-sky-700' : 'bg-amber-50 text-amber-800'}`}>
+                          {isLc ? 'LC' : 'RC'}
+                        </span>
+                      </div>
+
+                      <div className="space-y-1">
+                        {block.map((num) => {
+                          const ans = currentKeys[num] || '-';
+                          const style = pillStyles[ans] || { bg: 'bg-gray-400', text: 'text-white' };
+
+                          return (
+                            <div
+                              key={num}
+                              className="flex items-center justify-between px-2 py-1 rounded-lg bg-[#FAF8F5] border border-[#F2ECE3] hover:bg-white text-xs"
+                            >
+                              <span className="font-mono font-bold text-[#5C5247]">#{num}</span>
+                              <div className="flex items-center gap-1">
+                                {(['A', 'B', 'C', 'D'] as const).map((ch) => {
+                                  const isSelected = ans === ch;
+                                  return (
+                                    <span
+                                      key={ch}
+                                      className={`w-5 h-5 rounded-md text-[11px] font-black flex items-center justify-center transition ${
+                                        isSelected ? `${style.bg} ${style.text} shadow-2xs` : 'text-[#D0C7BD]'
+                                      }`}
+                                    >
+                                      {ch}
+                                    </span>
+                                  );
+                                })}
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              );
+            };
+
             return (
               <div className="space-y-4">
                 {/* Listening Keys (1-100) */}
                 {lcNums.length > 0 && (
-                  <div className="bg-white rounded-2xl border border-sky-200/80 p-3.5 shadow-2xs">
-                    <div className="flex items-center justify-between pb-2 mb-2.5 border-b border-sky-100">
+                  <div className="bg-[#FAF7F2] rounded-2xl border border-sky-200/80 p-3 sm:p-4 shadow-2xs space-y-2.5">
+                    <div className="flex items-center justify-between pb-1.5 border-b border-sky-200">
                       <span className="font-extrabold text-xs text-sky-900 flex items-center gap-1.5">
                         <Mic className="w-3.5 h-3.5 text-sky-600" />
                         🎧 LISTENING KEY (Câu 1 - 100)
                       </span>
-                      <span className="text-[10px] text-sky-700 font-bold bg-sky-50 px-2 py-0.5 rounded-full border border-sky-200">
+                      <span className="text-[10px] text-sky-700 font-bold bg-sky-100 px-2 py-0.5 rounded-full">
                         {lcNums.length} câu
                       </span>
                     </div>
 
-                    <div className="grid grid-cols-5 sm:grid-cols-10 gap-1.5">
-                      {lcNums.map((num) => {
-                        const ans = currentKeys[num];
-                        return (
-                          <div
-                            key={num}
-                            className="flex flex-col items-center justify-center p-1 rounded-lg border border-sky-100 bg-sky-50/40 hover:bg-sky-100 transition cursor-pointer"
-                            title={`Câu ${num}: Đáp án ${ans}`}
-                          >
-                            <span className="text-[9px] font-mono text-[#7A7268]">#{num}</span>
-                            <span className="text-xs font-black text-sky-950 mt-0.5">{ans}</span>
-                          </div>
-                        );
-                      })}
-                    </div>
+                    {renderQuestionBlocks(lcNums, true)}
                   </div>
                 )}
 
                 {/* Reading Keys (101-200) */}
                 {rcNums.length > 0 && (
-                  <div className="bg-white rounded-2xl border border-amber-200/80 p-3.5 shadow-2xs">
-                    <div className="flex items-center justify-between pb-2 mb-2.5 border-b border-amber-100">
+                  <div className="bg-[#FAF7F2] rounded-2xl border border-amber-200/80 p-3 sm:p-4 shadow-2xs space-y-2.5">
+                    <div className="flex items-center justify-between pb-1.5 border-b border-amber-200">
                       <span className="font-extrabold text-xs text-amber-900 flex items-center gap-1.5">
                         <BookOpen className="w-3.5 h-3.5 text-amber-600" />
                         📖 READING KEY (Câu 101 - 200)
                       </span>
-                      <span className="text-[10px] text-amber-800 font-bold bg-amber-50 px-2 py-0.5 rounded-full border border-amber-200">
+                      <span className="text-[10px] text-amber-800 font-bold bg-amber-100 px-2 py-0.5 rounded-full">
                         {rcNums.length} câu
                       </span>
                     </div>
 
-                    <div className="grid grid-cols-5 sm:grid-cols-10 gap-1.5">
-                      {rcNums.map((num) => {
-                        const ans = currentKeys[num];
-                        return (
-                          <div
-                            key={num}
-                            className="flex flex-col items-center justify-center p-1 rounded-lg border border-amber-100 bg-amber-50/40 hover:bg-amber-100 transition cursor-pointer"
-                            title={`Câu ${num}: Đáp án ${ans}`}
-                          >
-                            <span className="text-[9px] font-mono text-[#7A7268]">#{num}</span>
-                            <span className="text-xs font-black text-amber-950 mt-0.5">{ans}</span>
-                          </div>
-                        );
-                      })}
-                    </div>
+                    {renderQuestionBlocks(rcNums, false)}
                   </div>
                 )}
               </div>

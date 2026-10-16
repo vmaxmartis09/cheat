@@ -145,13 +145,6 @@ export const FullAnswersModal: React.FC = () => {
     return counts;
   }, [filteredNums, answersObj]);
 
-  const answerBadgeColors: Record<string, string> = {
-    A: 'bg-sky-100 text-sky-800 border-sky-300 font-bold',
-    B: 'bg-violet-100 text-violet-800 border-violet-300 font-bold',
-    C: 'bg-emerald-100 text-emerald-800 border-emerald-300 font-bold',
-    D: 'bg-amber-100 text-amber-900 border-amber-300 font-bold',
-  };
-
   return (
     <div className="flex flex-col h-full min-h-0 bg-[#FAF7F2] text-[#262320]">
       {/* TOP CONTROLS & HEADER */}
@@ -375,7 +368,7 @@ export const FullAnswersModal: React.FC = () => {
         </div>
       </div>
 
-      {/* ANSWER GRID CONTAINER */}
+      {/* ANSWER GRID CONTAINER - ORGANIZED & SPACIOUS */}
       <div
         ref={containerRef}
         className="flex-1 overflow-y-auto p-3 sm:p-5 min-h-0 space-y-4"
@@ -385,45 +378,93 @@ export const FullAnswersModal: React.FC = () => {
             Không tìm thấy câu nào phù hợp với bộ lọc.
           </div>
         ) : (
-          <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-10 gap-2 sm:gap-2.5">
-            {filteredNums.map((num) => {
-              const ans = answersObj[num] || '-';
-              const isHighlighted = highlightNum === num;
-              const isListening = num <= 100;
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+            {(() => {
+              // Group questions into rows of 5
+              const blocks: number[][] = [];
+              for (let i = 0; i < filteredNums.length; i += 5) {
+                blocks.push(filteredNums.slice(i, i + 5));
+              }
 
-              return (
-                <div
-                  key={num}
-                  id={`ans-item-${num}`}
-                  onClick={() => setHighlightNum(num)}
-                  className={`flex items-center justify-between p-2 rounded-xl border transition-all cursor-pointer select-none ${
-                    isHighlighted
-                      ? 'border-emerald-500 bg-emerald-50/90 shadow-md ring-2 ring-emerald-400 scale-[1.02]'
-                      : 'border-[#EFE8DE] bg-white hover:border-emerald-300 hover:shadow-xs'
-                  }`}
-                >
-                  <div className="flex items-center gap-1.5 min-w-0">
-                    <span
-                      className={`text-[10px] font-mono px-1.5 py-0.5 rounded font-bold ${
-                        isListening
-                          ? 'bg-sky-50 text-sky-700 border border-sky-100'
-                          : 'bg-amber-50 text-amber-800 border border-amber-100'
-                      }`}
-                    >
-                      #{num}
-                    </span>
-                  </div>
+              const answerPillColors: Record<string, { bg: string; text: string }> = {
+                A: { bg: 'bg-sky-500', text: 'text-white' },
+                B: { bg: 'bg-indigo-600', text: 'text-white' },
+                C: { bg: 'bg-emerald-600', text: 'text-white' },
+                D: { bg: 'bg-amber-500', text: 'text-white' },
+              };
 
-                  <span
-                    className={`w-6 h-6 rounded-lg flex items-center justify-center text-xs font-black border shrink-0 ${
-                      answerBadgeColors[ans] || 'bg-gray-100 text-gray-700 border-gray-200'
-                    }`}
+              return blocks.map((block, bIdx) => {
+                const startNum = block[0];
+                const endNum = block[block.length - 1];
+                const isListening = startNum <= 100;
+
+                return (
+                  <div
+                    key={bIdx}
+                    className="bg-white rounded-2xl border border-[#E8DFD3] p-3 shadow-2xs flex flex-col gap-2 hover:border-emerald-300 transition"
                   >
-                    {ans}
-                  </span>
-                </div>
-              );
-            })}
+                    {/* Block Title */}
+                    <div className="flex items-center justify-between text-[11px] font-bold pb-1.5 border-b border-[#F2ECE3]">
+                      <span className="text-[#5C5247]">
+                        Câu {startNum} - {endNum}
+                      </span>
+                      <span
+                        className={`text-[9.5px] font-mono px-1.5 py-0.2 rounded font-bold ${
+                          isListening ? 'bg-sky-50 text-sky-700' : 'bg-amber-50 text-amber-800'
+                        }`}
+                      >
+                        {isListening ? 'Listening' : 'Reading'}
+                      </span>
+                    </div>
+
+                    {/* Question items */}
+                    <div className="space-y-1">
+                      {block.map((num) => {
+                        const ans = answersObj[num] || '-';
+                        const isHighlighted = highlightNum === num;
+                        const style = answerPillColors[ans] || { bg: 'bg-gray-400', text: 'text-white' };
+
+                        return (
+                          <div
+                            key={num}
+                            id={`ans-item-${num}`}
+                            onClick={() => setHighlightNum(num)}
+                            className={`flex items-center justify-between px-2.5 py-1.5 rounded-xl border transition-all cursor-pointer select-none ${
+                              isHighlighted
+                                ? 'border-emerald-500 bg-emerald-50/90 shadow-2xs ring-2 ring-emerald-400 font-bold'
+                                : 'border-[#F2ECE3] bg-[#FAF8F5] hover:bg-white hover:border-emerald-200'
+                            }`}
+                          >
+                            <span className="font-mono text-xs font-bold text-[#5C5247]">
+                              #{num}
+                            </span>
+
+                            {/* 4 Choices with correct answer prominently highlighted */}
+                            <div className="flex items-center gap-1">
+                              {(['A', 'B', 'C', 'D'] as const).map((choice) => {
+                                const isSelected = ans === choice;
+                                return (
+                                  <span
+                                    key={choice}
+                                    className={`w-6 h-6 rounded-lg text-xs font-black flex items-center justify-center transition ${
+                                      isSelected
+                                        ? `${style.bg} ${style.text} shadow-xs scale-105`
+                                        : 'text-[#C8BFB5] font-medium'
+                                    }`}
+                                  >
+                                    {choice}
+                                  </span>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                );
+              });
+            })()}
           </div>
         )}
       </div>

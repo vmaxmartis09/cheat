@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { getPart1PhotosForTest, Part1PhotoItem } from '../data/part1VisualIndex';
 import {
   ImageIcon,
@@ -34,6 +34,7 @@ export const Part1VisualStrip: React.FC<Part1VisualStripProps> = ({
 }) => {
   const [isExpanded, setIsExpanded] = useState(initialExpanded);
   const [lightboxPhoto, setLightboxPhoto] = useState<Part1PhotoItem | null>(null);
+  const touchStartX = useRef<number | null>(null);
 
   const photos = getPart1PhotosForTest(bookId, String(testNum));
 
@@ -220,8 +221,23 @@ export const Part1VisualStrip: React.FC<Part1VisualStripProps> = ({
               </button>
             </div>
 
-            {/* Photo with Navigation Overlay */}
-            <div className="relative bg-[#1A1816] rounded-2xl p-2 border border-gray-800 flex items-center justify-center min-h-[260px] max-h-[70vh] overflow-hidden select-none">
+            {/* Photo with Navigation Overlay (Touch swipeable) */}
+            <div
+              className="relative bg-[#1A1816] rounded-2xl p-2 border border-gray-800 flex items-center justify-center min-h-[260px] max-h-[70vh] overflow-hidden select-none"
+              onTouchStart={(e) => {
+                touchStartX.current = e.touches[0].clientX;
+              }}
+              onTouchEnd={(e) => {
+                if (touchStartX.current === null) return;
+                const dx = e.changedTouches[0].clientX - touchStartX.current;
+                touchStartX.current = null;
+                if (dx < -50 && nextPhoto) {
+                  setLightboxPhoto(nextPhoto);
+                } else if (dx > 50 && prevPhoto) {
+                  setLightboxPhoto(prevPhoto);
+                }
+              }}
+            >
               <img
                 src={lightboxPhoto.imageUrl}
                 alt={`Part 1 Photo #${lightboxPhoto.qNum}`}

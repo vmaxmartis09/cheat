@@ -43,6 +43,8 @@ import {
   Volume2,
   Lightbulb,
   HelpCircle,
+  Minimize2,
+  Maximize2,
 } from 'lucide-react';
 
 interface ResolvedQuestionInfo {
@@ -299,11 +301,14 @@ export const FullAnswersModal: React.FC = () => {
 
   // Bottom Sheet Detail State
   const [detailNum, setDetailNum] = useState<number | null>(null);
+  const [sheetHeightMode, setSheetHeightMode] = useState<'peek' | 'full'>('full');
   const [showPassageTranslation, setShowPassageTranslation] = useState<boolean>(false);
+  const touchStartPos = useRef<{ x: number; y: number; time: number } | null>(null);
 
-  const handleOpenDetail = (num: number) => {
+  const handleOpenDetail = (num: number, mode: 'peek' | 'full' = 'full') => {
     setHighlightNum(num);
     setDetailNum(num);
+    setSheetHeightMode(mode);
     setShowPassageTranslation(false);
   };
 
@@ -577,9 +582,9 @@ export const FullAnswersModal: React.FC = () => {
               const endN = row[row.length - 1];
 
               return (
-                <div key={rIdx} className="flex items-center gap-1">
+                <div key={rIdx} className="flex items-center gap-0.5 sm:gap-1">
                   {/* Row index indicator */}
-                  <span className="w-11 sm:w-12 text-[9.5px] font-mono font-semibold text-[#8C8276] shrink-0 text-right pr-1">
+                  <span className="w-8 sm:w-11 text-[8.5px] sm:text-[9.5px] font-mono font-semibold text-[#8C8276] shrink-0 text-right pr-0.5 sm:pr-1">
                     {startN}-{endN}:
                   </span>
 
@@ -599,23 +604,23 @@ export const FullAnswersModal: React.FC = () => {
                         <button
                           key={num}
                           id={`ans-matrix-${num}`}
-                          onClick={() => handleOpenDetail(num)}
+                          onClick={() => handleOpenDetail(num, 'full')}
                           title={`Câu ${num}: Đáp án (${ans}) - Nhấp để xem chi tiết dạng Bottom Sheet`}
-                          className={`group relative flex flex-col items-center justify-center py-1 rounded-lg transition-all cursor-pointer border select-none ${
+                          className={`group relative flex flex-col items-center justify-center py-0.5 sm:py-1 rounded-md sm:rounded-lg transition-all cursor-pointer border select-none ${
                             isHighlighted
-                              ? 'ring-3 ring-amber-400 bg-amber-100 border-amber-500 scale-105 z-10 shadow-sm font-black'
+                              ? 'ring-2 sm:ring-3 ring-amber-400 bg-amber-100 border-amber-500 scale-105 z-10 shadow-sm font-black'
                               : inFilter
                               ? 'bg-[#FAF8F5] hover:bg-white border-[#EFE8DE] hover:border-emerald-300'
                               : 'opacity-25 grayscale bg-gray-100 border-gray-200'
                           }`}
                         >
-                          <span className={`text-[9px] font-mono leading-none ${
+                          <span className={`text-[8px] sm:text-[9px] font-mono leading-none ${
                             isHighlighted ? 'text-amber-950 font-black' : 'text-[#7A7065]'
                           }`}>
                             {num}
                           </span>
                           <span
-                            className={`w-4 h-4 sm:w-5 sm:h-5 mt-0.5 rounded-md text-[10px] sm:text-[11px] font-black flex items-center justify-center transition-transform ${
+                            className={`w-3.5 h-3.5 sm:w-5 sm:h-5 mt-0.5 rounded sm:rounded-md text-[9px] sm:text-[11px] font-black flex items-center justify-center transition-transform ${
                               style.badge
                             } ${isHighlighted ? 'scale-110 shadow-2xs' : 'group-hover:scale-105'}`}
                           >
@@ -1179,70 +1184,135 @@ export const FullAnswersModal: React.FC = () => {
         const prevNum = currentIdxInAll > 0 ? allNums[currentIdxInAll - 1] : null;
         const nextNum = currentIdxInAll >= 0 && currentIdxInAll < allNums.length - 1 ? allNums[currentIdxInAll + 1] : null;
 
+        const onTouchStartSheet = (e: React.TouchEvent) => {
+          if (e.touches.length === 1) {
+            touchStartPos.current = {
+              x: e.touches[0].clientX,
+              y: e.touches[0].clientY,
+              time: Date.now(),
+            };
+          }
+        };
+
+        const onTouchEndSheet = (e: React.TouchEvent) => {
+          if (!touchStartPos.current) return;
+          const dx = e.changedTouches[0].clientX - touchStartPos.current.x;
+          const dy = e.changedTouches[0].clientY - touchStartPos.current.y;
+          const dt = Date.now() - touchStartPos.current.time;
+          touchStartPos.current = null;
+
+          // Quick horizontal swipe (swiping left = next question, swiping right = prev question)
+          if (dt < 400 && Math.abs(dx) > 50 && Math.abs(dy) < 55) {
+            if (dx < 0 && nextNum) {
+              handleOpenDetail(nextNum, sheetHeightMode);
+            } else if (dx > 0 && prevNum) {
+              handleOpenDetail(prevNum, sheetHeightMode);
+            }
+          }
+        };
+
+        const onTouchEndHandle = (e: React.TouchEvent) => {
+          if (!touchStartPos.current) return;
+          const dy = e.changedTouches[0].clientY - touchStartPos.current.y;
+          touchStartPos.current = null;
+          if (dy > 40) {
+            if (sheetHeightMode === 'full') {
+              setSheetHeightMode('peek');
+            } else {
+              handleCloseDetail();
+            }
+          } else if (dy < -40) {
+            setSheetHeightMode('full');
+          }
+        };
+
         return (
           <div
-            className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/60 backdrop-blur-xs animate-in fade-in duration-150 p-0 sm:p-4"
+            className={`fixed inset-0 z-50 flex items-end sm:items-center justify-center animate-in fade-in duration-150 p-0 sm:p-4 ${
+              sheetHeightMode === 'peek' ? 'bg-black/35 backdrop-blur-2xs' : 'bg-black/60 backdrop-blur-xs'
+            }`}
             onClick={handleCloseDetail}
             role="dialog"
             aria-modal="true"
             aria-labelledby="question-detail-title"
           >
             <div
-              className="w-full max-w-3xl bg-white rounded-t-3xl sm:rounded-2xl shadow-2xl border-t sm:border border-[#E8DFD3] flex flex-col h-[92vh] sm:h-[86vh] max-h-[94vh] overflow-hidden animate-in slide-in-from-bottom duration-200"
+              className={`w-full max-w-3xl bg-white rounded-t-3xl sm:rounded-2xl shadow-2xl border-t sm:border border-[#E8DFD3] flex flex-col transition-all duration-200 ease-out overflow-hidden animate-in slide-in-from-bottom ${
+                sheetHeightMode === 'peek'
+                  ? 'h-[50vh] max-h-[52vh]'
+                  : 'h-[92vh] sm:h-[86vh] max-h-[94vh]'
+              }`}
               onClick={(e) => e.stopPropagation()}
+              onTouchStart={onTouchStartSheet}
+              onTouchEnd={onTouchEndSheet}
             >
-              {/* Drag Handle Bar */}
+              {/* Drag Handle Bar with Peek/Full toggle */}
               <div
-                className="pt-2 pb-1 flex justify-center shrink-0 cursor-pointer sm:hidden"
-                onClick={handleCloseDetail}
+                className="pt-2 pb-1 flex flex-col items-center justify-center shrink-0 cursor-pointer sm:hidden bg-[#FAF7F2]"
+                onClick={() => setSheetHeightMode((prev) => (prev === 'peek' ? 'full' : 'peek'))}
+                onTouchStart={onTouchStartSheet}
+                onTouchEnd={onTouchEndHandle}
+                title={sheetHeightMode === 'peek' ? 'Bấm để mở rộng toàn màn hình' : 'Bấm để thu nhỏ một nửa'}
               >
                 <div className="w-12 h-1.5 rounded-full bg-[#D5CCC1]" />
+                <span className="text-[9px] font-semibold text-[#8C8276] mt-0.5">
+                  {sheetHeightMode === 'peek' ? '▲ Vuốt / Chạm để mở rộng' : '▼ Vuốt / Chạm để thu gọn'}
+                </span>
               </div>
 
               {/* Bottom Sheet Header */}
-              <div className="px-4 py-2.5 border-b border-[#F0EAE1] flex items-center justify-between shrink-0 bg-[#FAF7F2]">
-                <div className="flex items-center gap-2.5 min-w-0">
+              <div className="px-3.5 sm:px-4 py-2 border-b border-[#F0EAE1] flex items-center justify-between shrink-0 bg-[#FAF7F2]">
+                <div className="flex items-center gap-2 sm:gap-2.5 min-w-0">
                   <span
-                    className={`w-8 h-8 rounded-xl font-mono font-black text-sm flex items-center justify-center shrink-0 shadow-2xs ${detailStyle.badge}`}
+                    className={`w-7 h-7 sm:w-8 sm:h-8 rounded-lg sm:rounded-xl font-mono font-black text-xs sm:text-sm flex items-center justify-center shrink-0 shadow-2xs ${detailStyle.badge}`}
                   >
                     {detailAns}
                   </span>
                   <div className="min-w-0">
-                    <h2 id="question-detail-title" className="text-sm sm:text-base font-black text-[#262320] flex items-center gap-1.5">
+                    <h2 id="question-detail-title" className="text-xs sm:text-base font-black text-[#262320] flex items-center gap-1.5">
                       <span>Câu #{detailNum}</span>
-                      <span className="text-[11px] font-bold text-emerald-800 bg-emerald-100 px-2 py-0.2 rounded-full border border-emerald-300">
+                      <span className="text-[10px] sm:text-[11px] font-bold text-emerald-800 bg-emerald-100 px-1.5 py-0.2 rounded-full border border-emerald-300">
                         Đáp án: {detailAns}
                       </span>
                     </h2>
-                    <p className="text-[11px] text-[#7A7065] truncate">
+                    <p className="text-[10px] sm:text-[11px] text-[#7A7065] truncate">
                       {selectedBook} • Test {selectedTest} • {detailResolved.partName}
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-1 shrink-0 ml-2">
+                <div className="flex items-center gap-1 shrink-0 ml-1.5">
+                  {/* Peek / Full toggle button */}
                   <button
-                    onClick={() => prevNum && handleOpenDetail(prevNum)}
+                    onClick={() => setSheetHeightMode((prev) => (prev === 'peek' ? 'full' : 'peek'))}
+                    className="p-1.5 rounded-lg border border-[#E8DFD3] bg-white hover:bg-[#FAF7F2] text-[#5C5247] cursor-pointer transition shadow-2xs hidden sm:flex"
+                    title={sheetHeightMode === 'peek' ? 'Mở rộng (92% màn hình)' : 'Thu nhỏ (50% màn hình)'}
+                  >
+                    {sheetHeightMode === 'peek' ? <Maximize2 className="w-3.5 h-3.5" /> : <Minimize2 className="w-3.5 h-3.5" />}
+                  </button>
+
+                  <button
+                    onClick={() => prevNum && handleOpenDetail(prevNum, sheetHeightMode)}
                     disabled={!prevNum}
                     className="p-1.5 rounded-lg border border-[#E8DFD3] bg-white hover:bg-[#FAF7F2] disabled:opacity-30 disabled:pointer-events-none text-[#5C5247] cursor-pointer transition shadow-2xs"
-                    title="Câu trước (←)"
+                    title="Câu trước (← hoặc vuốt phải)"
                   >
-                    <ChevronLeft className="w-4 h-4" />
+                    <ChevronLeft className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   </button>
                   <button
-                    onClick={() => nextNum && handleOpenDetail(nextNum)}
+                    onClick={() => nextNum && handleOpenDetail(nextNum, sheetHeightMode)}
                     disabled={!nextNum}
                     className="p-1.5 rounded-lg border border-[#E8DFD3] bg-white hover:bg-[#FAF7F2] disabled:opacity-30 disabled:pointer-events-none text-[#5C5247] cursor-pointer transition shadow-2xs"
-                    title="Câu tiếp theo (→)"
+                    title="Câu tiếp theo (→ hoặc vuốt trái)"
                   >
-                    <ChevronRight className="w-4 h-4" />
+                    <ChevronRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   </button>
                   <button
                     onClick={handleCloseDetail}
-                    className="p-1.5 rounded-lg border border-[#E8DFD3] bg-white hover:bg-rose-50 hover:text-rose-600 hover:border-rose-300 text-[#7A7065] cursor-pointer ml-1 transition shadow-2xs"
+                    className="p-1.5 rounded-lg border border-[#E8DFD3] bg-white hover:bg-rose-50 hover:text-rose-600 hover:border-rose-300 text-[#7A7065] cursor-pointer ml-0.5 sm:ml-1 transition shadow-2xs"
                     title="Đóng (Esc)"
                   >
-                    <X className="w-4 h-4" />
+                    <X className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   </button>
                 </div>
               </div>
@@ -1458,10 +1528,21 @@ export const FullAnswersModal: React.FC = () => {
                   Phím tắt: <kbd className="px-1.5 py-0.5 rounded bg-white border border-[#D5CCC1] font-mono text-[10px]">Esc</kbd> đóng • <kbd className="px-1.5 py-0.5 rounded bg-white border border-[#D5CCC1] font-mono text-[10px]">←</kbd><kbd className="px-1.5 py-0.5 rounded bg-white border border-[#D5CCC1] font-mono text-[10px]">→</kbd> đổi câu
                 </div>
 
-                <div className="flex items-center gap-2 ml-auto w-full sm:w-auto justify-end">
+                <div className="flex items-center gap-1.5 sm:gap-2 ml-auto w-full sm:w-auto justify-end">
+                  {sheetHeightMode === 'peek' && (
+                    <button
+                      onClick={() => setSheetHeightMode('full')}
+                      className="flex items-center gap-1 px-2.5 py-2 rounded-xl bg-amber-100 hover:bg-amber-200 text-amber-900 border border-amber-300 font-bold text-xs shadow-2xs transition cursor-pointer"
+                      title="Mở rộng để xem toàn bộ bài đọc, giải thích và transcript"
+                    >
+                      <Maximize2 className="w-3.5 h-3.5 text-amber-700" />
+                      <span>Mở rộng</span>
+                    </button>
+                  )}
+
                   <button
                     onClick={handleCloseDetail}
-                    className="px-3 py-2 rounded-xl border border-[#DCD3C7] bg-white hover:bg-gray-50 text-xs font-bold text-[#5C5247] cursor-pointer transition shadow-2xs"
+                    className="px-2.5 sm:px-3 py-2 rounded-xl border border-[#DCD3C7] bg-white hover:bg-gray-50 text-xs font-bold text-[#5C5247] cursor-pointer transition shadow-2xs"
                   >
                     Đóng
                   </button>

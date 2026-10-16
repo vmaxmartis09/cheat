@@ -77,6 +77,7 @@ export const ImageSearchModal: React.FC<ImageSearchModalProps> = ({
   const [zoomLightbox, setZoomLightbox] = useState<ZoomLightboxState | null>(null);
 
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const lightboxTouchStartX = useRef<number | null>(null);
 
   // Global paste handler when modal is open
   useEffect(() => {
@@ -1002,8 +1003,23 @@ export const ImageSearchModal: React.FC<ImageSearchModalProps> = ({
                 </button>
               </div>
 
-              {/* Photo with Navigation Overlay */}
-              <div className="relative bg-[#1A1816] rounded-2xl p-2 border border-gray-800 flex items-center justify-center min-h-[260px] max-h-[70vh] overflow-hidden select-none">
+              {/* Photo with Navigation Overlay (Touch swipeable) */}
+              <div
+                className="relative bg-[#1A1816] rounded-2xl p-2 border border-gray-800 flex items-center justify-center min-h-[260px] max-h-[70vh] overflow-hidden select-none"
+                onTouchStart={(e) => {
+                  lightboxTouchStartX.current = e.touches[0].clientX;
+                }}
+                onTouchEnd={(e) => {
+                  if (lightboxTouchStartX.current === null) return;
+                  const dx = e.changedTouches[0].clientX - lightboxTouchStartX.current;
+                  lightboxTouchStartX.current = null;
+                  if (dx < -50 && nextP) {
+                    setZoomLightbox({ ...zoomLightbox, currentIndex: zoomLightbox.currentIndex + 1 });
+                  } else if (dx > 50 && prevP) {
+                    setZoomLightbox({ ...zoomLightbox, currentIndex: zoomLightbox.currentIndex - 1 });
+                  }
+                }}
+              >
                 <img
                   src={currentPhoto?.imageUrl}
                   alt={`Part 1 Photo #${currentPhoto?.qNum}`}

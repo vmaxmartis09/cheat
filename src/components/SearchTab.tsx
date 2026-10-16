@@ -1306,6 +1306,7 @@ export const SearchTab: React.FC = () => {
   const [examSetFocus, setExamSetFocus] = useState<ExamSetFocus | null>(null);
   const [searchMode, setSearchMode] = useState<'search' | 'matrix'>('search');
   const [matrixSubView, setMatrixSubView] = useState<'matrix' | 'cards'>('matrix');
+  const [resultDensity, setResultDensity] = useState<'compact' | 'expanded'>('compact');
   const [selectedBook, setSelectedBook] = useState<string>(EXAM_BOOKS_META[0]?.id || 'Hacker 2 (Full 200 câu)');
   const [selectedTestNum, setSelectedTestNum] = useState<string>('1');
   const [searchKindFilter, setSearchKindFilter] = useState<'all' | 'listening' | 'reading'>('all');
@@ -2194,16 +2195,125 @@ export const SearchTab: React.FC = () => {
           <NoResultsPanel query={query} onRetry={(word) => setQuery(word)} />
         )}
 
+        {/* ── Result Density Switcher (Compact vs Full) ── */}
+        {filteredResults.length > 0 && query.trim() && (
+          <div className="flex items-center justify-between px-1 py-1 text-xs text-[#8C8276]">
+            <span className="text-[11px] font-semibold">
+              Khớp <strong>{filteredResults.length}</strong> câu
+            </span>
+            <div className="flex items-center bg-[#F2ECE3] rounded-lg p-0.5 text-[10.5px] font-bold">
+              <button
+                onClick={() => setResultDensity('compact')}
+                className={`px-2 py-0.5 rounded transition cursor-pointer flex items-center gap-1 ${
+                  resultDensity === 'compact' ? 'bg-white text-emerald-800 shadow-2xs font-black' : 'text-[#7A7065]'
+                }`}
+                title="Chế độ thẻ rút gọn: xem 6-8 câu cùng lúc trên mobile"
+              >
+                <span>☰ Gọn (Mobile)</span>
+              </button>
+              <button
+                onClick={() => setResultDensity('expanded')}
+                className={`px-2 py-0.5 rounded transition cursor-pointer flex items-center gap-1 ${
+                  resultDensity === 'expanded' ? 'bg-white text-emerald-800 shadow-2xs font-black' : 'text-[#7A7065]'
+                }`}
+                title="Chế độ chi tiết: xem đầy đủ phương án và giải thích"
+              >
+                <span>▤ Chi Tiết</span>
+              </button>
+            </div>
+          </div>
+        )}
+
         {/* ── Direct Question Cards (Raised immediately!) ── */}
         {filteredResults.slice(0, visibleLimit).map((r) => {
           const id = r.question.id;
+          const isExpanded = expandedId === id;
+
+          // Compact View on Mobile (when not expanded and compact mode is active)
+          if (resultDensity === 'compact' && !isExpanded) {
+            const pillColors: Record<string, string> = {
+              A: 'bg-sky-500 text-white',
+              B: 'bg-indigo-600 text-white',
+              C: 'bg-emerald-600 text-white',
+              D: 'bg-amber-500 text-white',
+            };
+            const ansStyle = pillColors[r.question.correctAnswer] || 'bg-gray-400 text-white';
+
+            const sourceLabel =
+              r.kind === 'reading'
+                ? (r.question as Question).source
+                : ((r.question as any).test || (r.question as any).source || (r.question as ListeningQuestion).category || 'Listening');
+
+            return (
+              <div
+                key={id}
+                onClick={() => handleToggle(id)}
+                className="bg-white rounded-xl border border-[#E8DFD3] hover:border-amber-300 p-2 sm:p-2.5 shadow-2xs flex items-center justify-between gap-2 transition cursor-pointer select-none"
+              >
+                <div className="flex items-center gap-2 min-w-0 flex-1">
+                  <span className="w-8 h-8 rounded-lg bg-amber-100 text-amber-900 font-mono font-black text-xs flex items-center justify-center shrink-0 border border-amber-200">
+                    #{r.question.num}
+                  </span>
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-center gap-1.5 flex-wrap">
+                      <span className="text-[10px] font-bold text-[#8C8276] uppercase tracking-wide truncate max-w-[130px] sm:max-w-xs">
+                        {sourceLabel}
+                      </span>
+                      <span className={`text-[9px] font-bold px-1.5 py-0.2 rounded ${
+                        r.kind === 'listening' ? 'bg-sky-50 text-sky-700' : 'bg-amber-50 text-amber-800'
+                      }`}>
+                        {r.kind === 'listening' ? 'LC' : 'RC'}
+                      </span>
+                      {r.matchedIn && (
+                        <span className={`text-[8.5px] font-semibold px-1 py-0.2 rounded border ${
+                          MATCH_TYPE_LABELS[r.matchedIn]?.color || 'bg-gray-100 text-gray-700 border-gray-200'
+                        }`}>
+                          {MATCH_TYPE_LABELS[r.matchedIn]?.text || r.matchedIn}
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-xs text-[#262320] font-medium truncate mt-0.5">
+                      {highlight(r.question.question, query)}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-1.5 shrink-0">
+                  <span className={`w-6 h-6 rounded-md font-mono font-black text-xs flex items-center justify-center shadow-2xs ${ansStyle}`}>
+                    {r.question.correctAnswer}
+                  </span>
+
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      const info = resolveFullExamSetInfo(r.question);
+                      setExamSetFocus({
+                        kind: 'full',
+                        setKey: info.examSetId,
+                        examSetId: info.examSetId,
+                        examSetName: info.examSetName,
+                        originId: id,
+                        questionNum: r.question.num,
+                      });
+                    }}
+                    className="p-1 rounded-lg border border-[#E8DFD3] hover:bg-amber-50 text-[#8C8276] hover:text-amber-800 transition"
+                    title="Xem cả đề"
+                  >
+                    <BookOpen className="w-3.5 h-3.5" />
+                  </button>
+                </div>
+              </div>
+            );
+          }
+
+          // Full Expanded Card
           return r.kind === 'reading' ? (
             <ReadingQuestionCard
               key={id}
               question={r.question}
               query={query}
               matchedIn={r.matchedIn}
-              isExpanded={expandedId === id}
+              isExpanded={isExpanded}
               onToggle={() => handleToggle(id)}
               showViewExamSetBtn
               onViewExamSet={() => {
@@ -2224,7 +2334,7 @@ export const SearchTab: React.FC = () => {
               question={r.question}
               query={query}
               matchedIn={r.matchedIn}
-              isExpanded={expandedId === id}
+              isExpanded={isExpanded}
               onToggle={() => handleToggle(id)}
               showViewExamSetBtn
               onViewExamSet={() => {

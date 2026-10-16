@@ -2067,15 +2067,15 @@ export const getListeningQuestionsByTestAndPart = (test: number | 'all', part: n
     return listeningQuestions.filter((q) => q.part === part);
   }
   
-  return hacker2AllQuestions.filter((q) => {
+  return (hacker2AllQuestions as any[]).filter((q: any) => {
     const matchTest = test === 'all' || q.test === test;
     const matchPart = part === 'all' || q.part === part;
     return matchTest && matchPart;
-  });
+  }) as ListeningQuestion[];
 };
 
 export const getAllListeningQuestions = (): ListeningQuestion[] => {
-  return [...listeningQuestions, ...hacker2AllQuestions];
+  return [...listeningQuestions, ...(hacker2AllQuestions as any[])] as ListeningQuestion[];
 };
 
 export const getListeningStats = () => {

@@ -1307,8 +1307,18 @@ export const SearchTab: React.FC = () => {
               </select>
             </div>
 
-            <div className="text-[11px] font-mono text-[#8C8276]">
-              {selectedBook} • Đề #{selectedTestNum}
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => useQuizStore.getState().openFullAnswers({ book: selectedBook, test: selectedTestNum })}
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-2xs transition cursor-pointer"
+                title="Mở toàn màn hình xem đáp án nén 1 màn hình"
+              >
+                <Table className="w-3.5 h-3.5" />
+                <span>Xem Bảng Nén 1 Màn Hình</span>
+              </button>
+              <div className="text-[11px] font-mono text-[#8C8276] hidden sm:block">
+                {selectedBook} • Đề #{selectedTestNum}
+              </div>
             </div>
           </div>
 

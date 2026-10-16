@@ -12,6 +12,7 @@ export interface ExamBookMeta {
 
 export const EXAM_BOOKS_META: ExamBookMeta[] = [
   { id: 'Hacker 2 (Full 200 câu)', name: 'Hacker TOEIC 2 (Full 200 câu LC + RC)', hasListening: true, hasReading: true, testCount: 10 },
+  { id: 'Docs 2 (Listening Test 1)', name: 'Docs 2 Listening (Test 1 Full 100 câu)', hasListening: true, hasReading: false, testCount: 1 },
   { id: 'YBM 2025 (RC 101-200)', name: 'YBM TOEIC 2025 (10 Tests Reading)', hasListening: false, hasReading: true, testCount: 10 },
   { id: 'Hacker 3 (RC 101-200)', name: 'Hacker TOEIC 3 (10 Tests Reading)', hasListening: false, hasReading: true, testCount: 10 },
   { id: 'Hacker 1 (RC 101-200)', name: 'Hacker TOEIC 1 (10 Tests Reading)', hasListening: false, hasReading: true, testCount: 10 },
@@ -6131,6 +6132,89 @@ export const MASTER_ANSWER_KEYS: Record<string, Record<string, Record<string, st
       "200": "C"
     }
   },
+  "Docs 2 (Reading)": {
+    "\u0110\u1ec1 1 (Trial Test)": {
+      "147": "C",
+      "149": "A",
+      "151": "C",
+      "153": "D",
+      "155": "A",
+      "157": "A",
+      "159": "B",
+      "161": "B",
+      "163": "D",
+      "165": "C",
+      "167": "A",
+      "169": "A",
+      "171": "B",
+      "173": "A",
+      "175": "B",
+      "177": "D",
+      "179": "A",
+      "181": "C",
+      "183": "B",
+      "185": "A",
+      "187": "D",
+      "189": "A",
+      "191": "B",
+      "193": "D",
+      "195": "C",
+      "197": "B",
+      "199": "C"
+    },
+    "\u0110\u1ec1 2 (YBM Test 1)": {
+      "101": "C",
+      "103": "A",
+      "105": "B",
+      "107": "A",
+      "109": "C",
+      "111": "B",
+      "113": "A",
+      "115": "A",
+      "117": "B",
+      "119": "B",
+      "121": "B",
+      "123": "D",
+      "125": "C",
+      "127": "D",
+      "129": "D",
+      "131": "C",
+      "133": "B",
+      "135": "A",
+      "137": "B",
+      "139": "C",
+      "141": "A",
+      "143": "D",
+      "145": "C",
+      "147": "D",
+      "149": "D",
+      "151": "A",
+      "153": "D",
+      "155": "D",
+      "157": "C",
+      "159": "A",
+      "161": "C",
+      "163": "D",
+      "165": "D",
+      "167": "D",
+      "169": "C",
+      "171": "D",
+      "173": "A",
+      "175": "D",
+      "177": "C",
+      "179": "D",
+      "181": "A",
+      "183": "D",
+      "185": "B",
+      "187": "D",
+      "189": "D",
+      "191": "B",
+      "193": "D",
+      "195": "C",
+      "197": "B",
+      "199": "D"
+    }
+  },
   "Docs 1 (Test 2)": {
     "Test 2": {
       "101": "D",
@@ -6234,6 +6318,110 @@ export const MASTER_ANSWER_KEYS: Record<string, Record<string, Record<string, st
       "199": "D",
       "200": "B"
     }
+  },
+  "Docs 2 (Listening Test 1)": {
+    "Test 1": {
+      "1": "C",
+      "2": "A",
+      "3": "D",
+      "4": "D",
+      "5": "A",
+      "6": "B",
+      "7": "A",
+      "8": "A",
+      "9": "C",
+      "10": "A",
+      "11": "B",
+      "12": "A",
+      "13": "C",
+      "14": "A",
+      "15": "C",
+      "16": "B",
+      "17": "C",
+      "18": "B",
+      "19": "A",
+      "20": "C",
+      "21": "C",
+      "22": "A",
+      "23": "B",
+      "24": "B",
+      "25": "C",
+      "26": "B",
+      "27": "B",
+      "28": "A",
+      "29": "B",
+      "30": "C",
+      "31": "B",
+      "32": "A",
+      "33": "B",
+      "34": "D",
+      "35": "C",
+      "36": "B",
+      "37": "C",
+      "38": "B",
+      "39": "A",
+      "40": "D",
+      "41": "B",
+      "42": "A",
+      "43": "A",
+      "44": "B",
+      "45": "C",
+      "46": "B",
+      "47": "B",
+      "48": "A",
+      "49": "D",
+      "50": "C",
+      "51": "D",
+      "52": "A",
+      "53": "C",
+      "54": "C",
+      "55": "A",
+      "56": "A",
+      "57": "B",
+      "58": "A",
+      "59": "C",
+      "60": "B",
+      "61": "A",
+      "62": "A",
+      "63": "D",
+      "64": "B",
+      "65": "D",
+      "66": "C",
+      "67": "A",
+      "68": "B",
+      "69": "D",
+      "70": "D",
+      "71": "C",
+      "72": "D",
+      "73": "B",
+      "74": "C",
+      "75": "D",
+      "76": "D",
+      "77": "C",
+      "78": "A",
+      "79": "B",
+      "80": "C",
+      "81": "B",
+      "82": "A",
+      "83": "B",
+      "84": "B",
+      "85": "C",
+      "86": "D",
+      "87": "C",
+      "88": "B",
+      "89": "C",
+      "90": "B",
+      "91": "A",
+      "92": "C",
+      "93": "B",
+      "94": "A",
+      "95": "B",
+      "96": "B",
+      "97": "C",
+      "98": "C",
+      "99": "D",
+      "100": "B"
+    }
   }
 };
 
@@ -6248,13 +6436,12 @@ export function lookupAnswer(book: string, test: number | string, questionNum: n
 /**
  * Tự động tìm bộ đề và câu hỏi từ bất kì source/questionId nào trong hệ thống
  */
-export function resolveBookAndTestFromSource(source: string, questionId?: string, questionNum?: number): { book: string; test: string; num?: number } | null {
+export function resolveBookAndTestFromSource(source?: string, questionId?: string, questionNum?: number): { book: string; test: string; num?: number } | null {
   const src = (source || '').toLowerCase();
   const qId = (questionId || '').toLowerCase();
 
   // 1. Hacker 2
   if (src.includes('hacker 2') || src.includes('hacker2') || qId.includes('hacker2')) {
-    // find test number
     const tMatch = src.match(/test\s*(\d+)/i) || qId.match(/_t(\d+)_/i);
     const testNum = tMatch ? tMatch[1] : '1';
     return { book: 'Hacker 2 (Full 200 câu)', test: testNum, num: questionNum };
@@ -6288,7 +6475,7 @@ export function resolveBookAndTestFromSource(source: string, questionId?: string
     return { book: 'YBM 1000 Vol 1 (RC 101-200)', test: testNum, num: questionNum };
   }
 
-  // 6. Docs 2
+  // 6. Docs 2 Reading
   if (src.includes('docs 2 - đề 1') || qId.includes('docs2_de1')) {
     return { book: 'Docs 2 (Reading)', test: 'Đề 1 (Trial Test)', num: questionNum };
   }
@@ -6296,11 +6483,15 @@ export function resolveBookAndTestFromSource(source: string, questionId?: string
     return { book: 'Docs 2 (Reading)', test: 'Đề 2 (YBM Test 1)', num: questionNum };
   }
 
-  // 7. Docs 1 Test 2
+  // 7. Docs 2 Listening
+  if (src.includes('listening') || qId.includes('listening_') || qId.startsWith('p1_') || qId.startsWith('p2_') || qId.startsWith('p3_') || qId.startsWith('p4_')) {
+    return { book: 'Docs 2 (Listening Test 1)', test: 'Test 1', num: questionNum };
+  }
+
+  // 8. Docs 1 Test 2
   if (src.includes('test 2') || qId.includes('test2_')) {
     return { book: 'Docs 1 (Test 2)', test: 'Test 2', num: questionNum };
   }
 
-  // Default fallback
   return null;
 }

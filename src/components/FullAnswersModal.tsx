@@ -11,10 +11,16 @@ import {
   Search,
   Layers,
   ChevronRight,
+  LayoutGrid,
+  List,
+  Headphones,
+  BookOpen,
+  ArrowRight,
+  Sparkles,
 } from 'lucide-react';
 
 export const FullAnswersModal: React.FC = () => {
-  const { fullAnswerTarget } = useQuizStore();
+  const { fullAnswerTarget, setActiveTab, setListeningCurrentIndex, jumpToIndex, questions } = useQuizStore();
 
   // Selected Book and Test
   const [selectedBook, setSelectedBook] = useState<string>(
@@ -26,6 +32,12 @@ export const FullAnswersModal: React.FC = () => {
   const [highlightNum, setHighlightNum] = useState<number | undefined>(
     fullAnswerTarget?.questionNum
   );
+
+  // View Mode: 'matrix' (Single screen 1-màn-hình) vs 'cards' (Chi tiết)
+  const [viewMode, setViewMode] = useState<'matrix' | 'cards'>('matrix');
+
+  // Mobile active section for matrix view ('lc' | 'rc')
+  const [mobileSection, setMobileSection] = useState<'lc' | 'rc'>('lc');
 
   // Search filter inside answers
   const [searchNum, setSearchNum] = useState<string>('');
@@ -45,6 +57,11 @@ export const FullAnswersModal: React.FC = () => {
       }
       if (fullAnswerTarget.questionNum) {
         setHighlightNum(fullAnswerTarget.questionNum);
+        if (fullAnswerTarget.questionNum > 100) {
+          setMobileSection('rc');
+        } else {
+          setMobileSection('lc');
+        }
       }
     }
   }, [fullAnswerTarget]);
@@ -54,8 +71,8 @@ export const FullAnswersModal: React.FC = () => {
     const bookData = MASTER_ANSWER_KEYS[selectedBook];
     if (!bookData) return ['1'];
     return Object.keys(bookData).sort((a, b) => {
-      const na = parseInt(a);
-      const nb = parseInt(b);
+      const na = parseInt(a, 10);
+      const nb = parseInt(b, 10);
       if (!isNaN(na) && !isNaN(nb)) return na - nb;
       return a.localeCompare(b);
     });
@@ -86,17 +103,18 @@ export const FullAnswersModal: React.FC = () => {
       .sort((a, b) => a - b);
   }, [answersObj]);
 
-  // Filtered list
+  const lcNums = useMemo(() => allNums.filter((n) => n <= 100), [allNums]);
+  const rcNums = useMemo(() => allNums.filter((n) => n > 100), [allNums]);
+
+  // Filtered list for Cards View
   const filteredNums = useMemo(() => {
     return allNums.filter((num) => {
-      // Search filter
       if (searchNum.trim()) {
         const query = searchNum.trim();
         const strNum = String(num);
         if (!strNum.includes(query)) return false;
       }
 
-      // Part filter
       if (partFilter === 'lc') return num <= 100;
       if (partFilter === 'rc') return num > 100;
       if (partFilter === 'p1') return num >= 1 && num <= 6;
@@ -111,9 +129,19 @@ export const FullAnswersModal: React.FC = () => {
     });
   }, [allNums, searchNum, partFilter]);
 
-  // Auto scroll to highlighted question
+  // If searchNum matches an exact number, highlight it
   useEffect(() => {
-    if (highlightNum) {
+    const parsed = parseInt(searchNum.trim(), 10);
+    if (!isNaN(parsed) && answersObj[parsed]) {
+      setHighlightNum(parsed);
+      if (parsed > 100) setMobileSection('rc');
+      else setMobileSection('lc');
+    }
+  }, [searchNum, answersObj]);
+
+  // Auto scroll in cards view
+  useEffect(() => {
+    if (viewMode === 'cards' && highlightNum) {
       setTimeout(() => {
         const el = document.getElementById(`ans-item-${highlightNum}`);
         if (el) {
@@ -121,11 +149,12 @@ export const FullAnswersModal: React.FC = () => {
         }
       }, 100);
     }
-  }, [highlightNum, selectedBook, selectedTest]);
+  }, [highlightNum, viewMode]);
 
   // Copy full answers
   const handleCopyAll = () => {
-    const lines = filteredNums.map((n) => `${n}: ${answersObj[n]}`);
+    const listToCopy = filteredNums.length > 0 ? filteredNums : allNums;
+    const lines = listToCopy.map((n) => `${n}: ${answersObj[n]}`);
     navigator.clipboard.writeText(
       `ĐÁP ÁN: ${selectedBook} - Test ${selectedTest}\n` + lines.join('\n')
     );
@@ -136,53 +165,230 @@ export const FullAnswersModal: React.FC = () => {
   // Stats calculation
   const stats = useMemo(() => {
     const counts = { A: 0, B: 0, C: 0, D: 0 };
-    filteredNums.forEach((n) => {
+    allNums.forEach((n) => {
       const a = answersObj[n];
       if (a === 'A' || a === 'B' || a === 'C' || a === 'D') {
         counts[a]++;
       }
     });
     return counts;
-  }, [filteredNums, answersObj]);
+  }, [allNums, answersObj]);
+
+  const pillColors: Record<string, { bg: string; text: string; badge: string }> = {
+    A: { bg: 'bg-sky-500 hover:bg-sky-600', text: 'text-white', badge: 'bg-sky-500 text-white' },
+    B: { bg: 'bg-indigo-600 hover:bg-indigo-700', text: 'text-white', badge: 'bg-indigo-600 text-white' },
+    C: { bg: 'bg-emerald-600 hover:bg-emerald-700', text: 'text-white', badge: 'bg-emerald-600 text-white' },
+    D: { bg: 'bg-amber-500 hover:bg-amber-600', text: 'text-white', badge: 'bg-amber-500 text-white' },
+  };
+
+  const getQuestionPartName = (num: number) => {
+    if (num <= 6) return 'Part 1 • Mô tả tranh (Photographs)';
+    if (num <= 31) return 'Part 2 • Hỏi & Đáp (Question-Response)';
+    if (num <= 70) return 'Part 3 • Hội thoại (Conversations)';
+    if (num <= 100) return 'Part 4 • Bài nói ngắn (Short Talks)';
+    if (num <= 130) return 'Part 5 • Điền câu (Incomplete Sentences)';
+    if (num <= 146) return 'Part 6 • Điền đoạn (Text Completion)';
+    return 'Part 7 • Đọc hiểu đoạn văn (Reading Comprehension)';
+  };
+
+  const isNumInActiveFilter = (num: number) => {
+    if (partFilter === 'all') return true;
+    if (partFilter === 'lc') return num <= 100;
+    if (partFilter === 'rc') return num > 100;
+    if (partFilter === 'p1') return num >= 1 && num <= 6;
+    if (partFilter === 'p2') return num >= 7 && num <= 31;
+    if (partFilter === 'p3') return num >= 32 && num <= 70;
+    if (partFilter === 'p4') return num >= 71 && num <= 100;
+    if (partFilter === 'p5') return num >= 101 && num <= 130;
+    if (partFilter === 'p6') return num >= 131 && num <= 146;
+    if (partFilter === 'p7') return num >= 147 && num <= 200;
+    return true;
+  };
+
+  // Jump to practice mode
+  const handleJumpToPractice = (num: number) => {
+    if (num <= 100) {
+      setListeningCurrentIndex(num - 1);
+      setActiveTab('listening');
+    } else {
+      // Find index in reading questions
+      const idx = questions.findIndex((q) => q.num === num);
+      if (idx !== -1) {
+        jumpToIndex(idx);
+      }
+      setActiveTab('practice');
+    }
+  };
+
+  // Render 10x10 Matrix Table for 1-Screen View
+  const renderDenseMatrix = (numsList: number[], title: string, isLc: boolean) => {
+    if (numsList.length === 0) return null;
+
+    // Group into rows of 10
+    const rows: number[][] = [];
+    for (let i = 0; i < numsList.length; i += 10) {
+      rows.push(numsList.slice(i, i + 10));
+    }
+
+    return (
+      <div className="flex-1 flex flex-col bg-white rounded-2xl border border-[#E8DFD3] shadow-xs overflow-hidden min-h-0">
+        {/* Panel Header */}
+        <div className={`px-3 py-2 border-b flex items-center justify-between shrink-0 ${
+          isLc ? 'bg-sky-50/80 border-sky-100' : 'bg-amber-50/80 border-amber-100'
+        }`}>
+          <div className="flex items-center gap-1.5">
+            {isLc ? (
+              <Headphones className="w-4 h-4 text-sky-700" />
+            ) : (
+              <BookOpen className="w-4 h-4 text-amber-700" />
+            )}
+            <span className={`text-xs font-black uppercase tracking-wide ${
+              isLc ? 'text-sky-900' : 'text-amber-900'
+            }`}>
+              {title}
+            </span>
+          </div>
+          <span className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded-full ${
+            isLc ? 'bg-sky-100 text-sky-800' : 'bg-amber-100 text-amber-800'
+          }`}>
+            {numsList.length} câu
+          </span>
+        </div>
+
+        {/* Matrix Grid: Dense, 10 columns */}
+        <div className="flex-1 overflow-auto p-2 sm:p-2.5">
+          <div className="flex flex-col gap-1 min-w-[280px]">
+            {rows.map((row, rIdx) => {
+              const startN = row[0];
+              const endN = row[row.length - 1];
+
+              return (
+                <div key={rIdx} className="flex items-center gap-1">
+                  {/* Row index indicator */}
+                  <span className="w-11 sm:w-12 text-[9.5px] font-mono font-semibold text-[#8C8276] shrink-0 text-right pr-1">
+                    {startN}-{endN}:
+                  </span>
+
+                  {/* 10 Cells in this row */}
+                  <div className="flex-1 grid grid-cols-10 gap-0.5 sm:gap-1">
+                    {row.map((num) => {
+                      const ans = answersObj[num] || '-';
+                      const isHighlighted = highlightNum === num;
+                      const inFilter = isNumInActiveFilter(num);
+                      const style = pillColors[ans] || {
+                        bg: 'bg-gray-300',
+                        text: 'text-gray-800',
+                        badge: 'bg-gray-300 text-gray-800',
+                      };
+
+                      return (
+                        <button
+                          key={num}
+                          id={`ans-matrix-${num}`}
+                          onClick={() => setHighlightNum(num)}
+                          title={`Câu ${num}: Đáp án (${ans})`}
+                          className={`group relative flex flex-col items-center justify-center py-1 rounded-lg transition-all cursor-pointer border select-none ${
+                            isHighlighted
+                              ? 'ring-3 ring-amber-400 bg-amber-100 border-amber-500 scale-105 z-10 shadow-sm font-black'
+                              : inFilter
+                              ? 'bg-[#FAF8F5] hover:bg-white border-[#EFE8DE] hover:border-emerald-300'
+                              : 'opacity-25 grayscale bg-gray-100 border-gray-200'
+                          }`}
+                        >
+                          <span className={`text-[9px] font-mono leading-none ${
+                            isHighlighted ? 'text-amber-950 font-black' : 'text-[#7A7065]'
+                          }`}>
+                            {num}
+                          </span>
+                          <span
+                            className={`w-4 h-4 sm:w-5 sm:h-5 mt-0.5 rounded-md text-[10px] sm:text-[11px] font-black flex items-center justify-center transition-transform ${
+                              style.badge
+                            } ${isHighlighted ? 'scale-110 shadow-2xs' : 'group-hover:scale-105'}`}
+                          >
+                            {ans}
+                          </span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    );
+  };
 
   return (
     <div className="flex flex-col h-full min-h-0 bg-[#FAF7F2] text-[#262320]">
-      {/* TOP CONTROLS & HEADER */}
-      <div className="shrink-0 bg-white border-b border-[#EFE8DE] p-3 sm:p-4 shadow-2xs space-y-3">
-        {/* Row 1: Title and Book Selector */}
-        <div className="flex flex-wrap items-center justify-between gap-2.5">
+      {/* ======================================================== */}
+      {/* TOP HEADER & EXAM SELECTOR                               */}
+      {/* ======================================================== */}
+      <div className="shrink-0 bg-white border-b border-[#EFE8DE] p-2.5 sm:p-3.5 shadow-2xs space-y-2.5">
+        {/* Row 1: Title, View Switcher & Copy */}
+        <div className="flex flex-wrap items-center justify-between gap-2">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white shadow-xs">
               <CheckCircle2 className="w-4 h-4" />
             </div>
             <div>
               <h1 className="text-sm sm:text-base font-black text-[#262320] flex items-center gap-1.5">
-                Bảng Đáp Án Chi Tiết (Full 200 Câu)
-                <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-200">
-                  {filteredNums.length} câu
+                Bảng Đáp Án Nén 1 Màn Hình
+                <span className="text-[10px] font-bold px-1.5 py-0.2 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-200">
+                  {allNums.length} câu
                 </span>
               </h1>
-              <p className="text-[11px] text-[#8C8276]">
-                Tra cứu đáp án chuẩn Part 1 - Part 7 nhanh chóng từ bất kì đề nào
+              <p className="text-[11px] text-[#8C8276] hidden sm:block">
+                Toàn bộ đáp án Listening (1-100) & Reading (101-200) trực quan trong một tầm mắt
               </p>
             </div>
           </div>
 
           <div className="flex items-center gap-1.5">
+            {/* View Mode Toggle */}
+            <div className="flex items-center bg-[#F2ECE3] rounded-xl p-0.5 text-xs font-bold">
+              <button
+                onClick={() => setViewMode('matrix')}
+                className={`flex items-center gap-1 px-2.5 py-1 rounded-lg transition cursor-pointer text-xs ${
+                  viewMode === 'matrix'
+                    ? 'bg-emerald-600 text-white shadow-2xs'
+                    : 'text-[#6B635B] hover:text-[#262320]'
+                }`}
+                title="Hiển thị dạng bảng nén 1 màn hình trực quan"
+              >
+                <LayoutGrid className="w-3.5 h-3.5" />
+                <span>Bảng Nén</span>
+              </button>
+              <button
+                onClick={() => setViewMode('cards')}
+                className={`flex items-center gap-1 px-2.5 py-1 rounded-lg transition cursor-pointer text-xs ${
+                  viewMode === 'cards'
+                    ? 'bg-emerald-600 text-white shadow-2xs'
+                    : 'text-[#6B635B] hover:text-[#262320]'
+                }`}
+                title="Hiển thị danh sách thẻ chi tiết"
+              >
+                <List className="w-3.5 h-3.5" />
+                <span>Thẻ Chi Tiết</span>
+              </button>
+            </div>
+
+            {/* Copy Button */}
             <button
               onClick={handleCopyAll}
-              className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-[#FAF7F2] border border-[#E8DFD3] hover:border-emerald-400 text-xs font-bold text-[#4A4238] transition cursor-pointer shadow-2xs"
+              className="flex items-center gap-1 px-2.5 py-1.5 rounded-xl bg-[#FAF7F2] border border-[#E8DFD3] hover:border-emerald-400 text-xs font-bold text-[#4A4238] transition cursor-pointer shadow-2xs"
               title="Sao chép toàn bộ đáp án"
             >
               {copied ? (
                 <>
                   <Check className="w-3.5 h-3.5 text-emerald-600" />
-                  <span className="text-emerald-700">Đã chép!</span>
+                  <span className="text-emerald-700 hidden sm:inline">Đã chép</span>
                 </>
               ) : (
                 <>
                   <Copy className="w-3.5 h-3.5 text-[#6B635B]" />
-                  <span>Sao chép</span>
+                  <span className="hidden sm:inline">Sao chép</span>
                 </>
               )}
             </button>
@@ -190,15 +396,15 @@ export const FullAnswersModal: React.FC = () => {
         </div>
 
         {/* Row 2: Select Book & Test */}
-        <div className="grid grid-cols-1 sm:grid-cols-12 gap-2 pt-1">
+        <div className="grid grid-cols-1 sm:grid-cols-12 gap-2">
           {/* Book selector */}
-          <div className="sm:col-span-8 flex items-center gap-2">
+          <div className="sm:col-span-8 flex items-center gap-1.5">
             <label className="text-xs font-bold text-[#6B635B] shrink-0">Bộ đề:</label>
             <div className="relative flex-1">
               <select
                 value={selectedBook}
                 onChange={(e) => setSelectedBook(e.target.value)}
-                className="w-full appearance-none bg-[#FAF7F2] border border-[#E8DFD3] focus:border-emerald-500 rounded-xl px-3 py-2 text-xs sm:text-sm font-bold text-[#262320] cursor-pointer shadow-2xs pr-8"
+                className="w-full appearance-none bg-[#FAF7F2] border border-[#E8DFD3] focus:border-emerald-500 rounded-xl px-3 py-1.5 text-xs sm:text-sm font-bold text-[#262320] cursor-pointer shadow-2xs pr-8"
               >
                 {EXAM_BOOKS_META.map((book) => (
                   <option key={book.id} value={book.id}>
@@ -211,13 +417,13 @@ export const FullAnswersModal: React.FC = () => {
           </div>
 
           {/* Test selector */}
-          <div className="sm:col-span-4 flex items-center gap-2">
+          <div className="sm:col-span-4 flex items-center gap-1.5">
             <label className="text-xs font-bold text-[#6B635B] shrink-0">Test:</label>
             <div className="relative flex-1">
               <select
                 value={selectedTest}
                 onChange={(e) => setSelectedTest(e.target.value)}
-                className="w-full appearance-none bg-[#FAF7F2] border border-[#E8DFD3] focus:border-emerald-500 rounded-xl px-3 py-2 text-xs sm:text-sm font-bold text-[#262320] cursor-pointer shadow-2xs pr-8"
+                className="w-full appearance-none bg-[#FAF7F2] border border-[#E8DFD3] focus:border-emerald-500 rounded-xl px-3 py-1.5 text-xs sm:text-sm font-bold text-[#262320] cursor-pointer shadow-2xs pr-8"
               >
                 {availableTests.map((t) => (
                   <option key={t} value={t}>
@@ -231,25 +437,25 @@ export const FullAnswersModal: React.FC = () => {
         </div>
 
         {/* Row 3: Filter by Part + Search number */}
-        <div className="flex flex-wrap items-center justify-between gap-2 pt-1 border-t border-[#F0EAE1]">
+        <div className="flex flex-wrap items-center justify-between gap-1.5 pt-1 border-t border-[#F0EAE1]">
           {/* Part filters */}
           <div className="flex items-center gap-1 overflow-x-auto py-0.5 max-w-full">
             <button
               onClick={() => setPartFilter('all')}
-              className={`px-2.5 py-1 rounded-lg text-xs font-bold transition cursor-pointer shrink-0 ${
+              className={`px-2 py-0.5 rounded-lg text-xs font-bold transition cursor-pointer shrink-0 ${
                 partFilter === 'all'
                   ? 'bg-emerald-600 text-white shadow-2xs'
                   : 'bg-[#FAF7F2] text-[#6B635B] hover:text-[#262320]'
               }`}
             >
-              Tất cả
+              Tất cả ({allNums.length})
             </button>
 
             {currentMeta?.hasListening && (
               <>
                 <button
                   onClick={() => setPartFilter('lc')}
-                  className={`px-2 py-1 rounded-lg text-xs font-bold transition cursor-pointer shrink-0 ${
+                  className={`px-2 py-0.5 rounded-lg text-xs font-bold transition cursor-pointer shrink-0 ${
                     partFilter === 'lc'
                       ? 'bg-sky-600 text-white shadow-2xs'
                       : 'bg-[#FAF7F2] text-[#6B635B] hover:text-[#262320]'
@@ -259,7 +465,7 @@ export const FullAnswersModal: React.FC = () => {
                 </button>
                 <button
                   onClick={() => setPartFilter('p1')}
-                  className={`px-1.5 py-0.5 rounded text-[11px] font-semibold transition cursor-pointer shrink-0 ${
+                  className={`px-1.5 py-0.5 rounded text-[10.5px] font-semibold transition cursor-pointer shrink-0 ${
                     partFilter === 'p1' ? 'bg-sky-200 text-sky-900 font-bold' : 'text-[#8C8276]'
                   }`}
                 >
@@ -267,7 +473,7 @@ export const FullAnswersModal: React.FC = () => {
                 </button>
                 <button
                   onClick={() => setPartFilter('p2')}
-                  className={`px-1.5 py-0.5 rounded text-[11px] font-semibold transition cursor-pointer shrink-0 ${
+                  className={`px-1.5 py-0.5 rounded text-[10.5px] font-semibold transition cursor-pointer shrink-0 ${
                     partFilter === 'p2' ? 'bg-sky-200 text-sky-900 font-bold' : 'text-[#8C8276]'
                   }`}
                 >
@@ -275,7 +481,7 @@ export const FullAnswersModal: React.FC = () => {
                 </button>
                 <button
                   onClick={() => setPartFilter('p3')}
-                  className={`px-1.5 py-0.5 rounded text-[11px] font-semibold transition cursor-pointer shrink-0 ${
+                  className={`px-1.5 py-0.5 rounded text-[10.5px] font-semibold transition cursor-pointer shrink-0 ${
                     partFilter === 'p3' ? 'bg-sky-200 text-sky-900 font-bold' : 'text-[#8C8276]'
                   }`}
                 >
@@ -283,7 +489,7 @@ export const FullAnswersModal: React.FC = () => {
                 </button>
                 <button
                   onClick={() => setPartFilter('p4')}
-                  className={`px-1.5 py-0.5 rounded text-[11px] font-semibold transition cursor-pointer shrink-0 ${
+                  className={`px-1.5 py-0.5 rounded text-[10.5px] font-semibold transition cursor-pointer shrink-0 ${
                     partFilter === 'p4' ? 'bg-sky-200 text-sky-900 font-bold' : 'text-[#8C8276]'
                   }`}
                 >
@@ -294,7 +500,7 @@ export const FullAnswersModal: React.FC = () => {
 
             <button
               onClick={() => setPartFilter('rc')}
-              className={`px-2 py-1 rounded-lg text-xs font-bold transition cursor-pointer shrink-0 ${
+              className={`px-2 py-0.5 rounded-lg text-xs font-bold transition cursor-pointer shrink-0 ${
                 partFilter === 'rc'
                   ? 'bg-amber-600 text-white shadow-2xs'
                   : 'bg-[#FAF7F2] text-[#6B635B] hover:text-[#262320]'
@@ -304,7 +510,7 @@ export const FullAnswersModal: React.FC = () => {
             </button>
             <button
               onClick={() => setPartFilter('p5')}
-              className={`px-1.5 py-0.5 rounded text-[11px] font-semibold transition cursor-pointer shrink-0 ${
+              className={`px-1.5 py-0.5 rounded text-[10.5px] font-semibold transition cursor-pointer shrink-0 ${
                 partFilter === 'p5' ? 'bg-amber-200 text-amber-900 font-bold' : 'text-[#8C8276]'
               }`}
             >
@@ -312,7 +518,7 @@ export const FullAnswersModal: React.FC = () => {
             </button>
             <button
               onClick={() => setPartFilter('p6')}
-              className={`px-1.5 py-0.5 rounded text-[11px] font-semibold transition cursor-pointer shrink-0 ${
+              className={`px-1.5 py-0.5 rounded text-[10.5px] font-semibold transition cursor-pointer shrink-0 ${
                 partFilter === 'p6' ? 'bg-amber-200 text-amber-900 font-bold' : 'text-[#8C8276]'
               }`}
             >
@@ -320,7 +526,7 @@ export const FullAnswersModal: React.FC = () => {
             </button>
             <button
               onClick={() => setPartFilter('p7')}
-              className={`px-1.5 py-0.5 rounded text-[11px] font-semibold transition cursor-pointer shrink-0 ${
+              className={`px-1.5 py-0.5 rounded text-[10.5px] font-semibold transition cursor-pointer shrink-0 ${
                 partFilter === 'p7' ? 'bg-amber-200 text-amber-900 font-bold' : 'text-[#8C8276]'
               }`}
             >
@@ -329,7 +535,7 @@ export const FullAnswersModal: React.FC = () => {
           </div>
 
           {/* Search box for quick number search */}
-          <div className="relative w-32 sm:w-40 shrink-0">
+          <div className="relative w-28 sm:w-36 shrink-0">
             <Search className="w-3.5 h-3.5 text-[#8C8276] absolute left-2.5 top-1/2 -translate-y-1/2 pointer-events-none" />
             <input
               type="text"
@@ -337,7 +543,7 @@ export const FullAnswersModal: React.FC = () => {
               placeholder="Tìm câu số..."
               value={searchNum}
               onChange={(e) => setSearchNum(e.target.value)}
-              className="w-full bg-[#FAF7F2] border border-[#E8DFD3] focus:border-emerald-500 rounded-lg pl-8 pr-2 py-1 text-xs text-[#262320] focus:outline-none"
+              className="w-full bg-[#FAF7F2] border border-[#E8DFD3] focus:border-emerald-500 rounded-lg pl-7 pr-2 py-1 text-xs text-[#262320] focus:outline-none font-bold"
             />
             {searchNum && (
               <button
@@ -351,7 +557,7 @@ export const FullAnswersModal: React.FC = () => {
         </div>
 
         {/* Distribution quick bar */}
-        <div className="flex items-center gap-2 text-[11px] text-[#6B635B] bg-[#FAF7F2] px-2.5 py-1 rounded-lg">
+        <div className="flex items-center gap-2 text-[10.5px] text-[#6B635B] bg-[#FAF7F2] px-2.5 py-1 rounded-lg">
           <span className="font-bold text-[#4A4238]">Phân bổ:</span>
           <span className="font-semibold text-sky-800">A: {stats.A}</span>
           <span>·</span>
@@ -360,111 +566,191 @@ export const FullAnswersModal: React.FC = () => {
           <span className="font-semibold text-emerald-800">C: {stats.C}</span>
           <span>·</span>
           <span className="font-semibold text-amber-900">D: {stats.D}</span>
+
           {highlightNum && (
-            <span className="ml-auto text-[10px] text-emerald-700 font-bold bg-emerald-100 px-2 py-0.5 rounded">
-              Đang chọn câu #{highlightNum}
+            <span className="ml-auto text-[10px] text-amber-900 font-bold bg-amber-100 border border-amber-300 px-2 py-0.5 rounded-md flex items-center gap-1">
+              <Sparkles className="w-3 h-3 text-amber-600" />
+              <span>Đang chọn #{highlightNum}</span>
             </span>
           )}
         </div>
       </div>
 
-      {/* ANSWER GRID CONTAINER - ORGANIZED & SPACIOUS */}
-      <div
-        ref={containerRef}
-        className="flex-1 overflow-y-auto p-3 sm:p-5 min-h-0 space-y-4"
-      >
-        {filteredNums.length === 0 ? (
-          <div className="p-8 text-center text-[#8C8276] text-xs">
-            Không tìm thấy câu nào phù hợp với bộ lọc.
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-            {(() => {
-              // Group questions into rows of 5
-              const blocks: number[][] = [];
-              for (let i = 0; i < filteredNums.length; i += 5) {
-                blocks.push(filteredNums.slice(i, i + 5));
-              }
+      {/* ======================================================== */}
+      {/* MAIN VIEWPORT: MATRIX (1 MÀN HÌNH) VS CARDS              */}
+      {/* ======================================================== */}
+      <div className="flex-1 flex flex-col p-2 sm:p-3 min-h-0 overflow-hidden">
+        {viewMode === 'matrix' ? (
+          <div className="flex-1 flex flex-col h-full min-h-0 space-y-2">
+            {/* Mobile Tab Switcher when both LC & RC exist */}
+            {lcNums.length > 0 && rcNums.length > 0 && (
+              <div className="md:hidden flex items-center gap-1 bg-[#F2ECE3] p-0.5 rounded-xl text-xs font-bold shrink-0">
+                <button
+                  onClick={() => setMobileSection('lc')}
+                  className={`flex-1 py-1 px-2 rounded-lg transition flex items-center justify-center gap-1.5 cursor-pointer ${
+                    mobileSection === 'lc'
+                      ? 'bg-sky-600 text-white shadow-2xs'
+                      : 'text-[#6B635B]'
+                  }`}
+                >
+                  <Headphones className="w-3.5 h-3.5" />
+                  <span>🎧 Listening (1-100)</span>
+                </button>
+                <button
+                  onClick={() => setMobileSection('rc')}
+                  className={`flex-1 py-1 px-2 rounded-lg transition flex items-center justify-center gap-1.5 cursor-pointer ${
+                    mobileSection === 'rc'
+                      ? 'bg-amber-600 text-white shadow-2xs'
+                      : 'text-[#6B635B]'
+                  }`}
+                >
+                  <BookOpen className="w-3.5 h-3.5" />
+                  <span>📖 Reading (101-200)</span>
+                </button>
+              </div>
+            )}
 
-              const answerPillColors: Record<string, { bg: string; text: string }> = {
-                A: { bg: 'bg-sky-500', text: 'text-white' },
-                B: { bg: 'bg-indigo-600', text: 'text-white' },
-                C: { bg: 'bg-emerald-600', text: 'text-white' },
-                D: { bg: 'bg-amber-500', text: 'text-white' },
-              };
+            {/* Matrix Dual Columns (or single if only LC or RC) */}
+            <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-3 min-h-0 overflow-hidden">
+              {/* Listening Matrix */}
+              {lcNums.length > 0 && (
+                <div className={`h-full min-h-0 ${
+                  rcNums.length > 0 && mobileSection === 'rc' ? 'hidden md:flex' : 'flex'
+                } flex-col`}>
+                  {renderDenseMatrix(lcNums, '🎧 LISTENING (Câu 1 - 100)', true)}
+                </div>
+              )}
 
-              return blocks.map((block, bIdx) => {
-                const startNum = block[0];
-                const endNum = block[block.length - 1];
-                const isListening = startNum <= 100;
+              {/* Reading Matrix */}
+              {rcNums.length > 0 && (
+                <div className={`h-full min-h-0 ${
+                  lcNums.length > 0 && mobileSection === 'lc' ? 'hidden md:flex' : 'flex'
+                } flex-col`}>
+                  {renderDenseMatrix(rcNums, '📖 READING (Câu 101 - 200)', false)}
+                </div>
+              )}
+            </div>
 
-                return (
-                  <div
-                    key={bIdx}
-                    className="bg-white rounded-2xl border border-[#E8DFD3] p-3 shadow-2xs flex flex-col gap-2 hover:border-emerald-300 transition"
-                  >
-                    {/* Block Title */}
-                    <div className="flex items-center justify-between text-[11px] font-bold pb-1.5 border-b border-[#F2ECE3]">
-                      <span className="text-[#5C5247]">
-                        Câu {startNum} - {endNum}
-                      </span>
-                      <span
-                        className={`text-[9.5px] font-mono px-1.5 py-0.2 rounded font-bold ${
-                          isListening ? 'bg-sky-50 text-sky-700' : 'bg-amber-50 text-amber-800'
-                        }`}
-                      >
-                        {isListening ? 'Listening' : 'Reading'}
-                      </span>
+            {/* Selected Question Action Bar (Floating at bottom of matrix) */}
+            {highlightNum && answersObj[highlightNum] && (
+              <div className="shrink-0 bg-white border border-amber-300 rounded-xl p-2.5 shadow-sm flex flex-wrap items-center justify-between gap-2 animate-in fade-in slide-in-from-bottom-2 duration-150">
+                <div className="flex items-center gap-2">
+                  <span className="w-7 h-7 rounded-lg bg-amber-500 text-white font-mono font-black text-sm flex items-center justify-center shadow-2xs">
+                    {answersObj[highlightNum]}
+                  </span>
+                  <div>
+                    <div className="text-xs font-bold text-[#262320] flex items-center gap-1">
+                      <span>Câu #{highlightNum}: Đáp án là ({answersObj[highlightNum]})</span>
                     </div>
-
-                    {/* Question items */}
-                    <div className="space-y-1">
-                      {block.map((num) => {
-                        const ans = answersObj[num] || '-';
-                        const isHighlighted = highlightNum === num;
-                        const style = answerPillColors[ans] || { bg: 'bg-gray-400', text: 'text-white' };
-
-                        return (
-                          <div
-                            key={num}
-                            id={`ans-item-${num}`}
-                            onClick={() => setHighlightNum(num)}
-                            className={`flex items-center justify-between px-2.5 py-1.5 rounded-xl border transition-all cursor-pointer select-none ${
-                              isHighlighted
-                                ? 'border-emerald-500 bg-emerald-50/90 shadow-2xs ring-2 ring-emerald-400 font-bold'
-                                : 'border-[#F2ECE3] bg-[#FAF8F5] hover:bg-white hover:border-emerald-200'
-                            }`}
-                          >
-                            <span className="font-mono text-xs font-bold text-[#5C5247]">
-                              #{num}
-                            </span>
-
-                            {/* 4 Choices with correct answer prominently highlighted */}
-                            <div className="flex items-center gap-1">
-                              {(['A', 'B', 'C', 'D'] as const).map((choice) => {
-                                const isSelected = ans === choice;
-                                return (
-                                  <span
-                                    key={choice}
-                                    className={`w-6 h-6 rounded-lg text-xs font-black flex items-center justify-center transition ${
-                                      isSelected
-                                        ? `${style.bg} ${style.text} shadow-xs scale-105`
-                                        : 'text-[#C8BFB5] font-medium'
-                                    }`}
-                                  >
-                                    {choice}
-                                  </span>
-                                );
-                              })}
-                            </div>
-                          </div>
-                        );
-                      })}
+                    <div className="text-[11px] text-[#7A7065]">
+                      {getQuestionPartName(highlightNum)}
                     </div>
                   </div>
-                );
-              });
-            })()}
+                </div>
+
+                <button
+                  onClick={() => handleJumpToPractice(highlightNum)}
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-2xs transition cursor-pointer"
+                >
+                  <span>Mở luyện câu này</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </button>
+              </div>
+            )}
+          </div>
+        ) : (
+          /* Cards View */
+          <div
+            ref={containerRef}
+            className="flex-1 overflow-y-auto p-2 sm:p-3 min-h-0 space-y-4"
+          >
+            {filteredNums.length === 0 ? (
+              <div className="p-8 text-center text-[#8C8276] text-xs">
+                Không tìm thấy câu nào phù hợp với bộ lọc.
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3">
+                {(() => {
+                  const blocks: number[][] = [];
+                  for (let i = 0; i < filteredNums.length; i += 5) {
+                    blocks.push(filteredNums.slice(i, i + 5));
+                  }
+
+                  return blocks.map((block, bIdx) => {
+                    const startNum = block[0];
+                    const endNum = block[block.length - 1];
+                    const isListening = startNum <= 100;
+
+                    return (
+                      <div
+                        key={bIdx}
+                        className="bg-white rounded-2xl border border-[#E8DFD3] p-3 shadow-2xs flex flex-col gap-2 hover:border-emerald-300 transition"
+                      >
+                        <div className="flex items-center justify-between text-[11px] font-bold pb-1.5 border-b border-[#F2ECE3]">
+                          <span className="text-[#5C5247]">
+                            Câu {startNum} - {endNum}
+                          </span>
+                          <span
+                            className={`text-[9.5px] font-mono px-1.5 py-0.2 rounded font-bold ${
+                              isListening ? 'bg-sky-50 text-sky-700' : 'bg-amber-50 text-amber-800'
+                            }`}
+                          >
+                            {isListening ? 'Listening' : 'Reading'}
+                          </span>
+                        </div>
+
+                        <div className="space-y-1">
+                          {block.map((num) => {
+                            const ans = answersObj[num] || '-';
+                            const isHighlighted = highlightNum === num;
+                            const style = pillColors[ans] || {
+                              bg: 'bg-gray-400',
+                              text: 'text-white',
+                              badge: 'bg-gray-400 text-white',
+                            };
+
+                            return (
+                              <div
+                                key={num}
+                                id={`ans-item-${num}`}
+                                onClick={() => setHighlightNum(num)}
+                                className={`flex items-center justify-between px-2.5 py-1.5 rounded-xl border transition-all cursor-pointer select-none ${
+                                  isHighlighted
+                                    ? 'border-emerald-500 bg-emerald-50/90 shadow-2xs ring-2 ring-emerald-400 font-bold'
+                                    : 'border-[#F2ECE3] bg-[#FAF8F5] hover:bg-white hover:border-emerald-200'
+                                }`}
+                              >
+                                <span className="font-mono text-xs font-bold text-[#5C5247]">
+                                  #{num}
+                                </span>
+
+                                <div className="flex items-center gap-1">
+                                  {(['A', 'B', 'C', 'D'] as const).map((choice) => {
+                                    const isSelected = ans === choice;
+                                    return (
+                                      <span
+                                        key={choice}
+                                        className={`w-6 h-6 rounded-lg text-xs font-black flex items-center justify-center transition ${
+                                          isSelected
+                                            ? `${style.badge} shadow-xs scale-105`
+                                            : 'text-[#C8BFB5] font-medium'
+                                        }`}
+                                      >
+                                        {choice}
+                                      </span>
+                                    );
+                                  })}
+                                </div>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    );
+                  });
+                })()}
+              </div>
+            )}
           </div>
         )}
       </div>

@@ -461,8 +461,26 @@ export const ListeningTab: React.FC = () => {
                     {currentQ.category}
                   </span>
                 </div>
-                <div className="text-xs font-mono text-[#8A8278]">
-                  {safeIdx + 1} / {filteredQuestions.length}
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => {
+                      const bookName = selectedTest === 0 ? 'Docs 2 (Listening Test 1)' : 'Hacker 2 (Full 200 câu)';
+                      const testVal = selectedTest === 0 ? 'Test 1' : String(selectedTest === 'all' ? 1 : selectedTest);
+                      openFullAnswers({
+                        book: bookName,
+                        test: testVal,
+                        questionNum: currentQ.num,
+                      });
+                    }}
+                    className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 text-emerald-800 text-xs font-bold transition cursor-pointer shadow-2xs"
+                    title="Tra cứu bảng đáp án 1 màn hình của bộ đề này"
+                  >
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                    <span>Tra Đáp Án</span>
+                  </button>
+                  <div className="text-xs font-mono text-[#8A8278]">
+                    {safeIdx + 1} / {filteredQuestions.length}
+                  </div>
                 </div>
               </div>
 

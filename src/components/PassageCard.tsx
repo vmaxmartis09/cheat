@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { useQuizStore } from '../store/useQuizStore';
 import { Question, AnswerChoice } from '../types';
 import {
@@ -8,8 +8,6 @@ import {
   Compass,
   Lightbulb,
   ArrowRight,
-  Eye,
-  EyeOff,
   Layers,
   Maximize2,
   Minimize2,
@@ -39,10 +37,10 @@ export const PassageCard: React.FC = () => {
   const currentQ = questions[currentIndex];
 
   // Reading view controls
-  const [showTranslation, setShowTranslation] = useState(false);
+  const [transMode, setTransMode] = useState<'en' | 'vi' | 'bilingual'>('en');
   const [fontSize, setFontSize] = useState<'sm' | 'base' | 'lg'>('base');
   const [isFullScreen, setIsFullScreen] = useState(false);
-  const [highlightClues, setHighlightClues] = useState(false);
+  const [highlightClues, setHighlightClues] = useState(true);
   const [mobileTab, setMobileTab] = useState<'both' | 'passage' | 'questions'>('both');
   const [activeQuestionId, setActiveQuestionId] = useState<string | null>(null);
 
@@ -98,68 +96,99 @@ export const PassageCard: React.FC = () => {
     lg: 'text-[17px] sm:text-[18.5px] leading-loose',
   };
 
-  // Passage text to display
-  const rawContent = showTranslation && passageInfo.vietnameseTranslation
-    ? passageInfo.vietnameseTranslation
-    : passageInfo.content;
+  // Build clue map linking quotes to questions
+  const clueMap = useMemo(() => {
+    const list: { quote: string; question: Question }[] = [];
+    passageQuestions.forEach((q) => {
+      if (q.clue?.clueQuote && q.clue.clueQuote.trim().length > 3) {
+        list.push({ quote: q.clue.clueQuote.trim(), question: q });
+      }
+    });
+    return list;
+  }, [passageQuestions]);
 
   // Render text with clue highlighting if enabled
   const renderPassageText = () => {
-    if (!highlightClues || showTranslation) {
-      return (
-        <div className={`text-[#26211C] whitespace-pre-line font-sans select-text ${fontSizeClasses[fontSize]}`}>
-          {rawContent}
-        </div>
-      );
-    }
+    const textToShow = transMode === 'vi' && passageInfo.vietnameseTranslation
+      ? passageInfo.vietnameseTranslation
+      : passageInfo.content;
 
-    // Collect clue quotes from all questions in this passage
-    const clueQuotes = passageQuestions
-      .map((q) => q.clue?.clueQuote)
-      .filter((quote): quote is string => Boolean(quote && quote.trim().length > 3));
-
-    if (clueQuotes.length === 0) {
+    if (!highlightClues || transMode === 'vi' || clueMap.length === 0) {
       return (
-        <div className={`text-[#26211C] whitespace-pre-line font-sans select-text ${fontSizeClasses[fontSize]}`}>
-          {rawContent}
+        <div className="space-y-4">
+          <div className={`text-[#26211C] whitespace-pre-line font-sans select-text ${fontSizeClasses[fontSize]}`}>
+            {textToShow}
+          </div>
+
+          {transMode === 'bilingual' && passageInfo.vietnameseTranslation && (
+            <div className="mt-5 p-4 rounded-xl bg-amber-50/70 border border-amber-200/90 shadow-2xs space-y-2">
+              <div className="flex items-center gap-1.5 text-xs font-bold text-amber-900 pb-1.5 border-b border-amber-200/80">
+                <span>🇻🇳 BẢN DỊCH TIẾNG VIỆT ĐỐI CHIẾU</span>
+              </div>
+              <div className={`text-[#382F24] whitespace-pre-line font-sans ${fontSizeClasses[fontSize]}`}>
+                {passageInfo.vietnameseTranslation}
+              </div>
+            </div>
+          )}
         </div>
       );
     }
 
     // Highlight clue quotes safely
-    let renderedContent: React.ReactNode = rawContent;
+    let renderedContent: React.ReactNode = textToShow;
     try {
-      // Escape regex special chars
-      const escapedQuotes = clueQuotes.map((q) =>
-        q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+      const escapedQuotes = clueMap.map((item: { quote: string; question: Question }) =>
+        item.quote.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
       );
       const regex = new RegExp(`(${escapedQuotes.join('|')})`, 'gi');
-      const parts = rawContent.split(regex);
+      const parts = textToShow.split(regex);
 
       renderedContent = parts.map((part, i) => {
-        const isMatch = clueQuotes.some(
-          (quote) => quote.toLowerCase() === part.toLowerCase()
+        const match = clueMap.find(
+          (item: { quote: string; question: Question }) => item.quote.toLowerCase() === part.toLowerCase()
         );
-        if (isMatch) {
+        if (match) {
+          const isTargeted = activeQuestionId === match.question.id;
           return (
             <mark
               key={i}
-              className="bg-amber-200/80 text-amber-950 px-1 py-0.5 rounded font-semibold border-b-2 border-amber-400 shadow-2xs"
-              title="Manh mối trả lời câu hỏi"
+              onClick={() => scrollToQuestion(match.question.num, match.question.id)}
+              className={`px-1.5 py-0.5 rounded font-semibold border-b-2 shadow-2xs cursor-pointer inline-flex items-baseline gap-1 transition-all ${
+                isTargeted
+                  ? 'bg-amber-300 text-amber-950 border-amber-600 ring-2 ring-amber-400 font-bold scale-[1.01]'
+                  : 'bg-amber-200/85 hover:bg-amber-300 text-amber-950 border-amber-400'
+              }`}
+              title={`Manh mối câu #${match.question.num}. Bấm để xem câu hỏi`}
             >
-              {part}
+              <span>{part}</span>
+              <span className="text-[9.5px] font-mono font-bold bg-amber-600 text-white px-1 py-0.2 rounded shadow-2xs">
+                #{match.question.num}
+              </span>
             </mark>
           );
         }
         return part;
       });
     } catch {
-      renderedContent = rawContent;
+      renderedContent = textToShow;
     }
 
     return (
-      <div className={`text-[#26211C] whitespace-pre-line font-sans select-text ${fontSizeClasses[fontSize]}`}>
-        {renderedContent}
+      <div className="space-y-4">
+        <div className={`text-[#26211C] whitespace-pre-line font-sans select-text ${fontSizeClasses[fontSize]}`}>
+          {renderedContent}
+        </div>
+
+        {transMode === 'bilingual' && passageInfo.vietnameseTranslation && (
+          <div className="mt-5 p-4 rounded-xl bg-amber-50/70 border border-amber-200/90 shadow-2xs space-y-2">
+            <div className="flex items-center gap-1.5 text-xs font-bold text-amber-900 pb-1.5 border-b border-amber-200/80">
+              <span>🇻🇳 BẢN DỊCH TIẾNG VIỆT ĐỐI CHIẾU</span>
+            </div>
+            <div className={`text-[#382F24] whitespace-pre-line font-sans ${fontSizeClasses[fontSize]}`}>
+              {passageInfo.vietnameseTranslation}
+            </div>
+          </div>
+        )}
       </div>
     );
   };
@@ -278,18 +307,36 @@ export const PassageCard: React.FC = () => {
                 <span className="hidden sm:inline">Manh mối</span>
               </button>
 
-              {/* Translation Toggle */}
-              <button
-                onClick={() => setShowTranslation(!showTranslation)}
-                className={`flex items-center gap-1 text-xs px-2.5 py-1 rounded-lg font-semibold transition cursor-pointer shadow-2xs ${
-                  showTranslation
-                    ? 'bg-amber-600 text-white'
-                    : 'bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200/90'
-                }`}
-              >
-                {showTranslation ? <EyeOff className="w-3 h-3" /> : <Eye className="w-3 h-3" />}
-                <span>{showTranslation ? 'Bản gốc' : 'Dịch Việt'}</span>
-              </button>
+              {/* Translation 3-Way Mode Selector */}
+              <div className="flex items-center bg-[#F2ECE3] rounded-lg p-0.5 text-xs font-semibold">
+                <button
+                  onClick={() => setTransMode('en')}
+                  className={`px-2 py-0.5 rounded transition cursor-pointer text-[11px] ${
+                    transMode === 'en' ? 'bg-white text-amber-900 font-bold shadow-2xs' : 'text-[#7A7065]'
+                  }`}
+                  title="Hiển thị văn bản tiếng Anh gốc"
+                >
+                  Gốc (EN)
+                </button>
+                <button
+                  onClick={() => setTransMode('vi')}
+                  className={`px-2 py-0.5 rounded transition cursor-pointer text-[11px] ${
+                    transMode === 'vi' ? 'bg-white text-amber-900 font-bold shadow-2xs' : 'text-[#7A7065]'
+                  }`}
+                  title="Hiển thị bản dịch tiếng Việt"
+                >
+                  Dịch (VI)
+                </button>
+                <button
+                  onClick={() => setTransMode('bilingual')}
+                  className={`px-2 py-0.5 rounded transition cursor-pointer text-[11px] ${
+                    transMode === 'bilingual' ? 'bg-amber-600 text-white font-bold shadow-2xs' : 'text-[#7A7065]'
+                  }`}
+                  title="Xem cả tiếng Anh và bản dịch song ngữ"
+                >
+                  Song ngữ
+                </button>
+              </div>
 
               {/* Full Answer Lookup */}
               <button
@@ -320,7 +367,7 @@ export const PassageCard: React.FC = () => {
             ref={passageContainerRef}
             className="flex-1 overflow-y-auto p-4 sm:p-6 bg-[#FFFDF9] min-h-0 space-y-3"
           >
-            {showTranslation && (
+            {transMode === 'vi' && (
               <div className="p-2 rounded-lg bg-amber-50 border border-amber-200 text-amber-900 text-xs font-semibold flex items-center gap-1.5">
                 <Lightbulb className="w-4 h-4 text-amber-700 shrink-0" />
                 <span>Đang hiển thị bản dịch tiếng Việt để bạn đối chiếu nội dung.</span>
@@ -678,14 +725,33 @@ export const PassageCard: React.FC = () => {
                   </button>
                 </div>
 
-                {/* Translation button */}
-                <button
-                  onClick={() => setShowTranslation(!showTranslation)}
-                  className="flex items-center gap-1 text-xs px-3 py-1.5 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200/90 font-semibold transition cursor-pointer"
-                >
-                  {showTranslation ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
-                  <span>{showTranslation ? 'Bản gốc' : 'Dịch Việt'}</span>
-                </button>
+                {/* Translation 3-Way Mode Selector */}
+                <div className="flex items-center bg-[#F2ECE3] rounded-lg p-0.5 text-xs font-semibold">
+                  <button
+                    onClick={() => setTransMode('en')}
+                    className={`px-2 py-1 rounded transition cursor-pointer text-xs ${
+                      transMode === 'en' ? 'bg-white text-amber-900 font-bold shadow-2xs' : 'text-[#7A7065]'
+                    }`}
+                  >
+                    Gốc (EN)
+                  </button>
+                  <button
+                    onClick={() => setTransMode('vi')}
+                    className={`px-2 py-1 rounded transition cursor-pointer text-xs ${
+                      transMode === 'vi' ? 'bg-white text-amber-900 font-bold shadow-2xs' : 'text-[#7A7065]'
+                    }`}
+                  >
+                    Dịch (VI)
+                  </button>
+                  <button
+                    onClick={() => setTransMode('bilingual')}
+                    className={`px-2 py-1 rounded transition cursor-pointer text-xs ${
+                      transMode === 'bilingual' ? 'bg-amber-600 text-white font-bold shadow-2xs' : 'text-[#7A7065]'
+                    }`}
+                  >
+                    Song ngữ
+                  </button>
+                </div>
 
                 {/* Close Fullscreen */}
                 <button

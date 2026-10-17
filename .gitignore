@@ -24,3 +24,9 @@ public/audio/
 *.mp3
 *.m4a
 *.wav
+
+# Unignore verified JSON data files
+!src/data/**/*.json
+!src/data/json/**/*.json
+!downloads/**/*.json
+!scripts/**/*.json

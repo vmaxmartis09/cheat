@@ -92,22 +92,22 @@ export const ListeningTab: React.FC = () => {
     }
     if (typeof selectedTest === 'string' && selectedTest.startsWith('h3_')) {
       const t = selectedTest.replace('h3_', '');
-      openFullAnswers({ book: 'Hacker 3 (RC 101-200)', test: t, questionNum: currentQ?.num || 1 });
+      openFullAnswers({ book: 'Hacker 3 (Full 200 câu)', test: t, questionNum: currentQ?.num || 1 });
       return;
     }
     if (typeof selectedTest === 'string' && selectedTest.startsWith('h1_')) {
       const t = selectedTest.replace('h1_', '');
-      openFullAnswers({ book: 'Hacker 1 (RC 101-200)', test: t, questionNum: currentQ?.num || 1 });
+      openFullAnswers({ book: 'Hacker 1 (Full 200 câu)', test: t, questionNum: currentQ?.num || 1 });
       return;
     }
     if (typeof selectedTest === 'string' && selectedTest.startsWith('ybm2025_')) {
       const t = selectedTest.replace('ybm2025_', '');
-      openFullAnswers({ book: 'YBM 2025 (RC 101-200)', test: t, questionNum: currentQ?.num || 1 });
+      openFullAnswers({ book: 'YBM 2025 (Full 200 câu)', test: t, questionNum: currentQ?.num || 1 });
       return;
     }
     if (typeof selectedTest === 'string' && selectedTest.startsWith('ybm1000_')) {
       const t = selectedTest.replace('ybm1000_', '');
-      openFullAnswers({ book: 'YBM 1000 Vol 1 (RC 101-200)', test: t, questionNum: currentQ?.num || 1 });
+      openFullAnswers({ book: 'YBM 1000 Vol 1 (Full 200 câu)', test: t, questionNum: currentQ?.num || 1 });
       return;
     }
     if (typeof selectedTest === 'number' && selectedTest >= 1 && selectedTest <= 10) {

@@ -359,11 +359,13 @@ export const ImageSearchModal: React.FC<ImageSearchModalProps> = ({
     if (doc.test) {
       useQuizStore.getState().openFullAnswers({
         book: doc.book.includes('YBM 1000')
-          ? 'YBM 1000 Vol 1 (RC 101-200)'
+          ? 'YBM 1000 Vol 1 (Full 200 câu)'
           : doc.book.includes('YBM')
-          ? 'YBM 2025 (RC 101-200)'
+          ? 'YBM 2025 (Full 200 câu)'
           : doc.book.includes('Hacker 3')
-          ? 'Hacker 3 (RC 101-200)'
+          ? 'Hacker 3 (Full 200 câu)'
+          : doc.book.includes('Hacker 1')
+          ? 'Hacker 1 (Full 200 câu)'
           : 'Hacker 2 (Full 200 câu)',
         test: String(doc.test),
       });

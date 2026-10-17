@@ -29,9 +29,9 @@ const STORAGE_KEY = 'toeic_recent_exams';
 
 export const DEFAULT_RECENT_EXAMS: RecentExamItem[] = [
   { book: 'Hacker 2 (Full 200 câu)', test: '1', label: 'Hacker 2 · Đề 1', timestamp: 1 },
-  { book: 'Hacker 2 (Full 200 câu)', test: '2', label: 'Hacker 2 · Đề 2', timestamp: 2 },
-  { book: 'Hacker 3 (RC 101-200)', test: '1', label: 'Hacker 3 · Đề 1', timestamp: 3 },
-  { book: 'Hacker 1 (RC 101-200)', test: '1', label: 'Hacker 1 · Đề 1', timestamp: 4 },
+  { book: 'Hacker 1 (Full 200 câu)', test: '1', label: 'Hacker 1 · Đề 1', timestamp: 2 },
+  { book: 'Hacker 3 (Full 200 câu)', test: '1', label: 'Hacker 3 · Đề 1', timestamp: 3 },
+  { book: 'YBM 2025 (Full 200 câu)', test: '1', label: 'YBM 2025 · Đề 1', timestamp: 4 },
 ];
 
 export function getRecentExams(): RecentExamItem[] {

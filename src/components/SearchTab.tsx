@@ -1612,10 +1612,10 @@ export const SearchTab: React.FC = () => {
       // B. Top popular books to compare same question number
       const popularBooks = [
         { book: 'Hacker 2 (Full 200 câu)', test: '1', name: 'Hacker 2' },
-        { book: 'Hacker 2 (Full 200 câu)', test: '2', name: 'Hacker 2' },
-        { book: 'Hacker 3 (RC 101-200)', test: '1', name: 'Hacker 3' },
-        { book: 'Hacker 1 (RC 101-200)', test: '1', name: 'Hacker 1' },
-        { book: 'Docs 3 (TMA Online)', test: 'Đề TMA Online', name: 'Docs 3 TMA' },
+        { book: 'Hacker 1 (Full 200 câu)', test: '1', name: 'Hacker 1' },
+        { book: 'Hacker 3 (Full 200 câu)', test: '1', name: 'Hacker 3' },
+        { book: 'YBM 2025 (Full 200 câu)', test: '1', name: 'YBM 2025' },
+        { book: 'YBM 1000 Vol 1 (Full 200 câu)', test: '1', name: 'YBM Vol 1' },
       ];
 
       for (const pb of popularBooks) {

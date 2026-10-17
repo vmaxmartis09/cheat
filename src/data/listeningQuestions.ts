@@ -2063,6 +2063,13 @@ export const getListeningQuestionsByPart = (part: number | 'all' | 'images', tes
 };
 
 export const getListeningQuestionsByTestAndPart = (test: number | string, part: number | 'all' | 'images'): ListeningQuestion[] => {
+  if (test === 'all') {
+    const all = getAllListeningQuestions();
+    if (part === 'all') return all;
+    if (part === 'images') return all.filter((q) => Boolean(q.imageUrl));
+    return all.filter((q) => q.part === part);
+  }
+
   if (test === 0 || test === 'trial') {
     if (part === 'all') return listeningQuestions;
     if (part === 'images') return listeningQuestions.filter((q) => Boolean(q.imageUrl));
@@ -2084,10 +2091,26 @@ export const getListeningQuestionsByTestAndPart = (test: number | string, part: 
     if (part === 'images') return list.filter((q) => Boolean(q.imageUrl));
     return list.filter((q) => q.part === part);
   }
+
+  if (typeof test === 'string' && test.startsWith('ybm2025_')) {
+    const tNum = parseInt(test.replace('ybm2025_', ''), 10);
+    const list = hackerExtraListeningQuestions.filter((q) => q.book === 'YBM 2025' && q.test === tNum);
+    if (part === 'all') return list;
+    if (part === 'images') return list.filter((q) => Boolean(q.imageUrl));
+    return list.filter((q) => q.part === part);
+  }
+
+  if (typeof test === 'string' && test.startsWith('ybm1000_')) {
+    const tNum = parseInt(test.replace('ybm1000_', ''), 10);
+    const list = hackerExtraListeningQuestions.filter((q) => q.book === 'YBM 1000 Vol 1' && q.test === tNum);
+    if (part === 'all') return list;
+    if (part === 'images') return list.filter((q) => Boolean(q.imageUrl));
+    return list.filter((q) => q.part === part);
+  }
   
   const pool = hacker2AllQuestions as any[];
   return pool.filter((q: any) => {
-    const matchTest = test === 'all' || q.test === test;
+    const matchTest = q.test === test;
     if (!matchTest) return false;
     if (part === 'all') return true;
     if (part === 'images') return Boolean(q.imageUrl);

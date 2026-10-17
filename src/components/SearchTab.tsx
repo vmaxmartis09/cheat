@@ -1558,7 +1558,6 @@ export const SearchTab: React.FC = () => {
 
   // Live autocomplete suggestions for instant answer lookup
   const _liveSuggestions = useMemo(() => {
-    void _liveSuggestions;
     const raw = query.trim();
     if (!raw) return [];
     const numMatch = raw.match(/^(?:câu|cau|#|q)?\s*(\d{1,3})$/i);
@@ -1693,6 +1692,7 @@ export const SearchTab: React.FC = () => {
 
     return [];
   }, [query, selectedBook, selectedTestNum, results]);
+  void _liveSuggestions;
 
   // Breakdown by parts for filter pills
   const partCounts = useMemo(() => {
@@ -2209,21 +2209,12 @@ export const SearchTab: React.FC = () => {
         </div>
 
         {hasResults && (
-          <div className="mt-2.5 space-y-2 px-1">
-            <div className="flex flex-wrap items-center justify-between gap-1.5 text-[11px] text-[#8C8276]">
-              <span>
-                Tìm thấy <span className="font-extrabold text-amber-700">{results.length}</span> câu hỏi (Toàn bộ 5.666 câu LC + RC)
-              </span>
-              <span className="text-[10px] text-[#B0A89E]">
-                Hiển thị <span className="font-bold text-[#5C554E]">{Math.min(visibleLimit, filteredResults.length)}</span> / {filteredResults.length} câu
-              </span>
-            </div>
-
-            {/* Kind & Part Filters */}
-            <div className="flex flex-wrap items-center gap-1.5">
+          <div className="mt-1.5 sm:mt-2.5 space-y-1.5 px-1">
+            {/* Kind & Part Filters (Single-line horizontal scroll on mobile) */}
+            <div className="flex items-center gap-1.5 overflow-x-auto scrollbar-none py-0.5">
               <button
                 onClick={() => setSearchKindFilter('all')}
-                className={`px-2.5 py-1 rounded-xl text-xs font-bold transition cursor-pointer ${
+                className={`px-2.5 py-1 rounded-xl text-xs font-bold transition cursor-pointer shrink-0 ${
                   searchKindFilter === 'all'
                     ? 'bg-amber-500 text-white shadow-2xs'
                     : 'bg-[#F2ECE3] text-[#6B635B] hover:bg-[#EAE2D7]'
@@ -2233,7 +2224,7 @@ export const SearchTab: React.FC = () => {
               </button>
               <button
                 onClick={() => setSearchKindFilter('listening')}
-                className={`flex items-center gap-1 px-2.5 py-1 rounded-xl text-xs font-bold transition cursor-pointer ${
+                className={`flex items-center gap-1 px-2.5 py-1 rounded-xl text-xs font-bold transition cursor-pointer shrink-0 ${
                   searchKindFilter === 'listening'
                     ? 'bg-sky-600 text-white shadow-2xs'
                     : 'bg-sky-50 text-sky-800 border border-sky-200 hover:bg-sky-100'
@@ -2244,7 +2235,7 @@ export const SearchTab: React.FC = () => {
               </button>
               <button
                 onClick={() => setSearchKindFilter('reading')}
-                className={`flex items-center gap-1 px-2.5 py-1 rounded-xl text-xs font-bold transition cursor-pointer ${
+                className={`flex items-center gap-1 px-2.5 py-1 rounded-xl text-xs font-bold transition cursor-pointer shrink-0 ${
                   searchKindFilter === 'reading'
                     ? 'bg-amber-600 text-white shadow-2xs'
                     : 'bg-amber-50 text-amber-900 border border-amber-200 hover:bg-amber-100'
@@ -2254,11 +2245,11 @@ export const SearchTab: React.FC = () => {
                 <span>Đọc ({rcCount})</span>
               </button>
 
-              <span className="h-4 w-px bg-[#DCD3C7] mx-0.5" />
+              <span className="h-4 w-px bg-[#DCD3C7] mx-0.5 shrink-0" />
 
               <button
                 onClick={() => setSearchPartFilter('all')}
-                className={`px-2 py-0.5 rounded-lg text-[11px] font-semibold transition cursor-pointer ${
+                className={`px-2 py-0.5 rounded-lg text-[11px] font-semibold transition cursor-pointer shrink-0 ${
                   searchPartFilter === 'all'
                     ? 'bg-[#262320] text-white'
                     : 'bg-white border border-[#DCD3C7] text-[#6B635B] hover:bg-gray-50'
@@ -2274,7 +2265,7 @@ export const SearchTab: React.FC = () => {
                   <button
                     key={p}
                     onClick={() => setSearchPartFilter(searchPartFilter === p ? 'all' : p)}
-                    className={`px-2 py-0.5 rounded-lg text-[11px] font-semibold transition cursor-pointer ${
+                    className={`px-2 py-0.5 rounded-lg text-[11px] font-semibold transition cursor-pointer shrink-0 ${
                       searchPartFilter === p
                         ? isLc ? 'bg-sky-600 text-white' : 'bg-amber-600 text-white'
                         : isLc

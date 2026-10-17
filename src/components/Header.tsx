@@ -43,17 +43,19 @@ export const Header: React.FC<HeaderProps> = ({
     syncMethod,
   } = useQuizStore();
 
-  const currentQ = questions[currentIndex];
+  const safeQuestions = Array.isArray(questions) ? questions : [];
+  const safeMistakeIds = Array.isArray(savedMistakeIds) ? savedMistakeIds : [];
+  const currentQ = safeQuestions[currentIndex];
   const isPassageView = activeTab === 'practice' && !isFinished && Boolean(currentQ?.isPassageQuestion && currentQ?.passageInfo);
 
   return (
-    <header className="px-3.5 py-2 border-b border-[#EFE8DE] bg-[#FAF7F2]/95 backdrop-blur-md shrink-0">
-      <div className={`flex items-center justify-between gap-1.5 mx-auto transition-all duration-200 ${
+    <header className="px-2.5 py-1 sm:px-3.5 sm:py-2 border-b border-[#EFE8DE] bg-[#FAF7F2]/95 backdrop-blur-md shrink-0">
+      <div className={`flex items-center justify-between gap-1 sm:gap-1.5 mx-auto transition-all duration-200 ${
         isPassageView ? 'max-w-7xl' : 'max-w-2xl'
       }`}>
         {/* Brand & Source Selector */}
-        <div className="flex items-center gap-1.5">
-          <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center text-white font-black text-xs shadow-2xs">
+        <div className="flex items-center gap-1.5 min-w-0">
+          <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center text-white font-black text-[11px] sm:text-xs shadow-2xs shrink-0">
             T
           </div>
           {activeTab === 'practice' ? (
@@ -64,82 +66,13 @@ export const Header: React.FC<HeaderProps> = ({
                 onChange={(e) => setSourceFilter(e.target.value)}
                 className="appearance-none bg-white border border-[#E8DFD3] text-[#262320] text-xs font-semibold rounded-lg pl-2 pr-6 py-1 focus:outline-none focus:border-amber-500 cursor-pointer shadow-2xs max-w-[270px] truncate"
               >
-                <optgroup label="⭐ GIAI ĐOẠN 1: DOCS 1 (BẮT BUỘC HỌC THUỘC)">
-                  <option value="stage_1">⭐ Trọn bộ Docs 1 (151 câu Bắt Buộc)</option>
-                  <option value="ToIce 2">Docs 1: ToIce 2 (#101-165)</option>
-                  <option value="Test 2 Full">Docs 1: Test 2 Full 100 câu (#101-200)</option>
-                  <option value="Test 2 Part 5">Docs 1: Test 2 Part 5 (#101-140)</option>
-                  <option value="Part 6 Đọc Điền">Docs 1: Part 6 Đọc Điền (15 câu)</option>
-                  <option value="Part 7 Đoạn Văn">Docs 1: Part 7 Đọc Hiểu (56 câu)</option>
+                <optgroup label="📊 THỐNG KÊ & ÔN THEO 3 CỤM ĐỀ">
+                  <option value="cluster_hacker">🔥 Cụm 1: Toàn bộ Hacker 1, 2, 3 (30 Đề • 3,000 câu RC)</option>
+                  <option value="cluster_ybm">📘 Cụm 2: Toàn bộ YBM 2025 & Vol 1 (20 Đề • 1,100 câu RC)</option>
+                  <option value="cluster_other">📂 Cụm 3: Toàn bộ Đề Lẻ Docs 1, 2, 3, 4 (566 câu RC)</option>
+                  <option value="all_both_stages">📚 Tất cả Kho Đề (4,566 câu Reading)</option>
                 </optgroup>
-                <optgroup label="🚀 GIAI ĐOẠN 2: DOCS 2 (TRỌN BỘ 234 CÂU READING)">
-                  <option value="stage_2">🚀 Trọn bộ Docs 2 (Tất cả 234 câu Reading)</option>
-                  <option value="Docs 2 - Đề 1 Full">Docs 2: Trọn bộ Đề 1 (Trial Test - 100 câu)</option>
-                  <option value="Docs 2 - Đề 2 YBM Full">Docs 2: Trọn bộ Đề 2 (YBM Test 1 - 100 câu)</option>
-                  <option value="Docs 2 - Chuyên đề Tips">Docs 2: Chuyên đề & Rèn Tips (34 câu)</option>
-                  <option value="Docs 2 - Part 5 All">Docs 2: Toàn bộ Part 5 (66 câu)</option>
-                  <option value="Docs 2 - Part 6 All">Docs 2: Toàn bộ Part 6 (44 câu)</option>
-                </optgroup>
-                <optgroup label="🔥 GIAI ĐOẠN 3: DOCS 3 (ĐỀ THI TMA ONLINE & HACKERS)">
-                  <option value="stage_3">🔥 Trọn bộ Docs 3 (Tất cả 81 câu Reading)</option>
-                  <option value="Docs 3 - Đề TMA Online Full">Docs 3: Đề TMA Online Full (70 câu)</option>
-                  <option value="Docs 3 - Đề TMA Online Part 5">Docs 3: TMA Online Part 5 (28 câu)</option>
-                  <option value="Docs 3 - Đề TMA Online Part 6">Docs 3: TMA Online Part 6 (16 câu)</option>
-                  <option value="Docs 3 - Đề TMA Online Part 7">Docs 3: TMA Online Part 7 (26 câu)</option>
-                  <option value="Docs 3 - Hackers Reading">Docs 3: Hackers Reading (11 câu)</option>
-                </optgroup>
-                <optgroup label="💎 GIAI ĐOẠN 4: DOCS 4 (HACKER TOEIC 3 & 2)">
-                  <option value="stage_4">💎 Trọn bộ Docs 4 (Hacker 3 Test 1 - 100 câu)</option>
-                  <option value="Docs 4 - Hacker 3 Test 1 Full">Docs 4: Hacker 3 Test 1 Full (100 câu)</option>
-                  <option value="Docs 4 - Hacker 3 Test 1 Part 5">Docs 4: Hacker 3 Test 1 Part 5 (30 câu)</option>
-                  <option value="Docs 4 - Hacker 3 Test 1 Part 6">Docs 4: Hacker 3 Test 1 Part 6 (16 câu)</option>
-                  <option value="Docs 4 - Hacker 3 Test 1 Part 7">Docs 4: Hacker 3 Test 1 Part 7 (54 câu)</option>
-                </optgroup>
-                <optgroup label="🌟 GIAI ĐOẠN 5: TRỌN BỘ DOCS 5 (2,000 CÂU READING)">
-                  <option value="stage_5">🌟 Trọn bộ Docs 5 (Hacker 2 & YBM 1 - 2,000 câu)</option>
-                  <option value="Docs 5 - Hacker 2 All">📗 Hacker 2: Toàn bộ 10 Tests (1,000 câu)</option>
-                  <option value="Docs 5 - YBM 1000 All">📘 YBM 1000 Vol 1: Toàn bộ 10 Tests (1,000 câu)</option>
-                  <option value="Docs 5 - Part 5 All">Docs 5: Toàn bộ Part 5 (600 câu)</option>
-                  <option value="Docs 5 - Part 6 All">Docs 5: Toàn bộ Part 6 (320 câu)</option>
-                  <option value="Docs 5 - Part 7 All">Docs 5: Toàn bộ Part 7 (1,080 câu)</option>
-                  <option value="Docs 5 - Hacker 2 Test 1 Full">Hacker 2: Test 1 Full (100 câu)</option>
-                  <option value="Docs 5 - Hacker 2 Test 2 Full">Hacker 2: Test 2 Full (100 câu)</option>
-                  <option value="Docs 5 - Hacker 2 Test 3 Full">Hacker 2: Test 3 Full (100 câu)</option>
-                  <option value="Docs 5 - Hacker 2 Test 4 Full">Hacker 2: Test 4 Full (100 câu)</option>
-                  <option value="Docs 5 - Hacker 2 Test 5 Full">Hacker 2: Test 5 Full (100 câu)</option>
-                  <option value="Docs 5 - Hacker 2 Test 6 Full">Hacker 2: Test 6 Full (100 câu)</option>
-                  <option value="Docs 5 - Hacker 2 Test 7 Full">Hacker 2: Test 7 Full (100 câu)</option>
-                  <option value="Docs 5 - Hacker 2 Test 8 Full">Hacker 2: Test 8 Full (100 câu)</option>
-                  <option value="Docs 5 - Hacker 2 Test 9 Full">Hacker 2: Test 9 Full (100 câu)</option>
-                  <option value="Docs 5 - Hacker 2 Test 10 Full">Hacker 2: Test 10 Full (100 câu)</option>
-                  <option value="Docs 5 - YBM 1000 Vol 1 Test 1 Full">YBM 1000: Test 1 Full (100 câu)</option>
-                  <option value="Docs 5 - YBM 1000 Vol 1 Test 2 Full">YBM 1000: Test 2 Full (100 câu)</option>
-                  <option value="Docs 5 - YBM 1000 Vol 1 Test 3 Full">YBM 1000: Test 3 Full (100 câu)</option>
-                  <option value="Docs 5 - YBM 1000 Vol 1 Test 4 Full">YBM 1000: Test 4 Full (100 câu)</option>
-                  <option value="Docs 5 - YBM 1000 Vol 1 Test 5 Full">YBM 1000: Test 5 Full (100 câu)</option>
-                  <option value="Docs 5 - YBM 1000 Vol 1 Test 6 Full">YBM 1000: Test 6 Full (100 câu)</option>
-                  <option value="Docs 5 - YBM 1000 Vol 1 Test 7 Full">YBM 1000: Test 7 Full (100 câu)</option>
-                  <option value="Docs 5 - YBM 1000 Vol 1 Test 8 Full">YBM 1000: Test 8 Full (100 câu)</option>
-                  <option value="Docs 5 - YBM 1000 Vol 1 Test 9 Full">YBM 1000: Test 9 Full (100 câu)</option>
-                  <option value="Docs 5 - YBM 1000 Vol 1 Test 10 Full">YBM 1000: Test 10 Full (100 câu)</option>
-                </optgroup>
-                <optgroup label="🔥 GIAI ĐOẠN 6: TRỌN BỘ HACKER 3 (10 TESTS - 1,000 CÂU)">
-                  <option value="stage_6">🔥 Trọn bộ Hacker 3 (10 Tests - 1,000 câu Reading)</option>
-                  <option value="Hacker 3 - Part 5 All">Hacker 3: Toàn bộ Part 5 (300 câu)</option>
-                  <option value="Hacker 3 - Part 6 All">Hacker 3: Toàn bộ Part 6 (160 câu)</option>
-                  <option value="Hacker 3 - Part 7 All">Hacker 3: Toàn bộ Part 7 (540 câu)</option>
-                  <option value="Hacker 3 Test 1 Full">Hacker 3: Test 1 Full (100 câu)</option>
-                  <option value="Hacker 3 Test 2 Full">Hacker 3: Test 2 Full (100 câu)</option>
-                  <option value="Hacker 3 Test 3 Full">Hacker 3: Test 3 Full (100 câu)</option>
-                  <option value="Hacker 3 Test 4 Full">Hacker 3: Test 4 Full (100 câu)</option>
-                  <option value="Hacker 3 Test 5 Full">Hacker 3: Test 5 Full (100 câu)</option>
-                  <option value="Hacker 3 Test 6 Full">Hacker 3: Test 6 Full (100 câu)</option>
-                  <option value="Hacker 3 Test 7 Full">Hacker 3: Test 7 Full (100 câu)</option>
-                  <option value="Hacker 3 Test 8 Full">Hacker 3: Test 8 Full (100 câu)</option>
-                  <option value="Hacker 3 Test 9 Full">Hacker 3: Test 9 Full (100 câu)</option>
-                  <option value="Hacker 3 Test 10 Full">Hacker 3: Test 10 Full (100 câu)</option>
-                </optgroup>
-                <optgroup label="🚀 GIAI ĐOẠN 7: TRỌN BỘ HACKER 1 (10 TESTS - 1,000 CÂU)">
+                <optgroup label="🔥 CỤM 1: HACKER TOEIC 1 (10 TESTS • 1,000 CÂU)">
                   <option value="stage_7">🚀 Trọn bộ Hacker 1 (10 Tests - 1,000 câu Reading)</option>
                   <option value="Hacker 1 - Part 5 All">Hacker 1: Toàn bộ Part 5 (300 câu)</option>
                   <option value="Hacker 1 - Part 6 All">Hacker 1: Toàn bộ Part 6 (160 câu)</option>
@@ -155,29 +88,103 @@ export const Header: React.FC<HeaderProps> = ({
                   <option value="Hacker 1 Test 9 Full">Hacker 1: Test 9 Full (100 câu)</option>
                   <option value="Hacker 1 Test 10 Full">Hacker 1: Test 10 Full (100 câu)</option>
                 </optgroup>
-                <optgroup label="📚 TOÀN BỘ KHO ĐỀ">
-                  <option value="all_both_stages">Tất cả đề Hacker 1, 2, 3 & YBM (4,566 câu Reading)</option>
+                <optgroup label="🔥 CỤM 1: HACKER TOEIC 2 (10 TESTS • 1,000 CÂU)">
+                  <option value="Docs 5 - Hacker 2 All">📗 Hacker 2: Toàn bộ 10 Tests (1,000 câu)</option>
+                  <option value="Docs 5 - Hacker 2 Test 1 Full">Hacker 2: Test 1 Full (100 câu)</option>
+                  <option value="Docs 5 - Hacker 2 Test 2 Full">Hacker 2: Test 2 Full (100 câu)</option>
+                  <option value="Docs 5 - Hacker 2 Test 3 Full">Hacker 2: Test 3 Full (100 câu)</option>
+                  <option value="Docs 5 - Hacker 2 Test 4 Full">Hacker 2: Test 4 Full (100 câu)</option>
+                  <option value="Docs 5 - Hacker 2 Test 5 Full">Hacker 2: Test 5 Full (100 câu)</option>
+                  <option value="Docs 5 - Hacker 2 Test 6 Full">Hacker 2: Test 6 Full (100 câu)</option>
+                  <option value="Docs 5 - Hacker 2 Test 7 Full">Hacker 2: Test 7 Full (100 câu)</option>
+                  <option value="Docs 5 - Hacker 2 Test 8 Full">Hacker 2: Test 8 Full (100 câu)</option>
+                  <option value="Docs 5 - Hacker 2 Test 9 Full">Hacker 2: Test 9 Full (100 câu)</option>
+                  <option value="Docs 5 - Hacker 2 Test 10 Full">Hacker 2: Test 10 Full (100 câu)</option>
+                </optgroup>
+                <optgroup label="🔥 CỤM 1: HACKER TOEIC 3 (10 TESTS • 1,000 CÂU)">
+                  <option value="stage_6">🔥 Trọn bộ Hacker 3 (10 Tests - 1,000 câu Reading)</option>
+                  <option value="Hacker 3 - Part 5 All">Hacker 3: Toàn bộ Part 5 (300 câu)</option>
+                  <option value="Hacker 3 - Part 6 All">Hacker 3: Toàn bộ Part 6 (160 câu)</option>
+                  <option value="Hacker 3 - Part 7 All">Hacker 3: Toàn bộ Part 7 (540 câu)</option>
+                  <option value="Hacker 3 Test 1 Full">Hacker 3: Test 1 Full (100 câu)</option>
+                  <option value="Hacker 3 Test 2 Full">Hacker 3: Test 2 Full (100 câu)</option>
+                  <option value="Hacker 3 Test 3 Full">Hacker 3: Test 3 Full (100 câu)</option>
+                  <option value="Hacker 3 Test 4 Full">Hacker 3: Test 4 Full (100 câu)</option>
+                  <option value="Hacker 3 Test 5 Full">Hacker 3: Test 5 Full (100 câu)</option>
+                  <option value="Hacker 3 Test 6 Full">Hacker 3: Test 6 Full (100 câu)</option>
+                  <option value="Hacker 3 Test 7 Full">Hacker 3: Test 7 Full (100 câu)</option>
+                  <option value="Hacker 3 Test 8 Full">Hacker 3: Test 8 Full (100 câu)</option>
+                  <option value="Hacker 3 Test 9 Full">Hacker 3: Test 9 Full (100 câu)</option>
+                  <option value="Hacker 3 Test 10 Full">Hacker 3: Test 10 Full (100 câu)</option>
+                </optgroup>
+                <optgroup label="📘 CỤM 2: YBM TOEIC 2025 & VOL 1 (10 TESTS • 1,000 CÂU)">
+                  <option value="Docs 5 - YBM 1000 All">📘 YBM 2025 / Vol 1: Toàn bộ 10 Tests (1,000 câu)</option>
+                  <option value="Docs 5 - YBM 1000 Vol 1 Test 1 Full">YBM: Test 1 Full (100 câu)</option>
+                  <option value="Docs 5 - YBM 1000 Vol 1 Test 2 Full">YBM: Test 2 Full (100 câu)</option>
+                  <option value="Docs 5 - YBM 1000 Vol 1 Test 3 Full">YBM: Test 3 Full (100 câu)</option>
+                  <option value="Docs 5 - YBM 1000 Vol 1 Test 4 Full">YBM: Test 4 Full (100 câu)</option>
+                  <option value="Docs 5 - YBM 1000 Vol 1 Test 5 Full">YBM: Test 5 Full (100 câu)</option>
+                  <option value="Docs 5 - YBM 1000 Vol 1 Test 6 Full">YBM: Test 6 Full (100 câu)</option>
+                  <option value="Docs 5 - YBM 1000 Vol 1 Test 7 Full">YBM: Test 7 Full (100 câu)</option>
+                  <option value="Docs 5 - YBM 1000 Vol 1 Test 8 Full">YBM: Test 8 Full (100 câu)</option>
+                  <option value="Docs 5 - YBM 1000 Vol 1 Test 9 Full">YBM: Test 9 Full (100 câu)</option>
+                  <option value="Docs 5 - YBM 1000 Vol 1 Test 10 Full">YBM: Test 10 Full (100 câu)</option>
+                  <option value="stage_5">🌟 Trọn bộ Docs 5 (Hacker 2 + YBM - 2,000 câu)</option>
+                  <option value="Docs 5 - Part 5 All">Docs 5: Toàn bộ Part 5 (600 câu)</option>
+                  <option value="Docs 5 - Part 6 All">Docs 5: Toàn bộ Part 6 (320 câu)</option>
+                  <option value="Docs 5 - Part 7 All">Docs 5: Toàn bộ Part 7 (1,080 câu)</option>
+                </optgroup>
+                <optgroup label="📂 CỤM 3: ĐỀ LẺ — DOCS 1 (BẮT BUỘC HỌC THUỘC)">
+                  <option value="stage_1">⭐ Trọn bộ Docs 1 (151 câu Bắt Buộc)</option>
+                  <option value="ToIce 2">Docs 1: ToIce 2 (#101-165)</option>
+                  <option value="Test 2 Full">Docs 1: Test 2 Full 100 câu (#101-200)</option>
+                  <option value="Test 2 Part 5">Docs 1: Test 2 Part 5 (#101-140)</option>
+                  <option value="Part 6 Đọc Điền">Docs 1: Part 6 Đọc Điền (15 câu)</option>
+                  <option value="Part 7 Đoạn Văn">Docs 1: Part 7 Đọc Hiểu (56 câu)</option>
+                </optgroup>
+                <optgroup label="📂 CỤM 3: ĐỀ LẺ — DOCS 2 (234 CÂU READING)">
+                  <option value="stage_2">🚀 Trọn bộ Docs 2 (Tất cả 234 câu Reading)</option>
+                  <option value="Docs 2 - Đề 1 Full">Docs 2: Trọn bộ Đề 1 (Trial Test - 100 câu)</option>
+                  <option value="Docs 2 - Đề 2 YBM Full">Docs 2: Trọn bộ Đề 2 (YBM Test 1 - 100 câu)</option>
+                  <option value="Docs 2 - Chuyên đề Tips">Docs 2: Chuyên đề & Rèn Tips (34 câu)</option>
+                  <option value="Docs 2 - Part 5 All">Docs 2: Toàn bộ Part 5 (66 câu)</option>
+                  <option value="Docs 2 - Part 6 All">Docs 2: Toàn bộ Part 6 (44 câu)</option>
+                </optgroup>
+                <optgroup label="📂 CỤM 3: ĐỀ LẺ — DOCS 3 & DOCS 4 (TMA ONLINE)">
+                  <option value="stage_3">🔥 Trọn bộ Docs 3 (Tất cả 81 câu Reading)</option>
+                  <option value="Docs 3 - Đề TMA Online Full">Docs 3: Đề TMA Online Full (70 câu)</option>
+                  <option value="Docs 3 - Đề TMA Online Part 5">Docs 3: TMA Online Part 5 (28 câu)</option>
+                  <option value="Docs 3 - Đề TMA Online Part 6">Docs 3: TMA Online Part 6 (16 câu)</option>
+                  <option value="Docs 3 - Đề TMA Online Part 7">Docs 3: TMA Online Part 7 (26 câu)</option>
+                  <option value="Docs 3 - Hackers Reading">Docs 3: Hackers Reading (11 câu)</option>
+                  <option value="stage_4">💎 Trọn bộ Docs 4 (Hacker 3 Test 1 - 100 câu)</option>
+                  <option value="Docs 4 - Hacker 3 Test 1 Full">Docs 4: Hacker 3 Test 1 Full (100 câu)</option>
+                  <option value="Docs 4 - Hacker 3 Test 1 Part 5">Docs 4: Hacker 3 Test 1 Part 5 (30 câu)</option>
+                  <option value="Docs 4 - Hacker 3 Test 1 Part 6">Docs 4: Hacker 3 Test 1 Part 6 (16 câu)</option>
+                  <option value="Docs 4 - Hacker 3 Test 1 Part 7">Docs 4: Hacker 3 Test 1 Part 7 (54 câu)</option>
                 </optgroup>
               </select>
               <Layers className="w-2.5 h-2.5 text-[#8C8276] absolute right-1.5 top-1/2 -translate-y-1/2 pointer-events-none" />
             </div>
           ) : activeTab === 'listening' ? (
-            <span className="font-bold text-xs text-[#262320] flex items-center gap-1.5">
-              <Headphones className="w-3.5 h-3.5 text-amber-600" />
-              Luyện Nghe TOEIC (100 câu LC)
+            <span className="font-bold text-xs text-[#262320] flex items-center gap-1 truncate">
+              <Headphones className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+              <span className="truncate">Luyện Nghe (100 câu)</span>
             </span>
           ) : activeTab === 'answers' ? (
-            <span className="font-bold text-xs text-emerald-800 flex items-center gap-1.5">
-              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-              Bảng Full Đáp Án (200 Câu)
+            <span className="font-bold text-xs text-emerald-800 flex items-center gap-1 truncate">
+              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+              <span className="truncate sm:hidden">Full Đáp Án</span>
+              <span className="hidden sm:inline">Bảng Full Đáp Án (200 Câu)</span>
             </span>
           ) : activeTab === 'search' ? (
-            <span className="font-bold text-xs text-[#262320]">
-              Tra Cứu & Tìm Kiếm Câu Hỏi
+            <span className="font-bold text-xs text-[#262320] truncate">
+              <span className="sm:hidden">Tra Cứu TOEIC</span>
+              <span className="hidden sm:inline">Tra Cứu & Tìm Kiếm Câu Hỏi</span>
             </span>
           ) : (
-            <span className="font-bold text-xs text-[#262320]">
-              Kết Quả & Ôn Lỗi Sai
+            <span className="font-bold text-xs text-[#262320] truncate">
+              Kết Quả & Ôn Sai
             </span>
           )}
         </div>
@@ -189,7 +196,7 @@ export const Header: React.FC<HeaderProps> = ({
               <div className="flex items-center gap-1">
                 <span className="px-2 py-0.5 rounded-md bg-rose-100 border border-rose-200 text-rose-800 text-[10px] font-bold flex items-center gap-0.5">
                   <AlertCircle className="w-3 h-3 text-rose-600" />
-                  Đang ôn câu sai ({savedMistakeIds.length})
+                  Đang ôn câu sai ({safeMistakeIds.length})
                 </span>
                 <button
                   onClick={onSwitchToPracticeAll}
@@ -239,9 +246,9 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
         ) : (
           <div className="flex items-center gap-1.5">
-            {savedMistakeIds.length > 0 && (
+            {safeMistakeIds.length > 0 && (
               <span className="px-2 py-0.5 rounded-full bg-rose-100 text-rose-800 text-[10px] font-bold">
-                {savedMistakeIds.length} câu sai
+                {safeMistakeIds.length} câu sai
               </span>
             )}
           </div>

@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { useQuizStore } from '../store/useQuizStore';
+import { getClusterStats } from '../data/masterLookupKeys';
 import {
   RotateCcw,
   CheckCircle2,
@@ -14,6 +15,7 @@ import {
   BookOpen,
   Zap,
   Check,
+  Layers,
 } from 'lucide-react';
 import { QuestionExamNavButtons } from './QuestionExamNavButtons';
 import { TabCustomizerModal } from './TabCustomizerModal';
@@ -31,7 +33,27 @@ export const ResultsView: React.FC<ResultsViewProps> = ({
   onGoToPracticeAll,
   onGoToDocs2,
 }) => {
-  const { dailyLogs, savedMistakeIds, questionProgress, updateTodayNotes, visibleTabs, setTabPreset } = useQuizStore();
+  const {
+    dailyLogs,
+    savedMistakeIds,
+    questionProgress,
+    updateTodayNotes,
+    visibleTabs,
+    setTabPreset,
+    openFullAnswers,
+    setSourceFilter,
+    setActiveTab,
+  } = useQuizStore();
+
+  const clusterStats = useMemo(() => getClusterStats(), []);
+  const totalClusterExams = useMemo(
+    () => clusterStats.reduce((acc, c) => acc + c.testCount, 0),
+    [clusterStats]
+  );
+  const totalClusterQuestions = useMemo(
+    () => clusterStats.reduce((acc, c) => acc + c.totalQuestions, 0),
+    [clusterStats]
+  );
 
   const [isCustomizerOpen, setIsCustomizerOpen] = useState<boolean>(false);
   const todayStr = new Date().toISOString().split('T')[0];
@@ -72,6 +94,83 @@ export const ResultsView: React.FC<ResultsViewProps> = ({
 
   return (
     <div className="flex-1 flex flex-col space-y-3.5 max-w-md w-full mx-auto pb-4">
+      {/* 0.A THỐNG KÊ KHO ĐỀ THEO 3 CỤM (HACKER • YBM • ĐỀ LẺ) */}
+      <div className="bg-white border-2 border-emerald-300 rounded-2xl p-3.5 sm:p-4 shadow-sm space-y-3">
+        <div className="flex items-center justify-between gap-2">
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-8 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-bold shadow-2xs shrink-0">
+              <Layers className="w-4 h-4" />
+            </div>
+            <div>
+              <h2 className="text-sm font-black text-[#262320]">
+                Thống Kê Kho Đề Theo 3 Cụm
+              </h2>
+              <p className="text-[11px] text-[#8C8276]">
+                Tổng cộng {totalClusterExams} đề • {totalClusterQuestions.toLocaleString()} câu hỏi (LC + RC)
+              </p>
+            </div>
+          </div>
+          <span className="px-2 py-0.5 rounded-full bg-emerald-100 border border-emerald-200 text-emerald-900 text-[11px] font-black font-mono shrink-0">
+            3 Cụm Chuẩn
+          </span>
+        </div>
+
+        <div className="space-y-2">
+          {clusterStats.map((c) => {
+            const rcFilterKey =
+              c.id === 'hacker' ? 'cluster_hacker' : c.id === 'ybm' ? 'cluster_ybm' : 'cluster_other';
+            const badgeStyle =
+              c.id === 'hacker'
+                ? 'bg-amber-50 border-amber-200 text-amber-950'
+                : c.id === 'ybm'
+                ? 'bg-sky-50 border-sky-200 text-sky-950'
+                : 'bg-emerald-50 border-emerald-200 text-emerald-950';
+
+            return (
+              <div
+                key={c.id}
+                className={`p-2.5 rounded-xl border ${badgeStyle} flex flex-col gap-1.5`}
+              >
+                <div className="flex items-center justify-between gap-2">
+                  <span className="text-xs font-black">{c.name}</span>
+                  <span className="px-2 py-0.5 rounded-md bg-white/90 border border-black/10 text-[10.5px] font-mono font-black shrink-0">
+                    {c.testCount} đề • {c.totalQuestions.toLocaleString()} câu
+                  </span>
+                </div>
+                <div className="flex items-center justify-between text-[11px] opacity-90">
+                  <span>
+                    🎧 LC: <strong>{c.lcQuestions.toLocaleString()}</strong> câu • 📖 RC:{' '}
+                    <strong>{c.rcQuestions.toLocaleString()}</strong> câu
+                  </span>
+                  <div className="flex items-center gap-1">
+                    <button
+                      onClick={() => {
+                        const firstBook = c.books[0];
+                        if (firstBook) {
+                          openFullAnswers({ book: firstBook.id, test: '1', questionNum: 1 });
+                        }
+                      }}
+                      className="px-2 py-0.5 rounded-lg bg-white hover:bg-emerald-600 hover:text-white text-[#262320] border border-black/10 font-bold text-[10px] transition cursor-pointer shadow-2xs"
+                    >
+                      Đáp Án
+                    </button>
+                    <button
+                      onClick={() => {
+                        setSourceFilter(rcFilterKey);
+                        setActiveTab('practice');
+                      }}
+                      className="px-2 py-0.5 rounded-lg bg-[#262320] hover:bg-amber-600 text-white font-bold text-[10px] transition cursor-pointer shadow-2xs"
+                    >
+                      Ôn Cụm Này
+                    </button>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
       {/* 0. CHẾ ĐỘ FOCUS TRA CỨU & TUỲ BIẾN TAB */}
       <div className="bg-white border-2 border-amber-300 rounded-2xl p-3.5 sm:p-4 shadow-sm space-y-3">
         <div className="flex items-center justify-between">

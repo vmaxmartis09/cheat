@@ -29,7 +29,17 @@ export const App: React.FC = () => {
   const [isSyncModalOpen, setIsSyncModalOpen] = useState<boolean>(false);
   const [isTabCustomizerOpen, setIsTabCustomizerOpen] = useState<boolean>(false);
 
-  const currentQ = questions[currentIndex];
+  const safeQuestions = Array.isArray(questions) ? questions : [];
+  const safeMistakeIds = Array.isArray(savedMistakeIds) ? savedMistakeIds : [];
+  const safeVisibleTabs = visibleTabs || {
+    practice: false,
+    listening: false,
+    answers: true,
+    search: true,
+    results: true,
+  };
+
+  const currentQ = safeQuestions[currentIndex];
   const isPassageView = activeTab === 'practice' && !isFinished && Boolean(currentQ?.isPassageQuestion && currentQ?.passageInfo);
 
   useEffect(() => {
@@ -139,7 +149,7 @@ export const App: React.FC = () => {
           activeTab === 'listening' ? 'max-w-4xl' : activeTab === 'answers' ? 'max-w-7xl' : activeTab === 'search' ? 'max-w-3xl' : isPassageView ? 'max-w-7xl' : 'max-w-2xl'
         }`}>
           {/* Tab: TRA ĐÁP ÁN (FOCUSED 1ST) */}
-          {visibleTabs.search !== false && (
+          {safeVisibleTabs.search !== false && (
             <button
               onClick={() => setActiveTab('search')}
               className={`flex-1 flex flex-col items-center gap-0.5 py-1 px-0.5 sm:px-3 rounded-xl transition cursor-pointer ${
@@ -154,7 +164,7 @@ export const App: React.FC = () => {
           )}
 
           {/* Tab: FULL ĐÁP ÁN (FOCUSED 2ND) */}
-          {visibleTabs.answers !== false && (
+          {safeVisibleTabs.answers !== false && (
             <button
               onClick={() => setActiveTab('answers')}
               className={`flex-1 flex flex-col items-center gap-0.5 py-1 px-0.5 sm:px-3 rounded-xl transition cursor-pointer ${
@@ -169,7 +179,7 @@ export const App: React.FC = () => {
           )}
 
           {/* Tab: ÔN ĐỌC (Optional) */}
-          {visibleTabs.practice && (
+          {safeVisibleTabs.practice && (
             <button
               onClick={() => setActiveTab('practice')}
               className={`flex-1 flex flex-col items-center gap-0.5 py-0.5 sm:py-1 px-0.5 sm:px-3 rounded-xl transition cursor-pointer ${
@@ -184,7 +194,7 @@ export const App: React.FC = () => {
           )}
 
           {/* Tab: LUYỆN NGHE (Optional) */}
-          {visibleTabs.listening && (
+          {safeVisibleTabs.listening && (
             <button
               onClick={() => setActiveTab('listening')}
               className={`flex-1 flex flex-col items-center gap-0.5 py-1 px-0.5 sm:px-3 rounded-xl transition cursor-pointer ${
@@ -199,7 +209,7 @@ export const App: React.FC = () => {
           )}
 
           {/* Tab: KẾT QUẢ */}
-          {visibleTabs.results !== false && (
+          {safeVisibleTabs.results !== false && (
             <button
               onClick={() => setActiveTab('results')}
               className={`flex-1 flex flex-col items-center gap-0.5 py-1 px-0.5 sm:px-3 rounded-xl transition relative cursor-pointer ${
@@ -210,9 +220,9 @@ export const App: React.FC = () => {
             >
               <div className="relative">
                 <BarChart3 className="w-4 h-4 sm:w-5 sm:h-5" />
-                {savedMistakeIds.length > 0 && (
+                {safeMistakeIds.length > 0 && (
                   <span className="absolute -top-1 -right-2 px-1 py-0.2 min-w-4 h-4 rounded-full bg-rose-500 text-white text-[9px] font-bold flex items-center justify-center">
-                    {savedMistakeIds.length}
+                    {safeMistakeIds.length}
                   </span>
                 )}
               </div>

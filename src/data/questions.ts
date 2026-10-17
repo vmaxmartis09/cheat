@@ -6343,6 +6343,22 @@ export const getQuestionsBySource = (source?: string): Question[] => {
     return docs1Questions;
   }
   if (source === 'all_both_stages' || source === 'all_stages' || source === 'all_all_stages') return allQuestions;
+  if (source === 'cluster_hacker') {
+    return [
+      ...hacker1Questions,
+      ...docs5Questions.filter((q) => q.id.includes('hacker2')),
+      ...hacker3Questions,
+    ];
+  }
+  if (source === 'cluster_ybm') {
+    return [
+      ...docs5Questions.filter((q) => q.id.includes('ybm1')),
+      ...docs2Questions.filter((q) => q.id.startsWith('docs2_de2') || q.source.includes('YBM')),
+    ];
+  }
+  if (source === 'cluster_other') {
+    return [...docs1Questions, ...docs2Questions, ...docs3Questions, ...docs4Questions];
+  }
   if (source === 'stage_2' || source === 'docs2_all') return docs2Questions;
   if (source === 'stage_3' || source === 'docs3_all') return docs3Questions;
   if (source === 'stage_4' || source === 'docs4_all') return docs4Questions;

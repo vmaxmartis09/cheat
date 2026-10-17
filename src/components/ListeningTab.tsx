@@ -100,6 +100,16 @@ export const ListeningTab: React.FC = () => {
       openFullAnswers({ book: 'Hacker 1 (RC 101-200)', test: t, questionNum: currentQ?.num || 1 });
       return;
     }
+    if (typeof selectedTest === 'string' && selectedTest.startsWith('ybm2025_')) {
+      const t = selectedTest.replace('ybm2025_', '');
+      openFullAnswers({ book: 'YBM 2025 (RC 101-200)', test: t, questionNum: currentQ?.num || 1 });
+      return;
+    }
+    if (typeof selectedTest === 'string' && selectedTest.startsWith('ybm1000_')) {
+      const t = selectedTest.replace('ybm1000_', '');
+      openFullAnswers({ book: 'YBM 1000 Vol 1 (RC 101-200)', test: t, questionNum: currentQ?.num || 1 });
+      return;
+    }
     if (typeof selectedTest === 'number' && selectedTest >= 1 && selectedTest <= 10) {
       openFullAnswers({ book: 'Hacker 2 (Full 200 câu)', test: String(selectedTest), questionNum: currentQ?.num || 1 });
       return;
@@ -257,7 +267,7 @@ export const ListeningTab: React.FC = () => {
               }}
               className="bg-[#FAF7F2] border border-[#E0D7CC] text-[#262320] text-xs font-bold rounded-lg px-2.5 py-1 focus:outline-none focus:border-amber-500 cursor-pointer shadow-2xs"
             >
-              <optgroup label="🎧 HACKER TOEIC 2 (10 TESTS FULL LC)">
+              <optgroup label="🔥 CỤM 1: HACKER TOEIC 2 (10 ĐỀ • 1,000 CÂU LC)">
                 <option value={1}>Hacker 2 - Test 1 (100 câu)</option>
                 <option value={2}>Hacker 2 - Test 2 (100 câu)</option>
                 <option value={3}>Hacker 2 - Test 3 (100 câu)</option>
@@ -269,7 +279,7 @@ export const ListeningTab: React.FC = () => {
                 <option value={9}>Hacker 2 - Test 9 (100 câu)</option>
                 <option value={10}>Hacker 2 - Test 10 (100 câu)</option>
               </optgroup>
-              <optgroup label="✨ HACKER TOEIC 3 (10 TESTS FULL LC - 1,000 CÂU)">
+              <optgroup label="🔥 CỤM 1: HACKER TOEIC 3 (10 ĐỀ • 1,000 CÂU LC)">
                 <option value="h3_1">Hacker 3 - Test 1 LC (100 câu)</option>
                 <option value="h3_2">Hacker 3 - Test 2 LC (100 câu)</option>
                 <option value="h3_3">Hacker 3 - Test 3 LC (100 câu)</option>
@@ -281,7 +291,7 @@ export const ListeningTab: React.FC = () => {
                 <option value="h3_9">Hacker 3 - Test 9 LC (100 câu)</option>
                 <option value="h3_10">Hacker 3 - Test 10 LC (100 câu)</option>
               </optgroup>
-              <optgroup label="✨ HACKER TOEIC 1 (10 TESTS FULL LC - 1,000 CÂU)">
+              <optgroup label="🔥 CỤM 1: HACKER TOEIC 1 (10 ĐỀ • 1,000 CÂU LC)">
                 <option value="h1_1">Hacker 1 - Test 1 LC (100 câu)</option>
                 <option value="h1_2">Hacker 1 - Test 2 LC (100 câu)</option>
                 <option value="h1_3">Hacker 1 - Test 3 LC (100 câu)</option>
@@ -293,9 +303,33 @@ export const ListeningTab: React.FC = () => {
                 <option value="h1_9">Hacker 1 - Test 9 LC (100 câu)</option>
                 <option value="h1_10">Hacker 1 - Test 10 LC (100 câu)</option>
               </optgroup>
-              <optgroup label="⭐ ĐỀ LUYỆN KHÁC">
-                <option value={0}>Final Trial Test (Part 1-4)</option>
-                <option value="all">Toàn bộ 3,100 câu Listening</option>
+              <optgroup label="📘 CỤM 2: YBM TOEIC 2025 (10 ĐỀ • 1,000 CÂU LC)">
+                <option value="ybm2025_1">YBM 2025 - Test 1 LC (100 câu)</option>
+                <option value="ybm2025_2">YBM 2025 - Test 2 LC (100 câu)</option>
+                <option value="ybm2025_3">YBM 2025 - Test 3 LC (100 câu)</option>
+                <option value="ybm2025_4">YBM 2025 - Test 4 LC (100 câu)</option>
+                <option value="ybm2025_5">YBM 2025 - Test 5 LC (100 câu)</option>
+                <option value="ybm2025_6">YBM 2025 - Test 6 LC (100 câu)</option>
+                <option value="ybm2025_7">YBM 2025 - Test 7 LC (100 câu)</option>
+                <option value="ybm2025_8">YBM 2025 - Test 8 LC (100 câu)</option>
+                <option value="ybm2025_9">YBM 2025 - Test 9 LC (100 câu)</option>
+                <option value="ybm2025_10">YBM 2025 - Test 10 LC (100 câu)</option>
+              </optgroup>
+              <optgroup label="📘 CỤM 2: YBM 1000 VOL 1 (10 ĐỀ • 1,000 CÂU LC)">
+                <option value="ybm1000_1">YBM 1000 Vol 1 - Test 1 LC (100 câu)</option>
+                <option value="ybm1000_2">YBM 1000 Vol 1 - Test 2 LC (100 câu)</option>
+                <option value="ybm1000_3">YBM 1000 Vol 1 - Test 3 LC (100 câu)</option>
+                <option value="ybm1000_4">YBM 1000 Vol 1 - Test 4 LC (100 câu)</option>
+                <option value="ybm1000_5">YBM 1000 Vol 1 - Test 5 LC (100 câu)</option>
+                <option value="ybm1000_6">YBM 1000 Vol 1 - Test 6 LC (100 câu)</option>
+                <option value="ybm1000_7">YBM 1000 Vol 1 - Test 7 LC (100 câu)</option>
+                <option value="ybm1000_8">YBM 1000 Vol 1 - Test 8 LC (100 câu)</option>
+                <option value="ybm1000_9">YBM 1000 Vol 1 - Test 9 LC (100 câu)</option>
+                <option value="ybm1000_10">YBM 1000 Vol 1 - Test 10 LC (100 câu)</option>
+              </optgroup>
+              <optgroup label="📂 CỤM 3: ĐỀ LẺ & TỔNG HỢP (5,100 CÂU LC)">
+                <option value={0}>Docs 2 - Final Trial Test (100 câu)</option>
+                <option value="all">Toàn bộ 5,100 câu Listening (Hacker + YBM + Docs)</option>
               </optgroup>
             </select>
 
@@ -524,6 +558,10 @@ export const ListeningTab: React.FC = () => {
                 ? 'Hacker 3 (RC 101-200)'
                 : typeof selectedTest === 'string' && selectedTest.startsWith('h1_')
                 ? 'Hacker 1 (RC 101-200)'
+                : typeof selectedTest === 'string' && selectedTest.startsWith('ybm2025_')
+                ? 'YBM 2025 (RC 101-200)'
+                : typeof selectedTest === 'string' && selectedTest.startsWith('ybm1000_')
+                ? 'YBM 1000 Vol 1 (RC 101-200)'
                 : selectedTest === 0
                 ? 'Docs 2 (Listening Test 1)'
                 : 'Hacker 2 (Full 200 câu)'
@@ -533,6 +571,10 @@ export const ListeningTab: React.FC = () => {
                 ? selectedTest.replace('h3_', '')
                 : typeof selectedTest === 'string' && selectedTest.startsWith('h1_')
                 ? selectedTest.replace('h1_', '')
+                : typeof selectedTest === 'string' && selectedTest.startsWith('ybm2025_')
+                ? selectedTest.replace('ybm2025_', '')
+                : typeof selectedTest === 'string' && selectedTest.startsWith('ybm1000_')
+                ? selectedTest.replace('ybm1000_', '')
                 : selectedTest === 0
                 ? '1'
                 : String(selectedTest)

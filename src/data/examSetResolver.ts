@@ -95,8 +95,14 @@ export function resolveFullExamSetInfo(q: {
   }
 
   // 3. Docs 5: YBM (100% matches YBM 2025) vs Hacker 2
-  if (id.startsWith('docs5_ybm1_') || (src.includes('docs 5') && src.includes('ybm'))) {
-    const tMatch = src.match(/test\s*(\d+)/i) || id.match(/_t(\d+)_/i);
+  if (
+    id.startsWith('docs5_ybm1_') ||
+    id.startsWith('ybm2025_') ||
+    book.includes('ybm 2025') ||
+    src.includes('ybm 2025') ||
+    (src.includes('docs 5') && src.includes('ybm'))
+  ) {
+    const tMatch = src.match(/test\s*(\d+)/i) || id.match(/_t(\d+)_/i) || [null, String(q.test || 1)];
     const t = tMatch ? tMatch[1] : '1';
     return {
       examSetId: `ybm2025_t${t}`,
@@ -105,10 +111,11 @@ export function resolveFullExamSetInfo(q: {
       book: 'YBM 2025 (RC 101-200)',
       test: t,
       questionNum: num,
-      hasListening: false,
+      hasListening: true,
       hasReading: true,
-      totalQuestions: 100,
+      totalQuestions: 200,
       rcSource: `Docs 5 - YBM 1000 Vol 1 Test ${t} Full`,
+      lcTest: `ybm2025_${t}`,
     };
   }
   if (id.startsWith('docs5_hacker2_') || (src.includes('docs 5') && src.includes('hacker 2'))) {
@@ -200,9 +207,15 @@ export function resolveFullExamSetInfo(q: {
     };
   }
 
-  // 7. YBM 1000 Vol 1 (Tests 1-10: 100 RC each)
-  if (src.includes('ybm 1000') || src.includes('ybm1') || id.includes('ybm1')) {
-    const tMatch = src.match(/test\s*(\d+)/i) || id.match(/_t(\d+)_/i);
+  // 7. YBM 1000 Vol 1 (Tests 1-10: Full 200 questions each, 100 LC + 100 RC)
+  if (
+    src.includes('ybm 1000') ||
+    src.includes('ybm1') ||
+    id.includes('ybm1') ||
+    id.startsWith('ybm1000_') ||
+    book.includes('ybm 1000')
+  ) {
+    const tMatch = src.match(/test\s*(\d+)/i) || id.match(/_t(\d+)_/i) || [null, String(q.test || 1)];
     const t = tMatch ? tMatch[1] : '1';
     return {
       examSetId: `ybm1_t${t}`,
@@ -211,10 +224,11 @@ export function resolveFullExamSetInfo(q: {
       book: 'YBM 1000 Vol 1 (RC 101-200)',
       test: t,
       questionNum: num,
-      hasListening: false,
+      hasListening: true,
       hasReading: true,
-      totalQuestions: 100,
+      totalQuestions: 200,
       rcSource: `Docs 5 - YBM 1000 Vol 1 Test ${t} Full`,
+      lcTest: `ybm1000_${t}`,
     };
   }
 
@@ -391,16 +405,31 @@ export function getFullExamSetQuestions(examSetId: string): {
     };
   }
 
-  // 4. YBM 2025 / YBM 1000 (Tests 1-10)
-  if (examSetId.startsWith('ybm2025_t') || examSetId.startsWith('ybm1_t')) {
-    const t = parseInt(examSetId.replace(/^(?:ybm2025_t|ybm1_t)/, ''), 10);
-    const info = resolveFullExamSetInfo({ source: `Docs 5 - YBM 1000 Vol 1 Test ${t}` });
+  // 4. YBM 2025 (Tests 1-10)
+  if (examSetId.startsWith('ybm2025_t')) {
+    const t = parseInt(examSetId.replace('ybm2025_t', ''), 10);
+    const info = resolveFullExamSetInfo({ source: `YBM 2025 Test ${t}` });
     const rcQuestions = getQuestionsBySource(`Docs 5 - YBM 1000 Vol 1 Test ${t} Full`).sort((a, b) => a.num - b.num);
+    const lcQuestions = getListeningQuestionsByTestAndPart(`ybm2025_${t}`, 'all').sort((a, b) => a.num - b.num);
     return {
       info,
-      lcQuestions: [],
+      lcQuestions,
       rcQuestions,
-      allQuestionsCount: rcQuestions.length,
+      allQuestionsCount: lcQuestions.length + rcQuestions.length,
+    };
+  }
+
+  // 4a. YBM 1000 Vol 1 (Tests 1-10)
+  if (examSetId.startsWith('ybm1_t')) {
+    const t = parseInt(examSetId.replace('ybm1_t', ''), 10);
+    const info = resolveFullExamSetInfo({ source: `YBM 1000 Vol 1 Test ${t}` });
+    const rcQuestions = getQuestionsBySource(`Docs 5 - YBM 1000 Vol 1 Test ${t} Full`).sort((a, b) => a.num - b.num);
+    const lcQuestions = getListeningQuestionsByTestAndPart(`ybm1000_${t}`, 'all').sort((a, b) => a.num - b.num);
+    return {
+      info,
+      lcQuestions,
+      rcQuestions,
+      allQuestionsCount: lcQuestions.length + rcQuestions.length,
     };
   }
 
